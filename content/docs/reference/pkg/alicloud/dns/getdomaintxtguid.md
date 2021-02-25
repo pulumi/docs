@@ -1,8 +1,8 @@
 
 ---
-title: "GetDomainTxtGuid"
-title_tag: "Function GetDomainTxtGuid | Module dns | Package AliCloud"
-meta_desc: "Explore the GetDomainTxtGuid function of the dns module, including examples, input properties, output properties, and supporting types. Provides the generation of txt records to realize the retrieval and verification of domain names."
+title: "getDomainTxtGuid"
+title_tag: "alicloud.dns.getDomainTxtGuid"
+meta_desc: "Documentation for the alicloud.dns.getDomainTxtGuid function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -107,13 +107,13 @@ export const value = thisDomainTxtGuid.value;
 {{% /examples %}}
 
 
-## Using GetDomainTxtGuid {#using}
+## Using getDomainTxtGuid {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDomainTxtGuid<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/dns/#GetDomainTxtGuidArgs">GetDomainTxtGuidArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/dns/#GetDomainTxtGuidResult">GetDomainTxtGuidResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDomainTxtGuid<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDomainTxtGuidArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDomainTxtGuidResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -123,14 +123,16 @@ export const value = thisDomainTxtGuid.value;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomainTxtGuid<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/dns?tab=doc#GetDomainTxtGuidArgs">GetDomainTxtGuidArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/dns?tab=doc#GetDomainTxtGuidResult">GetDomainTxtGuidResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomainTxtGuid<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDomainTxtGuidArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDomainTxtGuidResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetDomainTxtGuid` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDomainTxtGuid </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Dns.GetDomainTxtGuidResult.html">GetDomainTxtGuidResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Dns.GetDomainTxtGuidArgs.html">GetDomainTxtGuidArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDomainTxtGuidResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDomainTxtGuidArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -322,7 +324,7 @@ The following arguments are supported:
 
 
 
-## GetDomainTxtGuid Result {#result}
+## getDomainTxtGuid Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetDevice"
-title_tag: "Function GetDevice | Module databoxedge | Package Azure NextGen"
-meta_desc: "Explore the GetDevice function of the databoxedge module, including examples, input properties, output properties, and supporting types. "
+title: "getDevice"
+title_tag: "azure-nextgen.databoxedge.getDevice"
+meta_desc: "Documentation for the azure-nextgen.databoxedge.getDevice function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetDevice function of the databoxedge module, including 
 
 
 
-## Using GetDevice {#using}
+## Using getDevice {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDevice<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDeviceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetDeviceResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDevice<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDeviceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDeviceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetDevice function of the databoxedge module, including 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDevice<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDeviceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupDeviceResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDevice<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDeviceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDeviceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDevice` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetDevice function of the databoxedge module, including 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDevice </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetDeviceResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetDeviceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDeviceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDeviceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetDevice Result {#result}
+## getDevice Result {#result}
 
 The following output properties are available:
 
@@ -173,6 +173,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Data Box Edge/Gateway device culture.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Description of the Data Box Edge/Gateway device.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="devicehcsversion_csharp">
@@ -220,6 +229,24 @@ The following output properties are available:
     <dd>{{% md %}}The type of the Data Box Edge/Gateway device.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="edgeprofile_csharp">
+<a href="#edgeprofile_csharp" style="color: inherit; text-decoration: inherit;">Edge<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#edgeprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Edge<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The details of Edge Profile for this resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Data Box Edge/Gateway device name.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -229,6 +256,15 @@ The following output properties are available:
     <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -236,6 +272,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="modeldescription_csharp">
+<a href="#modeldescription_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the Data Box Edge/Gateway device model.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_csharp">
@@ -254,6 +299,15 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the cluster.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="resourcemovedetails_csharp">
+<a href="#resourcemovedetails_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Move<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcemovedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Resource<wbr>Move<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the move operation on this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="serialnumber_csharp">
@@ -301,24 +355,6 @@ The following output properties are available:
     <dd>{{% md %}}The status of the Data Box Edge/Gateway device.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="description_csharp">
-<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Description of the Data Box Edge/Gateway device.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="edgeprofile_csharp">
-<a href="#edgeprofile_csharp" style="color: inherit; text-decoration: inherit;">Edge<wbr>Profile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgeprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Edge<wbr>Profile<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The details of Edge Profile for this resource{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span>
@@ -328,15 +364,6 @@ The following output properties are available:
     <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="friendlyname_csharp">
-<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device name.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
@@ -344,33 +371,6 @@ The following output properties are available:
         <span class="property-type"><a href="#resourceidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="kind_csharp">
-<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="modeldescription_csharp">
-<a href="#modeldescription_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of the Data Box Edge/Gateway device model.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="resourcemovedetails_csharp">
-<a href="#resourcemovedetails_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Move<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemovedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Resource<wbr>Move<wbr>Details<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The details of the move operation on this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="sku_csharp">
@@ -413,6 +413,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Data Box Edge/Gateway device culture.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Description of the Data Box Edge/Gateway device.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="devicehcsversion_go">
@@ -460,6 +469,24 @@ The following output properties are available:
     <dd>{{% md %}}The type of the Data Box Edge/Gateway device.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="edgeprofile_go">
+<a href="#edgeprofile_go" style="color: inherit; text-decoration: inherit;">Edge<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#edgeprofileresponse">Edge<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The details of Edge Profile for this resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Data Box Edge/Gateway device name.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -469,6 +496,15 @@ The following output properties are available:
     <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -476,6 +512,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="modeldescription_go">
+<a href="#modeldescription_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the Data Box Edge/Gateway device model.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_go">
@@ -494,6 +539,15 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the cluster.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="resourcemovedetails_go">
+<a href="#resourcemovedetails_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Move<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcemovedetailsresponse">Resource<wbr>Move<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the move operation on this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="serialnumber_go">
@@ -541,24 +595,6 @@ The following output properties are available:
     <dd>{{% md %}}The status of the Data Box Edge/Gateway device.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="description_go">
-<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Description of the Data Box Edge/Gateway device.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="edgeprofile_go">
-<a href="#edgeprofile_go" style="color: inherit; text-decoration: inherit;">Edge<wbr>Profile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgeprofileresponse">Edge<wbr>Profile<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The details of Edge Profile for this resource{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span>
@@ -568,15 +604,6 @@ The following output properties are available:
     <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="friendlyname_go">
-<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device name.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
 </span>
@@ -584,33 +611,6 @@ The following output properties are available:
         <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="kind_go">
-<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="modeldescription_go">
-<a href="#modeldescription_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of the Data Box Edge/Gateway device model.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="resourcemovedetails_go">
-<a href="#resourcemovedetails_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Move<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemovedetailsresponse">Resource<wbr>Move<wbr>Details<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The details of the move operation on this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="sku_go">
@@ -653,6 +653,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Data Box Edge/Gateway device culture.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Description of the Data Box Edge/Gateway device.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="devicehcsversion_nodejs">
@@ -700,6 +709,24 @@ The following output properties are available:
     <dd>{{% md %}}The type of the Data Box Edge/Gateway device.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="edgeprofile_nodejs">
+<a href="#edgeprofile_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#edgeprofileresponse">Edge<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The details of Edge Profile for this resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Data Box Edge/Gateway device name.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -709,6 +736,15 @@ The following output properties are available:
     <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -716,6 +752,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="modeldescription_nodejs">
+<a href="#modeldescription_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the Data Box Edge/Gateway device model.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_nodejs">
@@ -734,6 +779,15 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the cluster.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="resourcemovedetails_nodejs">
+<a href="#resourcemovedetails_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Move<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcemovedetailsresponse">Resource<wbr>Move<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the move operation on this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="serialnumber_nodejs">
@@ -781,24 +835,6 @@ The following output properties are available:
     <dd>{{% md %}}The status of the Data Box Edge/Gateway device.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="description_nodejs">
-<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Description of the Data Box Edge/Gateway device.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="edgeprofile_nodejs">
-<a href="#edgeprofile_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Profile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgeprofileresponse">Edge<wbr>Profile<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The details of Edge Profile for this resource{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
@@ -808,15 +844,6 @@ The following output properties are available:
     <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="friendlyname_nodejs">
-<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device name.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
@@ -824,33 +851,6 @@ The following output properties are available:
         <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="kind_nodejs">
-<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="modeldescription_nodejs">
-<a href="#modeldescription_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of the Data Box Edge/Gateway device model.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="resourcemovedetails_nodejs">
-<a href="#resourcemovedetails_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Move<wbr>Details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemovedetailsresponse">Resource<wbr>Move<wbr>Details<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The details of the move operation on this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="sku_nodejs">
@@ -893,6 +893,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Data Box Edge/Gateway device culture.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Description of the Data Box Edge/Gateway device.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="device_hcs_version_python">
@@ -940,6 +949,24 @@ The following output properties are available:
     <dd>{{% md %}}The type of the Data Box Edge/Gateway device.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="edge_profile_python">
+<a href="#edge_profile_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#edgeprofileresponse">Edge<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The details of Edge Profile for this resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Data Box Edge/Gateway device name.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -949,6 +976,15 @@ The following output properties are available:
     <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -956,6 +992,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="model_description_python">
+<a href="#model_description_python" style="color: inherit; text-decoration: inherit;">model_<wbr>description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the Data Box Edge/Gateway device model.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_python">
@@ -974,6 +1019,15 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of nodes in the cluster.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="resource_move_details_python">
+<a href="#resource_move_details_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>move_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcemovedetailsresponse">Resource<wbr>Move<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the move operation on this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="serial_number_python">
@@ -1021,24 +1075,6 @@ The following output properties are available:
     <dd>{{% md %}}The status of the Data Box Edge/Gateway device.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="description_python">
-<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Description of the Data Box Edge/Gateway device.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="edge_profile_python">
-<a href="#edge_profile_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>profile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#edgeprofileresponse">Edge<wbr>Profile<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The details of Edge Profile for this resource{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
@@ -1048,15 +1084,6 @@ The following output properties are available:
     <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="friendly_name_python">
-<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Data Box Edge/Gateway device name.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
 </span>
@@ -1064,33 +1091,6 @@ The following output properties are available:
         <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="kind_python">
-<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="model_description_python">
-<a href="#model_description_python" style="color: inherit; text-decoration: inherit;">model_<wbr>description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the Data Box Edge/Gateway device model.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="resource_move_details_python">
-<a href="#resource_move_details_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>move_<wbr>details</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourcemovedetailsresponse">Resource<wbr>Move<wbr>Details<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The details of the move operation on this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="sku_python">
@@ -1119,9 +1119,6 @@ The following output properties are available:
 
 
 <h4 id="edgeprofileresponse">Edge<wbr>Profile<wbr>Response</h4>
-
-
-
 
 
 
@@ -1186,9 +1183,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="edgeprofilesubscriptionresponse">Edge<wbr>Profile<wbr>Subscription<wbr>Response</h4>
-
-
-
 
 
 
@@ -1580,9 +1574,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1719,9 +1710,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1819,9 +1807,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
-
-
-
 
 
 
@@ -1925,9 +1910,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2025,9 +2007,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
-
-
-
 
 
 

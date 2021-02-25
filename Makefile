@@ -45,12 +45,6 @@ build_components:
 	@echo -e "\033[0;32mBUILD COMPONENTS:\033[0m"
 	yarn --cwd components run build
 
-.PHONY: build_search_index
-build_search_index:
-	@echo -e "\033[0;32mBUILD SEARCH INDEX:\033[0m"
-	node ./scripts/build-search-index.js < ./public/docs/search-data/index.json > ./public/docs/search-index.json
-	rm -rf ./public/docs/search-data
-
 .PHONY: generate
 generate:
 	@echo -e "\033[0;32mGENERATE:\033[0m"
@@ -58,10 +52,6 @@ generate:
 	./scripts/generate_python_docs.sh
 	pulumi gen-markdown ./content/docs/reference/cli
 	./scripts/mktutorial.sh
-
-.PHONY: copy_static_prebuilt
-copy_static_prebuilt:
-	mkdir -p public && cp -R static-prebuilt/* public/
 
 .PHONY: build
 build:

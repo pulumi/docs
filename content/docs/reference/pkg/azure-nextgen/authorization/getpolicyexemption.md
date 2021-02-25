@@ -1,8 +1,8 @@
 
 ---
-title: "GetPolicyExemption"
-title_tag: "Function GetPolicyExemption | Module authorization | Package Azure NextGen"
-meta_desc: "Explore the GetPolicyExemption function of the authorization module, including examples, input properties, output properties, and supporting types. "
+title: "getPolicyExemption"
+title_tag: "azure-nextgen.authorization.getPolicyExemption"
+meta_desc: "Documentation for the azure-nextgen.authorization.getPolicyExemption function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetPolicyExemption function of the authorization module,
 
 
 
-## Using GetPolicyExemption {#using}
+## Using getPolicyExemption {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicyExemption<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPolicyExemptionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetPolicyExemptionResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicyExemption<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPolicyExemptionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPolicyExemptionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetPolicyExemption function of the authorization module,
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPolicyExemption<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPolicyExemptionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupPolicyExemptionResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPolicyExemption<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPolicyExemptionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPolicyExemptionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPolicyExemption` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetPolicyExemption function of the authorization module,
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPolicyExemption </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetPolicyExemptionResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetPolicyExemptionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPolicyExemptionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPolicyExemptionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetPolicyExemption Result {#result}
+## getPolicyExemption Result {#result}
 
 The following output properties are available:
 
@@ -172,7 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the policy exemption.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_csharp">
@@ -181,7 +181,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy exemption.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="policyassignmentid_csharp">
@@ -208,7 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource (Microsoft.Authorization/policyExemptions).{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="description_csharp">
@@ -277,7 +277,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the policy exemption.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_go">
@@ -286,7 +286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy exemption.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="policyassignmentid_go">
@@ -313,7 +313,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource (Microsoft.Authorization/policyExemptions).{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="description_go">
@@ -382,7 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the policy exemption.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_nodejs">
@@ -391,7 +391,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy exemption.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="policyassignmentid_nodejs">
@@ -418,7 +418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource (Microsoft.Authorization/policyExemptions).{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="description_nodejs">
@@ -487,7 +487,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the policy exemption.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_python">
@@ -496,7 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy exemption.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="policy_assignment_id_python">
@@ -523,7 +523,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the resource (Microsoft.Authorization/policyExemptions).{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="description_python">
@@ -582,9 +582,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -623,7 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
@@ -683,7 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
@@ -743,7 +740,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
@@ -803,7 +800,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">

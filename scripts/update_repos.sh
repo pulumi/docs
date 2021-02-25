@@ -48,6 +48,7 @@ TOOLS_REPOS=(
     "pulumi-ns1"
     "pulumi-okta"
     "pulumi-openstack"
+    "pulumi-opsgenie"
     "pulumi-pagerduty"
     "pulumi-policy"
     "pulumi-postgresql"

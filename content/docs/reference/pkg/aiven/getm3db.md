@@ -1,8 +1,8 @@
 
 ---
-title: "GetM3Db"
-title_tag: "Function GetM3Db | Package Aiven"
-meta_desc: "Explore the GetM3Db function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # M3 DB Data Source"
+title: "getM3Db"
+title_tag: "aiven.getM3Db"
+meta_desc: "Documentation for the aiven.getM3Db function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -94,13 +94,13 @@ const m3 = aiven.getM3Db({
 {{% /examples %}}
 
 
-## Using GetM3Db {#using}
+## Using getM3Db {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getM3Db<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#GetM3DbArgs">GetM3DbArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#GetM3DbResult">GetM3DbResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getM3Db<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetM3DbArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetM3DbResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -110,7 +110,7 @@ const m3 = aiven.getM3Db({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupM3Db<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupM3DbArgs">LookupM3DbArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupM3DbResult">LookupM3DbResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupM3Db<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupM3DbArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupM3DbResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupM3Db` in the Go SDK.
 
@@ -119,7 +119,7 @@ const m3 = aiven.getM3Db({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetM3Db </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.GetM3DbResult.html">GetM3DbResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.GetM3DbArgs.html">GetM3DbArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetM3DbResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetM3DbArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1019,7 +1019,7 @@ deletion is done.
 
 
 
-## GetM3Db Result {#result}
+## getM3Db Result {#result}
 
 The following output properties are available:
 
@@ -1936,16 +1936,6 @@ deletion is done.
 
 
 <h4 id="getm3dbcomponent">Get<wbr>M3Db<wbr>Component</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetM3DbComponent">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetM3DbComponent">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetM3DbComponentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetM3DbComponent">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetM3DbComponentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetM3DbComponent.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2226,16 +2216,6 @@ deletion is done.
 {{% /choosable %}}
 
 <h4 id="getm3dbm3dbuserconfig">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetM3DbM3dbUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetM3DbM3dbUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetM3DbM3dbUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetM3DbM3dbUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetM3DbM3dbUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetM3DbM3dbUserConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2280,8 +2260,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}M3 major version
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="m3coordinatorenablegraphitecarboningest_csharp">
@@ -2293,6 +2272,16 @@ deletion is done.
     <dd>{{% md %}}Enables access to Graphite Carbon 
 plaintext metrics ingestion. It can be enabled only for services inside VPCs. The
 metrics are written to aggregated namespaces only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="m3dbversion_csharp">
+<a href="#m3dbversion_csharp" style="color: inherit; text-decoration: inherit;">M3db<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}M3 major version
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2390,8 +2379,7 @@ when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}M3 major version
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="m3coordinatorenablegraphitecarboningest_go">
@@ -2403,6 +2391,16 @@ when a new service is being created.
     <dd>{{% md %}}Enables access to Graphite Carbon 
 plaintext metrics ingestion. It can be enabled only for services inside VPCs. The
 metrics are written to aggregated namespaces only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="m3dbversion_go">
+<a href="#m3dbversion_go" style="color: inherit; text-decoration: inherit;">M3db<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}M3 major version
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2500,8 +2498,7 @@ when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}M3 major version
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="m3coordinatorenablegraphitecarboningest_nodejs">
@@ -2513,6 +2510,16 @@ when a new service is being created.
     <dd>{{% md %}}Enables access to Graphite Carbon 
 plaintext metrics ingestion. It can be enabled only for services inside VPCs. The
 metrics are written to aggregated namespaces only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="m3dbversion_nodejs">
+<a href="#m3dbversion_nodejs" style="color: inherit; text-decoration: inherit;">m3db<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}M3 major version
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2610,8 +2617,7 @@ when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}M3 major version
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="m3coordinator_enable_graphite_carbon_ingest_python">
@@ -2623,6 +2629,16 @@ when a new service is being created.
     <dd>{{% md %}}Enables access to Graphite Carbon 
 plaintext metrics ingestion. It can be enabled only for services inside VPCs. The
 metrics are written to aggregated namespaces only.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="m3db_version_python">
+<a href="#m3db_version_python" style="color: inherit; text-decoration: inherit;">m3db_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}M3 major version
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2680,16 +2696,6 @@ when a new service is being created.
 {{% /choosable %}}
 
 <h4 id="getm3dbm3dbuserconfiglimits">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Limits</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetM3DbM3dbUserConfigLimits">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetM3DbM3dbUserConfigLimits">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetM3DbM3dbUserConfigLimitsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetM3DbM3dbUserConfigLimits">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetM3DbM3dbUserConfigLimitsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetM3DbM3dbUserConfigLimits.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2882,16 +2888,6 @@ when a new service is being created.
 {{% /choosable %}}
 
 <h4 id="getm3dbm3dbuserconfignamespace">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetM3DbM3dbUserConfigNamespace">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetM3DbM3dbUserConfigNamespace">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetM3DbM3dbUserConfigNamespaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetM3DbM3dbUserConfigNamespace">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetM3DbM3dbUserConfigNamespaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetM3DbM3dbUserConfigNamespace.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3080,16 +3076,6 @@ when a new service is being created.
 {{% /choosable %}}
 
 <h4 id="getm3dbm3dbuserconfignamespaceoptions">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Options</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetM3DbM3dbUserConfigNamespaceOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetM3DbM3dbUserConfigNamespaceOptions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetM3DbM3dbUserConfigNamespaceOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetM3DbM3dbUserConfigNamespaceOptions">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetM3DbM3dbUserConfigNamespaceOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetM3DbM3dbUserConfigNamespaceOptions.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3246,16 +3232,6 @@ namespace in the commitlog.
 {{% /choosable %}}
 
 <h4 id="getm3dbm3dbuserconfignamespaceoptionsretentionoptions">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Namespace<wbr>Options<wbr>Retention<wbr>Options</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetM3DbM3dbUserConfigNamespaceOptionsRetentionOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetM3DbM3dbUserConfigNamespaceOptionsRetentionOptions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetM3DbM3dbUserConfigNamespaceOptionsRetentionOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetM3DbM3dbUserConfigNamespaceOptionsRetentionOptions">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetM3DbM3dbUserConfigNamespaceOptionsRetentionOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetM3DbM3dbUserConfigNamespaceOptionsRetentionOptions.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3500,16 +3476,6 @@ retain data for the namespace
 {{% /choosable %}}
 
 <h4 id="getm3dbm3dbuserconfigprivateaccess">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Private<wbr>Access</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetM3DbM3dbUserConfigPrivateAccess">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetM3DbM3dbUserConfigPrivateAccess">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetM3DbM3dbUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetM3DbM3dbUserConfigPrivateAccess">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetM3DbM3dbUserConfigPrivateAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetM3DbM3dbUserConfigPrivateAccess.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3582,16 +3548,6 @@ for service nodes that are in a project VPC or another type of private network.
 {{% /choosable %}}
 
 <h4 id="getm3dbm3dbuserconfigpublicaccess">Get<wbr>M3Db<wbr>M3db<wbr>User<wbr>Config<wbr>Public<wbr>Access</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetM3DbM3dbUserConfigPublicAccess">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetM3DbM3dbUserConfigPublicAccess">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetM3DbM3dbUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetM3DbM3dbUserConfigPublicAccess">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetM3DbM3dbUserConfigPublicAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetM3DbM3dbUserConfigPublicAccess.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3664,16 +3620,6 @@ for service nodes that are in a project VPC or another type of private network.
 {{% /choosable %}}
 
 <h4 id="getm3dbserviceintegration">Get<wbr>M3Db<wbr>Service<wbr>Integration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetM3DbServiceIntegration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetM3DbServiceIntegration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetM3DbServiceIntegrationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetM3DbServiceIntegration">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetM3DbServiceIntegrationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetM3DbServiceIntegration.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

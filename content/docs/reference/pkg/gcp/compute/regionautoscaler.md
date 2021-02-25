@@ -335,19 +335,19 @@ const foobarRegionAutoscaler = new gcp.compute.RegionAutoscaler("foobarRegionAut
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionAutoscaler">RegionAutoscaler</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionAutoscalerArgs">RegionAutoscalerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">RegionAutoscaler</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RegionAutoscalerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.RegionAutoscaler">RegionAutoscaler</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscaling_policy</span><span class="p">:</span> <span class="nx">Optional[RegionAutoscalerAutoscalingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">RegionAutoscaler</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscaling_policy</span><span class="p">:</span> <span class="nx">Optional[RegionAutoscalerAutoscalingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscaler">NewRegionAutoscaler</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscalerArgs">RegionAutoscalerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscaler">RegionAutoscaler</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRegionAutoscaler</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RegionAutoscalerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegionAutoscaler</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionAutoscaler.html">RegionAutoscaler</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionAutoscalerArgs.html">RegionAutoscalerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">RegionAutoscaler</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RegionAutoscalerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -368,7 +368,7 @@ const foobarRegionAutoscaler = new gcp.compute.RegionAutoscaler("foobarRegionAut
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionAutoscalerArgs">RegionAutoscalerArgs</a></span>
+        <span class="property-type"><a href="#inputs">RegionAutoscalerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -437,7 +437,7 @@ const foobarRegionAutoscaler = new gcp.compute.RegionAutoscaler("foobarRegionAut
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscalerArgs">RegionAutoscalerArgs</a></span>
+        <span class="property-type"><a href="#inputs">RegionAutoscalerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -476,7 +476,7 @@ const foobarRegionAutoscaler = new gcp.compute.RegionAutoscaler("foobarRegionAut
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionAutoscalerArgs.html">RegionAutoscalerArgs</a></span>
+        <span class="property-type"><a href="#inputs">RegionAutoscalerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -499,11 +499,11 @@ const foobarRegionAutoscaler = new gcp.compute.RegionAutoscaler("foobarRegionAut
 
 ## RegionAutoscaler Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The RegionAutoscaler resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The RegionAutoscaler resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -555,9 +555,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -631,9 +629,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -707,9 +703,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -783,9 +777,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -966,7 +958,7 @@ Get an existing RegionAutoscaler resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionAutoscalerState">RegionAutoscalerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionAutoscaler">RegionAutoscaler</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RegionAutoscalerState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">RegionAutoscaler</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -975,11 +967,11 @@ Get an existing RegionAutoscaler resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegionAutoscaler<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscalerState">RegionAutoscalerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscaler">RegionAutoscaler</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegionAutoscaler<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RegionAutoscalerState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">RegionAutoscaler</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionAutoscaler.html">RegionAutoscaler</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionAutoscalerState.html">RegionAutoscalerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">RegionAutoscaler</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RegionAutoscalerState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1127,9 +1119,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1223,9 +1213,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1319,9 +1307,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1415,9 +1401,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1475,18 +1459,6 @@ be a positive float value. If not defined, the default is 0.8.
 
 
 <h4 id="regionautoscalerautoscalingpolicy">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionAutoscalerAutoscalingPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionAutoscalerAutoscalingPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscalerAutoscalingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscalerAutoscalingPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionAutoscalerAutoscalingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionAutoscalerAutoscalingPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1606,6 +1578,15 @@ Structure is documented below.
 and outages due to abrupt scale-in events
 Structure is documented below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scalingschedules_csharp">
+<a href="#scalingschedules_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Schedules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscalingschedule">List&lt;Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1727,6 +1708,15 @@ Structure is documented below.
 and outages due to abrupt scale-in events
 Structure is documented below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scalingschedules_go">
+<a href="#scalingschedules_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Schedules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscalingschedule">[]Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1848,6 +1838,15 @@ Structure is documented below.
 and outages due to abrupt scale-in events
 Structure is documented below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scalingschedules_nodejs">
+<a href="#scalingschedules_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Schedules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscalingschedule">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1969,22 +1968,19 @@ Structure is documented below.
 and outages due to abrupt scale-in events
 Structure is documented below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaling_schedules_python">
+<a href="#scaling_schedules_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>schedules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionautoscalerautoscalingpolicyscalingschedule">Sequence[Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="regionautoscalerautoscalingpolicycpuutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionAutoscalerAutoscalingPolicyCpuUtilization">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionAutoscalerAutoscalingPolicyCpuUtilization">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscalerAutoscalingPolicyCpuUtilizationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscalerAutoscalingPolicyCpuUtilizationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionAutoscalerAutoscalingPolicyCpuUtilizationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionAutoscalerAutoscalingPolicyCpuUtilization.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2059,18 +2055,6 @@ be a positive float value. If not defined, the default is 0.8.
 {{% /choosable %}}
 
 <h4 id="regionautoscalerautoscalingpolicyloadbalancingutilization">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionAutoscalerAutoscalingPolicyLoadBalancingUtilization">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionAutoscalerAutoscalingPolicyLoadBalancingUtilization">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionAutoscalerAutoscalingPolicyLoadBalancingUtilizationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionAutoscalerAutoscalingPolicyLoadBalancingUtilization.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2145,18 +2129,6 @@ be a positive float value. If not defined, the default is 0.8.
 {{% /choosable %}}
 
 <h4 id="regionautoscalerautoscalingpolicymetric">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Metric</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionAutoscalerAutoscalingPolicyMetric">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionAutoscalerAutoscalingPolicyMetric">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscalerAutoscalingPolicyMetricArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscalerAutoscalingPolicyMetricOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionAutoscalerAutoscalingPolicyMetricArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionAutoscalerAutoscalingPolicyMetric.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2169,9 +2141,7 @@ be a positive float value. If not defined, the default is 0.8.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2270,9 +2240,7 @@ Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2371,9 +2339,7 @@ Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2472,9 +2438,7 @@ Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier (type) of the Stackdriver Monitoring metric.
-The metric cannot have negative values.
-The metric must have a value type of INT64 or DOUBLE.
+    <dd>{{% md %}}The identifier for this object. Format specified above.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2563,18 +2527,6 @@ Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
 {{% /choosable %}}
 
 <h4 id="regionautoscalerautoscalingpolicyscaledowncontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionAutoscalerAutoscalingPolicyScaleDownControl">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionAutoscalerAutoscalingPolicyScaleDownControl">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscalerAutoscalingPolicyScaleDownControlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscalerAutoscalingPolicyScaleDownControlOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionAutoscalerAutoscalingPolicyScaleDownControlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionAutoscalerAutoscalingPolicyScaleDownControl.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2689,18 +2641,6 @@ to include directives regarding slower scale down, as described above.
 {{% /choosable %}}
 
 <h4 id="regionautoscalerautoscalingpolicyscaledowncontrolmaxscaleddownreplicas">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Max<wbr>Scaled<wbr>Down<wbr>Replicas</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicas">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicas">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicas.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2815,18 +2755,6 @@ For example, specify 80 for 80%.
 {{% /choosable %}}
 
 <h4 id="regionautoscalerautoscalingpolicyscaleincontrol">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionAutoscalerAutoscalingPolicyScaleInControl">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionAutoscalerAutoscalingPolicyScaleInControl">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscalerAutoscalingPolicyScaleInControlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscalerAutoscalingPolicyScaleInControlOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionAutoscalerAutoscalingPolicyScaleInControlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionAutoscalerAutoscalingPolicyScaleInControl.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2941,18 +2869,6 @@ to include directives regarding slower scale down, as described above.
 {{% /choosable %}}
 
 <h4 id="regionautoscalerautoscalingpolicyscaleincontrolmaxscaledinreplicas">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Max<wbr>Scaled<wbr>In<wbr>Replicas</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3062,6 +2978,312 @@ integer.
     </dt>
     <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
 For example, specify 80 for 80%.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="regionautoscalerautoscalingpolicyscalingschedule">Region<wbr>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Scaling<wbr>Schedule</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="durationsec_csharp">
+<a href="#durationsec_csharp" style="color: inherit; text-decoration: inherit;">Duration<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="minrequiredreplicas_csharp">
+<a href="#minrequiredreplicas_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Required<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for this object. Format specified above.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="schedule_csharp">
+<a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional description of this resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_csharp">
+<a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timezone_csharp">
+<a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="durationsec_go">
+<a href="#durationsec_go" style="color: inherit; text-decoration: inherit;">Duration<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="minrequiredreplicas_go">
+<a href="#minrequiredreplicas_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Required<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for this object. Format specified above.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="schedule_go">
+<a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional description of this resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_go">
+<a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timezone_go">
+<a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="durationsec_nodejs">
+<a href="#durationsec_nodejs" style="color: inherit; text-decoration: inherit;">duration<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="minrequiredreplicas_nodejs">
+<a href="#minrequiredreplicas_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Required<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for this object. Format specified above.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="schedule_nodejs">
+<a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional description of this resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_nodejs">
+<a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timezone_nodejs">
+<a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="duration_sec_python">
+<a href="#duration_sec_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="min_required_replicas_python">
+<a href="#min_required_replicas_python" style="color: inherit; text-decoration: inherit;">min_<wbr>required_<wbr>replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identifier for this object. Format specified above.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="schedule_python">
+<a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional description of this resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="disabled_python">
+<a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="time_zone_python">
+<a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

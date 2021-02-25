@@ -100,7 +100,7 @@ rpa = aws.iam.RolePolicyAttachment('task-exec-policy',
 )
 ```
 
-To learn more about creating [reusable components]({{< relref "/docs/intro/concepts/programming-model#components" >}}), read about Pulumi's programming model, which shows how to author components.
+To learn more about creating [reusable components]({{< relref "/docs/intro/concepts/resources#components" >}}), read about Pulumi's programming model, which shows how to author components.
 
 ## Polyglot applications
 

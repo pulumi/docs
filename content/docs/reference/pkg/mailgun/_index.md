@@ -1,6 +1,6 @@
 ---
 title: "Mailgun"
-title_tag: "Module Mailgun | Package Mailgun"
+title_tag: "mailgun.Mailgun"
 meta_desc: "A Pulumi package for creating and managing Mailgun resources."
 menu:
     reference:
@@ -28,24 +28,6 @@ A Pulumi package for creating and managing Mailgun resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`mailgun` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mailgun).</dd>
 	<dt>Version</dt>
-	<dd>2.3.2</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Mailgun/Pulumi.Mailgun.html" title="Pulumi.Mailgun">Pulumi.Mailgun</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mailgun/sdk/v2/go/mailgun/?tab=doc#" title="mailgun">mailgun</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/mailgun/#" title="@pulumi/mailgun">@pulumi/mailgun</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_mailgun" title="pulumi_mailgun">pulumi_mailgun</a></dd>
-
+	<dd>2.4.1</dd>
 </dl>
 

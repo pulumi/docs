@@ -1,8 +1,8 @@
 
 ---
-title: "GetTargetGroup"
-title_tag: "Function GetTargetGroup | Module applicationloadbalancing | Package AWS"
-meta_desc: "Explore the GetTargetGroup function of the applicationloadbalancing module, including examples, input properties, output properties, and supporting types. &gt; **Note:** `aws.alb.TargetGroup` is known as `aws.lb.TargetGroup`. The functionality is identical."
+title: "getTargetGroup"
+title_tag: "aws.applicationloadbalancing.getTargetGroup"
+meta_desc: "Documentation for the aws.applicationloadbalancing.getTargetGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -124,13 +124,13 @@ const test = aws.lb.getTargetGroup({
 {{% /examples %}}
 
 
-## Using GetTargetGroup {#using}
+## Using getTargetGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTargetGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/applicationloadbalancing/#GetTargetGroupArgs">GetTargetGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/applicationloadbalancing/#GetTargetGroupResult">GetTargetGroupResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTargetGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetTargetGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetTargetGroupResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -140,7 +140,7 @@ const test = aws.lb.getTargetGroup({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTargetGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/applicationloadbalancing?tab=doc#LookupTargetGroupArgs">LookupTargetGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/applicationloadbalancing?tab=doc#LookupTargetGroupResult">LookupTargetGroupResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTargetGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupTargetGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupTargetGroupResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupTargetGroup` in the Go SDK.
 
@@ -149,7 +149,7 @@ const test = aws.lb.getTargetGroup({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetTargetGroup </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Applicationloadbalancing.GetTargetGroupResult.html">GetTargetGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApplicationLoadBalancing.GetTargetGroupArgs.html">GetTargetGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetTargetGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetTargetGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -301,7 +301,7 @@ The following arguments are supported:
 
 
 
-## GetTargetGroup Result {#result}
+## getTargetGroup Result {#result}
 
 The following output properties are available:
 
@@ -396,6 +396,15 @@ The following output properties are available:
             title="">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="protocolversion_csharp">
+<a href="#protocolversion_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -554,6 +563,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="protocolversion_go">
+<a href="#protocolversion_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="proxyprotocolv2_go">
 <a href="#proxyprotocolv2_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Protocol<wbr>V2</a>
 </span>
@@ -698,6 +716,15 @@ The following output properties are available:
             title="">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="protocolversion_nodejs">
+<a href="#protocolversion_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -856,6 +883,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="protocol_version_python">
+<a href="#protocol_version_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="proxy_protocol_v2_python">
 <a href="#proxy_protocol_v2_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>protocol_<wbr>v2</a>
 </span>
@@ -918,16 +954,6 @@ The following output properties are available:
 
 
 <h4 id="gettargetgrouphealthcheck">Get<wbr>Target<wbr>Group<wbr>Health<wbr>Check</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTargetGroupHealthCheck">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/applicationloadbalancing?tab=doc#GetTargetGroupHealthCheck">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApplicationLoadBalancing.Outputs.GetTargetGroupHealthCheck.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1280,16 +1306,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="gettargetgroupstickiness">Get<wbr>Target<wbr>Group<wbr>Stickiness</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTargetGroupStickiness">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/applicationloadbalancing?tab=doc#GetTargetGroupStickiness">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApplicationLoadBalancing.Outputs.GetTargetGroupStickiness.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

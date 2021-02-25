@@ -1,8 +1,8 @@
 
 ---
-title: "GetMonitorGroups"
-title_tag: "Function GetMonitorGroups | Module cms | Package AliCloud"
-meta_desc: "Explore the GetMonitorGroups function of the cms module, including examples, input properties, output properties, and supporting types. This data source provides the Cms Monitor Groups of the current Alibaba Cloud user."
+title: "getMonitorGroups"
+title_tag: "alicloud.cms.getMonitorGroups"
+meta_desc: "Documentation for the alicloud.cms.getMonitorGroups function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -106,13 +106,13 @@ export const firstCmsMonitorGroupId = example.then(example => example.groups[0].
 {{% /examples %}}
 
 
-## Using GetMonitorGroups {#using}
+## Using getMonitorGroups {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMonitorGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cms/#GetMonitorGroupsArgs">GetMonitorGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cms/#GetMonitorGroupsResult">GetMonitorGroupsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMonitorGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMonitorGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMonitorGroupsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -122,14 +122,16 @@ export const firstCmsMonitorGroupId = example.then(example => example.groups[0].
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMonitorGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cms?tab=doc#GetMonitorGroupsArgs">GetMonitorGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cms?tab=doc#GetMonitorGroupsResult">GetMonitorGroupsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMonitorGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetMonitorGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetMonitorGroupsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetMonitorGroups` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetMonitorGroups </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cms.GetMonitorGroupsResult.html">GetMonitorGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cms.GetMonitorGroupsArgs.html">GetMonitorGroupsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetMonitorGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMonitorGroupsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -561,7 +563,7 @@ The following arguments are supported:
 
 
 
-## GetMonitorGroups Result {#result}
+## getMonitorGroups Result {#result}
 
 The following output properties are available:
 
@@ -1070,16 +1072,6 @@ The following output properties are available:
 
 
 <h4 id="getmonitorgroupsgroup">Get<wbr>Monitor<wbr>Groups<wbr>Group</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetMonitorGroupsGroup">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cms?tab=doc#GetMonitorGroupsGroup">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cms.Outputs.GetMonitorGroupsGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

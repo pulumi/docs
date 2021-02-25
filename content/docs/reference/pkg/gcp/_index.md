@@ -1,6 +1,6 @@
 ---
 title: "GCP"
-title_tag: "Package GCP"
+title_tag: "GCP Package"
 meta_desc: "A Pulumi package for creating and managing Google Cloud Platform resources."
 menu:
     reference:
@@ -24,6 +24,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
     <li><a href="bigtable/" title="bigtable"><span class="symbol module"></span>bigtable</a></li>
     <li><a href="billing/" title="billing"><span class="symbol module"></span>billing</a></li>
     <li><a href="binaryauthorization/" title="binaryauthorization"><span class="symbol module"></span>binaryauthorization</a></li>
+    <li><a href="certificateauthority/" title="certificateauthority"><span class="symbol module"></span>certificateauthority</a></li>
     <li><a href="cloudasset/" title="cloudasset"><span class="symbol module"></span>cloudasset</a></li>
     <li><a href="cloudbuild/" title="cloudbuild"><span class="symbol module"></span>cloudbuild</a></li>
     <li><a href="cloudfunctions/" title="cloudfunctions"><span class="symbol module"></span>cloudfunctions</a></li>
@@ -45,6 +46,7 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
     <li><a href="diagflow/" title="diagflow"><span class="symbol module"></span>diagflow</a></li>
     <li><a href="dns/" title="dns"><span class="symbol module"></span>dns</a></li>
     <li><a href="endpoints/" title="endpoints"><span class="symbol module"></span>endpoints</a></li>
+    <li><a href="essentialcontacts/" title="essentialcontacts"><span class="symbol module"></span>essentialcontacts</a></li>
     <li><a href="filestore/" title="filestore"><span class="symbol module"></span>filestore</a></li>
     <li><a href="firebase/" title="firebase"><span class="symbol module"></span>firebase</a></li>
     <li><a href="firestore/" title="firestore"><span class="symbol module"></span>firestore</a></li>
@@ -98,24 +100,6 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.8.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.html" title="Pulumi.Gcp">Pulumi.Gcp</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/?tab=doc#" title="gcp">gcp</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gcp/#" title="@pulumi/gcp">@pulumi/gcp</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gcp" title="pulumi_gcp">pulumi_gcp</a></dd>
-
+	<dd>4.12.0</dd>
 </dl>
 

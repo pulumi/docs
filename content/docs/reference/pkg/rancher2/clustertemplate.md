@@ -1,8 +1,8 @@
 
 ---
 title: "ClusterTemplate"
-title_tag: "Resource ClusterTemplate | Package Rancher 2"
-meta_desc: "Explore the ClusterTemplate resource of the Rancher 2 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Rancher v2 Cluster Template resource. This can be used to create Cluster Templates for Rancher v2 RKE clusters and retrieve their information. "
+title_tag: "rancher2.ClusterTemplate"
+meta_desc: "Documentation for the rancher2.ClusterTemplate resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -199,19 +199,19 @@ const foo = new rancher2.ClusterTemplate("foo", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterTemplate">ClusterTemplate</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterTemplateArgs">ClusterTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ClusterTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ClusterTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_rancher2/#pulumi_rancher2.ClusterTemplate">ClusterTemplate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterTemplateMemberArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_revisions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterTemplateTemplateRevisionArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ClusterTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">members</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterTemplateMemberArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_revisions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterTemplateTemplateRevisionArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplate">NewClusterTemplate</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateArgs">ClusterTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplate">ClusterTemplate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewClusterTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ClusterTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ClusterTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterTemplate.html">ClusterTemplate</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterTemplateArgs.html">ClusterTemplateArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ClusterTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterTemplateArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -232,7 +232,7 @@ const foo = new rancher2.ClusterTemplate("foo", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterTemplateArgs">ClusterTemplateArgs</a></span>
+        <span class="property-type"><a href="#inputs">ClusterTemplateArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -301,7 +301,7 @@ const foo = new rancher2.ClusterTemplate("foo", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateArgs">ClusterTemplateArgs</a></span>
+        <span class="property-type"><a href="#inputs">ClusterTemplateArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -340,7 +340,7 @@ const foo = new rancher2.ClusterTemplate("foo", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterTemplateArgs.html">ClusterTemplateArgs</a></span>
+        <span class="property-type"><a href="#inputs">ClusterTemplateArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -363,11 +363,11 @@ const foo = new rancher2.ClusterTemplate("foo", {
 
 ## ClusterTemplate Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ClusterTemplate resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ClusterTemplate resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -750,7 +750,7 @@ Get an existing ClusterTemplate resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterTemplateState">ClusterTemplateState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterTemplate">ClusterTemplate</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ClusterTemplateState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ClusterTemplate</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -759,11 +759,11 @@ Get an existing ClusterTemplate resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusterTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateState">ClusterTemplateState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplate">ClusterTemplate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusterTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ClusterTemplateState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ClusterTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterTemplate.html">ClusterTemplate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ClusterTemplateState.html">ClusterTemplateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ClusterTemplate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ClusterTemplateState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1179,18 +1179,6 @@ The following state arguments are supported:
 
 
 <h4 id="clustertemplatemember">Cluster<wbr>Template<wbr>Member</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateMember">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateMember">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateMemberArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateMemberOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateMemberArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateMember.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1337,18 +1325,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevision">Cluster<wbr>Template<wbr>Template<wbr>Revision</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevision">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevision">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevision.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1735,18 +1711,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2253,18 +2217,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigclusterauthendpoint">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Cluster<wbr>Auth<wbr>Endpoint</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigClusterAuthEndpoint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigClusterAuthEndpoint">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigClusterAuthEndpointArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigClusterAuthEndpointOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigClusterAuthEndpointArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigClusterAuthEndpoint.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2403,18 +2355,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3197,18 +3137,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigauthentication">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authentication</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigAuthentication">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigAuthentication">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigAuthenticationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigAuthenticationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigAuthenticationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigAuthentication.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3307,18 +3235,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigauthorization">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authorization</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigAuthorization">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigAuthorization">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigAuthorizationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigAuthorizationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigAuthorizationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigAuthorization.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3417,18 +3333,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigbastionhost">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigBastionHost">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigBastionHost">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigBastionHostArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigBastionHostOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigBastionHostArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigBastionHost.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3671,18 +3575,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProvider">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProvider">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProvider.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3929,18 +3821,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProvider">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProvider">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProviderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProviderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProviderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProvider.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4039,18 +3919,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProviderGlobal">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProviderGlobal">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProviderGlobalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProviderGlobalOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProviderGlobalArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProviderGlobal.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4437,18 +4305,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderserviceoverride">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProviderServiceOverride">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProviderServiceOverride">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProviderServiceOverrideArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProviderServiceOverrideOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProviderServiceOverrideArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAwsCloudProviderServiceOverride.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4691,18 +4547,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderazurecloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAzureCloudProvider">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAzureCloudProvider">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAzureCloudProviderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAzureCloudProviderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAzureCloudProviderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderAzureCloudProvider.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5773,18 +5617,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProvider">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProvider">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProvider.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5991,18 +5823,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderblockstorage">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderBlockStorage">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderBlockStorage">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderBlockStorageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderBlockStorageOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderBlockStorageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderBlockStorage.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6137,18 +5957,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Global</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderGlobal">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderGlobal">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderGlobalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderGlobalOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderGlobalArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderGlobal.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6535,18 +6343,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderloadbalancer">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderLoadBalancer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderLoadBalancer">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderLoadBalancerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderLoadBalancerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderLoadBalancerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderLoadBalancer.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6969,18 +6765,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovidermetadata">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderMetadata">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderMetadata">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderMetadataArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderMetadataOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderMetadataArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderMetadata.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7079,18 +6863,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderroute">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderRoute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderRoute">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderRouteOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderRouteArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderOpenstackCloudProviderRoute.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7153,18 +6925,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProvider">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProvider">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProvider.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7371,18 +7131,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderdisk">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderDisk">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderDiskOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderDiskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderDisk.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7445,18 +7193,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderGlobal">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderGlobal">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderGlobalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderGlobalOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderGlobalArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderGlobal.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7699,18 +7435,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidernetwork">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderNetwork">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderNetwork">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderNetworkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderNetworkOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderNetworkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderNetwork.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7773,18 +7497,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidervirtualcenter">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderVirtualCenter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderVirtualCenter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderVirtualCenterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderVirtualCenterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderVirtualCenterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderVirtualCenter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8031,18 +7743,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderworkspace">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Workspace</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderWorkspace">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderWorkspace">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderWorkspaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderWorkspaceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderWorkspaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigCloudProviderVsphereCloudProviderWorkspace.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8249,18 +7949,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigdns">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDns">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDns">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigDns.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8539,18 +8227,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigdnslinearautoscalerparams">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Linear<wbr>Autoscaler<wbr>Params</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsLinearAutoscalerParams">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsLinearAutoscalerParams">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsLinearAutoscalerParamsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsLinearAutoscalerParamsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsLinearAutoscalerParamsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsLinearAutoscalerParams.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8757,18 +8433,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigdnsnodelocal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Nodelocal</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsNodelocal">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsNodelocal">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsNodelocalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsNodelocalOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsNodelocalArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsNodelocal.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8867,18 +8531,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigdnsupdatestrategy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsUpdateStrategy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsUpdateStrategy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsUpdateStrategyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsUpdateStrategyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsUpdateStrategyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsUpdateStrategy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8977,18 +8629,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigdnsupdatestrategyrollingupdate">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsUpdateStrategyRollingUpdate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsUpdateStrategyRollingUpdate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsUpdateStrategyRollingUpdateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsUpdateStrategyRollingUpdateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsUpdateStrategyRollingUpdateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigDnsUpdateStrategyRollingUpdate.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9087,18 +8727,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigingress">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigIngress">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigIngress">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigIngressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigIngressOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigIngressArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigIngress.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9305,18 +8933,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoring">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigMonitoring">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigMonitoring">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigMonitoringArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigMonitoringOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigMonitoringArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigMonitoring.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9523,18 +9139,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoringupdatestrategy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigMonitoringUpdateStrategy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigMonitoringUpdateStrategy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigMonitoringUpdateStrategyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigMonitoringUpdateStrategyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigMonitoringUpdateStrategyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigMonitoringUpdateStrategy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9633,18 +9237,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoringupdatestrategyrollingupdate">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Update<wbr>Strategy<wbr>Rolling<wbr>Update</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigMonitoringUpdateStrategyRollingUpdate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigMonitoringUpdateStrategyRollingUpdate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigMonitoringUpdateStrategyRollingUpdateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigMonitoringUpdateStrategyRollingUpdateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigMonitoringUpdateStrategyRollingUpdateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigMonitoringUpdateStrategyRollingUpdate.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9743,18 +9335,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfignetwork">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetwork">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetwork">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetwork.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10033,18 +9613,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcaliconetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkCalicoNetworkProvider">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkCalicoNetworkProvider">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkCalicoNetworkProviderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkCalicoNetworkProviderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkCalicoNetworkProviderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkCalicoNetworkProvider.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10107,18 +9675,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcanalnetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkCanalNetworkProvider">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkCanalNetworkProvider">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkCanalNetworkProviderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkCanalNetworkProviderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkCanalNetworkProviderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkCanalNetworkProvider.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10181,18 +9737,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfignetworkflannelnetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkFlannelNetworkProvider">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkFlannelNetworkProvider">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkFlannelNetworkProviderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkFlannelNetworkProviderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkFlannelNetworkProviderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkFlannelNetworkProvider.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10255,18 +9799,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfignetworkweavenetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkWeaveNetworkProvider">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkWeaveNetworkProvider">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkWeaveNetworkProviderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkWeaveNetworkProviderOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkWeaveNetworkProviderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigNetworkWeaveNetworkProvider.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10329,18 +9861,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfignode">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Node</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNode">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNode">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNodeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigNodeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigNodeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigNode.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10803,18 +10323,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigprivateregistry">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigPrivateRegistry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigPrivateRegistry">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigPrivateRegistryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigPrivateRegistryOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigPrivateRegistryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigPrivateRegistry.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10985,18 +10493,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigservices">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServices">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServices">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServices.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11239,18 +10735,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcd">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcd">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcd">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcdArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcdOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcdArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcd.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11817,18 +11301,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcdBackupConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcdBackupConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcdBackupConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcdBackupConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcdBackupConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcdBackupConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12039,18 +11511,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfigs3backupconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcdBackupConfigS3BackupConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcdBackupConfigS3BackupConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcdBackupConfigS3BackupConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcdBackupConfigS3BackupConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcdBackupConfigS3BackupConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesEtcdBackupConfigS3BackupConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12329,18 +11789,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapi">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApi">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApi">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApi.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12799,18 +12247,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlog">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiAuditLog">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiAuditLog">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiAuditLogArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiAuditLogOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiAuditLogArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiAuditLog.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12913,18 +12349,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlogconfiguration">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiAuditLogConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiAuditLogConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiAuditLogConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiAuditLogConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiAuditLogConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiAuditLogConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -13167,18 +12591,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapieventratelimit">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiEventRateLimit">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiEventRateLimit">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiEventRateLimitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiEventRateLimitOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiEventRateLimitArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiEventRateLimit.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -13281,18 +12693,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapisecretsencryptionconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiSecretsEncryptionConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiSecretsEncryptionConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiSecretsEncryptionConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiSecretsEncryptionConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiSecretsEncryptionConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeApiSecretsEncryptionConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -13395,18 +12795,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubecontroller">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeController">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeController">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeControllerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeControllerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeControllerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeController.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -13649,18 +13037,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubelet">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubelet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubelet">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeletArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeletOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeletArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubelet.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14011,18 +13387,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeproxy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeproxy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeproxy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeproxyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeproxyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeproxyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesKubeproxy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14193,18 +13557,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigservicesscheduler">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesScheduler">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesScheduler">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesSchedulerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesSchedulerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesSchedulerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigServicesScheduler.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14375,18 +13727,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigUpgradeStrategy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigUpgradeStrategy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigUpgradeStrategyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigUpgradeStrategyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigUpgradeStrategyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigUpgradeStrategy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14557,18 +13897,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategydraininput">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigUpgradeStrategyDrainInput">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigRkeConfigUpgradeStrategyDrainInput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigUpgradeStrategyDrainInputArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigRkeConfigUpgradeStrategyDrainInputOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigUpgradeStrategyDrainInputArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigRkeConfigUpgradeStrategyDrainInput.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14775,18 +14103,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigscheduledclusterscan">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScan">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScan">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScan.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14925,18 +14241,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScanConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScanConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScanConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScanConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScanConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScanConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14999,18 +14303,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfigcisscanconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScanConfigCisScanConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScanConfigCisScanConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScanConfigCisScanConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScanConfigCisScanConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScanConfigCisScanConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScanConfigCisScanConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -15217,18 +14509,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscheduleconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Schedule<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScheduleConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScheduleConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScheduleConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScheduleConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScheduleConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionClusterConfigScheduledClusterScanScheduleConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -15327,18 +14607,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="clustertemplatetemplaterevisionquestion">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Question</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ClusterTemplateTemplateRevisionQuestion">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ClusterTemplateTemplateRevisionQuestion">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionQuestionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#ClusterTemplateTemplateRevisionQuestionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.ClusterTemplateTemplateRevisionQuestionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.ClusterTemplateTemplateRevisionQuestion.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

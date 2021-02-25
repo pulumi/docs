@@ -70,6 +70,7 @@ const default_elastigroup = new spotinst.aws.Elastigroup("default-elastigroup", 
         httpTokens: "optional",
     },
     minSize: 0,
+    minimumInstanceLifetime: 12,
     orientation: "balanced",
     placementTenancy: "default",
     product: "Linux/UNIX",
@@ -137,19 +138,19 @@ const default_elastigroup = new spotinst.aws.Elastigroup("default-elastigroup", 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#Elastigroup">Elastigroup</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#ElastigroupArgs">ElastigroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Elastigroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ElastigroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/aws/#pulumi_spotinst.aws.Elastigroup">Elastigroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">block_devices_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">elastic_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">elastic_load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_unhealthy_duration_before_replacement</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preferred_spots</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_spots</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_weights</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupInstanceTypesWeightArgs]]</span> = None<span class="p">, </span><span class="nx">integration_beanstalk</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationBeanstalkArgs]</span> = None<span class="p">, </span><span class="nx">integration_codedeploy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationCodedeployArgs]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationDockerSwarmArgs]</span> = None<span class="p">, </span><span class="nx">integration_ecs</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationEcsArgs]</span> = None<span class="p">, </span><span class="nx">integration_gitlab</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationGitlabArgs]</span> = None<span class="p">, </span><span class="nx">integration_kubernetes</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationKubernetesArgs]</span> = None<span class="p">, </span><span class="nx">integration_mesosphere</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMesosphereArgs]</span> = None<span class="p">, </span><span class="nx">integration_multai_runtime</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMultaiRuntimeArgs]</span> = None<span class="p">, </span><span class="nx">integration_nomad</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationNomadArgs]</span> = None<span class="p">, </span><span class="nx">integration_rancher</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRancherArgs]</span> = None<span class="p">, </span><span class="nx">integration_route53</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRoute53Args]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifetime_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[ElastigroupMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">multai_target_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupMultaiTargetSetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">orientation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persist_block_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_root_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ElastigroupRevertToSpotArgs]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_target_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingTargetPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signals</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupSignalArgs]]</span> = None<span class="p">, </span><span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">stateful_deallocation</span><span class="p">:</span> <span class="nx">Optional[ElastigroupStatefulDeallocationArgs]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupTagArgs]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">utilize_commitments</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Elastigroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">block_devices_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">elastic_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">elastic_load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_unhealthy_duration_before_replacement</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preferred_spots</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_spots</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_weights</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupInstanceTypesWeightArgs]]</span> = None<span class="p">, </span><span class="nx">integration_beanstalk</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationBeanstalkArgs]</span> = None<span class="p">, </span><span class="nx">integration_codedeploy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationCodedeployArgs]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationDockerSwarmArgs]</span> = None<span class="p">, </span><span class="nx">integration_ecs</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationEcsArgs]</span> = None<span class="p">, </span><span class="nx">integration_gitlab</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationGitlabArgs]</span> = None<span class="p">, </span><span class="nx">integration_kubernetes</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationKubernetesArgs]</span> = None<span class="p">, </span><span class="nx">integration_mesosphere</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMesosphereArgs]</span> = None<span class="p">, </span><span class="nx">integration_multai_runtime</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMultaiRuntimeArgs]</span> = None<span class="p">, </span><span class="nx">integration_nomad</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationNomadArgs]</span> = None<span class="p">, </span><span class="nx">integration_rancher</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRancherArgs]</span> = None<span class="p">, </span><span class="nx">integration_route53</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRoute53Args]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifetime_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[ElastigroupMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">minimum_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">multai_target_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupMultaiTargetSetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">orientation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persist_block_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_root_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ElastigroupRevertToSpotArgs]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_target_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingTargetPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signals</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupSignalArgs]]</span> = None<span class="p">, </span><span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">stateful_deallocation</span><span class="p">:</span> <span class="nx">Optional[ElastigroupStatefulDeallocationArgs]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupTagArgs]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">utilize_commitments</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#Elastigroup">NewElastigroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupArgs">ElastigroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#Elastigroup">Elastigroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewElastigroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ElastigroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Elastigroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Elastigroup.html">Elastigroup</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.ElastigroupArgs.html">ElastigroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Elastigroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ElastigroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -170,7 +171,7 @@ const default_elastigroup = new spotinst.aws.Elastigroup("default-elastigroup", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#ElastigroupArgs">ElastigroupArgs</a></span>
+        <span class="property-type"><a href="#inputs">ElastigroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -239,7 +240,7 @@ const default_elastigroup = new spotinst.aws.Elastigroup("default-elastigroup", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupArgs">ElastigroupArgs</a></span>
+        <span class="property-type"><a href="#inputs">ElastigroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -278,7 +279,7 @@ const default_elastigroup = new spotinst.aws.Elastigroup("default-elastigroup", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.ElastigroupArgs.html">ElastigroupArgs</a></span>
+        <span class="property-type"><a href="#inputs">ElastigroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -301,11 +302,11 @@ const default_elastigroup = new spotinst.aws.Elastigroup("default-elastigroup", 
 
 ## Elastigroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -730,6 +731,16 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimuminstancelifetime_csharp">
+<a href="#minimuminstancelifetime_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Instance<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1452,6 +1463,16 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="minimuminstancelifetime_go">
+<a href="#minimuminstancelifetime_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Instance<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="multaitargetsets_go">
 <a href="#multaitargetsets_go" style="color: inherit; text-decoration: inherit;">Multai<wbr>Target<wbr>Sets</a>
 </span>
@@ -2168,6 +2189,16 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimuminstancelifetime_nodejs">
+<a href="#minimuminstancelifetime_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Instance<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2890,6 +2921,16 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="minimum_instance_lifetime_python">
+<a href="#minimum_instance_lifetime_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>instance_<wbr>lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="multai_target_sets_python">
 <a href="#multai_target_sets_python" style="color: inherit; text-decoration: inherit;">multai_<wbr>target_<wbr>sets</a>
 </span>
@@ -3260,20 +3301,20 @@ Get an existing Elastigroup resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#ElastigroupState">ElastigroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#Elastigroup">Elastigroup</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ElastigroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Elastigroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">block_devices_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">elastic_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">elastic_load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_unhealthy_duration_before_replacement</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preferred_spots</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_spots</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_weights</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupInstanceTypesWeightArgs]]</span> = None<span class="p">, </span><span class="nx">integration_beanstalk</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationBeanstalkArgs]</span> = None<span class="p">, </span><span class="nx">integration_codedeploy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationCodedeployArgs]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationDockerSwarmArgs]</span> = None<span class="p">, </span><span class="nx">integration_ecs</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationEcsArgs]</span> = None<span class="p">, </span><span class="nx">integration_gitlab</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationGitlabArgs]</span> = None<span class="p">, </span><span class="nx">integration_kubernetes</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationKubernetesArgs]</span> = None<span class="p">, </span><span class="nx">integration_mesosphere</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMesosphereArgs]</span> = None<span class="p">, </span><span class="nx">integration_multai_runtime</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMultaiRuntimeArgs]</span> = None<span class="p">, </span><span class="nx">integration_nomad</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationNomadArgs]</span> = None<span class="p">, </span><span class="nx">integration_rancher</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRancherArgs]</span> = None<span class="p">, </span><span class="nx">integration_route53</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRoute53Args]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifetime_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[ElastigroupMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">multai_target_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupMultaiTargetSetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">orientation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persist_block_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_root_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ElastigroupRevertToSpotArgs]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_target_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingTargetPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signals</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupSignalArgs]]</span> = None<span class="p">, </span><span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">stateful_deallocation</span><span class="p">:</span> <span class="nx">Optional[ElastigroupStatefulDeallocationArgs]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupTagArgs]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">utilize_commitments</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Elastigroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">block_devices_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capacity_unit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_credits</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">draining_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">elastic_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">elastic_load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">fallback_to_ondemand</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_check_unhealthy_duration_before_replacement</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_ondemand</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_types_preferred_spots</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_spots</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_types_weights</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupInstanceTypesWeightArgs]]</span> = None<span class="p">, </span><span class="nx">integration_beanstalk</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationBeanstalkArgs]</span> = None<span class="p">, </span><span class="nx">integration_codedeploy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationCodedeployArgs]</span> = None<span class="p">, </span><span class="nx">integration_docker_swarm</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationDockerSwarmArgs]</span> = None<span class="p">, </span><span class="nx">integration_ecs</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationEcsArgs]</span> = None<span class="p">, </span><span class="nx">integration_gitlab</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationGitlabArgs]</span> = None<span class="p">, </span><span class="nx">integration_kubernetes</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationKubernetesArgs]</span> = None<span class="p">, </span><span class="nx">integration_mesosphere</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMesosphereArgs]</span> = None<span class="p">, </span><span class="nx">integration_multai_runtime</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationMultaiRuntimeArgs]</span> = None<span class="p">, </span><span class="nx">integration_nomad</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationNomadArgs]</span> = None<span class="p">, </span><span class="nx">integration_rancher</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRancherArgs]</span> = None<span class="p">, </span><span class="nx">integration_route53</span><span class="p">:</span> <span class="nx">Optional[ElastigroupIntegrationRoute53Args]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lifetime_period</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[ElastigroupMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">minimum_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">multai_target_sets</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupMultaiTargetSetArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">ondemand_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">orientation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">persist_block_devices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_private_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">persist_root_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">preferred_availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">product</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">revert_to_spot</span><span class="p">:</span> <span class="nx">Optional[ElastigroupRevertToSpotArgs]</span> = None<span class="p">, </span><span class="nx">scaling_down_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingDownPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_strategies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingStrategyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_target_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingTargetPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scaling_up_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScalingUpPolicyArgs]]</span> = None<span class="p">, </span><span class="nx">scheduled_tasks</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupScheduledTaskArgs]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shutdown_script</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">signals</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupSignalArgs]]</span> = None<span class="p">, </span><span class="nx">spot_percentage</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">stateful_deallocation</span><span class="p">:</span> <span class="nx">Optional[ElastigroupStatefulDeallocationArgs]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElastigroupTagArgs]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">update_policy</span><span class="p">:</span> <span class="nx">Optional[ElastigroupUpdatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">utilize_commitments</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">utilize_reserved_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Elastigroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetElastigroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupState">ElastigroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#Elastigroup">Elastigroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetElastigroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ElastigroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Elastigroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Elastigroup.html">Elastigroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.ElastigroupState.html">ElastigroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Elastigroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ElastigroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3765,6 +3806,16 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_minimuminstancelifetime_csharp">
+<a href="#state_minimuminstancelifetime_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Instance<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4487,6 +4538,16 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_minimuminstancelifetime_go">
+<a href="#state_minimuminstancelifetime_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Instance<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_multaitargetsets_go">
 <a href="#state_multaitargetsets_go" style="color: inherit; text-decoration: inherit;">Multai<wbr>Target<wbr>Sets</a>
 </span>
@@ -5203,6 +5264,16 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of instances the group should have at any time.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_minimuminstancelifetime_nodejs">
+<a href="#state_minimuminstancelifetime_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Instance<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5925,6 +5996,16 @@ Note: `availability_zones` naming syntax follows the convention `availability-zo
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_minimum_instance_lifetime_python">
+<a href="#state_minimum_instance_lifetime_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>instance_<wbr>lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Defines the preferred minimum instance lifetime. Markets which comply with this preference will be prioritized. Optional values: 1, 3, 6, 12, 24.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_multai_target_sets_python">
 <a href="#state_multai_target_sets_python" style="color: inherit; text-decoration: inherit;">multai_<wbr>target_<wbr>sets</a>
 </span>
@@ -6261,18 +6342,6 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 <h4 id="elastigroupebsblockdevice">Elastigroup<wbr>Ebs<wbr>Block<wbr>Device</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupEbsBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupEbsBlockDevice">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupEbsBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupEbsBlockDeviceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupEbsBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupEbsBlockDevice.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6659,18 +6728,6 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 {{% /choosable %}}
 
 <h4 id="elastigroupephemeralblockdevice">Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupEphemeralBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupEphemeralBlockDevice">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupEphemeralBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupEphemeralBlockDeviceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupEphemeralBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupEphemeralBlockDevice.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6781,18 +6838,6 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 {{% /choosable %}}
 
 <h4 id="elastigroupinstancetypesweight">Elastigroup<wbr>Instance<wbr>Types<wbr>Weight</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupInstanceTypesWeight">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupInstanceTypesWeight">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupInstanceTypesWeightArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupInstanceTypesWeightOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupInstanceTypesWeightArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupInstanceTypesWeight.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6899,18 +6944,6 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationbeanstalk">Elastigroup<wbr>Integration<wbr>Beanstalk</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationBeanstalk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationBeanstalk">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationBeanstalkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationBeanstalkOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationBeanstalkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationBeanstalk.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7053,18 +7086,6 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationbeanstalkdeploymentpreferences">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationBeanstalkDeploymentPreferences">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationBeanstalkDeploymentPreferences">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationBeanstalkDeploymentPreferencesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationBeanstalkDeploymentPreferencesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationBeanstalkDeploymentPreferencesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationBeanstalkDeploymentPreferences.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7251,18 +7272,6 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationbeanstalkdeploymentpreferencesstrategy">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationBeanstalkDeploymentPreferencesStrategy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationBeanstalkDeploymentPreferencesStrategy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationBeanstalkDeploymentPreferencesStrategyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationBeanstalkDeploymentPreferencesStrategyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationBeanstalkDeploymentPreferencesStrategyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationBeanstalkDeploymentPreferencesStrategy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7369,18 +7378,6 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationbeanstalkmanagedactions">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationBeanstalkManagedActions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationBeanstalkManagedActions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationBeanstalkManagedActionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationBeanstalkManagedActionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationBeanstalkManagedActionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationBeanstalkManagedActions.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7447,18 +7444,6 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationbeanstalkmanagedactionsplatformupdate">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationBeanstalkManagedActionsPlatformUpdate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationBeanstalkManagedActionsPlatformUpdate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationBeanstalkManagedActionsPlatformUpdateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationBeanstalkManagedActionsPlatformUpdateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationBeanstalkManagedActionsPlatformUpdateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationBeanstalkManagedActionsPlatformUpdate.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7605,18 +7590,6 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationcodedeploy">Elastigroup<wbr>Integration<wbr>Codedeploy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationCodedeploy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationCodedeploy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationCodedeployArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationCodedeployOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationCodedeployArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationCodedeploy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7763,18 +7736,6 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationcodedeploydeploymentgroup">Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Deployment<wbr>Group</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationCodedeployDeploymentGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationCodedeployDeploymentGroup">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationCodedeployDeploymentGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationCodedeployDeploymentGroupOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationCodedeployDeploymentGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationCodedeployDeploymentGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7881,18 +7842,6 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationDockerSwarm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationDockerSwarm">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationDockerSwarmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationDockerSwarmOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationDockerSwarmArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationDockerSwarm.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8159,18 +8108,6 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationdockerswarmautoscaledown">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Down</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationDockerSwarmAutoscaleDown">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationDockerSwarmAutoscaleDown">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationDockerSwarmAutoscaleDownArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationDockerSwarmAutoscaleDownOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationDockerSwarmAutoscaleDownArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationDockerSwarmAutoscaleDown.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8281,18 +8218,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationdockerswarmautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Headroom</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationDockerSwarmAutoscaleHeadroom">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationDockerSwarmAutoscaleHeadroom">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationDockerSwarmAutoscaleHeadroomArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationDockerSwarmAutoscaleHeadroomOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationDockerSwarmAutoscaleHeadroomArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationDockerSwarmAutoscaleHeadroom.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8439,18 +8364,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationecs">Elastigroup<wbr>Integration<wbr>Ecs</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationEcs">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationEcs">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationEcsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationEcsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationEcsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationEcs.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8833,18 +8746,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationecsautoscaleattribute">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Attribute</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationEcsAutoscaleAttribute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationEcsAutoscaleAttribute">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationEcsAutoscaleAttributeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationEcsAutoscaleAttributeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationEcsAutoscaleAttributeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationEcsAutoscaleAttribute.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8947,18 +8848,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationecsautoscaledown">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Down</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationEcsAutoscaleDown">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationEcsAutoscaleDown">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationEcsAutoscaleDownArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationEcsAutoscaleDownOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationEcsAutoscaleDownArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationEcsAutoscaleDown.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9069,18 +8958,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationecsautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Headroom</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationEcsAutoscaleHeadroom">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationEcsAutoscaleHeadroom">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationEcsAutoscaleHeadroomArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationEcsAutoscaleHeadroomOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationEcsAutoscaleHeadroomArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationEcsAutoscaleHeadroom.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9227,18 +9104,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationecsbatch">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Batch</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationEcsBatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationEcsBatch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationEcsBatchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationEcsBatchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationEcsBatchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationEcsBatch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9301,18 +9166,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationgitlab">Elastigroup<wbr>Integration<wbr>Gitlab</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationGitlab">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationGitlab">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationGitlabArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationGitlabOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationGitlabArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationGitlab.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9379,18 +9232,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationgitlabrunner">Elastigroup<wbr>Integration<wbr>Gitlab<wbr>Runner</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationGitlabRunner">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationGitlabRunner">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationGitlabRunnerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationGitlabRunnerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationGitlabRunnerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationGitlabRunner.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9457,18 +9298,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationKubernetes">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationKubernetes">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationKubernetesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationKubernetesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationKubernetesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationKubernetes.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9891,18 +9720,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationkubernetesautoscaledown">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Down</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationKubernetesAutoscaleDown">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationKubernetesAutoscaleDown">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationKubernetesAutoscaleDownArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationKubernetesAutoscaleDownOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationKubernetesAutoscaleDownArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationKubernetesAutoscaleDown.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9969,18 +9786,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationkubernetesautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Headroom</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationKubernetesAutoscaleHeadroom">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationKubernetesAutoscaleHeadroom">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationKubernetesAutoscaleHeadroomArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationKubernetesAutoscaleHeadroomOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationKubernetesAutoscaleHeadroomArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationKubernetesAutoscaleHeadroom.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10127,18 +9932,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationkubernetesautoscalelabel">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Label</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationKubernetesAutoscaleLabel">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationKubernetesAutoscaleLabel">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationKubernetesAutoscaleLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationKubernetesAutoscaleLabelOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationKubernetesAutoscaleLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationKubernetesAutoscaleLabel.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10241,18 +10034,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationmesosphere">Elastigroup<wbr>Integration<wbr>Mesosphere</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationMesosphere">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationMesosphere">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationMesosphereArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationMesosphereOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationMesosphereArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationMesosphere.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10319,18 +10100,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationMultaiRuntime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationMultaiRuntime">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationMultaiRuntimeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationMultaiRuntimeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationMultaiRuntimeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationMultaiRuntime.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10397,18 +10166,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationnomad">Elastigroup<wbr>Integration<wbr>Nomad</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationNomad">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationNomad">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationNomadArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationNomadOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationNomadArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationNomad.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10755,18 +10512,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationnomadautoscaleconstraint">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Constraint</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationNomadAutoscaleConstraint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationNomadAutoscaleConstraint">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationNomadAutoscaleConstraintArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationNomadAutoscaleConstraintOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationNomadAutoscaleConstraintArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationNomadAutoscaleConstraint.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10869,18 +10614,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationnomadautoscaledown">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Down</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationNomadAutoscaleDown">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationNomadAutoscaleDown">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationNomadAutoscaleDownArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationNomadAutoscaleDownOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationNomadAutoscaleDownArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationNomadAutoscaleDown.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -10947,18 +10680,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationnomadautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Headroom</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationNomadAutoscaleHeadroom">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationNomadAutoscaleHeadroom">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationNomadAutoscaleHeadroomArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationNomadAutoscaleHeadroomOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationNomadAutoscaleHeadroomArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationNomadAutoscaleHeadroom.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11105,18 +10826,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationrancher">Elastigroup<wbr>Integration<wbr>Rancher</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationRancher">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationRancher">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationRancherArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationRancherOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationRancherArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationRancher.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11307,18 +11016,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationroute53">Elastigroup<wbr>Integration<wbr>Route53</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationRoute53">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationRoute53">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationRoute53Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationRoute53Output">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationRoute53Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationRoute53.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11385,18 +11082,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationroute53domain">Elastigroup<wbr>Integration<wbr>Route53Domain</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationRoute53Domain">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationRoute53Domain">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationRoute53DomainArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationRoute53DomainOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationRoute53DomainArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationRoute53Domain.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11583,18 +11268,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupintegrationroute53domainrecordset">Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationRoute53DomainRecordSet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationRoute53DomainRecordSet">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationRoute53DomainRecordSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupIntegrationRoute53DomainRecordSetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupIntegrationRoute53DomainRecordSetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupIntegrationRoute53DomainRecordSet.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11741,18 +11414,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupmetadataoptions">Elastigroup<wbr>Metadata<wbr>Options</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupMetadataOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupMetadataOptions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupMetadataOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupMetadataOptionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupMetadataOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupMetadataOptions.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11859,18 +11520,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupmultaitargetset">Elastigroup<wbr>Multai<wbr>Target<wbr>Set</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupMultaiTargetSet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupMultaiTargetSet">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupMultaiTargetSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupMultaiTargetSetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupMultaiTargetSetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupMultaiTargetSet.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -11977,18 +11626,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupnetworkinterface">Elastigroup<wbr>Network<wbr>Interface</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupNetworkInterface">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupNetworkInterface">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupNetworkInterfaceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupNetworkInterfaceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupNetworkInterfaceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupNetworkInterface.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12335,18 +11972,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupreverttospot">Elastigroup<wbr>Revert<wbr>To<wbr>Spot</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupRevertToSpot">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupRevertToSpot">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupRevertToSpotArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupRevertToSpotOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupRevertToSpotArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupRevertToSpot.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -12453,18 +12078,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupscalingdownpolicy">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingDownPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingDownPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupScalingDownPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupScalingDownPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupScalingDownPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupScalingDownPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -13291,18 +12904,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupscalingdownpolicydimension">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingDownPolicyDimension">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingDownPolicyDimension">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupScalingDownPolicyDimensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupScalingDownPolicyDimensionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupScalingDownPolicyDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupScalingDownPolicyDimension.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -13409,18 +13010,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupscalingstrategy">Elastigroup<wbr>Scaling<wbr>Strategy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingStrategy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingStrategy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupScalingStrategyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupScalingStrategyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupScalingStrategyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupScalingStrategy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -13527,18 +13116,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupscalingtargetpolicy">Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingTargetPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingTargetPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupScalingTargetPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupScalingTargetPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupScalingTargetPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupScalingTargetPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14005,18 +13582,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupscalingtargetpolicydimension">Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Dimension</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingTargetPolicyDimension">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingTargetPolicyDimension">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupScalingTargetPolicyDimensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupScalingTargetPolicyDimensionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupScalingTargetPolicyDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupScalingTargetPolicyDimension.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14123,18 +13688,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupscalinguppolicy">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingUpPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingUpPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupScalingUpPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupScalingUpPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupScalingUpPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupScalingUpPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -14961,18 +14514,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupscalinguppolicydimension">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingUpPolicyDimension">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingUpPolicyDimension">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupScalingUpPolicyDimensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupScalingUpPolicyDimensionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupScalingUpPolicyDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupScalingUpPolicyDimension.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -15079,18 +14620,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupscheduledtask">Elastigroup<wbr>Scheduled<wbr>Task</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScheduledTask">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScheduledTask">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupScheduledTaskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupScheduledTaskOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupScheduledTaskArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupScheduledTask.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -15717,18 +15246,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupsignal">Elastigroup<wbr>Signal</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupSignal">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupSignal">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupSignalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupSignalOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupSignalArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupSignal.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -15835,18 +15352,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupstatefuldeallocation">Elastigroup<wbr>Stateful<wbr>Deallocation</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupStatefulDeallocation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupStatefulDeallocation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupStatefulDeallocationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupStatefulDeallocationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupStatefulDeallocationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupStatefulDeallocation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -16033,18 +15538,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigrouptag">Elastigroup<wbr>Tag</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupTag">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupTag">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupTagArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupTagOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupTagArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupTag.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -16147,18 +15640,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupUpdatePolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupUpdatePolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupUpdatePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupUpdatePolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupUpdatePolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupUpdatePolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -16345,18 +15826,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupupdatepolicyrollconfig">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupUpdatePolicyRollConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupUpdatePolicyRollConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupUpdatePolicyRollConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupUpdatePolicyRollConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupUpdatePolicyRollConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupUpdatePolicyRollConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -16623,18 +16092,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupupdatepolicyrollconfigstrategy">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupUpdatePolicyRollConfigStrategy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupUpdatePolicyRollConfigStrategy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupUpdatePolicyRollConfigStrategyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupUpdatePolicyRollConfigStrategyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupUpdatePolicyRollConfigStrategyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupUpdatePolicyRollConfigStrategy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -16821,18 +16278,6 @@ Usage:
 {{% /choosable %}}
 
 <h4 id="elastigroupupdatepolicyrollconfigstrategyonfailure">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy<wbr>On<wbr>Failure</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupUpdatePolicyRollConfigStrategyOnFailure">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupUpdatePolicyRollConfigStrategyOnFailure">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupUpdatePolicyRollConfigStrategyOnFailureArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/aws?tab=doc#ElastigroupUpdatePolicyRollConfigStrategyOnFailureOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Inputs.ElastigroupUpdatePolicyRollConfigStrategyOnFailureArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Aws.Outputs.ElastigroupUpdatePolicyRollConfigStrategyOnFailure.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

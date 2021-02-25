@@ -1,8 +1,8 @@
 
 ---
-title: "GetOrganization"
-title_tag: "Function GetOrganization | Module confluent | Package Azure NextGen"
-meta_desc: "Explore the GetOrganization function of the confluent module, including examples, input properties, output properties, and supporting types. "
+title: "getOrganization"
+title_tag: "azure-nextgen.confluent.getOrganization"
+meta_desc: "Documentation for the azure-nextgen.confluent.getOrganization function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetOrganization function of the confluent module, includ
 
 
 
-## Using GetOrganization {#using}
+## Using getOrganization {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getOrganization<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetOrganizationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetOrganizationResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getOrganization<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetOrganizationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetOrganizationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetOrganization function of the confluent module, includ
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupOrganization<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupOrganizationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupOrganizationResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupOrganization<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupOrganizationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupOrganizationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupOrganization` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetOrganization function of the confluent module, includ
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetOrganization </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetOrganizationResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetOrganizationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetOrganizationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetOrganizationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetOrganization Result {#result}
+## getOrganization Result {#result}
 
 The following output properties are available:
 
@@ -193,6 +193,15 @@ The following output properties are available:
     <dd>{{% md %}}Id of the Confluent organization.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="ssourl_csharp">
 <a href="#ssourl_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Url</a>
 </span>
@@ -227,15 +236,6 @@ The following output properties are available:
         <span class="property-type"><a href="#organizationresourcepropertiesresponseofferdetail">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Confluent.<wbr>Outputs.<wbr>Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>Offer<wbr>Detail</a></span>
     </dt>
     <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_csharp">
@@ -298,6 +298,15 @@ The following output properties are available:
     <dd>{{% md %}}Id of the Confluent organization.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="ssourl_go">
 <a href="#ssourl_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Url</a>
 </span>
@@ -332,15 +341,6 @@ The following output properties are available:
         <span class="property-type"><a href="#organizationresourcepropertiesresponseofferdetail">Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>Offer<wbr>Detail</a></span>
     </dt>
     <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_go">
@@ -403,6 +403,15 @@ The following output properties are available:
     <dd>{{% md %}}Id of the Confluent organization.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="ssourl_nodejs">
 <a href="#ssourl_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Url</a>
 </span>
@@ -437,15 +446,6 @@ The following output properties are available:
         <span class="property-type"><a href="#organizationresourcepropertiesresponseofferdetail">Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>Offer<wbr>Detail</a></span>
     </dt>
     <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
@@ -508,6 +508,15 @@ The following output properties are available:
     <dd>{{% md %}}Id of the Confluent organization.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="sso_url_python">
 <a href="#sso_url_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>url</a>
 </span>
@@ -544,15 +553,6 @@ The following output properties are available:
     <dd>{{% md %}}Confluent offer detail{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Provision states for confluent RP{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -579,9 +579,6 @@ The following output properties are available:
 
 
 <h4 id="organizationresourcepropertiesresponseofferdetail">Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>Offer<wbr>Detail</h4>
-
-
-
 
 
 
@@ -826,9 +823,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="organizationresourcepropertiesresponseuserdetail">Organization<wbr>Resource<wbr>Properties<wbr>Response<wbr>User<wbr>Detail</h4>
-
-
-
 
 
 

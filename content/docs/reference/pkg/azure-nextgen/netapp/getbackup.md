@@ -1,8 +1,8 @@
 
 ---
-title: "GetBackup"
-title_tag: "Function GetBackup | Module netapp | Package Azure NextGen"
-meta_desc: "Explore the GetBackup function of the netapp module, including examples, input properties, output properties, and supporting types. "
+title: "getBackup"
+title_tag: "azure-nextgen.netapp.getBackup"
+meta_desc: "Documentation for the azure-nextgen.netapp.getBackup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetBackup function of the netapp module, including examp
 
 
 
-## Using GetBackup {#using}
+## Using getBackup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBackup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBackupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetBackupResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBackup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBackupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBackupResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetBackup function of the netapp module, including examp
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBackup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBackupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupBackupResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBackup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBackupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBackupResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupBackup` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetBackup function of the netapp module, including examp
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBackup </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetBackupResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetBackupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBackupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBackupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -254,7 +254,7 @@ The following arguments are supported:
 
 
 
-## GetBackup Result {#result}
+## getBackup Result {#result}
 
 The following output properties are available:
 
@@ -290,6 +290,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the backup{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="failurereason_csharp">
+<a href="#failurereason_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Failure reason{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -388,6 +397,15 @@ The following output properties are available:
     <dd>{{% md %}}The creation date of the backup{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="failurereason_go">
+<a href="#failurereason_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Failure reason{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -484,6 +502,15 @@ The following output properties are available:
     <dd>{{% md %}}The creation date of the backup{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="failurereason_nodejs">
+<a href="#failurereason_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Failure reason{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -578,6 +605,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The creation date of the backup{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="failure_reason_python">
+<a href="#failure_reason_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>reason</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Failure reason{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">

@@ -198,19 +198,19 @@ const exampleSpringCloudService = new azure.appplatform.SpringCloudService("exam
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appplatform/#SpringCloudService">SpringCloudService</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appplatform/#SpringCloudServiceArgs">SpringCloudServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SpringCloudService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SpringCloudServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appplatform/#pulumi_azure.appplatform.SpringCloudService">SpringCloudService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config_server_git_setting</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceConfigServerGitSettingArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceNetworkArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trace</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceTraceArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SpringCloudService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">config_server_git_setting</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceConfigServerGitSettingArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceNetworkArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trace</span><span class="p">:</span> <span class="nx">Optional[SpringCloudServiceTraceArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudService">NewSpringCloudService</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceArgs">SpringCloudServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudService">SpringCloudService</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSpringCloudService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SpringCloudServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpringCloudService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.SpringCloudService.html">SpringCloudService</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.SpringCloudServiceArgs.html">SpringCloudServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SpringCloudService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SpringCloudServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -231,7 +231,7 @@ const exampleSpringCloudService = new azure.appplatform.SpringCloudService("exam
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appplatform/#SpringCloudServiceArgs">SpringCloudServiceArgs</a></span>
+        <span class="property-type"><a href="#inputs">SpringCloudServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -300,7 +300,7 @@ const exampleSpringCloudService = new azure.appplatform.SpringCloudService("exam
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceArgs">SpringCloudServiceArgs</a></span>
+        <span class="property-type"><a href="#inputs">SpringCloudServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -339,7 +339,7 @@ const exampleSpringCloudService = new azure.appplatform.SpringCloudService("exam
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.SpringCloudServiceArgs.html">SpringCloudServiceArgs</a></span>
+        <span class="property-type"><a href="#inputs">SpringCloudServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -362,11 +362,11 @@ const exampleSpringCloudService = new azure.appplatform.SpringCloudService("exam
 
 ## SpringCloudService Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SpringCloudService resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SpringCloudService resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -829,7 +829,7 @@ Get an existing SpringCloudService resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appplatform/#SpringCloudServiceState">SpringCloudServiceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appplatform/#SpringCloudService">SpringCloudService</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SpringCloudServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SpringCloudService</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -838,11 +838,11 @@ Get an existing SpringCloudService resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSpringCloudService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceState">SpringCloudServiceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudService">SpringCloudService</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSpringCloudService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SpringCloudServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SpringCloudService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.SpringCloudService.html">SpringCloudService</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.SpringCloudServiceState.html">SpringCloudServiceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SpringCloudService</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SpringCloudServiceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1338,18 +1338,6 @@ The following state arguments are supported:
 
 
 <h4 id="springcloudserviceconfigservergitsetting">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SpringCloudServiceConfigServerGitSetting">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SpringCloudServiceConfigServerGitSetting">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Inputs.SpringCloudServiceConfigServerGitSettingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Outputs.SpringCloudServiceConfigServerGitSetting.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1616,18 +1604,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="springcloudserviceconfigservergitsettinghttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Http<wbr>Basic<wbr>Auth</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SpringCloudServiceConfigServerGitSettingHttpBasicAuth">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SpringCloudServiceConfigServerGitSettingHttpBasicAuth">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingHttpBasicAuthArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingHttpBasicAuthOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Inputs.SpringCloudServiceConfigServerGitSettingHttpBasicAuthArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Outputs.SpringCloudServiceConfigServerGitSettingHttpBasicAuth.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1734,18 +1710,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="springcloudserviceconfigservergitsettingrepository">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SpringCloudServiceConfigServerGitSettingRepository">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SpringCloudServiceConfigServerGitSettingRepository">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingRepositoryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingRepositoryOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Inputs.SpringCloudServiceConfigServerGitSettingRepositoryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Outputs.SpringCloudServiceConfigServerGitSettingRepository.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2052,18 +2016,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="springcloudserviceconfigservergitsettingrepositoryhttpbasicauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Http<wbr>Basic<wbr>Auth</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Inputs.SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuthArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Outputs.SpringCloudServiceConfigServerGitSettingRepositoryHttpBasicAuth.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2170,18 +2122,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="springcloudserviceconfigservergitsettingrepositorysshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Repository<wbr>Ssh<wbr>Auth</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SpringCloudServiceConfigServerGitSettingRepositorySshAuth">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SpringCloudServiceConfigServerGitSettingRepositorySshAuth">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingRepositorySshAuthArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingRepositorySshAuthOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Inputs.SpringCloudServiceConfigServerGitSettingRepositorySshAuthArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Outputs.SpringCloudServiceConfigServerGitSettingRepositorySshAuth.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2368,18 +2308,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="springcloudserviceconfigservergitsettingsshauth">Spring<wbr>Cloud<wbr>Service<wbr>Config<wbr>Server<wbr>Git<wbr>Setting<wbr>Ssh<wbr>Auth</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SpringCloudServiceConfigServerGitSettingSshAuth">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SpringCloudServiceConfigServerGitSettingSshAuth">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingSshAuthArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceConfigServerGitSettingSshAuthOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Inputs.SpringCloudServiceConfigServerGitSettingSshAuthArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Outputs.SpringCloudServiceConfigServerGitSettingSshAuth.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2566,18 +2494,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="springcloudservicenetwork">Spring<wbr>Cloud<wbr>Service<wbr>Network</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SpringCloudServiceNetwork">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SpringCloudServiceNetwork">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceNetworkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceNetworkOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Inputs.SpringCloudServiceNetworkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Outputs.SpringCloudServiceNetwork.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2804,18 +2720,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="springcloudservicetrace">Spring<wbr>Cloud<wbr>Service<wbr>Trace</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SpringCloudServiceTrace">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SpringCloudServiceTrace">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceTraceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appplatform?tab=doc#SpringCloudServiceTraceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Inputs.SpringCloudServiceTraceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppPlatform.Outputs.SpringCloudServiceTrace.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

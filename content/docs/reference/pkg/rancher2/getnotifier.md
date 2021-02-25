@@ -1,8 +1,8 @@
 
 ---
-title: "GetNotifier"
-title_tag: "Function GetNotifier | Package Rancher 2"
-meta_desc: "Explore the GetNotifier function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher v2 notifier."
+title: "getNotifier"
+title_tag: "rancher2.getNotifier"
+meta_desc: "Documentation for the rancher2.getNotifier function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -92,13 +92,13 @@ const foo = pulumi.output(rancher2.getNotifier({
 {{% /examples %}}
 
 
-## Using GetNotifier {#using}
+## Using getNotifier {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getNotifier<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#GetNotifierArgs">GetNotifierArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#GetNotifierResult">GetNotifierResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getNotifier<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetNotifierArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetNotifierResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -108,7 +108,7 @@ const foo = pulumi.output(rancher2.getNotifier({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNotifier<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#LookupNotifierArgs">LookupNotifierArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#LookupNotifierResult">LookupNotifierResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNotifier<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupNotifierArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupNotifierResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupNotifier` in the Go SDK.
 
@@ -117,7 +117,7 @@ const foo = pulumi.output(rancher2.getNotifier({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetNotifier </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.GetNotifierResult.html">GetNotifierResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.GetNotifierArgs.html">GetNotifierArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetNotifierResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetNotifierArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -313,7 +313,7 @@ The following arguments are supported:
 
 
 
-## GetNotifier Result {#result}
+## getNotifier Result {#result}
 
 The following output properties are available:
 
@@ -862,16 +862,6 @@ The following output properties are available:
 
 
 <h4 id="getnotifierdingtalkconfig">Get<wbr>Notifier<wbr>Dingtalk<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetNotifierDingtalkConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetNotifierDingtalkConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetNotifierDingtalkConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetNotifierDingtalkConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.GetNotifierDingtalkConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetNotifierDingtalkConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1008,16 +998,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getnotifiermsteamsconfig">Get<wbr>Notifier<wbr>Msteams<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetNotifierMsteamsConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetNotifierMsteamsConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetNotifierMsteamsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetNotifierMsteamsConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.GetNotifierMsteamsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetNotifierMsteamsConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1118,16 +1098,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getnotifierpagerdutyconfig">Get<wbr>Notifier<wbr>Pagerduty<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetNotifierPagerdutyConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetNotifierPagerdutyConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetNotifierPagerdutyConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1228,16 +1198,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getnotifierslackconfig">Get<wbr>Notifier<wbr>Slack<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetNotifierSlackConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetNotifierSlackConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetNotifierSlackConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1374,16 +1334,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getnotifiersmtpconfig">Get<wbr>Notifier<wbr>Smtp<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetNotifierSmtpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetNotifierSmtpConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetNotifierSmtpConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1664,16 +1614,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getnotifierwebhookconfig">Get<wbr>Notifier<wbr>Webhook<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetNotifierWebhookConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetNotifierWebhookConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetNotifierWebhookConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1774,16 +1714,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getnotifierwechatconfig">Get<wbr>Notifier<wbr>Wechat<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetNotifierWechatConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetNotifierWechatConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetNotifierWechatConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

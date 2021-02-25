@@ -26,19 +26,19 @@ Consul secret backends can be imported using the `path`, e.g.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/consul/#SecretBackend">SecretBackend</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/consul/#SecretBackendArgs">SecretBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SecretBackend</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vault/consul/#pulumi_vault.consul.SecretBackend">SecretBackend</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SecretBackend</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/consul?tab=doc#SecretBackend">NewSecretBackend</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/consul?tab=doc#SecretBackendArgs">SecretBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/consul?tab=doc#SecretBackend">SecretBackend</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecretBackend</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecretBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackend</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Consul.SecretBackend.html">SecretBackend</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Consul.SecretBackendArgs.html">SecretBackendArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SecretBackend</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SecretBackendArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -59,7 +59,7 @@ Consul secret backends can be imported using the `path`, e.g.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/vault/consul/#SecretBackendArgs">SecretBackendArgs</a></span>
+        <span class="property-type"><a href="#inputs">SecretBackendArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -128,7 +128,7 @@ Consul secret backends can be imported using the `path`, e.g.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/consul?tab=doc#SecretBackendArgs">SecretBackendArgs</a></span>
+        <span class="property-type"><a href="#inputs">SecretBackendArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -167,7 +167,7 @@ Consul secret backends can be imported using the `path`, e.g.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Consul.SecretBackendArgs.html">SecretBackendArgs</a></span>
+        <span class="property-type"><a href="#inputs">SecretBackendArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -190,11 +190,11 @@ Consul secret backends can be imported using the `path`, e.g.
 
 ## SecretBackend Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SecretBackend resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SecretBackend resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -220,6 +220,36 @@ The SecretBackend resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consul management token this backend should use to issue new tokens.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cacert_csharp">
+<a href="#cacert_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CA certificate to use when verifying Consul server certificate, must be x509 PEM encoded.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientcert_csharp">
+<a href="#clientcert_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client certificate used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientkey_csharp">
+<a href="#clientkey_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client key used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -300,6 +330,36 @@ for credentials issued by this backend.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="cacert_go">
+<a href="#cacert_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CA certificate to use when verifying Consul server certificate, must be x509 PEM encoded.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientcert_go">
+<a href="#clientcert_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client certificate used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientkey_go">
+<a href="#clientkey_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client key used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultleasettlseconds_go">
 <a href="#defaultleasettlseconds_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
 </span>
@@ -377,6 +437,36 @@ for credentials issued by this backend.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="cacert_nodejs">
+<a href="#cacert_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CA certificate to use when verifying Consul server certificate, must be x509 PEM encoded.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientcert_nodejs">
+<a href="#clientcert_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client certificate used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientkey_nodejs">
+<a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client key used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultleasettlseconds_nodejs">
 <a href="#defaultleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
 </span>
@@ -451,6 +541,36 @@ for credentials issued by this backend.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Consul management token this backend should use to issue new tokens.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ca_cert_python">
+<a href="#ca_cert_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}CA certificate to use when verifying Consul server certificate, must be x509 PEM encoded.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_cert_python">
+<a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Client certificate used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_key_python">
+<a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Client key used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -581,20 +701,20 @@ Get an existing SecretBackend resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/consul/#SecretBackendState">SecretBackendState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/consul/#SecretBackend">SecretBackend</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SecretBackendState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SecretBackend</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SecretBackend</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ca_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_lease_ttl_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SecretBackend</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackend<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/consul?tab=doc#SecretBackendState">SecretBackendState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/consul?tab=doc#SecretBackend">SecretBackend</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackend<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SecretBackendState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SecretBackend</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Consul.SecretBackend.html">SecretBackend</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Consul.SecretBackendState.html">SecretBackendState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SecretBackend</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SecretBackendState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -711,6 +831,36 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_cacert_csharp">
+<a href="#state_cacert_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CA certificate to use when verifying Consul server certificate, must be x509 PEM encoded.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clientcert_csharp">
+<a href="#state_clientcert_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client certificate used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clientkey_csharp">
+<a href="#state_clientkey_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client key used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_defaultleasettlseconds_csharp">
 <a href="#state_defaultleasettlseconds_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
 </span>
@@ -785,6 +935,36 @@ for credentials issued by this backend.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the address of the Consul instance, provided as "host:port" like "127.0.0.1:8500".
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_cacert_go">
+<a href="#state_cacert_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CA certificate to use when verifying Consul server certificate, must be x509 PEM encoded.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clientcert_go">
+<a href="#state_clientcert_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client certificate used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clientkey_go">
+<a href="#state_clientkey_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client key used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -865,6 +1045,36 @@ for credentials issued by this backend.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_cacert_nodejs">
+<a href="#state_cacert_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}CA certificate to use when verifying Consul server certificate, must be x509 PEM encoded.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clientcert_nodejs">
+<a href="#state_clientcert_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client certificate used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_clientkey_nodejs">
+<a href="#state_clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Client key used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_defaultleasettlseconds_nodejs">
 <a href="#state_defaultleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
 </span>
@@ -939,6 +1149,36 @@ for credentials issued by this backend.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the address of the Consul instance, provided as "host:port" like "127.0.0.1:8500".
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_ca_cert_python">
+<a href="#state_ca_cert_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}CA certificate to use when verifying Consul server certificate, must be x509 PEM encoded.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_client_cert_python">
+<a href="#state_client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Client certificate used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_key.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_client_key_python">
+<a href="#state_client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Client key used for Consul's TLS communication, must be x509 PEM encoded and if this is set you need to also set client_cert.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

@@ -1,8 +1,8 @@
 
 ---
-title: "GetPipeline"
-title_tag: "Function GetPipeline | Module datafactory | Package Azure NextGen"
-meta_desc: "Explore the GetPipeline function of the datafactory module, including examples, input properties, output properties, and supporting types. "
+title: "getPipeline"
+title_tag: "azure-nextgen.datafactory.getPipeline"
+meta_desc: "Documentation for the azure-nextgen.datafactory.getPipeline function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetPipeline function of the datafactory module, includin
 
 
 
-## Using GetPipeline {#using}
+## Using getPipeline {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPipeline<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPipelineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetPipelineResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPipeline<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPipelineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPipelineResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetPipeline function of the datafactory module, includin
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPipeline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPipelineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupPipelineResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPipeline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPipelineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPipelineResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPipeline` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetPipeline function of the datafactory module, includin
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPipeline </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetPipelineResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetPipelineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPipelineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPipelineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetPipeline Result {#result}
+## getPipeline Result {#result}
 
 The following output properties are available:
 
@@ -654,9 +654,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -754,9 +751,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="activitypolicyresponse">Activity<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -968,9 +962,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1068,9 +1059,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="amazonmwssourceresponse">Amazon<wbr>MWSSource<wbr>Response</h4>
-
-
-
 
 
 
@@ -1315,9 +1303,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="amazonredshiftsourceresponse">Amazon<wbr>Redshift<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -1598,9 +1583,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="amazons3readsettingsresponse">Amazon<wbr>S3Read<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -2028,9 +2010,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2272,9 +2251,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="avrosinkresponse">Avro<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -2558,9 +2534,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2769,9 +2742,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2941,9 +2911,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azureblobfsreadsettingsresponse">Azure<wbr>Blob<wbr>FSRead<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -3335,9 +3302,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3579,9 +3543,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azureblobfssourceresponse">Azure<wbr>Blob<wbr>FSSource<wbr>Response</h4>
-
-
-
 
 
 
@@ -3829,9 +3790,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3965,9 +3923,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azureblobstoragereadsettingsresponse">Azure<wbr>Blob<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -4395,9 +4350,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4531,9 +4483,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuredataexplorercommandactivityresponse">Azure<wbr>Data<wbr>Explorer<wbr>Command<wbr>Activity<wbr>Response</h4>
-
-
-
 
 
 
@@ -4853,9 +4802,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5172,9 +5118,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5452,9 +5395,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuredatalakestorereadsettingsresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Read<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -5918,9 +5858,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6201,9 +6138,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6376,9 +6310,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6515,9 +6446,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6618,9 +6546,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6718,9 +6643,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuredatabricksdeltalakesinkresponse">Azure<wbr>Databricks<wbr>Delta<wbr>Lake<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -7004,9 +6926,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7212,9 +7131,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azurefilestoragereadsettingsresponse">Azure<wbr>File<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -7642,9 +7558,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7742,9 +7655,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azurefunctionactivityresponse">Azure<wbr>Function<wbr>Activity<wbr>Response</h4>
-
-
-
 
 
 
@@ -8136,9 +8046,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8272,9 +8179,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuremlbatchexecutionactivityresponse">Azure<wbr>MLBatch<wbr>Execution<wbr>Activity<wbr>Response</h4>
-
-
-
 
 
 
@@ -8630,21 +8534,9 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="mlpipelineid_csharp">
-<a href="#mlpipelineid_csharp" style="color: inherit; text-decoration: inherit;">Ml<wbr>Pipeline<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">object</span>
-    </dt>
-    <dd>{{% md %}}ID of the published Azure ML pipeline. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -8663,6 +8555,15 @@ The following output properties are available:
         <span class="property-type">object</span>
     </dt>
     <dd>{{% md %}}Whether to continue execution of other steps in the PipelineRun if a step fails. This information will be passed in the continueOnStepFailure property of the published pipeline execution request. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datapathassignments_csharp">
+<a href="#datapathassignments_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Path<wbr>Assignments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Dictionary used for changing data path assignments without retraining. Values will be passed in the dataPathAssignments property of the published pipeline execution request. Type: object with key value pairs (or Expression with resultType object).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dependson_csharp">
@@ -8710,6 +8611,24 @@ The following output properties are available:
     <dd>{{% md %}}The parent Azure ML Service pipeline run id. This information will be passed in the ParentRunId property of the published pipeline execution request. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="mlpipelineendpointid_csharp">
+<a href="#mlpipelineendpointid_csharp" style="color: inherit; text-decoration: inherit;">Ml<wbr>Pipeline<wbr>Endpoint<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}ID of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mlpipelineid_csharp">
+<a href="#mlpipelineid_csharp" style="color: inherit; text-decoration: inherit;">Ml<wbr>Pipeline<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}ID of the published Azure ML pipeline. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mlpipelineparameters_csharp">
 <a href="#mlpipelineparameters_csharp" style="color: inherit; text-decoration: inherit;">Ml<wbr>Pipeline<wbr>Parameters</a>
 </span>
@@ -8735,21 +8654,21 @@ The following output properties are available:
         <span class="property-type"><a href="#userpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>User<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Version of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="mlpipelineid_go">
-<a href="#mlpipelineid_go" style="color: inherit; text-decoration: inherit;">Ml<wbr>Pipeline<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
-    </dt>
-    <dd>{{% md %}}ID of the published Azure ML pipeline. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -8768,6 +8687,15 @@ The following output properties are available:
         <span class="property-type">interface{}</span>
     </dt>
     <dd>{{% md %}}Whether to continue execution of other steps in the PipelineRun if a step fails. This information will be passed in the continueOnStepFailure property of the published pipeline execution request. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datapathassignments_go">
+<a href="#datapathassignments_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Path<wbr>Assignments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Dictionary used for changing data path assignments without retraining. Values will be passed in the dataPathAssignments property of the published pipeline execution request. Type: object with key value pairs (or Expression with resultType object).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dependson_go">
@@ -8815,6 +8743,24 @@ The following output properties are available:
     <dd>{{% md %}}The parent Azure ML Service pipeline run id. This information will be passed in the ParentRunId property of the published pipeline execution request. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="mlpipelineendpointid_go">
+<a href="#mlpipelineendpointid_go" style="color: inherit; text-decoration: inherit;">Ml<wbr>Pipeline<wbr>Endpoint<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}ID of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mlpipelineid_go">
+<a href="#mlpipelineid_go" style="color: inherit; text-decoration: inherit;">Ml<wbr>Pipeline<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}ID of the published Azure ML pipeline. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mlpipelineparameters_go">
 <a href="#mlpipelineparameters_go" style="color: inherit; text-decoration: inherit;">Ml<wbr>Pipeline<wbr>Parameters</a>
 </span>
@@ -8840,21 +8786,21 @@ The following output properties are available:
         <span class="property-type"><a href="#userpropertyresponse">[]User<wbr>Property<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Version of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="mlpipelineid_nodejs">
-<a href="#mlpipelineid_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Pipeline<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">any</span>
-    </dt>
-    <dd>{{% md %}}ID of the published Azure ML pipeline. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -8873,6 +8819,15 @@ The following output properties are available:
         <span class="property-type">any</span>
     </dt>
     <dd>{{% md %}}Whether to continue execution of other steps in the PipelineRun if a step fails. This information will be passed in the continueOnStepFailure property of the published pipeline execution request. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datapathassignments_nodejs">
+<a href="#datapathassignments_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Path<wbr>Assignments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Dictionary used for changing data path assignments without retraining. Values will be passed in the dataPathAssignments property of the published pipeline execution request. Type: object with key value pairs (or Expression with resultType object).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dependson_nodejs">
@@ -8920,6 +8875,24 @@ The following output properties are available:
     <dd>{{% md %}}The parent Azure ML Service pipeline run id. This information will be passed in the ParentRunId property of the published pipeline execution request. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="mlpipelineendpointid_nodejs">
+<a href="#mlpipelineendpointid_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Pipeline<wbr>Endpoint<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}ID of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mlpipelineid_nodejs">
+<a href="#mlpipelineid_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Pipeline<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}ID of the published Azure ML pipeline. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mlpipelineparameters_nodejs">
 <a href="#mlpipelineparameters_nodejs" style="color: inherit; text-decoration: inherit;">ml<wbr>Pipeline<wbr>Parameters</a>
 </span>
@@ -8945,21 +8918,21 @@ The following output properties are available:
         <span class="property-type"><a href="#userpropertyresponse">User<wbr>Property<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Version of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="ml_pipeline_id_python">
-<a href="#ml_pipeline_id_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>pipeline_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Any</span>
-    </dt>
-    <dd>{{% md %}}ID of the published Azure ML pipeline. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -8978,6 +8951,15 @@ The following output properties are available:
         <span class="property-type">Any</span>
     </dt>
     <dd>{{% md %}}Whether to continue execution of other steps in the PipelineRun if a step fails. This information will be passed in the continueOnStepFailure property of the published pipeline execution request. Type: boolean (or Expression with resultType boolean).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="data_path_assignments_python">
+<a href="#data_path_assignments_python" style="color: inherit; text-decoration: inherit;">data_<wbr>path_<wbr>assignments</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Dictionary used for changing data path assignments without retraining. Values will be passed in the dataPathAssignments property of the published pipeline execution request. Type: object with key value pairs (or Expression with resultType object).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="depends_on_python">
@@ -9025,6 +9007,24 @@ The following output properties are available:
     <dd>{{% md %}}The parent Azure ML Service pipeline run id. This information will be passed in the ParentRunId property of the published pipeline execution request. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ml_pipeline_endpoint_id_python">
+<a href="#ml_pipeline_endpoint_id_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>pipeline_<wbr>endpoint_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}ID of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ml_pipeline_id_python">
+<a href="#ml_pipeline_id_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>pipeline_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}ID of the published Azure ML pipeline. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ml_pipeline_parameters_python">
 <a href="#ml_pipeline_parameters_python" style="color: inherit; text-decoration: inherit;">ml_<wbr>pipeline_<wbr>parameters</a>
 </span>
@@ -9050,13 +9050,19 @@ The following output properties are available:
         <span class="property-type"><a href="#userpropertyresponse">Sequence[User<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Activity user properties.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Version of the published Azure ML pipeline endpoint. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="azuremlupdateresourceactivityresponse">Azure<wbr>MLUpdate<wbr>Resource<wbr>Activity<wbr>Response</h4>
-
-
-
 
 
 
@@ -9412,9 +9418,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -9512,9 +9515,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuremariadbsourceresponse">Azure<wbr>Maria<wbr>DBSource<wbr>Response</h4>
-
-
-
 
 
 
@@ -9762,9 +9762,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -10006,9 +10003,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuremysqlsourceresponse">Azure<wbr>My<wbr>Sql<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -10256,9 +10250,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -10500,9 +10491,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azurepostgresqlsourceresponse">Azure<wbr>Postgre<wbr>Sql<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -10750,9 +10738,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -10958,9 +10943,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuresearchindexsinkresponse">Azure<wbr>Search<wbr>Index<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -11205,9 +11187,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuresqlsinkresponse">Azure<wbr>Sql<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -11635,9 +11614,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -12062,9 +12038,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -12417,9 +12390,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -12700,9 +12670,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -12764,9 +12731,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="binarysinkresponse">Binary<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -13014,9 +12978,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -13222,9 +13183,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="blobsinkresponse">Blob<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -13580,9 +13538,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -13824,9 +13779,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="cassandrasourceresponse">Cassandra<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -14107,9 +14059,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="commondataserviceforappssinkresponse">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -14429,9 +14378,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -14637,9 +14583,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="concursourceresponse">Concur<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -14887,9 +14830,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -15062,9 +15002,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -15162,9 +15099,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="copyactivityresponse">Copy<wbr>Activity<wbr>Response</h4>
-
-
-
 
 
 
@@ -16024,9 +15958,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -16268,9 +16199,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="cosmosdbmongodbapisourceresponse">Cosmos<wbr>Db<wbr>Mongo<wbr>Db<wbr>Api<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -16590,9 +16518,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -16834,9 +16759,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="cosmosdbsqlapisourceresponse">Cosmos<wbr>Db<wbr>Sql<wbr>Api<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -17156,9 +17078,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -17403,9 +17322,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -17506,9 +17422,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -17530,6 +17443,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Activity name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autouserspecification_csharp">
+<a href="#autouserspecification_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>User<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dependson_csharp">
@@ -17646,6 +17568,15 @@ The following output properties are available:
     <dd>{{% md %}}Activity name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="autouserspecification_go">
+<a href="#autouserspecification_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>User<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="dependson_go">
 <a href="#dependson_go" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
@@ -17758,6 +17689,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Activity name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autouserspecification_nodejs">
+<a href="#autouserspecification_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>User<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dependson_nodejs">
@@ -17874,6 +17814,15 @@ The following output properties are available:
     <dd>{{% md %}}Activity name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="auto_user_specification_python">
+<a href="#auto_user_specification_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>user_<wbr>specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Elevation level and scope for the user, default is nonadmin task. Type: string (or Expression with resultType double).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="depends_on_python">
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
@@ -17966,9 +17915,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="dwcopycommanddefaultvalueresponse">DWCopy<wbr>Command<wbr>Default<wbr>Value<wbr>Response</h4>
-
-
-
 
 
 
@@ -18072,9 +18018,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -18172,9 +18115,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="dataflowreferenceresponse">Data<wbr>Flow<wbr>Reference<wbr>Response</h4>
-
-
-
 
 
 
@@ -18314,9 +18254,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -18414,9 +18351,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="datalakeanalyticsusqlactivityresponse">Data<wbr>Lake<wbr>Analytics<wbr>USQLActivity<wbr>Response</h4>
-
-
-
 
 
 
@@ -18916,9 +18850,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -19268,9 +19199,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="databrickssparkjaractivityresponse">Databricks<wbr>Spark<wbr>Jar<wbr>Activity<wbr>Response</h4>
-
-
-
 
 
 
@@ -19626,9 +19554,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -19981,9 +19906,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -20117,9 +20039,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="db2sourceresponse">Db2Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -20364,9 +20283,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="deleteactivityresponse">Delete<wbr>Activity<wbr>Response</h4>
-
-
-
 
 
 
@@ -20830,9 +20746,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -20930,9 +20843,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="delimitedtextsinkresponse">Delimited<wbr>Text<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -21216,9 +21126,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -21463,9 +21370,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -21638,9 +21542,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -21774,9 +21675,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="documentdbcollectionsinkresponse">Document<wbr>Db<wbr>Collection<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -22060,9 +21958,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -22343,9 +22238,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -22587,9 +22479,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="dynamicsaxsourceresponse">Dynamics<wbr>AXSource<wbr>Response</h4>
-
-
-
 
 
 
@@ -22870,9 +22759,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="dynamicscrmsinkresponse">Dynamics<wbr>Crm<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -23192,9 +23078,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -23400,9 +23283,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="dynamicssinkresponse">Dynamics<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -23722,9 +23602,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -23930,9 +23807,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="eloquasourceresponse">Eloqua<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -24180,9 +24054,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -24388,9 +24259,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="executedataflowactivityresponse">Execute<wbr>Data<wbr>Flow<wbr>Activity<wbr>Response</h4>
-
-
-
 
 
 
@@ -24890,9 +24758,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -24990,9 +24855,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="executepipelineactivityresponse">Execute<wbr>Pipeline<wbr>Activity<wbr>Response</h4>
-
-
-
 
 
 
@@ -25273,9 +25135,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="executessispackageactivityresponse">Execute<wbr>SSISPackage<wbr>Activity<wbr>Response</h4>
-
-
-
 
 
 
@@ -25955,9 +25814,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -26202,9 +26058,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -26302,9 +26155,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="fileserverreadsettingsresponse">File<wbr>Server<wbr>Read<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -26732,9 +26582,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -26832,9 +26679,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="filesystemsinkresponse">File<wbr>System<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -27082,9 +26926,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -27290,9 +27131,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="filteractivityresponse">Filter<wbr>Activity<wbr>Response</h4>
-
-
-
 
 
 
@@ -27537,9 +27375,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="foreachactivityresponse">For<wbr>Each<wbr>Activity<wbr>Response</h4>
-
-
-
 
 
 
@@ -27856,9 +27691,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="ftpreadsettingsresponse">Ftp<wbr>Read<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -28211,9 +28043,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getmetadataactivityresponse">Get<wbr>Metadata<wbr>Activity<wbr>Response</h4>
-
-
-
 
 
 
@@ -28605,9 +28434,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -28852,9 +28678,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -29096,9 +28919,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="googlecloudstoragereadsettingsresponse">Google<wbr>Cloud<wbr>Storage<wbr>Read<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -29526,9 +29346,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -29773,9 +29590,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -30017,9 +29831,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="hdinsighthiveactivityresponse">HDInsight<wbr>Hive<wbr>Activity<wbr>Response</h4>
-
-
-
 
 
 
@@ -30555,9 +30366,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -31090,9 +30898,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -31550,9 +31355,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="hdinsightsparkactivityresponse">HDInsight<wbr>Spark<wbr>Activity<wbr>Response</h4>
-
-
-
 
 
 
@@ -32085,9 +31887,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="hdinsightstreamingactivityresponse">HDInsight<wbr>Streaming<wbr>Activity<wbr>Response</h4>
-
-
-
 
 
 
@@ -32767,9 +32566,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -33194,9 +32990,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -33402,9 +33195,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="hivesourceresponse">Hive<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -33649,9 +33439,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="httpreadsettingsresponse">Http<wbr>Read<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -33935,9 +33722,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -34107,9 +33891,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="hubspotsourceresponse">Hubspot<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -34354,9 +34135,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="ifconditionactivityresponse">If<wbr>Condition<wbr>Activity<wbr>Response</h4>
-
-
-
 
 
 
@@ -34640,9 +34418,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -34884,9 +34659,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="informixsinkresponse">Informix<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -35134,9 +34906,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -35381,9 +35150,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -35517,9 +35283,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="jirasourceresponse">Jira<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -35767,9 +35530,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -35831,9 +35591,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="jsonsinkresponse">Json<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -36117,9 +35874,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -36364,9 +36118,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -36428,9 +36179,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</h4>
-
-
-
 
 
 
@@ -36570,9 +36318,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -36670,9 +36415,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="logsettingsresponse">Log<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -36809,9 +36551,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="logstoragesettingsresponse">Log<wbr>Storage<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -36984,9 +36723,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="lookupactivityresponse">Lookup<wbr>Activity<wbr>Response</h4>
-
-
-
 
 
 
@@ -37342,9 +37078,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -37586,9 +37319,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="mariadbsourceresponse">Maria<wbr>DBSource<wbr>Response</h4>
-
-
-
 
 
 
@@ -37836,9 +37566,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -38080,9 +37807,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="microsoftaccesssinkresponse">Microsoft<wbr>Access<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -38330,9 +38054,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -38538,9 +38259,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="mongodbatlassourceresponse">Mongo<wbr>Db<wbr>Atlas<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -38860,9 +38578,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -39032,9 +38747,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="mongodbsourceresponse">Mongo<wbr>Db<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -39243,9 +38955,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="mongodbv2sourceresponse">Mongo<wbr>Db<wbr>V2Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -39565,9 +39274,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -39812,9 +39518,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -39948,9 +39651,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="netezzasourceresponse">Netezza<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -40270,9 +39970,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -40514,9 +40211,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="odbcsinkresponse">Odbc<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -40764,9 +40458,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -41008,9 +40699,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="office365sourceresponse">Office365Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -41366,9 +41054,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -41538,9 +41223,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="oracleservicecloudsourceresponse">Oracle<wbr>Service<wbr>Cloud<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -41788,9 +41470,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -42032,9 +41711,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="oraclesourceresponse">Oracle<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -42354,9 +42030,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -42637,9 +42310,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -42848,9 +42518,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -42951,9 +42618,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -43051,9 +42715,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="parquetsinkresponse">Parquet<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -43337,9 +42998,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -43548,9 +43206,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -43648,9 +43303,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="paypalsourceresponse">Paypal<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -43898,9 +43550,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -44145,9 +43794,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -44284,9 +43930,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -44348,9 +43991,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="polybasesettingsresponse">Polybase<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -44523,9 +44163,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="postgresqlsourceresponse">Postgre<wbr>Sql<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -44773,9 +44410,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -45017,9 +44651,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="quickbookssourceresponse">Quick<wbr>Books<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -45267,9 +44898,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -45370,9 +44998,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -45470,9 +45095,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="relationalsourceresponse">Relational<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -45681,9 +45303,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="responsyssourceresponse">Responsys<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -45928,9 +45547,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="restsinkresponse">Rest<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -46322,9 +45938,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -46713,9 +46326,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -46849,9 +46459,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="ssischildpackageresponse">SSISChild<wbr>Package<wbr>Response</h4>
-
-
-
 
 
 
@@ -47027,9 +46634,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -47166,9 +46770,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -47230,9 +46831,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="ssisloglocationresponse">SSISLog<wbr>Location<wbr>Response</h4>
-
-
-
 
 
 
@@ -47405,9 +47003,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="ssispackagelocationresponse">SSISPackage<wbr>Location<wbr>Response</h4>
-
-
-
 
 
 
@@ -47799,9 +47394,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -47899,9 +47491,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="salesforcemarketingcloudsourceresponse">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -48146,9 +47735,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="salesforceservicecloudsinkresponse">Salesforce<wbr>Service<wbr>Cloud<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -48468,9 +48054,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -48712,9 +48295,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="salesforcesinkresponse">Salesforce<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -49034,9 +48614,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -49317,9 +48894,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -49561,9 +49135,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="sapcloudforcustomersinkresponse">Sap<wbr>Cloud<wbr>For<wbr>Customer<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -49847,9 +49418,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -50127,9 +49695,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="sapeccsourceresponse">Sap<wbr>Ecc<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -50413,9 +49978,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -50477,9 +50039,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="saphanasourceresponse">Sap<wbr>Hana<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -50835,9 +50394,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -51190,9 +50746,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -51362,9 +50915,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="saptablesourceresponse">Sap<wbr>Table<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -51900,9 +51450,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -51964,9 +51511,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="servicenowsourceresponse">Service<wbr>Now<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -52214,9 +51758,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -52458,9 +51999,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="sftpreadsettingsresponse">Sftp<wbr>Read<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -52852,9 +52390,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -53024,9 +52559,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="sharepointonlinelistsourceresponse">Share<wbr>Point<wbr>Online<wbr>List<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -53235,9 +52767,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="shopifysourceresponse">Shopify<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -53485,9 +53014,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -53585,9 +53111,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="snowflakeexportcopycommandresponse">Snowflake<wbr>Export<wbr>Copy<wbr>Command<wbr>Response</h4>
-
-
-
 
 
 
@@ -53691,9 +53214,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -53791,9 +53311,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="snowflakesinkresponse">Snowflake<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -54077,9 +53594,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -54285,9 +53799,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="sparksourceresponse">Spark<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -54532,9 +54043,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="sqldwsinkresponse">Sql<wbr>DWSink<wbr>Response</h4>
-
-
-
 
 
 
@@ -54962,9 +54470,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -55350,9 +54855,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="sqlmisinkresponse">Sql<wbr>MISink<wbr>Response</h4>
-
-
-
 
 
 
@@ -55780,9 +55282,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -56207,9 +55706,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -56343,9 +55839,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="sqlserversinkresponse">Sql<wbr>Server<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -56773,9 +56266,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -57200,9 +56690,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -57516,9 +57003,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="sqlsinkresponse">Sql<wbr>Sink<wbr>Response</h4>
-
-
-
 
 
 
@@ -57946,9 +57430,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -58373,9 +57854,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -58620,9 +58098,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -58759,9 +58234,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -58859,9 +58331,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="switchactivityresponse">Switch<wbr>Activity<wbr>Response</h4>
-
-
-
 
 
 
@@ -59145,9 +58614,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -59245,9 +58711,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="sybasesourceresponse">Sybase<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -59495,9 +58958,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -59706,9 +59166,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -59773,9 +59230,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -59837,9 +59291,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="teradatapartitionsettingsresponse">Teradata<wbr>Partition<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -59976,9 +59427,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="teradatasourceresponse">Teradata<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -60298,9 +59746,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -60581,9 +60026,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -60681,9 +60123,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="validationactivityresponse">Validation<wbr>Activity<wbr>Response</h4>
-
-
-
 
 
 
@@ -61039,9 +60478,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -61139,9 +60575,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="verticasourceresponse">Vertica<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -61389,9 +60822,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -61600,9 +61030,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -61614,7 +61041,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Web activity authentication (Basic/ClientCertificate/MSI){{% /md %}}</dd>
+    <dd>{{% md %}}Web activity authentication (Basic/ClientCertificate/MSI/ServicePrincipal){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
@@ -61623,7 +61050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Password for the PFX file or basic authentication.{{% /md %}}</dd>
+    <dd>{{% md %}}Password for the PFX file or basic authentication / Secret when used for ServicePrincipal{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="pfx_csharp">
@@ -61632,7 +61059,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded contents of a PFX file.{{% /md %}}</dd>
+    <dd>{{% md %}}Base64-encoded contents of a PFX file or Certificate when used for ServicePrincipal{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resource_csharp">
@@ -61644,13 +61071,22 @@ The following output properties are available:
     <dd>{{% md %}}Resource for which Azure Auth token will be requested when using MSI Authentication.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="usertenant_csharp">
+<a href="#usertenant_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Tenant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}TenantId for which Azure Auth token will be requested when using ServicePrincipal Authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Web activity authentication user name for basic authentication.{{% /md %}}</dd>
+    <dd>{{% md %}}Web activity authentication user name for basic authentication or ClientID when used for ServicePrincipal{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -61665,7 +61101,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Web activity authentication (Basic/ClientCertificate/MSI){{% /md %}}</dd>
+    <dd>{{% md %}}Web activity authentication (Basic/ClientCertificate/MSI/ServicePrincipal){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="password_go">
@@ -61674,7 +61110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Password for the PFX file or basic authentication.{{% /md %}}</dd>
+    <dd>{{% md %}}Password for the PFX file or basic authentication / Secret when used for ServicePrincipal{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="pfx_go">
@@ -61683,7 +61119,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded contents of a PFX file.{{% /md %}}</dd>
+    <dd>{{% md %}}Base64-encoded contents of a PFX file or Certificate when used for ServicePrincipal{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resource_go">
@@ -61695,13 +61131,22 @@ The following output properties are available:
     <dd>{{% md %}}Resource for which Azure Auth token will be requested when using MSI Authentication.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="usertenant_go">
+<a href="#usertenant_go" style="color: inherit; text-decoration: inherit;">User<wbr>Tenant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}TenantId for which Azure Auth token will be requested when using ServicePrincipal Authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Web activity authentication user name for basic authentication.{{% /md %}}</dd>
+    <dd>{{% md %}}Web activity authentication user name for basic authentication or ClientID when used for ServicePrincipal{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -61716,7 +61161,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Web activity authentication (Basic/ClientCertificate/MSI){{% /md %}}</dd>
+    <dd>{{% md %}}Web activity authentication (Basic/ClientCertificate/MSI/ServicePrincipal){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
@@ -61725,7 +61170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Password for the PFX file or basic authentication.{{% /md %}}</dd>
+    <dd>{{% md %}}Password for the PFX file or basic authentication / Secret when used for ServicePrincipal{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="pfx_nodejs">
@@ -61734,7 +61179,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded contents of a PFX file.{{% /md %}}</dd>
+    <dd>{{% md %}}Base64-encoded contents of a PFX file or Certificate when used for ServicePrincipal{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resource_nodejs">
@@ -61746,13 +61191,22 @@ The following output properties are available:
     <dd>{{% md %}}Resource for which Azure Auth token will be requested when using MSI Authentication.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="usertenant_nodejs">
+<a href="#usertenant_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Tenant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}TenantId for which Azure Auth token will be requested when using ServicePrincipal Authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Web activity authentication user name for basic authentication.{{% /md %}}</dd>
+    <dd>{{% md %}}Web activity authentication user name for basic authentication or ClientID when used for ServicePrincipal{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -61767,7 +61221,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Web activity authentication (Basic/ClientCertificate/MSI){{% /md %}}</dd>
+    <dd>{{% md %}}Web activity authentication (Basic/ClientCertificate/MSI/ServicePrincipal){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="password_python">
@@ -61776,7 +61230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Password for the PFX file or basic authentication.{{% /md %}}</dd>
+    <dd>{{% md %}}Password for the PFX file or basic authentication / Secret when used for ServicePrincipal{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="pfx_python">
@@ -61785,7 +61239,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded contents of a PFX file.{{% /md %}}</dd>
+    <dd>{{% md %}}Base64-encoded contents of a PFX file or Certificate when used for ServicePrincipal{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resource_python">
@@ -61797,20 +61251,26 @@ The following output properties are available:
     <dd>{{% md %}}Resource for which Azure Auth token will be requested when using MSI Authentication.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="user_tenant_python">
+<a href="#user_tenant_python" style="color: inherit; text-decoration: inherit;">user_<wbr>tenant</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}TenantId for which Azure Auth token will be requested when using ServicePrincipal Authentication. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Web activity authentication user name for basic authentication.{{% /md %}}</dd>
+    <dd>{{% md %}}Web activity authentication user name for basic authentication or ClientID when used for ServicePrincipal{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="webactivityresponse">Web<wbr>Activity<wbr>Response</h4>
-
-
-
 
 
 
@@ -62346,9 +61806,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -62773,9 +62230,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -62945,9 +62399,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="xerosourceresponse">Xero<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -63195,9 +62646,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -63403,9 +62851,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="xmlsourceresponse">Xml<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -63653,9 +63098,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -63717,9 +63159,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="zohosourceresponse">Zoho<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 

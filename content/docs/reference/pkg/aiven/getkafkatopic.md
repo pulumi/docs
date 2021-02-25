@@ -1,8 +1,8 @@
 
 ---
-title: "GetKafkaTopic"
-title_tag: "Function GetKafkaTopic | Package Aiven"
-meta_desc: "Explore the GetKafkaTopic function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Kafka Topic Data Source"
+title: "getKafkaTopic"
+title_tag: "aiven.getKafkaTopic"
+meta_desc: "Documentation for the aiven.getKafkaTopic function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -129,13 +129,13 @@ const mytesttopic = pulumi.all([aiven_project_myproject.project, aiven_service_m
 {{% /examples %}}
 
 
-## Using GetKafkaTopic {#using}
+## Using getKafkaTopic {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKafkaTopic<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#GetKafkaTopicArgs">GetKafkaTopicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#GetKafkaTopicResult">GetKafkaTopicResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKafkaTopic<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetKafkaTopicArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetKafkaTopicResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -145,7 +145,7 @@ const mytesttopic = pulumi.all([aiven_project_myproject.project, aiven_service_m
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKafkaTopic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupKafkaTopicArgs">LookupKafkaTopicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupKafkaTopicResult">LookupKafkaTopicResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKafkaTopic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupKafkaTopicArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupKafkaTopicResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupKafkaTopic` in the Go SDK.
 
@@ -154,7 +154,7 @@ const mytesttopic = pulumi.all([aiven_project_myproject.project, aiven_service_m
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKafkaTopic </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.GetKafkaTopicResult.html">GetKafkaTopicResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.GetKafkaTopicArgs.html">GetKafkaTopicArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetKafkaTopicResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetKafkaTopicArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -642,7 +642,7 @@ created instead.
 
 
 
-## GetKafkaTopic Result {#result}
+## getKafkaTopic Result {#result}
 
 The following output properties are available:
 
@@ -1143,16 +1143,6 @@ The following output properties are available:
 
 
 <h4 id="getkafkatopicconfig">Get<wbr>Kafka<wbr>Topic<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetKafkaTopicConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetKafkaTopicConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetKafkaTopicConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetKafkaTopicConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetKafkaTopicConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetKafkaTopicConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

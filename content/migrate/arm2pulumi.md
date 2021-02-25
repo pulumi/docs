@@ -2,6 +2,12 @@
 title: Convert Your Azure ARM Template to a Modern Language
 url: /arm2pulumi
 layout: arm2pulumi
+linktitle: arm2pulumi
+menu:
+  converters:
+    identifier: arm2pulumi
+    weight: 1
+    
 meta_desc: See what your Azure ARM Template would look like in a modern language thanks to Pulumi.
 
 examples:

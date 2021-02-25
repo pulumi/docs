@@ -527,19 +527,19 @@ const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/keyvault/#Certifiate">Certifiate</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/keyvault/#CertifiateArgs">CertifiateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Certifiate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CertifiateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/keyvault/#pulumi_azure.keyvault.Certifiate">Certifiate</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[CertifiateCertificateArgs]</span> = None<span class="p">, </span><span class="nx">certificate_policy</span><span class="p">:</span> <span class="nx">Optional[CertifiateCertificatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Certifiate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[CertifiateCertificateArgs]</span> = None<span class="p">, </span><span class="nx">certificate_policy</span><span class="p">:</span> <span class="nx">Optional[CertifiateCertificatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#Certifiate">NewCertifiate</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateArgs">CertifiateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#Certifiate">Certifiate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCertifiate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CertifiateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Certifiate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Certifiate.html">Certifiate</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.CertifiateArgs.html">CertifiateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Certifiate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CertifiateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -560,7 +560,7 @@ const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/azure/keyvault/#CertifiateArgs">CertifiateArgs</a></span>
+        <span class="property-type"><a href="#inputs">CertifiateArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -629,7 +629,7 @@ const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateArgs">CertifiateArgs</a></span>
+        <span class="property-type"><a href="#inputs">CertifiateArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -668,7 +668,7 @@ const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", 
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.CertifiateArgs.html">CertifiateArgs</a></span>
+        <span class="property-type"><a href="#inputs">CertifiateArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -691,11 +691,11 @@ const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", 
 
 ## Certifiate Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Certifiate resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Certifiate resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -955,6 +955,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="certificatedatabase64_csharp">
+<a href="#certificatedatabase64_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data<wbr>Base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -1017,6 +1027,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="certificatedatabase64_go">
+<a href="#certificatedatabase64_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data<wbr>Base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1085,6 +1105,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="certificatedatabase64_nodejs">
+<a href="#certificatedatabase64_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Data<wbr>Base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -1150,6 +1180,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="certificate_data_base64_python">
+<a href="#certificate_data_base64_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>data_<wbr>base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -1198,20 +1238,20 @@ Get an existing Certifiate resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/keyvault/#CertifiateState">CertifiateState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/keyvault/#Certifiate">Certifiate</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">CertifiateState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Certifiate</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[CertifiateCertificateArgs]</span> = None<span class="p">, </span><span class="nx">certificate_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertifiateCertificateAttributeArgs]]</span> = None<span class="p">, </span><span class="nx">certificate_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_policy</span><span class="p">:</span> <span class="nx">Optional[CertifiateCertificatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">thumbprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Certifiate</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate</span><span class="p">:</span> <span class="nx">Optional[CertifiateCertificateArgs]</span> = None<span class="p">, </span><span class="nx">certificate_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertifiateCertificateAttributeArgs]]</span> = None<span class="p">, </span><span class="nx">certificate_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_data_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_policy</span><span class="p">:</span> <span class="nx">Optional[CertifiateCertificatePolicyArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">thumbprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Certifiate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCertifiate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateState">CertifiateState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#Certifiate">Certifiate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCertifiate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">CertifiateState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Certifiate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Certifiate.html">Certifiate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.CertifiateState.html">CertifiateState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Certifiate</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">CertifiateState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1338,6 +1378,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_certificatedatabase64_csharp">
+<a href="#state_certificatedatabase64_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data<wbr>Base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_certificatepolicy_csharp">
 <a href="#state_certificatepolicy_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Policy</a>
 </span>
@@ -1454,6 +1504,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_certificatedatabase64_go">
+<a href="#state_certificatedatabase64_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Data<wbr>Base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_certificatepolicy_go">
 <a href="#state_certificatepolicy_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Policy</a>
 </span>
@@ -1557,6 +1617,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_certificatedatabase64_nodejs">
+<a href="#state_certificatedatabase64_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Data<wbr>Base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1666,6 +1736,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_certificate_data_base64_python">
+<a href="#state_certificate_data_base64_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>data_<wbr>base64</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Base64 encoded Key Vault Certificate data.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_certificate_policy_python">
 <a href="#state_certificate_policy_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>policy</a>
 </span>
@@ -1747,18 +1827,6 @@ The following state arguments are supported:
 
 
 <h4 id="certifiatecertificate">Certifiate<wbr>Certificate</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateCertificateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Inputs.CertifiateCertificateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.CertifiateCertificate.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1865,18 +1933,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="certifiatecertificateattribute">Certifiate<wbr>Certificate<wbr>Attribute</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificateAttribute">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateCertificateAttributeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.CertifiateCertificateAttribute.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2143,18 +2199,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="certifiatecertificatepolicy">Certifiate<wbr>Certificate<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateCertificatePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateCertificatePolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Inputs.CertifiateCertificatePolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.CertifiateCertificatePolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2381,18 +2425,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="certifiatecertificatepolicyissuerparameters">Certifiate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicyIssuerParameters">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicyIssuerParameters">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateCertificatePolicyIssuerParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateCertificatePolicyIssuerParametersOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Inputs.CertifiateCertificatePolicyIssuerParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.CertifiateCertificatePolicyIssuerParameters.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2459,18 +2491,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="certifiatecertificatepolicykeyproperties">Certifiate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicyKeyProperties">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicyKeyProperties">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateCertificatePolicyKeyPropertiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateCertificatePolicyKeyPropertiesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Inputs.CertifiateCertificatePolicyKeyPropertiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.CertifiateCertificatePolicyKeyProperties.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2657,18 +2677,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="certifiatecertificatepolicylifetimeaction">Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicyLifetimeAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicyLifetimeAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateCertificatePolicyLifetimeActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateCertificatePolicyLifetimeActionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Inputs.CertifiateCertificatePolicyLifetimeActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.CertifiateCertificatePolicyLifetimeAction.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2775,18 +2783,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="certifiatecertificatepolicylifetimeactionaction">Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicyLifetimeActionAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicyLifetimeActionAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateCertificatePolicyLifetimeActionActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateCertificatePolicyLifetimeActionActionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Inputs.CertifiateCertificatePolicyLifetimeActionActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.CertifiateCertificatePolicyLifetimeActionAction.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2853,18 +2849,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="certifiatecertificatepolicylifetimeactiontrigger">Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicyLifetimeActionTrigger">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicyLifetimeActionTrigger">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateCertificatePolicyLifetimeActionTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateCertificatePolicyLifetimeActionTriggerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Inputs.CertifiateCertificatePolicyLifetimeActionTriggerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.CertifiateCertificatePolicyLifetimeActionTrigger.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2971,18 +2955,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="certifiatecertificatepolicysecretproperties">Certifiate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicySecretProperties">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicySecretProperties">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateCertificatePolicySecretPropertiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateCertificatePolicySecretPropertiesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Inputs.CertifiateCertificatePolicySecretPropertiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.CertifiateCertificatePolicySecretProperties.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3049,18 +3021,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="certifiatecertificatepolicyx509certificateproperties">Certifiate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicyX509CertificateProperties">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicyX509CertificateProperties">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateCertificatePolicyX509CertificatePropertiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateCertificatePolicyX509CertificatePropertiesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Inputs.CertifiateCertificatePolicyX509CertificatePropertiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.CertifiateCertificatePolicyX509CertificateProperties.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3287,18 +3247,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="certifiatecertificatepolicyx509certificatepropertiessubjectalternativenames">Certifiate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault?tab=doc#CertifiateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Inputs.CertifiateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNamesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.KeyVault.Outputs.CertifiateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

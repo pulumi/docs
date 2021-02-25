@@ -1,8 +1,8 @@
 
 ---
 title: "Kafka"
-title_tag: "Resource Kafka | Package Aiven"
-meta_desc: "Explore the Kafka resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Kafka Resource"
+title_tag: "aiven.Kafka"
+meta_desc: "Documentation for the aiven.Kafka resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -175,19 +175,19 @@ const kafka1 = new aiven.Kafka("kafka1", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#Kafka">Kafka</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#KafkaArgs">KafkaArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Kafka</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">KafkaArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.Kafka">Kafka</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_acl</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kafka</span><span class="p">:</span> <span class="nx">Optional[KafkaKafkaArgs]</span> = None<span class="p">, </span><span class="nx">kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[KafkaKafkaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[KafkaServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Kafka</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_acl</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kafka</span><span class="p">:</span> <span class="nx">Optional[KafkaKafkaArgs]</span> = None<span class="p">, </span><span class="nx">kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[KafkaKafkaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[KafkaServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#Kafka">NewKafka</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaArgs">KafkaArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#Kafka">Kafka</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewKafka</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">KafkaArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Kafka</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Kafka.html">Kafka</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.KafkaArgs.html">KafkaArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Kafka</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">KafkaArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -208,7 +208,7 @@ const kafka1 = new aiven.Kafka("kafka1", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#KafkaArgs">KafkaArgs</a></span>
+        <span class="property-type"><a href="#inputs">KafkaArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -277,7 +277,7 @@ const kafka1 = new aiven.Kafka("kafka1", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaArgs">KafkaArgs</a></span>
+        <span class="property-type"><a href="#inputs">KafkaArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -316,7 +316,7 @@ const kafka1 = new aiven.Kafka("kafka1", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.KafkaArgs.html">KafkaArgs</a></span>
+        <span class="property-type"><a href="#inputs">KafkaArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -339,11 +339,11 @@ const kafka1 = new aiven.Kafka("kafka1", {
 
 ## Kafka Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Kafka resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Kafka resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -408,8 +408,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka from the public internet for service 
-nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -564,8 +563,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka from the public internet for service 
-nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -720,8 +718,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka from the public internet for service 
-nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -876,8 +873,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka from the public internet for service 
-nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1366,7 +1362,7 @@ Get an existing Kafka resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#KafkaState">KafkaState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#Kafka">Kafka</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">KafkaState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Kafka</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1375,11 +1371,11 @@ Get an existing Kafka resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKafka<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaState">KafkaState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#Kafka">Kafka</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKafka<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">KafkaState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Kafka</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Kafka.html">Kafka</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven..KafkaState.html">KafkaState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Kafka</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">KafkaState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1528,8 +1524,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka from the public internet for service 
-nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1764,8 +1759,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka from the public internet for service 
-nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2000,8 +1994,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka from the public internet for service 
-nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2236,8 +2229,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkakafka">Kafka<wbr>Kafka<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka from the public internet for service 
-nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2435,18 +2427,6 @@ deletion is done.
 
 
 <h4 id="kafkacomponent">Kafka<wbr>Component</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#KafkaComponent">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaComponentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.KafkaComponent.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2725,18 +2705,6 @@ deletion is done.
 {{% /choosable %}}
 
 <h4 id="kafkakafka">Kafka<wbr>Kafka</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#KafkaKafka">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#KafkaKafka">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaKafkaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaKafkaOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.KafkaKafkaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.KafkaKafka.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2963,18 +2931,6 @@ deletion is done.
 {{% /choosable %}}
 
 <h4 id="kafkakafkauserconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#KafkaKafkaUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#KafkaKafkaUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaKafkaUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaKafkaUserConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.KafkaKafkaUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.KafkaKafkaUserConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3007,8 +2963,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkakafkauserconfigkafka">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka from the public internet for service 
-nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3028,8 +2983,7 @@ nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_connect from the public internet 
-for service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_connect
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3049,8 +3003,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_rest from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_rest
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3081,6 +3034,16 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type"><a href="#kafkakafkauserconfigprivateaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_csharp">
+<a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigprivatelinkaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3146,8 +3109,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkakafkauserconfigkafka">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka from the public internet for service 
-nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3167,8 +3129,7 @@ nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_connect from the public internet 
-for service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_connect
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3188,8 +3149,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_rest from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_rest
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3220,6 +3180,16 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type"><a href="#kafkakafkauserconfigprivateaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_go">
+<a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigprivatelinkaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3285,8 +3255,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkakafkauserconfigkafka">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka from the public internet for service 
-nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3306,8 +3275,7 @@ nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_connect from the public internet 
-for service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_connect
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3327,8 +3295,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_rest from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_rest
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3359,6 +3326,16 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type"><a href="#kafkakafkauserconfigprivateaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_nodejs">
+<a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigprivatelinkaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3424,8 +3401,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kafkakafkauserconfigkafka">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka from the public internet for service 
-nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3445,8 +3421,7 @@ nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_connect from the public internet 
-for service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_connect
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3466,8 +3441,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_rest from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_rest
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3498,6 +3472,16 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-type"><a href="#kafkakafkauserconfigprivateaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelink_access_python">
+<a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kafkakafkauserconfigprivatelinkaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3533,18 +3517,6 @@ service nodes that are in a project VPC or another type of private network
 {{% /choosable %}}
 
 <h4 id="kafkakafkauserconfigkafka">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#KafkaKafkaUserConfigKafka">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#KafkaKafkaUserConfigKafka">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaKafkaUserConfigKafkaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaKafkaUserConfigKafkaOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.KafkaKafkaUserConfigKafkaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.KafkaKafkaUserConfigKafka.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5239,18 +5211,6 @@ to 104857600 (100 mebibytes)).
 {{% /choosable %}}
 
 <h4 id="kafkakafkauserconfigkafkaauthenticationmethods">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Authentication<wbr>Methods</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#KafkaKafkaUserConfigKafkaAuthenticationMethods">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#KafkaKafkaUserConfigKafkaAuthenticationMethods">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaKafkaUserConfigKafkaAuthenticationMethodsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaKafkaUserConfigKafkaAuthenticationMethodsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.KafkaKafkaUserConfigKafkaAuthenticationMethodsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.KafkaKafkaUserConfigKafkaAuthenticationMethods.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5357,18 +5317,6 @@ to 104857600 (100 mebibytes)).
 {{% /choosable %}}
 
 <h4 id="kafkakafkauserconfigkafkaconnectconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#KafkaKafkaUserConfigKafkaConnectConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#KafkaKafkaUserConfigKafkaConnectConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaKafkaUserConfigKafkaConnectConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaKafkaUserConfigKafkaConnectConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.KafkaKafkaUserConfigKafkaConnectConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.KafkaKafkaUserConfigKafkaConnectConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5895,18 +5843,6 @@ using Kafka’s group management facilities (defaults to 10000).
 {{% /choosable %}}
 
 <h4 id="kafkakafkauserconfigkafkarestconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Kafka<wbr>Rest<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#KafkaKafkaUserConfigKafkaRestConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#KafkaKafkaUserConfigKafkaRestConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaKafkaUserConfigKafkaRestConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaKafkaUserConfigKafkaRestConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.KafkaKafkaUserConfigKafkaRestConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.KafkaKafkaUserConfigKafkaRestConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6197,18 +6133,6 @@ instantiated per broker.
 {{% /choosable %}}
 
 <h4 id="kafkakafkauserconfigprivateaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Private<wbr>Access</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#KafkaKafkaUserConfigPrivateAccess">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#KafkaKafkaUserConfigPrivateAccess">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaKafkaUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaKafkaUserConfigPrivateAccessOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.KafkaKafkaUserConfigPrivateAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.KafkaKafkaUserConfigPrivateAccess.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6278,19 +6202,7 @@ service nodes that are in a project VPC or another type of private network
 </dl>
 {{% /choosable %}}
 
-<h4 id="kafkakafkauserconfigpublicaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#KafkaKafkaUserConfigPublicAccess">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#KafkaKafkaUserConfigPublicAccess">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaKafkaUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaKafkaUserConfigPublicAccessOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.KafkaKafkaUserConfigPublicAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.KafkaKafkaUserConfigPublicAccess.html">output</a> API doc for this type.
-{{% /choosable %}}
-
+<h4 id="kafkakafkauserconfigprivatelinkaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6303,8 +6215,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka from the public internet for service 
-nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6314,8 +6225,7 @@ nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_connect from the public internet 
-for service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_connect
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6325,8 +6235,193 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_rest from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_rest
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaregistry_csharp">
+<a href="#schemaregistry_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable Schema-Registry service
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafka_go">
+<a href="#kafka_go" style="color: inherit; text-decoration: inherit;">Kafka</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable kafka
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkaconnect_go">
+<a href="#kafkaconnect_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable kafka_connect
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkarest_go">
+<a href="#kafkarest_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable kafka_rest
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaregistry_go">
+<a href="#schemaregistry_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable Schema-Registry service
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafka_nodejs">
+<a href="#kafka_nodejs" style="color: inherit; text-decoration: inherit;">kafka</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable kafka
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkaconnect_nodejs">
+<a href="#kafkaconnect_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable kafka_connect
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkarest_nodejs">
+<a href="#kafkarest_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Rest</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable kafka_rest
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaregistry_nodejs">
+<a href="#schemaregistry_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Registry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable Schema-Registry service
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafka_python">
+<a href="#kafka_python" style="color: inherit; text-decoration: inherit;">kafka</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Enable kafka
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafka_connect_python">
+<a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Enable kafka_connect
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafka_rest_python">
+<a href="#kafka_rest_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Enable kafka_rest
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schema_registry_python">
+<a href="#schema_registry_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Enable Schema-Registry service
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="kafkakafkauserconfigpublicaccess">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Public<wbr>Access</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafka_csharp">
+<a href="#kafka_csharp" style="color: inherit; text-decoration: inherit;">Kafka</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable kafka
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkaconnect_csharp">
+<a href="#kafkaconnect_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable kafka_connect
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkarest_csharp">
+<a href="#kafkarest_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable kafka_rest
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6363,8 +6458,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka from the public internet for service 
-nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6374,8 +6468,7 @@ nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_connect from the public internet 
-for service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_connect
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6385,8 +6478,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_rest from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_rest
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6423,8 +6515,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka from the public internet for service 
-nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6434,8 +6525,7 @@ nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_connect from the public internet 
-for service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_connect
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6445,8 +6535,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_rest from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_rest
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6483,8 +6572,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka from the public internet for service 
-nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6494,8 +6582,7 @@ nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_connect from the public internet 
-for service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_connect
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6505,8 +6592,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to kafka_rest from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable kafka_rest
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6533,18 +6619,6 @@ service nodes that are in a project VPC or another type of private network
 {{% /choosable %}}
 
 <h4 id="kafkakafkauserconfigschemaregistryconfig">Kafka<wbr>Kafka<wbr>User<wbr>Config<wbr>Schema<wbr>Registry<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#KafkaKafkaUserConfigSchemaRegistryConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#KafkaKafkaUserConfigSchemaRegistryConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaKafkaUserConfigSchemaRegistryConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaKafkaUserConfigSchemaRegistryConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.KafkaKafkaUserConfigSchemaRegistryConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.KafkaKafkaUserConfigSchemaRegistryConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6683,18 +6757,6 @@ Defaults to '_schemas'.
 {{% /choosable %}}
 
 <h4 id="kafkaserviceintegration">Kafka<wbr>Service<wbr>Integration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#KafkaServiceIntegration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#KafkaServiceIntegration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaServiceIntegrationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#KafkaServiceIntegrationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.KafkaServiceIntegrationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.KafkaServiceIntegration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

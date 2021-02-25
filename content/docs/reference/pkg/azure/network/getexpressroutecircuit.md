@@ -1,8 +1,8 @@
 
 ---
-title: "GetExpressRouteCircuit"
-title_tag: "Function GetExpressRouteCircuit | Module network | Package Azure"
-meta_desc: "Explore the GetExpressRouteCircuit function of the network module, including examples, input properties, output properties, and supporting types. Use this data source to access information about an existing ExpressRoute circuit."
+title: "getExpressRouteCircuit"
+title_tag: "azure.network.getExpressRouteCircuit"
+meta_desc: "Documentation for the azure.network.getExpressRouteCircuit function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -104,13 +104,13 @@ export const serviceKey = example.then(example => example.serviceKey);
 {{% /examples %}}
 
 
-## Using GetExpressRouteCircuit {#using}
+## Using getExpressRouteCircuit {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getExpressRouteCircuit<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#GetExpressRouteCircuitArgs">GetExpressRouteCircuitArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/network/#GetExpressRouteCircuitResult">GetExpressRouteCircuitResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getExpressRouteCircuit<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetExpressRouteCircuitArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetExpressRouteCircuitResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -120,7 +120,7 @@ export const serviceKey = example.then(example => example.serviceKey);
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupExpressRouteCircuit<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#LookupExpressRouteCircuitArgs">LookupExpressRouteCircuitArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#LookupExpressRouteCircuitResult">LookupExpressRouteCircuitResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupExpressRouteCircuit<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupExpressRouteCircuitArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupExpressRouteCircuitResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupExpressRouteCircuit` in the Go SDK.
 
@@ -129,7 +129,7 @@ export const serviceKey = example.then(example => example.serviceKey);
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetExpressRouteCircuit </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.GetExpressRouteCircuitResult.html">GetExpressRouteCircuitResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.GetExpressRouteCircuitArgs.html">GetExpressRouteCircuitArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetExpressRouteCircuitResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetExpressRouteCircuitArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -245,7 +245,7 @@ The following arguments are supported:
 
 
 
-## GetExpressRouteCircuit Result {#result}
+## getExpressRouteCircuit Result {#result}
 
 The following output properties are available:
 
@@ -634,16 +634,6 @@ The following output properties are available:
 
 
 <h4 id="getexpressroutecircuitpeering">Get<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetExpressRouteCircuitPeering">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#GetExpressRouteCircuitPeeringType">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.GetExpressRouteCircuitPeering.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -952,16 +942,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getexpressroutecircuitserviceproviderproperty">Get<wbr>Express<wbr>Route<wbr>Circuit<wbr>Service<wbr>Provider<wbr>Property</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetExpressRouteCircuitServiceProviderProperty">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#GetExpressRouteCircuitServiceProviderProperty">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.GetExpressRouteCircuitServiceProviderProperty.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1110,16 +1090,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getexpressroutecircuitsku">Get<wbr>Express<wbr>Route<wbr>Circuit<wbr>Sku</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetExpressRouteCircuitSku">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#GetExpressRouteCircuitSku">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.GetExpressRouteCircuitSku.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

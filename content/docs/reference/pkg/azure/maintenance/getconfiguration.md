@@ -1,8 +1,8 @@
 
 ---
-title: "GetConfiguration"
-title_tag: "Function GetConfiguration | Module maintenance | Package Azure"
-meta_desc: "Explore the GetConfiguration function of the maintenance module, including examples, input properties, output properties, and supporting types. Use this data source to access information about an existing Maintenance Configuration."
+title: "getConfiguration"
+title_tag: "azure.maintenance.getConfiguration"
+meta_desc: "Documentation for the azure.maintenance.getConfiguration function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -98,13 +98,13 @@ export const id = azurerm_maintenance_configuration.existing.id;
 {{% /examples %}}
 
 
-## Using GetConfiguration {#using}
+## Using getConfiguration {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getConfiguration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/maintenance/#GetConfigurationArgs">GetConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/maintenance/#GetConfigurationResult">GetConfigurationResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getConfiguration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetConfigurationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -114,7 +114,7 @@ export const id = azurerm_maintenance_configuration.existing.id;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/maintenance?tab=doc#LookupConfigurationArgs">LookupConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/maintenance?tab=doc#LookupConfigurationResult">LookupConfigurationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupConfigurationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupConfiguration` in the Go SDK.
 
@@ -123,7 +123,7 @@ export const id = azurerm_maintenance_configuration.existing.id;
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetConfiguration </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Maintenance.GetConfigurationResult.html">GetConfigurationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Maintenance.GetConfigurationArgs.html">GetConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetConfigurationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetConfigurationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -239,7 +239,7 @@ The following arguments are supported:
 
 
 
-## GetConfiguration Result {#result}
+## getConfiguration Result {#result}
 
 The following output properties are available:
 

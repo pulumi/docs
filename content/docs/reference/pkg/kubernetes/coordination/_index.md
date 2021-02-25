@@ -1,6 +1,6 @@
 ---
 title: "coordination"
-title_tag: "Package coordination"
+title_tag: "coordination Package"
 meta_desc: ""
 ---
 
@@ -22,21 +22,6 @@ meta_desc: ""
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.7.7</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/coordination?tab=doc#" title="kubernetes/coordination">kubernetes/coordination</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/coordination/#" title="@pulumi/kubernetes/coordination">@pulumi/kubernetes/coordination</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/coordination" title="pulumi_kubernetes/coordination">pulumi_kubernetes/coordination</a></dd>
-
+	<dd>2.8.2</dd>
 </dl>
 

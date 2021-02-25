@@ -1,6 +1,6 @@
 ---
 title: "settings"
-title_tag: "Package settings"
+title_tag: "settings Package"
 meta_desc: ""
 ---
 
@@ -21,21 +21,6 @@ meta_desc: ""
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.7.7</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/settings?tab=doc#" title="kubernetes/settings">kubernetes/settings</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/settings/#" title="@pulumi/kubernetes/settings">@pulumi/kubernetes/settings</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/settings" title="pulumi_kubernetes/settings">pulumi_kubernetes/settings</a></dd>
-
+	<dd>2.8.2</dd>
 </dl>
 

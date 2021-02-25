@@ -19,19 +19,19 @@ Manages an EventGrid System Topic Event Subscription.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/eventgrid/#SystemTopicEventSubscription">SystemTopicEventSubscription</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/eventgrid/#SystemTopicEventSubscriptionArgs">SystemTopicEventSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SystemTopicEventSubscription</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SystemTopicEventSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/eventgrid/#pulumi_azure.eventgrid.SystemTopicEventSubscription">SystemTopicEventSubscription</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">advanced_filter</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionAdvancedFilterArgs]</span> = None<span class="p">, </span><span class="nx">azure_function_endpoint</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionAzureFunctionEndpointArgs]</span> = None<span class="p">, </span><span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hybrid_connection_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">included_event_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionRetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">service_bus_queue_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_topic_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_blob_dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionStorageBlobDeadLetterDestinationArgs]</span> = None<span class="p">, </span><span class="nx">storage_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionStorageQueueEndpointArgs]</span> = None<span class="p">, </span><span class="nx">subject_filter</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionSubjectFilterArgs]</span> = None<span class="p">, </span><span class="nx">system_topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">webhook_endpoint</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionWebhookEndpointArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SystemTopicEventSubscription</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">advanced_filter</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionAdvancedFilterArgs]</span> = None<span class="p">, </span><span class="nx">azure_function_endpoint</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionAzureFunctionEndpointArgs]</span> = None<span class="p">, </span><span class="nx">event_delivery_schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_time_utc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hybrid_connection_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">included_event_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionRetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">service_bus_queue_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_bus_topic_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_blob_dead_letter_destination</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionStorageBlobDeadLetterDestinationArgs]</span> = None<span class="p">, </span><span class="nx">storage_queue_endpoint</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionStorageQueueEndpointArgs]</span> = None<span class="p">, </span><span class="nx">subject_filter</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionSubjectFilterArgs]</span> = None<span class="p">, </span><span class="nx">system_topic</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">webhook_endpoint</span><span class="p">:</span> <span class="nx">Optional[SystemTopicEventSubscriptionWebhookEndpointArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscription">NewSystemTopicEventSubscription</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionArgs">SystemTopicEventSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscription">SystemTopicEventSubscription</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSystemTopicEventSubscription</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SystemTopicEventSubscriptionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SystemTopicEventSubscription</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.SystemTopicEventSubscription.html">SystemTopicEventSubscription</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.SystemTopicEventSubscriptionArgs.html">SystemTopicEventSubscriptionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SystemTopicEventSubscription</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SystemTopicEventSubscriptionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -52,7 +52,7 @@ Manages an EventGrid System Topic Event Subscription.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/azure/eventgrid/#SystemTopicEventSubscriptionArgs">SystemTopicEventSubscriptionArgs</a></span>
+        <span class="property-type"><a href="#inputs">SystemTopicEventSubscriptionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -121,7 +121,7 @@ Manages an EventGrid System Topic Event Subscription.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionArgs">SystemTopicEventSubscriptionArgs</a></span>
+        <span class="property-type"><a href="#inputs">SystemTopicEventSubscriptionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -160,7 +160,7 @@ Manages an EventGrid System Topic Event Subscription.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.SystemTopicEventSubscriptionArgs.html">SystemTopicEventSubscriptionArgs</a></span>
+        <span class="property-type"><a href="#inputs">SystemTopicEventSubscriptionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -183,11 +183,11 @@ Manages an EventGrid System Topic Event Subscription.
 
 ## SystemTopicEventSubscription Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SystemTopicEventSubscription resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SystemTopicEventSubscription resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1010,7 +1010,7 @@ Get an existing SystemTopicEventSubscription resource's state with the given nam
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/eventgrid/#SystemTopicEventSubscriptionState">SystemTopicEventSubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/eventgrid/#SystemTopicEventSubscription">SystemTopicEventSubscription</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SystemTopicEventSubscriptionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">SystemTopicEventSubscription</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1019,11 +1019,11 @@ Get an existing SystemTopicEventSubscription resource's state with the given nam
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSystemTopicEventSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionState">SystemTopicEventSubscriptionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscription">SystemTopicEventSubscription</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSystemTopicEventSubscription<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SystemTopicEventSubscriptionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SystemTopicEventSubscription</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.SystemTopicEventSubscription.html">SystemTopicEventSubscription</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.SystemTopicEventSubscriptionState.html">SystemTopicEventSubscriptionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">SystemTopicEventSubscription</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SystemTopicEventSubscriptionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1879,18 +1879,6 @@ The following state arguments are supported:
 
 
 <h4 id="systemtopiceventsubscriptionadvancedfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SystemTopicEventSubscriptionAdvancedFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SystemTopicEventSubscriptionAdvancedFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.SystemTopicEventSubscriptionAdvancedFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.SystemTopicEventSubscriptionAdvancedFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2397,18 +2385,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilterboolequal">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Bool<wbr>Equal</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SystemTopicEventSubscriptionAdvancedFilterBoolEqual">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SystemTopicEventSubscriptionAdvancedFilterBoolEqual">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterBoolEqualArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterBoolEqualOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.SystemTopicEventSubscriptionAdvancedFilterBoolEqualArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.SystemTopicEventSubscriptionAdvancedFilterBoolEqual.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2515,18 +2491,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilternumbergreaterthan">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SystemTopicEventSubscriptionAdvancedFilterNumberGreaterThan">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SystemTopicEventSubscriptionAdvancedFilterNumberGreaterThan">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.SystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.SystemTopicEventSubscriptionAdvancedFilterNumberGreaterThan.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2633,18 +2597,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilternumbergreaterthanorequal">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanOrEqual">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanOrEqual">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanOrEqualArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanOrEqualOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.SystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanOrEqualArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.SystemTopicEventSubscriptionAdvancedFilterNumberGreaterThanOrEqual.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2751,18 +2703,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilternumberin">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>In</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SystemTopicEventSubscriptionAdvancedFilterNumberIn">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SystemTopicEventSubscriptionAdvancedFilterNumberIn">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterNumberInArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterNumberInOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.SystemTopicEventSubscriptionAdvancedFilterNumberInArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.SystemTopicEventSubscriptionAdvancedFilterNumberIn.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2869,18 +2809,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilternumberlessthan">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SystemTopicEventSubscriptionAdvancedFilterNumberLessThan">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SystemTopicEventSubscriptionAdvancedFilterNumberLessThan">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterNumberLessThanArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterNumberLessThanOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.SystemTopicEventSubscriptionAdvancedFilterNumberLessThanArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.SystemTopicEventSubscriptionAdvancedFilterNumberLessThan.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2987,18 +2915,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilternumberlessthanorequal">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Less<wbr>Than<wbr>Or<wbr>Equal</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SystemTopicEventSubscriptionAdvancedFilterNumberLessThanOrEqual">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SystemTopicEventSubscriptionAdvancedFilterNumberLessThanOrEqual">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterNumberLessThanOrEqualArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterNumberLessThanOrEqualOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.SystemTopicEventSubscriptionAdvancedFilterNumberLessThanOrEqualArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.SystemTopicEventSubscriptionAdvancedFilterNumberLessThanOrEqual.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3105,18 +3021,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilternumbernotin">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>Number<wbr>Not<wbr>In</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SystemTopicEventSubscriptionAdvancedFilterNumberNotIn">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SystemTopicEventSubscriptionAdvancedFilterNumberNotIn">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterNumberNotInArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterNumberNotInOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.SystemTopicEventSubscriptionAdvancedFilterNumberNotInArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.SystemTopicEventSubscriptionAdvancedFilterNumberNotIn.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3223,18 +3127,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilterstringbeginswith">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Begins<wbr>With</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SystemTopicEventSubscriptionAdvancedFilterStringBeginsWith">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SystemTopicEventSubscriptionAdvancedFilterStringBeginsWith">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterStringBeginsWithArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterStringBeginsWithOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.SystemTopicEventSubscriptionAdvancedFilterStringBeginsWithArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.SystemTopicEventSubscriptionAdvancedFilterStringBeginsWith.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3341,18 +3233,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilterstringcontain">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Contain</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SystemTopicEventSubscriptionAdvancedFilterStringContain">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SystemTopicEventSubscriptionAdvancedFilterStringContain">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterStringContainArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterStringContainOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.SystemTopicEventSubscriptionAdvancedFilterStringContainArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.SystemTopicEventSubscriptionAdvancedFilterStringContain.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3459,18 +3339,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilterstringendswith">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Ends<wbr>With</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SystemTopicEventSubscriptionAdvancedFilterStringEndsWith">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SystemTopicEventSubscriptionAdvancedFilterStringEndsWith">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterStringEndsWithArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterStringEndsWithOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.SystemTopicEventSubscriptionAdvancedFilterStringEndsWithArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.SystemTopicEventSubscriptionAdvancedFilterStringEndsWith.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3577,18 +3445,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilterstringin">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>In</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SystemTopicEventSubscriptionAdvancedFilterStringIn">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SystemTopicEventSubscriptionAdvancedFilterStringIn">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterStringInArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterStringInOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.SystemTopicEventSubscriptionAdvancedFilterStringInArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.SystemTopicEventSubscriptionAdvancedFilterStringIn.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3695,18 +3551,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionadvancedfilterstringnotin">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Advanced<wbr>Filter<wbr>String<wbr>Not<wbr>In</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SystemTopicEventSubscriptionAdvancedFilterStringNotIn">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SystemTopicEventSubscriptionAdvancedFilterStringNotIn">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterStringNotInArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAdvancedFilterStringNotInOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.SystemTopicEventSubscriptionAdvancedFilterStringNotInArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.SystemTopicEventSubscriptionAdvancedFilterStringNotIn.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3813,18 +3657,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionazurefunctionendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Azure<wbr>Function<wbr>Endpoint</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SystemTopicEventSubscriptionAzureFunctionEndpoint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SystemTopicEventSubscriptionAzureFunctionEndpoint">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAzureFunctionEndpointArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionAzureFunctionEndpointOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.SystemTopicEventSubscriptionAzureFunctionEndpointArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.SystemTopicEventSubscriptionAzureFunctionEndpoint.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3971,18 +3803,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionretrypolicy">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Retry<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SystemTopicEventSubscriptionRetryPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SystemTopicEventSubscriptionRetryPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionRetryPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionRetryPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.SystemTopicEventSubscriptionRetryPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.SystemTopicEventSubscriptionRetryPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4089,18 +3909,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionstorageblobdeadletterdestination">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Blob<wbr>Dead<wbr>Letter<wbr>Destination</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SystemTopicEventSubscriptionStorageBlobDeadLetterDestination">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SystemTopicEventSubscriptionStorageBlobDeadLetterDestination">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionStorageBlobDeadLetterDestinationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionStorageBlobDeadLetterDestinationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.SystemTopicEventSubscriptionStorageBlobDeadLetterDestinationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.SystemTopicEventSubscriptionStorageBlobDeadLetterDestination.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4207,18 +4015,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionstoragequeueendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Storage<wbr>Queue<wbr>Endpoint</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SystemTopicEventSubscriptionStorageQueueEndpoint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SystemTopicEventSubscriptionStorageQueueEndpoint">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionStorageQueueEndpointArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionStorageQueueEndpointOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.SystemTopicEventSubscriptionStorageQueueEndpointArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.SystemTopicEventSubscriptionStorageQueueEndpoint.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4325,18 +4121,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionsubjectfilter">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Subject<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SystemTopicEventSubscriptionSubjectFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SystemTopicEventSubscriptionSubjectFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionSubjectFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionSubjectFilterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.SystemTopicEventSubscriptionSubjectFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.SystemTopicEventSubscriptionSubjectFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4483,18 +4267,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="systemtopiceventsubscriptionwebhookendpoint">System<wbr>Topic<wbr>Event<wbr>Subscription<wbr>Webhook<wbr>Endpoint</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SystemTopicEventSubscriptionWebhookEndpoint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SystemTopicEventSubscriptionWebhookEndpoint">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionWebhookEndpointArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/eventgrid?tab=doc#SystemTopicEventSubscriptionWebhookEndpointOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Inputs.SystemTopicEventSubscriptionWebhookEndpointArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.EventGrid.Outputs.SystemTopicEventSubscriptionWebhookEndpoint.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

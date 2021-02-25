@@ -1,8 +1,8 @@
 
 ---
-title: "GetMoveResource"
-title_tag: "Function GetMoveResource | Module migrate | Package Azure NextGen"
-meta_desc: "Explore the GetMoveResource function of the migrate module, including examples, input properties, output properties, and supporting types. "
+title: "getMoveResource"
+title_tag: "azure-nextgen.migrate.getMoveResource"
+meta_desc: "Documentation for the azure-nextgen.migrate.getMoveResource function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetMoveResource function of the migrate module, includin
 
 
 
-## Using GetMoveResource {#using}
+## Using getMoveResource {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMoveResource<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMoveResourceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetMoveResourceResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMoveResource<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMoveResourceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMoveResourceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetMoveResource function of the migrate module, includin
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMoveResource<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupMoveResourceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupMoveResourceResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMoveResource<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupMoveResourceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupMoveResourceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupMoveResource` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetMoveResource function of the migrate module, includin
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetMoveResource </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetMoveResourceResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetMoveResourceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetMoveResourceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMoveResourceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetMoveResource Result {#result}
+## getMoveResource Result {#result}
 
 The following output properties are available:
 
@@ -366,9 +366,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -434,9 +431,6 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -572,10 +566,71 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
+<h4 id="diskencryptionsetresourcesettingsresponse">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_csharp">
+<a href="#targetresourcename_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_go">
+<a href="#targetresourcename_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_nodejs">
+<a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_resource_name_python">
+<a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="jobstatusresponse">Job<wbr>Status<wbr>Response</h4>
-
-
-
 
 
 
@@ -675,10 +730,71 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
+<h4 id="keyvaultresourcesettingsresponse">Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_csharp">
+<a href="#targetresourcename_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_go">
+<a href="#targetresourcename_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="targetresourcename_nodejs">
+<a href="#targetresourcename_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="target_resource_name_python">
+<a href="#target_resource_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the target Resource name.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="lbbackendaddresspoolresourcesettingsresponse">LBBackend<wbr>Address<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -743,9 +859,6 @@ the dependent resource if the resolution type is Automatic.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="lbfrontendipconfigurationresourcesettingsresponse">LBFrontend<wbr>IPConfiguration<wbr>Resource<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -961,9 +1074,6 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1064,9 +1174,6 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1164,9 +1271,6 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 {{% /choosable %}}
 
 <h4 id="loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -1382,9 +1486,6 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1446,9 +1547,6 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 {{% /choosable %}}
 
 <h4 id="moveresourcedependencyoverrideresponse">Move<wbr>Resource<wbr>Dependency<wbr>Override<wbr>Response</h4>
-
-
-
 
 
 
@@ -1553,9 +1651,6 @@ the dependent resource.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="moveresourcedependencyresponse">Move<wbr>Resource<wbr>Dependency<wbr>Response</h4>
-
-
-
 
 
 
@@ -1839,9 +1934,6 @@ the dependent resource.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2014,9 +2106,6 @@ the dependent resource.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2078,9 +2167,6 @@ the dependent resource.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="moveresourcepropertiesresponse">Move<wbr>Resource<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -2147,7 +2233,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#sourceresourcesettings_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#loadbalancerresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networkinterfaceresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networksecuritygroupresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#publicipaddressresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#resourcegroupresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqldatabaseresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlserverresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualmachineresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualnetworkresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#diskencryptionsetresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#keyvaultresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#loadbalancerresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networkinterfaceresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networksecuritygroupresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#publicipaddressresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#resourcegroupresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqldatabaseresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlserverresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualmachineresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualnetworkresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the source resource settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2183,7 +2269,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#resourcesettings_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#loadbalancerresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networkinterfaceresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networksecuritygroupresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#publicipaddressresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#resourcegroupresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqldatabaseresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlserverresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualmachineresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualnetworkresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#diskencryptionsetresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#keyvaultresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#loadbalancerresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networkinterfaceresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networksecuritygroupresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#publicipaddressresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#resourcegroupresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqldatabaseresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlserverresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualmachineresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualnetworkresourcesettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd>
 </dl>
@@ -2252,7 +2338,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#sourceresourcesettings_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#diskencryptionsetresourcesettingsresponse">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#keyvaultresourcesettingsresponse">Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the source resource settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2288,7 +2374,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#resourcesettings_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#diskencryptionsetresourcesettingsresponse">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#keyvaultresourcesettingsresponse">Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd>
 </dl>
@@ -2357,7 +2443,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#sourceresourcesettings_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#diskencryptionsetresourcesettingsresponse">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#keyvaultresourcesettingsresponse">Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the source resource settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2393,7 +2479,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#resourcesettings_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</a></span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#diskencryptionsetresourcesettingsresponse">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#keyvaultresourcesettingsresponse">Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd>
 </dl>
@@ -2462,7 +2548,7 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#source_resource_settings_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#diskencryptionsetresourcesettingsresponse">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#keyvaultresourcesettingsresponse">Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the source resource settings.{{% /md %}}</dd>
     <dt class="property-required"
@@ -2498,16 +2584,13 @@ the dependent resource.{{% /md %}}</dd>
 <a href="#resource_settings_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>settings</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#availabilitysetresourcesettingsresponse">Availability<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#diskencryptionsetresourcesettingsresponse">Disk<wbr>Encryption<wbr>Set<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#keyvaultresourcesettingsresponse">Key<wbr>Vault<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networkinterfaceresourcesettingsresponse">Network<wbr>Interface<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#networksecuritygroupresourcesettingsresponse">Network<wbr>Security<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#publicipaddressresourcesettingsresponse">Public<wbr>IPAddress<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#resourcegroupresourcesettingsresponse">Resource<wbr>Group<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlelasticpoolresourcesettingsresponse">Sql<wbr>Elastic<wbr>Pool<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#sqlserverresourcesettingsresponse">Sql<wbr>Server<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a> | <a href="#virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the resource settings.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="moveresourcepropertiesresponseerrors">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Errors</h4>
-
-
-
 
 
 
@@ -2572,9 +2655,6 @@ the dependent resource.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="moveresourcepropertiesresponsemovestatus">Move<wbr>Resource<wbr>Properties<wbr>Response<wbr>Move<wbr>Status</h4>
-
-
-
 
 
 
@@ -2714,9 +2794,6 @@ the dependent resource.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2853,9 +2930,6 @@ the dependent resource.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2953,9 +3027,6 @@ the dependent resource.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="nicipconfigurationresourcesettingsresponse">Nic<wbr>Ip<wbr>Configuration<wbr>Resource<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -3275,9 +3346,6 @@ the dependent resource.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3339,9 +3407,6 @@ the dependent resource.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="nsgsecurityruleresponse">Nsg<wbr>Security<wbr>Rule<wbr>Response</h4>
-
-
-
 
 
 
@@ -3777,9 +3842,6 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4024,9 +4086,6 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4091,9 +4150,6 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4155,9 +4211,6 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="sqldatabaseresourcesettingsresponse">Sql<wbr>Database<wbr>Resource<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -4261,9 +4314,6 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4364,9 +4414,6 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4428,9 +4475,6 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="subnetreferenceresponse">Subnet<wbr>Reference<wbr>Response</h4>
-
-
-
 
 
 
@@ -4531,9 +4575,6 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="subnetresourcesettingsresponse">Subnet<wbr>Resource<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -4670,9 +4711,6 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="virtualmachineresourcesettingsresponse">Virtual<wbr>Machine<wbr>Resource<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -4845,9 +4883,6 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="virtualnetworkresourcesettingsresponse">Virtual<wbr>Network<wbr>Resource<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 

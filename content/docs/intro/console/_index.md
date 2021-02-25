@@ -4,7 +4,7 @@ meta_desc: An overview of the Pulumi Console web application.
 menu:
   intro:
     identifier: console
-    weight: 3
+    weight: 5
 no_on_this_page: true
 aliases: [/docs/reference/service]
 ---

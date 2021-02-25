@@ -1,8 +1,8 @@
 
 ---
-title: "GetAlarmContactGroups"
-title_tag: "Function GetAlarmContactGroups | Module cms | Package AliCloud"
-meta_desc: "Explore the GetAlarmContactGroups function of the cms module, including examples, input properties, output properties, and supporting types. This data source provides the CMS Groups of the current Alibaba Cloud user."
+title: "getAlarmContactGroups"
+title_tag: "alicloud.cms.getAlarmContactGroups"
+meta_desc: "Documentation for the alicloud.cms.getAlarmContactGroups function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -17,13 +17,13 @@ This data source provides the CMS Groups of the current Alibaba Cloud user.
 
 
 
-## Using GetAlarmContactGroups {#using}
+## Using getAlarmContactGroups {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAlarmContactGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cms/#GetAlarmContactGroupsArgs">GetAlarmContactGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cms/#GetAlarmContactGroupsResult">GetAlarmContactGroupsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAlarmContactGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAlarmContactGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAlarmContactGroupsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -33,14 +33,16 @@ This data source provides the CMS Groups of the current Alibaba Cloud user.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlarmContactGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cms?tab=doc#GetAlarmContactGroupsArgs">GetAlarmContactGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cms?tab=doc#GetAlarmContactGroupsResult">GetAlarmContactGroupsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlarmContactGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAlarmContactGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAlarmContactGroupsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAlarmContactGroups` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAlarmContactGroups </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cms.GetAlarmContactGroupsResult.html">GetAlarmContactGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cms.GetAlarmContactGroupsArgs.html">GetAlarmContactGroupsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAlarmContactGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAlarmContactGroupsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -192,7 +194,7 @@ The following arguments are supported:
 
 
 
-## GetAlarmContactGroups Result {#result}
+## getAlarmContactGroups Result {#result}
 
 The following output properties are available:
 
@@ -449,16 +451,6 @@ The following output properties are available:
 
 
 <h4 id="getalarmcontactgroupsgroup">Get<wbr>Alarm<wbr>Contact<wbr>Groups<wbr>Group</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAlarmContactGroupsGroup">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cms?tab=doc#GetAlarmContactGroupsGroup">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cms.Outputs.GetAlarmContactGroupsGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

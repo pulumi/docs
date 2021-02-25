@@ -380,19 +380,19 @@ const example = new alicloud.eci.ContainerGroup("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/eci/#ContainerGroup">ContainerGroup</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/eci/#ContainerGroupArgs">ContainerGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ContainerGroup</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContainerGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/eci/#pulumi_alicloud.eci.ContainerGroup">ContainerGroup</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">containers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerGroupContainerArgs]]</span> = None<span class="p">, </span><span class="nx">cpu</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[ContainerGroupDnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">eci_security_context</span><span class="p">:</span> <span class="nx">Optional[ContainerGroupEciSecurityContextArgs]</span> = None<span class="p">, </span><span class="nx">host_aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerGroupHostAliasArgs]]</span> = None<span class="p">, </span><span class="nx">init_containers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerGroupInitContainerArgs]]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ram_role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restart_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerGroupVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ContainerGroup</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">containers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerGroupContainerArgs]]</span> = None<span class="p">, </span><span class="nx">cpu</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[ContainerGroupDnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">eci_security_context</span><span class="p">:</span> <span class="nx">Optional[ContainerGroupEciSecurityContextArgs]</span> = None<span class="p">, </span><span class="nx">host_aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerGroupHostAliasArgs]]</span> = None<span class="p">, </span><span class="nx">init_containers</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerGroupInitContainerArgs]]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ram_role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restart_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerGroupVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroup">NewContainerGroup</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupArgs">ContainerGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroup">ContainerGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContainerGroup</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ContainerGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContainerGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.ContainerGroup.html">ContainerGroup</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.ContainerGroupArgs.html">ContainerGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ContainerGroup</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ContainerGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -413,7 +413,7 @@ const example = new alicloud.eci.ContainerGroup("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/eci/#ContainerGroupArgs">ContainerGroupArgs</a></span>
+        <span class="property-type"><a href="#inputs">ContainerGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -482,7 +482,7 @@ const example = new alicloud.eci.ContainerGroup("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupArgs">ContainerGroupArgs</a></span>
+        <span class="property-type"><a href="#inputs">ContainerGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -521,7 +521,7 @@ const example = new alicloud.eci.ContainerGroup("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.ContainerGroupArgs.html">ContainerGroupArgs</a></span>
+        <span class="property-type"><a href="#inputs">ContainerGroupArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -544,11 +544,11 @@ const example = new alicloud.eci.ContainerGroup("example", {
 
 ## ContainerGroup Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ContainerGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ContainerGroup resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1363,7 +1363,7 @@ Get an existing ContainerGroup resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/eci/#ContainerGroupState">ContainerGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/eci/#ContainerGroup">ContainerGroup</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ContainerGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ContainerGroup</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1372,11 +1372,11 @@ Get an existing ContainerGroup resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainerGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupState">ContainerGroupState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroup">ContainerGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainerGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ContainerGroupState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ContainerGroup</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.ContainerGroup.html">ContainerGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.ContainerGroupState.html">ContainerGroupState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ContainerGroup</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ContainerGroupState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2224,18 +2224,6 @@ The following state arguments are supported:
 
 
 <h4 id="containergroupcontainer">Container<wbr>Group<wbr>Container</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ContainerGroupContainer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ContainerGroupContainer">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupContainerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupContainerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Inputs.ContainerGroupContainerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.ContainerGroupContainer.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2814,18 +2802,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="containergroupcontainerenvironmentvar">Container<wbr>Group<wbr>Container<wbr>Environment<wbr>Var</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ContainerGroupContainerEnvironmentVar">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ContainerGroupContainerEnvironmentVar">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupContainerEnvironmentVarArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupContainerEnvironmentVarOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Inputs.ContainerGroupContainerEnvironmentVarArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.ContainerGroupContainerEnvironmentVar.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2932,18 +2908,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="containergroupcontainerport">Container<wbr>Group<wbr>Container<wbr>Port</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ContainerGroupContainerPort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ContainerGroupContainerPort">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupContainerPortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupContainerPortOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Inputs.ContainerGroupContainerPortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.ContainerGroupContainerPort.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3050,18 +3014,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="containergroupcontainervolumemount">Container<wbr>Group<wbr>Container<wbr>Volume<wbr>Mount</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ContainerGroupContainerVolumeMount">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ContainerGroupContainerVolumeMount">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupContainerVolumeMountArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupContainerVolumeMountOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Inputs.ContainerGroupContainerVolumeMountArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.ContainerGroupContainerVolumeMount.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3208,18 +3160,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="containergroupdnsconfig">Container<wbr>Group<wbr>Dns<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ContainerGroupDnsConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ContainerGroupDnsConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupDnsConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupDnsConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Inputs.ContainerGroupDnsConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.ContainerGroupDnsConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3366,18 +3306,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="containergroupdnsconfigoption">Container<wbr>Group<wbr>Dns<wbr>Config<wbr>Option</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ContainerGroupDnsConfigOption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ContainerGroupDnsConfigOption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupDnsConfigOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupDnsConfigOptionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Inputs.ContainerGroupDnsConfigOptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.ContainerGroupDnsConfigOption.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3484,18 +3412,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="containergroupecisecuritycontext">Container<wbr>Group<wbr>Eci<wbr>Security<wbr>Context</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ContainerGroupEciSecurityContext">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ContainerGroupEciSecurityContext">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupEciSecurityContextArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupEciSecurityContextOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Inputs.ContainerGroupEciSecurityContextArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.ContainerGroupEciSecurityContext.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3558,18 +3474,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="containergroupecisecuritycontextsysctl">Container<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Sysctl</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ContainerGroupEciSecurityContextSysctl">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ContainerGroupEciSecurityContextSysctl">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupEciSecurityContextSysctlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupEciSecurityContextSysctlOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Inputs.ContainerGroupEciSecurityContextSysctlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.ContainerGroupEciSecurityContextSysctl.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3676,18 +3580,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="containergrouphostalias">Container<wbr>Group<wbr>Host<wbr>Alias</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ContainerGroupHostAlias">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ContainerGroupHostAlias">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupHostAliasArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupHostAliasOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Inputs.ContainerGroupHostAliasArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.ContainerGroupHostAlias.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3794,18 +3686,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="containergroupinitcontainer">Container<wbr>Group<wbr>Init<wbr>Container</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ContainerGroupInitContainer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ContainerGroupInitContainer">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupInitContainerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupInitContainerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Inputs.ContainerGroupInitContainerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.ContainerGroupInitContainer.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4384,18 +4264,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="containergroupinitcontainerenvironmentvar">Container<wbr>Group<wbr>Init<wbr>Container<wbr>Environment<wbr>Var</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ContainerGroupInitContainerEnvironmentVar">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ContainerGroupInitContainerEnvironmentVar">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupInitContainerEnvironmentVarArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupInitContainerEnvironmentVarOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Inputs.ContainerGroupInitContainerEnvironmentVarArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.ContainerGroupInitContainerEnvironmentVar.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4502,18 +4370,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="containergroupinitcontainerport">Container<wbr>Group<wbr>Init<wbr>Container<wbr>Port</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ContainerGroupInitContainerPort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ContainerGroupInitContainerPort">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupInitContainerPortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupInitContainerPortOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Inputs.ContainerGroupInitContainerPortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.ContainerGroupInitContainerPort.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4620,18 +4476,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="containergroupinitcontainervolumemount">Container<wbr>Group<wbr>Init<wbr>Container<wbr>Volume<wbr>Mount</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ContainerGroupInitContainerVolumeMount">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ContainerGroupInitContainerVolumeMount">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupInitContainerVolumeMountArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupInitContainerVolumeMountOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Inputs.ContainerGroupInitContainerVolumeMountArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.ContainerGroupInitContainerVolumeMount.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4778,18 +4622,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="containergroupvolume">Container<wbr>Group<wbr>Volume</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ContainerGroupVolume">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ContainerGroupVolume">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupVolumeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupVolumeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Inputs.ContainerGroupVolumeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.ContainerGroupVolume.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5256,18 +5088,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="containergroupvolumeconfigfilevolumeconfigfiletopath">Container<wbr>Group<wbr>Volume<wbr>Config<wbr>File<wbr>Volume<wbr>Config<wbr>File<wbr>To<wbr>Path</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ContainerGroupVolumeConfigFileVolumeConfigFileToPath">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ContainerGroupVolumeConfigFileVolumeConfigFileToPath">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupVolumeConfigFileVolumeConfigFileToPathArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#ContainerGroupVolumeConfigFileVolumeConfigFileToPathOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Inputs.ContainerGroupVolumeConfigFileVolumeConfigFileToPathArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.ContainerGroupVolumeConfigFileVolumeConfigFileToPath.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

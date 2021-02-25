@@ -946,19 +946,19 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesisanalyticsv2/#Application">Application</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesisanalyticsv2/#ApplicationArgs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Application</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/kinesisanalyticsv2/#pulumi_aws.kinesisanalyticsv2.Application">Application</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_configuration</span><span class="p">:</span> <span class="nx">Optional[ApplicationApplicationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">cloudwatch_logging_options</span><span class="p">:</span> <span class="nx">Optional[ApplicationCloudwatchLoggingOptionsArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_execution_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Application</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_configuration</span><span class="p">:</span> <span class="nx">Optional[ApplicationApplicationConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">cloudwatch_logging_options</span><span class="p">:</span> <span class="nx">Optional[ApplicationCloudwatchLoggingOptionsArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_execution_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#Application">NewApplication</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationArgs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#Application">Application</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Application.html">Application</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.ApplicationArgs.html">ApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Application</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -979,7 +979,7 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesisanalyticsv2/#ApplicationArgs">ApplicationArgs</a></span>
+        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1048,7 +1048,7 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationArgs">ApplicationArgs</a></span>
+        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1087,7 +1087,7 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.ApplicationArgs.html">ApplicationArgs</a></span>
+        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1110,11 +1110,11 @@ const exampleApplication = new aws.kinesisanalyticsv2.Application("exampleApplic
 
 ## Application Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Application resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Application resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1697,7 +1697,7 @@ Get an existing Application resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesisanalyticsv2/#ApplicationState">ApplicationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesisanalyticsv2/#Application">Application</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ApplicationState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Application</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1706,11 +1706,11 @@ Get an existing Application resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationState">ApplicationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#Application">Application</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ApplicationState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Application.html">Application</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.ApplicationState.html">ApplicationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Application</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ApplicationState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2326,18 +2326,6 @@ The following state arguments are supported:
 
 
 <h4 id="applicationapplicationconfiguration">Application<wbr>Application<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2604,18 +2592,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationapplicationcodeconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationApplicationCodeConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationApplicationCodeConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationApplicationCodeConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationApplicationCodeConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationApplicationCodeConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationApplicationCodeConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2722,18 +2698,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationapplicationcodeconfigurationcodecontent">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2840,18 +2804,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationapplicationcodeconfigurationcodecontents3contentlocation">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Code<wbr>Configuration<wbr>Code<wbr>Content<wbr>S3Content<wbr>Location</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2998,18 +2950,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationapplicationsnapshotconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Application<wbr>Snapshot<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationApplicationSnapshotConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationApplicationSnapshotConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationApplicationSnapshotConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationApplicationSnapshotConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationApplicationSnapshotConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3076,18 +3016,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationenvironmentproperties">Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationEnvironmentProperties">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationEnvironmentProperties">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationEnvironmentPropertiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationEnvironmentPropertiesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationEnvironmentPropertiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationEnvironmentProperties.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3154,18 +3082,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationenvironmentpropertiespropertygroup">Application<wbr>Application<wbr>Configuration<wbr>Environment<wbr>Properties<wbr>Property<wbr>Group</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3272,18 +3188,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationflinkapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationFlinkApplicationConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationFlinkApplicationConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationFlinkApplicationConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationFlinkApplicationConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationFlinkApplicationConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3430,18 +3334,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationflinkapplicationconfigurationcheckpointconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Checkpoint<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3640,18 +3532,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationflinkapplicationconfigurationmonitoringconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Monitoring<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3798,18 +3678,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationflinkapplicationconfigurationparallelismconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Flink<wbr>Application<wbr>Configuration<wbr>Parallelism<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3996,18 +3864,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4154,18 +4010,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationInput">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationInput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInput.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4544,18 +4388,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputinputparallelism">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Parallelism</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelism">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelism">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelismArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputParallelism.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4622,18 +4454,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4700,18 +4520,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputinputprocessingconfigurationinputlambdaprocessor">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Processing<wbr>Configuration<wbr>Input<wbr>Lambda<wbr>Processor</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessor">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputProcessingConfigurationInputLambdaProcessor.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4778,18 +4586,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputinputschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchema">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchema">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchema.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4936,18 +4732,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordcolumn">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Column</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumn">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumn">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumnArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordColumn.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5094,18 +4878,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormat">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormat">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormat.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5212,18 +4984,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParameters">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParameters">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParameters.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5330,18 +5090,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParameters">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParameters">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersCsvMappingParameters.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5448,18 +5196,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputinputschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParameters">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParameters">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputSchemaRecordFormatMappingParametersJsonMappingParameters.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5526,18 +5262,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputinputstartingpositionconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Input<wbr>Starting<wbr>Position<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5600,18 +5324,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisfirehoseinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Firehose<wbr>Input</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInput">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInputArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisFirehoseInput.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5678,18 +5390,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationinputkinesisstreamsinput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Input<wbr>Kinesis<wbr>Streams<wbr>Input</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInputArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInputKinesisStreamsInput.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5756,18 +5456,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationOutput">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationOutputOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationOutput.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6030,18 +5718,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationoutputdestinationschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Destination<wbr>Schema</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchemaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationOutputDestinationSchema.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6108,18 +5784,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisfirehoseoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Output</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutput.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6186,18 +5850,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationoutputkinesisstreamsoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Kinesis<wbr>Streams<wbr>Output</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutput">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutput.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6264,18 +5916,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationoutputlambdaoutput">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Output<wbr>Lambda<wbr>Output</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutput">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutput.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6342,18 +5982,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6536,18 +6164,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschema">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6694,18 +6310,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordcolumn">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Column</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumn">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumn">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumn.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6852,18 +6456,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformat">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormat">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormat">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormat.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6970,18 +6562,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParameters">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParameters">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParameters.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7088,18 +6668,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparameterscsvmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Mapping<wbr>Parameters</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParameters">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParameters">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParameters.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7206,18 +6774,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasourcereferenceschemarecordformatmappingparametersjsonmappingparameters">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>Reference<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Mapping<wbr>Parameters</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParameters">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParameters">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersJsonMappingParameters.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7284,18 +6840,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationsqlapplicationconfigurationreferencedatasources3referencedatasource">Application<wbr>Application<wbr>Configuration<wbr>Sql<wbr>Application<wbr>Configuration<wbr>Reference<wbr>Data<wbr>Source<wbr>S3Reference<wbr>Data<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7402,18 +6946,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationapplicationconfigurationvpcconfiguration">Application<wbr>Application<wbr>Configuration<wbr>Vpc<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationApplicationConfigurationVpcConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationApplicationConfigurationVpcConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationVpcConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationApplicationConfigurationVpcConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationApplicationConfigurationVpcConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationApplicationConfigurationVpcConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7592,18 +7124,6 @@ An input processor transforms records as they are received from the stream, befo
 {{% /choosable %}}
 
 <h4 id="applicationcloudwatchloggingoptions">Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationCloudwatchLoggingOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationCloudwatchLoggingOptions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/kinesisanalyticsv2?tab=doc#ApplicationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Inputs.ApplicationCloudwatchLoggingOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.KinesisAnalyticsV2.Outputs.ApplicationCloudwatchLoggingOptions.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

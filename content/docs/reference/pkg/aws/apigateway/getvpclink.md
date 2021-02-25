@@ -1,8 +1,8 @@
 
 ---
-title: "GetVpcLink"
-title_tag: "Function GetVpcLink | Module apigateway | Package AWS"
-meta_desc: "Explore the GetVpcLink function of the apigateway module, including examples, input properties, output properties, and supporting types. Use this data source to get the id of a VPC Link in"
+title: "getVpcLink"
+title_tag: "aws.apigateway.getVpcLink"
+meta_desc: "Documentation for the aws.apigateway.getVpcLink function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -91,13 +91,13 @@ const myApiGatewayVpcLink = pulumi.output(aws.apigateway.getVpcLink({
 {{% /examples %}}
 
 
-## Using GetVpcLink {#using}
+## Using getVpcLink {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVpcLink<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#GetVpcLinkArgs">GetVpcLinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#GetVpcLinkResult">GetVpcLinkResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVpcLink<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVpcLinkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVpcLinkResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -107,7 +107,7 @@ const myApiGatewayVpcLink = pulumi.output(aws.apigateway.getVpcLink({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcLink<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#LookupVpcLinkArgs">LookupVpcLinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#LookupVpcLinkResult">LookupVpcLinkResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcLink<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVpcLinkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVpcLinkResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVpcLink` in the Go SDK.
 
@@ -116,7 +116,7 @@ const myApiGatewayVpcLink = pulumi.output(aws.apigateway.getVpcLink({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVpcLink </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Apigateway.GetVpcLinkResult.html">GetVpcLinkResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.GetVpcLinkArgs.html">GetVpcLinkArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetVpcLinkResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVpcLinkArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -236,7 +236,7 @@ If multiple API Gateway VPC Links are found with this name, an error will be ret
 
 
 
-## GetVpcLink Result {#result}
+## getVpcLink Result {#result}
 
 The following output properties are available:
 

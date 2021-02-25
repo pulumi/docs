@@ -1,6 +1,6 @@
 ---
 title: "apps"
-title_tag: "Package apps"
+title_tag: "apps Package"
 meta_desc: ""
 ---
 
@@ -23,21 +23,6 @@ meta_desc: ""
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.7.7</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apps?tab=doc#" title="kubernetes/apps">kubernetes/apps</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/apps/#" title="@pulumi/kubernetes/apps">@pulumi/kubernetes/apps</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/apps" title="pulumi_kubernetes/apps">pulumi_kubernetes/apps</a></dd>
-
+	<dd>2.8.2</dd>
 </dl>
 

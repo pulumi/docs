@@ -1,8 +1,8 @@
 
 ---
-title: "GetProfile"
-title_tag: "Function GetProfile | Module cdn | Package Azure NextGen"
-meta_desc: "Explore the GetProfile function of the cdn module, including examples, input properties, output properties, and supporting types. "
+title: "getProfile"
+title_tag: "azure-nextgen.cdn.getProfile"
+meta_desc: "Documentation for the azure-nextgen.cdn.getProfile function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetProfile function of the cdn module, including example
 
 
 
-## Using GetProfile {#using}
+## Using getProfile {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProfile<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetProfileArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetProfileResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProfile<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetProfileArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetProfileResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetProfile function of the cdn module, including example
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProfile<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupProfileArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupProfileResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProfile<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupProfileArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupProfileResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupProfile` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetProfile function of the cdn module, including example
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetProfile </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetProfileResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetProfileArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetProfileResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetProfileArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetProfile Result {#result}
+## getProfile Result {#result}
 
 The following output properties are available:
 
@@ -546,9 +546,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -610,9 +607,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
-
-
-
 
 
 

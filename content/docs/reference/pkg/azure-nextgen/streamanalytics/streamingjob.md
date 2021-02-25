@@ -406,7 +406,7 @@ const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("stre
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StreamingJob</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">StreamingJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StreamingJob</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StreamingJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -414,11 +414,11 @@ const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("stre
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStreamingJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">StreamingJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StreamingJob</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStreamingJob</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StreamingJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StreamingJob</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StreamingJob</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">StreamingJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StreamingJob</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StreamingJobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -439,7 +439,7 @@ const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("stre
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StreamingJobArgs</span>
+        <span class="property-type"><a href="#inputs">StreamingJobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -508,7 +508,7 @@ const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("stre
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StreamingJobArgs</span>
+        <span class="property-type"><a href="#inputs">StreamingJobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -547,7 +547,7 @@ const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("stre
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StreamingJobArgs</span>
+        <span class="property-type"><a href="#inputs">StreamingJobArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -570,11 +570,11 @@ const streamingJob = new azure_nextgen.streamanalytics.latest.StreamingJob("stre
 
 ## StreamingJob Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The StreamingJob resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -10404,7 +10404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioninput">[]Function<wbr>Input</a></span>
+        <span class="property-type"><a href="#functioninput">[]Function<wbr>Input<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10413,7 +10413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#output_go" style="color: inherit; text-decoration: inherit;">Output</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functionoutput">Function<wbr>Output</a></span>
+        <span class="property-type"><a href="#functionoutput">Function<wbr>Output<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The output of the function.{{% /md %}}</dd>
 </dl>

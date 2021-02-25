@@ -1,8 +1,8 @@
 
 ---
-title: "GetManagedKubernetesClusters"
-title_tag: "Function GetManagedKubernetesClusters | Module cs | Package AliCloud"
-meta_desc: "Explore the GetManagedKubernetesClusters function of the cs module, including examples, input properties, output properties, and supporting types. This data source provides a list Container Service Managed Kubernetes Clusters on Alibaba Cloud."
+title: "getManagedKubernetesClusters"
+title_tag: "alicloud.cs.getManagedKubernetesClusters"
+meta_desc: "Documentation for the alicloud.cs.getManagedKubernetesClusters function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -104,13 +104,13 @@ export const output = k8sClusters.clusters;
 {{% /examples %}}
 
 
-## Using GetManagedKubernetesClusters {#using}
+## Using getManagedKubernetesClusters {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getManagedKubernetesClusters<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#GetManagedKubernetesClustersArgs">GetManagedKubernetesClustersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#GetManagedKubernetesClustersResult">GetManagedKubernetesClustersResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getManagedKubernetesClusters<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetManagedKubernetesClustersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetManagedKubernetesClustersResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -120,14 +120,16 @@ export const output = k8sClusters.clusters;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetManagedKubernetesClusters<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#GetManagedKubernetesClustersArgs">GetManagedKubernetesClustersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#GetManagedKubernetesClustersResult">GetManagedKubernetesClustersResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetManagedKubernetesClusters<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetManagedKubernetesClustersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetManagedKubernetesClustersResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetManagedKubernetesClusters` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetManagedKubernetesClusters </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cs.GetManagedKubernetesClustersResult.html">GetManagedKubernetesClustersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.GetManagedKubernetesClustersArgs.html">GetManagedKubernetesClustersArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetManagedKubernetesClustersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetManagedKubernetesClustersArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -315,7 +317,7 @@ The following arguments are supported:
 
 
 
-## GetManagedKubernetesClusters Result {#result}
+## getManagedKubernetesClusters Result {#result}
 
 The following output properties are available:
 
@@ -620,16 +622,6 @@ The following output properties are available:
 
 
 <h4 id="getmanagedkubernetesclusterscluster">Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetManagedKubernetesClustersCluster">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#GetManagedKubernetesClustersCluster">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.GetManagedKubernetesClustersCluster.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1678,16 +1670,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getmanagedkubernetesclustersclusterconnections">Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Connections</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetManagedKubernetesClustersClusterConnections">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#GetManagedKubernetesClustersClusterConnections">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.GetManagedKubernetesClustersClusterConnections.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1876,16 +1858,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getmanagedkubernetesclustersclusterlogconfig">Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Log<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetManagedKubernetesClustersClusterLogConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#GetManagedKubernetesClustersClusterLogConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.GetManagedKubernetesClustersClusterLogConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1994,16 +1966,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getmanagedkubernetesclustersclusterworkernode">Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Worker<wbr>Node</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetManagedKubernetesClustersClusterWorkerNode">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#GetManagedKubernetesClustersClusterWorkerNode">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.GetManagedKubernetesClustersClusterWorkerNode.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

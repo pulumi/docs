@@ -1,8 +1,8 @@
 
 ---
-title: "GetServiceIntegration"
-title_tag: "Function GetServiceIntegration | Package Aiven"
-meta_desc: "Explore the GetServiceIntegration function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Service Integration Data Source"
+title: "getServiceIntegration"
+title_tag: "aiven.getServiceIntegration"
+meta_desc: "Documentation for the aiven.getServiceIntegration function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -107,23 +107,23 @@ const myintegration = aiven_project_myproject.project.apply(project => aiven.get
 {{% /examples %}}
 
 
-## Using GetServiceIntegration {#using}
+## Using getServiceIntegration {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServiceIntegration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#GetServiceIntegrationArgs">GetServiceIntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#GetServiceIntegrationResult">GetServiceIntegrationResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServiceIntegration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServiceIntegrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServiceIntegrationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service_integration(</span><span class="nx">dashboard_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationDashboardUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationDatadogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">destination_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationExternalAwsCloudwatchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationExternalGoogleCloudLoggingUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">integration_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationKafkaLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">m3aggregator_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationM3aggregatorUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">m3coordinator_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationM3coordinatorUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationMetricsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationPrometheusUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">read_replica_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationReadReplicaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationRsyslogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">signalfx_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationSignalfxUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">source_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceIntegrationResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service_integration(</span><span class="nx">dashboard_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationDashboardUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationDatadogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">destination_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationExternalAwsCloudwatchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationExternalGoogleCloudLoggingUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">integration_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationKafkaLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">m3aggregator_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationM3aggregatorUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">m3coordinator_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationM3coordinatorUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">metrics_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationMetricsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationPrometheusUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">read_replica_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationReadReplicaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationRsyslogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">schema_registry_proxy_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationSchemaRegistryProxyUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">signalfx_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationSignalfxUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">source_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceIntegrationResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServiceIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupServiceIntegrationArgs">LookupServiceIntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupServiceIntegrationResult">LookupServiceIntegrationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServiceIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServiceIntegrationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServiceIntegrationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupServiceIntegration` in the Go SDK.
 
@@ -132,7 +132,7 @@ const myintegration = aiven_project_myproject.project.apply(project => aiven.get
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetServiceIntegration </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.GetServiceIntegrationResult.html">GetServiceIntegrationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.GetServiceIntegrationArgs.html">GetServiceIntegrationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetServiceIntegrationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServiceIntegrationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -336,6 +336,15 @@ The following arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationrsysloguserconfig">Get<wbr>Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaregistryproxyuserconfig_csharp">
+<a href="#schemaregistryproxyuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationschemaregistryproxyuserconfig">Get<wbr>Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -558,6 +567,15 @@ The following arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="schemaregistryproxyuserconfig_go">
+<a href="#schemaregistryproxyuserconfig_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationschemaregistryproxyuserconfig">Get<wbr>Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="signalfxuserconfig_go">
 <a href="#signalfxuserconfig_go" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>User<wbr>Config</a>
 </span>
@@ -772,6 +790,15 @@ The following arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationrsysloguserconfig">Get<wbr>Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schemaregistryproxyuserconfig_nodejs">
+<a href="#schemaregistryproxyuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationschemaregistryproxyuserconfig">Get<wbr>Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -994,6 +1021,15 @@ The following arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="schema_registry_proxy_user_config_python">
+<a href="#schema_registry_proxy_user_config_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry_<wbr>proxy_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationschemaregistryproxyuserconfig">Get<wbr>Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="signalfx_user_config_python">
 <a href="#signalfx_user_config_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>user_<wbr>config</a>
 </span>
@@ -1016,7 +1052,7 @@ The following arguments are supported:
 
 
 
-## GetServiceIntegration Result {#result}
+## getServiceIntegration Result {#result}
 
 The following output properties are available:
 
@@ -1222,6 +1258,15 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationrsysloguserconfig">Get<wbr>Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="schemaregistryproxyuserconfig_csharp">
+<a href="#schemaregistryproxyuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationschemaregistryproxyuserconfig">Get<wbr>Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1449,6 +1494,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="schemaregistryproxyuserconfig_go">
+<a href="#schemaregistryproxyuserconfig_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationschemaregistryproxyuserconfig">Get<wbr>Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="signalfxuserconfig_go">
 <a href="#signalfxuserconfig_go" style="color: inherit; text-decoration: inherit;">Signalfx<wbr>User<wbr>Config</a>
 </span>
@@ -1668,6 +1722,15 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationrsysloguserconfig">Get<wbr>Service<wbr>Integration<wbr>Rsyslog<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="schemaregistryproxyuserconfig_nodejs">
+<a href="#schemaregistryproxyuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationschemaregistryproxyuserconfig">Get<wbr>Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1895,6 +1958,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="schema_registry_proxy_user_config_python">
+<a href="#schema_registry_proxy_user_config_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>registry_<wbr>proxy_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationschemaregistryproxyuserconfig">Get<wbr>Service<wbr>Integration<wbr>Schema<wbr>Registry<wbr>Proxy<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="signalfx_user_config_python">
 <a href="#signalfx_user_config_python" style="color: inherit; text-decoration: inherit;">signalfx_<wbr>user_<wbr>config</a>
 </span>
@@ -1921,16 +1993,6 @@ The following output properties are available:
 
 
 <h4 id="getserviceintegrationdatadoguserconfig">Get<wbr>Service<wbr>Integration<wbr>Datadog<wbr>User<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationDatadogUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationDatadogUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationDatadogUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationDatadogUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationDatadogUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationDatadogUserConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2139,16 +2201,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getserviceintegrationkafkaconnectuserconfig">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationKafkaConnectUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationKafkaConnectUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationKafkaConnectUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationKafkaConnectUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationKafkaConnectUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationKafkaConnectUserConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2213,16 +2265,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getserviceintegrationkafkaconnectuserconfigkafkaconnect">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationKafkaConnectUserConfigKafkaConnect">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationKafkaConnectUserConfigKafkaConnect">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationKafkaConnectUserConfigKafkaConnectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationKafkaConnectUserConfigKafkaConnect">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationKafkaConnectUserConfigKafkaConnectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationKafkaConnectUserConfigKafkaConnect.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2395,16 +2437,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getserviceintegrationkafkalogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Logs<wbr>User<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationKafkaLogsUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationKafkaLogsUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationKafkaLogsUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationKafkaLogsUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationKafkaLogsUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationKafkaLogsUserConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2469,16 +2501,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getserviceintegrationkafkamirrormakeruserconfig">Get<wbr>Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationKafkaMirrormakerUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationKafkaMirrormakerUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationKafkaMirrormakerUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationKafkaMirrormakerUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationKafkaMirrormakerUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationKafkaMirrormakerUserConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2543,16 +2565,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getserviceintegrationlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationLogsUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationLogsUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationLogsUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationLogsUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationLogsUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationLogsUserConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2653,16 +2665,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getserviceintegrationmetricsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationMetricsUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationMetricsUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationMetricsUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationMetricsUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationMetricsUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationMetricsUserConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2871,16 +2873,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getserviceintegrationmetricsuserconfigsourcemysql">Get<wbr>Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationMetricsUserConfigSourceMysql">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationMetricsUserConfigSourceMysql">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationMetricsUserConfigSourceMysqlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationMetricsUserConfigSourceMysql">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationMetricsUserConfigSourceMysqlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationMetricsUserConfigSourceMysql.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2945,16 +2937,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getserviceintegrationmetricsuserconfigsourcemysqltelegraf">Get<wbr>Service<wbr>Integration<wbr>Metrics<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationMetricsUserConfigSourceMysqlTelegraf">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationMetricsUserConfigSourceMysqlTelegraf">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationMetricsUserConfigSourceMysqlTelegrafArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationMetricsUserConfigSourceMysqlTelegraf">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationMetricsUserConfigSourceMysqlTelegrafArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationMetricsUserConfigSourceMysqlTelegraf.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3487,16 +3469,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getserviceintegrationmirrormakeruserconfig">Get<wbr>Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationMirrormakerUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationMirrormakerUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationMirrormakerUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationMirrormakerUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationMirrormakerUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationMirrormakerUserConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3561,16 +3533,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getserviceintegrationprometheususerconfig">Get<wbr>Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationPrometheusUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationPrometheusUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationPrometheusUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationPrometheusUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationPrometheusUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationPrometheusUserConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3635,16 +3597,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getserviceintegrationprometheususerconfigsourcemysql">Get<wbr>Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationPrometheusUserConfigSourceMysql">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationPrometheusUserConfigSourceMysql">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationPrometheusUserConfigSourceMysqlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationPrometheusUserConfigSourceMysql">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationPrometheusUserConfigSourceMysqlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationPrometheusUserConfigSourceMysql.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3709,16 +3661,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getserviceintegrationprometheususerconfigsourcemysqltelegraf">Get<wbr>Service<wbr>Integration<wbr>Prometheus<wbr>User<wbr>Config<wbr>Source<wbr>Mysql<wbr>Telegraf</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationPrometheusUserConfigSourceMysqlTelegraf">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationPrometheusUserConfigSourceMysqlTelegraf">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationPrometheusUserConfigSourceMysqlTelegrafArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationPrometheusUserConfigSourceMysqlTelegraf">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationPrometheusUserConfigSourceMysqlTelegrafArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationPrometheusUserConfigSourceMysqlTelegraf.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

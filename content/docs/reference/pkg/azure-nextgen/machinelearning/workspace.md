@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.machinelearning.Workspace resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An object that represents a machine learning workspace.
-Latest API Version: 2019-10-01.
+Latest API Version: 2016-04-01.
 
 {{% examples %}}
 ## Example Usage
@@ -32,11 +32,6 @@ class MyStack : Stack
             Location = "West Europe",
             OwnerEmail = "abc@microsoft.com",
             ResourceGroupName = "myResourceGroup",
-            Sku = new AzureNextGen.MachineLearning.Latest.Inputs.SkuArgs
-            {
-                Name = "Enterprise",
-                Tier = "Enterprise",
-            },
             Tags = 
             {
                 { "tagKey1", "TagValue1" },
@@ -68,10 +63,6 @@ func main() {
 			Location:          pulumi.String("West Europe"),
 			OwnerEmail:        pulumi.String("abc@microsoft.com"),
 			ResourceGroupName: pulumi.String("myResourceGroup"),
-			Sku: &machinelearning.SkuArgs{
-				Name: pulumi.String("Enterprise"),
-				Tier: pulumi.String("Enterprise"),
-			},
 			Tags: pulumi.StringMap{
 				"tagKey1": pulumi.String("TagValue1"),
 			},
@@ -99,10 +90,6 @@ workspace = azure_nextgen.machinelearning.latest.Workspace("workspace",
     location="West Europe",
     owner_email="abc@microsoft.com",
     resource_group_name="myResourceGroup",
-    sku=azure_nextgen.machinelearning.latest.SkuArgs(
-        name="Enterprise",
-        tier="Enterprise",
-    ),
     tags={
         "tagKey1": "TagValue1",
     },
@@ -123,10 +110,6 @@ const workspace = new azure_nextgen.machinelearning.latest.Workspace("workspace"
     location: "West Europe",
     ownerEmail: "abc@microsoft.com",
     resourceGroupName: "myResourceGroup",
-    sku: {
-        name: "Enterprise",
-        tier: "Enterprise",
-    },
     tags: {
         tagKey1: "TagValue1",
     },
@@ -146,19 +129,19 @@ const workspace = new azure_nextgen.machinelearning.latest.Workspace("workspace"
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">WorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">key_vault_identifier_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">key_vault_identifier_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkspace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">WorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workspace</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkspace</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Workspace</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">WorkspaceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WorkspaceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -179,7 +162,7 @@ const workspace = new azure_nextgen.machinelearning.latest.Workspace("workspace"
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkspaceArgs</span>
+        <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -248,7 +231,7 @@ const workspace = new azure_nextgen.machinelearning.latest.Workspace("workspace"
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkspaceArgs</span>
+        <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -287,7 +270,7 @@ const workspace = new azure_nextgen.machinelearning.latest.Workspace("workspace"
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkspaceArgs</span>
+        <span class="property-type"><a href="#inputs">WorkspaceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -310,26 +293,17 @@ const workspace = new azure_nextgen.machinelearning.latest.Workspace("workspace"
 
 ## Workspace Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Workspace resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Workspace resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="owneremail_csharp">
@@ -377,13 +351,13 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The key vault identifier used for encrypted workspaces.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="sku_csharp">
-<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -399,15 +373,6 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="owneremail_go">
@@ -455,13 +420,13 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The key vault identifier used for encrypted workspaces.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="sku_go">
-<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -477,15 +442,6 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="owneremail_nodejs">
@@ -533,13 +489,13 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The key vault identifier used for encrypted workspaces.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="sku_nodejs">
-<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -555,15 +511,6 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="owner_email_python">
@@ -611,13 +558,13 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The key vault identifier used for encrypted workspaces.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="sku_python">
-<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
+    <dd>{{% md %}}The location of the resource. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -954,206 +901,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-
-## Supporting Types
-
-
-
-<h4 id="sku">Sku</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_csharp">
-<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_go">
-<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_nodejs">
-<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_python">
-<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="skuresponse">Sku<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_csharp">
-<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_go">
-<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_nodejs">
-<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_python">
-<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
 ## Import
 
 

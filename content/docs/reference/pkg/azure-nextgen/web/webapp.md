@@ -28,7 +28,7 @@ $ pulumi import azure-nextgen:web/latest:WebApp myresource1 /subscriptions/{subs
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebApp</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">WebAppArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebApp</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -36,11 +36,11 @@ $ pulumi import azure-nextgen:web/latest:WebApp myresource1 /subscriptions/{subs
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebApp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">WebAppArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebApp</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebApp</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebApp</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebApp</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">WebAppArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebApp</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WebAppArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -61,7 +61,7 @@ $ pulumi import azure-nextgen:web/latest:WebApp myresource1 /subscriptions/{subs
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WebAppArgs</span>
+        <span class="property-type"><a href="#inputs">WebAppArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -130,7 +130,7 @@ $ pulumi import azure-nextgen:web/latest:WebApp myresource1 /subscriptions/{subs
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WebAppArgs</span>
+        <span class="property-type"><a href="#inputs">WebAppArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -169,7 +169,7 @@ $ pulumi import azure-nextgen:web/latest:WebApp myresource1 /subscriptions/{subs
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WebAppArgs</span>
+        <span class="property-type"><a href="#inputs">WebAppArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -192,26 +192,17 @@ $ pulumi import azure-nextgen:web/latest:WebApp myresource1 /subscriptions/{subs
 
 ## WebApp Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The WebApp resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The WebApp resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -390,6 +381,15 @@ http requests{{% /md %}}</dd>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="redundancymode_csharp">
 <a href="#redundancymode_csharp" style="color: inherit; text-decoration: inherit;">Redundancy<wbr>Mode</a>
 </span>
@@ -448,15 +448,6 @@ http requests{{% /md %}}</dd>
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -635,6 +626,15 @@ http requests{{% /md %}}</dd>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="redundancymode_go">
 <a href="#redundancymode_go" style="color: inherit; text-decoration: inherit;">Redundancy<wbr>Mode</a>
 </span>
@@ -693,15 +693,6 @@ http requests{{% /md %}}</dd>
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -880,6 +871,15 @@ http requests{{% /md %}}</dd>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="redundancymode_nodejs">
 <a href="#redundancymode_nodejs" style="color: inherit; text-decoration: inherit;">redundancy<wbr>Mode</a>
 </span>
@@ -938,15 +938,6 @@ http requests{{% /md %}}</dd>
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -1123,6 +1114,15 @@ http requests{{% /md %}}</dd>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource Location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="redundancy_mode_python">
@@ -14921,7 +14921,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
@@ -14981,7 +14981,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
@@ -15041,7 +15041,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
@@ -15101,7 +15101,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">

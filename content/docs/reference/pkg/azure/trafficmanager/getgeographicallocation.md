@@ -1,8 +1,8 @@
 
 ---
-title: "GetGeographicalLocation"
-title_tag: "Function GetGeographicalLocation | Module trafficmanager | Package Azure"
-meta_desc: "Explore the GetGeographicalLocation function of the trafficmanager module, including examples, input properties, output properties, and supporting types. Use this data source to access the ID of a specified Traffic Manager Geographical Location within the Geographical Hierarchy."
+title: "getGeographicalLocation"
+title_tag: "azure.trafficmanager.getGeographicalLocation"
+meta_desc: "Documentation for the azure.trafficmanager.getGeographicalLocation function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -95,13 +95,13 @@ export const locationCode = example.then(example => example.id);
 {{% /examples %}}
 
 
-## Using GetGeographicalLocation {#using}
+## Using getGeographicalLocation {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGeographicalLocation<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/trafficmanager/#GetGeographicalLocationArgs">GetGeographicalLocationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/trafficmanager/#GetGeographicalLocationResult">GetGeographicalLocationResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGeographicalLocation<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGeographicalLocationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetGeographicalLocationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -111,14 +111,16 @@ export const locationCode = example.then(example => example.id);
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGeographicalLocation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/trafficmanager?tab=doc#GetGeographicalLocationArgs">GetGeographicalLocationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/trafficmanager?tab=doc#GetGeographicalLocationResult">GetGeographicalLocationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGeographicalLocation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetGeographicalLocationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetGeographicalLocationResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetGeographicalLocation` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetGeographicalLocation </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Trafficmanager.GetGeographicalLocationResult.html">GetGeographicalLocationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.TrafficManager.GetGeographicalLocationArgs.html">GetGeographicalLocationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetGeographicalLocationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetGeographicalLocationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -194,7 +196,7 @@ The following arguments are supported:
 
 
 
-## GetGeographicalLocation Result {#result}
+## getGeographicalLocation Result {#result}
 
 The following output properties are available:
 

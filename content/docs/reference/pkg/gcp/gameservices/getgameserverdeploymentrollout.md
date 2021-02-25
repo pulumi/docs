@@ -1,8 +1,8 @@
 
 ---
-title: "GetGameServerDeploymentRollout"
-title_tag: "Function GetGameServerDeploymentRollout | Module gameservices | Package GCP"
-meta_desc: "Explore the GetGameServerDeploymentRollout function of the gameservices module, including examples, input properties, output properties, and supporting types. Use this data source to get the rollout state. "
+title: "getGameServerDeploymentRollout"
+title_tag: "gcp.gameservices.getGameServerDeploymentRollout"
+meta_desc: "Documentation for the gcp.gameservices.getGameServerDeploymentRollout function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -90,13 +90,13 @@ const qa = pulumi.output(gcp.gameservices.getGameServerDeploymentRollout({
 {{% /examples %}}
 
 
-## Using GetGameServerDeploymentRollout {#using}
+## Using getGameServerDeploymentRollout {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGameServerDeploymentRollout<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GetGameServerDeploymentRolloutArgs">GetGameServerDeploymentRolloutArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/gameservices/#GetGameServerDeploymentRolloutResult">GetGameServerDeploymentRolloutResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGameServerDeploymentRollout<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGameServerDeploymentRolloutArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetGameServerDeploymentRolloutResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -106,7 +106,7 @@ const qa = pulumi.output(gcp.gameservices.getGameServerDeploymentRollout({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupGameServerDeploymentRollout<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#LookupGameServerDeploymentRolloutArgs">LookupGameServerDeploymentRolloutArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#LookupGameServerDeploymentRolloutResult">LookupGameServerDeploymentRolloutResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupGameServerDeploymentRollout<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupGameServerDeploymentRolloutArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupGameServerDeploymentRolloutResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupGameServerDeploymentRollout` in the Go SDK.
 
@@ -115,7 +115,7 @@ const qa = pulumi.output(gcp.gameservices.getGameServerDeploymentRollout({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetGameServerDeploymentRollout </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Gameservices.GetGameServerDeploymentRolloutResult.html">GetGameServerDeploymentRolloutResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.GetGameServerDeploymentRolloutArgs.html">GetGameServerDeploymentRolloutArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetGameServerDeploymentRolloutResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetGameServerDeploymentRolloutArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -191,7 +191,7 @@ The following arguments are supported:
 
 
 
-## GetGameServerDeploymentRollout Result {#result}
+## getGameServerDeploymentRollout Result {#result}
 
 The following output properties are available:
 
@@ -456,16 +456,6 @@ If it is not provided, the provider project is used.
 
 
 <h4 id="getgameserverdeploymentrolloutgameserverconfigoverride">Get<wbr>Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetGameServerDeploymentRolloutGameServerConfigOverride">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#GetGameServerDeploymentRolloutGameServerConfigOverride">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Outputs.GetGameServerDeploymentRolloutGameServerConfigOverride.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -566,16 +556,6 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 <h4 id="getgameserverdeploymentrolloutgameserverconfigoverriderealmsselector">Get<wbr>Game<wbr>Server<wbr>Deployment<wbr>Rollout<wbr>Game<wbr>Server<wbr>Config<wbr>Override<wbr>Realms<wbr>Selector</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices?tab=doc#GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.GameServices.Outputs.GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

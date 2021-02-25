@@ -34,24 +34,6 @@ Explore the resources and functions of the properties module in the Akamai packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/akamai/terraform-provider-akamai).</dd>
 	<dt>Version</dt>
-	<dd>1.0.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Akamai/Pulumi.Akamai.properties.html" title="Pulumi.Akamai.properties">Pulumi.Akamai.properties</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-akamai/sdk/go/akamai/properties?tab=doc#" title="akamai/properties">akamai/properties</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/akamai/properties/#" title="@pulumi/akamai/properties">@pulumi/akamai/properties</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_akamai/properties" title="pulumi_akamai/properties">pulumi_akamai/properties</a></dd>
-
+	<dd>1.1.1</dd>
 </dl>
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetPort"
-title_tag: "Function GetPort | Module networking | Package Open Stack"
-meta_desc: "Explore the GetPort function of the networking module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available OpenStack port."
+title: "getPort"
+title_tag: "openstack.networking.getPort"
+meta_desc: "Documentation for the openstack.networking.getPort function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,13 +89,13 @@ const port1 = pulumi.output(openstack.networking.getPort({
 {{% /examples %}}
 
 
-## Using GetPort {#using}
+## Using getPort {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPort<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#GetPortArgs">GetPortArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#GetPortResult">GetPortResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPort<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPortArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPortResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -105,7 +105,7 @@ const port1 = pulumi.output(openstack.networking.getPort({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPort<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#LookupPortArgs">LookupPortArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#LookupPortResult">LookupPortResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPort<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPortArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPortResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPort` in the Go SDK.
 
@@ -114,7 +114,7 @@ const port1 = pulumi.output(openstack.networking.getPort({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPort </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.GetPortResult.html">GetPortResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.GetPortArgs.html">GetPortArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPortResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPortArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -798,7 +798,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
 
 
-## GetPort Result {#result}
+## getPort Result {#result}
 
 The following output properties are available:
 
@@ -1791,16 +1791,6 @@ The structure is described below.
 
 
 <h4 id="getportallowedaddresspair">Get<wbr>Port<wbr>Allowed<wbr>Address<wbr>Pair</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetPortAllowedAddressPair">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#GetPortAllowedAddressPair">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.Outputs.GetPortAllowedAddressPair.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1909,16 +1899,6 @@ The structure is described below.
 {{% /choosable %}}
 
 <h4 id="getportbinding">Get<wbr>Port<wbr>Binding</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetPortBinding">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#GetPortBinding">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.Outputs.GetPortBinding.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2151,16 +2131,6 @@ specific binding.
 {{% /choosable %}}
 
 <h4 id="getportextradhcpoption">Get<wbr>Port<wbr>Extra<wbr>Dhcp<wbr>Option</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetPortExtraDhcpOption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#GetPortExtraDhcpOption">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.Outputs.GetPortExtraDhcpOption.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

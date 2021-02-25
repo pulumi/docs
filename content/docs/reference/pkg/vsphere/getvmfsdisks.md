@@ -1,8 +1,8 @@
 
 ---
-title: "GetVmfsDisks"
-title_tag: "Function GetVmfsDisks | Package vSphere"
-meta_desc: "Explore the GetVmfsDisks function of the vSphere package, including examples, input properties, output properties, and supporting types. The `vsphere.getVmfsDisks` data source can be used to discover the storage"
+title: "getVmfsDisks"
+title_tag: "vsphere.getVmfsDisks"
+meta_desc: "Documentation for the vsphere.getVmfsDisks function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -14,6 +14,7 @@ The `vsphere.getVmfsDisks` data source can be used to discover the storage
 devices available on an ESXi host. This data source can be combined with the
 `vsphere.VmfsDatastore` resource to create VMFS
 datastores based off a set of discovered disks.
+
 
 {{% examples %}}
 ## Example Usage
@@ -134,13 +135,13 @@ const available = host.apply(host => vsphere.getVmfsDisks({
 {{% /examples %}}
 
 
-## Using GetVmfsDisks {#using}
+## Using getVmfsDisks {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVmfsDisks<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#GetVmfsDisksArgs">GetVmfsDisksArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#GetVmfsDisksResult">GetVmfsDisksResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVmfsDisks<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVmfsDisksArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVmfsDisksResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -150,21 +151,22 @@ const available = host.apply(host => vsphere.getVmfsDisks({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVmfsDisks<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#GetVmfsDisksArgs">GetVmfsDisksArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#GetVmfsDisksResult">GetVmfsDisksResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVmfsDisks<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetVmfsDisksArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetVmfsDisksResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetVmfsDisks` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVmfsDisks </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.GetVmfsDisksResult.html">GetVmfsDisksResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.GetVmfsDisksArgs.html">GetVmfsDisksArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetVmfsDisksResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVmfsDisksArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
 
 
 The following arguments are supported:
-
 
 
 {{% choosable language csharp %}}
@@ -174,42 +176,38 @@ The following arguments are supported:
             title="Required">
         <span id="hostsystemid_csharp">
 <a href="#hostsystemid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the host to look for disks on.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regular expression to filter the disks against. Only
 disks with canonical names that match will be included.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rescan_csharp">
 <a href="#rescan_csharp" style="color: inherit; text-decoration: inherit;">Rescan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to rescan storage adapters before
 searching for disks. This may lengthen the time it takes to perform the
 search. Default: `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -218,42 +216,38 @@ search. Default: `false`.
             title="Required">
         <span id="hostsystemid_go">
 <a href="#hostsystemid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the host to look for disks on.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regular expression to filter the disks against. Only
 disks with canonical names that match will be included.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rescan_go">
 <a href="#rescan_go" style="color: inherit; text-decoration: inherit;">Rescan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to rescan storage adapters before
 searching for disks. This may lengthen the time it takes to perform the
 search. Default: `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -262,42 +256,38 @@ search. Default: `false`.
             title="Required">
         <span id="hostsystemid_nodejs">
 <a href="#hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the host to look for disks on.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regular expression to filter the disks against. Only
 disks with canonical names that match will be included.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rescan_nodejs">
 <a href="#rescan_nodejs" style="color: inherit; text-decoration: inherit;">rescan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not to rescan storage adapters before
 searching for disks. This may lengthen the time it takes to perform the
 search. Default: `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -306,53 +296,45 @@ search. Default: `false`.
             title="Required">
         <span id="host_system_id_python">
 <a href="#host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object ID of
 the host to look for disks on.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A regular expression to filter the disks against. Only
 disks with canonical names that match will be included.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rescan_python">
 <a href="#rescan_python" style="color: inherit; text-decoration: inherit;">rescan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to rescan storage adapters before
 searching for disks. This may lengthen the time it takes to perform the
 search. Default: `false`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 
 
-
-
-
-
-## GetVmfsDisks Result {#result}
+## getVmfsDisks Result {#result}
 
 The following output properties are available:
-
 
 
 
@@ -363,58 +345,52 @@ The following output properties are available:
             title="">
         <span id="disks_csharp">
 <a href="#disks_csharp" style="color: inherit; text-decoration: inherit;">Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A lexicographically sorted list of devices discovered by the
 operation, matching the supplied `filter`, if provided.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hostsystemid_csharp">
 <a href="#hostsystemid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rescan_csharp">
 <a href="#rescan_csharp" style="color: inherit; text-decoration: inherit;">Rescan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -423,58 +399,52 @@ operation, matching the supplied `filter`, if provided.
             title="">
         <span id="disks_go">
 <a href="#disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A lexicographically sorted list of devices discovered by the
 operation, matching the supplied `filter`, if provided.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hostsystemid_go">
 <a href="#hostsystemid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rescan_go">
 <a href="#rescan_go" style="color: inherit; text-decoration: inherit;">Rescan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -483,58 +453,52 @@ operation, matching the supplied `filter`, if provided.
             title="">
         <span id="disks_nodejs">
 <a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A lexicographically sorted list of devices discovered by the
 operation, matching the supplied `filter`, if provided.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="hostsystemid_nodejs">
 <a href="#hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rescan_nodejs">
 <a href="#rescan_nodejs" style="color: inherit; text-decoration: inherit;">rescan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -543,61 +507,52 @@ operation, matching the supplied `filter`, if provided.
             title="">
         <span id="disks_python">
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A lexicographically sorted list of devices discovered by the
 operation, matching the supplied `filter`, if provided.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="host_system_id_python">
 <a href="#host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="rescan_python">
 <a href="#rescan_python" style="color: inherit; text-decoration: inherit;">rescan</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

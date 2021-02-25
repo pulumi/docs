@@ -1,8 +1,8 @@
 
 ---
-title: "GetSubnetPool"
-title_tag: "Function GetSubnetPool | Module networking | Package Open Stack"
-meta_desc: "Explore the GetSubnetPool function of the networking module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available OpenStack subnetpool."
+title: "getSubnetPool"
+title_tag: "openstack.networking.getSubnetPool"
+meta_desc: "Documentation for the openstack.networking.getSubnetPool function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,13 +89,13 @@ const subnetpool1 = pulumi.output(openstack.networking.getSubnetPool({
 {{% /examples %}}
 
 
-## Using GetSubnetPool {#using}
+## Using getSubnetPool {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSubnetPool<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#GetSubnetPoolArgs">GetSubnetPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#GetSubnetPoolResult">GetSubnetPoolResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSubnetPool<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSubnetPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSubnetPoolResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -105,7 +105,7 @@ const subnetpool1 = pulumi.output(openstack.networking.getSubnetPool({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSubnetPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#LookupSubnetPoolArgs">LookupSubnetPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#LookupSubnetPoolResult">LookupSubnetPoolResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSubnetPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSubnetPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSubnetPoolResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSubnetPool` in the Go SDK.
 
@@ -114,7 +114,7 @@ const subnetpool1 = pulumi.output(openstack.networking.getSubnetPool({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSubnetPool </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.GetSubnetPoolResult.html">GetSubnetPoolResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.GetSubnetPoolArgs.html">GetSubnetPoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSubnetPoolResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSubnetPoolArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -690,7 +690,7 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
 
 
 
-## GetSubnetPool Result {#result}
+## getSubnetPool Result {#result}
 
 The following output properties are available:
 

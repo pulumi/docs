@@ -1,8 +1,8 @@
 
 ---
-title: "GetKeyPrefix"
-title_tag: "Function GetKeyPrefix | Package Consul"
-meta_desc: "Explore the GetKeyPrefix function of the Consul package, including examples, input properties, output properties, and supporting types. "
+title: "getKeyPrefix"
+title_tag: "consul.getKeyPrefix"
+meta_desc: "Documentation for the consul.getKeyPrefix function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetKeyPrefix function of the Consul package, including e
 
 
 
-## Using GetKeyPrefix {#using}
+## Using getKeyPrefix {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKeyPrefix<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#GetKeyPrefixArgs">GetKeyPrefixArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#GetKeyPrefixResult">GetKeyPrefixResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKeyPrefix<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetKeyPrefixArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetKeyPrefixResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetKeyPrefix function of the Consul package, including e
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKeyPrefix<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#LookupKeyPrefixArgs">LookupKeyPrefixArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#LookupKeyPrefixResult">LookupKeyPrefixResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKeyPrefix<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupKeyPrefixArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupKeyPrefixResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupKeyPrefix` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetKeyPrefix function of the Consul package, including e
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKeyPrefix </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.GetKeyPrefixResult.html">GetKeyPrefixResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.GetKeyPrefixArgs.html">GetKeyPrefixArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetKeyPrefixResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetKeyPrefixArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -294,7 +294,7 @@ token that the agent provides by default.
 
 
 
-## GetKeyPrefix Result {#result}
+## getKeyPrefix Result {#result}
 
 The following output properties are available:
 
@@ -647,16 +647,6 @@ block is provided.
 
 
 <h4 id="getkeyprefixsubkeycollection">Get<wbr>Key<wbr>Prefix<wbr>Subkey<wbr>Collection</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/input/#GetKeyPrefixSubkeyCollection">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetKeyPrefixSubkeyCollection">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#GetKeyPrefixSubkeyCollectionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#GetKeyPrefixSubkeyCollection">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Inputs.GetKeyPrefixSubkeyCollectionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Outputs.GetKeyPrefixSubkeyCollection.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

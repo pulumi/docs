@@ -1,8 +1,8 @@
 
 ---
-title: "GetVirtualMachine"
-title_tag: "Function GetVirtualMachine | Module devtestlab | Package Azure NextGen"
-meta_desc: "Explore the GetVirtualMachine function of the devtestlab module, including examples, input properties, output properties, and supporting types. "
+title: "getVirtualMachine"
+title_tag: "azure-nextgen.devtestlab.getVirtualMachine"
+meta_desc: "Documentation for the azure-nextgen.devtestlab.getVirtualMachine function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetVirtualMachine function of the devtestlab module, inc
 
 
 
-## Using GetVirtualMachine {#using}
+## Using getVirtualMachine {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualMachine<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVirtualMachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetVirtualMachineResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualMachine<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVirtualMachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVirtualMachineResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetVirtualMachine function of the devtestlab module, inc
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualMachine<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVirtualMachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupVirtualMachineResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualMachine<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVirtualMachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVirtualMachineResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVirtualMachine` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetVirtualMachine function of the devtestlab module, inc
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVirtualMachine </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetVirtualMachineResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetVirtualMachineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetVirtualMachineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVirtualMachineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -218,7 +218,7 @@ The following arguments are supported:
 
 
 
-## GetVirtualMachine Result {#result}
+## getVirtualMachine Result {#result}
 
 The following output properties are available:
 
@@ -1698,9 +1698,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1981,9 +1978,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2117,9 +2111,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="artifactinstallpropertiesresponse">Artifact<wbr>Install<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -2403,9 +2394,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2503,9 +2491,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="attachnewdatadiskoptionsresponse">Attach<wbr>New<wbr>Data<wbr>Disk<wbr>Options<wbr>Response</h4>
-
-
-
 
 
 
@@ -2642,9 +2627,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="computedatadiskresponse">Compute<wbr>Data<wbr>Disk<wbr>Response</h4>
-
-
-
 
 
 
@@ -2820,9 +2802,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2956,9 +2935,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="computevmpropertiesresponse">Compute<wbr>Vm<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -3242,9 +3218,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3381,9 +3354,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3445,9 +3415,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="galleryimagereferenceresponse">Gallery<wbr>Image<wbr>Reference<wbr>Response</h4>
-
-
-
 
 
 
@@ -3659,9 +3626,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3723,9 +3687,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="inboundnatruleresponse">Inbound<wbr>Nat<wbr>Rule<wbr>Response</h4>
-
-
-
 
 
 
@@ -3862,9 +3823,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="networkinterfacepropertiesresponse">Network<wbr>Interface<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -4220,9 +4178,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4428,9 +4383,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="schedulecreationparameterresponse">Schedule<wbr>Creation<wbr>Parameter<wbr>Response</h4>
-
-
-
 
 
 
@@ -4855,9 +4807,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="scheduleresponse">Schedule<wbr>Response</h4>
-
-
-
 
 
 
@@ -5465,9 +5414,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5529,9 +5475,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="weekdetailsresponse">Week<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 

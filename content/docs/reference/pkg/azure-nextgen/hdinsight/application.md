@@ -238,7 +238,7 @@ const application = new azure_nextgen.hdinsight.v20180601preview.Application("ap
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Application</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Application</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -246,11 +246,11 @@ const application = new azure_nextgen.hdinsight.v20180601preview.Application("ap
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewApplication</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Application</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Application</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ApplicationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Application</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -271,7 +271,7 @@ const application = new azure_nextgen.hdinsight.v20180601preview.Application("ap
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApplicationArgs</span>
+        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -340,7 +340,7 @@ const application = new azure_nextgen.hdinsight.v20180601preview.Application("ap
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApplicationArgs</span>
+        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -379,7 +379,7 @@ const application = new azure_nextgen.hdinsight.v20180601preview.Application("ap
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApplicationArgs</span>
+        <span class="property-type"><a href="#inputs">ApplicationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -402,11 +402,11 @@ const application = new azure_nextgen.hdinsight.v20180601preview.Application("ap
 
 ## Application Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Application resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Application resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1182,6 +1182,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privateipaddress_csharp">
+<a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicport_csharp">
 <a href="#publicport_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Port</a>
 </span>
@@ -1240,6 +1249,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_go">
+<a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="publicport_go">
@@ -1302,6 +1320,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privateipaddress_nodejs">
+<a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicport_nodejs">
 <a href="#publicport_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Port</a>
 </span>
@@ -1360,6 +1387,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_ip_address_python">
+<a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="public_port_python">
@@ -1424,6 +1460,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privateipaddress_csharp">
+<a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicport_csharp">
 <a href="#publicport_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Port</a>
 </span>
@@ -1482,6 +1527,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_go">
+<a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="publicport_go">
@@ -1544,6 +1598,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privateipaddress_nodejs">
+<a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicport_nodejs">
 <a href="#publicport_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Port</a>
 </span>
@@ -1602,6 +1665,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_ip_address_python">
+<a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="public_port_python">
@@ -4573,6 +4645,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="vmgroupname_csharp">
+<a href="#vmgroupname_csharp" style="color: inherit; text-decoration: inherit;">VMGroup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtualnetworkprofile_csharp">
 <a href="#virtualnetworkprofile_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Profile</a>
 </span>
@@ -4667,6 +4748,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmgroupname_go">
+<a href="#vmgroupname_go" style="color: inherit; text-decoration: inherit;">VMGroup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkprofile_go">
@@ -4765,6 +4855,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="vmgroupname_nodejs">
+<a href="#vmgroupname_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>MGroup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtualnetworkprofile_nodejs">
 <a href="#virtualnetworkprofile_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Profile</a>
 </span>
@@ -4859,6 +4958,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="v_m_group_name_python">
+<a href="#v_m_group_name_python" style="color: inherit; text-decoration: inherit;">v_<wbr>m_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="virtual_network_profile_python">
@@ -4959,6 +5067,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="vmgroupname_csharp">
+<a href="#vmgroupname_csharp" style="color: inherit; text-decoration: inherit;">VMGroup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtualnetworkprofile_csharp">
 <a href="#virtualnetworkprofile_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Profile</a>
 </span>
@@ -5053,6 +5170,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmgroupname_go">
+<a href="#vmgroupname_go" style="color: inherit; text-decoration: inherit;">VMGroup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkprofile_go">
@@ -5151,6 +5277,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="vmgroupname_nodejs">
+<a href="#vmgroupname_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>MGroup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtualnetworkprofile_nodejs">
 <a href="#virtualnetworkprofile_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Profile</a>
 </span>
@@ -5245,6 +5380,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="v_m_group_name_python">
+<a href="#v_m_group_name_python" style="color: inherit; text-decoration: inherit;">v_<wbr>m_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="virtual_network_profile_python">

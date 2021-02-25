@@ -1,8 +1,8 @@
 
 ---
-title: "GetLoadBalancer"
-title_tag: "Function GetLoadBalancer | Module elasticloadbalancing | Package AWS"
-meta_desc: "Explore the GetLoadBalancer function of the elasticloadbalancing module, including examples, input properties, output properties, and supporting types. Provides information about a &#34;classic&#34; Elastic Load Balancer (ELB)."
+title: "getLoadBalancer"
+title_tag: "aws.elasticloadbalancing.getLoadBalancer"
+meta_desc: "Documentation for the aws.elasticloadbalancing.getLoadBalancer function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -109,13 +109,13 @@ const test = aws.elb.getLoadBalancer({
 {{% /examples %}}
 
 
-## Using GetLoadBalancer {#using}
+## Using getLoadBalancer {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLoadBalancer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancing/#GetLoadBalancerArgs">GetLoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancing/#GetLoadBalancerResult">GetLoadBalancerResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLoadBalancer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLoadBalancerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLoadBalancerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -125,7 +125,7 @@ const test = aws.elb.getLoadBalancer({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancing?tab=doc#LookupLoadBalancerArgs">LookupLoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancing?tab=doc#LookupLoadBalancerResult">LookupLoadBalancerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLoadBalancerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupLoadBalancerResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupLoadBalancer` in the Go SDK.
 
@@ -134,7 +134,7 @@ const test = aws.elb.getLoadBalancer({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLoadBalancer </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancing.GetLoadBalancerResult.html">GetLoadBalancerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancing.GetLoadBalancerArgs.html">GetLoadBalancerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetLoadBalancerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLoadBalancerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -246,7 +246,7 @@ The following arguments are supported:
 
 
 
-## GetLoadBalancer Result {#result}
+## getLoadBalancer Result {#result}
 
 The following output properties are available:
 
@@ -1007,16 +1007,6 @@ The following output properties are available:
 
 
 <h4 id="getloadbalanceraccesslogs">Get<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLoadBalancerAccessLogs">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancing?tab=doc#GetLoadBalancerAccessLogs">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancing.Outputs.GetLoadBalancerAccessLogs.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1189,16 +1179,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getloadbalancerhealthcheck">Get<wbr>Load<wbr>Balancer<wbr>Health<wbr>Check</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLoadBalancerHealthCheck">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancing?tab=doc#GetLoadBalancerHealthCheck">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancing.Outputs.GetLoadBalancerHealthCheck.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1407,16 +1387,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getloadbalancerlistener">Get<wbr>Load<wbr>Balancer<wbr>Listener</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLoadBalancerListener">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/elasticloadbalancing?tab=doc#GetLoadBalancerListener">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancing.Outputs.GetLoadBalancerListener.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

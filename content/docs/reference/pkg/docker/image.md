@@ -1,8 +1,8 @@
 
 ---
 title: "Image"
-title_tag: "Resource Image | Package Docker"
-meta_desc: "Explore the Image resource of the Docker package, including examples, input properties, output properties, lookup functions, and supporting types. A docker.Image resource represents a Docker image built locally which is published and made available via a remote Docker registry. This can be used to ensure that a Docker source directory from a local deployment environment is built and pushed to a cloud-hosted Docker registry as part of a Pulumi deployment, so that it can be referenced as an image input from other cloud services that reference Docker images - including Kubernetes Pods, AWS ECS Tasks, and Azure Container Instances."
+title_tag: "docker.Image"
+meta_desc: "Documentation for the docker.Image resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -186,19 +186,19 @@ const myImage = new docker.Image(customImage, {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#Image">Image</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#ImageArgs">ImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Image</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#pulumi_docker.Image">Image</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx"></span><span class="p">, </span><span class="nx">build</span><span class="p">:</span> <span class="nx"></span><span class="p">, </span><span class="nx">local_image_name</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">, </span><span class="nx">registry</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">, </span><span class="nx">skip_push</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx"></span><span class="p">, </span><span class="nx">build</span><span class="p">:</span> <span class="nx"></span><span class="p">, </span><span class="nx">local_image_name</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">, </span><span class="nx">registry</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">, </span><span class="nx">skip_push</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"></span>=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#Image">NewImage</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ImageArgs">ImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#Image">Image</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Image</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Image.html">Image</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.ImageArgs.html">ImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Image</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -219,7 +219,7 @@ const myImage = new docker.Image(customImage, {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#ImageArgs">ImageArgs</a></span>
+        <span class="property-type"><a href="#inputs">ImageArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -288,7 +288,7 @@ const myImage = new docker.Image(customImage, {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ImageArgs">ImageArgs</a></span>
+        <span class="property-type"><a href="#inputs">ImageArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -327,7 +327,7 @@ const myImage = new docker.Image(customImage, {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.ImageArgs.html">ImageArgs</a></span>
+        <span class="property-type"><a href="#inputs">ImageArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -350,11 +350,11 @@ const myImage = new docker.Image(customImage, {
 
 ## Image Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Image resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Image resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -800,18 +800,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="cachefrom">Cache<wbr>From</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/input/#CacheFrom">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#CacheFromArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.CacheFromArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -874,18 +862,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="dockerbuild">Docker<wbr>Build</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/input/#DockerBuild">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#DockerBuildArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.DockerBuildArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1164,18 +1140,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="imageregistry">Image<wbr>Registry</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ImageRegistry">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ImageRegistryArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ImageRegistryArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

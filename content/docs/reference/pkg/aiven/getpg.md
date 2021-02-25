@@ -1,8 +1,8 @@
 
 ---
-title: "GetPg"
-title_tag: "Function GetPg | Package Aiven"
-meta_desc: "Explore the GetPg function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # PG Data Source"
+title: "getPg"
+title_tag: "aiven.getPg"
+meta_desc: "Documentation for the aiven.getPg function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -94,13 +94,13 @@ const pg = aiven.getPg({
 {{% /examples %}}
 
 
-## Using GetPg {#using}
+## Using getPg {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPg<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#GetPgArgs">GetPgArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#GetPgResult">GetPgResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPg<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPgArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPgResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -110,7 +110,7 @@ const pg = aiven.getPg({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPg<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupPgArgs">LookupPgArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupPgResult">LookupPgResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPg<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPgArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPgResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPg` in the Go SDK.
 
@@ -119,7 +119,7 @@ const pg = aiven.getPg({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPg </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.GetPgResult.html">GetPgResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.GetPgArgs.html">GetPgArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPgResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPgArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1019,7 +1019,7 @@ deletion is done.
 
 
 
-## GetPg Result {#result}
+## getPg Result {#result}
 
 The following output properties are available:
 
@@ -1936,16 +1936,6 @@ deletion is done.
 
 
 <h4 id="getpgcomponent">Get<wbr>Pg<wbr>Component</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetPgComponent">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetPgComponent">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgComponentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgComponent">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetPgComponentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetPgComponent.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2238,16 +2228,6 @@ deletion is done.
 {{% /choosable %}}
 
 <h4 id="getpgpg">Get<wbr>Pg<wbr>Pg</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetPgPg">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetPgPg">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgPgArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgPg">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetPgPgArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetPgPg.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2596,16 +2576,6 @@ deletion is done.
 {{% /choosable %}}
 
 <h4 id="getpgpguserconfig">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetPgPgUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetPgPgUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgPgUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgPgUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetPgPgUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetPgPgUserConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2725,8 +2695,7 @@ This has effect only when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpgpguserconfigpgbouncer">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2750,13 +2719,23 @@ service nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_csharp">
+<a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpgpguserconfigprivatelinkaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projecttoforkfrom_csharp">
 <a href="#projecttoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) Name of another project to fork a service from. This has
+    <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -2966,8 +2945,7 @@ This has effect only when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpgpguserconfigpgbouncer">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2991,13 +2969,23 @@ service nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_go">
+<a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpgpguserconfigprivatelinkaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projecttoforkfrom_go">
 <a href="#projecttoforkfrom_go" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) Name of another project to fork a service from. This has
+    <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -3207,8 +3195,7 @@ This has effect only when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpgpguserconfigpgbouncer">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3232,13 +3219,23 @@ service nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_nodejs">
+<a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpgpguserconfigprivatelinkaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projecttoforkfrom_nodejs">
 <a href="#projecttoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) Name of another project to fork a service from. This has
+    <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -3448,8 +3445,7 @@ This has effect only when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getpgpguserconfigpgbouncer">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3473,13 +3469,23 @@ service nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelink_access_python">
+<a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpgpguserconfigprivatelinkaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="project_to_fork_from_python">
 <a href="#project_to_fork_from_python" style="color: inherit; text-decoration: inherit;">project_<wbr>to_<wbr>fork_<wbr>from</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Optional) Name of another project to fork a service from. This has
+    <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -3574,16 +3580,6 @@ total RAM (up to 32MB).
 {{% /choosable %}}
 
 <h4 id="getpgpguserconfigmigration">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Migration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetPgPgUserConfigMigration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetPgPgUserConfigMigration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgPgUserConfigMigrationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgPgUserConfigMigration">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetPgPgUserConfigMigrationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetPgPgUserConfigMigration.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3852,16 +3848,6 @@ total RAM (up to 32MB).
 {{% /choosable %}}
 
 <h4 id="getpgpguserconfigpg">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pg</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetPgPgUserConfigPg">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetPgPgUserConfigPg">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgPgUserConfigPgArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgPgUserConfigPg">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetPgPgUserConfigPgArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetPgPgUserConfigPg.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5538,16 +5524,6 @@ to lower than the default 200ms may negatively impact performance
 {{% /choosable %}}
 
 <h4 id="getpgpguserconfigpgbouncer">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pgbouncer</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetPgPgUserConfigPgbouncer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetPgPgUserConfigPgbouncer">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgPgUserConfigPgbouncerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgPgUserConfigPgbouncer">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetPgPgUserConfigPgbouncerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetPgPgUserConfigPgbouncer.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5964,16 +5940,6 @@ longer than this.
 {{% /choosable %}}
 
 <h4 id="getpgpguserconfigpglookout">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Pglookout</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetPgPgUserConfigPglookout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetPgPgUserConfigPglookout">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgPgUserConfigPglookoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgPgUserConfigPglookout">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetPgPgUserConfigPglookoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetPgPgUserConfigPglookout.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -6046,16 +6012,6 @@ triggering database failover to standby
 {{% /choosable %}}
 
 <h4 id="getpgpguserconfigprivateaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Private<wbr>Access</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetPgPgUserConfigPrivateAccess">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetPgPgUserConfigPrivateAccess">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgPgUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgPgUserConfigPrivateAccess">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetPgPgUserConfigPrivateAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetPgPgUserConfigPrivateAccess.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -6080,8 +6036,7 @@ triggering database failover to standby
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6118,8 +6073,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6156,8 +6110,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6194,8 +6147,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6211,17 +6163,7 @@ service nodes that are in a project VPC or another type of private network
 </dl>
 {{% /choosable %}}
 
-<h4 id="getpgpguserconfigpublicaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetPgPgUserConfigPublicAccess">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetPgPgUserConfigPublicAccess">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgPgUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgPgUserConfigPublicAccess">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetPgPgUserConfigPublicAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetPgPgUserConfigPublicAccess.html">output</a> API doc for this type.
-{{% /choosable %}}
+<h4 id="getpgpguserconfigprivatelinkaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
 
 
 
@@ -6246,8 +6188,115 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pg_go">
+<a href="#pg_go" style="color: inherit; text-decoration: inherit;">Pg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL specific server provided values.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pgbouncer_go">
+<a href="#pgbouncer_go" style="color: inherit; text-decoration: inherit;">Pgbouncer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable pgbouncer.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pg_nodejs">
+<a href="#pg_nodejs" style="color: inherit; text-decoration: inherit;">pg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL specific server provided values.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pgbouncer_nodejs">
+<a href="#pgbouncer_nodejs" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable pgbouncer.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pg_python">
+<a href="#pg_python" style="color: inherit; text-decoration: inherit;">pg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL specific server provided values.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pgbouncer_python">
+<a href="#pgbouncer_python" style="color: inherit; text-decoration: inherit;">pgbouncer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Enable pgbouncer.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getpgpguserconfigpublicaccess">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Public<wbr>Access</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pg_csharp">
+<a href="#pg_csharp" style="color: inherit; text-decoration: inherit;">Pg</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}PostgreSQL specific server provided values.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pgbouncer_csharp">
+<a href="#pgbouncer_csharp" style="color: inherit; text-decoration: inherit;">Pgbouncer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6284,8 +6333,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6322,8 +6370,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6360,8 +6407,7 @@ service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Allow clients to connect to pgbouncer from the public internet for 
-service nodes that are in a project VPC or another type of private network
+    <dd>{{% md %}}Enable pgbouncer.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6378,16 +6424,6 @@ service nodes that are in a project VPC or another type of private network
 {{% /choosable %}}
 
 <h4 id="getpgpguserconfigtimescaledb">Get<wbr>Pg<wbr>Pg<wbr>User<wbr>Config<wbr>Timescaledb</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetPgPgUserConfigTimescaledb">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetPgPgUserConfigTimescaledb">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgPgUserConfigTimescaledbArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgPgUserConfigTimescaledb">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetPgPgUserConfigTimescaledbArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetPgPgUserConfigTimescaledb.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -6464,16 +6500,6 @@ total number of concurrent background workers you want running at any given poin
 {{% /choosable %}}
 
 <h4 id="getpgserviceintegration">Get<wbr>Pg<wbr>Service<wbr>Integration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetPgServiceIntegration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetPgServiceIntegration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgServiceIntegrationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetPgServiceIntegration">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetPgServiceIntegrationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetPgServiceIntegration.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

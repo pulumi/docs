@@ -1,8 +1,8 @@
 
 ---
-title: "GetEndpoints"
-title_tag: "Function GetEndpoints | Module polardb | Package AliCloud"
-meta_desc: "Explore the GetEndpoints function of the polardb module, including examples, input properties, output properties, and supporting types. The `alicloud.polardb.getEndpoints` data source provides a collection of PolarDB endpoints available in Alibaba Cloud account."
+title: "getEndpoints"
+title_tag: "alicloud.polardb.getEndpoints"
+meta_desc: "Documentation for the alicloud.polardb.getEndpoints function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -117,13 +117,13 @@ export const endpoint = _default.then(_default => _default.endpoints[0].dbEndpoi
 {{% /examples %}}
 
 
-## Using GetEndpoints {#using}
+## Using getEndpoints {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEndpoints<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/polardb/#GetEndpointsArgs">GetEndpointsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/polardb/#GetEndpointsResult">GetEndpointsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEndpoints<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEndpointsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetEndpointsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -133,14 +133,16 @@ export const endpoint = _default.then(_default => _default.endpoints[0].dbEndpoi
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEndpoints<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb?tab=doc#GetEndpointsArgs">GetEndpointsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb?tab=doc#GetEndpointsResult">GetEndpointsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEndpoints<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetEndpointsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetEndpointsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetEndpoints` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetEndpoints </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Polardb.GetEndpointsResult.html">GetEndpointsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.PolarDB.GetEndpointsArgs.html">GetEndpointsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetEndpointsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetEndpointsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -256,7 +258,7 @@ The following arguments are supported:
 
 
 
-## GetEndpoints Result {#result}
+## getEndpoints Result {#result}
 
 The following output properties are available:
 
@@ -449,16 +451,6 @@ The following output properties are available:
 
 
 <h4 id="getendpointsendpoint">Get<wbr>Endpoints<wbr>Endpoint</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetEndpointsEndpoint">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb?tab=doc#GetEndpointsEndpoint">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.PolarDB.Outputs.GetEndpointsEndpoint.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -767,16 +759,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getendpointsendpointaddressitem">Get<wbr>Endpoints<wbr>Endpoint<wbr>Address<wbr>Item</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetEndpointsEndpointAddressItem">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb?tab=doc#GetEndpointsEndpointAddressItem">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.PolarDB.Outputs.GetEndpointsEndpointAddressItem.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

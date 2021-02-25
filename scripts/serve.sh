@@ -46,9 +46,6 @@ yarn run tsc --outFile "${JS_BUNDLE}"
 cp ${JS_BUNDLE} public/js/
 yarn run --silent node-sass assets/sass/styles.scss | yarn run --silent postcss --config assets/config --output ${CSS_BUNDLE}
 
-printf "Copying prebuilt docs...\n\n"
-make copy_static_prebuilt
-
 printf "Building web components...\n\n"
 make build_components
 

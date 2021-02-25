@@ -23,24 +23,6 @@ Explore the resources and functions of the Entitlement module in the Azure DevOp
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).</dd>
 	<dt>Version</dt>
-	<dd>1.1.1</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureDevOps/Pulumi.AzureDevOps.Entitlement.html" title="Pulumi.AzureDevOps.Entitlement">Pulumi.AzureDevOps.Entitlement</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/entitlement?tab=doc#" title="azuredevops/entitlement">azuredevops/entitlement</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azuredevops/Entitlement/#" title="@pulumi/azuredevops/entitlement">@pulumi/azuredevops/entitlement</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azuredevops/entitlement" title="pulumi_azuredevops/entitlement">pulumi_azuredevops/entitlement</a></dd>
-
+	<dd>1.2.1</dd>
 </dl>
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetApp"
-title_tag: "Function GetApp | Module app | Package Okta"
-meta_desc: "Explore the GetApp function of the app module, including examples, input properties, output properties, and supporting types. Use this data source to retrieve the collaborators for a given repository."
+title: "getApp"
+title_tag: "okta.app.getApp"
+meta_desc: "Documentation for the okta.app.getApp function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,13 +89,13 @@ const example = pulumi.output(okta.app.getApp({
 {{% /examples %}}
 
 
-## Using GetApp {#using}
+## Using getApp {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApp<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/app/#GetAppArgs">GetAppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/app/#GetAppResult">GetAppResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApp<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAppArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAppResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -105,14 +105,16 @@ const example = pulumi.output(okta.app.getApp({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApp<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#GetAppArgs">GetAppArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#GetAppResult">GetAppResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApp<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAppArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAppResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetApp` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetApp </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.App.GetAppResult.html">GetAppResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.App.GetAppArgs.html">GetAppArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAppResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAppArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -308,7 +310,7 @@ The following arguments are supported:
 
 
 
-## GetApp Result {#result}
+## getApp Result {#result}
 
 The following output properties are available:
 
@@ -317,16 +319,6 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span id="description_csharp">
-<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}`description` of application.
-{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_csharp">
@@ -393,16 +385,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="description_go">
-<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}`description` of application.
-{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -467,16 +449,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="description_nodejs">
-<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}`description` of application.
-{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -539,16 +511,6 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span id="description_python">
-<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}`description` of application.
-{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_python">

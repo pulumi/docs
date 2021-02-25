@@ -1,8 +1,8 @@
 
 ---
-title: "GetTemplates"
-title_tag: "Function GetTemplates | Module oos | Package AliCloud"
-meta_desc: "Explore the GetTemplates function of the oos module, including examples, input properties, output properties, and supporting types. This data source provides a list of OOS Templates in an Alibaba Cloud account according to the specified filters."
+title: "getTemplates"
+title_tag: "alicloud.oos.getTemplates"
+meta_desc: "Documentation for the alicloud.oos.getTemplates function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -125,13 +125,13 @@ export const firstTemplateName = example.templates[0].templateName;
 {{% /examples %}}
 
 
-## Using GetTemplates {#using}
+## Using getTemplates {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTemplates<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/oos/#GetTemplatesArgs">GetTemplatesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/oos/#GetTemplatesResult">GetTemplatesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTemplates<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetTemplatesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetTemplatesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -141,14 +141,16 @@ export const firstTemplateName = example.templates[0].templateName;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTemplates<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oos?tab=doc#GetTemplatesArgs">GetTemplatesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oos?tab=doc#GetTemplatesResult">GetTemplatesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTemplates<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetTemplatesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetTemplatesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetTemplates` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetTemplates </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Oos.GetTemplatesResult.html">GetTemplatesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Oos.GetTemplatesArgs.html">GetTemplatesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetTemplatesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetTemplatesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -740,7 +742,7 @@ The following arguments are supported:
 
 
 
-## GetTemplates Result {#result}
+## getTemplates Result {#result}
 
 The following output properties are available:
 
@@ -768,6 +770,16 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of OOS Template ids. Each element in the list is same as template_name.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="names_csharp">
+<a href="#names_csharp" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}(Available in v1.114.0+) A list of OOS Template names.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -924,6 +936,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="names_go">
+<a href="#names_go" style="color: inherit; text-decoration: inherit;">Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}(Available in v1.114.0+) A list of OOS Template names.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="templates_go">
 <a href="#templates_go" style="color: inherit; text-decoration: inherit;">Templates</a>
 </span>
@@ -1074,6 +1096,16 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of OOS Template ids. Each element in the list is same as template_name.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="names_nodejs">
+<a href="#names_nodejs" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}(Available in v1.114.0+) A list of OOS Template names.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1230,6 +1262,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="names_python">
+<a href="#names_python" style="color: inherit; text-decoration: inherit;">names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}(Available in v1.114.0+) A list of OOS Template names.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="templates_python">
 <a href="#templates_python" style="color: inherit; text-decoration: inherit;">templates</a>
 </span>
@@ -1365,16 +1407,6 @@ The following output properties are available:
 
 
 <h4 id="gettemplatestemplate">Get<wbr>Templates<wbr>Template</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetTemplatesTemplate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oos?tab=doc#GetTemplatesTemplate">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Oos.Outputs.GetTemplatesTemplate.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

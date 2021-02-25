@@ -1,8 +1,8 @@
 
 ---
 title: "Schema"
-title_tag: "Resource Schema | Package PostgreSQL"
-meta_desc: "Explore the Schema resource of the PostgreSQL package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "postgresql.Schema"
+meta_desc: "Documentation for the postgresql.Schema resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -18,19 +18,19 @@ meta_desc: "Explore the Schema resource of the PostgreSQL package, including exa
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#Schema">Schema</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#SchemaArgs">SchemaArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Schema</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">SchemaArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_postgresql/#pulumi_postgresql.Schema">Schema</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">drop_cascade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">if_not_exists</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[SchemaPolicyArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Schema</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">database</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">drop_cascade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">if_not_exists</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[SchemaPolicyArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#Schema">NewSchema</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#SchemaArgs">SchemaArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#Schema">Schema</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSchema</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">SchemaArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Schema</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.PostgreSql/Pulumi.PostgreSql.Schema.html">Schema</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.PostgreSql/Pulumi.PostgreSql.SchemaArgs.html">SchemaArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Schema</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SchemaArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -51,7 +51,7 @@ meta_desc: "Explore the Schema resource of the PostgreSQL package, including exa
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#SchemaArgs">SchemaArgs</a></span>
+        <span class="property-type"><a href="#inputs">SchemaArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -120,7 +120,7 @@ meta_desc: "Explore the Schema resource of the PostgreSQL package, including exa
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#SchemaArgs">SchemaArgs</a></span>
+        <span class="property-type"><a href="#inputs">SchemaArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -159,7 +159,7 @@ meta_desc: "Explore the Schema resource of the PostgreSQL package, including exa
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.PostgreSql/Pulumi.PostgreSql.SchemaArgs.html">SchemaArgs</a></span>
+        <span class="property-type"><a href="#inputs">SchemaArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -182,11 +182,11 @@ meta_desc: "Explore the Schema resource of the PostgreSQL package, including exa
 
 ## Schema Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Schema resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Schema resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -244,8 +244,8 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="policies_csharp">
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
@@ -254,7 +254,7 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -312,8 +312,8 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="policies_go">
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
@@ -322,7 +322,7 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -380,8 +380,8 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="policies_nodejs">
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
@@ -390,7 +390,7 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -448,8 +448,8 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="policies_python">
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
@@ -458,7 +458,7 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -537,7 +537,7 @@ Get an existing Schema resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#SchemaState">SchemaState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#Schema">Schema</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">SchemaState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Schema</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -546,11 +546,11 @@ Get an existing Schema resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSchema<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#SchemaState">SchemaState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#Schema">Schema</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSchema<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">SchemaState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Schema</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.PostgreSql/Pulumi.PostgreSql.Schema.html">Schema</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.PostgreSql/Pulumi.PostgreSql..SchemaState.html">SchemaState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Schema</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">SchemaState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -706,8 +706,8 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_policies_csharp">
 <a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
@@ -716,7 +716,7 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -774,8 +774,8 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_policies_go">
 <a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
 </span>
@@ -784,7 +784,7 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -842,8 +842,8 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_policies_nodejs">
 <a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
@@ -852,7 +852,7 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -910,8 +910,8 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_policies_python">
 <a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
 </span>
@@ -920,7 +920,7 @@ database instance where it is configured.
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use postgresql_grant resource instead (with object_type=&#34;schema&#34;){{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -934,18 +934,6 @@ policy block supports fields documented below.
 
 
 <h4 id="schemapolicy">Schema<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/postgresql/types/input/#SchemaPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/postgresql/types/output/#SchemaPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#SchemaPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#SchemaPolicyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.PostgreSql/Pulumi.PostgreSql.Inputs.SchemaPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.PostgreSql/Pulumi.PostgreSql.Outputs.SchemaPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

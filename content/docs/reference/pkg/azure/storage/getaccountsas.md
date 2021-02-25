@@ -1,8 +1,8 @@
 
 ---
-title: "GetAccountSAS"
-title_tag: "Function GetAccountSAS | Module storage | Package Azure"
-meta_desc: "Explore the GetAccountSAS function of the storage module, including examples, input properties, output properties, and supporting types. Use this data source to obtain a Shared Access Signature (SAS Token) for an existing Storage Account."
+title: "getAccountSAS"
+title_tag: "azure.storage.getAccountSAS"
+meta_desc: "Documentation for the azure.storage.getAccountSAS function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -226,13 +226,13 @@ export const sasUrlQueryString = exampleAccountSAS.sas;
 {{% /examples %}}
 
 
-## Using GetAccountSAS {#using}
+## Using getAccountSAS {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAccountSAS<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#GetAccountSASArgs">GetAccountSASArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#GetAccountSASResult">GetAccountSASResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAccountSAS<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAccountSASArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAccountSASResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -242,14 +242,16 @@ export const sasUrlQueryString = exampleAccountSAS.sas;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccountSAS<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#GetAccountSASArgs">GetAccountSASArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#GetAccountSASResult">GetAccountSASResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccountSAS<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAccountSASArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAccountSASResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAccountSAS` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAccountSAS </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.GetAccountSASResult.html">GetAccountSASResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.GetAccountSASArgs.html">GetAccountSASArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAccountSASResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAccountSASArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -605,7 +607,7 @@ The following arguments are supported:
 
 
 
-## GetAccountSAS Result {#result}
+## getAccountSAS Result {#result}
 
 The following output properties are available:
 
@@ -1010,16 +1012,6 @@ The following output properties are available:
 
 
 <h4 id="getaccountsaspermissions">Get<wbr>Account<wbr>SASPermissions</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetAccountSASPermissions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountSASPermissions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#GetAccountSASPermissionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#GetAccountSASPermissions">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.Inputs.GetAccountSASPermissionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.Outputs.GetAccountSASPermissions.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1368,16 +1360,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getaccountsasresourcetypes">Get<wbr>Account<wbr>SASResource<wbr>Types</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetAccountSASResourceTypes">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountSASResourceTypes">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#GetAccountSASResourceTypesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#GetAccountSASResourceTypes">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.Inputs.GetAccountSASResourceTypesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.Outputs.GetAccountSASResourceTypes.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1526,16 +1508,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getaccountsasservices">Get<wbr>Account<wbr>SASServices</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetAccountSASServices">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountSASServices">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#GetAccountSASServicesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#GetAccountSASServices">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.Inputs.GetAccountSASServicesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.Outputs.GetAccountSASServices.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetWorkspace"
-title_tag: "Function GetWorkspace | Module machinelearning | Package Azure NextGen"
-meta_desc: "Explore the GetWorkspace function of the machinelearning module, including examples, input properties, output properties, and supporting types. "
+title: "getWorkspace"
+title_tag: "azure-nextgen.machinelearning.getWorkspace"
+meta_desc: "Documentation for the azure-nextgen.machinelearning.getWorkspace function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetWorkspace function of the machinelearning module, inc
 
 
 
-## Using GetWorkspace {#using}
+## Using getWorkspace {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWorkspace<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetWorkspaceResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWorkspace<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetWorkspaceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetWorkspace function of the machinelearning module, inc
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWorkspace<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupWorkspaceResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWorkspace<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWorkspaceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupWorkspaceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupWorkspace` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetWorkspace function of the machinelearning module, inc
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetWorkspace </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetWorkspaceResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetWorkspaceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetWorkspaceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetWorkspaceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetWorkspace Result {#result}
+## getWorkspace Result {#result}
 
 The following output properties are available:
 
@@ -263,15 +263,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key vault identifier used for encrypted workspaces.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="sku_csharp">
-<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_csharp">
@@ -397,15 +388,6 @@ The following output properties are available:
     <dd>{{% md %}}The key vault identifier used for encrypted workspaces.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="sku_go">
-<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -527,15 +509,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key vault identifier used for encrypted workspaces.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="sku_nodejs">
-<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
@@ -661,15 +634,6 @@ The following output properties are available:
     <dd>{{% md %}}The key vault identifier used for encrypted workspaces.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="sku_python">
-<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -677,115 +641,6 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-
-
-
-## Supporting Types
-
-
-<h4 id="skuresponse">Sku<wbr>Response</h4>
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_csharp">
-<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_go">
-<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_nodejs">
-<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_python">
-<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

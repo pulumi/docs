@@ -1,8 +1,8 @@
 
 ---
-title: "GetNotification"
-title_tag: "Function GetNotification | Package CloudAMQP"
-meta_desc: "Explore the GetNotification function of the CloudAMQP package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about default or created recipients. The recipient will receive notifications assigned to an alarm that has triggered. To retrieve the recipient either use `recipient_id` or `name`."
+title: "getNotification"
+title_tag: "cloudamqp.getNotification"
+meta_desc: "Documentation for the cloudamqp.getNotification function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -107,13 +107,13 @@ const defaultRecipient = cloudamqp.getNotification({
 {{% /examples %}}
 
 
-## Using GetNotification {#using}
+## Using getNotification {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getNotification<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudamqp/#GetNotificationArgs">GetNotificationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudamqp/#GetNotificationResult">GetNotificationResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getNotification<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetNotificationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetNotificationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -123,7 +123,7 @@ const defaultRecipient = cloudamqp.getNotification({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNotification<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/v2/go/cloudamqp/?tab=doc#LookupNotificationArgs">LookupNotificationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/v2/go/cloudamqp/?tab=doc#LookupNotificationResult">LookupNotificationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNotification<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupNotificationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupNotificationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupNotification` in the Go SDK.
 
@@ -132,7 +132,7 @@ const defaultRecipient = cloudamqp.getNotification({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetNotification </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.CloudAmqp/Pulumi.CloudAmqp.GetNotificationResult.html">GetNotificationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.CloudAmqp/Pulumi.CloudAmqp.GetNotificationArgs.html">GetNotificationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetNotificationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetNotificationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -276,7 +276,7 @@ The following arguments are supported:
 
 
 
-## GetNotification Result {#result}
+## getNotification Result {#result}
 
 The following output properties are available:
 

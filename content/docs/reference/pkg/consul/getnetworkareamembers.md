@@ -1,8 +1,8 @@
 
 ---
-title: "GetNetworkAreaMembers"
-title_tag: "Function GetNetworkAreaMembers | Package Consul"
-meta_desc: "Explore the GetNetworkAreaMembers function of the Consul package, including examples, input properties, output properties, and supporting types. &gt; **NOTE:** This feature requires [Consul Enterprise](https://www.consul.io/docs/enterprise/index.html)."
+title: "getNetworkAreaMembers"
+title_tag: "consul.getNetworkAreaMembers"
+meta_desc: "Documentation for the consul.getNetworkAreaMembers function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -94,13 +94,13 @@ export const members = dc2NetworkAreaMembers.members;
 {{% /examples %}}
 
 
-## Using GetNetworkAreaMembers {#using}
+## Using getNetworkAreaMembers {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getNetworkAreaMembers<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#GetNetworkAreaMembersArgs">GetNetworkAreaMembersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#GetNetworkAreaMembersResult">GetNetworkAreaMembersResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getNetworkAreaMembers<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetNetworkAreaMembersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetNetworkAreaMembersResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -110,14 +110,16 @@ export const members = dc2NetworkAreaMembers.members;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkAreaMembers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#GetNetworkAreaMembersArgs">GetNetworkAreaMembersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#GetNetworkAreaMembersResult">GetNetworkAreaMembersResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNetworkAreaMembers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetNetworkAreaMembersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetNetworkAreaMembersResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetNetworkAreaMembers` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetNetworkAreaMembers </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.GetNetworkAreaMembersResult.html">GetNetworkAreaMembersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.GetNetworkAreaMembersArgs.html">GetNetworkAreaMembersArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetNetworkAreaMembersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetNetworkAreaMembersArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -281,7 +283,7 @@ token that the agent provides by default.
 
 
 
-## GetNetworkAreaMembers Result {#result}
+## getNetworkAreaMembers Result {#result}
 
 The following output properties are available:
 
@@ -514,16 +516,6 @@ The following output properties are available:
 
 
 <h4 id="getnetworkareamembersmember">Get<wbr>Network<wbr>Area<wbr>Members<wbr>Member</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetNetworkAreaMembersMember">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#GetNetworkAreaMembersMember">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Outputs.GetNetworkAreaMembersMember.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

@@ -1873,7 +1873,7 @@ Also note the base and versioned image URLs are exported as stack outputs. These
 
 1. As we see here, the CLI will print them after each deployment.
 2. The CLI can fetch them on-demand, e.g., 'pulumi stack output fullImageName', making it easy to script access to these container images.
-3. The [Pulumi `StackReference` component]({{< relref "/docs/intro/concepts/organizing-stacks-projects#inter-stack-dependencies" >}}) can be used to depend on this stack from another, allowing us to build higher levels of infrastructure that consume these images.
+3. The [Pulumi `StackReference` component]({{< relref "/docs/intro/concepts/stack#stackreferences" >}}) can be used to depend on this stack from another, allowing us to build higher levels of infrastructure that consume these images.
 
 As an example of (2) in action, let's run the image locally using the exported image name:
 

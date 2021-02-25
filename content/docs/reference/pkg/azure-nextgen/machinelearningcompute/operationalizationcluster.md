@@ -205,7 +205,7 @@ const operationalizationCluster = new azure_nextgen.machinelearningcompute.v2017
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OperationalizationCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">OperationalizationClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OperationalizationCluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OperationalizationClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -213,11 +213,11 @@ const operationalizationCluster = new azure_nextgen.machinelearningcompute.v2017
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOperationalizationCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">OperationalizationClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OperationalizationCluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOperationalizationCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OperationalizationClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OperationalizationCluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OperationalizationCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">OperationalizationClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OperationalizationCluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OperationalizationClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -238,7 +238,7 @@ const operationalizationCluster = new azure_nextgen.machinelearningcompute.v2017
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OperationalizationClusterArgs</span>
+        <span class="property-type"><a href="#inputs">OperationalizationClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -307,7 +307,7 @@ const operationalizationCluster = new azure_nextgen.machinelearningcompute.v2017
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OperationalizationClusterArgs</span>
+        <span class="property-type"><a href="#inputs">OperationalizationClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -346,7 +346,7 @@ const operationalizationCluster = new azure_nextgen.machinelearningcompute.v2017
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OperationalizationClusterArgs</span>
+        <span class="property-type"><a href="#inputs">OperationalizationClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -369,11 +369,11 @@ const operationalizationCluster = new azure_nextgen.machinelearningcompute.v2017
 
 ## OperationalizationCluster Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The OperationalizationCluster resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The OperationalizationCluster resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -398,15 +398,6 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
         <span class="property-type">string | <a href="#clustertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Compute.<wbr>Cluster<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The cluster type.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -463,6 +454,15 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
     <dd>{{% md %}}Contains global configuration for the web services in the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="storageaccount_csharp">
 <a href="#storageaccount_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
 </span>
@@ -503,15 +503,6 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
         <span class="property-type">string | <a href="#clustertype">Cluster<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The cluster type.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -568,6 +559,15 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
     <dd>{{% md %}}Contains global configuration for the web services in the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="storageaccount_go">
 <a href="#storageaccount_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
 </span>
@@ -608,15 +608,6 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
         <span class="property-type">string | <a href="#clustertype">Cluster<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The cluster type.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -673,6 +664,15 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
     <dd>{{% md %}}Contains global configuration for the web services in the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="storageaccount_nodejs">
 <a href="#storageaccount_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account</a>
 </span>
@@ -713,15 +713,6 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
         <span class="property-type">str | <a href="#clustertype">Cluster<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The cluster type.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -776,6 +767,15 @@ The OperationalizationCluster resource accepts the following [input]({{< relref 
         <span class="property-type"><a href="#globalserviceconfiguration">Global<wbr>Service<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Contains global configuration for the web services in the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="storage_account_python">

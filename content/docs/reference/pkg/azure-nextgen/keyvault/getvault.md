@@ -1,8 +1,8 @@
 
 ---
-title: "GetVault"
-title_tag: "Function GetVault | Module keyvault | Package Azure NextGen"
-meta_desc: "Explore the GetVault function of the keyvault module, including examples, input properties, output properties, and supporting types. "
+title: "getVault"
+title_tag: "azure-nextgen.keyvault.getVault"
+meta_desc: "Documentation for the azure-nextgen.keyvault.getVault function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetVault function of the keyvault module, including exam
 
 
 
-## Using GetVault {#using}
+## Using getVault {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVault<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVaultArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetVaultResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVault<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVaultArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVaultResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetVault function of the keyvault module, including exam
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVault<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVaultArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupVaultResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVault<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVaultArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVaultResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVault` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetVault function of the keyvault module, including exam
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVault </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetVaultResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetVaultArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetVaultResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVaultArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetVault Result {#result}
+## getVault Result {#result}
 
 The following output properties are available:
 
@@ -402,9 +402,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -577,9 +574,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -641,9 +635,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="networkrulesetresponse">Network<wbr>Rule<wbr>Set<wbr>Response</h4>
-
-
-
 
 
 
@@ -819,9 +810,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -994,9 +982,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1009,6 +994,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_csharp">
@@ -1044,6 +1038,15 @@ The following output properties are available:
     <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="privateendpoint_go">
 <a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
@@ -1075,6 +1078,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_nodejs">
@@ -1110,6 +1122,15 @@ The following output properties are available:
     <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="private_endpoint_python">
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
 </span>
@@ -1130,9 +1151,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="privateendpointresponse">Private<wbr>Endpoint<wbr>Response</h4>
-
-
-
 
 
 
@@ -1197,9 +1215,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</h4>
-
-
-
 
 
 
@@ -1339,9 +1354,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1439,9 +1451,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="vaultpropertiesresponse">Vault<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -2013,9 +2022,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2028,6 +2034,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoremissingvnetserviceendpoint_csharp">
+<a href="#ignoremissingvnetserviceendpoint_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2043,6 +2058,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoremissingvnetserviceendpoint_go">
+<a href="#ignoremissingvnetserviceendpoint_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2058,6 +2082,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoremissingvnetserviceendpoint_nodejs">
+<a href="#ignoremissingvnetserviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2073,6 +2106,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignore_missing_vnet_service_endpoint_python">
+<a href="#ignore_missing_vnet_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>vnet_<wbr>service_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetReplicationPolicy"
-title_tag: "Function GetReplicationPolicy | Module recoveryservices | Package Azure NextGen"
-meta_desc: "Explore the GetReplicationPolicy function of the recoveryservices module, including examples, input properties, output properties, and supporting types. "
+title: "getReplicationPolicy"
+title_tag: "azure-nextgen.recoveryservices.getReplicationPolicy"
+meta_desc: "Documentation for the azure-nextgen.recoveryservices.getReplicationPolicy function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetReplicationPolicy function of the recoveryservices mo
 
 
 
-## Using GetReplicationPolicy {#using}
+## Using getReplicationPolicy {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getReplicationPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetReplicationPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetReplicationPolicyResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getReplicationPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetReplicationPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetReplicationPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetReplicationPolicy function of the recoveryservices mo
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupReplicationPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupReplicationPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupReplicationPolicyResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupReplicationPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupReplicationPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupReplicationPolicyResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupReplicationPolicy` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetReplicationPolicy function of the recoveryservices mo
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetReplicationPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetReplicationPolicyResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetReplicationPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetReplicationPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetReplicationPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetReplicationPolicy Result {#result}
+## getReplicationPolicy Result {#result}
 
 The following output properties are available:
 
@@ -402,9 +402,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -610,9 +607,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="hypervreplicaazurepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Azure<wbr>Policy<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -857,9 +851,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="hypervreplicabasepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Base<wbr>Policy<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -1248,9 +1239,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="hypervreplicabluepolicydetailsresponse">Hyper<wbr>VReplica<wbr>Blue<wbr>Policy<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -1678,9 +1666,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2069,9 +2054,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2280,9 +2262,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2452,9 +2431,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="inmagepolicydetailsresponse">In<wbr>Mage<wbr>Policy<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -2630,9 +2606,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2805,9 +2778,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2905,9 +2875,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="rcmazuremigrationpolicydetailsresponse">Rcm<wbr>Azure<wbr>Migration<wbr>Policy<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -3116,9 +3083,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="vmwarecbtpolicydetailsresponse">Vmware<wbr>Cbt<wbr>Policy<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 

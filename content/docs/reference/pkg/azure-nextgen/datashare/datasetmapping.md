@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.datashare.DataSetMapping resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A data set mapping data transfer object.
-Latest API Version: 2019-11-01.
+Latest API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -381,6 +381,97 @@ const dataSetMapping = new azure_nextgen.datashare.latest.DataSetMapping("dataSe
 
 {{% /example %}}
 
+### DataSetMappings_SynapseWorkspaceSqlPoolTable_Create
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataSetMapping = new AzureNextGen.DataShare.Latest.DataSetMapping("dataSetMapping", new AzureNextGen.DataShare.Latest.DataSetMappingArgs
+        {
+            AccountName = "consumerAccount",
+            DataSetMappingName = "datasetMappingName1",
+            Kind = "SynapseWorkspaceSqlPoolTable",
+            ResourceGroupName = "SampleResourceGroup",
+            ShareSubscriptionName = "ShareSubscription1",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	datashare "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/datashare/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := datashare.NewDataSetMapping(ctx, "dataSetMapping", &datashare.DataSetMappingArgs{
+			AccountName:           pulumi.String("consumerAccount"),
+			DataSetMappingName:    pulumi.String("datasetMappingName1"),
+			Kind:                  pulumi.String("SynapseWorkspaceSqlPoolTable"),
+			ResourceGroupName:     pulumi.String("SampleResourceGroup"),
+			ShareSubscriptionName: pulumi.String("ShareSubscription1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+data_set_mapping = azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping",
+    account_name="consumerAccount",
+    data_set_mapping_name="datasetMappingName1",
+    kind="SynapseWorkspaceSqlPoolTable",
+    resource_group_name="SampleResourceGroup",
+    share_subscription_name="ShareSubscription1")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const dataSetMapping = new azure_nextgen.datashare.latest.DataSetMapping("dataSetMapping", {
+    accountName: "consumerAccount",
+    dataSetMappingName: "datasetMappingName1",
+    kind: "SynapseWorkspaceSqlPoolTable",
+    resourceGroupName: "SampleResourceGroup",
+    shareSubscriptionName: "ShareSubscription1",
+});
+
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -389,7 +480,7 @@ const dataSetMapping = new azure_nextgen.datashare.latest.DataSetMapping("dataSe
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataSetMapping</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DataSetMappingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataSetMapping</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DataSetMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -397,11 +488,11 @@ const dataSetMapping = new azure_nextgen.datashare.latest.DataSetMapping("dataSe
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataSetMapping</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DataSetMappingArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataSetMapping</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataSetMapping</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DataSetMappingArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataSetMapping</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataSetMapping</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DataSetMappingArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataSetMapping</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DataSetMappingArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -422,7 +513,7 @@ const dataSetMapping = new azure_nextgen.datashare.latest.DataSetMapping("dataSe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DataSetMappingArgs</span>
+        <span class="property-type"><a href="#inputs">DataSetMappingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -491,7 +582,7 @@ const dataSetMapping = new azure_nextgen.datashare.latest.DataSetMapping("dataSe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DataSetMappingArgs</span>
+        <span class="property-type"><a href="#inputs">DataSetMappingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -530,7 +621,7 @@ const dataSetMapping = new azure_nextgen.datashare.latest.DataSetMapping("dataSe
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DataSetMappingArgs</span>
+        <span class="property-type"><a href="#inputs">DataSetMappingArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -553,11 +644,11 @@ const dataSetMapping = new azure_nextgen.datashare.latest.DataSetMapping("dataSe
 
 ## DataSetMapping Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DataSetMapping resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DataSetMapping resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -795,6 +886,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Name of the azure resource{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="systemdata_csharp">
+<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#proxydtoresponsesystemdata">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Share.<wbr>Outputs.<wbr>Proxy<wbr>Dto<wbr>Response<wbr>System<wbr>Data</a></span>
+    </dt>
+    <dd>{{% md %}}System Data of the Azure resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -826,6 +926,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the azure resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="systemdata_go">
+<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#proxydtoresponsesystemdata">Proxy<wbr>Dto<wbr>Response<wbr>System<wbr>Data</a></span>
+    </dt>
+    <dd>{{% md %}}System Data of the Azure resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_go">
@@ -861,6 +970,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Name of the azure resource{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="systemdata_nodejs">
+<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#proxydtoresponsesystemdata">Proxy<wbr>Dto<wbr>Response<wbr>System<wbr>Data</a></span>
+    </dt>
+    <dd>{{% md %}}System Data of the Azure resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -892,6 +1010,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the azure resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="system_data_python">
+<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#proxydtoresponsesystemdata">Proxy<wbr>Dto<wbr>Response<wbr>System<wbr>Data</a></span>
+    </dt>
+    <dd>{{% md %}}System Data of the Azure resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_python">
@@ -943,13 +1070,255 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>ScheduleBased</dd>
 </dl>
 {{% /choosable %}}
+
+<h4 id="proxydtoresponsesystemdata">Proxy<wbr>Dto<wbr>Response<wbr>System<wbr>Data</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_csharp">
+<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_csharp">
+<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_csharp">
+<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_csharp">
+<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_csharp">
+<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_go">
+<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_go">
+<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_go">
+<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_go">
+<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_go">
+<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_nodejs">
+<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_nodejs">
+<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_nodejs">
+<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_nodejs">
+<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_nodejs">
+<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_by_python">
+<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_by_type_python">
+<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_at_python">
+<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_python">
+<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_type_python">
+<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 ## Import
 
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:datashare/latest:DataSetMapping DatasetMapping1 /subscriptions/433a8dfd-e5d5-4e77-ad86-90acdc75eb1a/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/Account1/shareSubscriptions/ShareSubscription1/dataSetMappings/DatasetMapping1 
+$ pulumi import azure-nextgen:datashare/latest:DataSetMapping datasetMappingName /subscriptions/4e745bb7-c420-479b-b0d6-a0f92d48a227/resourceGroups/SampleResourceGroup/providers/Microsoft.DataShare/accounts/consumerAccount/shareSubscriptions/ShareSubscription1/dataSetMappings/datasetMappingName1 
 ```
 
 

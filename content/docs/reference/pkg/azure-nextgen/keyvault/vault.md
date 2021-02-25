@@ -555,7 +555,7 @@ const vault = new azure_nextgen.keyvault.latest.Vault("vault", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VaultArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VaultArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -563,11 +563,11 @@ const vault = new azure_nextgen.keyvault.latest.Vault("vault", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVault</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VaultArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Vault</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVault</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VaultArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Vault</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VaultArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VaultArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -588,7 +588,7 @@ const vault = new azure_nextgen.keyvault.latest.Vault("vault", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VaultArgs</span>
+        <span class="property-type"><a href="#inputs">VaultArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -657,7 +657,7 @@ const vault = new azure_nextgen.keyvault.latest.Vault("vault", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VaultArgs</span>
+        <span class="property-type"><a href="#inputs">VaultArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -696,7 +696,7 @@ const vault = new azure_nextgen.keyvault.latest.Vault("vault", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VaultArgs</span>
+        <span class="property-type"><a href="#inputs">VaultArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -719,26 +719,17 @@ const vault = new azure_nextgen.keyvault.latest.Vault("vault", {
 
 ## Vault Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Vault resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Vault resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The supported Azure location where the key vault should be created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="properties_csharp">
@@ -768,6 +759,15 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Name of the vault{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The supported Azure location where the key vault should be created.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -781,15 +781,6 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The supported Azure location where the key vault should be created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="properties_go">
@@ -819,6 +810,15 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Name of the vault{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The supported Azure location where the key vault should be created.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -832,15 +832,6 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The supported Azure location where the key vault should be created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="properties_nodejs">
@@ -870,6 +861,15 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Name of the vault{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The supported Azure location where the key vault should be created.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -883,15 +883,6 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The supported Azure location where the key vault should be created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="properties_python">
@@ -919,6 +910,15 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the vault{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The supported Azure location where the key vault should be created.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -2670,6 +2670,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="privateendpoint_csharp">
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
 </span>
@@ -2701,6 +2710,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_go">
@@ -2736,6 +2754,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="privateendpoint_nodejs">
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
 </span>
@@ -2767,6 +2794,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provisioning state of the private endpoint connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Id of private endpoint connection.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_python">
@@ -4632,6 +4668,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoremissingvnetserviceendpoint_csharp">
+<a href="#ignoremissingvnetserviceendpoint_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4647,6 +4692,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoremissingvnetserviceendpoint_go">
+<a href="#ignoremissingvnetserviceendpoint_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4662,6 +4716,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoremissingvnetserviceendpoint_nodejs">
+<a href="#ignoremissingvnetserviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4677,6 +4740,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignore_missing_vnet_service_endpoint_python">
+<a href="#ignore_missing_vnet_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>vnet_<wbr>service_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4694,6 +4766,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoremissingvnetserviceendpoint_csharp">
+<a href="#ignoremissingvnetserviceendpoint_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4709,6 +4790,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoremissingvnetserviceendpoint_go">
+<a href="#ignoremissingvnetserviceendpoint_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4724,6 +4814,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoremissingvnetserviceendpoint_nodejs">
+<a href="#ignoremissingvnetserviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing<wbr>Vnet<wbr>Service<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4739,6 +4838,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignore_missing_vnet_service_endpoint_python">
+<a href="#ignore_missing_vnet_service_endpoint_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing_<wbr>vnet_<wbr>service_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 ## Import

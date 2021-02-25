@@ -1,8 +1,8 @@
 
 ---
-title: "GetAvailabilityZones"
-title_tag: "Function GetAvailabilityZones | Package AWS"
-meta_desc: "Explore the GetAvailabilityZones function of the AWS package, including examples, input properties, output properties, and supporting types. The Availability Zones data source allows access to the list of AWS"
+title: "getAvailabilityZones"
+title_tag: "aws.getAvailabilityZones"
+meta_desc: "Documentation for the aws.getAvailabilityZones function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -231,13 +231,13 @@ const example = pulumi.output(aws.getAvailabilityZones({
 {{% /examples %}}
 
 
-## Using GetAvailabilityZones {#using}
+## Using getAvailabilityZones {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAvailabilityZones<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/#GetAvailabilityZonesArgs">GetAvailabilityZonesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/#GetAvailabilityZonesResult">GetAvailabilityZonesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAvailabilityZones<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAvailabilityZonesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAvailabilityZonesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -247,14 +247,16 @@ const example = pulumi.output(aws.getAvailabilityZones({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAvailabilityZones<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAvailabilityZonesArgs">GetAvailabilityZonesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAvailabilityZonesResult">GetAvailabilityZonesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAvailabilityZones<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAvailabilityZonesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAvailabilityZonesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAvailabilityZones` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAvailabilityZones </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GetAvailabilityZonesResult.html">GetAvailabilityZonesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GetAvailabilityZonesArgs.html">GetAvailabilityZonesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAvailabilityZonesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAvailabilityZonesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -502,7 +504,7 @@ to which the underlying AWS account has access, regardless of their state.
 
 
 
-## GetAvailabilityZones Result {#result}
+## getAvailabilityZones Result {#result}
 
 The following output properties are available:
 
@@ -875,16 +877,6 @@ The following output properties are available:
 
 
 <h4 id="getavailabilityzonesfilter">Get<wbr>Availability<wbr>Zones<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetAvailabilityZonesFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAvailabilityZonesFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAvailabilityZonesFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAvailabilityZonesFilter">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Inputs.GetAvailabilityZonesFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Outputs.GetAvailabilityZonesFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

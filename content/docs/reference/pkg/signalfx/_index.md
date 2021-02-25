@@ -1,6 +1,6 @@
 ---
 title: "SignalFx"
-title_tag: "Package SignalFx"
+title_tag: "SignalFx Package"
 meta_desc: "A Pulumi package for creating and managing SignalFx resources."
 menu:
     reference:
@@ -59,24 +59,6 @@ A Pulumi package for creating and managing SignalFx resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/splunk-terraform/terraform-provider-signalfx).</dd>
 	<dt>Version</dt>
-	<dd>4.0.1</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.html" title="Pulumi.SignalFx">Pulumi.SignalFx</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#" title="signalfx">signalfx</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#" title="@pulumi/signalfx">@pulumi/signalfx</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_signalfx" title="pulumi_signalfx">pulumi_signalfx</a></dd>
-
+	<dd>4.4.1</dd>
 </dl>
 

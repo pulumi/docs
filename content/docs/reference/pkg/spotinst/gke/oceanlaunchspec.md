@@ -56,6 +56,7 @@ class MyStack : Stack
                 },
             },
             OceanId = "o-123456",
+            RestrictScaleDown = true,
             SourceImage = "image",
             Taints = 
             {
@@ -106,8 +107,9 @@ func main() {
 					Value: pulumi.String("update_disabled"),
 				},
 			},
-			OceanId:     pulumi.String("o-123456"),
-			SourceImage: pulumi.String("image"),
+			OceanId:           pulumi.String("o-123456"),
+			RestrictScaleDown: pulumi.Bool(true),
+			SourceImage:       pulumi.String("image"),
 			Taints: gke.OceanLaunchSpecTaintArray{
 				&gke.OceanLaunchSpecTaintArgs{
 					Effect: pulumi.String("taintEffect"),
@@ -147,6 +149,7 @@ example = spotinst.gke.OceanLaunchSpec("example",
         value="update_disabled",
     )],
     ocean_id="o-123456",
+    restrict_scale_down=True,
     source_image="image",
     taints=[spotinst.gke.OceanLaunchSpecTaintArgs(
         effect="taintEffect",
@@ -179,6 +182,7 @@ const example = new spotinst.gke.OceanLaunchSpec("example", {
         value: "update_disabled",
     }],
     oceanId: "o-123456",
+    restrictScaleDown: true,
     sourceImage: "image",
     taints: [{
         effect: "taintEffect",
@@ -198,19 +202,19 @@ const example = new spotinst.gke.OceanLaunchSpec("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gke/#OceanLaunchSpec">OceanLaunchSpec</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gke/#OceanLaunchSpecArgs">OceanLaunchSpecArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">OceanLaunchSpec</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OceanLaunchSpecArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_spotinst/gke/#pulumi_spotinst.gke.OceanLaunchSpec">OceanLaunchSpec</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscale_headrooms</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecAutoscaleHeadroomArgs]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecLabelArgs]]</span> = None<span class="p">, </span><span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecMetadataArgs]]</span> = None<span class="p">, </span><span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecTaintArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">OceanLaunchSpec</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscale_headrooms</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecAutoscaleHeadroomArgs]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecLabelArgs]]</span> = None<span class="p">, </span><span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecMetadataArgs]]</span> = None<span class="p">, </span><span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restrict_scale_down</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecTaintArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanLaunchSpec">NewOceanLaunchSpec</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanLaunchSpecArgs">OceanLaunchSpecArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanLaunchSpec">OceanLaunchSpec</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOceanLaunchSpec</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OceanLaunchSpecArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OceanLaunchSpec</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.OceanLaunchSpec.html">OceanLaunchSpec</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.OceanLaunchSpecArgs.html">OceanLaunchSpecArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">OceanLaunchSpec</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OceanLaunchSpecArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -231,7 +235,7 @@ const example = new spotinst.gke.OceanLaunchSpec("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gke/#OceanLaunchSpecArgs">OceanLaunchSpecArgs</a></span>
+        <span class="property-type"><a href="#inputs">OceanLaunchSpecArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -300,7 +304,7 @@ const example = new spotinst.gke.OceanLaunchSpec("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanLaunchSpecArgs">OceanLaunchSpecArgs</a></span>
+        <span class="property-type"><a href="#inputs">OceanLaunchSpecArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -339,7 +343,7 @@ const example = new spotinst.gke.OceanLaunchSpec("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.OceanLaunchSpecArgs.html">OceanLaunchSpecArgs</a></span>
+        <span class="property-type"><a href="#inputs">OceanLaunchSpecArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -362,11 +366,11 @@ const example = new spotinst.gke.OceanLaunchSpec("example", {
 
 ## OceanLaunchSpec Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -422,6 +426,16 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#oceanlaunchspeclabel">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Cluster's labels.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="restrictscaledown_csharp">
+<a href="#restrictscaledown_csharp" style="color: inherit; text-decoration: inherit;">Restrict<wbr>Scale<wbr>Down</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean. When set to “True”, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -491,6 +505,16 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="restrictscaledown_go">
+<a href="#restrictscaledown_go" style="color: inherit; text-decoration: inherit;">Restrict<wbr>Scale<wbr>Down</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean. When set to “True”, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="taints_go">
 <a href="#taints_go" style="color: inherit; text-decoration: inherit;">Taints</a>
 </span>
@@ -557,6 +581,16 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="restrictscaledown_nodejs">
+<a href="#restrictscaledown_nodejs" style="color: inherit; text-decoration: inherit;">restrict<wbr>Scale<wbr>Down</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean. When set to “True”, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="taints_nodejs">
 <a href="#taints_nodejs" style="color: inherit; text-decoration: inherit;">taints</a>
 </span>
@@ -620,6 +654,16 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type"><a href="#oceanlaunchspeclabel">Sequence[Ocean<wbr>Launch<wbr>Spec<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Cluster's labels.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="restrict_scale_down_python">
+<a href="#restrict_scale_down_python" style="color: inherit; text-decoration: inherit;">restrict_<wbr>scale_<wbr>down</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean. When set to “True”, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -709,20 +753,20 @@ Get an existing OceanLaunchSpec resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gke/#OceanLaunchSpecState">OceanLaunchSpecState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gke/#OceanLaunchSpec">OceanLaunchSpec</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">OceanLaunchSpecState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">OceanLaunchSpec</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscale_headrooms</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecAutoscaleHeadroomArgs]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecLabelArgs]]</span> = None<span class="p">, </span><span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecMetadataArgs]]</span> = None<span class="p">, </span><span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecTaintArgs]]</span> = None<span class="p">) -&gt;</span> OceanLaunchSpec</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">autoscale_headrooms</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecAutoscaleHeadroomArgs]]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecLabelArgs]]</span> = None<span class="p">, </span><span class="nx">metadatas</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecMetadataArgs]]</span> = None<span class="p">, </span><span class="nx">ocean_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restrict_scale_down</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source_image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[OceanLaunchSpecTaintArgs]]</span> = None<span class="p">) -&gt;</span> OceanLaunchSpec</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOceanLaunchSpec<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanLaunchSpecState">OceanLaunchSpecState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanLaunchSpec">OceanLaunchSpec</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetOceanLaunchSpec<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">OceanLaunchSpecState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">OceanLaunchSpec</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.OceanLaunchSpec.html">OceanLaunchSpec</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.OceanLaunchSpecState.html">OceanLaunchSpecState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">OceanLaunchSpec</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">OceanLaunchSpecState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -869,6 +913,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_restrictscaledown_csharp">
+<a href="#state_restrictscaledown_csharp" style="color: inherit; text-decoration: inherit;">Restrict<wbr>Scale<wbr>Down</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean. When set to “True”, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_sourceimage_csharp">
 <a href="#state_sourceimage_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Image</a>
 </span>
@@ -932,6 +986,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Ocean cluster ID required for launchSpec create.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_restrictscaledown_go">
+<a href="#state_restrictscaledown_go" style="color: inherit; text-decoration: inherit;">Restrict<wbr>Scale<wbr>Down</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean. When set to “True”, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1001,6 +1065,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_restrictscaledown_nodejs">
+<a href="#state_restrictscaledown_nodejs" style="color: inherit; text-decoration: inherit;">restrict<wbr>Scale<wbr>Down</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean. When set to “True”, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_sourceimage_nodejs">
 <a href="#state_sourceimage_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Image</a>
 </span>
@@ -1067,6 +1141,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_restrict_scale_down_python">
+<a href="#state_restrict_scale_down_python" style="color: inherit; text-decoration: inherit;">restrict_<wbr>scale_<wbr>down</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean. When set to “True”, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_source_image_python">
 <a href="#state_source_image_python" style="color: inherit; text-decoration: inherit;">source_<wbr>image</a>
 </span>
@@ -1098,18 +1182,6 @@ The following state arguments are supported:
 
 
 <h4 id="oceanlaunchspecautoscaleheadroom">Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecAutoscaleHeadroom">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanLaunchSpecAutoscaleHeadroom">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanLaunchSpecAutoscaleHeadroomArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanLaunchSpecAutoscaleHeadroomOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.OceanLaunchSpecAutoscaleHeadroomArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.OceanLaunchSpecAutoscaleHeadroom.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1296,18 +1368,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="oceanlaunchspeclabel">Ocean<wbr>Launch<wbr>Spec<wbr>Label</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecLabel">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanLaunchSpecLabel">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanLaunchSpecLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanLaunchSpecLabelOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.OceanLaunchSpecLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.OceanLaunchSpecLabel.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1406,18 +1466,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="oceanlaunchspecmetadata">Ocean<wbr>Launch<wbr>Spec<wbr>Metadata</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecMetadata">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanLaunchSpecMetadata">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanLaunchSpecMetadataArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanLaunchSpecMetadataOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.OceanLaunchSpecMetadataArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.OceanLaunchSpecMetadata.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1516,18 +1564,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="oceanlaunchspectaint">Ocean<wbr>Launch<wbr>Spec<wbr>Taint</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecTaint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanLaunchSpecTaint">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanLaunchSpecTaintArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/v2/go/spotinst/gke?tab=doc#OceanLaunchSpecTaintOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Inputs.OceanLaunchSpecTaintArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.Gke.Outputs.OceanLaunchSpecTaint.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

@@ -1,8 +1,8 @@
 
 ---
-title: "GetClusterAlterRule"
-title_tag: "Function GetClusterAlterRule | Package Rancher 2"
-meta_desc: "Explore the GetClusterAlterRule function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher v2 cluster alert rule."
+title: "getClusterAlterRule"
+title_tag: "rancher2.getClusterAlterRule"
+meta_desc: "Documentation for the rancher2.getClusterAlterRule function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -92,13 +92,13 @@ const foo = pulumi.output(rancher2.getClusterAlterRule({
 {{% /examples %}}
 
 
-## Using GetClusterAlterRule {#using}
+## Using getClusterAlterRule {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getClusterAlterRule<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#GetClusterAlterRuleArgs">GetClusterAlterRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#GetClusterAlterRuleResult">GetClusterAlterRuleResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getClusterAlterRule<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetClusterAlterRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetClusterAlterRuleResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -108,7 +108,7 @@ const foo = pulumi.output(rancher2.getClusterAlterRule({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupClusterAlterRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#LookupClusterAlterRuleArgs">LookupClusterAlterRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#LookupClusterAlterRuleResult">LookupClusterAlterRuleResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupClusterAlterRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupClusterAlterRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupClusterAlterRuleResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupClusterAlterRule` in the Go SDK.
 
@@ -117,7 +117,7 @@ const foo = pulumi.output(rancher2.getClusterAlterRule({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetClusterAlterRule </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.GetClusterAlterRuleResult.html">GetClusterAlterRuleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.GetClusterAlterRuleArgs.html">GetClusterAlterRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetClusterAlterRuleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetClusterAlterRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -273,7 +273,7 @@ The following arguments are supported:
 
 
 
-## GetClusterAlterRule Result {#result}
+## getClusterAlterRule Result {#result}
 
 The following output properties are available:
 
@@ -902,16 +902,6 @@ The following output properties are available:
 
 
 <h4 id="getclusteralterruleeventrule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Event<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterAlterRuleEventRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterAlterRuleEventRule">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterAlterRuleEventRule.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1012,16 +1002,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusteralterrulemetricrule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Metric<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterAlterRuleMetricRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterAlterRuleMetricRule">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterAlterRuleMetricRule.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1230,16 +1210,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusteralterrulenoderule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Node<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterAlterRuleNodeRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterAlterRuleNodeRule">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterAlterRuleNodeRule.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1448,16 +1418,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclusteralterrulesystemservicerule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterAlterRuleSystemServiceRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetClusterAlterRuleSystemServiceRule">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetClusterAlterRuleSystemServiceRule.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

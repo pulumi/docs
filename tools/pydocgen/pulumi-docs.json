@@ -164,6 +164,12 @@
       "terraform_provider_name": "openstack"
     },
     {
+      "name": "Pulumi OpsGenie",
+      "package_name": "pulumi_opsgenie",
+      "pulumi_provider_name": "opsgenie",
+      "terraform_provider_name": "opsgenie"
+    },
+    {
       "name": "Pulumi Okta",
       "package_name": "pulumi_okta",
       "pulumi_provider_name": "okta",

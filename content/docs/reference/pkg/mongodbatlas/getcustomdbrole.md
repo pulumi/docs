@@ -1,8 +1,8 @@
 
 ---
-title: "GetCustomDbRole"
-title_tag: "Function GetCustomDbRole | Package MongoDB Atlas"
-meta_desc: "Explore the GetCustomDbRole function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.CustomDbRole` describe a Custom DB Role. This represents a custom db role."
+title: "getCustomDbRole"
+title_tag: "mongodbatlas.getCustomDbRole"
+meta_desc: "Documentation for the mongodbatlas.getCustomDbRole function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -190,13 +190,13 @@ const test = pulumi.all([testRole.projectId, testRole.roleName]).apply(([project
 {{% /examples %}}
 
 
-## Using GetCustomDbRole {#using}
+## Using getCustomDbRole {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCustomDbRole<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetCustomDbRoleArgs">GetCustomDbRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetCustomDbRoleResult">GetCustomDbRoleResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCustomDbRole<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCustomDbRoleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCustomDbRoleResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -206,7 +206,7 @@ const test = pulumi.all([testRole.projectId, testRole.roleName]).apply(([project
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCustomDbRole<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#LookupCustomDbRoleArgs">LookupCustomDbRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#LookupCustomDbRoleResult">LookupCustomDbRoleResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCustomDbRole<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCustomDbRoleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCustomDbRoleResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCustomDbRole` in the Go SDK.
 
@@ -215,7 +215,7 @@ const test = pulumi.all([testRole.projectId, testRole.roleName]).apply(([project
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCustomDbRole </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetCustomDbRoleResult.html">GetCustomDbRoleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetCustomDbRoleArgs.html">GetCustomDbRoleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCustomDbRoleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCustomDbRoleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -367,7 +367,7 @@ The following arguments are supported:
 
 
 
-## GetCustomDbRole Result {#result}
+## getCustomDbRole Result {#result}
 
 The following output properties are available:
 
@@ -588,16 +588,6 @@ The following output properties are available:
 
 
 <h4 id="getcustomdbroleaction">Get<wbr>Custom<wbr>Db<wbr>Role<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#GetCustomDbRoleAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetCustomDbRoleAction">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GetCustomDbRoleAction.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -706,16 +696,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcustomdbroleactionresource">Get<wbr>Custom<wbr>Db<wbr>Role<wbr>Action<wbr>Resource</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#GetCustomDbRoleActionResource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetCustomDbRoleActionResource">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GetCustomDbRoleActionResource.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -852,16 +832,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcustomdbroleinheritedrole">Get<wbr>Custom<wbr>Db<wbr>Role<wbr>Inherited<wbr>Role</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/input/#GetCustomDbRoleInheritedRole">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#GetCustomDbRoleInheritedRole">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetCustomDbRoleInheritedRoleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetCustomDbRoleInheritedRole">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Inputs.GetCustomDbRoleInheritedRoleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GetCustomDbRoleInheritedRole.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

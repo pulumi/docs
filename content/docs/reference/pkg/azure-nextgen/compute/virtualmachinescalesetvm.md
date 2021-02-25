@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.VirtualMachineScaleSetVM
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a virtual machine scale set virtual machine.
-Latest API Version: 2020-06-01.
+Latest API Version: 2020-12-01.
 ## Import
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
@@ -28,7 +28,7 @@ $ pulumi import azure-nextgen:compute/latest:VirtualMachineScaleSetVM myresource
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachineScaleSetVM</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VirtualMachineScaleSetVMArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachineScaleSetVM</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineScaleSetVMArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -36,11 +36,11 @@ $ pulumi import azure-nextgen:compute/latest:VirtualMachineScaleSetVM myresource
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachineScaleSetVM</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VirtualMachineScaleSetVMArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachineScaleSetVM</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachineScaleSetVM</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineScaleSetVMArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachineScaleSetVM</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachineScaleSetVM</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VirtualMachineScaleSetVMArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachineScaleSetVM</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualMachineScaleSetVMArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -61,7 +61,7 @@ $ pulumi import azure-nextgen:compute/latest:VirtualMachineScaleSetVM myresource
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualMachineScaleSetVMArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualMachineScaleSetVMArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -130,7 +130,7 @@ $ pulumi import azure-nextgen:compute/latest:VirtualMachineScaleSetVM myresource
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualMachineScaleSetVMArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualMachineScaleSetVMArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -169,7 +169,7 @@ $ pulumi import azure-nextgen:compute/latest:VirtualMachineScaleSetVM myresource
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualMachineScaleSetVMArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualMachineScaleSetVMArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -192,11 +192,11 @@ $ pulumi import azure-nextgen:compute/latest:VirtualMachineScaleSetVM myresource
 
 ## VirtualMachineScaleSetVM Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VirtualMachineScaleSetVM resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The VirtualMachineScaleSetVM resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -212,15 +212,6 @@ The VirtualMachineScaleSetVM resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance ID of the virtual machine.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -284,6 +275,15 @@ The VirtualMachineScaleSetVM resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="networkprofile_csharp">
@@ -373,15 +373,6 @@ The VirtualMachineScaleSetVM resource accepts the following [input]({{< relref "
     <dd>{{% md %}}The instance ID of the virtual machine.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -443,6 +434,15 @@ The VirtualMachineScaleSetVM resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="networkprofile_go">
@@ -532,15 +532,6 @@ The VirtualMachineScaleSetVM resource accepts the following [input]({{< relref "
     <dd>{{% md %}}The instance ID of the virtual machine.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -602,6 +593,15 @@ The VirtualMachineScaleSetVM resource accepts the following [input]({{< relref "
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="networkprofile_nodejs">
@@ -691,15 +691,6 @@ The VirtualMachineScaleSetVM resource accepts the following [input]({{< relref "
     <dd>{{% md %}}The instance ID of the virtual machine.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -761,6 +752,15 @@ The VirtualMachineScaleSetVM resource accepts the following [input]({{< relref "
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="network_profile_python">
@@ -2301,6 +2301,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="detachoption_csharp">
+<a href="#detachoption_csharp" style="color: inherit; text-decoration: inherit;">Detach<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#diskdetachoptiontypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Disk<wbr>Detach<wbr>Option<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. <br><br> detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. <br><br> This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
 </span>
@@ -2395,6 +2404,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#cachingtypes">Caching<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="detachoption_go">
+<a href="#detachoption_go" style="color: inherit; text-decoration: inherit;">Detach<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#diskdetachoptiontypes">Disk<wbr>Detach<wbr>Option<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. <br><br> detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. <br><br> This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
@@ -2493,6 +2511,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="detachoption_nodejs">
+<a href="#detachoption_nodejs" style="color: inherit; text-decoration: inherit;">detach<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#diskdetachoptiontypes">Disk<wbr>Detach<wbr>Option<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. <br><br> detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. <br><br> This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
 </span>
@@ -2587,6 +2614,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#cachingtypes">Caching<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="detach_option_python">
+<a href="#detach_option_python" style="color: inherit; text-decoration: inherit;">detach_<wbr>option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#diskdetachoptiontypes">Disk<wbr>Detach<wbr>Option<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. <br><br> detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. <br><br> This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disk_size_gb_python">
@@ -2705,6 +2741,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="detachoption_csharp">
+<a href="#detachoption_csharp" style="color: inherit; text-decoration: inherit;">Detach<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. <br><br> detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. <br><br> This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
 </span>
@@ -2817,6 +2862,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="detachoption_go">
+<a href="#detachoption_go" style="color: inherit; text-decoration: inherit;">Detach<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. <br><br> detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. <br><br> This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
@@ -2933,6 +2987,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="detachoption_nodejs">
+<a href="#detachoption_nodejs" style="color: inherit; text-decoration: inherit;">detach<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. <br><br> detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. <br><br> This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
 </span>
@@ -3045,6 +3108,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="detach_option_python">
+<a href="#detach_option_python" style="color: inherit; text-decoration: inherit;">detach_<wbr>option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. <br><br> detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. <br><br> This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disk_size_gb_python">
@@ -3542,6 +3614,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Empty</dd>
     <dt>ATTACH</dt>
     <dd>Attach</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="diskdetachoptiontypes">Disk<wbr>Detach<wbr>Option<wbr>Types</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Force<wbr>Detach</dt>
+    <dd>ForceDetach</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Disk<wbr>Detach<wbr>Option<wbr>Types<wbr>Force<wbr>Detach</dt>
+    <dd>ForceDetach</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Force<wbr>Detach</dt>
+    <dd>ForceDetach</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>FORCE_DETACH</dt>
+    <dd>ForceDetach</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4084,7 +4186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#virtualmachinesizetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Virtual<wbr>Machine<wbr>Size<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the size of the virtual machine. For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set. For a list of available sizes use these APIs:  <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). <br><br> This list of sizes is no longer updated and the **VirtualMachineSizeTypes** string constants will be removed from the subsequent REST API specification. Use [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) to get the latest sizes.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4099,7 +4201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#virtualmachinesizetypes">Virtual<wbr>Machine<wbr>Size<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the size of the virtual machine. For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set. For a list of available sizes use these APIs:  <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). <br><br> This list of sizes is no longer updated and the **VirtualMachineSizeTypes** string constants will be removed from the subsequent REST API specification. Use [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) to get the latest sizes.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4114,7 +4216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#virtualmachinesizetypes">Virtual<wbr>Machine<wbr>Size<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the size of the virtual machine. For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set. For a list of available sizes use these APIs:  <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). <br><br> This list of sizes is no longer updated and the **VirtualMachineSizeTypes** string constants will be removed from the subsequent REST API specification. Use [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) to get the latest sizes.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4129,7 +4231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#virtualmachinesizetypes">Virtual<wbr>Machine<wbr>Size<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the size of the virtual machine. For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set. For a list of available sizes use these APIs:  <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). <br><br> This list of sizes is no longer updated and the **VirtualMachineSizeTypes** string constants will be removed from the subsequent REST API specification. Use [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) to get the latest sizes.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4146,7 +4248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of the virtual machine. For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set. For a list of available sizes use these APIs:  <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). <br><br> This list of sizes is no longer updated and the **VirtualMachineSizeTypes** string constants will be removed from the subsequent REST API specification. Use [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) to get the latest sizes.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4161,7 +4263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of the virtual machine. For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set. For a list of available sizes use these APIs:  <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). <br><br> This list of sizes is no longer updated and the **VirtualMachineSizeTypes** string constants will be removed from the subsequent REST API specification. Use [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) to get the latest sizes.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4176,7 +4278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of the virtual machine. For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set. For a list of available sizes use these APIs:  <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). <br><br> This list of sizes is no longer updated and the **VirtualMachineSizeTypes** string constants will be removed from the subsequent REST API specification. Use [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) to get the latest sizes.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4191,7 +4293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of the virtual machine. For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set. For a list of available sizes use these APIs:  <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). <br><br> This list of sizes is no longer updated and the **VirtualMachineSizeTypes** string constants will be removed from the subsequent REST API specification. Use [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) to get the latest sizes.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4678,52 +4780,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the platform image or marketplace image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="inguestpatchmode">In<wbr>Guest<wbr>Patch<wbr>Mode</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Manual</dt>
-    <dd>Manual</dd>
-    <dt>Automatic<wbr>By<wbr>OS</dt>
-    <dd>AutomaticByOS</dd>
-    <dt>Automatic<wbr>By<wbr>Platform</dt>
-    <dd>AutomaticByPlatform</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular">
-    <dt>In<wbr>Guest<wbr>Patch<wbr>Mode<wbr>Manual</dt>
-    <dd>Manual</dd>
-    <dt>In<wbr>Guest<wbr>Patch<wbr>Mode<wbr>Automatic<wbr>By<wbr>OS</dt>
-    <dd>AutomaticByOS</dd>
-    <dt>In<wbr>Guest<wbr>Patch<wbr>Mode<wbr>Automatic<wbr>By<wbr>Platform</dt>
-    <dd>AutomaticByPlatform</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Manual</dt>
-    <dd>Manual</dd>
-    <dt>Automatic<wbr>By<wbr>OS</dt>
-    <dd>AutomaticByOS</dd>
-    <dt>Automatic<wbr>By<wbr>Platform</dt>
-    <dd>AutomaticByPlatform</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular">
-    <dt>MANUAL</dt>
-    <dd>Manual</dd>
-    <dt>AUTOMATIC_BY_OS</dt>
-    <dd>AutomaticByOS</dd>
-    <dt>AUTOMATIC_BY_PLATFORM</dt>
-    <dd>AutomaticByPlatform</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5341,6 +5397,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies whether password authentication should be disabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="patchsettings_csharp">
+<a href="#patchsettings_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxpatchsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Linux<wbr>Patch<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="provisionvmagent_csharp">
 <a href="#provisionvmagent_csharp" style="color: inherit; text-decoration: inherit;">Provision<wbr>VMAgent</a>
 </span>
@@ -5372,6 +5437,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether password authentication should be disabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patchsettings_go">
+<a href="#patchsettings_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxpatchsettings">Linux<wbr>Patch<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_go">
@@ -5407,6 +5481,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies whether password authentication should be disabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="patchsettings_nodejs">
+<a href="#patchsettings_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxpatchsettings">Linux<wbr>Patch<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="provisionvmagent_nodejs">
 <a href="#provisionvmagent_nodejs" style="color: inherit; text-decoration: inherit;">provision<wbr>VMAgent</a>
 </span>
@@ -5438,6 +5521,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether password authentication should be disabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patch_settings_python">
+<a href="#patch_settings_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxpatchsettings">Linux<wbr>Patch<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provision_vm_agent_python">
@@ -5475,6 +5567,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies whether password authentication should be disabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="patchsettings_csharp">
+<a href="#patchsettings_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxpatchsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Linux<wbr>Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="provisionvmagent_csharp">
 <a href="#provisionvmagent_csharp" style="color: inherit; text-decoration: inherit;">Provision<wbr>VMAgent</a>
 </span>
@@ -5506,6 +5607,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether password authentication should be disabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patchsettings_go">
+<a href="#patchsettings_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_go">
@@ -5541,6 +5651,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies whether password authentication should be disabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="patchsettings_nodejs">
+<a href="#patchsettings_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="provisionvmagent_nodejs">
 <a href="#provisionvmagent_nodejs" style="color: inherit; text-decoration: inherit;">provision<wbr>VMAgent</a>
 </span>
@@ -5574,6 +5693,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies whether password authentication should be disabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="patch_settings_python">
+<a href="#patch_settings_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="provision_vm_agent_python">
 <a href="#provision_vm_agent_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>vm_<wbr>agent</a>
 </span>
@@ -5590,6 +5718,168 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="linuxpatchsettings">Linux<wbr>Patch<wbr>Settings</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patchmode_csharp">
+<a href="#patchmode_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#linuxvmguestpatchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Linux<wbr>VMGuest<wbr>Patch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patchmode_go">
+<a href="#patchmode_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#linuxvmguestpatchmode">Linux<wbr>VMGuest<wbr>Patch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patchmode_nodejs">
+<a href="#patchmode_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#linuxvmguestpatchmode">Linux<wbr>VMGuest<wbr>Patch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patch_mode_python">
+<a href="#patch_mode_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#linuxvmguestpatchmode">Linux<wbr>VMGuest<wbr>Patch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patchmode_csharp">
+<a href="#patchmode_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patchmode_go">
+<a href="#patchmode_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patchmode_nodejs">
+<a href="#patchmode_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patch_mode_python">
+<a href="#patch_mode_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="linuxvmguestpatchmode">Linux<wbr>VMGuest<wbr>Patch<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Image<wbr>Default</dt>
+    <dd>ImageDefault</dd>
+    <dt>Automatic<wbr>By<wbr>Platform</dt>
+    <dd>AutomaticByPlatform</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Linux<wbr>VMGuest<wbr>Patch<wbr>Mode<wbr>Image<wbr>Default</dt>
+    <dd>ImageDefault</dd>
+    <dt>Linux<wbr>VMGuest<wbr>Patch<wbr>Mode<wbr>Automatic<wbr>By<wbr>Platform</dt>
+    <dd>AutomaticByPlatform</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Image<wbr>Default</dt>
+    <dd>ImageDefault</dd>
+    <dt>Automatic<wbr>By<wbr>Platform</dt>
+    <dd>AutomaticByPlatform</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>IMAGE_DEFAULT</dt>
+    <dd>ImageDefault</dd>
+    <dt>AUTOMATIC_BY_PLATFORM</dt>
+    <dd>AutomaticByPlatform</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8078,13 +8368,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablehotpatching_csharp">
+<a href="#enablehotpatching_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hotpatching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="patchmode_csharp">
 <a href="#patchmode_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#inguestpatchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>In<wbr>Guest<wbr>Patch<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#windowsvmguestpatchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Windows<wbr>VMGuest<wbr>Patch<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8093,13 +8392,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablehotpatching_go">
+<a href="#enablehotpatching_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hotpatching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="patchmode_go">
 <a href="#patchmode_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#inguestpatchmode">In<wbr>Guest<wbr>Patch<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#windowsvmguestpatchmode">Windows<wbr>VMGuest<wbr>Patch<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8108,13 +8416,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablehotpatching_nodejs">
+<a href="#enablehotpatching_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Hotpatching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="patchmode_nodejs">
 <a href="#patchmode_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#inguestpatchmode">In<wbr>Guest<wbr>Patch<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#windowsvmguestpatchmode">Windows<wbr>VMGuest<wbr>Patch<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8123,13 +8440,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enable_hotpatching_python">
+<a href="#enable_hotpatching_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>hotpatching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="patch_mode_python">
 <a href="#patch_mode_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#inguestpatchmode">In<wbr>Guest<wbr>Patch<wbr>Mode</a></span>
+        <span class="property-type">str | <a href="#windowsvmguestpatchmode">Windows<wbr>VMGuest<wbr>Patch<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8140,13 +8466,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablehotpatching_csharp">
+<a href="#enablehotpatching_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hotpatching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="patchmode_csharp">
 <a href="#patchmode_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8155,13 +8490,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablehotpatching_go">
+<a href="#enablehotpatching_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hotpatching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="patchmode_go">
 <a href="#patchmode_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8170,13 +8514,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablehotpatching_nodejs">
+<a href="#enablehotpatching_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Hotpatching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="patchmode_nodejs">
 <a href="#patchmode_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8185,13 +8538,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enable_hotpatching_python">
+<a href="#enable_hotpatching_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>hotpatching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="patch_mode_python">
 <a href="#patch_mode_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8587,6 +8949,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_csharp">
+<a href="#securitytype_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitytypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Security<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uefisettings_csharp">
+<a href="#uefisettings_csharp" style="color: inherit; text-decoration: inherit;">Uefi<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uefisettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Uefi<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8602,6 +8982,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_go">
+<a href="#securitytype_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitytypes">Security<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uefisettings_go">
+<a href="#uefisettings_go" style="color: inherit; text-decoration: inherit;">Uefi<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uefisettings">Uefi<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8617,6 +9015,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_nodejs">
+<a href="#securitytype_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitytypes">Security<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uefisettings_nodejs">
+<a href="#uefisettings_nodejs" style="color: inherit; text-decoration: inherit;">uefi<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uefisettings">Uefi<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8632,6 +9048,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="security_type_python">
+<a href="#security_type_python" style="color: inherit; text-decoration: inherit;">security_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitytypes">Security<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uefi_settings_python">
+<a href="#uefi_settings_python" style="color: inherit; text-decoration: inherit;">uefi_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uefisettings">Uefi<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8649,6 +9083,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_csharp">
+<a href="#securitytype_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uefisettings_csharp">
+<a href="#uefisettings_csharp" style="color: inherit; text-decoration: inherit;">Uefi<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uefisettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Uefi<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8664,6 +9116,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_go">
+<a href="#securitytype_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uefisettings_go">
+<a href="#uefisettings_go" style="color: inherit; text-decoration: inherit;">Uefi<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uefisettingsresponse">Uefi<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8679,6 +9149,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_nodejs">
+<a href="#securitytype_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uefisettings_nodejs">
+<a href="#uefisettings_nodejs" style="color: inherit; text-decoration: inherit;">uefi<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uefisettingsresponse">Uefi<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8694,6 +9182,54 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="security_type_python">
+<a href="#security_type_python" style="color: inherit; text-decoration: inherit;">security_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uefi_settings_python">
+<a href="#uefi_settings_python" style="color: inherit; text-decoration: inherit;">uefi_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uefisettingsresponse">Uefi<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="securitytypes">Security<wbr>Types</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Trusted<wbr>Launch</dt>
+    <dd>TrustedLaunch</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Security<wbr>Types<wbr>Trusted<wbr>Launch</dt>
+    <dd>TrustedLaunch</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Trusted<wbr>Launch</dt>
+    <dd>TrustedLaunch</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>TRUSTED_LAUNCH</dt>
+    <dd>TrustedLaunch</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9006,7 +9542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
@@ -9030,7 +9566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="path_go">
@@ -9054,7 +9590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
@@ -9078,7 +9614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="path_python">
@@ -9104,7 +9640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
@@ -9128,7 +9664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="path_go">
@@ -9152,7 +9688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
@@ -9176,7 +9712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="path_python">
@@ -9632,6 +10168,202 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="uefisettings">Uefi<wbr>Settings</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securebootenabled_csharp">
+<a href="#securebootenabled_csharp" style="color: inherit; text-decoration: inherit;">Secure<wbr>Boot<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vtpmenabled_csharp">
+<a href="#vtpmenabled_csharp" style="color: inherit; text-decoration: inherit;">VTpm<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securebootenabled_go">
+<a href="#securebootenabled_go" style="color: inherit; text-decoration: inherit;">Secure<wbr>Boot<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vtpmenabled_go">
+<a href="#vtpmenabled_go" style="color: inherit; text-decoration: inherit;">VTpm<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securebootenabled_nodejs">
+<a href="#securebootenabled_nodejs" style="color: inherit; text-decoration: inherit;">secure<wbr>Boot<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vtpmenabled_nodejs">
+<a href="#vtpmenabled_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>Tpm<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secure_boot_enabled_python">
+<a href="#secure_boot_enabled_python" style="color: inherit; text-decoration: inherit;">secure_<wbr>boot_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="v_tpm_enabled_python">
+<a href="#v_tpm_enabled_python" style="color: inherit; text-decoration: inherit;">v_<wbr>tpm_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="uefisettingsresponse">Uefi<wbr>Settings<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securebootenabled_csharp">
+<a href="#securebootenabled_csharp" style="color: inherit; text-decoration: inherit;">Secure<wbr>Boot<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vtpmenabled_csharp">
+<a href="#vtpmenabled_csharp" style="color: inherit; text-decoration: inherit;">VTpm<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securebootenabled_go">
+<a href="#securebootenabled_go" style="color: inherit; text-decoration: inherit;">Secure<wbr>Boot<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vtpmenabled_go">
+<a href="#vtpmenabled_go" style="color: inherit; text-decoration: inherit;">VTpm<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securebootenabled_nodejs">
+<a href="#securebootenabled_nodejs" style="color: inherit; text-decoration: inherit;">secure<wbr>Boot<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vtpmenabled_nodejs">
+<a href="#vtpmenabled_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>Tpm<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secure_boot_enabled_python">
+<a href="#secure_boot_enabled_python" style="color: inherit; text-decoration: inherit;">secure_<wbr>boot_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="v_tpm_enabled_python">
+<a href="#v_tpm_enabled_python" style="color: inherit; text-decoration: inherit;">v_<wbr>tpm_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -16096,7 +16828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Patch<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_csharp">
@@ -16156,7 +16888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchsettings">Patch<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_go">
@@ -16216,7 +16948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchsettings">Patch<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_nodejs">
@@ -16276,7 +17008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchsettings">Patch<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provision_vm_agent_python">
@@ -16338,7 +17070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_csharp">
@@ -16398,7 +17130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchsettingsresponse">Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_go">
@@ -16458,7 +17190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchsettingsresponse">Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_nodejs">
@@ -16518,7 +17250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchsettingsresponse">Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provision_vm_agent_python">
@@ -16546,6 +17278,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#winrmconfigurationresponse">Win<wbr>RMConfiguration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="windowsvmguestpatchmode">Windows<wbr>VMGuest<wbr>Patch<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Manual</dt>
+    <dd>Manual</dd>
+    <dt>Automatic<wbr>By<wbr>OS</dt>
+    <dd>AutomaticByOS</dd>
+    <dt>Automatic<wbr>By<wbr>Platform</dt>
+    <dd>AutomaticByPlatform</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Windows<wbr>VMGuest<wbr>Patch<wbr>Mode<wbr>Manual</dt>
+    <dd>Manual</dd>
+    <dt>Windows<wbr>VMGuest<wbr>Patch<wbr>Mode<wbr>Automatic<wbr>By<wbr>OS</dt>
+    <dd>AutomaticByOS</dd>
+    <dt>Windows<wbr>VMGuest<wbr>Patch<wbr>Mode<wbr>Automatic<wbr>By<wbr>Platform</dt>
+    <dd>AutomaticByPlatform</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Manual</dt>
+    <dd>Manual</dd>
+    <dt>Automatic<wbr>By<wbr>OS</dt>
+    <dd>AutomaticByOS</dd>
+    <dt>Automatic<wbr>By<wbr>Platform</dt>
+    <dd>AutomaticByPlatform</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>MANUAL</dt>
+    <dd>Manual</dd>
+    <dt>AUTOMATIC_BY_OS</dt>
+    <dd>AutomaticByOS</dd>
+    <dt>AUTOMATIC_BY_PLATFORM</dt>
+    <dd>AutomaticByPlatform</dd>
 </dl>
 {{% /choosable %}}
 

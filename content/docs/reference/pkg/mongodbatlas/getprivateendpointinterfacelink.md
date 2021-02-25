@@ -1,8 +1,8 @@
 
 ---
-title: "GetPrivateEndpointInterfaceLink"
-title_tag: "Function GetPrivateEndpointInterfaceLink | Package MongoDB Atlas"
-meta_desc: "Explore the GetPrivateEndpointInterfaceLink function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.PrivateEndpointInterfaceLink` describe a Private Endpoint Link. This represents a Private Endpoint Link Connection that wants to retrieve details in an Atlas project."
+title: "getPrivateEndpointInterfaceLink"
+title_tag: "mongodbatlas.getPrivateEndpointInterfaceLink"
+meta_desc: "Documentation for the mongodbatlas.getPrivateEndpointInterfaceLink function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -71,13 +71,13 @@ const testPrivateEndpointInterfaceLink = pulumi.all([mongodbatlas_private_endpoi
 {{% /examples %}}
 
 
-## Using GetPrivateEndpointInterfaceLink {#using}
+## Using getPrivateEndpointInterfaceLink {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPrivateEndpointInterfaceLink<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetPrivateEndpointInterfaceLinkArgs">GetPrivateEndpointInterfaceLinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetPrivateEndpointInterfaceLinkResult">GetPrivateEndpointInterfaceLinkResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPrivateEndpointInterfaceLink<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPrivateEndpointInterfaceLinkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPrivateEndpointInterfaceLinkResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -87,7 +87,7 @@ const testPrivateEndpointInterfaceLink = pulumi.all([mongodbatlas_private_endpoi
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPrivateEndpointInterfaceLink<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#LookupPrivateEndpointInterfaceLinkArgs">LookupPrivateEndpointInterfaceLinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#LookupPrivateEndpointInterfaceLinkResult">LookupPrivateEndpointInterfaceLinkResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPrivateEndpointInterfaceLink<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPrivateEndpointInterfaceLinkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPrivateEndpointInterfaceLinkResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPrivateEndpointInterfaceLink` in the Go SDK.
 
@@ -96,7 +96,7 @@ const testPrivateEndpointInterfaceLink = pulumi.all([mongodbatlas_private_endpoi
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPrivateEndpointInterfaceLink </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetPrivateEndpointInterfaceLinkResult.html">GetPrivateEndpointInterfaceLinkResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetPrivateEndpointInterfaceLinkArgs.html">GetPrivateEndpointInterfaceLinkArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPrivateEndpointInterfaceLinkResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPrivateEndpointInterfaceLinkArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -248,7 +248,7 @@ The following arguments are supported:
 
 
 
-## GetPrivateEndpointInterfaceLink Result {#result}
+## getPrivateEndpointInterfaceLink Result {#result}
 
 The following output properties are available:
 

@@ -31,42 +31,51 @@ class MyStack : Stack
     public MyStack()
     {
         var current = Output.Create(Aws.GetCallerIdentity.InvokeAsync());
-        var foo = new Aws.S3.Bucket("foo", new Aws.S3.BucketArgs
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
         {
-            ForceDestroy = true,
-            Policy = current.Apply(current => @$"{{
-    ""Version"": ""2012-10-17"",
-    ""Statement"": [
-        {{
-            ""Sid"": ""AWSCloudTrailAclCheck"",
-            ""Effect"": ""Allow"",
-            ""Principal"": {{
-              ""Service"": ""cloudtrail.amazonaws.com""
-            }},
-            ""Action"": ""s3:GetBucketAcl"",
-            ""Resource"": ""arn:aws:s3:::tf-test-trail""
-        }},
-        {{
-            ""Sid"": ""AWSCloudTrailWrite"",
-            ""Effect"": ""Allow"",
-            ""Principal"": {{
-              ""Service"": ""cloudtrail.amazonaws.com""
-            }},
-            ""Action"": ""s3:PutObject"",
-            ""Resource"": ""arn:aws:s3:::tf-test-trail/prefix/AWSLogs/{current.AccountId}/*"",
-            ""Condition"": {{
-                ""StringEquals"": {{
-                    ""s3:x-amz-acl"": ""bucket-owner-full-control""
-                }}
-            }}
-        }}
-    ]
-}}
-"),
+        });
+        var bucketPolicy = new Aws.S3.BucketPolicy("bucketPolicy", new Aws.S3.BucketPolicyArgs
+        {
+            Bucket = bucket.Id,
+            Policy = Output.Tuple(bucket.Id, bucket.Id, current).Apply(values =>
+            {
+                var bucketId = values.Item1;
+                var bucketId1 = values.Item2;
+                var current = values.Item3;
+                return @$"  {{
+      ""Version"": ""2012-10-17"",
+      ""Statement"": [
+          {{
+              ""Sid"": ""AWSCloudTrailAclCheck"",
+              ""Effect"": ""Allow"",
+              ""Principal"": {{
+                ""Service"": ""cloudtrail.amazonaws.com""
+              }},
+              ""Action"": ""s3:GetBucketAcl"",
+              ""Resource"": ""arn:aws:s3:::{bucketId}""
+          }},
+          {{
+              ""Sid"": ""AWSCloudTrailWrite"",
+              ""Effect"": ""Allow"",
+              ""Principal"": {{
+                ""Service"": ""cloudtrail.amazonaws.com""
+              }},
+              ""Action"": ""s3:PutObject"",
+              ""Resource"": ""arn:aws:s3:::{bucketId1}/prefix/AWSLogs/{current.AccountId}/*"",
+              ""Condition"": {{
+                  ""StringEquals"": {{
+                      ""s3:x-amz-acl"": ""bucket-owner-full-control""
+                  }}
+              }}
+          }}
+      ]
+  }}
+";
+            }),
         });
         var foobar = new Aws.CloudTrail.Trail("foobar", new Aws.CloudTrail.TrailArgs
         {
-            S3BucketName = foo.Id,
+            S3BucketName = bucket.Id,
             S3KeyPrefix = "prefix",
             IncludeGlobalServiceEvents = false,
         });
@@ -96,15 +105,23 @@ func main() {
 		if err != nil {
 			return err
 		}
-		foo, err := s3.NewBucket(ctx, "foo", &s3.BucketArgs{
-			ForceDestroy: pulumi.Bool(true),
-			Policy:       pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\": \"2012-10-17\",\n", "    \"Statement\": [\n", "        {\n", "            \"Sid\": \"AWSCloudTrailAclCheck\",\n", "            \"Effect\": \"Allow\",\n", "            \"Principal\": {\n", "              \"Service\": \"cloudtrail.amazonaws.com\"\n", "            },\n", "            \"Action\": \"s3:GetBucketAcl\",\n", "            \"Resource\": \"arn:aws:s3:::tf-test-trail\"\n", "        },\n", "        {\n", "            \"Sid\": \"AWSCloudTrailWrite\",\n", "            \"Effect\": \"Allow\",\n", "            \"Principal\": {\n", "              \"Service\": \"cloudtrail.amazonaws.com\"\n", "            },\n", "            \"Action\": \"s3:PutObject\",\n", "            \"Resource\": \"arn:aws:s3:::tf-test-trail/prefix/AWSLogs/", current.AccountId, "/*\",\n", "            \"Condition\": {\n", "                \"StringEquals\": {\n", "                    \"s3:x-amz-acl\": \"bucket-owner-full-control\"\n", "                }\n", "            }\n", "        }\n", "    ]\n", "}\n")),
+		bucket, err := s3.NewBucket(ctx, "bucket", nil)
+		if err != nil {
+			return err
+		}
+		_, err = s3.NewBucketPolicy(ctx, "bucketPolicy", &s3.BucketPolicyArgs{
+			Bucket: bucket.ID(),
+			Policy: pulumi.All(bucket.ID(), bucket.ID()).ApplyT(func(_args []interface{}) (string, error) {
+				bucketId := _args[0].(string)
+				bucketId1 := _args[1].(string)
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "  {\n", "      \"Version\": \"2012-10-17\",\n", "      \"Statement\": [\n", "          {\n", "              \"Sid\": \"AWSCloudTrailAclCheck\",\n", "              \"Effect\": \"Allow\",\n", "              \"Principal\": {\n", "                \"Service\": \"cloudtrail.amazonaws.com\"\n", "              },\n", "              \"Action\": \"s3:GetBucketAcl\",\n", "              \"Resource\": \"arn:aws:s3:::", bucketId, "\"\n", "          },\n", "          {\n", "              \"Sid\": \"AWSCloudTrailWrite\",\n", "              \"Effect\": \"Allow\",\n", "              \"Principal\": {\n", "                \"Service\": \"cloudtrail.amazonaws.com\"\n", "              },\n", "              \"Action\": \"s3:PutObject\",\n", "              \"Resource\": \"arn:aws:s3:::", bucketId1, "/prefix/AWSLogs/", current.AccountId, "/*\",\n", "              \"Condition\": {\n", "                  \"StringEquals\": {\n", "                      \"s3:x-amz-acl\": \"bucket-owner-full-control\"\n", "                  }\n", "              }\n", "          }\n", "      ]\n", "  }\n"), nil
+			}).(pulumi.StringOutput),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = cloudtrail.NewTrail(ctx, "foobar", &cloudtrail.TrailArgs{
-			S3BucketName:               foo.ID(),
+			S3BucketName:               bucket.ID(),
 			S3KeyPrefix:                pulumi.String("prefix"),
 			IncludeGlobalServiceEvents: pulumi.Bool(false),
 		})
@@ -124,39 +141,40 @@ import pulumi
 import pulumi_aws as aws
 
 current = aws.get_caller_identity()
-foo = aws.s3.Bucket("foo",
-    force_destroy=True,
-    policy=f"""{{
-    "Version": "2012-10-17",
-    "Statement": [
-        {{
-            "Sid": "AWSCloudTrailAclCheck",
-            "Effect": "Allow",
-            "Principal": {{
-              "Service": "cloudtrail.amazonaws.com"
-            }},
-            "Action": "s3:GetBucketAcl",
-            "Resource": "arn:aws:s3:::tf-test-trail"
-        }},
-        {{
-            "Sid": "AWSCloudTrailWrite",
-            "Effect": "Allow",
-            "Principal": {{
-              "Service": "cloudtrail.amazonaws.com"
-            }},
-            "Action": "s3:PutObject",
-            "Resource": "arn:aws:s3:::tf-test-trail/prefix/AWSLogs/{current.account_id}/*",
-            "Condition": {{
-                "StringEquals": {{
-                    "s3:x-amz-acl": "bucket-owner-full-control"
-                }}
-            }}
-        }}
-    ]
-}}
-""")
+bucket = aws.s3.Bucket("bucket")
+bucket_policy = aws.s3.BucketPolicy("bucketPolicy",
+    bucket=bucket.id,
+    policy=pulumi.Output.all(bucket.id, bucket.id).apply(lambda bucketId, bucketId1: f"""  {{
+      "Version": "2012-10-17",
+      "Statement": [
+          {{
+              "Sid": "AWSCloudTrailAclCheck",
+              "Effect": "Allow",
+              "Principal": {{
+                "Service": "cloudtrail.amazonaws.com"
+              }},
+              "Action": "s3:GetBucketAcl",
+              "Resource": "arn:aws:s3:::{bucket_id}"
+          }},
+          {{
+              "Sid": "AWSCloudTrailWrite",
+              "Effect": "Allow",
+              "Principal": {{
+                "Service": "cloudtrail.amazonaws.com"
+              }},
+              "Action": "s3:PutObject",
+              "Resource": "arn:aws:s3:::{bucket_id1}/prefix/AWSLogs/{current.account_id}/*",
+              "Condition": {{
+                  "StringEquals": {{
+                      "s3:x-amz-acl": "bucket-owner-full-control"
+                  }}
+              }}
+          }}
+      ]
+  }}
+"""))
 foobar = aws.cloudtrail.Trail("foobar",
-    s3_bucket_name=foo.id,
+    s3_bucket_name=bucket.id,
     s3_key_prefix="prefix",
     include_global_service_events=False)
 ```
@@ -170,40 +188,41 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const current = aws.getCallerIdentity({});
-const foo = new aws.s3.Bucket("foo", {
-    forceDestroy: true,
-    policy: current.then(current => `{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "AWSCloudTrailAclCheck",
-            "Effect": "Allow",
-            "Principal": {
-              "Service": "cloudtrail.amazonaws.com"
-            },
-            "Action": "s3:GetBucketAcl",
-            "Resource": "arn:aws:s3:::tf-test-trail"
-        },
-        {
-            "Sid": "AWSCloudTrailWrite",
-            "Effect": "Allow",
-            "Principal": {
-              "Service": "cloudtrail.amazonaws.com"
-            },
-            "Action": "s3:PutObject",
-            "Resource": "arn:aws:s3:::tf-test-trail/prefix/AWSLogs/${current.accountId}/*",
-            "Condition": {
-                "StringEquals": {
-                    "s3:x-amz-acl": "bucket-owner-full-control"
-                }
-            }
-        }
-    ]
-}
+const bucket = new aws.s3.Bucket("bucket", {});
+const bucketPolicy = new aws.s3.BucketPolicy("bucketPolicy", {
+    bucket: bucket.id,
+    policy: pulumi.all([bucket.id, bucket.id, current]).apply(([bucketId, bucketId1, current]) => `  {
+      "Version": "2012-10-17",
+      "Statement": [
+          {
+              "Sid": "AWSCloudTrailAclCheck",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "cloudtrail.amazonaws.com"
+              },
+              "Action": "s3:GetBucketAcl",
+              "Resource": "arn:aws:s3:::${bucketId}"
+          },
+          {
+              "Sid": "AWSCloudTrailWrite",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "cloudtrail.amazonaws.com"
+              },
+              "Action": "s3:PutObject",
+              "Resource": "arn:aws:s3:::${bucketId1}/prefix/AWSLogs/${current.accountId}/*",
+              "Condition": {
+                  "StringEquals": {
+                      "s3:x-amz-acl": "bucket-owner-full-control"
+                  }
+              }
+          }
+      ]
+  }
 `),
 });
 const foobar = new aws.cloudtrail.Trail("foobar", {
-    s3BucketName: foo.id,
+    s3BucketName: bucket.id,
     s3KeyPrefix: "prefix",
     includeGlobalServiceEvents: false,
 });
@@ -221,12 +240,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+        {
+        });
         var example = new Aws.CloudTrail.Trail("example", new Aws.CloudTrail.TrailArgs
         {
+            S3BucketName = bucket.Id,
+            S3KeyPrefix = "prefix",
             EventSelectors = 
             {
                 new Aws.CloudTrail.Inputs.TrailEventSelectorArgs
                 {
+                    ReadWriteType = "All",
+                    IncludeManagementEvents = true,
                     DataResources = 
                     {
                         new Aws.CloudTrail.Inputs.TrailEventSelectorDataResourceArgs
@@ -238,8 +264,6 @@ class MyStack : Stack
                             },
                         },
                     },
-                    IncludeManagementEvents = true,
-                    ReadWriteType = "All",
                 },
             },
         });
@@ -256,14 +280,23 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cloudtrail.NewTrail(ctx, "example", &cloudtrail.TrailArgs{
+		bucket, err := s3.NewBucket(ctx, "bucket", nil)
+		if err != nil {
+			return err
+		}
+		_, err = cloudtrail.NewTrail(ctx, "example", &cloudtrail.TrailArgs{
+			S3BucketName: bucket.ID(),
+			S3KeyPrefix:  pulumi.String("prefix"),
 			EventSelectors: cloudtrail.TrailEventSelectorArray{
 				&cloudtrail.TrailEventSelectorArgs{
+					ReadWriteType:           pulumi.String("All"),
+					IncludeManagementEvents: pulumi.Bool(true),
 					DataResources: cloudtrail.TrailEventSelectorDataResourceArray{
 						&cloudtrail.TrailEventSelectorDataResourceArgs{
 							Type: pulumi.String("AWS::Lambda::Function"),
@@ -272,8 +305,6 @@ func main() {
 							},
 						},
 					},
-					IncludeManagementEvents: pulumi.Bool(true),
-					ReadWriteType:           pulumi.String("All"),
 				},
 			},
 		})
@@ -292,14 +323,18 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.cloudtrail.Trail("example", event_selectors=[aws.cloudtrail.TrailEventSelectorArgs(
-    data_resources=[aws.cloudtrail.TrailEventSelectorDataResourceArgs(
-        type="AWS::Lambda::Function",
-        values=["arn:aws:lambda"],
-    )],
-    include_management_events=True,
-    read_write_type="All",
-)])
+bucket = aws.s3.Bucket("bucket")
+example = aws.cloudtrail.Trail("example",
+    s3_bucket_name=bucket.id,
+    s3_key_prefix="prefix",
+    event_selectors=[aws.cloudtrail.TrailEventSelectorArgs(
+        read_write_type="All",
+        include_management_events=True,
+        data_resources=[aws.cloudtrail.TrailEventSelectorDataResourceArgs(
+            type="AWS::Lambda::Function",
+            values=["arn:aws:lambda"],
+        )],
+    )])
 ```
 
 {{% /example %}}
@@ -310,14 +345,17 @@ example = aws.cloudtrail.Trail("example", event_selectors=[aws.cloudtrail.TrailE
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+const bucket = new aws.s3.Bucket("bucket", {});
 const example = new aws.cloudtrail.Trail("example", {
+    s3BucketName: bucket.id,
+    s3KeyPrefix: "prefix",
     eventSelectors: [{
+        readWriteType: "All",
+        includeManagementEvents: true,
         dataResources: [{
             type: "AWS::Lambda::Function",
             values: ["arn:aws:lambda"],
         }],
-        includeManagementEvents: true,
-        readWriteType: "All",
     }],
 });
 ```
@@ -334,12 +372,19 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
+        {
+        });
         var example = new Aws.CloudTrail.Trail("example", new Aws.CloudTrail.TrailArgs
         {
+            S3BucketName = bucket.Id,
+            S3KeyPrefix = "prefix",
             EventSelectors = 
             {
                 new Aws.CloudTrail.Inputs.TrailEventSelectorArgs
                 {
+                    ReadWriteType = "All",
+                    IncludeManagementEvents = true,
                     DataResources = 
                     {
                         new Aws.CloudTrail.Inputs.TrailEventSelectorDataResourceArgs
@@ -351,8 +396,6 @@ class MyStack : Stack
                             },
                         },
                     },
-                    IncludeManagementEvents = true,
-                    ReadWriteType = "All",
                 },
             },
         });
@@ -369,14 +412,23 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cloudtrail.NewTrail(ctx, "example", &cloudtrail.TrailArgs{
+		bucket, err := s3.NewBucket(ctx, "bucket", nil)
+		if err != nil {
+			return err
+		}
+		_, err = cloudtrail.NewTrail(ctx, "example", &cloudtrail.TrailArgs{
+			S3BucketName: bucket.ID(),
+			S3KeyPrefix:  pulumi.String("prefix"),
 			EventSelectors: cloudtrail.TrailEventSelectorArray{
 				&cloudtrail.TrailEventSelectorArgs{
+					ReadWriteType:           pulumi.String("All"),
+					IncludeManagementEvents: pulumi.Bool(true),
 					DataResources: cloudtrail.TrailEventSelectorDataResourceArray{
 						&cloudtrail.TrailEventSelectorDataResourceArgs{
 							Type: pulumi.String("AWS::S3::Object"),
@@ -385,8 +437,6 @@ func main() {
 							},
 						},
 					},
-					IncludeManagementEvents: pulumi.Bool(true),
-					ReadWriteType:           pulumi.String("All"),
 				},
 			},
 		})
@@ -405,14 +455,18 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example = aws.cloudtrail.Trail("example", event_selectors=[aws.cloudtrail.TrailEventSelectorArgs(
-    data_resources=[aws.cloudtrail.TrailEventSelectorDataResourceArgs(
-        type="AWS::S3::Object",
-        values=["arn:aws:s3:::"],
-    )],
-    include_management_events=True,
-    read_write_type="All",
-)])
+bucket = aws.s3.Bucket("bucket")
+example = aws.cloudtrail.Trail("example",
+    s3_bucket_name=bucket.id,
+    s3_key_prefix="prefix",
+    event_selectors=[aws.cloudtrail.TrailEventSelectorArgs(
+        read_write_type="All",
+        include_management_events=True,
+        data_resources=[aws.cloudtrail.TrailEventSelectorDataResourceArgs(
+            type="AWS::S3::Object",
+            values=["arn:aws:s3:::"],
+        )],
+    )])
 ```
 
 {{% /example %}}
@@ -423,14 +477,17 @@ example = aws.cloudtrail.Trail("example", event_selectors=[aws.cloudtrail.TrailE
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
+const bucket = new aws.s3.Bucket("bucket", {});
 const example = new aws.cloudtrail.Trail("example", {
+    s3BucketName: bucket.id,
+    s3KeyPrefix: "prefix",
     eventSelectors: [{
+        readWriteType: "All",
+        includeManagementEvents: true,
         dataResources: [{
             type: "AWS::S3::Object",
             values: ["arn:aws:s3:::"],
         }],
-        includeManagementEvents: true,
-        readWriteType: "All",
     }],
 });
 ```
@@ -453,10 +510,14 @@ class MyStack : Stack
         }));
         var example = new Aws.CloudTrail.Trail("example", new Aws.CloudTrail.TrailArgs
         {
+            S3BucketName = important_bucket.Apply(important_bucket => important_bucket.Id),
+            S3KeyPrefix = "prefix",
             EventSelectors = 
             {
                 new Aws.CloudTrail.Inputs.TrailEventSelectorArgs
                 {
+                    ReadWriteType = "All",
+                    IncludeManagementEvents = true,
                     DataResources = 
                     {
                         new Aws.CloudTrail.Inputs.TrailEventSelectorDataResourceArgs
@@ -468,8 +529,6 @@ class MyStack : Stack
                             },
                         },
                     },
-                    IncludeManagementEvents = true,
-                    ReadWriteType = "All",
                 },
             },
         });
@@ -501,8 +560,12 @@ func main() {
 			return err
 		}
 		_, err = cloudtrail.NewTrail(ctx, "example", &cloudtrail.TrailArgs{
+			S3BucketName: pulumi.String(important_bucket.Id),
+			S3KeyPrefix:  pulumi.String("prefix"),
 			EventSelectors: cloudtrail.TrailEventSelectorArray{
 				&cloudtrail.TrailEventSelectorArgs{
+					ReadWriteType:           pulumi.String("All"),
+					IncludeManagementEvents: pulumi.Bool(true),
 					DataResources: cloudtrail.TrailEventSelectorDataResourceArray{
 						&cloudtrail.TrailEventSelectorDataResourceArgs{
 							Type: pulumi.String("AWS::S3::Object"),
@@ -511,8 +574,6 @@ func main() {
 							},
 						},
 					},
-					IncludeManagementEvents: pulumi.Bool(true),
-					ReadWriteType:           pulumi.String("All"),
 				},
 			},
 		})
@@ -532,14 +593,17 @@ import pulumi
 import pulumi_aws as aws
 
 important_bucket = aws.s3.get_bucket(bucket="important-bucket")
-example = aws.cloudtrail.Trail("example", event_selectors=[aws.cloudtrail.TrailEventSelectorArgs(
-    data_resources=[aws.cloudtrail.TrailEventSelectorDataResourceArgs(
-        type="AWS::S3::Object",
-        values=[f"{important_bucket.arn}/"],
-    )],
-    include_management_events=True,
-    read_write_type="All",
-)])
+example = aws.cloudtrail.Trail("example",
+    s3_bucket_name=important_bucket.id,
+    s3_key_prefix="prefix",
+    event_selectors=[aws.cloudtrail.TrailEventSelectorArgs(
+        read_write_type="All",
+        include_management_events=True,
+        data_resources=[aws.cloudtrail.TrailEventSelectorDataResourceArgs(
+            type="AWS::S3::Object",
+            values=[f"{important_bucket.arn}/"],
+        )],
+    )])
 ```
 
 {{% /example %}}
@@ -550,19 +614,19 @@ example = aws.cloudtrail.Trail("example", event_selectors=[aws.cloudtrail.TrailE
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const important_bucket = pulumi.output(aws.s3.getBucket({
+const important-bucket = aws.s3.getBucket({
     bucket: "important-bucket",
-}, { async: true }));
+});
 const example = new aws.cloudtrail.Trail("example", {
+    s3BucketName: important_bucket.then(important_bucket => important_bucket.id),
+    s3KeyPrefix: "prefix",
     eventSelectors: [{
+        readWriteType: "All",
+        includeManagementEvents: true,
         dataResources: [{
             type: "AWS::S3::Object",
-            // Make sure to append a trailing '/' to your ARN if you want
-            // to monitor all objects in a bucket.
-            values: [pulumi.interpolate`${important_bucket.arn}/`],
+            values: [important_bucket.then(important_bucket => `${important_bucket.arn}/`)],
         }],
-        includeManagementEvents: true,
-        readWriteType: "All",
     }],
 });
 ```
@@ -579,11 +643,54 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        var current = Output.Create(Aws.GetPartition.InvokeAsync());
         var exampleLogGroup = new Aws.CloudWatch.LogGroup("exampleLogGroup", new Aws.CloudWatch.LogGroupArgs
+        {
+        });
+        var testRole = new Aws.Iam.Role("testRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = current.Apply(current => @$"{{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {{
+      ""Sid"": """",
+      ""Effect"": ""Allow"",
+      ""Principal"": {{
+        ""Service"": ""cloudtrail.{current.DnsSuffix}""
+      }},
+      ""Action"": ""sts:AssumeRole""
+    }}
+  ]
+}}
+"),
+        });
+        var testRolePolicy = new Aws.Iam.RolePolicy("testRolePolicy", new Aws.Iam.RolePolicyArgs
+        {
+            Role = testRole.Id,
+            Policy = @$"{{
+  ""Version"": ""2012-10-17"",
+  ""Statement"": [
+    {{
+      ""Sid"": ""AWSCloudTrailCreateLogStream"",
+      ""Effect"": ""Allow"",
+      ""Action"": [
+        ""logs:CreateLogStream"",
+        ""logs:PutLogEvents""
+      ],
+      ""Resource"": ""{aws_cloudwatch_log_group.Test.Arn}:*""
+    }}
+  ]
+}}
+",
+        });
+        var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
         {
         });
         var exampleTrail = new Aws.CloudTrail.Trail("exampleTrail", new Aws.CloudTrail.TrailArgs
         {
+            S3BucketName = data.Aws_s3_bucket.Important_bucket.Id,
+            S3KeyPrefix = "prefix",
+            CloudWatchLogsRoleArn = testRole.Arn,
             CloudWatchLogsGroupArn = exampleLogGroup.Arn.Apply(arn => $"{arn}:*"),
         });
         // CloudTrail requires the Log Stream wildcard
@@ -601,18 +708,45 @@ package main
 import (
 	"fmt"
 
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail"
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := aws.GetPartition(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
 		exampleLogGroup, err := cloudwatch.NewLogGroup(ctx, "exampleLogGroup", nil)
 		if err != nil {
 			return err
 		}
+		testRole, err := iam.NewRole(ctx, "testRole", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Sid\": \"\",\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"Service\": \"cloudtrail.", current.DnsSuffix, "\"\n", "      },\n", "      \"Action\": \"sts:AssumeRole\"\n", "    }\n", "  ]\n", "}\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewRolePolicy(ctx, "testRolePolicy", &iam.RolePolicyArgs{
+			Role:   testRole.ID(),
+			Policy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Sid\": \"AWSCloudTrailCreateLogStream\",\n", "      \"Effect\": \"Allow\",\n", "      \"Action\": [\n", "        \"logs:CreateLogStream\",\n", "        \"logs:PutLogEvents\"\n", "      ],\n", "      \"Resource\": \"", aws_cloudwatch_log_group.Test.Arn, ":*\"\n", "    }\n", "  ]\n", "}\n")),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = s3.NewBucket(ctx, "bucket", nil)
+		if err != nil {
+			return err
+		}
 		_, err = cloudtrail.NewTrail(ctx, "exampleTrail", &cloudtrail.TrailArgs{
+			S3BucketName:          pulumi.Any(data.Aws_s3_bucket.Important - bucket.Id),
+			S3KeyPrefix:           pulumi.String("prefix"),
+			CloudWatchLogsRoleArn: testRole.Arn,
 			CloudWatchLogsGroupArn: exampleLogGroup.Arn.ApplyT(func(arn string) (string, error) {
 				return fmt.Sprintf("%v%v", arn, ":*"), nil
 			}).(pulumi.StringOutput),
@@ -632,8 +766,45 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
+current = aws.get_partition()
 example_log_group = aws.cloudwatch.LogGroup("exampleLogGroup")
-example_trail = aws.cloudtrail.Trail("exampleTrail", cloud_watch_logs_group_arn=example_log_group.arn.apply(lambda arn: f"{arn}:*"))
+test_role = aws.iam.Role("testRole", assume_role_policy=f"""{{
+  "Version": "2012-10-17",
+  "Statement": [
+    {{
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {{
+        "Service": "cloudtrail.{current.dns_suffix}"
+      }},
+      "Action": "sts:AssumeRole"
+    }}
+  ]
+}}
+""")
+test_role_policy = aws.iam.RolePolicy("testRolePolicy",
+    role=test_role.id,
+    policy=f"""{{
+  "Version": "2012-10-17",
+  "Statement": [
+    {{
+      "Sid": "AWSCloudTrailCreateLogStream",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "{aws_cloudwatch_log_group["test"]["arn"]}:*"
+    }}
+  ]
+}}
+""")
+bucket = aws.s3.Bucket("bucket")
+example_trail = aws.cloudtrail.Trail("exampleTrail",
+    s3_bucket_name=data["aws_s3_bucket"]["important-bucket"]["id"],
+    s3_key_prefix="prefix",
+    cloud_watch_logs_role_arn=test_role.arn,
+    cloud_watch_logs_group_arn=example_log_group.arn.apply(lambda arn: f"{arn}:*"))
 # CloudTrail requires the Log Stream wildcard
 ```
 
@@ -645,10 +816,48 @@ example_trail = aws.cloudtrail.Trail("exampleTrail", cloud_watch_logs_group_arn=
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleLogGroup = new aws.cloudwatch.LogGroup("example", {});
-const exampleTrail = new aws.cloudtrail.Trail("example", {
+const current = aws.getPartition({});
+const exampleLogGroup = new aws.cloudwatch.LogGroup("exampleLogGroup", {});
+const testRole = new aws.iam.Role("testRole", {assumeRolePolicy: current.then(current => `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "cloudtrail.${current.dnsSuffix}"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+`)});
+const testRolePolicy = new aws.iam.RolePolicy("testRolePolicy", {
+    role: testRole.id,
+    policy: `{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AWSCloudTrailCreateLogStream",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "${aws_cloudwatch_log_group.test.arn}:*"
+    }
+  ]
+}
+`,
+});
+const bucket = new aws.s3.Bucket("bucket", {});
+const exampleTrail = new aws.cloudtrail.Trail("exampleTrail", {
+    s3BucketName: data.aws_s3_bucket["important-bucket"].id,
+    s3KeyPrefix: "prefix",
+    cloudWatchLogsRoleArn: testRole.arn,
     cloudWatchLogsGroupArn: pulumi.interpolate`${exampleLogGroup.arn}:*`,
 });
+// CloudTrail requires the Log Stream wildcard
 ```
 
 {{% /example %}}
@@ -661,19 +870,19 @@ const exampleTrail = new aws.cloudtrail.Trail("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudtrail/#Trail">Trail</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudtrail/#TrailArgs">TrailArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Trail</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TrailArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudtrail/#pulumi_aws.cloudtrail.Trail">Trail</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_watch_logs_group_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud_watch_logs_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_log_file_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_selectors</span><span class="p">:</span> <span class="nx">Optional[Sequence[TrailEventSelectorArgs]]</span> = None<span class="p">, </span><span class="nx">include_global_service_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">insight_selectors</span><span class="p">:</span> <span class="nx">Optional[Sequence[TrailInsightSelectorArgs]]</span> = None<span class="p">, </span><span class="nx">is_multi_region_trail</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_organization_trail</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_bucket_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_key_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sns_topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Trail</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_watch_logs_group_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud_watch_logs_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_log_file_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_logging</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">event_selectors</span><span class="p">:</span> <span class="nx">Optional[Sequence[TrailEventSelectorArgs]]</span> = None<span class="p">, </span><span class="nx">include_global_service_events</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">insight_selectors</span><span class="p">:</span> <span class="nx">Optional[Sequence[TrailInsightSelectorArgs]]</span> = None<span class="p">, </span><span class="nx">is_multi_region_trail</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_organization_trail</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_bucket_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">s3_key_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sns_topic_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail?tab=doc#Trail">NewTrail</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail?tab=doc#TrailArgs">TrailArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail?tab=doc#Trail">Trail</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrail</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TrailArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trail</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudTrail.Trail.html">Trail</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudTrail.TrailArgs.html">TrailArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Trail</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TrailArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -694,7 +903,7 @@ const exampleTrail = new aws.cloudtrail.Trail("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudtrail/#TrailArgs">TrailArgs</a></span>
+        <span class="property-type"><a href="#inputs">TrailArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -763,7 +972,7 @@ const exampleTrail = new aws.cloudtrail.Trail("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail?tab=doc#TrailArgs">TrailArgs</a></span>
+        <span class="property-type"><a href="#inputs">TrailArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -802,7 +1011,7 @@ const exampleTrail = new aws.cloudtrail.Trail("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudTrail.TrailArgs.html">TrailArgs</a></span>
+        <span class="property-type"><a href="#inputs">TrailArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -825,11 +1034,11 @@ const exampleTrail = new aws.cloudtrail.Trail("example", {
 
 ## Trail Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Trail resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Trail resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1644,7 +1853,7 @@ Get an existing Trail resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudtrail/#TrailState">TrailState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudtrail/#Trail">Trail</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">TrailState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Trail</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1653,11 +1862,11 @@ Get an existing Trail resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrail<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail?tab=doc#TrailState">TrailState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail?tab=doc#Trail">Trail</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrail<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">TrailState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trail</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudTrail.Trail.html">Trail</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudTrail.TrailState.html">TrailState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Trail</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">TrailState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2505,18 +2714,6 @@ defined for notification of log file delivery.
 
 
 <h4 id="traileventselector">Trail<wbr>Event<wbr>Selector</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TrailEventSelector">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TrailEventSelector">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail?tab=doc#TrailEventSelectorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail?tab=doc#TrailEventSelectorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudTrail.Inputs.TrailEventSelectorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudTrail.Outputs.TrailEventSelector.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2663,18 +2860,6 @@ defined for notification of log file delivery.
 {{% /choosable %}}
 
 <h4 id="traileventselectordataresource">Trail<wbr>Event<wbr>Selector<wbr>Data<wbr>Resource</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TrailEventSelectorDataResource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TrailEventSelectorDataResource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail?tab=doc#TrailEventSelectorDataResourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail?tab=doc#TrailEventSelectorDataResourceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudTrail.Inputs.TrailEventSelectorDataResourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudTrail.Outputs.TrailEventSelectorDataResource.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2781,18 +2966,6 @@ defined for notification of log file delivery.
 {{% /choosable %}}
 
 <h4 id="trailinsightselector">Trail<wbr>Insight<wbr>Selector</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TrailInsightSelector">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TrailInsightSelector">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail?tab=doc#TrailInsightSelectorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudtrail?tab=doc#TrailInsightSelectorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudTrail.Inputs.TrailInsightSelectorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudTrail.Outputs.TrailInsightSelector.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

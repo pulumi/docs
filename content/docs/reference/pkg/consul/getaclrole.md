@@ -1,8 +1,8 @@
 
 ---
-title: "GetAclRole"
-title_tag: "Function GetAclRole | Package Consul"
-meta_desc: "Explore the GetAclRole function of the Consul package, including examples, input properties, output properties, and supporting types. The `consul.AclRole` data source returns the information related to a"
+title: "getAclRole"
+title_tag: "consul.getAclRole"
+meta_desc: "Documentation for the consul.getAclRole function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -95,13 +95,13 @@ export const consulAclRole = test.then(test => test.id);
 {{% /examples %}}
 
 
-## Using GetAclRole {#using}
+## Using getAclRole {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAclRole<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#GetAclRoleArgs">GetAclRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#GetAclRoleResult">GetAclRoleResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAclRole<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAclRoleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAclRoleResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -111,7 +111,7 @@ export const consulAclRole = test.then(test => test.id);
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAclRole<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#LookupAclRoleArgs">LookupAclRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#LookupAclRoleResult">LookupAclRoleResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAclRole<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAclRoleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAclRoleResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupAclRole` in the Go SDK.
 
@@ -120,7 +120,7 @@ export const consulAclRole = test.then(test => test.id);
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAclRole </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.GetAclRoleResult.html">GetAclRoleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.GetAclRoleArgs.html">GetAclRoleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAclRoleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAclRoleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -364,7 +364,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 
 
-## GetAclRole Result {#result}
+## getAclRole Result {#result}
 
 The following output properties are available:
 
@@ -641,16 +641,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 
 <h4 id="getaclrolepolicy">Get<wbr>Acl<wbr>Role<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/input/#GetAclRolePolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetAclRolePolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#GetAclRolePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#GetAclRolePolicy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Inputs.GetAclRolePolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Outputs.GetAclRolePolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -755,16 +745,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 {{% /choosable %}}
 
 <h4 id="getaclroleserviceidentity">Get<wbr>Acl<wbr>Role<wbr>Service<wbr>Identity</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/input/#GetAclRoleServiceIdentity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetAclRoleServiceIdentity">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#GetAclRoleServiceIdentityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#GetAclRoleServiceIdentity">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Inputs.GetAclRoleServiceIdentityArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Outputs.GetAclRoleServiceIdentity.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

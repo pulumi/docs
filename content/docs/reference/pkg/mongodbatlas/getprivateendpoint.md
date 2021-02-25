@@ -1,8 +1,8 @@
 
 ---
-title: "GetPrivateEndpoint"
-title_tag: "Function GetPrivateEndpoint | Package MongoDB Atlas"
-meta_desc: "Explore the GetPrivateEndpoint function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.PrivateEndpoint` describe a Private Endpoint. This represents a Private Endpoint Connection to retrieve details regarding a private endpoint by id in an Atlas project"
+title: "getPrivateEndpoint"
+title_tag: "mongodbatlas.getPrivateEndpoint"
+meta_desc: "Documentation for the mongodbatlas.getPrivateEndpoint function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -57,13 +57,13 @@ const testPrivateEndpoint = pulumi.all([testMongodbatlasPrivateEndpoint.privateL
 {{% /examples %}}
 
 
-## Using GetPrivateEndpoint {#using}
+## Using getPrivateEndpoint {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPrivateEndpoint<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetPrivateEndpointArgs">GetPrivateEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetPrivateEndpointResult">GetPrivateEndpointResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPrivateEndpoint<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPrivateEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPrivateEndpointResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -73,7 +73,7 @@ const testPrivateEndpoint = pulumi.all([testMongodbatlasPrivateEndpoint.privateL
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPrivateEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#LookupPrivateEndpointArgs">LookupPrivateEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#LookupPrivateEndpointResult">LookupPrivateEndpointResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPrivateEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPrivateEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPrivateEndpointResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPrivateEndpoint` in the Go SDK.
 
@@ -82,7 +82,7 @@ const testPrivateEndpoint = pulumi.all([testMongodbatlasPrivateEndpoint.privateL
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPrivateEndpoint </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetPrivateEndpointResult.html">GetPrivateEndpointResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetPrivateEndpointArgs.html">GetPrivateEndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPrivateEndpointResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPrivateEndpointArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -198,7 +198,7 @@ The following arguments are supported:
 
 
 
-## GetPrivateEndpoint Result {#result}
+## getPrivateEndpoint Result {#result}
 
 The following output properties are available:
 
@@ -273,8 +273,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the AWS PrivateLink connection.
-Returns one of the following values:
+    <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
+AWS:
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -348,8 +348,8 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the AWS PrivateLink connection.
-Returns one of the following values:
+    <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
+AWS:
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -423,8 +423,8 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the AWS PrivateLink connection.
-Returns one of the following values:
+    <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
+AWS:
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -498,8 +498,8 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of the AWS PrivateLink connection.
-Returns one of the following values:
+    <dd>{{% md %}}Status of the AWS PrivateLink connection or Status of the Azure Private Link Service. Atlas returns one of the following values:
+AWS:
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

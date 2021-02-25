@@ -1,8 +1,8 @@
 
 ---
-title: "GetAckService"
-title_tag: "Function GetAckService | Module cs | Package AliCloud"
-meta_desc: "Explore the GetAckService function of the cs module, including examples, input properties, output properties, and supporting types. Using this data source can open Container Service (CS) service automatically. If the service has been opened, it will return opened."
+title: "getAckService"
+title_tag: "alicloud.cs.getAckService"
+meta_desc: "Documentation for the alicloud.cs.getAckService function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -34,6 +34,7 @@ class MyStack : Stack
         var open = Output.Create(AliCloud.CS.GetAckService.InvokeAsync(new AliCloud.CS.GetAckServiceArgs
         {
             Enable = "On",
+            Type = "propayasgo",
         }));
     }
 
@@ -56,6 +57,7 @@ func main() {
 		opt0 := "On"
 		_, err := cs.GetAckService(ctx, &cs.GetAckServiceArgs{
 			Enable: &opt0,
+			Type:   "propayasgo",
 		}, nil)
 		if err != nil {
 			return err
@@ -72,7 +74,8 @@ func main() {
 import pulumi
 import pulumi_alicloud as alicloud
 
-open = alicloud.cs.get_ack_service(enable="On")
+open = alicloud.cs.get_ack_service(enable="On",
+    type="propayasgo")
 ```
 
 {{% /example %}}
@@ -85,6 +88,7 @@ import * as alicloud from "@pulumi/alicloud";
 
 const open = pulumi.output(alicloud.cs.getAckService({
     enable: "On",
+    type: "propayasgo",
 }, { async: true }));
 ```
 
@@ -93,30 +97,32 @@ const open = pulumi.output(alicloud.cs.getAckService({
 {{% /examples %}}
 
 
-## Using GetAckService {#using}
+## Using getAckService {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAckService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#GetAckServiceArgs">GetAckServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#GetAckServiceResult">GetAckServiceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAckService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAckServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAckServiceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_ack_service(</span><span class="nx">enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAckServiceResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_ack_service(</span><span class="nx">enable</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAckServiceResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAckService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#GetAckServiceArgs">GetAckServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#GetAckServiceResult">GetAckServiceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAckService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAckServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAckServiceResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAckService` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAckService </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cs.GetAckServiceResult.html">GetAckServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.GetAckServiceArgs.html">GetAckServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAckServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAckServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -128,6 +134,16 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Types of services opened. Valid values: `propayasgo`: Container service ack Pro managed version, `edgepayasgo`: Edge container service, `gspayasgo`: Gene computing services.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="enable_csharp">
@@ -144,6 +160,16 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Types of services opened. Valid values: `propayasgo`: Container service ack Pro managed version, `edgepayasgo`: Edge container service, `gspayasgo`: Gene computing services.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="enable_go">
@@ -160,6 +186,16 @@ The following arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Types of services opened. Valid values: `propayasgo`: Container service ack Pro managed version, `edgepayasgo`: Edge container service, `gspayasgo`: Gene computing services.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="enable_nodejs">
@@ -176,6 +212,16 @@ The following arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Types of services opened. Valid values: `propayasgo`: Container service ack Pro managed version, `edgepayasgo`: Edge container service, `gspayasgo`: Gene computing services.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="enable_python">
@@ -192,7 +238,7 @@ The following arguments are supported:
 
 
 
-## GetAckService Result {#result}
+## getAckService Result {#result}
 
 The following output properties are available:
 
@@ -221,6 +267,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The current service enable status.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="enable_csharp">
@@ -258,6 +313,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="enable_go">
 <a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
 </span>
@@ -293,6 +357,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="enable_nodejs">
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
 </span>
@@ -326,6 +399,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The current service enable status.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="enable_python">

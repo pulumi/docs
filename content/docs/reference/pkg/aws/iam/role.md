@@ -12,42 +12,157 @@ meta_desc: "Documentation for the aws.iam.Role resource with examples, input pro
 
 Provides an IAM role.
 
-> *NOTE:* If policies are attached to the role via the `aws.iam.PolicyAttachment` resource and you are modifying the role `name` or `path`, the `force_detach_policies` argument must be set to `true` and applied before attempting the operation otherwise you will encounter a `DeleteConflict` error. The `aws.iam.RolePolicyAttachment` resource (recommended) does not have this requirement.
-## Example of Using Data Source for Assume Role Policy
+> **NOTE:** If policies are attached to the role via the `aws.iam.PolicyAttachment` resource and you are modifying the role `name` or `path`, the `force_detach_policies` argument must be set to `true` and applied before attempting the operation otherwise you will encounter a `DeleteConflict` error. The `aws.iam.RolePolicyAttachment` resource does not have this requirement.
+
+> **NOTE:** If you use this resource's `managed_policy_arns` argument or `inline_policy` configuration blocks, this resource will take over exclusive management of the role's respective policy types (e.g., both policy types if both arguments are used). These arguments are incompatible with other ways of managing a role's policies, such as `aws.iam.PolicyAttachment`, `aws.iam.RolePolicyAttachment`, and `aws.iam.RolePolicy`. If you attempt to manage a role's policies by multiple means, you will get resource cycling and/or errors.
+
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Basic Example
+{{% example csharp %}}
+```csharp
+using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testRole = new Aws.Iam.Role("testRole", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = JsonSerializer.Serialize(new Dictionary<string, object?>
+            {
+                { "Version", "2012-10-17" },
+                { "Statement", new[]
+                    {
+                        new Dictionary<string, object?>
+                        {
+                            { "Action", "sts:AssumeRole" },
+                            { "Effect", "Allow" },
+                            { "Sid", "" },
+                            { "Principal", new Dictionary<string, object?>
+                            {
+                                { "Service", "ec2.amazonaws.com" },
+                            } },
+                        },
+                    }
+                 },
+            }),
+            Tags = 
+            {
+                { "tag-key", "tag-value" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"encoding/json"
+
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		tmpJSON0, err := json.Marshal(map[string]interface{}{
+			"Version": "2012-10-17",
+			"Statement": []map[string]interface{}{
+				map[string]interface{}{
+					"Action": "sts:AssumeRole",
+					"Effect": "Allow",
+					"Sid":    "",
+					"Principal": map[string]interface{}{
+						"Service": "ec2.amazonaws.com",
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		json0 := string(tmpJSON0)
+		_, err := iam.NewRole(ctx, "testRole", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.String(json0),
+			Tags: pulumi.StringMap{
+				"tag-key": pulumi.String("tag-value"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import json
+import pulumi_aws as aws
+
+test_role = aws.iam.Role("testRole",
+    assume_role_policy=json.dumps({
+        "Version": "2012-10-17",
+        "Statement": [{
+            "Action": "sts:AssumeRole",
+            "Effect": "Allow",
+            "Sid": "",
+            "Principal": {
+                "Service": "ec2.amazonaws.com",
+            },
+        }],
+    }),
+    tags={
+        "tag-key": "tag-value",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const instance-assume-role-policy = aws.iam.getPolicyDocument({
-    statements: [{
-        actions: ["sts:AssumeRole"],
-        principals: [{
-            type: "Service",
-            identifiers: ["ec2.amazonaws.com"],
+const testRole = new aws.iam.Role("testRole", {
+    assumeRolePolicy: JSON.stringify({
+        Version: "2012-10-17",
+        Statement: [{
+            Action: "sts:AssumeRole",
+            Effect: "Allow",
+            Sid: "",
+            Principal: {
+                Service: "ec2.amazonaws.com",
+            },
         }],
-    }],
-});
-const instance = new aws.iam.Role("instance", {
-    path: "/system/",
-    assumeRolePolicy: instance_assume_role_policy.then(instance_assume_role_policy => instance_assume_role_policy.json),
+    }),
+    tags: {
+        "tag-key": "tag-value",
+    },
 });
 ```
-```python
-import pulumi
-import pulumi_aws as aws
 
-instance_assume_role_policy = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
-    actions=["sts:AssumeRole"],
-    principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
-        type="Service",
-        identifiers=["ec2.amazonaws.com"],
-    )],
-)])
-instance = aws.iam.Role("instance",
-    path="/system/",
-    assume_role_policy=instance_assume_role_policy.json)
-```
+{{% /example %}}
+
+### Example of Using Data Source for Assume Role Policy
+{{% example csharp %}}
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -89,6 +204,10 @@ class MyStack : Stack
 
 }
 ```
+
+{{% /example %}}
+
+{{% example go %}}
 ```go
 package main
 
@@ -131,11 +250,194 @@ func main() {
 }
 ```
 
-{{% examples %}}
-## Example Usage
+{{% /example %}}
 
-{{< chooser language "typescript,python,go,csharp" / >}}
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
 
+instance_assume_role_policy = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+    actions=["sts:AssumeRole"],
+    principals=[aws.iam.GetPolicyDocumentStatementPrincipalArgs(
+        type="Service",
+        identifiers=["ec2.amazonaws.com"],
+    )],
+)])
+instance = aws.iam.Role("instance",
+    path="/system/",
+    assume_role_policy=instance_assume_role_policy.json)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const instance-assume-role-policy = aws.iam.getPolicyDocument({
+    statements: [{
+        actions: ["sts:AssumeRole"],
+        principals: [{
+            type: "Service",
+            identifiers: ["ec2.amazonaws.com"],
+        }],
+    }],
+});
+const instance = new aws.iam.Role("instance", {
+    path: "/system/",
+    assumeRolePolicy: instance_assume_role_policy.then(instance_assume_role_policy => instance_assume_role_policy.json),
+});
+```
+
+{{% /example %}}
+
+### Example of Exclusive Inline Policies
+{{% example csharp %}}
+```csharp
+using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var inlinePolicy = Output.Create(Aws.Iam.GetPolicyDocument.InvokeAsync(new Aws.Iam.GetPolicyDocumentArgs
+        {
+            Statements = 
+            {
+                new Aws.Iam.Inputs.GetPolicyDocumentStatementArgs
+                {
+                    Actions = 
+                    {
+                        "ec2:DescribeAccountAttributes",
+                    },
+                    Resources = 
+                    {
+                        "*",
+                    },
+                },
+            },
+        }));
+        var example = new Aws.Iam.Role("example", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = data.Aws_iam_policy_document.Instance_assume_role_policy.Json,
+            InlinePolicies = 
+            {
+                new Aws.Iam.Inputs.RoleInlinePolicyArgs
+                {
+                    Name = "my_inline_policy",
+                    Policy = JsonSerializer.Serialize(new Dictionary<string, object?>
+                    {
+                        { "Version", "2012-10-17" },
+                        { "Statement", new[]
+                            {
+                                new Dictionary<string, object?>
+                                {
+                                    { "Action", new[]
+                                        {
+                                            "ec2:Describe*",
+                                        }
+                                     },
+                                    { "Effect", "Allow" },
+                                    { "Resource", "*" },
+                                },
+                            }
+                         },
+                    }),
+                },
+                new Aws.Iam.Inputs.RoleInlinePolicyArgs
+                {
+                    Name = "policy-8675309",
+                    Policy = inlinePolicy.Apply(inlinePolicy => inlinePolicy.Json),
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import json
+import pulumi_aws as aws
+
+inline_policy = aws.iam.get_policy_document(statements=[aws.iam.GetPolicyDocumentStatementArgs(
+    actions=["ec2:DescribeAccountAttributes"],
+    resources=["*"],
+)])
+example = aws.iam.Role("example",
+    assume_role_policy=data["aws_iam_policy_document"]["instance_assume_role_policy"]["json"],
+    inline_policies=[
+        aws.iam.RoleInlinePolicyArgs(
+            name="my_inline_policy",
+            policy=json.dumps({
+                "Version": "2012-10-17",
+                "Statement": [{
+                    "Action": ["ec2:Describe*"],
+                    "Effect": "Allow",
+                    "Resource": "*",
+                }],
+            }),
+        ),
+        aws.iam.RoleInlinePolicyArgs(
+            name="policy-8675309",
+            policy=inline_policy.json,
+        ),
+    ])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const inlinePolicy = aws.iam.getPolicyDocument({
+    statements: [{
+        actions: ["ec2:DescribeAccountAttributes"],
+        resources: ["*"],
+    }],
+});
+const example = new aws.iam.Role("example", {
+    assumeRolePolicy: data.aws_iam_policy_document.instance_assume_role_policy.json,
+    inlinePolicies: [
+        {
+            name: "my_inline_policy",
+            policy: JSON.stringify({
+                Version: "2012-10-17",
+                Statement: [{
+                    Action: ["ec2:Describe*"],
+                    Effect: "Allow",
+                    Resource: "*",
+                }],
+            }),
+        },
+        {
+            name: "policy-8675309",
+            policy: inlinePolicy.then(inlinePolicy => inlinePolicy.json),
+        },
+    ],
+});
+```
+
+{{% /example %}}
+
+### Example of Removing Inline Policies
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -145,26 +447,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var testRole = new Aws.Iam.Role("testRole", new Aws.Iam.RoleArgs
+        var example = new Aws.Iam.Role("example", new Aws.Iam.RoleArgs
         {
-            AssumeRolePolicy = @"{
-  ""Version"": ""2012-10-17"",
-  ""Statement"": [
-    {
-      ""Action"": ""sts:AssumeRole"",
-      ""Principal"": {
-        ""Service"": ""ec2.amazonaws.com""
-      },
-      ""Effect"": ""Allow"",
-      ""Sid"": """"
-    }
-  ]
-}
-
-",
-            Tags = 
+            AssumeRolePolicy = data.Aws_iam_policy_document.Instance_assume_role_policy.Json,
+            InlinePolicies = 
             {
-                { "tag-key", "tag-value" },
+                ,
             },
         });
     }
@@ -179,18 +467,16 @@ class MyStack : Stack
 package main
 
 import (
-	"fmt"
-
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := iam.NewRole(ctx, "testRole", &iam.RoleArgs{
-			AssumeRolePolicy: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Action\": \"sts:AssumeRole\",\n", "      \"Principal\": {\n", "        \"Service\": \"ec2.amazonaws.com\"\n", "      },\n", "      \"Effect\": \"Allow\",\n", "      \"Sid\": \"\"\n", "    }\n", "  ]\n", "}\n", "\n")),
-			Tags: pulumi.StringMap{
-				"tag-key": pulumi.String("tag-value"),
+		_, err := iam.NewRole(ctx, "example", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.Any(data.Aws_iam_policy_document.Instance_assume_role_policy.Json),
+			InlinePolicies: iam.RoleInlinePolicyArray{
+				nil,
 			},
 		})
 		if err != nil {
@@ -208,25 +494,9 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-test_role = aws.iam.Role("testRole",
-    assume_role_policy="""{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "ec2.amazonaws.com"
-      },
-      "Effect": "Allow",
-      "Sid": ""
-    }
-  ]
-}
-
-""",
-    tags={
-        "tag-key": "tag-value",
-    })
+example = aws.iam.Role("example",
+    assume_role_policy=data["aws_iam_policy_document"]["instance_assume_role_policy"]["json"],
+    inline_policies=[aws.iam.RoleInlinePolicyArgs()])
 ```
 
 {{% /example %}}
@@ -237,24 +507,303 @@ test_role = aws.iam.Role("testRole",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testRole = new aws.iam.Role("test_role", {
-    assumeRolePolicy: `{
-  "Version": "2012-10-17",
-  "Statement": [
+const example = new aws.iam.Role("example", {
+    assumeRolePolicy: data.aws_iam_policy_document.instance_assume_role_policy.json,
+    inlinePolicies: [{}],
+});
+```
+
+{{% /example %}}
+
+### Example of Exclusive Managed Policies
+{{% example csharp %}}
+```csharp
+using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
     {
-      "Action": "sts:AssumeRole",
-      "Principal": {
-        "Service": "ec2.amazonaws.com"
-      },
-      "Effect": "Allow",
-      "Sid": ""
+        var policyOne = new Aws.Iam.Policy("policyOne", new Aws.Iam.PolicyArgs
+        {
+            Policy = JsonSerializer.Serialize(new Dictionary<string, object?>
+            {
+                { "Version", "2012-10-17" },
+                { "Statement", new[]
+                    {
+                        new Dictionary<string, object?>
+                        {
+                            { "Action", new[]
+                                {
+                                    "ec2:Describe*",
+                                }
+                             },
+                            { "Effect", "Allow" },
+                            { "Resource", "*" },
+                        },
+                    }
+                 },
+            }),
+        });
+        var policyTwo = new Aws.Iam.Policy("policyTwo", new Aws.Iam.PolicyArgs
+        {
+            Policy = JsonSerializer.Serialize(new Dictionary<string, object?>
+            {
+                { "Version", "2012-10-17" },
+                { "Statement", new[]
+                    {
+                        new Dictionary<string, object?>
+                        {
+                            { "Action", new[]
+                                {
+                                    "s3:ListAllMyBuckets",
+                                    "s3:ListBucket",
+                                    "s3:HeadBucket",
+                                }
+                             },
+                            { "Effect", "Allow" },
+                            { "Resource", "*" },
+                        },
+                    }
+                 },
+            }),
+        });
+        var example = new Aws.Iam.Role("example", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = data.Aws_iam_policy_document.Instance_assume_role_policy.Json,
+            ManagedPolicyArns = 
+            {
+                policyOne.Arn,
+                policyTwo.Arn,
+            },
+        });
     }
-  ]
+
 }
-`,
-    tags: {
-        "tag-key": "tag-value",
-    },
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"encoding/json"
+
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		tmpJSON0, err := json.Marshal(map[string]interface{}{
+			"Version": "2012-10-17",
+			"Statement": []map[string]interface{}{
+				map[string]interface{}{
+					"Action": []string{
+						"ec2:Describe*",
+					},
+					"Effect":   "Allow",
+					"Resource": "*",
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		json0 := string(tmpJSON0)
+		policyOne, err := iam.NewPolicy(ctx, "policyOne", &iam.PolicyArgs{
+			Policy: pulumi.String(json0),
+		})
+		if err != nil {
+			return err
+		}
+		tmpJSON1, err := json.Marshal(map[string]interface{}{
+			"Version": "2012-10-17",
+			"Statement": []map[string]interface{}{
+				map[string]interface{}{
+					"Action": []string{
+						"s3:ListAllMyBuckets",
+						"s3:ListBucket",
+						"s3:HeadBucket",
+					},
+					"Effect":   "Allow",
+					"Resource": "*",
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		json1 := string(tmpJSON1)
+		policyTwo, err := iam.NewPolicy(ctx, "policyTwo", &iam.PolicyArgs{
+			Policy: pulumi.String(json1),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = iam.NewRole(ctx, "example", &iam.RoleArgs{
+			AssumeRolePolicy: pulumi.Any(data.Aws_iam_policy_document.Instance_assume_role_policy.Json),
+			ManagedPolicyArns: pulumi.StringArray{
+				policyOne.Arn,
+				policyTwo.Arn,
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import json
+import pulumi_aws as aws
+
+policy_one = aws.iam.Policy("policyOne", policy=json.dumps({
+    "Version": "2012-10-17",
+    "Statement": [{
+        "Action": ["ec2:Describe*"],
+        "Effect": "Allow",
+        "Resource": "*",
+    }],
+}))
+policy_two = aws.iam.Policy("policyTwo", policy=json.dumps({
+    "Version": "2012-10-17",
+    "Statement": [{
+        "Action": [
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket",
+            "s3:HeadBucket",
+        ],
+        "Effect": "Allow",
+        "Resource": "*",
+    }],
+}))
+example = aws.iam.Role("example",
+    assume_role_policy=data["aws_iam_policy_document"]["instance_assume_role_policy"]["json"],
+    managed_policy_arns=[
+        policy_one.arn,
+        policy_two.arn,
+    ])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const policyOne = new aws.iam.Policy("policyOne", {policy: JSON.stringify({
+    Version: "2012-10-17",
+    Statement: [{
+        Action: ["ec2:Describe*"],
+        Effect: "Allow",
+        Resource: "*",
+    }],
+})});
+const policyTwo = new aws.iam.Policy("policyTwo", {policy: JSON.stringify({
+    Version: "2012-10-17",
+    Statement: [{
+        Action: [
+            "s3:ListAllMyBuckets",
+            "s3:ListBucket",
+            "s3:HeadBucket",
+        ],
+        Effect: "Allow",
+        Resource: "*",
+    }],
+})});
+const example = new aws.iam.Role("example", {
+    assumeRolePolicy: data.aws_iam_policy_document.instance_assume_role_policy.json,
+    managedPolicyArns: [
+        policyOne.arn,
+        policyTwo.arn,
+    ],
+});
+```
+
+{{% /example %}}
+
+### Example of Removing Managed Policies
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.Iam.Role("example", new Aws.Iam.RoleArgs
+        {
+            AssumeRolePolicy = data.Aws_iam_policy_document.Instance_assume_role_policy.Json,
+            ManagedPolicyArns = {},
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := iam.NewRole(ctx, "example", &iam.RoleArgs{
+			AssumeRolePolicy:  pulumi.Any(data.Aws_iam_policy_document.Instance_assume_role_policy.Json),
+			ManagedPolicyArns: []interface{}{},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.iam.Role("example",
+    assume_role_policy=data["aws_iam_policy_document"]["instance_assume_role_policy"]["json"],
+    managed_policy_arns=[])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.iam.Role("example", {
+    assumeRolePolicy: data.aws_iam_policy_document.instance_assume_role_policy.json,
+    managedPolicyArns: [],
 });
 ```
 
@@ -268,19 +817,19 @@ const testRole = new aws.iam.Role("test_role", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#Role">Role</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#RoleArgs">RoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Role</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">RoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/iam/#pulumi_aws.iam.Role">Role</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assume_role_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_detach_policies</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_session_duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">permissions_boundary</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Role</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">assume_role_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_detach_policies</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">inline_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[RoleInlinePolicyArgs]]</span> = None<span class="p">, </span><span class="nx">managed_policy_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">max_session_duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">permissions_boundary</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#Role">NewRole</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#RoleArgs">RoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#Role">Role</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewRole</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">RoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Role</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.Role.html">Role</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.RoleArgs.html">RoleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Role</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">RoleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -301,7 +850,7 @@ const testRole = new aws.iam.Role("test_role", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#RoleArgs">RoleArgs</a></span>
+        <span class="property-type"><a href="#inputs">RoleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -370,7 +919,7 @@ const testRole = new aws.iam.Role("test_role", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#RoleArgs">RoleArgs</a></span>
+        <span class="property-type"><a href="#inputs">RoleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -409,7 +958,7 @@ const testRole = new aws.iam.Role("test_role", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.RoleArgs.html">RoleArgs</a></span>
+        <span class="property-type"><a href="#inputs">RoleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -432,11 +981,11 @@ const testRole = new aws.iam.Role("test_role", {
 
 ## Role Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Role resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Role resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -451,7 +1000,7 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}The policy that grants an entity permission to assume the role.
+    <dd>{{% md %}}Policy that grants an entity permission to assume the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -461,7 +1010,7 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the role.
+    <dd>{{% md %}}Description of the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -471,7 +1020,27 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies to force detaching any policies the role has before destroying it. Defaults to `false`.
+    <dd>{{% md %}}Whether to force detaching any policies the role has before destroying it. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inlinepolicies_csharp">
+<a href="#inlinepolicies_csharp" style="color: inherit; text-decoration: inherit;">Inline<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#roleinlinepolicy">List&lt;Role<wbr>Inline<wbr>Policy<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. Defined below. If no blocks are configured, the provider will ignore any managing any inline policies in this resource. Configuring one empty block (i.e., `inline_policy {}`) will cause the provider to remove _all_ inline policies.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="managedpolicyarns_csharp">
+<a href="#managedpolicyarns_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Policy<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Set of exclusive IAM managed policy ARNs to attach to the IAM role. If this attribute is not configured, the provider will ignore policy attachments to this resource. When configured, the provider will align the role's managed policy attachments with this set by attaching or detaching managed policies. Configuring an empty set (i.e., `managed_policy_arns = []`) will cause the provider to remove _all_ managed policy attachments.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -481,7 +1050,7 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
+    <dd>{{% md %}}Maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -491,7 +1060,7 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the role policy.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -501,7 +1070,7 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+    <dd>{{% md %}}Creates a unique friendly name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -511,8 +1080,7 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the role.
-See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
+    <dd>{{% md %}}Path to the role. See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -522,7 +1090,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the role.
+    <dd>{{% md %}}ARN of the policy that is used to set the permissions boundary for the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -532,7 +1100,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags for the IAM role
+    <dd>{{% md %}}Key-value mapping of tags for the IAM role
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -548,7 +1116,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}The policy that grants an entity permission to assume the role.
+    <dd>{{% md %}}Policy that grants an entity permission to assume the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -558,7 +1126,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the role.
+    <dd>{{% md %}}Description of the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -568,7 +1136,27 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies to force detaching any policies the role has before destroying it. Defaults to `false`.
+    <dd>{{% md %}}Whether to force detaching any policies the role has before destroying it. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inlinepolicies_go">
+<a href="#inlinepolicies_go" style="color: inherit; text-decoration: inherit;">Inline<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#roleinlinepolicy">[]Role<wbr>Inline<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. Defined below. If no blocks are configured, the provider will ignore any managing any inline policies in this resource. Configuring one empty block (i.e., `inline_policy {}`) will cause the provider to remove _all_ inline policies.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="managedpolicyarns_go">
+<a href="#managedpolicyarns_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Policy<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Set of exclusive IAM managed policy ARNs to attach to the IAM role. If this attribute is not configured, the provider will ignore policy attachments to this resource. When configured, the provider will align the role's managed policy attachments with this set by attaching or detaching managed policies. Configuring an empty set (i.e., `managed_policy_arns = []`) will cause the provider to remove _all_ managed policy attachments.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -578,7 +1166,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
+    <dd>{{% md %}}Maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -588,7 +1176,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the role policy.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -598,7 +1186,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+    <dd>{{% md %}}Creates a unique friendly name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -608,8 +1196,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the role.
-See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
+    <dd>{{% md %}}Path to the role. See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -619,7 +1206,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the role.
+    <dd>{{% md %}}ARN of the policy that is used to set the permissions boundary for the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -629,7 +1216,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags for the IAM role
+    <dd>{{% md %}}Key-value mapping of tags for the IAM role
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -645,7 +1232,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string | Policy<wbr>Document</span>
     </dt>
-    <dd>{{% md %}}The policy that grants an entity permission to assume the role.
+    <dd>{{% md %}}Policy that grants an entity permission to assume the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -655,7 +1242,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the role.
+    <dd>{{% md %}}Description of the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -665,7 +1252,27 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies to force detaching any policies the role has before destroying it. Defaults to `false`.
+    <dd>{{% md %}}Whether to force detaching any policies the role has before destroying it. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inlinepolicies_nodejs">
+<a href="#inlinepolicies_nodejs" style="color: inherit; text-decoration: inherit;">inline<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#roleinlinepolicy">Role<wbr>Inline<wbr>Policy[]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. Defined below. If no blocks are configured, the provider will ignore any managing any inline policies in this resource. Configuring one empty block (i.e., `inline_policy {}`) will cause the provider to remove _all_ inline policies.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="managedpolicyarns_nodejs">
+<a href="#managedpolicyarns_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Policy<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Set of exclusive IAM managed policy ARNs to attach to the IAM role. If this attribute is not configured, the provider will ignore policy attachments to this resource. When configured, the provider will align the role's managed policy attachments with this set by attaching or detaching managed policies. Configuring an empty set (i.e., `managed_policy_arns = []`) will cause the provider to remove _all_ managed policy attachments.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -675,7 +1282,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
+    <dd>{{% md %}}Maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -685,7 +1292,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the role policy.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -695,7 +1302,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+    <dd>{{% md %}}Creates a unique friendly name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -705,8 +1312,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the role.
-See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
+    <dd>{{% md %}}Path to the role. See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -716,7 +1322,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the role.
+    <dd>{{% md %}}ARN of the policy that is used to set the permissions boundary for the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -726,7 +1332,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags for the IAM role
+    <dd>{{% md %}}Key-value mapping of tags for the IAM role
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -742,7 +1348,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">str | str</span>
     </dt>
-    <dd>{{% md %}}The policy that grants an entity permission to assume the role.
+    <dd>{{% md %}}Policy that grants an entity permission to assume the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -752,7 +1358,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the role.
+    <dd>{{% md %}}Description of the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -762,7 +1368,27 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies to force detaching any policies the role has before destroying it. Defaults to `false`.
+    <dd>{{% md %}}Whether to force detaching any policies the role has before destroying it. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inline_policies_python">
+<a href="#inline_policies_python" style="color: inherit; text-decoration: inherit;">inline_<wbr>policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#roleinlinepolicy">Sequence[Role<wbr>Inline<wbr>Policy<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. Defined below. If no blocks are configured, the provider will ignore any managing any inline policies in this resource. Configuring one empty block (i.e., `inline_policy {}`) will cause the provider to remove _all_ inline policies.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="managed_policy_arns_python">
+<a href="#managed_policy_arns_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>policy_<wbr>arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Set of exclusive IAM managed policy ARNs to attach to the IAM role. If this attribute is not configured, the provider will ignore policy attachments to this resource. When configured, the provider will align the role's managed policy attachments with this set by attaching or detaching managed policies. Configuring an empty set (i.e., `managed_policy_arns = []`) will cause the provider to remove _all_ managed policy attachments.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -772,7 +1398,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
+    <dd>{{% md %}}Maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -782,7 +1408,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the role. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the role policy.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -792,7 +1418,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+    <dd>{{% md %}}Creates a unique friendly name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -802,8 +1428,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path to the role.
-See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
+    <dd>{{% md %}}Path to the role. See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -813,7 +1438,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the role.
+    <dd>{{% md %}}ARN of the policy that is used to set the permissions boundary for the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -823,7 +1448,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags for the IAM role
+    <dd>{{% md %}}Key-value mapping of tags for the IAM role
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -846,7 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the role.
+    <dd>{{% md %}}Amazon Resource Name (ARN) specifying the role.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -856,7 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the IAM role.
+    <dd>{{% md %}}Creation date of the IAM role.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -875,7 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The stable and unique string identifying the role.
+    <dd>{{% md %}}Stable and unique string identifying the role.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -891,7 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the role.
+    <dd>{{% md %}}Amazon Resource Name (ARN) specifying the role.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -901,7 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the IAM role.
+    <dd>{{% md %}}Creation date of the IAM role.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -920,7 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The stable and unique string identifying the role.
+    <dd>{{% md %}}Stable and unique string identifying the role.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -936,7 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the role.
+    <dd>{{% md %}}Amazon Resource Name (ARN) specifying the role.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -946,7 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the IAM role.
+    <dd>{{% md %}}Creation date of the IAM role.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -965,7 +1590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The stable and unique string identifying the role.
+    <dd>{{% md %}}Stable and unique string identifying the role.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -981,7 +1606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the role.
+    <dd>{{% md %}}Amazon Resource Name (ARN) specifying the role.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -991,7 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The creation date of the IAM role.
+    <dd>{{% md %}}Creation date of the IAM role.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1010,7 +1635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The stable and unique string identifying the role.
+    <dd>{{% md %}}Stable and unique string identifying the role.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1023,20 +1648,20 @@ Get an existing Role resource's state with the given name, ID, and optional extr
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#RoleState">RoleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#Role">Role</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">RoleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Role</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">assume_role_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_detach_policies</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_session_duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">permissions_boundary</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">unique_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Role</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">assume_role_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_detach_policies</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">inline_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[RoleInlinePolicyArgs]]</span> = None<span class="p">, </span><span class="nx">managed_policy_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">max_session_duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">permissions_boundary</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">unique_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Role</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRole<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#RoleState">RoleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam?tab=doc#Role">Role</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRole<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">RoleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Role</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.Role.html">Role</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Iam.RoleState.html">RoleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Role</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">RoleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1149,7 +1774,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the role.
+    <dd>{{% md %}}Amazon Resource Name (ARN) specifying the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1159,7 +1784,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}The policy that grants an entity permission to assume the role.
+    <dd>{{% md %}}Policy that grants an entity permission to assume the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1169,7 +1794,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the IAM role.
+    <dd>{{% md %}}Creation date of the IAM role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1179,7 +1804,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the role.
+    <dd>{{% md %}}Description of the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1189,7 +1814,27 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies to force detaching any policies the role has before destroying it. Defaults to `false`.
+    <dd>{{% md %}}Whether to force detaching any policies the role has before destroying it. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_inlinepolicies_csharp">
+<a href="#state_inlinepolicies_csharp" style="color: inherit; text-decoration: inherit;">Inline<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#roleinlinepolicy">List&lt;Role<wbr>Inline<wbr>Policy<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. Defined below. If no blocks are configured, the provider will ignore any managing any inline policies in this resource. Configuring one empty block (i.e., `inline_policy {}`) will cause the provider to remove _all_ inline policies.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_managedpolicyarns_csharp">
+<a href="#state_managedpolicyarns_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Policy<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Set of exclusive IAM managed policy ARNs to attach to the IAM role. If this attribute is not configured, the provider will ignore policy attachments to this resource. When configured, the provider will align the role's managed policy attachments with this set by attaching or detaching managed policies. Configuring an empty set (i.e., `managed_policy_arns = []`) will cause the provider to remove _all_ managed policy attachments.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1199,7 +1844,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
+    <dd>{{% md %}}Maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1209,7 +1854,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the role policy.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1219,7 +1864,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+    <dd>{{% md %}}Creates a unique friendly name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1229,8 +1874,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the role.
-See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
+    <dd>{{% md %}}Path to the role. See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1240,7 +1884,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the role.
+    <dd>{{% md %}}ARN of the policy that is used to set the permissions boundary for the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1250,7 +1894,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags for the IAM role
+    <dd>{{% md %}}Key-value mapping of tags for the IAM role
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1260,7 +1904,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The stable and unique string identifying the role.
+    <dd>{{% md %}}Stable and unique string identifying the role.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1276,7 +1920,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the role.
+    <dd>{{% md %}}Amazon Resource Name (ARN) specifying the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1286,7 +1930,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}The policy that grants an entity permission to assume the role.
+    <dd>{{% md %}}Policy that grants an entity permission to assume the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1296,7 +1940,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the IAM role.
+    <dd>{{% md %}}Creation date of the IAM role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1306,7 +1950,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the role.
+    <dd>{{% md %}}Description of the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1316,7 +1960,27 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies to force detaching any policies the role has before destroying it. Defaults to `false`.
+    <dd>{{% md %}}Whether to force detaching any policies the role has before destroying it. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_inlinepolicies_go">
+<a href="#state_inlinepolicies_go" style="color: inherit; text-decoration: inherit;">Inline<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#roleinlinepolicy">[]Role<wbr>Inline<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. Defined below. If no blocks are configured, the provider will ignore any managing any inline policies in this resource. Configuring one empty block (i.e., `inline_policy {}`) will cause the provider to remove _all_ inline policies.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_managedpolicyarns_go">
+<a href="#state_managedpolicyarns_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Policy<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Set of exclusive IAM managed policy ARNs to attach to the IAM role. If this attribute is not configured, the provider will ignore policy attachments to this resource. When configured, the provider will align the role's managed policy attachments with this set by attaching or detaching managed policies. Configuring an empty set (i.e., `managed_policy_arns = []`) will cause the provider to remove _all_ managed policy attachments.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1326,7 +1990,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
+    <dd>{{% md %}}Maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1336,7 +2000,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the role policy.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1346,7 +2010,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+    <dd>{{% md %}}Creates a unique friendly name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1356,8 +2020,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the role.
-See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
+    <dd>{{% md %}}Path to the role. See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1367,7 +2030,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the role.
+    <dd>{{% md %}}ARN of the policy that is used to set the permissions boundary for the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1377,7 +2040,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags for the IAM role
+    <dd>{{% md %}}Key-value mapping of tags for the IAM role
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1387,7 +2050,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The stable and unique string identifying the role.
+    <dd>{{% md %}}Stable and unique string identifying the role.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1403,7 +2066,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the role.
+    <dd>{{% md %}}Amazon Resource Name (ARN) specifying the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1413,7 +2076,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string | Policy<wbr>Document</span>
     </dt>
-    <dd>{{% md %}}The policy that grants an entity permission to assume the role.
+    <dd>{{% md %}}Policy that grants an entity permission to assume the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1423,7 +2086,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the IAM role.
+    <dd>{{% md %}}Creation date of the IAM role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1433,7 +2096,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the role.
+    <dd>{{% md %}}Description of the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1443,7 +2106,27 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies to force detaching any policies the role has before destroying it. Defaults to `false`.
+    <dd>{{% md %}}Whether to force detaching any policies the role has before destroying it. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_inlinepolicies_nodejs">
+<a href="#state_inlinepolicies_nodejs" style="color: inherit; text-decoration: inherit;">inline<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#roleinlinepolicy">Role<wbr>Inline<wbr>Policy[]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. Defined below. If no blocks are configured, the provider will ignore any managing any inline policies in this resource. Configuring one empty block (i.e., `inline_policy {}`) will cause the provider to remove _all_ inline policies.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_managedpolicyarns_nodejs">
+<a href="#state_managedpolicyarns_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Policy<wbr>Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Set of exclusive IAM managed policy ARNs to attach to the IAM role. If this attribute is not configured, the provider will ignore policy attachments to this resource. When configured, the provider will align the role's managed policy attachments with this set by attaching or detaching managed policies. Configuring an empty set (i.e., `managed_policy_arns = []`) will cause the provider to remove _all_ managed policy attachments.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1453,7 +2136,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
+    <dd>{{% md %}}Maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1463,7 +2146,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the role. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the role policy.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1473,7 +2156,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+    <dd>{{% md %}}Creates a unique friendly name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1483,8 +2166,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the role.
-See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
+    <dd>{{% md %}}Path to the role. See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1494,7 +2176,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the role.
+    <dd>{{% md %}}ARN of the policy that is used to set the permissions boundary for the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1504,7 +2186,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags for the IAM role
+    <dd>{{% md %}}Key-value mapping of tags for the IAM role
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1514,7 +2196,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The stable and unique string identifying the role.
+    <dd>{{% md %}}Stable and unique string identifying the role.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1530,7 +2212,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the role.
+    <dd>{{% md %}}Amazon Resource Name (ARN) specifying the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1540,7 +2222,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">str | str</span>
     </dt>
-    <dd>{{% md %}}The policy that grants an entity permission to assume the role.
+    <dd>{{% md %}}Policy that grants an entity permission to assume the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1550,7 +2232,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The creation date of the IAM role.
+    <dd>{{% md %}}Creation date of the IAM role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1560,7 +2242,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the role.
+    <dd>{{% md %}}Description of the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1570,7 +2252,27 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies to force detaching any policies the role has before destroying it. Defaults to `false`.
+    <dd>{{% md %}}Whether to force detaching any policies the role has before destroying it. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_inline_policies_python">
+<a href="#state_inline_policies_python" style="color: inherit; text-decoration: inherit;">inline_<wbr>policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#roleinlinepolicy">Sequence[Role<wbr>Inline<wbr>Policy<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block defining an exclusive set of IAM inline policies associated with the IAM role. Defined below. If no blocks are configured, the provider will ignore any managing any inline policies in this resource. Configuring one empty block (i.e., `inline_policy {}`) will cause the provider to remove _all_ inline policies.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_managed_policy_arns_python">
+<a href="#state_managed_policy_arns_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>policy_<wbr>arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Set of exclusive IAM managed policy ARNs to attach to the IAM role. If this attribute is not configured, the provider will ignore policy attachments to this resource. When configured, the provider will align the role's managed policy attachments with this set by attaching or detaching managed policies. Configuring an empty set (i.e., `managed_policy_arns = []`) will cause the provider to remove _all_ managed policy attachments.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1580,7 +2282,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
+    <dd>{{% md %}}Maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1590,7 +2292,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the role. If omitted, this provider will assign a random, unique name.
+    <dd>{{% md %}}Name of the role policy.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1600,7 +2302,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
+    <dd>{{% md %}}Creates a unique friendly name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1610,8 +2312,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path to the role.
-See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
+    <dd>{{% md %}}Path to the role. See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1621,7 +2322,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN of the policy that is used to set the permissions boundary for the role.
+    <dd>{{% md %}}ARN of the policy that is used to set the permissions boundary for the role.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1631,7 +2332,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value map of tags for the IAM role
+    <dd>{{% md %}}Key-value mapping of tags for the IAM role
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1641,7 +2342,7 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The stable and unique string identifying the role.
+    <dd>{{% md %}}Stable and unique string identifying the role.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1650,6 +2351,116 @@ See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Ide
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="roleinlinepolicy">Role<wbr>Inline<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the role policy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_csharp">
+<a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Policy document as a JSON formatted string.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the role policy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_go">
+<a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Policy document as a JSON formatted string.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the role policy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_nodejs">
+<a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Policy document as a JSON formatted string.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the role policy.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_python">
+<a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Policy document as a JSON formatted string.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 ## Import
 
 

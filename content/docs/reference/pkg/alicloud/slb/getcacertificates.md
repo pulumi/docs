@@ -1,8 +1,8 @@
 
 ---
-title: "GetCaCertificates"
-title_tag: "Function GetCaCertificates | Module slb | Package AliCloud"
-meta_desc: "Explore the GetCaCertificates function of the slb module, including examples, input properties, output properties, and supporting types. This data source provides the CA certificate list."
+title: "getCaCertificates"
+title_tag: "alicloud.slb.getCaCertificates"
+meta_desc: "Documentation for the alicloud.slb.getCaCertificates function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,13 +88,13 @@ export const firstSlbCaCertificateId = sampleDs.certificates[0].id;
 {{% /examples %}}
 
 
-## Using GetCaCertificates {#using}
+## Using getCaCertificates {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCaCertificates<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/slb/#GetCaCertificatesArgs">GetCaCertificatesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/slb/#GetCaCertificatesResult">GetCaCertificatesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCaCertificates<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCaCertificatesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCaCertificatesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -104,14 +104,16 @@ export const firstSlbCaCertificateId = sampleDs.certificates[0].id;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCaCertificates<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#GetCaCertificatesArgs">GetCaCertificatesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#GetCaCertificatesResult">GetCaCertificatesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCaCertificates<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetCaCertificatesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetCaCertificatesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetCaCertificates` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCaCertificates </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.GetCaCertificatesResult.html">GetCaCertificatesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.GetCaCertificatesArgs.html">GetCaCertificatesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCaCertificatesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCaCertificatesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -343,7 +345,7 @@ The following arguments are supported:
 
 
 
-## GetCaCertificates Result {#result}
+## getCaCertificates Result {#result}
 
 The following output properties are available:
 
@@ -692,16 +694,6 @@ The following output properties are available:
 
 
 <h4 id="getcacertificatescertificate">Get<wbr>Ca<wbr>Certificates<wbr>Certificate</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetCaCertificatesCertificate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#GetCaCertificatesCertificate">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.Outputs.GetCaCertificatesCertificate.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

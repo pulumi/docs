@@ -1,8 +1,8 @@
 
 ---
-title: "GetEndpoint"
-title_tag: "Function GetEndpoint | Module cdn | Package Azure NextGen"
-meta_desc: "Explore the GetEndpoint function of the cdn module, including examples, input properties, output properties, and supporting types. "
+title: "getEndpoint"
+title_tag: "azure-nextgen.cdn.getEndpoint"
+meta_desc: "Documentation for the azure-nextgen.cdn.getEndpoint function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetEndpoint function of the cdn module, including exampl
 
 
 
-## Using GetEndpoint {#using}
+## Using getEndpoint {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEndpoint<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetEndpointResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEndpoint<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetEndpointResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetEndpoint function of the cdn module, including exampl
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupEndpointResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupEndpointResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupEndpoint` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetEndpoint function of the cdn module, including exampl
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetEndpoint </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetEndpointResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetEndpointArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetEndpointResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetEndpointArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetEndpoint Result {#result}
+## getEndpoint Result {#result}
 
 The following output properties are available:
 
@@ -1122,9 +1122,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1297,9 +1294,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1433,9 +1427,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="cookiesmatchconditionparametersresponse">Cookies<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
-
-
-
 
 
 
@@ -1683,9 +1674,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1891,9 +1879,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="deepcreatedoriginresponse">Deep<wbr>Created<wbr>Origin<wbr>Response</h4>
-
-
-
 
 
 
@@ -2357,9 +2342,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2421,9 +2403,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="deliveryrulecachekeyquerystringactionresponse">Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Response</h4>
-
-
-
 
 
 
@@ -2491,9 +2470,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2555,9 +2531,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="deliveryrulehttpversionconditionresponse">Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Response</h4>
-
-
-
 
 
 
@@ -2625,9 +2598,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2689,9 +2659,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="deliveryrulepostargsconditionresponse">Delivery<wbr>Rule<wbr>Post<wbr>Args<wbr>Condition<wbr>Response</h4>
-
-
-
 
 
 
@@ -2759,9 +2726,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2823,9 +2787,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="deliveryruleremoteaddressconditionresponse">Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Response</h4>
-
-
-
 
 
 
@@ -2893,9 +2854,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2957,9 +2915,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="deliveryrulerequestheaderactionresponse">Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Action<wbr>Response</h4>
-
-
-
 
 
 
@@ -3027,9 +2982,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3091,9 +3043,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="deliveryrulerequestmethodconditionresponse">Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Response</h4>
-
-
-
 
 
 
@@ -3161,9 +3110,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3228,9 +3174,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3292,9 +3235,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="deliveryruleresponse">Delivery<wbr>Rule<wbr>Response</h4>
-
-
-
 
 
 
@@ -3470,9 +3410,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3534,9 +3471,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="deliveryruleurlfileextensionconditionresponse">Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Response</h4>
-
-
-
 
 
 
@@ -3604,9 +3538,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3671,9 +3602,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3735,9 +3663,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="endpointpropertiesupdateparametersresponsedeliverypolicy">Endpoint<wbr>Properties<wbr>Update<wbr>Parameters<wbr>Response<wbr>Delivery<wbr>Policy</h4>
-
-
-
 
 
 
@@ -3841,9 +3766,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3905,9 +3827,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="geofilterresponse">Geo<wbr>Filter<wbr>Response</h4>
-
-
-
 
 
 
@@ -4044,9 +3963,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="headeractionparametersresponse">Header<wbr>Action<wbr>Parameters<wbr>Response</h4>
-
-
-
 
 
 
@@ -4222,9 +4138,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4397,9 +4310,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4497,9 +4407,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="httpversionmatchconditionparametersresponse">Http<wbr>Version<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
-
-
-
 
 
 
@@ -4672,9 +4579,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="isdevicematchconditionparametersresponse">Is<wbr>Device<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
-
-
-
 
 
 
@@ -4883,9 +4787,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="keyvaultsigningkeyparametersresponse">Key<wbr>Vault<wbr>Signing<wbr>Key<wbr>Parameters<wbr>Response</h4>
-
-
-
 
 
 
@@ -5133,9 +5034,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5236,9 +5134,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5300,9 +5195,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="postargsmatchconditionparametersresponse">Post<wbr>Args<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
-
-
-
 
 
 
@@ -5550,9 +5442,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5758,9 +5647,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="remoteaddressmatchconditionparametersresponse">Remote<wbr>Address<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
-
-
-
 
 
 
@@ -5972,9 +5858,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6180,9 +6063,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="requestheadermatchconditionparametersresponse">Request<wbr>Header<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
-
-
-
 
 
 
@@ -6430,9 +6310,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6605,9 +6482,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6777,9 +6651,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="requesturimatchconditionparametersresponse">Request<wbr>Uri<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
-
-
-
 
 
 
@@ -6991,9 +6862,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7055,9 +6923,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="responsebasedoriginerrordetectionparametersresponse">Response<wbr>Based<wbr>Origin<wbr>Error<wbr>Detection<wbr>Parameters<wbr>Response</h4>
-
-
-
 
 
 
@@ -7194,9 +7059,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
-
-
-
 
 
 
@@ -7444,9 +7306,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7652,9 +7511,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="urlfilenamematchconditionparametersresponse">Url<wbr>File<wbr>Name<wbr>Match<wbr>Condition<wbr>Parameters<wbr>Response</h4>
-
-
-
 
 
 
@@ -7866,9 +7722,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8074,9 +7927,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="urlredirectactionparametersresponse">Url<wbr>Redirect<wbr>Action<wbr>Parameters<wbr>Response</h4>
-
-
-
 
 
 
@@ -8360,9 +8210,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8424,9 +8271,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="urlrewriteactionparametersresponse">Url<wbr>Rewrite<wbr>Action<wbr>Parameters<wbr>Response</h4>
-
-
-
 
 
 
@@ -8602,9 +8446,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8666,9 +8507,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="urlsigningactionparametersresponse">Url<wbr>Signing<wbr>Action<wbr>Parameters<wbr>Response</h4>
-
-
-
 
 
 
@@ -8808,9 +8646,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8872,9 +8707,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="urlsigningkeyresponse">Url<wbr>Signing<wbr>Key<wbr>Response</h4>
-
-
-
 
 
 
@@ -8975,9 +8807,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="urlsigningparamidentifierresponse">Url<wbr>Signing<wbr>Param<wbr>Identifier<wbr>Response</h4>
-
-
-
 
 
 

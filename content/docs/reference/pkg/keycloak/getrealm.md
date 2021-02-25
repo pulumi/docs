@@ -1,8 +1,8 @@
 
 ---
-title: "GetRealm"
-title_tag: "Function GetRealm | Package Keycloak"
-meta_desc: "Explore the GetRealm function of the Keycloak package, including examples, input properties, output properties, and supporting types. This data source can be used to fetch properties of a Keycloak realm for"
+title: "getRealm"
+title_tag: "keycloak.getRealm"
+meta_desc: "Documentation for the keycloak.getRealm function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -101,23 +101,23 @@ const group = new keycloak.Role("group", {realmId: realm.then(realm => realm.id)
 {{% /examples %}}
 
 
-## Using GetRealm {#using}
+## Using getRealm {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRealm<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/#GetRealmArgs">GetRealmArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/#GetRealmResult">GetRealmResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRealm<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRealmArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRealmResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_realm(</span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">display_name_html</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internationalizations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRealmInternationalizationArgs]]</span> = None<span class="p">, </span><span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_defenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRealmSecurityDefenseArgs]]</span> = None<span class="p">, </span><span class="nx">smtp_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRealmSmtpServerArgs]]</span> = None<span class="p">, </span><span class="nx">web_authn_passwordless_policy</span><span class="p">:</span> <span class="nx">Optional[GetRealmWebAuthnPasswordlessPolicyArgs]</span> = None<span class="p">, </span><span class="nx">web_authn_policy</span><span class="p">:</span> <span class="nx">Optional[GetRealmWebAuthnPolicyArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRealmResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_realm(</span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">default_default_client_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">default_optional_client_scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">display_name_html</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">internationalizations</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRealmInternationalizationArgs]]</span> = None<span class="p">, </span><span class="nx">realm</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_defenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRealmSecurityDefenseArgs]]</span> = None<span class="p">, </span><span class="nx">smtp_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[GetRealmSmtpServerArgs]]</span> = None<span class="p">, </span><span class="nx">web_authn_passwordless_policy</span><span class="p">:</span> <span class="nx">Optional[GetRealmWebAuthnPasswordlessPolicyArgs]</span> = None<span class="p">, </span><span class="nx">web_authn_policy</span><span class="p">:</span> <span class="nx">Optional[GetRealmWebAuthnPolicyArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRealmResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRealm<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#LookupRealmArgs">LookupRealmArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#LookupRealmResult">LookupRealmResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRealm<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRealmArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupRealmResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupRealm` in the Go SDK.
 
@@ -126,7 +126,7 @@ const group = new keycloak.Role("group", {realmId: realm.then(realm => realm.id)
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRealm </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.GetRealmResult.html">GetRealmResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.GetRealmArgs.html">GetRealmArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetRealmResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRealmArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -155,6 +155,24 @@ The following arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultdefaultclientscopes_csharp">
+<a href="#defaultdefaultclientscopes_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Default<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultoptionalclientscopes_csharp">
+<a href="#defaultoptionalclientscopes_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Optional<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -238,6 +256,24 @@ The following arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="defaultdefaultclientscopes_go">
+<a href="#defaultdefaultclientscopes_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Default<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultoptionalclientscopes_go">
+<a href="#defaultoptionalclientscopes_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Optional<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="displaynamehtml_go">
 <a href="#displaynamehtml_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Html</a>
 </span>
@@ -313,6 +349,24 @@ The following arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultdefaultclientscopes_nodejs">
+<a href="#defaultdefaultclientscopes_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Default<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultoptionalclientscopes_nodejs">
+<a href="#defaultoptionalclientscopes_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Optional<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -396,6 +450,24 @@ The following arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="default_default_client_scopes_python">
+<a href="#default_default_client_scopes_python" style="color: inherit; text-decoration: inherit;">default_<wbr>default_<wbr>client_<wbr>scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_optional_client_scopes_python">
+<a href="#default_optional_client_scopes_python" style="color: inherit; text-decoration: inherit;">default_<wbr>optional_<wbr>client_<wbr>scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="display_name_html_python">
 <a href="#display_name_html_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name_<wbr>html</a>
 </span>
@@ -454,7 +526,7 @@ The following arguments are supported:
 
 
 
-## GetRealm Result {#result}
+## getRealm Result {#result}
 
 The following output properties are available:
 
@@ -569,6 +641,24 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="defaultdefaultclientscopes_csharp">
+<a href="#defaultdefaultclientscopes_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Default<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="defaultoptionalclientscopes_csharp">
+<a href="#defaultoptionalclientscopes_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Optional<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1030,6 +1120,24 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="defaultdefaultclientscopes_go">
+<a href="#defaultdefaultclientscopes_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Default<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="defaultoptionalclientscopes_go">
+<a href="#defaultoptionalclientscopes_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Optional<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="defaultsignaturealgorithm_go">
 <a href="#defaultsignaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Signature<wbr>Algorithm</a>
 </span>
@@ -1483,6 +1591,24 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="defaultdefaultclientscopes_nodejs">
+<a href="#defaultdefaultclientscopes_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Default<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="defaultoptionalclientscopes_nodejs">
+<a href="#defaultoptionalclientscopes_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Optional<wbr>Client<wbr>Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1944,6 +2070,24 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="default_default_client_scopes_python">
+<a href="#default_default_client_scopes_python" style="color: inherit; text-decoration: inherit;">default_<wbr>default_<wbr>client_<wbr>scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="default_optional_client_scopes_python">
+<a href="#default_optional_client_scopes_python" style="color: inherit; text-decoration: inherit;">default_<wbr>optional_<wbr>client_<wbr>scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="default_signature_algorithm_python">
 <a href="#default_signature_algorithm_python" style="color: inherit; text-decoration: inherit;">default_<wbr>signature_<wbr>algorithm</a>
 </span>
@@ -2295,16 +2439,6 @@ The following output properties are available:
 
 
 <h4 id="getrealminternationalization">Get<wbr>Realm<wbr>Internationalization</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#GetRealmInternationalization">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetRealmInternationalization">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#GetRealmInternationalizationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#GetRealmInternationalization">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Inputs.GetRealmInternationalizationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Outputs.GetRealmInternationalization.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2405,16 +2539,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getrealmsecuritydefense">Get<wbr>Realm<wbr>Security<wbr>Defense</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#GetRealmSecurityDefense">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetRealmSecurityDefense">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#GetRealmSecurityDefenseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#GetRealmSecurityDefense">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Inputs.GetRealmSecurityDefenseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Outputs.GetRealmSecurityDefense.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2515,16 +2639,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getrealmsecuritydefensebruteforcedetection">Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Brute<wbr>Force<wbr>Detection</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#GetRealmSecurityDefenseBruteForceDetection">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetRealmSecurityDefenseBruteForceDetection">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#GetRealmSecurityDefenseBruteForceDetectionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#GetRealmSecurityDefenseBruteForceDetection">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Inputs.GetRealmSecurityDefenseBruteForceDetectionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Outputs.GetRealmSecurityDefenseBruteForceDetection.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2805,16 +2919,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getrealmsecuritydefenseheader">Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Header</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#GetRealmSecurityDefenseHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetRealmSecurityDefenseHeader">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#GetRealmSecurityDefenseHeaderArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#GetRealmSecurityDefenseHeader">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Inputs.GetRealmSecurityDefenseHeaderArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Outputs.GetRealmSecurityDefenseHeader.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3095,16 +3199,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getrealmsmtpserver">Get<wbr>Realm<wbr>Smtp<wbr>Server</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#GetRealmSmtpServer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetRealmSmtpServer">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#GetRealmSmtpServerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#GetRealmSmtpServer">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Inputs.GetRealmSmtpServerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Outputs.GetRealmSmtpServer.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3493,16 +3587,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getrealmsmtpserverauth">Get<wbr>Realm<wbr>Smtp<wbr>Server<wbr>Auth</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#GetRealmSmtpServerAuth">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetRealmSmtpServerAuth">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#GetRealmSmtpServerAuthArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#GetRealmSmtpServerAuth">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Inputs.GetRealmSmtpServerAuthArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Outputs.GetRealmSmtpServerAuth.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3603,16 +3687,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getrealmwebauthnpasswordlesspolicy">Get<wbr>Realm<wbr>Web<wbr>Authn<wbr>Passwordless<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#GetRealmWebAuthnPasswordlessPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetRealmWebAuthnPasswordlessPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#GetRealmWebAuthnPasswordlessPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#GetRealmWebAuthnPasswordlessPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Inputs.GetRealmWebAuthnPasswordlessPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Outputs.GetRealmWebAuthnPasswordlessPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4001,16 +4075,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getrealmwebauthnpolicy">Get<wbr>Realm<wbr>Web<wbr>Authn<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#GetRealmWebAuthnPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetRealmWebAuthnPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#GetRealmWebAuthnPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v3/go/keycloak/?tab=doc#GetRealmWebAuthnPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Inputs.GetRealmWebAuthnPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.Outputs.GetRealmWebAuthnPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

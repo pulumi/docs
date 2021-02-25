@@ -1,8 +1,8 @@
 
 ---
-title: "GetLaunchTemplate"
-title_tag: "Function GetLaunchTemplate | Module ec2 | Package AWS"
-meta_desc: "Explore the GetLaunchTemplate function of the ec2 module, including examples, input properties, output properties, and supporting types. Provides information about a Launch Template."
+title: "getLaunchTemplate"
+title_tag: "aws.ec2.getLaunchTemplate"
+meta_desc: "Documentation for the aws.ec2.getLaunchTemplate function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -180,13 +180,13 @@ const test = pulumi.output(aws.ec2.getLaunchTemplate({
 {{% /examples %}}
 
 
-## Using GetLaunchTemplate {#using}
+## Using getLaunchTemplate {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLaunchTemplate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#GetLaunchTemplateArgs">GetLaunchTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#GetLaunchTemplateResult">GetLaunchTemplateResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLaunchTemplate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLaunchTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLaunchTemplateResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -196,7 +196,7 @@ const test = pulumi.output(aws.ec2.getLaunchTemplate({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLaunchTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupLaunchTemplateArgs">LookupLaunchTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupLaunchTemplateResult">LookupLaunchTemplateResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLaunchTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLaunchTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupLaunchTemplateResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupLaunchTemplate` in the Go SDK.
 
@@ -205,7 +205,7 @@ const test = pulumi.output(aws.ec2.getLaunchTemplate({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLaunchTemplate </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetLaunchTemplateResult.html">GetLaunchTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetLaunchTemplateArgs.html">GetLaunchTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetLaunchTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLaunchTemplateArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -401,7 +401,7 @@ The following arguments are supported:
 
 
 
-## GetLaunchTemplate Result {#result}
+## getLaunchTemplate Result {#result}
 
 The following output properties are available:
 
@@ -1702,16 +1702,6 @@ Interfaces below for more details.
 
 
 <h4 id="getlaunchtemplateblockdevicemapping">Get<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateBlockDeviceMapping">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLaunchTemplateBlockDeviceMapping">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateBlockDeviceMapping.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1884,16 +1874,6 @@ Interfaces below for more details.
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplateblockdevicemappingeb">Get<wbr>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Eb</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateBlockDeviceMappingEb">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLaunchTemplateBlockDeviceMappingEb">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateBlockDeviceMappingEb.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2210,16 +2190,6 @@ Interfaces below for more details.
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplatecreditspecification">Get<wbr>Launch<wbr>Template<wbr>Credit<wbr>Specification</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateCreditSpecification">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLaunchTemplateCreditSpecification">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateCreditSpecification.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2284,16 +2254,6 @@ Interfaces below for more details.
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplateelasticgpuspecification">Get<wbr>Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateElasticGpuSpecification">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLaunchTemplateElasticGpuSpecification">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateElasticGpuSpecification.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2358,16 +2318,6 @@ Interfaces below for more details.
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplateenclaveoption">Get<wbr>Launch<wbr>Template<wbr>Enclave<wbr>Option</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateEnclaveOption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLaunchTemplateEnclaveOption">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateEnclaveOption.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2436,16 +2386,6 @@ Interfaces below for more details.
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplatefilter">Get<wbr>Launch<wbr>Template<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetLaunchTemplateFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLaunchTemplateFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLaunchTemplateFilter">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetLaunchTemplateFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2554,16 +2494,6 @@ Interfaces below for more details.
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplatehibernationoption">Get<wbr>Launch<wbr>Template<wbr>Hibernation<wbr>Option</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateHibernationOption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLaunchTemplateHibernationOption">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateHibernationOption.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2628,16 +2558,6 @@ Interfaces below for more details.
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplateiaminstanceprofile">Get<wbr>Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateIamInstanceProfile">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLaunchTemplateIamInstanceProfile">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateIamInstanceProfile.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2746,16 +2666,6 @@ Interfaces below for more details.
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplateinstancemarketoption">Get<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Option</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateInstanceMarketOption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLaunchTemplateInstanceMarketOption">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateInstanceMarketOption.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2856,16 +2766,6 @@ Interfaces below for more details.
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplateinstancemarketoptionspotoption">Get<wbr>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Option<wbr>Spot<wbr>Option</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateInstanceMarketOptionSpotOption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLaunchTemplateInstanceMarketOptionSpotOption">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateInstanceMarketOptionSpotOption.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3074,16 +2974,6 @@ Interfaces below for more details.
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplatemetadataoption">Get<wbr>Launch<wbr>Template<wbr>Metadata<wbr>Option</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateMetadataOption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLaunchTemplateMetadataOption">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateMetadataOption.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3232,16 +3122,6 @@ Interfaces below for more details.
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplatemonitoring">Get<wbr>Launch<wbr>Template<wbr>Monitoring</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateMonitoring">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLaunchTemplateMonitoring">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateMonitoring.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3310,16 +3190,6 @@ Interfaces below for more details.
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplatenetworkinterface">Get<wbr>Launch<wbr>Template<wbr>Network<wbr>Interface</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateNetworkInterface">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLaunchTemplateNetworkInterface">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateNetworkInterface.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3820,16 +3690,6 @@ Interfaces below for more details.
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplateplacement">Get<wbr>Launch<wbr>Template<wbr>Placement</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplatePlacement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLaunchTemplatePlacement">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplatePlacement.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4110,16 +3970,6 @@ Interfaces below for more details.
 {{% /choosable %}}
 
 <h4 id="getlaunchtemplatetagspecification">Get<wbr>Launch<wbr>Template<wbr>Tag<wbr>Specification</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateTagSpecification">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLaunchTemplateTagSpecification">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLaunchTemplateTagSpecification.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Vault"
-title_tag: "Package Vault"
+title_tag: "Vault Package"
 meta_desc: "A Pulumi package for creating and managing vault cloud resources."
 menu:
     reference:
@@ -48,6 +48,7 @@ A Pulumi package for creating and managing vault cloud resources.
     <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
     <li><a href="nomadsecretbackend" title="NomadSecretBackend"><span class="symbol resource"></span>NomadSecretBackend</a></li>
     <li><a href="nomadsecretrole" title="NomadSecretRole"><span class="symbol resource"></span>NomadSecretRole</a></li>
+    <li><a href="passwordpolicy" title="PasswordPolicy"><span class="symbol resource"></span>PasswordPolicy</a></li>
     <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="quotaratelimit" title="QuotaRateLimit"><span class="symbol resource"></span>QuotaRateLimit</a></li>
@@ -71,24 +72,6 @@ A Pulumi package for creating and managing vault cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
 	<dt>Version</dt>
-	<dd>3.2.1</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.html" title="Pulumi.Vault">Pulumi.Vault</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/?tab=doc#" title="vault">vault</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/vault/#" title="@pulumi/vault">@pulumi/vault</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_vault" title="pulumi_vault">pulumi_vault</a></dd>
-
+	<dd>3.4.1</dd>
 </dl>
 

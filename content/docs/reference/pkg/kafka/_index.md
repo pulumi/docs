@@ -1,6 +1,6 @@
 ---
 title: "Kafka"
-title_tag: "Module Kafka | Package Kafka"
+title_tag: "kafka.Kafka"
 meta_desc: "A Pulumi package for creating and managing Kafka."
 menu:
     reference:
@@ -28,24 +28,6 @@ A Pulumi package for creating and managing Kafka.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`kafka` Terraform Provider](https://github.com/Mongey/terraform-provider-kafka).</dd>
 	<dt>Version</dt>
-	<dd>2.4.4</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Kafka/Pulumi.Kafka.html" title="Pulumi.Kafka">Pulumi.Kafka</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kafka/sdk/v2/go/kafka/?tab=doc#" title="kafka">kafka</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kafka/#" title="@pulumi/kafka">@pulumi/kafka</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kafka" title="pulumi_kafka">pulumi_kafka</a></dd>
-
+	<dd>2.5.2</dd>
 </dl>
 

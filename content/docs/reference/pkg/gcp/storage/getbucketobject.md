@@ -1,8 +1,8 @@
 
 ---
-title: "GetBucketObject"
-title_tag: "Function GetBucketObject | Module storage | Package GCP"
-meta_desc: "Explore the GetBucketObject function of the storage module, including examples, input properties, output properties, and supporting types. Gets an existing object inside an existing bucket in Google Cloud Storage service (GCS)."
+title: "getBucketObject"
+title_tag: "gcp.storage.getBucketObject"
+meta_desc: "Documentation for the gcp.storage.getBucketObject function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -97,13 +97,13 @@ const picture = pulumi.output(gcp.storage.getBucketObject({
 {{% /examples %}}
 
 
-## Using GetBucketObject {#using}
+## Using getBucketObject {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBucketObject<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#GetBucketObjectArgs">GetBucketObjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#GetBucketObjectResult">GetBucketObjectResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBucketObject<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBucketObjectArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBucketObjectResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -113,7 +113,7 @@ const picture = pulumi.output(gcp.storage.getBucketObject({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBucketObject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage?tab=doc#LookupBucketObjectArgs">LookupBucketObjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage?tab=doc#LookupBucketObjectResult">LookupBucketObjectResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBucketObject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBucketObjectArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBucketObjectResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupBucketObject` in the Go SDK.
 
@@ -122,7 +122,7 @@ const picture = pulumi.output(gcp.storage.getBucketObject({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBucketObject </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.GetBucketObjectResult.html">GetBucketObjectResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Storage.GetBucketObjectArgs.html">GetBucketObjectArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBucketObjectResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBucketObjectArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -238,7 +238,7 @@ The following arguments are supported:
 
 
 
-## GetBucketObject Result {#result}
+## getBucketObject Result {#result}
 
 The following output properties are available:
 

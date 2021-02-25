@@ -11,7 +11,7 @@ aliases:
 
 Pulumi Webhooks allow you to notify external services of events
 happening within your Pulumi organization or stack. For example,
-you can trigger a notification whenever a stack is updated or a team is modified.
+you can trigger a notification whenever a stack is updated.
 Whenever an event occurs, Pulumi will send an HTTP `POST` request to
 all registered webhooks. The webhook can then be used to emit some
 notification, start running integration tests, or even update additional stacks.
@@ -24,8 +24,7 @@ of most _ChatOps_ workflows.
 Webhooks can be attached to either a stack or an organization. Stack webhooks
 will be notified whenever a stack is updated or changed. Organization
 webhooks will be notified for events happening within each of the organization's
-stacks and organization-specific events like team or membership
-changes.
+stacks.
 
 > There are some restrictions for the number of webhooks that can be registered
 > when using the Pulumi Team editions. [Contact us]({{< relref "/about#contact-us" >}})
@@ -66,7 +65,6 @@ The following events are only delivered to organization-based webhooks.
 | Event Kind | Triggered |
 | --- | --- |
 | `stack` | Whenever a stack is created or deleted within an organization. |
-| `team`  | Whenever a team is created, updated, or deleted. |
 
 ## Payloads
 

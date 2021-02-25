@@ -1,8 +1,8 @@
 
 ---
-title: "GetVpcEndpoint"
-title_tag: "Function GetVpcEndpoint | Module ec2 | Package AWS"
-meta_desc: "Explore the GetVpcEndpoint function of the ec2 module, including examples, input properties, output properties, and supporting types. The VPC Endpoint data source provides details about"
+title: "getVpcEndpoint"
+title_tag: "aws.ec2.getVpcEndpoint"
+meta_desc: "Documentation for the aws.ec2.getVpcEndpoint function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -114,13 +114,13 @@ const privateS3 = new aws.ec2.VpcEndpointRouteTableAssociation("privateS3", {
 {{% /examples %}}
 
 
-## Using GetVpcEndpoint {#using}
+## Using getVpcEndpoint {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVpcEndpoint<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#GetVpcEndpointArgs">GetVpcEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#GetVpcEndpointResult">GetVpcEndpointResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVpcEndpoint<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVpcEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVpcEndpointResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -130,7 +130,7 @@ const privateS3 = new aws.ec2.VpcEndpointRouteTableAssociation("privateS3", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupVpcEndpointArgs">LookupVpcEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupVpcEndpointResult">LookupVpcEndpointResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVpcEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVpcEndpointResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVpcEndpoint` in the Go SDK.
 
@@ -139,7 +139,7 @@ const privateS3 = new aws.ec2.VpcEndpointRouteTableAssociation("privateS3", {
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVpcEndpoint </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetVpcEndpointResult.html">GetVpcEndpointResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetVpcEndpointArgs.html">GetVpcEndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetVpcEndpointResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVpcEndpointArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -419,7 +419,7 @@ a pair on the specific VPC Endpoint to retrieve.
 
 
 
-## GetVpcEndpoint Result {#result}
+## getVpcEndpoint Result {#result}
 
 The following output properties are available:
 
@@ -1192,16 +1192,6 @@ The following output properties are available:
 
 
 <h4 id="getvpcendpointdnsentry">Get<wbr>Vpc<wbr>Endpoint<wbr>Dns<wbr>Entry</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcEndpointDnsEntry">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetVpcEndpointDnsEntry">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetVpcEndpointDnsEntry.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1310,16 +1300,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getvpcendpointfilter">Get<wbr>Vpc<wbr>Endpoint<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpcEndpointFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcEndpointFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetVpcEndpointFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetVpcEndpointFilter">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetVpcEndpointFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetVpcEndpointFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

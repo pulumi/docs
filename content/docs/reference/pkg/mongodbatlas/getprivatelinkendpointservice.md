@@ -1,8 +1,8 @@
 
 ---
-title: "GetPrivateLinkEndpointService"
-title_tag: "Function GetPrivateLinkEndpointService | Package MongoDB Atlas"
-meta_desc: "Explore the GetPrivateLinkEndpointService function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.PrivateLinkEndpointService` describe a Private Endpoint Link. This represents a Private Endpoint Link Connection that wants to retrieve details in an Atlas project."
+title: "getPrivateLinkEndpointService"
+title_tag: "mongodbatlas.getPrivateLinkEndpointService"
+meta_desc: "Documentation for the mongodbatlas.getPrivateLinkEndpointService function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -52,9 +52,10 @@ const ptfeService = new aws.ec2.VpcEndpoint("ptfe_service", {
     vpcId: "vpc-7fc0a543",
 });
 const testMongodbatlasPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointService("test", {
-    interfaceEndpointId: ptfeService.id,
+    endpointServiceId: ptfeService.id,
     privateLinkId: testPrivateLinkEndpoint.privateLinkId,
     projectId: testPrivateLinkEndpoint.projectId,
+    providerName: "AWS",
 });
 const testPrivateLinkEndpointService = pulumi.all([testMongodbatlasPrivateLinkEndpointService.interfaceEndpointId, testMongodbatlasPrivateLinkEndpointService.privateLinkId, testMongodbatlasPrivateLinkEndpointService.projectId]).apply(([interfaceEndpointId, privateLinkId, projectId]) => mongodbatlas.getPrivateLinkEndpointService({
     interfaceEndpointId: interfaceEndpointId,
@@ -68,13 +69,13 @@ const testPrivateLinkEndpointService = pulumi.all([testMongodbatlasPrivateLinkEn
 {{% /examples %}}
 
 
-## Using GetPrivateLinkEndpointService {#using}
+## Using getPrivateLinkEndpointService {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPrivateLinkEndpointService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetPrivateLinkEndpointServiceArgs">GetPrivateLinkEndpointServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetPrivateLinkEndpointServiceResult">GetPrivateLinkEndpointServiceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPrivateLinkEndpointService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPrivateLinkEndpointServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPrivateLinkEndpointServiceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -84,7 +85,7 @@ const testPrivateLinkEndpointService = pulumi.all([testMongodbatlasPrivateLinkEn
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPrivateLinkEndpointService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#LookupPrivateLinkEndpointServiceArgs">LookupPrivateLinkEndpointServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#LookupPrivateLinkEndpointServiceResult">LookupPrivateLinkEndpointServiceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPrivateLinkEndpointService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPrivateLinkEndpointServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPrivateLinkEndpointServiceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPrivateLinkEndpointService` in the Go SDK.
 
@@ -93,7 +94,7 @@ const testPrivateLinkEndpointService = pulumi.all([testMongodbatlasPrivateLinkEn
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPrivateLinkEndpointService </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetPrivateLinkEndpointServiceResult.html">GetPrivateLinkEndpointServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetPrivateLinkEndpointServiceArgs.html">GetPrivateLinkEndpointServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPrivateLinkEndpointServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPrivateLinkEndpointServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -113,7 +114,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of the private endpoint service for which you want to create a private endpoint service.
+    <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` resource.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -123,7 +124,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` PrivateLink connection.
+    <dd>{{% md %}}Unique identifier of the private endpoint service for which you want to retrieve a private endpoint.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -159,7 +160,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of the private endpoint service for which you want to create a private endpoint service.
+    <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` resource.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -169,7 +170,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` PrivateLink connection.
+    <dd>{{% md %}}Unique identifier of the private endpoint service for which you want to retrieve a private endpoint.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -205,7 +206,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of the private endpoint service for which you want to create a private endpoint service.
+    <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` resource.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -215,7 +216,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` PrivateLink connection.
+    <dd>{{% md %}}Unique identifier of the private endpoint service for which you want to retrieve a private endpoint.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -251,7 +252,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of the private endpoint service for which you want to create a private endpoint service.
+    <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` resource.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -261,7 +262,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` PrivateLink connection.
+    <dd>{{% md %}}Unique identifier of the private endpoint service for which you want to retrieve a private endpoint.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -289,7 +290,7 @@ The following arguments are supported:
 
 
 
-## GetPrivateLinkEndpointService Result {#result}
+## getPrivateLinkEndpointService Result {#result}
 
 The following output properties are available:
 
@@ -300,13 +301,24 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="connectionstatus_csharp">
-<a href="#connectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
+        <span id="awsconnectionstatus_csharp">
+<a href="#awsconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="azurestatus_csharp">
+<a href="#azurestatus_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-"
@@ -423,13 +435,24 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span id="connectionstatus_go">
-<a href="#connectionstatus_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
+        <span id="awsconnectionstatus_go">
+<a href="#awsconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="azurestatus_go">
+<a href="#azurestatus_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-"
@@ -546,13 +569,24 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span id="connectionstatus_nodejs">
-<a href="#connectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Status</a>
+        <span id="awsconnectionstatus_nodejs">
+<a href="#awsconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="azurestatus_nodejs">
+<a href="#azurestatus_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-"
@@ -669,13 +703,24 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span id="connection_status_python">
-<a href="#connection_status_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>status</a>
+        <span id="aws_connection_status_python">
+<a href="#aws_connection_status_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>connection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="azure_status_python">
+<a href="#azure_status_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-"

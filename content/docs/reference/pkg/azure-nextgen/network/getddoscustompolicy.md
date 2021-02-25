@@ -1,8 +1,8 @@
 
 ---
-title: "GetDdosCustomPolicy"
-title_tag: "Function GetDdosCustomPolicy | Module network | Package Azure NextGen"
-meta_desc: "Explore the GetDdosCustomPolicy function of the network module, including examples, input properties, output properties, and supporting types. "
+title: "getDdosCustomPolicy"
+title_tag: "azure-nextgen.network.getDdosCustomPolicy"
+meta_desc: "Documentation for the azure-nextgen.network.getDdosCustomPolicy function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetDdosCustomPolicy function of the network module, incl
 
 
 
-## Using GetDdosCustomPolicy {#using}
+## Using getDdosCustomPolicy {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDdosCustomPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDdosCustomPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetDdosCustomPolicyResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDdosCustomPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDdosCustomPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDdosCustomPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetDdosCustomPolicy function of the network module, incl
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDdosCustomPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDdosCustomPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupDdosCustomPolicyResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDdosCustomPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDdosCustomPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDdosCustomPolicyResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDdosCustomPolicy` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetDdosCustomPolicy function of the network module, incl
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDdosCustomPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetDdosCustomPolicyResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetDdosCustomPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDdosCustomPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDdosCustomPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetDdosCustomPolicy Result {#result}
+## getDdosCustomPolicy Result {#result}
 
 The following output properties are available:
 
@@ -546,9 +546,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -718,9 +715,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="subresourceresponse">Sub<wbr>Resource<wbr>Response</h4>
-
-
-
 
 
 

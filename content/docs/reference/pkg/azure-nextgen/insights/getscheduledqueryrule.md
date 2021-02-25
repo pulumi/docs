@@ -1,8 +1,8 @@
 
 ---
-title: "GetScheduledQueryRule"
-title_tag: "Function GetScheduledQueryRule | Module insights | Package Azure NextGen"
-meta_desc: "Explore the GetScheduledQueryRule function of the insights module, including examples, input properties, output properties, and supporting types. "
+title: "getScheduledQueryRule"
+title_tag: "azure-nextgen.insights.getScheduledQueryRule"
+meta_desc: "Documentation for the azure-nextgen.insights.getScheduledQueryRule function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetScheduledQueryRule function of the insights module, i
 
 
 
-## Using GetScheduledQueryRule {#using}
+## Using getScheduledQueryRule {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getScheduledQueryRule<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetScheduledQueryRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetScheduledQueryRuleResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getScheduledQueryRule<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetScheduledQueryRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetScheduledQueryRuleResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetScheduledQueryRule function of the insights module, i
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupScheduledQueryRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupScheduledQueryRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupScheduledQueryRuleResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupScheduledQueryRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupScheduledQueryRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupScheduledQueryRuleResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupScheduledQueryRule` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetScheduledQueryRule function of the insights module, i
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetScheduledQueryRule </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetScheduledQueryRuleResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetScheduledQueryRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetScheduledQueryRuleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetScheduledQueryRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetScheduledQueryRule Result {#result}
+## getScheduledQueryRule Result {#result}
 
 The following output properties are available:
 
@@ -166,6 +166,24 @@ The following output properties are available:
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="createdwithapiversion_csharp">
+<a href="#createdwithapiversion_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>With<wbr>Api<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The api-version used when creating this alert rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -173,6 +191,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="islegacyloganalyticsrule_csharp">
+<a href="#islegacyloganalyticsrule_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Legacy<wbr>Log<wbr>Analytics<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}True if alert rule is legacy Log Analytic rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="lastupdatedtime_csharp">
@@ -238,6 +274,15 @@ The following output properties are available:
     <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of the alert rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
@@ -280,6 +325,24 @@ The following output properties are available:
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="createdwithapiversion_go">
+<a href="#createdwithapiversion_go" style="color: inherit; text-decoration: inherit;">Created<wbr>With<wbr>Api<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The api-version used when creating this alert rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -287,6 +350,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="islegacyloganalyticsrule_go">
+<a href="#islegacyloganalyticsrule_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Legacy<wbr>Log<wbr>Analytics<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}True if alert rule is legacy Log Analytic rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="lastupdatedtime_go">
@@ -352,6 +433,15 @@ The following output properties are available:
     <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of the alert rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
@@ -394,6 +484,24 @@ The following output properties are available:
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="createdwithapiversion_nodejs">
+<a href="#createdwithapiversion_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>With<wbr>Api<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The api-version used when creating this alert rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -401,6 +509,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="islegacyloganalyticsrule_nodejs">
+<a href="#islegacyloganalyticsrule_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Legacy<wbr>Log<wbr>Analytics<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}True if alert rule is legacy Log Analytic rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="lastupdatedtime_nodejs">
@@ -466,6 +592,15 @@ The following output properties are available:
     <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of the alert rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
@@ -508,6 +643,24 @@ The following output properties are available:
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="created_with_api_version_python">
+<a href="#created_with_api_version_python" style="color: inherit; text-decoration: inherit;">created_<wbr>with_<wbr>api_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The api-version used when creating this alert rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -515,6 +668,24 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="is_legacy_log_analytics_rule_python">
+<a href="#is_legacy_log_analytics_rule_python" style="color: inherit; text-decoration: inherit;">is_<wbr>legacy_<wbr>log_<wbr>analytics_<wbr>rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}True if alert rule is legacy Log Analytic rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="last_updated_time_python">
@@ -580,6 +751,15 @@ The following output properties are available:
     <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The display name of the alert rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
@@ -615,9 +795,6 @@ The following output properties are available:
 
 
 <h4 id="alertingactionresponse">Alerting<wbr>Action<wbr>Response</h4>
-
-
-
 
 
 
@@ -793,9 +970,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -932,9 +1106,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1032,9 +1203,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="dimensionresponse">Dimension<wbr>Response</h4>
-
-
-
 
 
 
@@ -1171,9 +1339,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="logmetrictriggerresponse">Log<wbr>Metric<wbr>Trigger<wbr>Response</h4>
-
-
-
 
 
 
@@ -1349,9 +1514,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1413,9 +1575,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="scheduleresponse">Schedule<wbr>Response</h4>
-
-
-
 
 
 
@@ -1516,9 +1675,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="sourceresponse">Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -1691,9 +1847,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="triggerconditionresponse">Trigger<wbr>Condition<wbr>Response</h4>
-
-
-
 
 
 

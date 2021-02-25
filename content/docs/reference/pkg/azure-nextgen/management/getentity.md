@@ -1,8 +1,8 @@
 
 ---
-title: "GetEntity"
-title_tag: "Function GetEntity | Module management | Package Azure NextGen"
-meta_desc: "Explore the GetEntity function of the management module, including examples, input properties, output properties, and supporting types. "
+title: "getEntity"
+title_tag: "azure-nextgen.management.getEntity"
+meta_desc: "Documentation for the azure-nextgen.management.getEntity function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetEntity function of the management module, including e
 
 
 
-## Using GetEntity {#using}
+## Using getEntity {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEntity<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEntityArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetEntityResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEntity<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEntityArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetEntityResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,14 +29,16 @@ meta_desc: "Explore the GetEntity function of the management module, including e
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEntity<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetEntityArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">GetEntityResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEntity<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetEntityArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetEntityResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetEntity` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetEntity </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetEntityResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetEntityArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetEntityResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetEntityArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -388,7 +390,7 @@ If a previous response contains a nextLink element, the value of the nextLink el
 
 
 
-## GetEntity Result {#result}
+## getEntity Result {#result}
 
 The following output properties are available:
 
@@ -533,9 +535,6 @@ The following output properties are available:
 
 
 <h4 id="entityinforesponse">Entity<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 
@@ -1032,9 +1031,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="entityparentgroupinforesponse">Entity<wbr>Parent<wbr>Group<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 

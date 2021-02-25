@@ -30,24 +30,6 @@ Explore the resources and functions of the edgedns module in the Akamai package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/akamai/terraform-provider-akamai).</dd>
 	<dt>Version</dt>
-	<dd>1.0.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Akamai/Pulumi.Akamai.edgedns.html" title="Pulumi.Akamai.edgedns">Pulumi.Akamai.edgedns</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-akamai/sdk/go/akamai/edgedns?tab=doc#" title="akamai/edgedns">akamai/edgedns</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/akamai/edgedns/#" title="@pulumi/akamai/edgedns">@pulumi/akamai/edgedns</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_akamai/edgedns" title="pulumi_akamai/edgedns">pulumi_akamai/edgedns</a></dd>
-
+	<dd>1.1.1</dd>
 </dl>
 

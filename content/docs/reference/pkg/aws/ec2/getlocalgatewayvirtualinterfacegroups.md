@@ -1,8 +1,8 @@
 
 ---
-title: "GetLocalGatewayVirtualInterfaceGroups"
-title_tag: "Function GetLocalGatewayVirtualInterfaceGroups | Module ec2 | Package AWS"
-meta_desc: "Explore the GetLocalGatewayVirtualInterfaceGroups function of the ec2 module, including examples, input properties, output properties, and supporting types. Provides details about multiple EC2 Local Gateway Virtual Interface Groups, such as identifiers. More information can be found in the [Outposts User Guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#routing)."
+title: "getLocalGatewayVirtualInterfaceGroups"
+title_tag: "aws.ec2.getLocalGatewayVirtualInterfaceGroups"
+meta_desc: "Documentation for the aws.ec2.getLocalGatewayVirtualInterfaceGroups function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -81,13 +81,13 @@ const all = pulumi.output(aws.ec2.getLocalGatewayVirtualInterfaceGroups({ async:
 {{% /examples %}}
 
 
-## Using GetLocalGatewayVirtualInterfaceGroups {#using}
+## Using getLocalGatewayVirtualInterfaceGroups {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLocalGatewayVirtualInterfaceGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#GetLocalGatewayVirtualInterfaceGroupsArgs">GetLocalGatewayVirtualInterfaceGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#GetLocalGatewayVirtualInterfaceGroupsResult">GetLocalGatewayVirtualInterfaceGroupsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLocalGatewayVirtualInterfaceGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLocalGatewayVirtualInterfaceGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLocalGatewayVirtualInterfaceGroupsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -97,14 +97,16 @@ const all = pulumi.output(aws.ec2.getLocalGatewayVirtualInterfaceGroups({ async:
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLocalGatewayVirtualInterfaceGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLocalGatewayVirtualInterfaceGroupsArgs">GetLocalGatewayVirtualInterfaceGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLocalGatewayVirtualInterfaceGroupsResult">GetLocalGatewayVirtualInterfaceGroupsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLocalGatewayVirtualInterfaceGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetLocalGatewayVirtualInterfaceGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetLocalGatewayVirtualInterfaceGroupsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetLocalGatewayVirtualInterfaceGroups` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLocalGatewayVirtualInterfaceGroups </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetLocalGatewayVirtualInterfaceGroupsResult.html">GetLocalGatewayVirtualInterfaceGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetLocalGatewayVirtualInterfaceGroupsArgs.html">GetLocalGatewayVirtualInterfaceGroupsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetLocalGatewayVirtualInterfaceGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLocalGatewayVirtualInterfaceGroupsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -220,7 +222,7 @@ The following arguments are supported:
 
 
 
-## GetLocalGatewayVirtualInterfaceGroups Result {#result}
+## getLocalGatewayVirtualInterfaceGroups Result {#result}
 
 The following output properties are available:
 
@@ -449,16 +451,6 @@ The following output properties are available:
 
 
 <h4 id="getlocalgatewayvirtualinterfacegroupsfilter">Get<wbr>Local<wbr>Gateway<wbr>Virtual<wbr>Interface<wbr>Groups<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetLocalGatewayVirtualInterfaceGroupsFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLocalGatewayVirtualInterfaceGroupsFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLocalGatewayVirtualInterfaceGroupsFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetLocalGatewayVirtualInterfaceGroupsFilter">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetLocalGatewayVirtualInterfaceGroupsFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetLocalGatewayVirtualInterfaceGroupsFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

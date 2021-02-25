@@ -54,6 +54,7 @@ export namespace Components {
   }
   interface PulumiExample {}
   interface PulumiExamples {}
+  interface PulumiGreenhouseJobsList {}
   interface PulumiHubspotForm {
     'class'?: string;
     'formId': string;
@@ -117,6 +118,12 @@ declare global {
     new (): HTMLPulumiExamplesElement;
   };
 
+  interface HTMLPulumiGreenhouseJobsListElement extends Components.PulumiGreenhouseJobsList, HTMLStencilElement {}
+  var HTMLPulumiGreenhouseJobsListElement: {
+    prototype: HTMLPulumiGreenhouseJobsListElement;
+    new (): HTMLPulumiGreenhouseJobsListElement;
+  };
+
   interface HTMLPulumiHubspotFormElement extends Components.PulumiHubspotForm, HTMLStencilElement {}
   var HTMLPulumiHubspotFormElement: {
     prototype: HTMLPulumiHubspotFormElement;
@@ -154,6 +161,7 @@ declare global {
     'pulumi-datetime': HTMLPulumiDatetimeElement;
     'pulumi-example': HTMLPulumiExampleElement;
     'pulumi-examples': HTMLPulumiExamplesElement;
+    'pulumi-greenhouse-jobs-list': HTMLPulumiGreenhouseJobsListElement;
     'pulumi-hubspot-form': HTMLPulumiHubspotFormElement;
     'pulumi-root': HTMLPulumiRootElement;
     'pulumi-tooltip': HTMLPulumiTooltipElement;
@@ -194,6 +202,7 @@ declare namespace LocalJSX {
   }
   interface PulumiExample {}
   interface PulumiExamples {}
+  interface PulumiGreenhouseJobsList {}
   interface PulumiHubspotForm {
     'class'?: string;
     'formId'?: string;
@@ -218,6 +227,7 @@ declare namespace LocalJSX {
     'pulumi-datetime': PulumiDatetime;
     'pulumi-example': PulumiExample;
     'pulumi-examples': PulumiExamples;
+    'pulumi-greenhouse-jobs-list': PulumiGreenhouseJobsList;
     'pulumi-hubspot-form': PulumiHubspotForm;
     'pulumi-root': PulumiRoot;
     'pulumi-tooltip': PulumiTooltip;
@@ -239,6 +249,7 @@ declare module "@stencil/core" {
       'pulumi-datetime': LocalJSX.PulumiDatetime & JSXBase.HTMLAttributes<HTMLPulumiDatetimeElement>;
       'pulumi-example': LocalJSX.PulumiExample & JSXBase.HTMLAttributes<HTMLPulumiExampleElement>;
       'pulumi-examples': LocalJSX.PulumiExamples & JSXBase.HTMLAttributes<HTMLPulumiExamplesElement>;
+      'pulumi-greenhouse-jobs-list': LocalJSX.PulumiGreenhouseJobsList & JSXBase.HTMLAttributes<HTMLPulumiGreenhouseJobsListElement>;
       'pulumi-hubspot-form': LocalJSX.PulumiHubspotForm & JSXBase.HTMLAttributes<HTMLPulumiHubspotFormElement>;
       'pulumi-root': LocalJSX.PulumiRoot & JSXBase.HTMLAttributes<HTMLPulumiRootElement>;
       'pulumi-tooltip': LocalJSX.PulumiTooltip & JSXBase.HTMLAttributes<HTMLPulumiTooltipElement>;

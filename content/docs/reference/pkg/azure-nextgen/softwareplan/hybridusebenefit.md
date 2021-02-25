@@ -11,7 +11,6 @@ meta_desc: "Documentation for the azure-nextgen.softwareplan.HybridUseBenefit re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Response on GET of a hybrid use benefit
-Latest API Version: 2019-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -27,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hybridUseBenefit = new AzureNextGen.SoftwarePlan.Latest.HybridUseBenefit("hybridUseBenefit", new AzureNextGen.SoftwarePlan.Latest.HybridUseBenefitArgs
+        var hybridUseBenefit = new AzureNextGen.SoftwarePlan.V20190601Preview.HybridUseBenefit("hybridUseBenefit", new AzureNextGen.SoftwarePlan.V20190601Preview.HybridUseBenefitArgs
         {
             PlanId = "94f46eda-45f8-493a-8425-251921463a89",
             Scope = "subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}",
-            Sku = new AzureNextGen.SoftwarePlan.Latest.Inputs.SkuArgs
+            Sku = new AzureNextGen.SoftwarePlan.V20190601Preview.Inputs.SkuArgs
             {
                 Name = "SQL_Server_Perpetual",
             },
@@ -50,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	softwareplan "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/softwareplan/latest"
+	softwareplan "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/softwareplan/v20190601preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -80,10 +79,10 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-hybrid_use_benefit = azure_nextgen.softwareplan.latest.HybridUseBenefit("hybridUseBenefit",
+hybrid_use_benefit = azure_nextgen.softwareplan.v20190601preview.HybridUseBenefit("hybridUseBenefit",
     plan_id="94f46eda-45f8-493a-8425-251921463a89",
     scope="subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}",
-    sku=azure_nextgen.softwareplan.latest.SkuArgs(
+    sku=azure_nextgen.softwareplan.v20190601preview.SkuArgs(
         name="SQL_Server_Perpetual",
     ))
 
@@ -97,7 +96,7 @@ hybrid_use_benefit = azure_nextgen.softwareplan.latest.HybridUseBenefit("hybridU
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const hybridUseBenefit = new azure_nextgen.softwareplan.latest.HybridUseBenefit("hybridUseBenefit", {
+const hybridUseBenefit = new azure_nextgen.softwareplan.v20190601preview.HybridUseBenefit("hybridUseBenefit", {
     planId: "94f46eda-45f8-493a-8425-251921463a89",
     scope: "subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}",
     sku: {
@@ -117,7 +116,7 @@ const hybridUseBenefit = new azure_nextgen.softwareplan.latest.HybridUseBenefit(
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HybridUseBenefit</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">HybridUseBenefitArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">HybridUseBenefit</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">HybridUseBenefitArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -125,11 +124,11 @@ const hybridUseBenefit = new azure_nextgen.softwareplan.latest.HybridUseBenefit(
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHybridUseBenefit</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">HybridUseBenefitArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HybridUseBenefit</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewHybridUseBenefit</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">HybridUseBenefitArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">HybridUseBenefit</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HybridUseBenefit</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">HybridUseBenefitArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">HybridUseBenefit</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">HybridUseBenefitArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -150,7 +149,7 @@ const hybridUseBenefit = new azure_nextgen.softwareplan.latest.HybridUseBenefit(
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">HybridUseBenefitArgs</span>
+        <span class="property-type"><a href="#inputs">HybridUseBenefitArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -219,7 +218,7 @@ const hybridUseBenefit = new azure_nextgen.softwareplan.latest.HybridUseBenefit(
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">HybridUseBenefitArgs</span>
+        <span class="property-type"><a href="#inputs">HybridUseBenefitArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -258,7 +257,7 @@ const hybridUseBenefit = new azure_nextgen.softwareplan.latest.HybridUseBenefit(
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">HybridUseBenefitArgs</span>
+        <span class="property-type"><a href="#inputs">HybridUseBenefitArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -281,11 +280,11 @@ const hybridUseBenefit = new azure_nextgen.softwareplan.latest.HybridUseBenefit(
 
 ## HybridUseBenefit Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The HybridUseBenefit resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The HybridUseBenefit resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -843,7 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:softwareplan/latest:HybridUseBenefit SQL_{hostGroupName}_{hostName} /subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}/providers/Microsoft.SoftwarePlan/hybridUseBenefits/SQL_{hostGroupName}_{hostName} 
+$ pulumi import azure-nextgen:softwareplan/v20190601preview:HybridUseBenefit SQL_{hostGroupName}_{hostName} /subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.Compute/HostGroups/{host-group-name}/hosts/{host-name}/providers/Microsoft.SoftwarePlan/hybridUseBenefits/SQL_{hostGroupName}_{hostName} 
 ```
 
 

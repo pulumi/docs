@@ -32,7 +32,7 @@ explore what's possible, you've come to the right place.
 
 ### Infrastructure
 
-{{< resource-providers "aiven,auth0,azuread,azuredevops,consul,docker,kafka,keycloak,kong,mailgun,okta,pagerduty,rabbitmq,rancher2,spotinst,splunk,vault,venafi" >}}
+{{< resource-providers "aiven,auth0,azuread,azuredevops,consul,docker,kafka,keycloak,kong,mailgun,okta,pagerduty,rabbitmq,rancher2,spotinst,splunk,vault,venafi,opsgenie" >}}
 
 ### Database
 
@@ -94,7 +94,7 @@ SDK reference documentation, organized by language.
 {{% choosable language csharp %}}
 <dl class="tabular">
     <dt>Pulumi SDK</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.html">Pulumi</a></dd>
+    <dd><a href="https://github.com/pulumi/pulumi/tree/master/sdk/dotnet">Pulumi</a></dd>
 </dl>
 {{% /choosable %}}
 

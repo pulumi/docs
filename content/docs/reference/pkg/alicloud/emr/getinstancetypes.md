@@ -1,8 +1,8 @@
 
 ---
-title: "GetInstanceTypes"
-title_tag: "Function GetInstanceTypes | Module emr | Package AliCloud"
-meta_desc: "Explore the GetInstanceTypes function of the emr module, including examples, input properties, output properties, and supporting types. The `alicloud.emr.getInstanceTypes` data source provides a collection of ecs"
+title: "getInstanceTypes"
+title_tag: "alicloud.emr.getInstanceTypes"
+meta_desc: "Documentation for the alicloud.emr.getInstanceTypes function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -133,13 +133,13 @@ export const firstInstanceType = defaultInstanceTypes.types[0].id;
 {{% /examples %}}
 
 
-## Using GetInstanceTypes {#using}
+## Using getInstanceTypes {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstanceTypes<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/emr/#GetInstanceTypesArgs">GetInstanceTypesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/emr/#GetInstanceTypesResult">GetInstanceTypesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstanceTypes<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetInstanceTypesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetInstanceTypesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -149,14 +149,16 @@ export const firstInstanceType = defaultInstanceTypes.types[0].id;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceTypes<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/emr?tab=doc#GetInstanceTypesArgs">GetInstanceTypesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/emr?tab=doc#GetInstanceTypesResult">GetInstanceTypesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceTypes<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetInstanceTypesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetInstanceTypesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetInstanceTypes` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInstanceTypes </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Emr.GetInstanceTypesResult.html">GetInstanceTypesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Emr.GetInstanceTypesArgs.html">GetInstanceTypesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetInstanceTypesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetInstanceTypesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -512,7 +514,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
 
 
 
-## GetInstanceTypes Result {#result}
+## getInstanceTypes Result {#result}
 
 The following output properties are available:
 
@@ -961,16 +963,6 @@ The following output properties are available:
 
 
 <h4 id="getinstancetypestype">Get<wbr>Instance<wbr>Types<wbr>Type</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstanceTypesType">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/emr?tab=doc#GetInstanceTypesType">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Emr.Outputs.GetInstanceTypesType.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetCluster"
-title_tag: "Function GetCluster | Module servicefabric | Package Azure NextGen"
-meta_desc: "Explore the GetCluster function of the servicefabric module, including examples, input properties, output properties, and supporting types. "
+title: "getCluster"
+title_tag: "azure-nextgen.servicefabric.getCluster"
+meta_desc: "Documentation for the azure-nextgen.servicefabric.getCluster function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetCluster function of the servicefabric module, includi
 
 
 
-## Using GetCluster {#using}
+## Using getCluster {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetClusterResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetClusterResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetCluster function of the servicefabric module, includi
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupClusterResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupClusterResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCluster` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetCluster function of the servicefabric module, includi
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCluster </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetClusterResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetCluster Result {#result}
+## getCluster Result {#result}
 
 The following output properties are available:
 
@@ -1358,9 +1358,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1458,9 +1455,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="applicationhealthpolicyresponse">Application<wbr>Health<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -1564,9 +1558,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1628,9 +1619,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azureactivedirectoryresponse">Azure<wbr>Active<wbr>Directory<wbr>Response</h4>
-
-
-
 
 
 
@@ -1770,9 +1758,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1906,9 +1891,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="clientcertificatecommonnameresponse">Client<wbr>Certificate<wbr>Common<wbr>Name<wbr>Response</h4>
-
-
-
 
 
 
@@ -2048,9 +2030,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2148,9 +2127,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="clusterhealthpolicyresponse">Cluster<wbr>Health<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -2343,9 +2319,6 @@ In large clusters, some nodes will always be down or out for repairs, so this pe
 {{% /choosable %}}
 
 <h4 id="clusterupgradedeltahealthpolicyresponse">Cluster<wbr>Upgrade<wbr>Delta<wbr>Health<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -2554,9 +2527,6 @@ The check is performed after every upgrade domain upgrade completion for all com
 {{% /choosable %}}
 
 <h4 id="clusterupgradepolicyresponse">Cluster<wbr>Upgrade<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -2912,9 +2882,6 @@ The check is performed after every upgrade domain upgrade completion for all com
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3048,9 +3015,6 @@ The check is performed after every upgrade domain upgrade completion for all com
 {{% /choosable %}}
 
 <h4 id="diagnosticsstorageaccountconfigresponse">Diagnostics<wbr>Storage<wbr>Account<wbr>Config<wbr>Response</h4>
-
-
-
 
 
 
@@ -3298,9 +3262,6 @@ The check is performed after every upgrade domain upgrade completion for all com
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3398,9 +3359,6 @@ The check is performed after every upgrade domain upgrade completion for all com
 {{% /choosable %}}
 
 <h4 id="nodetypedescriptionresponse">Node<wbr>Type<wbr>Description<wbr>Response</h4>
-
-
-
 
 
 
@@ -3848,9 +3806,6 @@ The check is performed after every upgrade domain upgrade completion for all com
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3948,9 +3903,6 @@ The check is performed after every upgrade domain upgrade completion for all com
 {{% /choosable %}}
 
 <h4 id="servercertificatecommonnamesresponse">Server<wbr>Certificate<wbr>Common<wbr>Names<wbr>Response</h4>
-
-
-
 
 
 
@@ -4054,9 +4006,6 @@ The check is performed after every upgrade domain upgrade completion for all com
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4133,9 +4082,6 @@ The check is performed after every upgrade domain upgrade completion to make sur
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4201,9 +4147,6 @@ The check is performed after every upgrade domain upgrade completion to make sur
 {{% /choosable %}}
 
 <h4 id="settingsparameterdescriptionresponse">Settings<wbr>Parameter<wbr>Description<wbr>Response</h4>
-
-
-
 
 
 
@@ -4304,9 +4247,6 @@ The check is performed after every upgrade domain upgrade completion to make sur
 {{% /choosable %}}
 
 <h4 id="settingssectiondescriptionresponse">Settings<wbr>Section<wbr>Description<wbr>Response</h4>
-
-
-
 
 
 

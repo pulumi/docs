@@ -1,8 +1,8 @@
 
 ---
-title: "GetApplication"
-title_tag: "Function GetApplication | Module hdinsight | Package Azure NextGen"
-meta_desc: "Explore the GetApplication function of the hdinsight module, including examples, input properties, output properties, and supporting types. "
+title: "getApplication"
+title_tag: "azure-nextgen.hdinsight.getApplication"
+meta_desc: "Documentation for the azure-nextgen.hdinsight.getApplication function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetApplication function of the hdinsight module, includi
 
 
 
-## Using GetApplication {#using}
+## Using getApplication {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApplication<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetApplicationResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApplication<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetApplicationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetApplication function of the hdinsight module, includi
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupApplicationResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupApplicationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupApplicationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupApplication` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetApplication function of the hdinsight module, includi
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetApplication </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetApplicationResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetApplicationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetApplicationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetApplicationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetApplication Result {#result}
+## getApplication Result {#result}
 
 The following output properties are available:
 
@@ -438,9 +438,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -613,9 +610,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -655,6 +649,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_csharp">
+<a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="publicport_csharp">
@@ -717,6 +720,15 @@ The following output properties are available:
     <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privateipaddress_go">
+<a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicport_go">
 <a href="#publicport_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Port</a>
 </span>
@@ -775,6 +787,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_nodejs">
+<a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="publicport_nodejs">
@@ -837,6 +858,15 @@ The following output properties are available:
     <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="private_ip_address_python">
+<a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="public_port_python">
 <a href="#public_port_python" style="color: inherit; text-decoration: inherit;">public_<wbr>port</a>
 </span>
@@ -857,9 +887,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="applicationpropertiesresponse">Application<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -1287,9 +1314,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1387,9 +1411,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="autoscalerecurrenceresponse">Autoscale<wbr>Recurrence<wbr>Response</h4>
-
-
-
 
 
 
@@ -1493,9 +1514,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1596,9 +1614,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1696,9 +1711,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="autoscaletimeandcapacityresponse">Autoscale<wbr>Time<wbr>And<wbr>Capacity<wbr>Response</h4>
-
-
-
 
 
 
@@ -1838,9 +1850,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1902,9 +1911,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="datadisksgroupsresponse">Data<wbr>Disks<wbr>Groups<wbr>Response</h4>
-
-
-
 
 
 
@@ -2044,9 +2050,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2147,9 +2150,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2211,9 +2211,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="linuxoperatingsystemprofileresponse">Linux<wbr>Operating<wbr>System<wbr>Profile<wbr>Response</h4>
-
-
-
 
 
 
@@ -2353,9 +2350,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2417,9 +2411,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="roleresponse">Role<wbr>Response</h4>
-
-
-
 
 
 
@@ -2507,6 +2498,15 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmgroupname_csharp">
+<a href="#vmgroupname_csharp" style="color: inherit; text-decoration: inherit;">VMGroup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkprofile_csharp">
@@ -2605,6 +2605,15 @@ The following output properties are available:
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="vmgroupname_go">
+<a href="#vmgroupname_go" style="color: inherit; text-decoration: inherit;">VMGroup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtualnetworkprofile_go">
 <a href="#virtualnetworkprofile_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Profile</a>
 </span>
@@ -2699,6 +2708,15 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmgroupname_nodejs">
+<a href="#vmgroupname_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>MGroup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkprofile_nodejs">
@@ -2797,6 +2815,15 @@ The following output properties are available:
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="v_m_group_name_python">
+<a href="#v_m_group_name_python" style="color: inherit; text-decoration: inherit;">v_<wbr>m_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtual_network_profile_python">
 <a href="#virtual_network_profile_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>profile</a>
 </span>
@@ -2808,9 +2835,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="runtimescriptactionresponse">Runtime<wbr>Script<wbr>Action<wbr>Response</h4>
-
-
-
 
 
 
@@ -3022,9 +3046,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3161,9 +3182,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3228,9 +3246,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3292,9 +3307,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="virtualnetworkprofileresponse">Virtual<wbr>Network<wbr>Profile<wbr>Response</h4>
-
-
-
 
 
 

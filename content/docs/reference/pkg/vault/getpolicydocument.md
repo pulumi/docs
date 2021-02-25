@@ -1,8 +1,8 @@
 
 ---
-title: "GetPolicyDocument"
-title_tag: "Function GetPolicyDocument | Package Vault"
-meta_desc: "Explore the GetPolicyDocument function of the Vault package, including examples, input properties, output properties, and supporting types. This is a data source which can be used to construct a HCL representation of an Vault policy document, for use with resources which expect policy documents, such as the `vault.Policy` resource."
+title: "getPolicyDocument"
+title_tag: "vault.getPolicyDocument"
+meta_desc: "Documentation for the vault.getPolicyDocument function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -149,13 +149,13 @@ const examplePolicy = new vault.Policy("example", {
 {{% /examples %}}
 
 
-## Using GetPolicyDocument {#using}
+## Using getPolicyDocument {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicyDocument<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/#GetPolicyDocumentArgs">GetPolicyDocumentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/#GetPolicyDocumentResult">GetPolicyDocumentResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicyDocument<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPolicyDocumentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPolicyDocumentResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -165,14 +165,16 @@ const examplePolicy = new vault.Policy("example", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicyDocument<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/?tab=doc#GetPolicyDocumentArgs">GetPolicyDocumentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/?tab=doc#GetPolicyDocumentResult">GetPolicyDocumentResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicyDocument<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetPolicyDocumentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetPolicyDocumentResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetPolicyDocument` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPolicyDocument </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.GetPolicyDocumentResult.html">GetPolicyDocumentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.GetPolicyDocumentArgs.html">GetPolicyDocumentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPolicyDocumentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPolicyDocumentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -244,7 +246,7 @@ The following arguments are supported:
 
 
 
-## GetPolicyDocument Result {#result}
+## getPolicyDocument Result {#result}
 
 The following output properties are available:
 
@@ -397,16 +399,6 @@ The following output properties are available:
 
 
 <h4 id="getpolicydocumentrule">Get<wbr>Policy<wbr>Document<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/input/#GetPolicyDocumentRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/output/#GetPolicyDocumentRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/?tab=doc#GetPolicyDocumentRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/?tab=doc#GetPolicyDocumentRule">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Inputs.GetPolicyDocumentRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Outputs.GetPolicyDocumentRule.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -461,7 +453,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the rule. Will be added as a commend to rendered rule.
+    <dd>{{% md %}}Description of the rule. Will be added as a comment to rendered rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -547,7 +539,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the rule. Will be added as a commend to rendered rule.
+    <dd>{{% md %}}Description of the rule. Will be added as a comment to rendered rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -633,7 +625,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the rule. Will be added as a commend to rendered rule.
+    <dd>{{% md %}}Description of the rule. Will be added as a comment to rendered rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -719,7 +711,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of the rule. Will be added as a commend to rendered rule.
+    <dd>{{% md %}}Description of the rule. Will be added as a comment to rendered rule.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -755,16 +747,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getpolicydocumentruleallowedparameter">Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Allowed<wbr>Parameter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/input/#GetPolicyDocumentRuleAllowedParameter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/output/#GetPolicyDocumentRuleAllowedParameter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/?tab=doc#GetPolicyDocumentRuleAllowedParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/?tab=doc#GetPolicyDocumentRuleAllowedParameter">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Inputs.GetPolicyDocumentRuleAllowedParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Outputs.GetPolicyDocumentRuleAllowedParameter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -873,16 +855,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getpolicydocumentruledeniedparameter">Get<wbr>Policy<wbr>Document<wbr>Rule<wbr>Denied<wbr>Parameter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/input/#GetPolicyDocumentRuleDeniedParameter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/output/#GetPolicyDocumentRuleDeniedParameter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/?tab=doc#GetPolicyDocumentRuleDeniedParameterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/?tab=doc#GetPolicyDocumentRuleDeniedParameter">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Inputs.GetPolicyDocumentRuleDeniedParameterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Outputs.GetPolicyDocumentRuleDeniedParameter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

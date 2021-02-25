@@ -1,8 +1,8 @@
 
 ---
-title: "GetImage"
-title_tag: "Function GetImage | Module compute | Package Azure NextGen"
-meta_desc: "Explore the GetImage function of the compute module, including examples, input properties, output properties, and supporting types. "
+title: "getImage"
+title_tag: "azure-nextgen.compute.getImage"
+meta_desc: "Documentation for the azure-nextgen.compute.getImage function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetImage function of the compute module, including examp
 
 
 
-## Using GetImage {#using}
+## Using getImage {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getImage<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetImageArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetImageResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getImage<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetImageArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetImageResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetImage function of the compute module, including examp
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupImageArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupImageResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupImage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupImageArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupImageResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupImage` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetImage function of the compute module, including examp
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetImage </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetImageResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetImageArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetImageResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetImageArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetImage Result {#result}
+## getImage Result {#result}
 
 The following output properties are available:
 
@@ -236,6 +236,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="extendedlocation_csharp">
+<a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Image.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="hypervgeneration_csharp">
@@ -325,6 +334,15 @@ The following output properties are available:
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="extendedlocation_go">
+<a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Image.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="hypervgeneration_go">
 <a href="#hypervgeneration_go" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
 </span>
@@ -410,6 +428,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="extendedlocation_nodejs">
+<a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Image.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="hypervgeneration_nodejs">
@@ -499,6 +526,15 @@ The following output properties are available:
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="extended_location_python">
+<a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Image.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="hyper_v_generation_python">
 <a href="#hyper_v_generation_python" style="color: inherit; text-decoration: inherit;">hyper_<wbr>v_<wbr>generation</a>
 </span>
@@ -543,9 +579,6 @@ The following output properties are available:
 
 
 <h4 id="diskencryptionsetparametersresponse">Disk<wbr>Encryption<wbr>Set<wbr>Parameters<wbr>Response</h4>
-
-
-
 
 
 
@@ -609,10 +642,107 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
+<h4 id="extendedlocationresponse">Extended<wbr>Location<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="imagedatadiskresponse">Image<wbr>Data<wbr>Disk<wbr>Response</h4>
-
-
-
 
 
 
@@ -929,9 +1059,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="imageosdiskresponse">Image<wbr>OSDisk<wbr>Response</h4>
-
-
-
 
 
 
@@ -1287,9 +1414,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1423,9 +1547,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="subresourceresponse">Sub<wbr>Resource<wbr>Response</h4>
-
-
-
 
 
 

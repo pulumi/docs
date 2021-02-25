@@ -32,24 +32,6 @@ A Pulumi package for creating and managing cloudinit cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`cloudinit` Terraform Provider](https://github.com/hashicorp/terraform-provider-cloudinit).</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.CloudInit/Pulumi.CloudInit.html" title="Pulumi.CloudInit">Pulumi.CloudInit</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudinit/sdk/go/cloudinit/?tab=doc#" title="cloudinit">cloudinit</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/cloudinit/#" title="@pulumi/cloudinit">@pulumi/cloudinit</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_cloudinit" title="pulumi_cloudinit">pulumi_cloudinit</a></dd>
-
+	<dd>0.1.3</dd>
 </dl>
 

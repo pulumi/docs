@@ -1,8 +1,8 @@
 
 ---
-title: "GetCloudProviderSnapshot"
-title_tag: "Function GetCloudProviderSnapshot | Package MongoDB Atlas"
-meta_desc: "Explore the GetCloudProviderSnapshot function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.CloudProviderSnapshot` provides an Cloud Backup Snapshot datasource. Atlas Cloud Backup Snapshots provide localized backup storage using the native snapshot functionality of the cluster’s cloud service."
+title: "getCloudProviderSnapshot"
+title_tag: "mongodbatlas.getCloudProviderSnapshot"
+meta_desc: "Documentation for the mongodbatlas.getCloudProviderSnapshot function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -56,13 +56,13 @@ const testCloudProviderSnapshot = pulumi.all([testMongodbatlasCloudProviderSnaps
 {{% /examples %}}
 
 
-## Using GetCloudProviderSnapshot {#using}
+## Using getCloudProviderSnapshot {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCloudProviderSnapshot<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetCloudProviderSnapshotArgs">GetCloudProviderSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetCloudProviderSnapshotResult">GetCloudProviderSnapshotResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCloudProviderSnapshot<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCloudProviderSnapshotArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCloudProviderSnapshotResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -72,7 +72,7 @@ const testCloudProviderSnapshot = pulumi.all([testMongodbatlasCloudProviderSnaps
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCloudProviderSnapshot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#LookupCloudProviderSnapshotArgs">LookupCloudProviderSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#LookupCloudProviderSnapshotResult">LookupCloudProviderSnapshotResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCloudProviderSnapshot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCloudProviderSnapshotArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCloudProviderSnapshotResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCloudProviderSnapshot` in the Go SDK.
 
@@ -81,7 +81,7 @@ const testCloudProviderSnapshot = pulumi.all([testMongodbatlasCloudProviderSnaps
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCloudProviderSnapshot </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetCloudProviderSnapshotResult.html">GetCloudProviderSnapshotResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetCloudProviderSnapshotArgs.html">GetCloudProviderSnapshotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCloudProviderSnapshotResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCloudProviderSnapshotArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -233,7 +233,7 @@ The following arguments are supported:
 
 
 
-## GetCloudProviderSnapshot Result {#result}
+## getCloudProviderSnapshot Result {#result}
 
 The following output properties are available:
 

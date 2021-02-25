@@ -1,8 +1,8 @@
 
 ---
-title: "GetSigningProfile"
-title_tag: "Function GetSigningProfile | Module signer | Package AWS"
-meta_desc: "Explore the GetSigningProfile function of the signer module, including examples, input properties, output properties, and supporting types. Provides information about a Signer Signing Profile."
+title: "getSigningProfile"
+title_tag: "aws.signer.getSigningProfile"
+meta_desc: "Documentation for the aws.signer.getSigningProfile function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,13 +88,13 @@ const productionSigningProfile = pulumi.output(aws.signer.getSigningProfile({
 {{% /examples %}}
 
 
-## Using GetSigningProfile {#using}
+## Using getSigningProfile {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSigningProfile<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/signer/#GetSigningProfileArgs">GetSigningProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/signer/#GetSigningProfileResult">GetSigningProfileResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSigningProfile<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSigningProfileArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSigningProfileResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -104,7 +104,7 @@ const productionSigningProfile = pulumi.output(aws.signer.getSigningProfile({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSigningProfile<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/signer?tab=doc#LookupSigningProfileArgs">LookupSigningProfileArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/signer?tab=doc#LookupSigningProfileResult">LookupSigningProfileResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSigningProfile<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSigningProfileArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSigningProfileResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSigningProfile` in the Go SDK.
 
@@ -113,7 +113,7 @@ const productionSigningProfile = pulumi.output(aws.signer.getSigningProfile({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSigningProfile </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Signer.GetSigningProfileResult.html">GetSigningProfileResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Signer.GetSigningProfileArgs.html">GetSigningProfileArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSigningProfileResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSigningProfileArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## GetSigningProfile Result {#result}
+## getSigningProfile Result {#result}
 
 The following output properties are available:
 
@@ -702,16 +702,6 @@ The following output properties are available:
 
 
 <h4 id="getsigningprofilerevocationrecord">Get<wbr>Signing<wbr>Profile<wbr>Revocation<wbr>Record</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSigningProfileRevocationRecord">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/signer?tab=doc#GetSigningProfileRevocationRecord">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Signer.Outputs.GetSigningProfileRevocationRecord.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -848,16 +838,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getsigningprofilesignaturevalidityperiod">Get<wbr>Signing<wbr>Profile<wbr>Signature<wbr>Validity<wbr>Period</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSigningProfileSignatureValidityPeriod">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/signer?tab=doc#GetSigningProfileSignatureValidityPeriod">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Signer.Outputs.GetSigningProfileSignatureValidityPeriod.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

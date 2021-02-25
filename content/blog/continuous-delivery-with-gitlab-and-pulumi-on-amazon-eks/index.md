@@ -55,7 +55,7 @@ suited in a production setup giving users more flexibility and
 boundaries between their teams. We will use this structure in our
 example below. For more information on Pulumi projects and stacks,
 please refer to our documentation
-[here]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}).
+[here]({{< relref "/docs/guides/organizing-projects-stacks" >}}).
 
 ### Use Tags to group Pulumi Stacks as Environments:
 

@@ -1,6 +1,6 @@
 ---
 title: "DigitalOcean"
-title_tag: "Module DigitalOcean | Package DigitalOcean"
+title_tag: "digitalocean.DigitalOcean"
 meta_desc: "A Pulumi package for creating and managing Digital Ocean cloud resources."
 menu:
     reference:
@@ -96,24 +96,6 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).</dd>
 	<dt>Version</dt>
-	<dd>3.3.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.html" title="Pulumi.DigitalOcean">Pulumi.DigitalOcean</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#" title="digitalocean">digitalocean</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#" title="@pulumi/digitalocean">@pulumi/digitalocean</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_digitalocean" title="pulumi_digitalocean">pulumi_digitalocean</a></dd>
-
+	<dd>3.5.1</dd>
 </dl>
 

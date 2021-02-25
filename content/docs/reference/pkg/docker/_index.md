@@ -1,6 +1,6 @@
 ---
 title: "Docker"
-title_tag: "Module Docker | Package Docker"
+title_tag: "docker.Docker"
 meta_desc: "A Pulumi package for interacting with Docker in Pulumi programs"
 menu:
     reference:
@@ -43,24 +43,6 @@ A Pulumi package for interacting with Docker in Pulumi programs
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`docker` Terraform Provider](https://github.com/terraform-providers/terraform-provider-docker).</dd>
 	<dt>Version</dt>
-	<dd>2.6.1</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.html" title="Pulumi.Docker">Pulumi.Docker</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#" title="docker">docker</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/docker/#" title="@pulumi/docker">@pulumi/docker</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_docker" title="pulumi_docker">pulumi_docker</a></dd>
-
+	<dd>2.8.1</dd>
 </dl>
 

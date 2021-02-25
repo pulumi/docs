@@ -1,8 +1,8 @@
 
 ---
-title: "GetRegionSslCertificate"
-title_tag: "Function GetRegionSslCertificate | Module compute | Package GCP"
-meta_desc: "Explore the GetRegionSslCertificate function of the compute module, including examples, input properties, output properties, and supporting types. Get info about a Region Google Compute SSL Certificate from its name."
+title: "getRegionSslCertificate"
+title_tag: "gcp.compute.getRegionSslCertificate"
+meta_desc: "Documentation for the gcp.compute.getRegionSslCertificate function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -106,13 +106,13 @@ export const selfLink = myCert.then(myCert => myCert.selfLink);
 {{% /examples %}}
 
 
-## Using GetRegionSslCertificate {#using}
+## Using getRegionSslCertificate {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRegionSslCertificate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#GetRegionSslCertificateArgs">GetRegionSslCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#GetRegionSslCertificateResult">GetRegionSslCertificateResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRegionSslCertificate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRegionSslCertificateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRegionSslCertificateResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -122,7 +122,7 @@ export const selfLink = myCert.then(myCert => myCert.selfLink);
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRegionSslCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#LookupRegionSslCertificateArgs">LookupRegionSslCertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#LookupRegionSslCertificateResult">LookupRegionSslCertificateResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRegionSslCertificate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRegionSslCertificateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupRegionSslCertificateResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupRegionSslCertificate` in the Go SDK.
 
@@ -131,7 +131,7 @@ export const selfLink = myCert.then(myCert => myCert.selfLink);
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRegionSslCertificate </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GetRegionSslCertificateResult.html">GetRegionSslCertificateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GetRegionSslCertificateArgs.html">GetRegionSslCertificateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetRegionSslCertificateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRegionSslCertificateArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -295,7 +295,7 @@ is not provided, the provider region is used.
 
 
 
-## GetRegionSslCertificate Result {#result}
+## getRegionSslCertificate Result {#result}
 
 The following output properties are available:
 

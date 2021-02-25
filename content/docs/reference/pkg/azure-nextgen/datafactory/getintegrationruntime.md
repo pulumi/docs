@@ -1,8 +1,8 @@
 
 ---
-title: "GetIntegrationRuntime"
-title_tag: "Function GetIntegrationRuntime | Module datafactory | Package Azure NextGen"
-meta_desc: "Explore the GetIntegrationRuntime function of the datafactory module, including examples, input properties, output properties, and supporting types. "
+title: "getIntegrationRuntime"
+title_tag: "azure-nextgen.datafactory.getIntegrationRuntime"
+meta_desc: "Documentation for the azure-nextgen.datafactory.getIntegrationRuntime function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetIntegrationRuntime function of the datafactory module
 
 
 
-## Using GetIntegrationRuntime {#using}
+## Using getIntegrationRuntime {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationRuntime<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationRuntimeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetIntegrationRuntimeResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIntegrationRuntime<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIntegrationRuntimeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIntegrationRuntimeResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetIntegrationRuntime function of the datafactory module
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIntegrationRuntime<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIntegrationRuntimeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupIntegrationRuntimeResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIntegrationRuntime<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIntegrationRuntimeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIntegrationRuntimeResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupIntegrationRuntime` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetIntegrationRuntime function of the datafactory module
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIntegrationRuntime </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetIntegrationRuntimeResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationRuntimeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetIntegrationRuntimeResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIntegrationRuntimeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetIntegrationRuntime Result {#result}
+## getIntegrationRuntime Result {#result}
 
 The following output properties are available:
 
@@ -402,9 +402,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -466,9 +463,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</h4>
-
-
-
 
 
 
@@ -608,9 +602,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -747,9 +738,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -847,9 +835,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="entityreferenceresponse">Entity<wbr>Reference<wbr>Response</h4>
-
-
-
 
 
 
@@ -953,9 +938,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1053,9 +1035,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="integrationruntimecomputepropertiesresponse">Integration<wbr>Runtime<wbr>Compute<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -1303,9 +1282,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1403,9 +1379,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="integrationruntimedataflowpropertiesresponse">Integration<wbr>Runtime<wbr>Data<wbr>Flow<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -1545,9 +1518,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1681,9 +1651,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="integrationruntimessiscataloginforesponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 
@@ -1892,9 +1859,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="integrationruntimessispropertiesresponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -2178,9 +2142,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2317,9 +2278,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2384,9 +2342,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2448,9 +2403,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</h4>
-
-
-
 
 
 
@@ -2587,9 +2539,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="managedintegrationruntimeresponse">Managed<wbr>Integration<wbr>Runtime<wbr>Response</h4>
-
-
-
 
 
 
@@ -2801,9 +2750,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2901,9 +2847,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="packagestoreresponse">Package<wbr>Store<wbr>Response</h4>
-
-
-
 
 
 
@@ -3007,9 +2950,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3071,9 +3011,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="selfhostedintegrationruntimeresponse">Self<wbr>Hosted<wbr>Integration<wbr>Runtime<wbr>Response</h4>
-
-
-
 
 
 

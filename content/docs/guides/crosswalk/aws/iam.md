@@ -59,7 +59,7 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html).
 ### Using the PolicyDocument Interface
 
 Pulumi Crosswalk for AWS defines [the `aws.iam.PolicyDocument` interface](
-{{< relref "/docs/reference/pkg/nodejs/pulumi/aws/iam#PolicyDocument" >}}) to add strong type checking to your policy documents. By using
+{{< relref "/docs/reference/pkg/aws/iam" >}}) to add strong type checking to your policy documents. By using
 this type, we will know at compile time whether we've mistyped an attribute:
 
 ```typescript

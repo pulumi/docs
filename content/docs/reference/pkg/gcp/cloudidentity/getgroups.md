@@ -1,8 +1,8 @@
 
 ---
-title: "GetGroups"
-title_tag: "Function GetGroups | Module cloudidentity | Package GCP"
-meta_desc: "Explore the GetGroups function of the cloudidentity module, including examples, input properties, output properties, and supporting types. Use this data source to get list of the Cloud Identity Groups under a customer or namespace."
+title: "getGroups"
+title_tag: "gcp.cloudidentity.getGroups"
+meta_desc: "Documentation for the gcp.cloudidentity.getGroups function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -90,13 +90,13 @@ const groups = pulumi.output(gcp.cloudidentity.getGroups({
 {{% /examples %}}
 
 
-## Using GetGroups {#using}
+## Using getGroups {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudidentity/#GetGroupsArgs">GetGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudidentity/#GetGroupsResult">GetGroupsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetGroupsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -106,14 +106,16 @@ const groups = pulumi.output(gcp.cloudidentity.getGroups({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudidentity?tab=doc#GetGroupsArgs">GetGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudidentity?tab=doc#GetGroupsResult">GetGroupsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetGroupsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetGroups` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetGroups </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudidentity.GetGroupsResult.html">GetGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudIdentity.GetGroupsArgs.html">GetGroupsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetGroupsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -189,7 +191,7 @@ The following arguments are supported:
 
 
 
-## GetGroups Result {#result}
+## getGroups Result {#result}
 
 The following output properties are available:
 
@@ -342,16 +344,6 @@ The following output properties are available:
 
 
 <h4 id="getgroupsgroup">Get<wbr>Groups<wbr>Group</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetGroupsGroup">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudidentity?tab=doc#GetGroupsGroup">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudIdentity.Outputs.GetGroupsGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -672,16 +664,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getgroupsgroupgroupkey">Get<wbr>Groups<wbr>Group<wbr>Group<wbr>Key</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetGroupsGroupGroupKey">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudidentity?tab=doc#GetGroupsGroupGroupKey">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudIdentity.Outputs.GetGroupsGroupGroupKey.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

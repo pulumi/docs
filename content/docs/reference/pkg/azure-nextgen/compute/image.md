@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.Image resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
-Latest API Version: 2020-06-01.
+Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -1339,19 +1339,19 @@ const image = new azure_nextgen.compute.latest.Image("image", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Image</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ImageArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Image</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[Union[str, HyperVGenerationTypes]]</span> = None<span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_virtual_machine</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">storage_profile</span><span class="p">:</span> <span class="nx">Optional[ImageStorageProfileArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">extended_location</span><span class="p">:</span> <span class="nx">Optional[ExtendedLocationArgs]</span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[Union[str, HyperVGenerationTypes]]</span> = None<span class="p">, </span><span class="nx">image_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_virtual_machine</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">storage_profile</span><span class="p">:</span> <span class="nx">Optional[ImageStorageProfileArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ImageArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Image</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewImage</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Image</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Image</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ImageArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Image</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ImageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1372,7 +1372,7 @@ const image = new azure_nextgen.compute.latest.Image("image", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ImageArgs</span>
+        <span class="property-type"><a href="#inputs">ImageArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1441,7 +1441,7 @@ const image = new azure_nextgen.compute.latest.Image("image", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ImageArgs</span>
+        <span class="property-type"><a href="#inputs">ImageArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1480,7 +1480,7 @@ const image = new azure_nextgen.compute.latest.Image("image", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ImageArgs</span>
+        <span class="property-type"><a href="#inputs">ImageArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1503,11 +1503,11 @@ const image = new azure_nextgen.compute.latest.Image("image", {
 
 ## Image Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Image resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Image resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1525,15 +1525,6 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The name of the image.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1543,6 +1534,15 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_csharp">
+<a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Image.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="hypervgeneration_csharp">
 <a href="#hypervgeneration_csharp" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
 </span>
@@ -1550,6 +1550,15 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string | <a href="#hypervgenerationtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Hyper<wbr>VGeneration<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sourcevirtualmachine_csharp">
@@ -1594,15 +1603,6 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The name of the image.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1612,6 +1612,15 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_go">
+<a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Image.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="hypervgeneration_go">
 <a href="#hypervgeneration_go" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
 </span>
@@ -1619,6 +1628,15 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string | <a href="#hypervgenerationtypes">Hyper<wbr>VGeneration<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sourcevirtualmachine_go">
@@ -1663,15 +1681,6 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The name of the image.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -1681,6 +1690,15 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_nodejs">
+<a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Image.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="hypervgeneration_nodejs">
 <a href="#hypervgeneration_nodejs" style="color: inherit; text-decoration: inherit;">hyper<wbr>VGeneration</a>
 </span>
@@ -1688,6 +1706,15 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string | <a href="#hypervgenerationtypes">Hyper<wbr>VGeneration<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sourcevirtualmachine_nodejs">
@@ -1732,15 +1759,6 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The name of the image.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -1750,6 +1768,15 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extended_location_python">
+<a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Image.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="hyper_v_generation_python">
 <a href="#hyper_v_generation_python" style="color: inherit; text-decoration: inherit;">hyper_<wbr>v_<wbr>generation</a>
 </span>
@@ -1757,6 +1784,15 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str | <a href="#hypervgenerationtypes">Hyper<wbr>VGeneration<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Gets the HyperVGenerationType of the VirtualMachine created from the image{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_virtual_machine_python">
@@ -2139,6 +2175,232 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="extendedlocation">Extended<wbr>Location</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#extendedlocationtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Extended<wbr>Location<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#extendedlocationtypes">Extended<wbr>Location<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#extendedlocationtypes">Extended<wbr>Location<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#extendedlocationtypes">Extended<wbr>Location<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="extendedlocationresponse">Extended<wbr>Location<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="extendedlocationtypes">Extended<wbr>Location<wbr>Types</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Edge<wbr>Zone</dt>
+    <dd>EdgeZone</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Extended<wbr>Location<wbr>Types<wbr>Edge<wbr>Zone</dt>
+    <dd>EdgeZone</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Edge<wbr>Zone</dt>
+    <dd>EdgeZone</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>EDGE_ZONE</dt>
+    <dd>EdgeZone</dd>
 </dl>
 {{% /choosable %}}
 

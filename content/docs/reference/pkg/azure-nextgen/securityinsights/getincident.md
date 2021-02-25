@@ -1,8 +1,8 @@
 
 ---
-title: "GetIncident"
-title_tag: "Function GetIncident | Module securityinsights | Package Azure NextGen"
-meta_desc: "Explore the GetIncident function of the securityinsights module, including examples, input properties, output properties, and supporting types. "
+title: "getIncident"
+title_tag: "azure-nextgen.securityinsights.getIncident"
+meta_desc: "Documentation for the azure-nextgen.securityinsights.getIncident function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,23 +13,23 @@ meta_desc: "Explore the GetIncident function of the securityinsights module, inc
 
 
 
-## Using GetIncident {#using}
+## Using getIncident {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIncident<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIncidentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetIncidentResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIncident<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIncidentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIncidentResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_incident(</span><span class="nx">incident_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIncidentResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_incident(</span><span class="nx">incident_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIncidentResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIncident<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIncidentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupIncidentResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIncident<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIncidentArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIncidentResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupIncident` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetIncident function of the securityinsights module, inc
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIncident </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetIncidentResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetIncidentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetIncidentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIncidentArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -59,15 +59,6 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Incident ID{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="operationalinsightsresourceprovider_csharp">
-<a href="#operationalinsightsresourceprovider_csharp" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -103,15 +94,6 @@ The following arguments are supported:
     <dd>{{% md %}}Incident ID{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="operationalinsightsresourceprovider_go">
-<a href="#operationalinsightsresourceprovider_go" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -143,15 +125,6 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Incident ID{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="operationalinsightsresourceprovider_nodejs">
-<a href="#operationalinsightsresourceprovider_nodejs" style="color: inherit; text-decoration: inherit;">operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -187,15 +160,6 @@ The following arguments are supported:
     <dd>{{% md %}}Incident ID{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="operational_insights_resource_provider_python">
-<a href="#operational_insights_resource_provider_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>insights_<wbr>resource_<wbr>provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -218,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetIncident Result {#result}
+## getIncident Result {#result}
 
 The following output properties are available:
 
@@ -1014,9 +978,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1225,9 +1186,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1325,9 +1283,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="incidentownerinforesponse">Incident<wbr>Owner<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 

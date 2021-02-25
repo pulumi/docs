@@ -1,8 +1,8 @@
 
 ---
-title: "GetJob"
-title_tag: "Function GetJob | Module databox | Package Azure NextGen"
-meta_desc: "Explore the GetJob function of the databox module, including examples, input properties, output properties, and supporting types. "
+title: "getJob"
+title_tag: "azure-nextgen.databox.getJob"
+meta_desc: "Documentation for the azure-nextgen.databox.getJob function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetJob function of the databox module, including example
 
 
 
-## Using GetJob {#using}
+## Using getJob {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetJobResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetJobResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetJob function of the databox module, including example
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupJobResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupJobResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupJob` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetJob function of the databox module, including example
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetJob </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetJobResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetJobResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetJob Result {#result}
+## getJob Result {#result}
 
 The following output properties are available:
 
@@ -942,9 +942,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1042,9 +1039,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azurefilefilterdetailsresponse">Azure<wbr>File<wbr>Filter<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -1184,9 +1178,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1320,9 +1311,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="clouderrorresponse">Cloud<wbr>Error<wbr>Response</h4>
-
-
-
 
 
 
@@ -1531,9 +1519,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="contactdetailsresponse">Contact<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -1778,9 +1763,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="copyprogressresponse">Copy<wbr>Progress<wbr>Response</h4>
-
-
-
 
 
 
@@ -2356,9 +2338,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2495,9 +2474,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2631,9 +2607,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="databoxdiskcopyprogressresponse">Data<wbr>Box<wbr>Disk<wbr>Copy<wbr>Progress<wbr>Response</h4>
-
-
-
 
 
 
@@ -2809,9 +2782,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2917,7 +2887,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_csharp">
-<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -3076,7 +3046,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_go">
-<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -3235,7 +3205,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_nodejs">
-<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -3393,8 +3363,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}Details of the data to be imported into azure.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="expected_data_size_in_terabytes_python">
-<a href="#expected_data_size_in_terabytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>terabytes</a>
+        <span id="expected_data_size_in_tera_bytes_python">
+<a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -3449,9 +3419,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="databoxheavyaccountcopylogdetailsresponse">Data<wbr>Box<wbr>Heavy<wbr>Account<wbr>Copy<wbr>Log<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -3591,9 +3558,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3699,7 +3663,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_csharp">
-<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -3840,7 +3804,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_go">
-<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -3981,7 +3945,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_nodejs">
-<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -4121,8 +4085,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="expected_data_size_in_terabytes_python">
-<a href="#expected_data_size_in_terabytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>terabytes</a>
+        <span id="expected_data_size_in_tera_bytes_python">
+<a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -4162,9 +4126,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4270,7 +4231,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_csharp">
-<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -4411,7 +4372,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_go">
-<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -4552,7 +4513,7 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddatasizeinterabytes_nodejs">
-<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Terabytes</a>
+<a href="#expecteddatasizeinterabytes_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Size<wbr>In<wbr>Tera<wbr>Bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -4692,8 +4653,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     <dd>{{% md %}}Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="expected_data_size_in_terabytes_python">
-<a href="#expected_data_size_in_terabytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>terabytes</a>
+        <span id="expected_data_size_in_tera_bytes_python">
+<a href="#expected_data_size_in_tera_bytes_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>size_<wbr>in_<wbr>tera_<wbr>bytes</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -4730,9 +4691,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="dataexportdetailsresponse">Data<wbr>Export<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -4872,9 +4830,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4939,9 +4894,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5003,9 +4955,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="filterfiledetailsresponse">Filter<wbr>File<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -5109,9 +5058,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5212,9 +5158,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5276,9 +5219,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="jobstagesresponse">Job<wbr>Stages<wbr>Response</h4>
-
-
-
 
 
 
@@ -5490,9 +5430,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5665,9 +5602,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5804,9 +5738,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5904,9 +5835,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="packageshippingdetailsresponse">Package<wbr>Shipping<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -6046,9 +5974,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6182,9 +6107,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="resourceidentityresponse">Resource<wbr>Identity<wbr>Response</h4>
-
-
-
 
 
 
@@ -6357,9 +6279,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="shippingaddressresponse">Shipping<wbr>Address<wbr>Response</h4>
-
-
-
 
 
 
@@ -6751,9 +6670,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6890,9 +6806,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6990,9 +6903,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="transferalldetailsresponse">Transfer<wbr>All<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -7132,9 +7042,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7271,9 +7178,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7338,9 +7242,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7402,9 +7303,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="transferfilterdetailsresponse">Transfer<wbr>Filter<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -7580,9 +7478,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7644,9 +7539,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response</h4>
-
-
-
 
 
 
@@ -7747,9 +7639,6 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="userassignedpropertiesresponse">User<wbr>Assigned<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 

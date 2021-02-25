@@ -1,8 +1,8 @@
 
 ---
-title: "GetProjectIpAccessList"
-title_tag: "Function GetProjectIpAccessList | Package MongoDB Atlas"
-meta_desc: "Explore the GetProjectIpAccessList function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.ProjectIpAccessList` describes an IP Access List entry resource. The access list grants access from IPs, CIDRs or AWS Security Groups (if VPC Peering is enabled) to clusters within the Project."
+title: "getProjectIpAccessList"
+title_tag: "mongodbatlas.getProjectIpAccessList"
+meta_desc: "Documentation for the mongodbatlas.getProjectIpAccessList function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -20,13 +20,13 @@ When you remove an entry from the access list, existing connections from the rem
 
 
 
-## Using GetProjectIpAccessList {#using}
+## Using getProjectIpAccessList {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProjectIpAccessList<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetProjectIpAccessListArgs">GetProjectIpAccessListArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetProjectIpAccessListResult">GetProjectIpAccessListResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProjectIpAccessList<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetProjectIpAccessListArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetProjectIpAccessListResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -36,7 +36,7 @@ When you remove an entry from the access list, existing connections from the rem
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProjectIpAccessList<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#LookupProjectIpAccessListArgs">LookupProjectIpAccessListArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#LookupProjectIpAccessListResult">LookupProjectIpAccessListResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProjectIpAccessList<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupProjectIpAccessListArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupProjectIpAccessListResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupProjectIpAccessList` in the Go SDK.
 
@@ -45,7 +45,7 @@ When you remove an entry from the access list, existing connections from the rem
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetProjectIpAccessList </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetProjectIpAccessListResult.html">GetProjectIpAccessListResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetProjectIpAccessListArgs.html">GetProjectIpAccessListArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetProjectIpAccessListResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetProjectIpAccessListArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -241,7 +241,7 @@ The following arguments are supported:
 
 
 
-## GetProjectIpAccessList Result {#result}
+## getProjectIpAccessList Result {#result}
 
 The following output properties are available:
 

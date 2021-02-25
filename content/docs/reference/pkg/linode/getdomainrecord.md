@@ -1,8 +1,8 @@
 
 ---
-title: "GetDomainRecord"
-title_tag: "Function GetDomainRecord | Package Linode"
-meta_desc: "Explore the GetDomainRecord function of the Linode package, including examples, input properties, output properties, and supporting types. Provides information about a Linode Domain Record."
+title: "getDomainRecord"
+title_tag: "linode.getDomainRecord"
+meta_desc: "Documentation for the linode.getDomainRecord function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -139,13 +139,13 @@ const myWwwRecord = pulumi.output(linode.getDomainRecord({
 {{% /examples %}}
 
 
-## Using GetDomainRecord {#using}
+## Using getDomainRecord {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDomainRecord<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#GetDomainRecordArgs">GetDomainRecordArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#GetDomainRecordResult">GetDomainRecordResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDomainRecord<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDomainRecordArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDomainRecordResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -155,7 +155,7 @@ const myWwwRecord = pulumi.output(linode.getDomainRecord({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDomainRecord<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#LookupDomainRecordArgs">LookupDomainRecordArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#LookupDomainRecordResult">LookupDomainRecordResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDomainRecord<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDomainRecordArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDomainRecordResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDomainRecord` in the Go SDK.
 
@@ -164,7 +164,7 @@ const myWwwRecord = pulumi.output(linode.getDomainRecord({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDomainRecord </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.GetDomainRecordResult.html">GetDomainRecordResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.GetDomainRecordArgs.html">GetDomainRecordArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDomainRecordResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDomainRecordArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -320,7 +320,7 @@ The following arguments are supported:
 
 
 
-## GetDomainRecord Result {#result}
+## getDomainRecord Result {#result}
 
 The following output properties are available:
 

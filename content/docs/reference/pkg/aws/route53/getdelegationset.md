@@ -1,8 +1,8 @@
 
 ---
-title: "GetDelegationSet"
-title_tag: "Function GetDelegationSet | Module route53 | Package AWS"
-meta_desc: "Explore the GetDelegationSet function of the route53 module, including examples, input properties, output properties, and supporting types. `aws.route53.DelegationSet` provides details about a specific Route 53 Delegation Set."
+title: "getDelegationSet"
+title_tag: "aws.route53.getDelegationSet"
+meta_desc: "Documentation for the aws.route53.getDelegationSet function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -90,13 +90,13 @@ const dset = pulumi.output(aws.route53.getDelegationSet({
 {{% /examples %}}
 
 
-## Using GetDelegationSet {#using}
+## Using getDelegationSet {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDelegationSet<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#GetDelegationSetArgs">GetDelegationSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#GetDelegationSetResult">GetDelegationSetResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDelegationSet<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDelegationSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDelegationSetResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -106,7 +106,7 @@ const dset = pulumi.output(aws.route53.getDelegationSet({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDelegationSet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#LookupDelegationSetArgs">LookupDelegationSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/route53?tab=doc#LookupDelegationSetResult">LookupDelegationSetResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDelegationSet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDelegationSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDelegationSetResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDelegationSet` in the Go SDK.
 
@@ -115,7 +115,7 @@ const dset = pulumi.output(aws.route53.getDelegationSet({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDelegationSet </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.GetDelegationSetResult.html">GetDelegationSetResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Route53.GetDelegationSetArgs.html">GetDelegationSetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDelegationSetResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDelegationSetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -191,7 +191,7 @@ The following arguments are supported:
 
 
 
-## GetDelegationSet Result {#result}
+## getDelegationSet Result {#result}
 
 The following output properties are available:
 

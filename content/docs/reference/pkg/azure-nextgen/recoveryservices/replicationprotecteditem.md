@@ -113,7 +113,7 @@ const replicationProtectedItem = new azure_nextgen.recoveryservices.latest.Repli
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationProtectedItem</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ReplicationProtectedItemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReplicationProtectedItem</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReplicationProtectedItemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -121,11 +121,11 @@ const replicationProtectedItem = new azure_nextgen.recoveryservices.latest.Repli
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationProtectedItem</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ReplicationProtectedItemArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationProtectedItem</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReplicationProtectedItem</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReplicationProtectedItemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReplicationProtectedItem</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationProtectedItem</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ReplicationProtectedItemArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReplicationProtectedItem</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReplicationProtectedItemArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -146,7 +146,7 @@ const replicationProtectedItem = new azure_nextgen.recoveryservices.latest.Repli
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationProtectedItemArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationProtectedItemArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -215,7 +215,7 @@ const replicationProtectedItem = new azure_nextgen.recoveryservices.latest.Repli
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationProtectedItemArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationProtectedItemArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -254,7 +254,7 @@ const replicationProtectedItem = new azure_nextgen.recoveryservices.latest.Repli
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReplicationProtectedItemArgs</span>
+        <span class="property-type"><a href="#inputs">ReplicationProtectedItemArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -277,11 +277,11 @@ const replicationProtectedItem = new azure_nextgen.recoveryservices.latest.Repli
 
 ## ReplicationProtectedItem Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ReplicationProtectedItem resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ReplicationProtectedItem resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -6787,6 +6787,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The storage account name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="targetvmsize_csharp">
+<a href="#targetvmsize_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Vm<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target VM size.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="usemanageddisks_csharp">
 <a href="#usemanageddisks_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Managed<wbr>Disks</a>
 </span>
@@ -6944,6 +6953,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage account name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetvmsize_go">
+<a href="#targetvmsize_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Vm<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target VM size.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="usemanageddisks_go">
@@ -7105,6 +7123,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The storage account name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="targetvmsize_nodejs">
+<a href="#targetvmsize_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Vm<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target VM size.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="usemanageddisks_nodejs">
 <a href="#usemanageddisks_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Managed<wbr>Disks</a>
 </span>
@@ -7262,6 +7289,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The storage account name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_vm_size_python">
+<a href="#target_vm_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>vm_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The target VM size.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="use_managed_disks_python">
@@ -9738,6 +9774,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proximity placement group ARM Id.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetvmsize_csharp">
+<a href="#targetvmsize_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Vm<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target VM size.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9915,6 +9960,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proximity placement group ARM Id.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetvmsize_go">
+<a href="#targetvmsize_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Vm<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target VM size.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -10092,6 +10146,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proximity placement group ARM Id.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetvmsize_nodejs">
+<a href="#targetvmsize_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Vm<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target VM size.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -10269,6 +10332,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The proximity placement group ARM Id.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_vm_size_python">
+<a href="#target_vm_size_python" style="color: inherit; text-decoration: inherit;">target_<wbr>vm_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The target VM size.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

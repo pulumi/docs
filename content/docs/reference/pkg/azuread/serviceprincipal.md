@@ -1,8 +1,8 @@
 
 ---
 title: "ServicePrincipal"
-title_tag: "Resource ServicePrincipal | Package Azure AD"
-meta_desc: "Explore the ServicePrincipal resource of the Azure AD package, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Service Principal associated with an Application within Azure Active Directory."
+title_tag: "azuread.ServicePrincipal"
+meta_desc: "Documentation for the azuread.ServicePrincipal resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -161,19 +161,19 @@ const exampleServicePrincipal = new azuread.ServicePrincipal("exampleServicePrin
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#ServicePrincipal">ServicePrincipal</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#ServicePrincipalArgs">ServicePrincipalArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ServicePrincipal</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ServicePrincipalArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azuread/#pulumi_azuread.ServicePrincipal">ServicePrincipal</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_role_assignment_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePrincipalOauth2PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServicePrincipal</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_role_assignment_required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">application_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oauth2_permissions</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServicePrincipalOauth2PermissionArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#ServicePrincipal">NewServicePrincipal</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#ServicePrincipalArgs">ServicePrincipalArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#ServicePrincipal">ServicePrincipal</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewServicePrincipal</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ServicePrincipalArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServicePrincipal</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.ServicePrincipal.html">ServicePrincipal</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.ServicePrincipalArgs.html">ServicePrincipalArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ServicePrincipal</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ServicePrincipalArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -194,7 +194,7 @@ const exampleServicePrincipal = new azuread.ServicePrincipal("exampleServicePrin
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#ServicePrincipalArgs">ServicePrincipalArgs</a></span>
+        <span class="property-type"><a href="#inputs">ServicePrincipalArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -263,7 +263,7 @@ const exampleServicePrincipal = new azuread.ServicePrincipal("exampleServicePrin
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#ServicePrincipalArgs">ServicePrincipalArgs</a></span>
+        <span class="property-type"><a href="#inputs">ServicePrincipalArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -302,7 +302,7 @@ const exampleServicePrincipal = new azuread.ServicePrincipal("exampleServicePrin
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.ServicePrincipalArgs.html">ServicePrincipalArgs</a></span>
+        <span class="property-type"><a href="#inputs">ServicePrincipalArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -325,11 +325,11 @@ const exampleServicePrincipal = new azuread.ServicePrincipal("exampleServicePrin
 
 ## ServicePrincipal Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ServicePrincipal resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ServicePrincipal resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -344,7 +344,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Azure AD Application for which to create a Service Principal.
+    <dd>{{% md %}}The App ID of the Application for which to create a Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -354,7 +354,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Does this Service Principal require an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application? Defaults to `false`.
+    <dd>{{% md %}}Whether this Service Principal requires an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -364,7 +364,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipaloauth2permission">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Oauth2Permission<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2_permission` block as documented below.
+    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated Application. Each permission is covered by an `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -390,7 +390,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Azure AD Application for which to create a Service Principal.
+    <dd>{{% md %}}The App ID of the Application for which to create a Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -400,7 +400,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Does this Service Principal require an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application? Defaults to `false`.
+    <dd>{{% md %}}Whether this Service Principal requires an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -410,7 +410,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipaloauth2permission">[]Service<wbr>Principal<wbr>Oauth2Permission</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2_permission` block as documented below.
+    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated Application. Each permission is covered by an `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -436,7 +436,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Azure AD Application for which to create a Service Principal.
+    <dd>{{% md %}}The App ID of the Application for which to create a Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -446,7 +446,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Does this Service Principal require an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application? Defaults to `false`.
+    <dd>{{% md %}}Whether this Service Principal requires an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -456,7 +456,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipaloauth2permission">Service<wbr>Principal<wbr>Oauth2Permission[]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2_permission` block as documented below.
+    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated Application. Each permission is covered by an `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -482,7 +482,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the Azure AD Application for which to create a Service Principal.
+    <dd>{{% md %}}The App ID of the Application for which to create a Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -492,7 +492,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Does this Service Principal require an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application? Defaults to `false`.
+    <dd>{{% md %}}Whether this Service Principal requires an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -502,7 +502,7 @@ The ServicePrincipal resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipaloauth2permission">Sequence[Service<wbr>Principal<wbr>Oauth2Permission<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2_permission` block as documented below.
+    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated Application. Each permission is covered by an `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -544,7 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -563,7 +563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Service Principal's Object ID.
+    <dd>{{% md %}}The Object ID of the Service Principal.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -588,7 +588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -607,7 +607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Service Principal's Object ID.
+    <dd>{{% md %}}The Object ID of the Service Principal.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -632,7 +632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -651,7 +651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Service Principal's Object ID.
+    <dd>{{% md %}}The Object ID of the Service Principal.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -676,7 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -695,7 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Service Principal's Object ID.
+    <dd>{{% md %}}The Object ID of the Service Principal.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -708,7 +708,7 @@ Get an existing ServicePrincipal resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#ServicePrincipalState">ServicePrincipalState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#ServicePrincipal">ServicePrincipal</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ServicePrincipalState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ServicePrincipal</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -717,11 +717,11 @@ Get an existing ServicePrincipal resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServicePrincipal<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#ServicePrincipalState">ServicePrincipalState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#ServicePrincipal">ServicePrincipal</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServicePrincipal<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ServicePrincipalState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ServicePrincipal</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.ServicePrincipal.html">ServicePrincipal</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD..ServicePrincipalState.html">ServicePrincipalState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ServicePrincipal</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ServicePrincipalState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -834,7 +834,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Does this Service Principal require an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application? Defaults to `false`.
+    <dd>{{% md %}}Whether this Service Principal requires an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -853,7 +853,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Azure AD Application for which to create a Service Principal.
+    <dd>{{% md %}}The App ID of the Application for which to create a Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -863,7 +863,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -873,7 +873,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipaloauth2permission">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Inputs.<wbr>Service<wbr>Principal<wbr>Oauth2Permission<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2_permission` block as documented below.
+    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated Application. Each permission is covered by an `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -883,7 +883,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Service Principal's Object ID.
+    <dd>{{% md %}}The Object ID of the Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -909,7 +909,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Does this Service Principal require an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application? Defaults to `false`.
+    <dd>{{% md %}}Whether this Service Principal requires an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -928,7 +928,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Azure AD Application for which to create a Service Principal.
+    <dd>{{% md %}}The App ID of the Application for which to create a Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -938,7 +938,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -948,7 +948,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipaloauth2permission">[]Service<wbr>Principal<wbr>Oauth2Permission</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2_permission` block as documented below.
+    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated Application. Each permission is covered by an `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -958,7 +958,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Service Principal's Object ID.
+    <dd>{{% md %}}The Object ID of the Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -984,7 +984,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Does this Service Principal require an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application? Defaults to `false`.
+    <dd>{{% md %}}Whether this Service Principal requires an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1003,7 +1003,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the Azure AD Application for which to create a Service Principal.
+    <dd>{{% md %}}The App ID of the Application for which to create a Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1013,7 +1013,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1023,7 +1023,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipaloauth2permission">Service<wbr>Principal<wbr>Oauth2Permission[]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2_permission` block as documented below.
+    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated Application. Each permission is covered by an `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1033,7 +1033,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Service Principal's Object ID.
+    <dd>{{% md %}}The Object ID of the Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1059,7 +1059,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Does this Service Principal require an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application? Defaults to `false`.
+    <dd>{{% md %}}Whether this Service Principal requires an AppRoleAssignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1078,7 +1078,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the Azure AD Application for which to create a Service Principal.
+    <dd>{{% md %}}The App ID of the Application for which to create a Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1088,7 +1088,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1098,7 +1098,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceprincipaloauth2permission">Sequence[Service<wbr>Principal<wbr>Oauth2Permission<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2_permission` block as documented below.
+    <dd>{{% md %}}A collection of OAuth 2.0 permissions exposed by the associated Application. Each permission is covered by an `oauth2_permission` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1108,7 +1108,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Service Principal's Object ID.
+    <dd>{{% md %}}The Object ID of the Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1133,18 +1133,6 @@ The following state arguments are supported:
 
 
 <h4 id="serviceprincipalapprole">Service<wbr>Principal<wbr>App<wbr>Role</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ServicePrincipalAppRole">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#ServicePrincipalAppRoleOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Outputs.ServicePrincipalAppRole.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1175,7 +1163,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1239,7 +1227,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1303,7 +1291,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1367,7 +1355,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Display Name of the Azure Active Directory Application associated with this Service Principal.
+    <dd>{{% md %}}The Display Name of the Application associated with this Service Principal.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1403,18 +1391,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="serviceprincipaloauth2permission">Service<wbr>Principal<wbr>Oauth2Permission</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ServicePrincipalOauth2Permission">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ServicePrincipalOauth2Permission">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#ServicePrincipalOauth2PermissionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#ServicePrincipalOauth2PermissionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Inputs.ServicePrincipalOauth2PermissionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Outputs.ServicePrincipalOauth2Permission.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

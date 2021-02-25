@@ -8,11 +8,9 @@ menu:
 meta_desc: Pulumi Console is one of the components required for self-hosting Pulumi. Self-hosting is available as part of the Enterprise Edition.
 ---
 
-<div class="note note-info" role="alert">
-    <p>
-        Self-hosting is only available with the <strong>Pulumi Enterprise Edition</strong>.
-    </p>
-</div>
+{{% notes type="info" %}}
+Self-hosting is only available with the **Pulumi Enterprise Edition**. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Enterprise Edition.
+{{% /notes %}}
 
 The Pulumi Console allows users to view the stacks they have created, see any past activities recorded for those stacks. It also allows you to manage RBAC for your users.
 
@@ -35,6 +33,10 @@ You can run this container on the same host that your API container is running o
 | Compute | 1 CPU core w/ 1 GB memory | |
 
 ## What's In The Container?
+
+{{% notes type="info" %}}
+The container image repository is private. [Contact us]({{< relref "/contact.md" >}}) if you would like to evaluate the Self-Hosted Enterprise Edition.
+{{% /notes %}}
 
 The Console container runs a web server using a Node 10-based image.
 
@@ -59,7 +61,8 @@ The following are the core environment variables that are required at a minimum.
 
 | Variable Name | Description |
 | ------------- | ----------- |
-| RECAPTCHA_SITE_KEY | Use for password reset requests by users. [Create a new reCaptcha v2](https://www.google.com/recaptcha/admin). |
+| RECAPTCHA_SITE_KEY | Used for password reset requests by users. [Create a new reCaptcha v2](https://www.google.com/recaptcha/admin). |
+| SAML_SSO_ENABLED | Default is `false`. Set to `true` to enable the SAML SSO signin/signup option. Before enabling, make sure you have completed the steps in the [Enabling SAML SSO]({{< relref "saml-sso" >}}) guide. |
 
 ### GitHub OAuth
 

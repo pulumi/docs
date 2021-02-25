@@ -153,7 +153,7 @@ const workbookTemplate = new azure_nextgen.insights.v20191017preview.WorkbookTem
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WorkbookTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">WorkbookTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WorkbookTemplate</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WorkbookTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -161,11 +161,11 @@ const workbookTemplate = new azure_nextgen.insights.v20191017preview.WorkbookTem
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkbookTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">WorkbookTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WorkbookTemplate</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWorkbookTemplate</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WorkbookTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WorkbookTemplate</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WorkbookTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">WorkbookTemplateArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WorkbookTemplate</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WorkbookTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -186,7 +186,7 @@ const workbookTemplate = new azure_nextgen.insights.v20191017preview.WorkbookTem
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkbookTemplateArgs</span>
+        <span class="property-type"><a href="#inputs">WorkbookTemplateArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -255,7 +255,7 @@ const workbookTemplate = new azure_nextgen.insights.v20191017preview.WorkbookTem
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkbookTemplateArgs</span>
+        <span class="property-type"><a href="#inputs">WorkbookTemplateArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -294,7 +294,7 @@ const workbookTemplate = new azure_nextgen.insights.v20191017preview.WorkbookTem
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WorkbookTemplateArgs</span>
+        <span class="property-type"><a href="#inputs">WorkbookTemplateArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -317,11 +317,11 @@ const workbookTemplate = new azure_nextgen.insights.v20191017preview.WorkbookTem
 
 ## WorkbookTemplate Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -337,15 +337,6 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#workbooktemplategallery">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Workbook<wbr>Template<wbr>Gallery<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -393,6 +384,15 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
 </span>
@@ -424,15 +424,6 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#workbooktemplategallery">[]Workbook<wbr>Template<wbr>Gallery</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -480,6 +471,15 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
 </span>
@@ -511,15 +511,6 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#workbooktemplategallery">Workbook<wbr>Template<wbr>Gallery[]</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -567,6 +558,15 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
 </span>
@@ -598,15 +598,6 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#workbooktemplategallery">Sequence[Workbook<wbr>Template<wbr>Gallery<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Workbook galleries supported by the template.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -652,6 +643,15 @@ The WorkbookTemplate resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Mapping[str, Sequence[Workbook<wbr>Template<wbr>Localized<wbr>Gallery<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Key value pair of localized gallery. Each key is the locale code of languages supported by the Azure portal.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="priority_python">

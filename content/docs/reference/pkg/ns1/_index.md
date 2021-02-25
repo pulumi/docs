@@ -42,24 +42,6 @@ A Pulumi package for creating and managing ns1 cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`ns1` Terraform Provider](https://github.com/ns1-terraform/terraform-provider-ns1).</dd>
 	<dt>Version</dt>
-	<dd>1.3.3</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Ns1/Pulumi.Ns1.html" title="Pulumi.Ns1">Pulumi.Ns1</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-ns1/sdk/go/ns1/?tab=doc#" title="ns1">ns1</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/ns1/#" title="@pulumi/ns1">@pulumi/ns1</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_ns1" title="pulumi_ns1">pulumi_ns1</a></dd>
-
+	<dd>1.4.1</dd>
 </dl>
 

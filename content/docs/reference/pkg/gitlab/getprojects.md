@@ -1,8 +1,8 @@
 
 ---
-title: "GetProjects"
-title_tag: "Function GetProjects | Package GitLab"
-meta_desc: "Explore the GetProjects function of the GitLab package, including examples, input properties, output properties, and supporting types. ## # gitlab\_projects"
+title: "getProjects"
+title_tag: "gitlab.getProjects"
+meta_desc: "Documentation for the gitlab.getProjects function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -197,13 +197,13 @@ const projects = pulumi.output(gitlab.getProjects({
 {{% /examples %}}
 
 
-## Using GetProjects {#using}
+## Using getProjects {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProjects<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#GetProjectsArgs">GetProjectsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#GetProjectsResult">GetProjectsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProjects<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetProjectsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetProjectsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -213,14 +213,16 @@ const projects = pulumi.output(gitlab.getProjects({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProjects<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#GetProjectsArgs">GetProjectsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#GetProjectsResult">GetProjectsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProjects<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetProjectsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetProjectsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetProjects` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetProjects </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.GetProjectsResult.html">GetProjectsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.GetProjectsArgs.html">GetProjectsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetProjectsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetProjectsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1088,7 +1090,7 @@ The following arguments are supported:
 
 
 
-## GetProjects Result {#result}
+## getProjects Result {#result}
 
 The following output properties are available:
 
@@ -1965,16 +1967,6 @@ The following output properties are available:
 
 
 <h4 id="getprojectsproject">Get<wbr>Projects<wbr>Project</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gitlab/types/output/#GetProjectsProject">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#GetProjectsProject">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.Outputs.GetProjectsProject.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4035,16 +4027,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getprojectsprojectforkedfromproject">Get<wbr>Projects<wbr>Project<wbr>Forked<wbr>From<wbr>Project</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gitlab/types/output/#GetProjectsProjectForkedFromProject">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#GetProjectsProjectForkedFromProject">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.Outputs.GetProjectsProjectForkedFromProject.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4345,16 +4327,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getprojectsprojectnamespace">Get<wbr>Projects<wbr>Project<wbr>Namespace</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gitlab/types/output/#GetProjectsProjectNamespace">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#GetProjectsProjectNamespace">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.Outputs.GetProjectsProjectNamespace.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4571,16 +4543,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getprojectsprojectowner">Get<wbr>Projects<wbr>Project<wbr>Owner</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gitlab/types/output/#GetProjectsProjectOwner">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#GetProjectsProjectOwner">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.Outputs.GetProjectsProjectOwner.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4833,16 +4795,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getprojectsprojectpermissions">Get<wbr>Projects<wbr>Project<wbr>Permissions</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gitlab/types/output/#GetProjectsProjectPermissions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#GetProjectsProjectPermissions">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.Outputs.GetProjectsProjectPermissions.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4943,16 +4895,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getprojectsprojectsharedwithgroup">Get<wbr>Projects<wbr>Project<wbr>Shared<wbr>With<wbr>Group</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gitlab/types/output/#GetProjectsProjectSharedWithGroup">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#GetProjectsProjectSharedWithGroup">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.Outputs.GetProjectsProjectSharedWithGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

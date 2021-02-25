@@ -1,8 +1,8 @@
 
 ---
-title: "GetCluster"
-title_tag: "Function GetCluster | Module hdinsight | Package Azure NextGen"
-meta_desc: "Explore the GetCluster function of the hdinsight module, including examples, input properties, output properties, and supporting types. "
+title: "getCluster"
+title_tag: "azure-nextgen.hdinsight.getCluster"
+meta_desc: "Documentation for the azure-nextgen.hdinsight.getCluster function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetCluster function of the hdinsight module, including e
 
 
 
-## Using GetCluster {#using}
+## Using getCluster {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetClusterResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetClusterResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetCluster function of the hdinsight module, including e
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupClusterResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupClusterResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCluster` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetCluster function of the hdinsight module, including e
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCluster </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetClusterResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetCluster Result {#result}
+## getCluster Result {#result}
 
 The following output properties are available:
 
@@ -474,9 +474,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -574,9 +571,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="autoscalerecurrenceresponse">Autoscale<wbr>Recurrence<wbr>Response</h4>
-
-
-
 
 
 
@@ -680,9 +674,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -783,9 +774,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -883,9 +871,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="autoscaletimeandcapacityresponse">Autoscale<wbr>Time<wbr>And<wbr>Capacity<wbr>Response</h4>
-
-
-
 
 
 
@@ -1025,9 +1010,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1125,9 +1107,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="clusterdefinitionresponse">Cluster<wbr>Definition<wbr>Response</h4>
-
-
-
 
 
 
@@ -1300,9 +1279,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="clustergetpropertiesresponse">Cluster<wbr>Get<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -2126,9 +2102,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2301,9 +2274,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2440,9 +2410,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2543,9 +2510,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2607,9 +2571,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="connectivityendpointresponse">Connectivity<wbr>Endpoint<wbr>Response</h4>
-
-
-
 
 
 
@@ -2821,9 +2782,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2957,9 +2915,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="diskencryptionpropertiesresponse">Disk<wbr>Encryption<wbr>Properties<wbr>Response</h4>
-
-
-
 
 
 
@@ -3207,9 +3162,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3271,9 +3223,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="errorsresponse">Errors<wbr>Response</h4>
-
-
-
 
 
 
@@ -3377,9 +3326,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3480,9 +3426,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3547,9 +3490,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3611,9 +3551,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="linuxoperatingsystemprofileresponse">Linux<wbr>Operating<wbr>System<wbr>Profile<wbr>Response</h4>
-
-
-
 
 
 
@@ -3753,9 +3690,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3856,9 +3790,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3923,9 +3854,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3987,9 +3915,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="roleresponse">Role<wbr>Response</h4>
-
-
-
 
 
 
@@ -4077,6 +4002,15 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmgroupname_csharp">
+<a href="#vmgroupname_csharp" style="color: inherit; text-decoration: inherit;">VMGroup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkprofile_csharp">
@@ -4175,6 +4109,15 @@ The following output properties are available:
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="vmgroupname_go">
+<a href="#vmgroupname_go" style="color: inherit; text-decoration: inherit;">VMGroup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtualnetworkprofile_go">
 <a href="#virtualnetworkprofile_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Profile</a>
 </span>
@@ -4269,6 +4212,15 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmgroupname_nodejs">
+<a href="#vmgroupname_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>MGroup<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="virtualnetworkprofile_nodejs">
@@ -4367,6 +4319,15 @@ The following output properties are available:
     <dd>{{% md %}}The instance count of the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="v_m_group_name_python">
+<a href="#v_m_group_name_python" style="color: inherit; text-decoration: inherit;">v_<wbr>m_<wbr>group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtual_network_profile_python">
 <a href="#virtual_network_profile_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>profile</a>
 </span>
@@ -4378,9 +4339,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="scriptactionresponse">Script<wbr>Action<wbr>Response</h4>
-
-
-
 
 
 
@@ -4517,9 +4475,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="securityprofileresponse">Security<wbr>Profile<wbr>Response</h4>
-
-
-
 
 
 
@@ -4875,9 +4830,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4939,9 +4891,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="sshpublickeyresponse">Ssh<wbr>Public<wbr>Key<wbr>Response</h4>
-
-
-
 
 
 
@@ -5009,9 +4958,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5033,6 +4979,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filesystem, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fileshare_csharp">
+<a href="#fileshare_csharp" style="color: inherit; text-decoration: inherit;">Fileshare</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The file share name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isdefault_csharp">
@@ -5078,6 +5033,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="saskey_csharp">
+<a href="#saskey_csharp" style="color: inherit; text-decoration: inherit;">Saskey</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The shared access signature key.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5102,6 +5066,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filesystem, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fileshare_go">
+<a href="#fileshare_go" style="color: inherit; text-decoration: inherit;">Fileshare</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The file share name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isdefault_go">
@@ -5147,6 +5120,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="saskey_go">
+<a href="#saskey_go" style="color: inherit; text-decoration: inherit;">Saskey</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The shared access signature key.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5171,6 +5153,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The filesystem, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fileshare_nodejs">
+<a href="#fileshare_nodejs" style="color: inherit; text-decoration: inherit;">fileshare</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The file share name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isdefault_nodejs">
@@ -5216,6 +5207,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="saskey_nodejs">
+<a href="#saskey_nodejs" style="color: inherit; text-decoration: inherit;">saskey</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The shared access signature key.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5240,6 +5240,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The filesystem, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fileshare_python">
+<a href="#fileshare_python" style="color: inherit; text-decoration: inherit;">fileshare</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The file share name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="is_default_python">
@@ -5285,13 +5294,19 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="saskey_python">
+<a href="#saskey_python" style="color: inherit; text-decoration: inherit;">saskey</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The shared access signature key.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="storageprofileresponse">Storage<wbr>Profile<wbr>Response</h4>
-
-
-
 
 
 
@@ -5356,9 +5371,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="virtualnetworkprofileresponse">Virtual<wbr>Network<wbr>Profile<wbr>Response</h4>
-
-
-
 
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package Okta"
-meta_desc: "Explore the Provider resource of the Okta package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the okta package. By default, resources use package-wide configuration"
+title_tag: "okta.Provider"
+meta_desc: "Documentation for the okta.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -23,19 +23,19 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/#Provider">Provider</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/#pulumi_okta.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backoff</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_wait_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_wait_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">org_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parallelism</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">request_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backoff</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">base_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_wait_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_wait_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">org_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parallelism</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">private_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">request_timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">scopes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/?tab=doc#Provider">NewProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Provider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Provider.html">Provider</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Pulumi.OktaArgs.html">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -56,7 +56,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/okta/#ProviderArgs">ProviderArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -125,7 +125,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/?tab=doc#ProviderArgs">ProviderArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -164,7 +164,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Pulumi.OktaArgs.html">ProviderArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -187,11 +187,11 @@ construction to achieve fine-grained programmatic control over provider settings
 
 ## Provider Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Provider resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Provider resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -227,6 +227,16 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Okta url. (Use 'oktapreview.com' for Okta testing)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}API Token granting privileges to Okta API.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -291,6 +301,16 @@ https://developer.okta.com/docs/api/getting_started/rate-limits.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatekey_csharp">
+<a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}API Token granting privileges to Okta API.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="requesttimeout_csharp">
 <a href="#requesttimeout_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Timeout</a>
 </span>
@@ -299,6 +319,16 @@ https://developer.okta.com/docs/api/getting_started/rate-limits.
     </dt>
     <dd>{{% md %}}Timeout for single request (in seconds) which is made to Okta, the default is `0` (means no limit is set). The maximum
 value can be `100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scopes_csharp">
+<a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}API Token granting privileges to Okta API.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -335,6 +365,16 @@ value can be `100`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Okta url. (Use 'oktapreview.com' for Okta testing)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}API Token granting privileges to Okta API.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -399,6 +439,16 @@ https://developer.okta.com/docs/api/getting_started/rate-limits.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatekey_go">
+<a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}API Token granting privileges to Okta API.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="requesttimeout_go">
 <a href="#requesttimeout_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Timeout</a>
 </span>
@@ -407,6 +457,16 @@ https://developer.okta.com/docs/api/getting_started/rate-limits.
     </dt>
     <dd>{{% md %}}Timeout for single request (in seconds) which is made to Okta, the default is `0` (means no limit is set). The maximum
 value can be `100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scopes_go">
+<a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}API Token granting privileges to Okta API.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -443,6 +503,16 @@ value can be `100`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Okta url. (Use 'oktapreview.com' for Okta testing)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}API Token granting privileges to Okta API.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -507,6 +577,16 @@ https://developer.okta.com/docs/api/getting_started/rate-limits.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatekey_nodejs">
+<a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}API Token granting privileges to Okta API.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="requesttimeout_nodejs">
 <a href="#requesttimeout_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Timeout</a>
 </span>
@@ -515,6 +595,16 @@ https://developer.okta.com/docs/api/getting_started/rate-limits.
     </dt>
     <dd>{{% md %}}Timeout for single request (in seconds) which is made to Okta, the default is `0` (means no limit is set). The maximum
 value can be `100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scopes_nodejs">
+<a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}API Token granting privileges to Okta API.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -551,6 +641,16 @@ value can be `100`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Okta url. (Use 'oktapreview.com' for Okta testing)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}API Token granting privileges to Okta API.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -615,6 +715,16 @@ https://developer.okta.com/docs/api/getting_started/rate-limits.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="private_key_python">
+<a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}API Token granting privileges to Okta API.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="request_timeout_python">
 <a href="#request_timeout_python" style="color: inherit; text-decoration: inherit;">request_<wbr>timeout</a>
 </span>
@@ -623,6 +733,16 @@ https://developer.okta.com/docs/api/getting_started/rate-limits.
     </dt>
     <dd>{{% md %}}Timeout for single request (in seconds) which is made to Okta, the default is `0` (means no limit is set). The maximum
 value can be `100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scopes_python">
+<a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}API Token granting privileges to Okta API.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

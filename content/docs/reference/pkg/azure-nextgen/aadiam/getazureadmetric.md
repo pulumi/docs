@@ -1,8 +1,8 @@
 
 ---
-title: "GetazureADMetric"
-title_tag: "Function GetazureADMetric | Module aadiam | Package Azure NextGen"
-meta_desc: "Explore the GetazureADMetric function of the aadiam module, including examples, input properties, output properties, and supporting types. "
+title: "getazureADMetric"
+title_tag: "azure-nextgen.aadiam.getazureADMetric"
+meta_desc: "Documentation for the azure-nextgen.aadiam.getazureADMetric function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetazureADMetric function of the aadiam module, includin
 
 
 
-## Using GetazureADMetric {#using}
+## Using getazureADMetric {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getazureADMetric<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetazureADMetricArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetazureADMetricResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getazureADMetric<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetazureADMetricArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetazureADMetricResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,14 +29,16 @@ meta_desc: "Explore the GetazureADMetric function of the aadiam module, includin
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetazureADMetric<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetazureADMetricArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">GetazureADMetricResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetazureADMetric<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetazureADMetricArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetazureADMetricResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetazureADMetric` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetazureADMetric </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetazureADMetricResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetazureADMetricArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetazureADMetricResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetazureADMetricArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -144,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetazureADMetric Result {#result}
+## getazureADMetric Result {#result}
 
 The following output properties are available:
 
@@ -397,9 +399,6 @@ The following output properties are available:
 
 
 <h4 id="azureadmetricspropertiesformatresponse">Azure<wbr>ADMetrics<wbr>Properties<wbr>Format<wbr>Response</h4>
-
-
-
 
 
 

@@ -139,10 +139,10 @@ class MyStack : Stack
     {
         var syncMember = new AzureNextGen.Sql.V20200801Preview.SyncMember("syncMember", new AzureNextGen.Sql.V20200801Preview.SyncMemberArgs
         {
-            DatabaseName = "syncgroupcrud-7421",
+            DatabaseName = "syncgroupcrud-4328",
             DatabaseType = "AzureSqlDatabase",
             ResourceGroupName = "syncgroupcrud-65440",
-            ServerName = "syncgroupcrud-3379.database.windows.net",
+            ServerName = "syncgroupcrud-8475",
             SyncDirection = "Bidirectional",
             SyncGroupName = "syncgroupcrud-3187",
             SyncMemberAzureDatabaseResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
@@ -171,10 +171,10 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := sql.NewSyncMember(ctx, "syncMember", &sql.SyncMemberArgs{
-			DatabaseName:                      pulumi.String("syncgroupcrud-7421"),
+			DatabaseName:                      pulumi.String("syncgroupcrud-4328"),
 			DatabaseType:                      pulumi.String("AzureSqlDatabase"),
 			ResourceGroupName:                 pulumi.String("syncgroupcrud-65440"),
-			ServerName:                        pulumi.String("syncgroupcrud-3379.database.windows.net"),
+			ServerName:                        pulumi.String("syncgroupcrud-8475"),
 			SyncDirection:                     pulumi.String("Bidirectional"),
 			SyncGroupName:                     pulumi.String("syncgroupcrud-3187"),
 			SyncMemberAzureDatabaseResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328"),
@@ -200,10 +200,10 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 sync_member = azure_nextgen.sql.v20200801preview.SyncMember("syncMember",
-    database_name="syncgroupcrud-7421",
+    database_name="syncgroupcrud-4328",
     database_type="AzureSqlDatabase",
     resource_group_name="syncgroupcrud-65440",
-    server_name="syncgroupcrud-3379.database.windows.net",
+    server_name="syncgroupcrud-8475",
     sync_direction="Bidirectional",
     sync_group_name="syncgroupcrud-3187",
     sync_member_azure_database_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
@@ -222,10 +222,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const syncMember = new azure_nextgen.sql.v20200801preview.SyncMember("syncMember", {
-    databaseName: "syncgroupcrud-7421",
+    databaseName: "syncgroupcrud-4328",
     databaseType: "AzureSqlDatabase",
     resourceGroupName: "syncgroupcrud-65440",
-    serverName: "syncgroupcrud-3379.database.windows.net",
+    serverName: "syncgroupcrud-8475",
     syncDirection: "Bidirectional",
     syncGroupName: "syncgroupcrud-3187",
     syncMemberAzureDatabaseResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/syncgroupcrud-65440/providers/Microsoft.Sql/servers/syncgroupcrud-8475/databases/syncgroupcrud-4328",
@@ -246,7 +246,7 @@ const syncMember = new azure_nextgen.sql.v20200801preview.SyncMember("syncMember
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SyncMember</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SyncMemberArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">SyncMember</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SyncMemberArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -254,11 +254,11 @@ const syncMember = new azure_nextgen.sql.v20200801preview.SyncMember("syncMember
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSyncMember</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SyncMemberArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyncMember</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSyncMember</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SyncMemberArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">SyncMember</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SyncMember</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SyncMemberArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">SyncMember</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SyncMemberArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -279,7 +279,7 @@ const syncMember = new azure_nextgen.sql.v20200801preview.SyncMember("syncMember
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SyncMemberArgs</span>
+        <span class="property-type"><a href="#inputs">SyncMemberArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -348,7 +348,7 @@ const syncMember = new azure_nextgen.sql.v20200801preview.SyncMember("syncMember
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SyncMemberArgs</span>
+        <span class="property-type"><a href="#inputs">SyncMemberArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -387,7 +387,7 @@ const syncMember = new azure_nextgen.sql.v20200801preview.SyncMember("syncMember
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SyncMemberArgs</span>
+        <span class="property-type"><a href="#inputs">SyncMemberArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -410,11 +410,11 @@ const syncMember = new azure_nextgen.sql.v20200801preview.SyncMember("syncMember
 
 ## SyncMember Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The SyncMember resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The SyncMember resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 

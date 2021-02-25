@@ -403,19 +403,19 @@ const myappV1 = new gcp.appengine.FlexibleAppVersion("myappV1", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#FlexibleAppVersion">FlexibleAppVersion</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#FlexibleAppVersionArgs">FlexibleAppVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">FlexibleAppVersion</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">FlexibleAppVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/appengine/#pulumi_gcp.appengine.FlexibleAppVersion">FlexibleAppVersion</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_config</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionApiConfigArgs]</span> = None<span class="p">, </span><span class="nx">automatic_scaling</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionAutomaticScalingArgs]</span> = None<span class="p">, </span><span class="nx">beta_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">default_expiration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_service_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionDeploymentArgs]</span> = None<span class="p">, </span><span class="nx">endpoints_api_service</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionEndpointsApiServiceArgs]</span> = None<span class="p">, </span><span class="nx">entrypoint</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionEntrypointArgs]</span> = None<span class="p">, </span><span class="nx">env_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">handlers</span><span class="p">:</span> <span class="nx">Optional[Sequence[FlexibleAppVersionHandlerArgs]]</span> = None<span class="p">, </span><span class="nx">inbound_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">liveness_check</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionLivenessCheckArgs]</span> = None<span class="p">, </span><span class="nx">manual_scaling</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionManualScalingArgs]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionNetworkArgs]</span> = None<span class="p">, </span><span class="nx">nobuild_files_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">noop_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">readiness_check</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionReadinessCheckArgs]</span> = None<span class="p">, </span><span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionResourcesArgs]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_channel</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_main_executable_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_access_connector</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionVpcAccessConnectorArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">FlexibleAppVersion</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_config</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionApiConfigArgs]</span> = None<span class="p">, </span><span class="nx">automatic_scaling</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionAutomaticScalingArgs]</span> = None<span class="p">, </span><span class="nx">beta_settings</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">default_expiration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_service_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">deployment</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionDeploymentArgs]</span> = None<span class="p">, </span><span class="nx">endpoints_api_service</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionEndpointsApiServiceArgs]</span> = None<span class="p">, </span><span class="nx">entrypoint</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionEntrypointArgs]</span> = None<span class="p">, </span><span class="nx">env_variables</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">handlers</span><span class="p">:</span> <span class="nx">Optional[Sequence[FlexibleAppVersionHandlerArgs]]</span> = None<span class="p">, </span><span class="nx">inbound_services</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">instance_class</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">liveness_check</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionLivenessCheckArgs]</span> = None<span class="p">, </span><span class="nx">manual_scaling</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionManualScalingArgs]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionNetworkArgs]</span> = None<span class="p">, </span><span class="nx">nobuild_files_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">noop_on_destroy</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">readiness_check</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionReadinessCheckArgs]</span> = None<span class="p">, </span><span class="nx">resources</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionResourcesArgs]</span> = None<span class="p">, </span><span class="nx">runtime</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_channel</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">runtime_main_executable_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serving_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_access_connector</span><span class="p">:</span> <span class="nx">Optional[FlexibleAppVersionVpcAccessConnectorArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersion">NewFlexibleAppVersion</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionArgs">FlexibleAppVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersion">FlexibleAppVersion</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewFlexibleAppVersion</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">FlexibleAppVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FlexibleAppVersion</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.FlexibleAppVersion.html">FlexibleAppVersion</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.FlexibleAppVersionArgs.html">FlexibleAppVersionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">FlexibleAppVersion</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">FlexibleAppVersionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -436,7 +436,7 @@ const myappV1 = new gcp.appengine.FlexibleAppVersion("myappV1", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#FlexibleAppVersionArgs">FlexibleAppVersionArgs</a></span>
+        <span class="property-type"><a href="#inputs">FlexibleAppVersionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -505,7 +505,7 @@ const myappV1 = new gcp.appengine.FlexibleAppVersion("myappV1", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionArgs">FlexibleAppVersionArgs</a></span>
+        <span class="property-type"><a href="#inputs">FlexibleAppVersionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -544,7 +544,7 @@ const myappV1 = new gcp.appengine.FlexibleAppVersion("myappV1", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.FlexibleAppVersionArgs.html">FlexibleAppVersionArgs</a></span>
+        <span class="property-type"><a href="#inputs">FlexibleAppVersionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -567,11 +567,11 @@ const myappV1 = new gcp.appengine.FlexibleAppVersion("myappV1", {
 
 ## FlexibleAppVersion Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The FlexibleAppVersion resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The FlexibleAppVersion resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1926,7 +1926,7 @@ Get an existing FlexibleAppVersion resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#FlexibleAppVersionState">FlexibleAppVersionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/appengine/#FlexibleAppVersion">FlexibleAppVersion</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">FlexibleAppVersionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">FlexibleAppVersion</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1935,11 +1935,11 @@ Get an existing FlexibleAppVersion resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFlexibleAppVersion<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionState">FlexibleAppVersionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersion">FlexibleAppVersion</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFlexibleAppVersion<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">FlexibleAppVersionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">FlexibleAppVersion</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.FlexibleAppVersion.html">FlexibleAppVersion</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.FlexibleAppVersionState.html">FlexibleAppVersionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">FlexibleAppVersion</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">FlexibleAppVersionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3327,18 +3327,6 @@ Structure is documented below.
 
 
 <h4 id="flexibleappversionapiconfig">Flexible<wbr>App<wbr>Version<wbr>Api<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionApiConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionApiConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionApiConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionApiConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionApiConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionApiConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3585,18 +3573,6 @@ Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SE
 {{% /choosable %}}
 
 <h4 id="flexibleappversionautomaticscaling">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionAutomaticScaling">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionAutomaticScaling">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionAutomaticScaling.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4131,18 +4107,6 @@ Structure is documented below.
 {{% /choosable %}}
 
 <h4 id="flexibleappversionautomaticscalingcpuutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Cpu<wbr>Utilization</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionAutomaticScalingCpuUtilization">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionAutomaticScalingCpuUtilization">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingCpuUtilizationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingCpuUtilizationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingCpuUtilizationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionAutomaticScalingCpuUtilization.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4249,18 +4213,6 @@ Structure is documented below.
 {{% /choosable %}}
 
 <h4 id="flexibleappversionautomaticscalingdiskutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Disk<wbr>Utilization</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionAutomaticScalingDiskUtilization">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionAutomaticScalingDiskUtilization">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingDiskUtilizationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingDiskUtilizationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingDiskUtilizationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionAutomaticScalingDiskUtilization.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4447,18 +4399,6 @@ Structure is documented below.
 {{% /choosable %}}
 
 <h4 id="flexibleappversionautomaticscalingnetworkutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Network<wbr>Utilization</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionAutomaticScalingNetworkUtilization">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionAutomaticScalingNetworkUtilization">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingNetworkUtilizationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingNetworkUtilizationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionAutomaticScalingNetworkUtilization.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4645,18 +4585,6 @@ Structure is documented below.
 {{% /choosable %}}
 
 <h4 id="flexibleappversionautomaticscalingrequestutilization">Flexible<wbr>App<wbr>Version<wbr>Automatic<wbr>Scaling<wbr>Request<wbr>Utilization</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionAutomaticScalingRequestUtilization">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionAutomaticScalingRequestUtilization">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingRequestUtilizationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionAutomaticScalingRequestUtilizationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionAutomaticScalingRequestUtilizationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionAutomaticScalingRequestUtilization.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4763,18 +4691,6 @@ Structure is documented below.
 {{% /choosable %}}
 
 <h4 id="flexibleappversiondeployment">Flexible<wbr>App<wbr>Version<wbr>Deployment</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionDeployment">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionDeployment">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionDeploymentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionDeployment.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4981,18 +4897,6 @@ Structure is documented below.
 {{% /choosable %}}
 
 <h4 id="flexibleappversiondeploymentcloudbuildoptions">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Cloud<wbr>Build<wbr>Options</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionDeploymentCloudBuildOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionDeploymentCloudBuildOptions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentCloudBuildOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentCloudBuildOptionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionDeploymentCloudBuildOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionDeploymentCloudBuildOptions.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5103,18 +5007,6 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 {{% /choosable %}}
 
 <h4 id="flexibleappversiondeploymentcontainer">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Container</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionDeploymentContainer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionDeploymentContainer">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentContainerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentContainerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionDeploymentContainerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionDeploymentContainer.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5185,18 +5077,6 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
 {{% /choosable %}}
 
 <h4 id="flexibleappversiondeploymentfile">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>File</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionDeploymentFile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionDeploymentFile">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentFileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentFileOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionDeploymentFileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionDeploymentFile.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5343,18 +5223,6 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
 {{% /choosable %}}
 
 <h4 id="flexibleappversiondeploymentzip">Flexible<wbr>App<wbr>Version<wbr>Deployment<wbr>Zip</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionDeploymentZip">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionDeploymentZip">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentZipArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionDeploymentZipOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionDeploymentZipArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionDeploymentZip.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5461,18 +5329,6 @@ Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
 {{% /choosable %}}
 
 <h4 id="flexibleappversionendpointsapiservice">Flexible<wbr>App<wbr>Version<wbr>Endpoints<wbr>Api<wbr>Service</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionEndpointsApiService">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionEndpointsApiService">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionEndpointsApiServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionEndpointsApiServiceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionEndpointsApiServiceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionEndpointsApiService.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5687,18 +5543,6 @@ Possible values are `FIXED` and `MANAGED`.
 {{% /choosable %}}
 
 <h4 id="flexibleappversionentrypoint">Flexible<wbr>App<wbr>Version<wbr>Entrypoint</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionEntrypoint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionEntrypoint">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionEntrypointArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionEntrypointOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionEntrypointArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionEntrypoint.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5765,18 +5609,6 @@ Possible values are `FIXED` and `MANAGED`.
 {{% /choosable %}}
 
 <h4 id="flexibleappversionhandler">Flexible<wbr>App<wbr>Version<wbr>Handler</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionHandler">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionHandler">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionHandlerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionHandlerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionHandlerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionHandler.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6119,18 +5951,6 @@ All URLs that begin with this prefix are handled by this handler, using the port
 {{% /choosable %}}
 
 <h4 id="flexibleappversionhandlerscript">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Script</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionHandlerScript">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionHandlerScript">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionHandlerScriptArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionHandlerScriptOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionHandlerScriptArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionHandlerScript.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6197,18 +6017,6 @@ All URLs that begin with this prefix are handled by this handler, using the port
 {{% /choosable %}}
 
 <h4 id="flexibleappversionhandlerstaticfiles">Flexible<wbr>App<wbr>Version<wbr>Handler<wbr>Static<wbr>Files</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionHandlerStaticFiles">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionHandlerStaticFiles">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionHandlerStaticFilesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionHandlerStaticFilesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionHandlerStaticFilesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionHandlerStaticFiles.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6543,18 +6351,6 @@ The path can refer to text matched in groupings in the URL pattern.
 {{% /choosable %}}
 
 <h4 id="flexibleappversionlivenesscheck">Flexible<wbr>App<wbr>Version<wbr>Liveness<wbr>Check</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionLivenessCheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionLivenessCheck">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionLivenessCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionLivenessCheckOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionLivenessCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionLivenessCheck.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6865,18 +6661,6 @@ The path can refer to text matched in groupings in the URL pattern.
 {{% /choosable %}}
 
 <h4 id="flexibleappversionmanualscaling">Flexible<wbr>App<wbr>Version<wbr>Manual<wbr>Scaling</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionManualScaling">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionManualScaling">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionManualScalingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionManualScalingOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionManualScalingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionManualScaling.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6951,18 +6735,6 @@ Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manua
 {{% /choosable %}}
 
 <h4 id="flexibleappversionnetwork">Flexible<wbr>App<wbr>Version<wbr>Network</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionNetwork">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionNetwork">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionNetworkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionNetworkOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionNetworkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionNetwork.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7205,18 +6977,6 @@ If specified, the subnetwork must exist in the same region as the App Engine fle
 {{% /choosable %}}
 
 <h4 id="flexibleappversionreadinesscheck">Flexible<wbr>App<wbr>Version<wbr>Readiness<wbr>Check</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionReadinessCheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionReadinessCheck">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionReadinessCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionReadinessCheckOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionReadinessCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionReadinessCheck.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7531,18 +7291,6 @@ replies to a healthcheck until it is ready to serve traffic. Default: "300s"
 {{% /choosable %}}
 
 <h4 id="flexibleappversionresources">Flexible<wbr>App<wbr>Version<wbr>Resources</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionResources">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionResources">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionResourcesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionResourcesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionResourcesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionResources.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7733,18 +7481,6 @@ Structure is documented below.
 {{% /choosable %}}
 
 <h4 id="flexibleappversionresourcesvolume">Flexible<wbr>App<wbr>Version<wbr>Resources<wbr>Volume</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionResourcesVolume">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionResourcesVolume">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionResourcesVolumeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionResourcesVolumeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionResourcesVolumeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionResourcesVolume.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7891,18 +7627,6 @@ Structure is documented below.
 {{% /choosable %}}
 
 <h4 id="flexibleappversionvpcaccessconnector">Flexible<wbr>App<wbr>Version<wbr>Vpc<wbr>Access<wbr>Connector</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FlexibleAppVersionVpcAccessConnector">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FlexibleAppVersionVpcAccessConnector">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionVpcAccessConnectorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/appengine?tab=doc#FlexibleAppVersionVpcAccessConnectorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Inputs.FlexibleAppVersionVpcAccessConnectorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.AppEngine.Outputs.FlexibleAppVersionVpcAccessConnector.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

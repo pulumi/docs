@@ -1,6 +1,6 @@
 ---
 title: "CloudAMQP"
-title_tag: "Module CloudAMQP | Package CloudAMQP"
+title_tag: "cloudamqp.CloudAMQP"
 meta_desc: "A Pulumi package for creating and managing CloudAMQP resources."
 menu:
     reference:
@@ -48,24 +48,6 @@ A Pulumi package for creating and managing CloudAMQP resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`cloudamqp` Terraform Provider](https://github.com/cloudamqp/terraform-provider-cloudamqp).</dd>
 	<dt>Version</dt>
-	<dd>2.5.4</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.CloudAmqp/Pulumi.CloudAmqp.html" title="Pulumi.CloudAmqp">Pulumi.CloudAmqp</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/v2/go/cloudamqp/?tab=doc#" title="cloudamqp">cloudamqp</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/cloudamqp/#" title="@pulumi/cloudamqp">@pulumi/cloudamqp</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_cloudamqp" title="pulumi_cloudamqp">pulumi_cloudamqp</a></dd>
-
+	<dd>2.7.2</dd>
 </dl>
 

@@ -42,16 +42,6 @@ After cloning this repo, from this working directory, run these commands:
     $ pulumi stack init
     ```
 
-1. Create a Python virtualenv, activate it, and install dependencies:
-
-    This installs the dependent packages [needed](https://www.pulumi.com/docs/intro/concepts/how-pulumi-works/) for our Pulumi program.
-
-    ```bash
-    $ python3 -m venv venv
-    $ source venv/bin/activate
-    $ pip3 install -r requirements.txt
-    ```
-
 1. Set the configuration variables for this program:
 
     ```bash
@@ -77,7 +67,7 @@ After cloning this repo, from this working directory, run these commands:
 1. After 10-15 minutes, your cluster will be ready, and the kubeconfig YAML you'll use to connect to the cluster will be available as an output. You can save this kubeconfig to a file like so:
 
     ```bash
-    $ pulumi stack output kubeconfig > kubeconfig.yaml
+    $ pulumi stack output kubeconfig --show-secrets --show-secrets > kubeconfig.yaml
     ```
 
     Once you have this file in hand, you can interact with your new cluster as usual via `kubectl`:

@@ -1,8 +1,8 @@
 
 ---
-title: "GetSecurityGroupRules"
-title_tag: "Function GetSecurityGroupRules | Module ecs | Package AliCloud"
-meta_desc: "Explore the GetSecurityGroupRules function of the ecs module, including examples, input properties, output properties, and supporting types. The `alicloud.ecs.getSecurityGroupRules` data source provides a collection of security permissions of a specific security group."
+title: "getSecurityGroupRules"
+title_tag: "alicloud.ecs.getSecurityGroupRules"
+meta_desc: "Documentation for the alicloud.ecs.getSecurityGroupRules function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -153,13 +153,13 @@ const backend = new alicloud.ecs.Instance("backend", {
 {{% /examples %}}
 
 
-## Using GetSecurityGroupRules {#using}
+## Using getSecurityGroupRules {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSecurityGroupRules<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#GetSecurityGroupRulesArgs">GetSecurityGroupRulesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#GetSecurityGroupRulesResult">GetSecurityGroupRulesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSecurityGroupRules<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSecurityGroupRulesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSecurityGroupRulesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -169,14 +169,16 @@ const backend = new alicloud.ecs.Instance("backend", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityGroupRules<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#GetSecurityGroupRulesArgs">GetSecurityGroupRulesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#GetSecurityGroupRulesResult">GetSecurityGroupRulesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityGroupRules<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSecurityGroupRulesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSecurityGroupRulesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetSecurityGroupRules` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSecurityGroupRules </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.GetSecurityGroupRulesResult.html">GetSecurityGroupRulesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.GetSecurityGroupRulesArgs.html">GetSecurityGroupRulesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSecurityGroupRulesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSecurityGroupRulesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -448,7 +450,7 @@ The following arguments are supported:
 
 
 
-## GetSecurityGroupRules Result {#result}
+## getSecurityGroupRules Result {#result}
 
 The following output properties are available:
 
@@ -877,16 +879,6 @@ The following output properties are available:
 
 
 <h4 id="getsecuritygrouprulesrule">Get<wbr>Security<wbr>Group<wbr>Rules<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetSecurityGroupRulesRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs?tab=doc#GetSecurityGroupRulesRule">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Ecs.Outputs.GetSecurityGroupRulesRule.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

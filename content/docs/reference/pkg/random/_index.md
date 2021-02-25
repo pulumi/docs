@@ -33,24 +33,6 @@ A Pulumi package to safely use randomness in Pulumi programs.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`random` Terraform Provider](https://github.com/terraform-providers/terraform-provider-random).</dd>
 	<dt>Version</dt>
-	<dd>3.0.1</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Random/Pulumi.Random.html" title="Pulumi.Random">Pulumi.Random</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/v3/go/random/?tab=doc#" title="random">random</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/random/#" title="@pulumi/random">@pulumi/random</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_random" title="pulumi_random">pulumi_random</a></dd>
-
+	<dd>3.0.3</dd>
 </dl>
 

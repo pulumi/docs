@@ -1,8 +1,8 @@
 
 ---
-title: "GetVirtualMachine"
-title_tag: "Function GetVirtualMachine | Module vmwarecloudsimple | Package Azure NextGen"
-meta_desc: "Explore the GetVirtualMachine function of the vmwarecloudsimple module, including examples, input properties, output properties, and supporting types. "
+title: "getVirtualMachine"
+title_tag: "azure-nextgen.vmwarecloudsimple.getVirtualMachine"
+meta_desc: "Documentation for the azure-nextgen.vmwarecloudsimple.getVirtualMachine function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetVirtualMachine function of the vmwarecloudsimple modu
 
 
 
-## Using GetVirtualMachine {#using}
+## Using getVirtualMachine {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualMachine<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVirtualMachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetVirtualMachineResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVirtualMachine<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVirtualMachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVirtualMachineResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetVirtualMachine function of the vmwarecloudsimple modu
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualMachine<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVirtualMachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupVirtualMachineResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualMachine<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVirtualMachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVirtualMachineResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVirtualMachine` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetVirtualMachine function of the vmwarecloudsimple modu
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVirtualMachine </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetVirtualMachineResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetVirtualMachineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetVirtualMachineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVirtualMachineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetVirtualMachine Result {#result}
+## getVirtualMachine Result {#result}
 
 The following output properties are available:
 
@@ -1158,9 +1158,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1366,9 +1363,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="guestosniccustomizationresponse">Guest<wbr>OSNICCustomization<wbr>Response</h4>
-
-
-
 
 
 
@@ -1652,9 +1646,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1899,9 +1890,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2071,9 +2059,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="virtualdiskresponse">Virtual<wbr>Disk<wbr>Response</h4>
-
-
-
 
 
 
@@ -2282,9 +2267,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="virtualnetworkresponse">Virtual<wbr>Network<wbr>Response</h4>
-
-
-
 
 
 
@@ -2529,9 +2511,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="virtualnicresponse">Virtual<wbr>Nic<wbr>Response</h4>
-
-
-
 
 
 

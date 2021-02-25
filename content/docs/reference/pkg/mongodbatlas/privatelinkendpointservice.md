@@ -1,8 +1,8 @@
 
 ---
 title: "PrivateLinkEndpointService"
-title_tag: "Resource PrivateLinkEndpointService | Package MongoDB Atlas"
-meta_desc: "Explore the PrivateLinkEndpointService resource of the MongoDB Atlas package, including examples, input properties, output properties, lookup functions, and supporting types. `mongodbatlas.PrivateLinkEndpointService` provides a Private Endpoint Interface Link resource. This represents a Private Endpoint Interface Link, which adds one interface endpoint to a private endpoint connection in an Atlas project."
+title_tag: "mongodbatlas.PrivateLinkEndpointService"
+meta_desc: "Documentation for the mongodbatlas.PrivateLinkEndpointService resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -179,19 +179,19 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#PrivateLinkEndpointService">PrivateLinkEndpointService</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#PrivateLinkEndpointServiceArgs">PrivateLinkEndpointServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">PrivateLinkEndpointService</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PrivateLinkEndpointServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_mongodbatlas/#pulumi_mongodbatlas.PrivateLinkEndpointService">PrivateLinkEndpointService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoint_service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PrivateLinkEndpointService</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">endpoint_service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#PrivateLinkEndpointService">NewPrivateLinkEndpointService</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#PrivateLinkEndpointServiceArgs">PrivateLinkEndpointServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#PrivateLinkEndpointService">PrivateLinkEndpointService</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPrivateLinkEndpointService</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PrivateLinkEndpointServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateLinkEndpointService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.PrivateLinkEndpointService.html">PrivateLinkEndpointService</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.PrivateLinkEndpointServiceArgs.html">PrivateLinkEndpointServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">PrivateLinkEndpointService</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PrivateLinkEndpointServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -212,7 +212,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#PrivateLinkEndpointServiceArgs">PrivateLinkEndpointServiceArgs</a></span>
+        <span class="property-type"><a href="#inputs">PrivateLinkEndpointServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -281,7 +281,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#PrivateLinkEndpointServiceArgs">PrivateLinkEndpointServiceArgs</a></span>
+        <span class="property-type"><a href="#inputs">PrivateLinkEndpointServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -320,7 +320,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.PrivateLinkEndpointServiceArgs.html">PrivateLinkEndpointServiceArgs</a></span>
+        <span class="property-type"><a href="#inputs">PrivateLinkEndpointServiceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -343,11 +343,11 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
 
 ## PrivateLinkEndpointService Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The PrivateLinkEndpointService resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The PrivateLinkEndpointService resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -587,13 +587,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="connectionstatus_csharp">
-<a href="#connectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
+        <span id="awsconnectionstatus_csharp">
+<a href="#awsconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="azurestatus_csharp">
+<a href="#azurestatus_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-"
@@ -663,13 +674,24 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span id="connectionstatus_go">
-<a href="#connectionstatus_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
+        <span id="awsconnectionstatus_go">
+<a href="#awsconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="azurestatus_go">
+<a href="#azurestatus_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-"
@@ -739,13 +761,24 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span id="connectionstatus_nodejs">
-<a href="#connectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Status</a>
+        <span id="awsconnectionstatus_nodejs">
+<a href="#awsconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="azurestatus_nodejs">
+<a href="#azurestatus_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-"
@@ -815,13 +848,24 @@ Returns one of the following values:
 
     <dt class="property-"
             title="">
-        <span id="connection_status_python">
-<a href="#connection_status_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>status</a>
+        <span id="aws_connection_status_python">
+<a href="#aws_connection_status_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>connection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="azure_status_python">
+<a href="#azure_status_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-"
@@ -894,20 +938,20 @@ Get an existing PrivateLinkEndpointService resource's state with the given name,
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#PrivateLinkEndpointServiceState">PrivateLinkEndpointServiceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#PrivateLinkEndpointService">PrivateLinkEndpointService</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PrivateLinkEndpointServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">PrivateLinkEndpointService</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_requested</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint_service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">error_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interface_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PrivateLinkEndpointService</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aws_connection_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_requested</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint_service_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">error_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">interface_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_endpoint_resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_link_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PrivateLinkEndpointService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPrivateLinkEndpointService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#PrivateLinkEndpointServiceState">PrivateLinkEndpointServiceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#PrivateLinkEndpointService">PrivateLinkEndpointService</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPrivateLinkEndpointService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PrivateLinkEndpointServiceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">PrivateLinkEndpointService</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.PrivateLinkEndpointService.html">PrivateLinkEndpointService</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas..PrivateLinkEndpointServiceState.html">PrivateLinkEndpointServiceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">PrivateLinkEndpointService</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PrivateLinkEndpointServiceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1014,13 +1058,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_connectionstatus_csharp">
-<a href="#state_connectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
+        <span id="state_awsconnectionstatus_csharp">
+<a href="#state_awsconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_azurestatus_csharp">
+<a href="#state_azurestatus_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1131,13 +1186,24 @@ Returns one of the following values:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_connectionstatus_go">
-<a href="#state_connectionstatus_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Status</a>
+        <span id="state_awsconnectionstatus_go">
+<a href="#state_awsconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_azurestatus_go">
+<a href="#state_azurestatus_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1248,13 +1314,24 @@ Returns one of the following values:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_connectionstatus_nodejs">
-<a href="#state_connectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Status</a>
+        <span id="state_awsconnectionstatus_nodejs">
+<a href="#state_awsconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Connection<wbr>Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_azurestatus_nodejs">
+<a href="#state_azurestatus_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1365,13 +1442,24 @@ Returns one of the following values:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_connection_status_python">
-<a href="#state_connection_status_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>status</a>
+        <span id="state_aws_connection_status_python">
+<a href="#state_aws_connection_status_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>connection_<wbr>status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of the interface endpoint.
+    <dd>{{% md %}}Status of the interface endpoint for AWS.
+Returns one of the following values:
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_azure_status_python">
+<a href="#state_azure_status_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1487,7 +1575,7 @@ Returns one of the following values:
 Private Endpoint Link Connection can be imported using project ID and username, in the format `{project_id}--{private_link_id}--{endpoint_service_id}--{provider_name}`, e.g.
 
 ```sh
- $ pulumi import mongodbatlas:index/privateLinkEndpointService:PrivateLinkEndpointService test 1112222b3bf99403840e8934--vpce-4242342343--3242342343112--AWS
+ $ pulumi import mongodbatlas:index/privateLinkEndpointService:PrivateLinkEndpointService test 1112222b3bf99403840e8934--3242342343112--vpce-4242342343--AWS
 ```
 
  See detailed information for arguments and attributes[MongoDB API Private Endpoint Link Connection](https://docs.atlas.mongodb.com/reference/api/private-endpoints-endpoint-create-one/)

@@ -1,8 +1,8 @@
 
 ---
-title: "ListJobCredentials"
-title_tag: "Function ListJobCredentials | Module databox | Package Azure NextGen"
-meta_desc: "Explore the ListJobCredentials function of the databox module, including examples, input properties, output properties, and supporting types. "
+title: "listJobCredentials"
+title_tag: "azure-nextgen.databox.listJobCredentials"
+meta_desc: "Documentation for the azure-nextgen.databox.listJobCredentials function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the ListJobCredentials function of the databox module, inclu
 
 
 
-## Using ListJobCredentials {#using}
+## Using listJobCredentials {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listJobCredentials<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListJobCredentialsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">ListJobCredentialsResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listJobCredentials<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListJobCredentialsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListJobCredentialsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,14 +29,16 @@ meta_desc: "Explore the ListJobCredentials function of the databox module, inclu
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListJobCredentials<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListJobCredentialsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">ListJobCredentialsResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListJobCredentials<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListJobCredentialsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListJobCredentialsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `ListJobCredentials` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListJobCredentials </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">ListJobCredentialsResult</span>> <span class="p">InvokeAsync(</span><span class="nx">ListJobCredentialsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">ListJobCredentialsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListJobCredentialsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -144,7 +146,7 @@ The following arguments are supported:
 
 
 
-## ListJobCredentials Result {#result}
+## listJobCredentials Result {#result}
 
 The following output properties are available:
 
@@ -253,9 +255,6 @@ The following output properties are available:
 
 
 <h4 id="accountcredentialdetailsresponse">Account<wbr>Credential<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -431,9 +430,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -534,9 +530,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -634,9 +627,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="clouderrorresponse">Cloud<wbr>Error<wbr>Response</h4>
-
-
-
 
 
 
@@ -848,9 +838,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1059,9 +1046,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1195,9 +1179,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="databoxheavysecretresponse">Data<wbr>Box<wbr>Heavy<wbr>Secret<wbr>Response</h4>
-
-
-
 
 
 
@@ -1409,9 +1390,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1620,9 +1598,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1759,16 +1734,13 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
         <span id="forwarddcaccesscode_csharp">
-<a href="#forwarddcaccesscode_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Dc<wbr>Access<wbr>Code</a>
+<a href="#forwarddcaccesscode_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>DCAccess<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1777,7 +1749,7 @@ The following output properties are available:
     <dt class="property-optional"
             title="Optional">
         <span id="reversedcaccesscode_csharp">
-<a href="#reversedcaccesscode_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Dc<wbr>Access<wbr>Code</a>
+<a href="#reversedcaccesscode_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>DCAccess<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1792,7 +1764,7 @@ The following output properties are available:
     <dt class="property-optional"
             title="Optional">
         <span id="forwarddcaccesscode_go">
-<a href="#forwarddcaccesscode_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>Dc<wbr>Access<wbr>Code</a>
+<a href="#forwarddcaccesscode_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>DCAccess<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1801,7 +1773,7 @@ The following output properties are available:
     <dt class="property-optional"
             title="Optional">
         <span id="reversedcaccesscode_go">
-<a href="#reversedcaccesscode_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Dc<wbr>Access<wbr>Code</a>
+<a href="#reversedcaccesscode_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>DCAccess<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1816,7 +1788,7 @@ The following output properties are available:
     <dt class="property-optional"
             title="Optional">
         <span id="forwarddcaccesscode_nodejs">
-<a href="#forwarddcaccesscode_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Dc<wbr>Access<wbr>Code</a>
+<a href="#forwarddcaccesscode_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>DCAccess<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1825,7 +1797,7 @@ The following output properties are available:
     <dt class="property-optional"
             title="Optional">
         <span id="reversedcaccesscode_nodejs">
-<a href="#reversedcaccesscode_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Dc<wbr>Access<wbr>Code</a>
+<a href="#reversedcaccesscode_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>DCAccess<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1859,9 +1831,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="disksecretresponse">Disk<wbr>Secret<wbr>Response</h4>
-
-
-
 
 
 
@@ -1962,9 +1931,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="sharecredentialdetailsresponse">Share<wbr>Credential<wbr>Details<wbr>Response</h4>
-
-
-
 
 
 
@@ -2173,9 +2139,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="unencryptedcredentialsresponse">Unencrypted<wbr>Credentials<wbr>Response</h4>
-
-
-
 
 
 

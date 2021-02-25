@@ -18,19 +18,19 @@ meta_desc: "Explore the GlobalClient resource of the Auth0 package, including ex
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/auth0/#GlobalClient">GlobalClient</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/auth0/#GlobalClientArgs">GlobalClientArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GlobalClient</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">GlobalClientArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_auth0/#pulumi_auth0.GlobalClient">GlobalClient</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[GlobalClientAddonsArgs]</span> = None<span class="p">, </span><span class="nx">allowed_logout_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">app_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">callbacks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret_rotation_trigger</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cross_origin_auth</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cross_origin_loc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_login_page</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_login_page_on</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">custom_login_page_preview</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">form_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">initiate_login_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_first_party</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_token_endpoint_ip_header_trusted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">jwt_configuration</span><span class="p">:</span> <span class="nx">Optional[GlobalClientJwtConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mobile</span><span class="p">:</span> <span class="nx">Optional[GlobalClientMobileArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_conformant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">refresh_token</span><span class="p">:</span> <span class="nx">Optional[GlobalClientRefreshTokenArgs]</span> = None<span class="p">, </span><span class="nx">sso</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sso_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GlobalClient</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">addons</span><span class="p">:</span> <span class="nx">Optional[GlobalClientAddonsArgs]</span> = None<span class="p">, </span><span class="nx">allowed_logout_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">allowed_origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">app_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">callbacks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret_rotation_trigger</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">cross_origin_auth</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cross_origin_loc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_login_page</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_login_page_on</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">custom_login_page_preview</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_key</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">form_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">grant_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">initiate_login_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_first_party</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_token_endpoint_ip_header_trusted</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">jwt_configuration</span><span class="p">:</span> <span class="nx">Optional[GlobalClientJwtConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">logo_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mobile</span><span class="p">:</span> <span class="nx">Optional[GlobalClientMobileArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_conformant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">refresh_token</span><span class="p">:</span> <span class="nx">Optional[GlobalClientRefreshTokenArgs]</span> = None<span class="p">, </span><span class="nx">sso</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sso_disabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token_endpoint_auth_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_origins</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClient">NewGlobalClient</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClientArgs">GlobalClientArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClient">GlobalClient</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGlobalClient</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">GlobalClientArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalClient</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.GlobalClient.html">GlobalClient</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.GlobalClientArgs.html">GlobalClientArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GlobalClient</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GlobalClientArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -51,7 +51,7 @@ meta_desc: "Explore the GlobalClient resource of the Auth0 package, including ex
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/auth0/#GlobalClientArgs">GlobalClientArgs</a></span>
+        <span class="property-type"><a href="#inputs">GlobalClientArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -120,7 +120,7 @@ meta_desc: "Explore the GlobalClient resource of the Auth0 package, including ex
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClientArgs">GlobalClientArgs</a></span>
+        <span class="property-type"><a href="#inputs">GlobalClientArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -159,7 +159,7 @@ meta_desc: "Explore the GlobalClient resource of the Auth0 package, including ex
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.GlobalClientArgs.html">GlobalClientArgs</a></span>
+        <span class="property-type"><a href="#inputs">GlobalClientArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -182,11 +182,11 @@ meta_desc: "Explore the GlobalClient resource of the Auth0 package, including ex
 
 ## GlobalClient Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The GlobalClient resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1405,7 +1405,7 @@ Get an existing GlobalClient resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/auth0/#GlobalClientState">GlobalClientState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/auth0/#GlobalClient">GlobalClient</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">GlobalClientState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GlobalClient</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1414,11 +1414,11 @@ Get an existing GlobalClient resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalClient<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClientState">GlobalClientState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClient">GlobalClient</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalClient<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">GlobalClientState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalClient</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.GlobalClient.html">GlobalClient</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0..GlobalClientState.html">GlobalClientState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GlobalClient</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">GlobalClientState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2670,18 +2670,6 @@ The following state arguments are supported:
 
 
 <h4 id="globalclientaddons">Global<wbr>Client<wbr>Addons</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#GlobalClientAddons">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#GlobalClientAddons">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClientAddonsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClientAddonsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.GlobalClientAddonsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.GlobalClientAddons.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3716,18 +3704,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="globalclientaddonssamlp">Global<wbr>Client<wbr>Addons<wbr>Samlp</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#GlobalClientAddonsSamlp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#GlobalClientAddonsSamlp">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClientAddonsSamlpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClientAddonsSamlpOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.GlobalClientAddonsSamlpArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.GlobalClientAddonsSamlp.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4438,18 +4414,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="globalclientaddonssamlplogout">Global<wbr>Client<wbr>Addons<wbr>Samlp<wbr>Logout</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#GlobalClientAddonsSamlpLogout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#GlobalClientAddonsSamlpLogout">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClientAddonsSamlpLogoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClientAddonsSamlpLogoutOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.GlobalClientAddonsSamlpLogoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.GlobalClientAddonsSamlpLogout.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4548,18 +4512,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="globalclientjwtconfiguration">Global<wbr>Client<wbr>Jwt<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#GlobalClientJwtConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#GlobalClientJwtConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClientJwtConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClientJwtConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.GlobalClientJwtConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.GlobalClientJwtConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4730,18 +4682,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="globalclientmobile">Global<wbr>Client<wbr>Mobile</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#GlobalClientMobile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#GlobalClientMobile">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClientMobileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClientMobileOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.GlobalClientMobileArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.GlobalClientMobile.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4840,18 +4780,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="globalclientmobileandroid">Global<wbr>Client<wbr>Mobile<wbr>Android</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#GlobalClientMobileAndroid">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#GlobalClientMobileAndroid">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClientMobileAndroidArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClientMobileAndroidOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.GlobalClientMobileAndroidArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.GlobalClientMobileAndroid.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4950,18 +4878,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="globalclientmobileios">Global<wbr>Client<wbr>Mobile<wbr>Ios</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#GlobalClientMobileIos">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#GlobalClientMobileIos">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClientMobileIosArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClientMobileIosOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.GlobalClientMobileIosArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.GlobalClientMobileIos.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5060,18 +4976,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="globalclientrefreshtoken">Global<wbr>Client<wbr>Refresh<wbr>Token</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/input/#GlobalClientRefreshToken">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/auth0/types/output/#GlobalClientRefreshToken">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClientRefreshTokenArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-auth0/sdk/go/auth0/?tab=doc#GlobalClientRefreshTokenOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Inputs.GlobalClientRefreshTokenArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Auth0/Pulumi.Auth0.Outputs.GlobalClientRefreshToken.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5092,6 +4996,33 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idletokenlifetime_csharp">
+<a href="#idletokenlifetime_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infiniteidletokenlifetime_csharp">
+<a href="#infiniteidletokenlifetime_csharp" style="color: inherit; text-decoration: inherit;">Infinite<wbr>Idle<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infinitetokenlifetime_csharp">
+<a href="#infinitetokenlifetime_csharp" style="color: inherit; text-decoration: inherit;">Infinite<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5138,6 +5069,33 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="idletokenlifetime_go">
+<a href="#idletokenlifetime_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infiniteidletokenlifetime_go">
+<a href="#infiniteidletokenlifetime_go" style="color: inherit; text-decoration: inherit;">Infinite<wbr>Idle<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infinitetokenlifetime_go">
+<a href="#infinitetokenlifetime_go" style="color: inherit; text-decoration: inherit;">Infinite<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="leeway_go">
 <a href="#leeway_go" style="color: inherit; text-decoration: inherit;">Leeway</a>
 </span>
@@ -5180,6 +5138,33 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="idletokenlifetime_nodejs">
+<a href="#idletokenlifetime_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infiniteidletokenlifetime_nodejs">
+<a href="#infiniteidletokenlifetime_nodejs" style="color: inherit; text-decoration: inherit;">infinite<wbr>Idle<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infinitetokenlifetime_nodejs">
+<a href="#infinitetokenlifetime_nodejs" style="color: inherit; text-decoration: inherit;">infinite<wbr>Token<wbr>Lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="leeway_nodejs">
 <a href="#leeway_nodejs" style="color: inherit; text-decoration: inherit;">leeway</a>
 </span>
@@ -5218,6 +5203,33 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="idle_token_lifetime_python">
+<a href="#idle_token_lifetime_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>token_<wbr>lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infinite_idle_token_lifetime_python">
+<a href="#infinite_idle_token_lifetime_python" style="color: inherit; text-decoration: inherit;">infinite_<wbr>idle_<wbr>token_<wbr>lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infinite_token_lifetime_python">
+<a href="#infinite_token_lifetime_python" style="color: inherit; text-decoration: inherit;">infinite_<wbr>token_<wbr>lifetime</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"

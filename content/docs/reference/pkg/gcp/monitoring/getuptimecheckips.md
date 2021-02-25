@@ -1,8 +1,8 @@
 
 ---
-title: "GetUptimeCheckIPs"
-title_tag: "Function GetUptimeCheckIPs | Module monitoring | Package GCP"
-meta_desc: "Explore the GetUptimeCheckIPs function of the monitoring module, including examples, input properties, output properties, and supporting types. Returns the list of IP addresses that checkers run from. For more information see"
+title: "getUptimeCheckIPs"
+title_tag: "gcp.monitoring.getUptimeCheckIPs"
+meta_desc: "Documentation for the gcp.monitoring.getUptimeCheckIPs function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,13 +88,13 @@ export const ipList = ips.then(ips => ips.uptimeCheckIps);
 {{% /examples %}}
 
 
-## Using GetUptimeCheckIPs {#using}
+## Using getUptimeCheckIPs {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getUptimeCheckIPs<span class="p">(</span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#GetUptimeCheckIPsResult">GetUptimeCheckIPsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getUptimeCheckIPs<span class="p">(</span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetUptimeCheckIPsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -104,21 +104,23 @@ export const ipList = ips.then(ips => ips.uptimeCheckIps);
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUptimeCheckIPs<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#GetUptimeCheckIPsResult">GetUptimeCheckIPsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUptimeCheckIPs<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetUptimeCheckIPsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetUptimeCheckIPs` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetUptimeCheckIPs </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.GetUptimeCheckIPsResult.html">GetUptimeCheckIPsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetUptimeCheckIPsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
 
 
 
-## GetUptimeCheckIPs Result {#result}
+## getUptimeCheckIPs Result {#result}
 
 The following output properties are available:
 
@@ -235,16 +237,6 @@ The following output properties are available:
 
 
 <h4 id="getuptimecheckipsuptimecheckip">Get<wbr>Uptime<wbr>Check<wbr>IPs<wbr>Uptime<wbr>Check<wbr>Ip</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetUptimeCheckIPsUptimeCheckIp">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#GetUptimeCheckIPsUptimeCheckIp">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.GetUptimeCheckIPsUptimeCheckIp.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

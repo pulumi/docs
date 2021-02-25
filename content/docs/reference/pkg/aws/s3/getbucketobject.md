@@ -1,8 +1,8 @@
 
 ---
-title: "GetBucketObject"
-title_tag: "Function GetBucketObject | Module s3 | Package AWS"
-meta_desc: "Explore the GetBucketObject function of the s3 module, including examples, input properties, output properties, and supporting types. The S3 object data source allows access to the metadata and"
+title: "getBucketObject"
+title_tag: "aws.s3.getBucketObject"
+meta_desc: "Documentation for the aws.s3.getBucketObject function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -119,23 +119,23 @@ const example = new aws.ec2.Instance("example", {
 {{% /examples %}}
 
 
-## Using GetBucketObject {#using}
+## Using getBucketObject {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBucketObject<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#GetBucketObjectArgs">GetBucketObjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/s3/#GetBucketObjectResult">GetBucketObjectResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBucketObject<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBucketObjectArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBucketObjectResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_bucket_object(</span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBucketObjectResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_bucket_object(</span><span class="nx">bucket</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bucket_key_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBucketObjectResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBucketObject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#LookupBucketObjectArgs">LookupBucketObjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3?tab=doc#LookupBucketObjectResult">LookupBucketObjectResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBucketObject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBucketObjectArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBucketObjectResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupBucketObject` in the Go SDK.
 
@@ -144,7 +144,7 @@ const example = new aws.ec2.Instance("example", {
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBucketObject </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.GetBucketObjectResult.html">GetBucketObjectResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.S3.GetBucketObjectArgs.html">GetBucketObjectArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBucketObjectResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBucketObjectArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -175,6 +175,16 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full path to the object inside the bucket
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bucketkeyenabled_csharp">
+<a href="#bucketkeyenabled_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Key<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -233,6 +243,16 @@ The following arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="bucketkeyenabled_go">
+<a href="#bucketkeyenabled_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Key<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="range_go">
 <a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
 </span>
@@ -285,6 +305,16 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full path to the object inside the bucket
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bucketkeyenabled_nodejs">
+<a href="#bucketkeyenabled_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Key<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -343,6 +373,16 @@ The following arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="bucket_key_enabled_python">
+<a href="#bucket_key_enabled_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>key_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="range_python">
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
@@ -376,7 +416,7 @@ The following arguments are supported:
 
 
 
-## GetBucketObject Result {#result}
+## getBucketObject Result {#result}
 
 The following output properties are available:
 
@@ -622,6 +662,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the bucket is configured as a website, redirects requests for this object to another object in the same bucket or to an external URL. Amazon S3 stores the value of this header in the object metadata.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="bucketkeyenabled_csharp">
+<a href="#bucketkeyenabled_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Key<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -878,6 +928,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="bucketkeyenabled_go">
+<a href="#bucketkeyenabled_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Key<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="range_go">
 <a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
 </span>
@@ -1131,6 +1191,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="bucketkeyenabled_nodejs">
+<a href="#bucketkeyenabled_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Key<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="range_nodejs">
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
 </span>
@@ -1381,6 +1451,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If the bucket is configured as a website, redirects requests for this object to another object in the same bucket or to an external URL. Amazon S3 stores the value of this header in the object metadata.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="bucket_key_enabled_python">
+<a href="#bucket_key_enabled_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>key_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">

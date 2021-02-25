@@ -1,8 +1,8 @@
 
 ---
-title: "GetLoadBalancer"
-title_tag: "Function GetLoadBalancer | Module lb | Package AWS"
-meta_desc: "Explore the GetLoadBalancer function of the lb module, including examples, input properties, output properties, and supporting types. &gt; **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical."
+title: "getLoadBalancer"
+title_tag: "aws.lb.getLoadBalancer"
+meta_desc: "Documentation for the aws.lb.getLoadBalancer function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -123,13 +123,13 @@ const test = aws.lb.getLoadBalancer({
 {{% /examples %}}
 
 
-## Using GetLoadBalancer {#using}
+## Using getLoadBalancer {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLoadBalancer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lb/#GetLoadBalancerArgs">GetLoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lb/#GetLoadBalancerResult">GetLoadBalancerResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLoadBalancer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLoadBalancerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLoadBalancerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -139,7 +139,7 @@ const test = aws.lb.getLoadBalancer({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#LookupLoadBalancerArgs">LookupLoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#LookupLoadBalancerResult">LookupLoadBalancerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLoadBalancer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLoadBalancerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupLoadBalancerResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupLoadBalancer` in the Go SDK.
 
@@ -148,7 +148,7 @@ const test = aws.lb.getLoadBalancer({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLoadBalancer </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lb.GetLoadBalancerResult.html">GetLoadBalancerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LB.GetLoadBalancerArgs.html">GetLoadBalancerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetLoadBalancerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLoadBalancerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -300,7 +300,7 @@ The following arguments are supported:
 
 
 
-## GetLoadBalancer Result {#result}
+## getLoadBalancer Result {#result}
 
 The following output properties are available:
 
@@ -1061,16 +1061,6 @@ The following output properties are available:
 
 
 <h4 id="getloadbalanceraccesslogs">Get<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLoadBalancerAccessLogs">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#GetLoadBalancerAccessLogs">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LB.Outputs.GetLoadBalancerAccessLogs.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1207,16 +1197,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getloadbalancersubnetmapping">Get<wbr>Load<wbr>Balancer<wbr>Subnet<wbr>Mapping</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLoadBalancerSubnetMapping">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#GetLoadBalancerSubnetMapping">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LB.Outputs.GetLoadBalancerSubnetMapping.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1227,6 +1207,15 @@ The following output properties are available:
             title="Required">
         <span id="allocationid_csharp">
 <a href="#allocationid_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="ipv6address_csharp">
+<a href="#ipv6address_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1276,6 +1265,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="ipv6address_go">
+<a href="#ipv6address_go" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="outpostid_go">
 <a href="#outpostid_go" style="color: inherit; text-decoration: inherit;">Outpost<wbr>Id</a>
 </span>
@@ -1318,6 +1316,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="ipv6address_nodejs">
+<a href="#ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="outpostid_nodejs">
 <a href="#outpostid_nodejs" style="color: inherit; text-decoration: inherit;">outpost<wbr>Id</a>
 </span>
@@ -1353,6 +1360,15 @@ The following output properties are available:
             title="Required">
         <span id="allocation_id_python">
 <a href="#allocation_id_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="ipv6_address_python">
+<a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

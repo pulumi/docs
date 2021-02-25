@@ -1,8 +1,8 @@
 
 ---
-title: "GetConsumerGroups"
-title_tag: "Function GetConsumerGroups | Module actiontrail | Package AliCloud"
-meta_desc: "Explore the GetConsumerGroups function of the actiontrail module, including examples, input properties, output properties, and supporting types. This data source provides a list of ALIKAFKA Consumer Groups in an Alibaba Cloud account according to the specified filters."
+title: "getConsumerGroups"
+title_tag: "alicloud.actiontrail.getConsumerGroups"
+meta_desc: "Documentation for the alicloud.actiontrail.getConsumerGroups function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -107,13 +107,13 @@ export const firstGroupName = consumerGroupsDs.consumerIds[0];
 {{% /examples %}}
 
 
-## Using GetConsumerGroups {#using}
+## Using getConsumerGroups {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getConsumerGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/actiontrail/#GetConsumerGroupsArgs">GetConsumerGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/actiontrail/#GetConsumerGroupsResult">GetConsumerGroupsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getConsumerGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetConsumerGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetConsumerGroupsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -123,14 +123,16 @@ export const firstGroupName = consumerGroupsDs.consumerIds[0];
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetConsumerGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/actiontrail?tab=doc#GetConsumerGroupsArgs">GetConsumerGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/actiontrail?tab=doc#GetConsumerGroupsResult">GetConsumerGroupsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetConsumerGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetConsumerGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetConsumerGroupsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetConsumerGroups` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetConsumerGroups </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Actiontrail.GetConsumerGroupsResult.html">GetConsumerGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ActionTrail.GetConsumerGroupsArgs.html">GetConsumerGroupsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetConsumerGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetConsumerGroupsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -282,7 +284,7 @@ The following arguments are supported:
 
 
 
-## GetConsumerGroups Result {#result}
+## getConsumerGroups Result {#result}
 
 The following output properties are available:
 

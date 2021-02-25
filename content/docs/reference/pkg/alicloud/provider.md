@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package AliCloud"
-meta_desc: "Explore the Provider resource of the AliCloud package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the alicloud package. By default, resources use package-wide configuration"
+title_tag: "alicloud.Provider"
+meta_desc: "Documentation for the alicloud.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -23,19 +23,19 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/#Provider">Provider</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/#pulumi_alicloud.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">assume_role</span><span class="p">:</span> <span class="nx">Optional[ProviderAssumeRoleArgs]</span> = None<span class="p">, </span><span class="nx">configuration_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ecs_role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProviderEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">fc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mns_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ots_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_credentials_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_region_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">assume_role</span><span class="p">:</span> <span class="nx">Optional[ProviderAssumeRoleArgs]</span> = None<span class="p">, </span><span class="nx">configuration_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ecs_role_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ProviderEndpointArgs]]</span> = None<span class="p">, </span><span class="nx">fc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mns_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ots_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secret_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_credentials_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_region_validation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/?tab=doc#Provider">NewProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Provider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Provider.html">Provider</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.Pulumi.AlicloudArgs.html">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -56,7 +56,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/#ProviderArgs">ProviderArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -125,7 +125,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/?tab=doc#ProviderArgs">ProviderArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -164,7 +164,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.Pulumi.AlicloudArgs.html">ProviderArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -187,11 +187,11 @@ construction to achieve fine-grained programmatic control over provider settings
 
 ## Provider Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Provider resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Provider resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -249,7 +249,7 @@ Alibaba Cloud console.
     </dt>
     <dd>{{% md %}}The RAM Role Name attached on a ECS instance for API operations. You can retrieve this from the 'Access Control' section
 of the Alibaba Cloud console.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ALICLOUD_ECS_ROLE_NAME`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="endpoints_csharp">
@@ -304,7 +304,7 @@ of the Alibaba Cloud console.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The profile for API operations. If not set, the default profile created with `aliyun configure` will be used.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ALICLOUD_PROFILE`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
@@ -323,7 +323,7 @@ of the Alibaba Cloud console.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where Alibaba Cloud operations will take place. Examples are cn-beijing, cn-hangzhou, eu-central-1, etc.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ALICLOUD_REGION`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="secretkey_csharp">
@@ -434,7 +434,7 @@ Alibaba Cloud console.
     </dt>
     <dd>{{% md %}}The RAM Role Name attached on a ECS instance for API operations. You can retrieve this from the 'Access Control' section
 of the Alibaba Cloud console.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ALICLOUD_ECS_ROLE_NAME`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="endpoints_go">
@@ -489,7 +489,7 @@ of the Alibaba Cloud console.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The profile for API operations. If not set, the default profile created with `aliyun configure` will be used.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ALICLOUD_PROFILE`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
@@ -508,7 +508,7 @@ of the Alibaba Cloud console.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where Alibaba Cloud operations will take place. Examples are cn-beijing, cn-hangzhou, eu-central-1, etc.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ALICLOUD_REGION`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="secretkey_go">
@@ -619,7 +619,7 @@ Alibaba Cloud console.
     </dt>
     <dd>{{% md %}}The RAM Role Name attached on a ECS instance for API operations. You can retrieve this from the 'Access Control' section
 of the Alibaba Cloud console.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ALICLOUD_ECS_ROLE_NAME`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="endpoints_nodejs">
@@ -674,7 +674,7 @@ of the Alibaba Cloud console.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The profile for API operations. If not set, the default profile created with `aliyun configure` will be used.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ALICLOUD_PROFILE`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
@@ -693,7 +693,7 @@ of the Alibaba Cloud console.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where Alibaba Cloud operations will take place. Examples are cn-beijing, cn-hangzhou, eu-central-1, etc.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ALICLOUD_REGION`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="secretkey_nodejs">
@@ -804,7 +804,7 @@ Alibaba Cloud console.
     </dt>
     <dd>{{% md %}}The RAM Role Name attached on a ECS instance for API operations. You can retrieve this from the 'Access Control' section
 of the Alibaba Cloud console.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ALICLOUD_ECS_ROLE_NAME`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="endpoints_python">
@@ -859,7 +859,7 @@ of the Alibaba Cloud console.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The profile for API operations. If not set, the default profile created with `aliyun configure` will be used.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ALICLOUD_PROFILE`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
@@ -878,7 +878,7 @@ of the Alibaba Cloud console.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region where Alibaba Cloud operations will take place. Examples are cn-beijing, cn-hangzhou, eu-central-1, etc.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ALICLOUD_REGION`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="secret_key_python">
@@ -1013,18 +1013,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 <h4 id="providerassumerole">Provider<wbr>Assume<wbr>Role</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ProviderAssumeRole">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/?tab=doc#ProviderAssumeRoleArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Inputs.ProviderAssumeRoleArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1195,18 +1183,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /choosable %}}
 
 <h4 id="providerendpoint">Provider<wbr>Endpoint</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ProviderEndpoint">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/?tab=doc#ProviderEndpointArgs">input</a>   API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Inputs.ProviderEndpointArgs.html">input</a>   API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1528,6 +1504,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ims_csharp">
+<a href="#ims_csharp" style="color: inherit; text-decoration: inherit;">Ims</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="kms_csharp">
 <a href="#kms_csharp" style="color: inherit; text-decoration: inherit;">Kms</a>
 </span>
@@ -1665,6 +1650,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="pvtz_csharp">
 <a href="#pvtz_csharp" style="color: inherit; text-decoration: inherit;">Pvtz</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quotas_csharp">
+<a href="#quotas_csharp" style="color: inherit; text-decoration: inherit;">Quotas</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2083,6 +2077,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ims_go">
+<a href="#ims_go" style="color: inherit; text-decoration: inherit;">Ims</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="kms_go">
 <a href="#kms_go" style="color: inherit; text-decoration: inherit;">Kms</a>
 </span>
@@ -2220,6 +2223,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="pvtz_go">
 <a href="#pvtz_go" style="color: inherit; text-decoration: inherit;">Pvtz</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quotas_go">
+<a href="#quotas_go" style="color: inherit; text-decoration: inherit;">Quotas</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2638,6 +2650,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ims_nodejs">
+<a href="#ims_nodejs" style="color: inherit; text-decoration: inherit;">ims</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="kms_nodejs">
 <a href="#kms_nodejs" style="color: inherit; text-decoration: inherit;">kms</a>
 </span>
@@ -2775,6 +2796,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="pvtz_nodejs">
 <a href="#pvtz_nodejs" style="color: inherit; text-decoration: inherit;">pvtz</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quotas_nodejs">
+<a href="#quotas_nodejs" style="color: inherit; text-decoration: inherit;">quotas</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3193,6 +3223,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ims_python">
+<a href="#ims_python" style="color: inherit; text-decoration: inherit;">ims</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="kms_python">
 <a href="#kms_python" style="color: inherit; text-decoration: inherit;">kms</a>
 </span>
@@ -3330,6 +3369,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="pvtz_python">
 <a href="#pvtz_python" style="color: inherit; text-decoration: inherit;">pvtz</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quotas_python">
+<a href="#quotas_python" style="color: inherit; text-decoration: inherit;">quotas</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

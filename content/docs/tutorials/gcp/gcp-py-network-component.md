@@ -19,7 +19,7 @@ no_edit_this_page: true
 </p>
 
 
-This example uses `pulumi.ComponentResource` as described [here](https://www.pulumi.com/docs/intro/concepts/programming-model/#components) 
+This example uses `pulumi.ComponentResource` as described [here](https://www.pulumi.com/docs/intro/concepts/resources/#components) 
 to create a Google Cloud Network and instance.
 
 The use of `pulumi.ComponentResource` demonstrates how multiple low-level resources 
@@ -32,17 +32,6 @@ can be composed into a higher-level, reusable abstraction.
 1. [Configure Pulumi for Python](https://www.pulumi.com/docs/intro/languages/python/)
 
 ## Deploying and running the program
-
-1. Create a Python virtualenv, activate it, and install dependencies:
-
-    This installs the dependent packages [needed](https://www.pulumi.com/docs/intro/concepts/how-pulumi-works/) for our Pulumi program.
-
-
-    ```bash
-    $ python3 -m venv venv
-    $ source venv/bin/activate
-    $ pip3 install -r requirements.txt
-    ```
 
 1. Create a new stack:
 

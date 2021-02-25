@@ -55,8 +55,8 @@ and a video walkthrough of this example is [available on YouTube](https://www.yo
     bucket.onObjectCreated("onNewVideo", new aws.lambda.CallbackFunction<aws.s3.BucketEvent, void>("onNewVideo", {
         // Specify appropriate policies so that this AWS lambda can run EC2 tasks.
         policies: [
-            aws.iam.AWSLambdaFullAccess,                 // Provides wide access to "serverless" services (Dynamo, S3, etc.)
-            aws.iam.AmazonEC2ContainerServiceFullAccess, // Required for lambda compute to be able to run Tasks
+            aws.iam.ManagedPolicy.AWSLambdaExecute,             // Provides access to logging and S3
+            aws.iam.ManagedPolicy.AmazonECSFullAccess,          // Required for lambda compute to be able to run Tasks
         ],
         callback: async bucketArgs => {
             console.log("onNewVideo called");

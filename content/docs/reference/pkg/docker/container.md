@@ -1,8 +1,8 @@
 
 ---
 title: "Container"
-title_tag: "Resource Container | Package Docker"
-meta_desc: "Explore the Container resource of the Docker package, including examples, input properties, output properties, lookup functions, and supporting types. Manages the lifecycle of a Docker container."
+title_tag: "docker.Container"
+meta_desc: "Documentation for the docker.Container resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -93,13 +93,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as docker from "@pulumi/docker";
 
 // Find the latest Ubuntu precise image.
-const ubuntuRemoteImage = new docker.RemoteImage("ubuntu", {
-    name: "ubuntu:precise",
-});
+const ubuntuRemoteImage = new docker.RemoteImage("ubuntuRemoteImage", {name: "ubuntu:precise"});
 // Start a container
-const ubuntuContainer = new docker.Container("ubuntu", {
-    image: ubuntuRemoteImage.latest,
-});
+const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRemoteImage.latest});
 ```
 
 {{% /example %}}
@@ -112,19 +108,19 @@ const ubuntuContainer = new docker.Container("ubuntu", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#Container">Container</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#ContainerArgs">ContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Container</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_docker/#pulumi_docker.Container">Container</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[ContainerCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cpu_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">destroy_grace_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_searches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">domainname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entrypoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">group_adds</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[ContainerHealthcheckArgs]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerHostArgs]]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">init</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerLabelArgs]]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">log_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_opts</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_retry_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_swap</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerMountArgs]]</span> = None<span class="p">, </span><span class="nx">must_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">networks_advanced</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerNetworksAdvancedArgs]]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerPortArgs]]</span> = None<span class="p">, </span><span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">publish_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">remove_volumes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">restart</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rm</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shm_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sysctls</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tmpfs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">ulimits</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUlimitArgs]]</span> = None<span class="p">, </span><span class="nx">uploads</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUploadArgs]]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">userns_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">working_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Container</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[ContainerCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cpu_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">destroy_grace_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_searches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">domainname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entrypoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">group_adds</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[ContainerHealthcheckArgs]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerHostArgs]]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">init</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerLabelArgs]]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">log_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_opts</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_retry_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_swap</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerMountArgs]]</span> = None<span class="p">, </span><span class="nx">must_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">networks_advanced</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerNetworksAdvancedArgs]]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerPortArgs]]</span> = None<span class="p">, </span><span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">publish_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">remove_volumes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">restart</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rm</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shm_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">stdin_open</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sysctls</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tmpfs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tty</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ulimits</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUlimitArgs]]</span> = None<span class="p">, </span><span class="nx">uploads</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUploadArgs]]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">userns_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">working_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#Container">NewContainer</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerArgs">ContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#Container">Container</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewContainer</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Container</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Container.html">Container</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.ContainerArgs.html">ContainerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Container</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ContainerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -145,7 +141,7 @@ const ubuntuContainer = new docker.Container("ubuntu", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#ContainerArgs">ContainerArgs</a></span>
+        <span class="property-type"><a href="#inputs">ContainerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -214,7 +210,7 @@ const ubuntuContainer = new docker.Container("ubuntu", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerArgs">ContainerArgs</a></span>
+        <span class="property-type"><a href="#inputs">ContainerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -253,7 +249,7 @@ const ubuntuContainer = new docker.Container("ubuntu", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.ContainerArgs.html">ContainerArgs</a></span>
+        <span class="property-type"><a href="#inputs">ContainerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -276,11 +272,11 @@ const ubuntuContainer = new docker.Container("ubuntu", {
 
 ## Container Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Container resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Container resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -760,6 +756,16 @@ started after creation. If false, then the container is only created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="stdinopen_csharp">
+<a href="#stdinopen_csharp" style="color: inherit; text-decoration: inherit;">Stdin<wbr>Open</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}if true, keep STDIN open even if not attached (docker run -i)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sysctls_csharp">
 <a href="#sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
 </span>
@@ -777,6 +783,16 @@ started after creation. If false, then the container is only created.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tty_csharp">
+<a href="#tty_csharp" style="color: inherit; text-decoration: inherit;">Tty</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}if true, allocate a pseudo-tty (docker run -t)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1320,6 +1336,16 @@ started after creation. If false, then the container is only created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="stdinopen_go">
+<a href="#stdinopen_go" style="color: inherit; text-decoration: inherit;">Stdin<wbr>Open</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}if true, keep STDIN open even if not attached (docker run -i)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sysctls_go">
 <a href="#sysctls_go" style="color: inherit; text-decoration: inherit;">Sysctls</a>
 </span>
@@ -1337,6 +1363,16 @@ started after creation. If false, then the container is only created.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tty_go">
+<a href="#tty_go" style="color: inherit; text-decoration: inherit;">Tty</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}if true, allocate a pseudo-tty (docker run -t)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1880,6 +1916,16 @@ started after creation. If false, then the container is only created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="stdinopen_nodejs">
+<a href="#stdinopen_nodejs" style="color: inherit; text-decoration: inherit;">stdin<wbr>Open</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}if true, keep STDIN open even if not attached (docker run -i)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sysctls_nodejs">
 <a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
@@ -1897,6 +1943,16 @@ started after creation. If false, then the container is only created.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tty_nodejs">
+<a href="#tty_nodejs" style="color: inherit; text-decoration: inherit;">tty</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}if true, allocate a pseudo-tty (docker run -t)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2440,6 +2496,16 @@ started after creation. If false, then the container is only created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="stdin_open_python">
+<a href="#stdin_open_python" style="color: inherit; text-decoration: inherit;">stdin_<wbr>open</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}if true, keep STDIN open even if not attached (docker run -i)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sysctls_python">
 <a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
@@ -2457,6 +2523,16 @@ started after creation. If false, then the container is only created.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tty_python">
+<a href="#tty_python" style="color: inherit; text-decoration: inherit;">tty</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}if true, allocate a pseudo-tty (docker run -t)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2891,20 +2967,20 @@ Get an existing Container resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#ContainerState">ContainerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/docker/#Container">Container</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ContainerState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Container</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bridge</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[ContainerCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">container_logs</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">destroy_grace_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_searches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">domainname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entrypoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">exit_code</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_adds</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[ContainerHealthcheckArgs]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerHostArgs]]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">init</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_prefix_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerLabelArgs]]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">log_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_opts</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_retry_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_swap</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerMountArgs]]</span> = None<span class="p">, </span><span class="nx">must_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">network_datas</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerNetworkDataArgs]]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">networks_advanced</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerNetworksAdvancedArgs]]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerPortArgs]]</span> = None<span class="p">, </span><span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">publish_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">remove_volumes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">restart</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rm</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shm_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sysctls</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tmpfs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">ulimits</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUlimitArgs]]</span> = None<span class="p">, </span><span class="nx">uploads</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUploadArgs]]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">userns_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">working_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Container</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">bridge</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">capabilities</span><span class="p">:</span> <span class="nx">Optional[ContainerCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">command</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">container_logs</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_set</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_shares</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">destroy_grace_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">dns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_searches</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">domainname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">entrypoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">envs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">exit_code</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">gateway</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_adds</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">healthcheck</span><span class="p">:</span> <span class="nx">Optional[ContainerHealthcheckArgs]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hosts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerHostArgs]]</span> = None<span class="p">, </span><span class="nx">image</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">init</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_prefix_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipc_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerLabelArgs]]</span> = None<span class="p">, </span><span class="nx">links</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">log_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_opts</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">logs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_retry_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">memory_swap</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerMountArgs]]</span> = None<span class="p">, </span><span class="nx">must_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_aliases</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">network_datas</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerNetworkDataArgs]]</span> = None<span class="p">, </span><span class="nx">network_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">networks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">networks_advanced</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerNetworksAdvancedArgs]]</span> = None<span class="p">, </span><span class="nx">pid_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ports</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerPortArgs]]</span> = None<span class="p">, </span><span class="nx">privileged</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">publish_all_ports</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">read_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">remove_volumes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">restart</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rm</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_opts</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">shm_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">start</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">stdin_open</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sysctls</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tmpfs</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">tty</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ulimits</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUlimitArgs]]</span> = None<span class="p">, </span><span class="nx">uploads</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerUploadArgs]]</span> = None<span class="p">, </span><span class="nx">user</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">userns_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ContainerVolumeArgs]]</span> = None<span class="p">, </span><span class="nx">working_dir</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Container</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerState">ContainerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#Container">Container</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ContainerState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Container</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Container.html">Container</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker..ContainerState.html">ContainerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Container</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ContainerState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3555,6 +3631,16 @@ started after creation. If false, then the container is only created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_stdinopen_csharp">
+<a href="#state_stdinopen_csharp" style="color: inherit; text-decoration: inherit;">Stdin<wbr>Open</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}if true, keep STDIN open even if not attached (docker run -i)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_sysctls_csharp">
 <a href="#state_sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
 </span>
@@ -3572,6 +3658,16 @@ started after creation. If false, then the container is only created.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tty_csharp">
+<a href="#state_tty_csharp" style="color: inherit; text-decoration: inherit;">Tty</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}if true, allocate a pseudo-tty (docker run -t)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4188,6 +4284,16 @@ started after creation. If false, then the container is only created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_stdinopen_go">
+<a href="#state_stdinopen_go" style="color: inherit; text-decoration: inherit;">Stdin<wbr>Open</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}if true, keep STDIN open even if not attached (docker run -i)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_sysctls_go">
 <a href="#state_sysctls_go" style="color: inherit; text-decoration: inherit;">Sysctls</a>
 </span>
@@ -4205,6 +4311,16 @@ started after creation. If false, then the container is only created.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tty_go">
+<a href="#state_tty_go" style="color: inherit; text-decoration: inherit;">Tty</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}if true, allocate a pseudo-tty (docker run -t)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4821,6 +4937,16 @@ started after creation. If false, then the container is only created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_stdinopen_nodejs">
+<a href="#state_stdinopen_nodejs" style="color: inherit; text-decoration: inherit;">stdin<wbr>Open</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}if true, keep STDIN open even if not attached (docker run -i)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_sysctls_nodejs">
 <a href="#state_sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
@@ -4838,6 +4964,16 @@ started after creation. If false, then the container is only created.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tty_nodejs">
+<a href="#state_tty_nodejs" style="color: inherit; text-decoration: inherit;">tty</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}if true, allocate a pseudo-tty (docker run -t)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5454,6 +5590,16 @@ started after creation. If false, then the container is only created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_stdin_open_python">
+<a href="#state_stdin_open_python" style="color: inherit; text-decoration: inherit;">stdin_<wbr>open</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}if true, keep STDIN open even if not attached (docker run -i)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_sysctls_python">
 <a href="#state_sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
 </span>
@@ -5471,6 +5617,16 @@ started after creation. If false, then the container is only created.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tty_python">
+<a href="#state_tty_python" style="color: inherit; text-decoration: inherit;">tty</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}if true, allocate a pseudo-tty (docker run -t)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5548,18 +5704,6 @@ by name.
 
 
 <h4 id="containercapabilities">Container<wbr>Capabilities</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ContainerCapabilities">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/output/#ContainerCapabilities">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerCapabilitiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerCapabilitiesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerCapabilitiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerCapabilities.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5666,18 +5810,6 @@ by name.
 {{% /choosable %}}
 
 <h4 id="containerdevice">Container<wbr>Device</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ContainerDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/output/#ContainerDevice">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerDeviceOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerDevice.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5840,18 +5972,6 @@ Defaults to `rwm`.
 {{% /choosable %}}
 
 <h4 id="containerhealthcheck">Container<wbr>Healthcheck</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ContainerHealthcheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/output/#ContainerHealthcheck">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerHealthcheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerHealthcheckOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerHealthcheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerHealthcheck.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6082,18 +6202,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 {{% /choosable %}}
 
 <h4 id="containerhost">Container<wbr>Host</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ContainerHost">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/output/#ContainerHost">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerHostArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerHostOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerHostArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerHost.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6200,18 +6308,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 {{% /choosable %}}
 
 <h4 id="containerlabel">Container<wbr>Label</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ContainerLabel">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/output/#ContainerLabel">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerLabelOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerLabel.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6318,18 +6414,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 {{% /choosable %}}
 
 <h4 id="containermount">Container<wbr>Mount</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ContainerMount">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/output/#ContainerMount">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerMountArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerMountOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerMountArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerMount.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6640,18 +6724,6 @@ Defaults to false.
 {{% /choosable %}}
 
 <h4 id="containermountbindoptions">Container<wbr>Mount<wbr>Bind<wbr>Options</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ContainerMountBindOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/output/#ContainerMountBindOptions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerMountBindOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerMountBindOptionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerMountBindOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerMountBindOptions.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6718,18 +6790,6 @@ Defaults to false.
 {{% /choosable %}}
 
 <h4 id="containermounttmpfsoptions">Container<wbr>Mount<wbr>Tmpfs<wbr>Options</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ContainerMountTmpfsOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/output/#ContainerMountTmpfsOptions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerMountTmpfsOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerMountTmpfsOptionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerMountTmpfsOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerMountTmpfsOptions.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6836,18 +6896,6 @@ Defaults to false.
 {{% /choosable %}}
 
 <h4 id="containermountvolumeoptions">Container<wbr>Mount<wbr>Volume<wbr>Options</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ContainerMountVolumeOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/output/#ContainerMountVolumeOptions">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerMountVolumeOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerMountVolumeOptionsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerMountVolumeOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerMountVolumeOptions.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7030,18 +7078,6 @@ Defaults to false.
 {{% /choosable %}}
 
 <h4 id="containermountvolumeoptionslabel">Container<wbr>Mount<wbr>Volume<wbr>Options<wbr>Label</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ContainerMountVolumeOptionsLabel">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/output/#ContainerMountVolumeOptionsLabel">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerMountVolumeOptionsLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerMountVolumeOptionsLabelOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerMountVolumeOptionsLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerMountVolumeOptionsLabel.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7148,18 +7184,6 @@ Defaults to false.
 {{% /choosable %}}
 
 <h4 id="containernetworkdata">Container<wbr>Network<wbr>Data</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/output/#ContainerNetworkData">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerNetworkDataOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerNetworkData.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7458,18 +7482,6 @@ NetworkSettings.
 {{% /choosable %}}
 
 <h4 id="containernetworksadvanced">Container<wbr>Networks<wbr>Advanced</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ContainerNetworksAdvanced">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/output/#ContainerNetworksAdvanced">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerNetworksAdvancedArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerNetworksAdvancedOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerNetworksAdvancedArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerNetworksAdvanced.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7656,18 +7668,6 @@ NetworkSettings.
 {{% /choosable %}}
 
 <h4 id="containerport">Container<wbr>Port</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ContainerPort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/output/#ContainerPort">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerPortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerPortOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerPortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerPort.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7858,18 +7858,6 @@ defaults to `tcp`.
 {{% /choosable %}}
 
 <h4 id="containerulimit">Container<wbr>Ulimit</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ContainerUlimit">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/output/#ContainerUlimit">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerUlimitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerUlimitOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerUlimitArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerUlimit.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8004,18 +7992,6 @@ defaults to `tcp`.
 {{% /choosable %}}
 
 <h4 id="containerupload">Container<wbr>Upload</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ContainerUpload">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/output/#ContainerUpload">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerUploadArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerUploadOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerUploadArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerUpload.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8286,18 +8262,6 @@ Defaults to false.
 {{% /choosable %}}
 
 <h4 id="containervolume">Container<wbr>Volume</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/input/#ContainerVolume">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/docker/types/output/#ContainerVolume">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerVolumeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-docker/sdk/v2/go/docker/?tab=doc#ContainerVolumeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Inputs.ContainerVolumeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.Outputs.ContainerVolume.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

@@ -1,8 +1,8 @@
 
 ---
-title: "GetProtocols"
-title_tag: "Function GetProtocols | Module nas | Package AliCloud"
-meta_desc: "Explore the GetProtocols function of the nas module, including examples, input properties, output properties, and supporting types. Provide  a data source to retrieve the type of protocol used to create NAS file system."
+title: "getProtocols"
+title_tag: "alicloud.nas.getProtocols"
+meta_desc: "Documentation for the alicloud.nas.getProtocols function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -107,13 +107,13 @@ export const nasProtocolsProtocol = defaultProtocols.protocols[0];
 {{% /examples %}}
 
 
-## Using GetProtocols {#using}
+## Using getProtocols {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProtocols<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/nas/#GetProtocolsArgs">GetProtocolsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/nas/#GetProtocolsResult">GetProtocolsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProtocols<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetProtocolsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetProtocolsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -123,14 +123,16 @@ export const nasProtocolsProtocol = defaultProtocols.protocols[0];
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProtocols<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/nas?tab=doc#GetProtocolsArgs">GetProtocolsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/nas?tab=doc#GetProtocolsResult">GetProtocolsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProtocols<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetProtocolsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetProtocolsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetProtocols` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetProtocols </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Nas.GetProtocolsResult.html">GetProtocolsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Nas.GetProtocolsArgs.html">GetProtocolsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetProtocolsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetProtocolsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -150,7 +152,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The file system type. Valid Values: Performance and Capacity.
+    <dd>{{% md %}}The file system type. Valid Values: `Performance` and `Capacity`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -185,7 +187,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The file system type. Valid Values: Performance and Capacity.
+    <dd>{{% md %}}The file system type. Valid Values: `Performance` and `Capacity`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -220,7 +222,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The file system type. Valid Values: Performance and Capacity.
+    <dd>{{% md %}}The file system type. Valid Values: `Performance` and `Capacity`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -255,7 +257,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The file system type. Valid Values: Performance and Capacity.
+    <dd>{{% md %}}The file system type. Valid Values: `Performance` and `Capacity`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -282,7 +284,7 @@ The following arguments are supported:
 
 
 
-## GetProtocols Result {#result}
+## getProtocols Result {#result}
 
 The following output properties are available:
 

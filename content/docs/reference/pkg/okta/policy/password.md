@@ -87,19 +87,19 @@ const example = new okta.policy.Password("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/policy/#Password">Password</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/policy/#PasswordArgs">PasswordArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Password</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">PasswordArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_okta/policy/#pulumi_okta.policy.Password">Password</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">call_recovery</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_recovery</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups_includeds</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_auto_unlock_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_dictionary_lookup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_exclude_first_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_exclude_last_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_exclude_username</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_expire_warn_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_history_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_lockout_notification_channels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">password_max_age_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_max_lockout_attempts</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_age_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_lowercase</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_symbol</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_uppercase</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_show_lockout_failures</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">question_min_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">question_recovery</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_email_token</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">skip_unlock</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sms_recovery</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Password</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auth_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">call_recovery</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_recovery</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">groups_includeds</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_auto_unlock_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_dictionary_lookup</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_exclude_first_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_exclude_last_name</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_exclude_username</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">password_expire_warn_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_history_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_lockout_notification_channels</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">password_max_age_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_max_lockout_attempts</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_age_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_lowercase</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_number</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_symbol</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_min_uppercase</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password_show_lockout_failures</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">question_min_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">question_recovery</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">recovery_email_token</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">skip_unlock</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sms_recovery</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#Password">NewPassword</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#PasswordArgs">PasswordArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#Password">Password</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPassword</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">PasswordArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Password</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Password.html">Password</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.PasswordArgs.html">PasswordArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Password</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PasswordArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -120,7 +120,7 @@ const example = new okta.policy.Password("example", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/okta/policy/#PasswordArgs">PasswordArgs</a></span>
+        <span class="property-type"><a href="#inputs">PasswordArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -189,7 +189,7 @@ const example = new okta.policy.Password("example", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#PasswordArgs">PasswordArgs</a></span>
+        <span class="property-type"><a href="#inputs">PasswordArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -228,7 +228,7 @@ const example = new okta.policy.Password("example", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.PasswordArgs.html">PasswordArgs</a></span>
+        <span class="property-type"><a href="#inputs">PasswordArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -251,11 +251,11 @@ const example = new okta.policy.Password("example", {
 
 ## Password Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Password resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Password resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -370,7 +370,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the user name must be excluded from the password.
+    <dd>{{% md %}}If the username must be excluded from the password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -410,7 +410,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.",
+    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.,
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -450,7 +450,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of lower case characters in password.
+    <dd>{{% md %}}Minimum number of lower case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -460,7 +460,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of numbers in password.
+    <dd>{{% md %}}Minimum number of numbers in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -470,7 +470,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of symbols in password.
+    <dd>{{% md %}}Minimum number of symbols in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -480,7 +480,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of upper case characters in password.
+    <dd>{{% md %}}Minimum number of upper case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -676,7 +676,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the user name must be excluded from the password.
+    <dd>{{% md %}}If the username must be excluded from the password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -716,7 +716,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.",
+    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.,
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -756,7 +756,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of lower case characters in password.
+    <dd>{{% md %}}Minimum number of lower case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -766,7 +766,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of numbers in password.
+    <dd>{{% md %}}Minimum number of numbers in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -776,7 +776,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of symbols in password.
+    <dd>{{% md %}}Minimum number of symbols in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -786,7 +786,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of upper case characters in password.
+    <dd>{{% md %}}Minimum number of upper case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -982,7 +982,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If the user name must be excluded from the password.
+    <dd>{{% md %}}If the username must be excluded from the password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1022,7 +1022,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.",
+    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.,
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1062,7 +1062,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum number of lower case characters in password.
+    <dd>{{% md %}}Minimum number of lower case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1072,7 +1072,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum number of numbers in password.
+    <dd>{{% md %}}Minimum number of numbers in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1082,7 +1082,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum number of symbols in password.
+    <dd>{{% md %}}Minimum number of symbols in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1092,7 +1092,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum number of upper case characters in password.
+    <dd>{{% md %}}Minimum number of upper case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1288,7 +1288,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the user name must be excluded from the password.
+    <dd>{{% md %}}If the username must be excluded from the password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1328,7 +1328,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.",
+    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.,
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1368,7 +1368,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of lower case characters in password.
+    <dd>{{% md %}}Minimum number of lower case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1378,7 +1378,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of numbers in password.
+    <dd>{{% md %}}Minimum number of numbers in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1388,7 +1388,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of symbols in password.
+    <dd>{{% md %}}Minimum number of symbols in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1398,7 +1398,7 @@ The Password resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of upper case characters in password.
+    <dd>{{% md %}}Minimum number of upper case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1558,7 +1558,7 @@ Get an existing Password resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/policy/#PasswordState">PasswordState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/policy/#Password">Password</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PasswordState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Password</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1567,11 +1567,11 @@ Get an existing Password resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPassword<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#PasswordState">PasswordState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/policy?tab=doc#Password">Password</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPassword<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PasswordState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Password</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.Password.html">Password</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Policy.PasswordState.html">PasswordState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Password</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PasswordState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1784,7 +1784,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the user name must be excluded from the password.
+    <dd>{{% md %}}If the username must be excluded from the password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1824,7 +1824,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.",
+    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.,
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1864,7 +1864,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of lower case characters in password.
+    <dd>{{% md %}}Minimum number of lower case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1874,7 +1874,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of numbers in password.
+    <dd>{{% md %}}Minimum number of numbers in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1884,7 +1884,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of symbols in password.
+    <dd>{{% md %}}Minimum number of symbols in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1894,7 +1894,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of upper case characters in password.
+    <dd>{{% md %}}Minimum number of upper case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2090,7 +2090,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the user name must be excluded from the password.
+    <dd>{{% md %}}If the username must be excluded from the password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2130,7 +2130,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.",
+    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.,
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2170,7 +2170,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of lower case characters in password.
+    <dd>{{% md %}}Minimum number of lower case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2180,7 +2180,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of numbers in password.
+    <dd>{{% md %}}Minimum number of numbers in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2190,7 +2190,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of symbols in password.
+    <dd>{{% md %}}Minimum number of symbols in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2200,7 +2200,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of upper case characters in password.
+    <dd>{{% md %}}Minimum number of upper case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2396,7 +2396,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If the user name must be excluded from the password.
+    <dd>{{% md %}}If the username must be excluded from the password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2436,7 +2436,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.",
+    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.,
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2476,7 +2476,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum number of lower case characters in password.
+    <dd>{{% md %}}Minimum number of lower case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2486,7 +2486,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum number of numbers in password.
+    <dd>{{% md %}}Minimum number of numbers in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2496,7 +2496,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum number of symbols in password.
+    <dd>{{% md %}}Minimum number of symbols in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2506,7 +2506,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum number of upper case characters in password.
+    <dd>{{% md %}}Minimum number of upper case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2702,7 +2702,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the user name must be excluded from the password.
+    <dd>{{% md %}}If the username must be excluded from the password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2742,7 +2742,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.",
+    <dd>{{% md %}}Length in days a password is valid before expiry: 0 = no limit.,
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2782,7 +2782,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of lower case characters in password.
+    <dd>{{% md %}}Minimum number of lower case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2792,7 +2792,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of numbers in password.
+    <dd>{{% md %}}Minimum number of numbers in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2802,7 +2802,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of symbols in password.
+    <dd>{{% md %}}Minimum number of symbols in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2812,7 +2812,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum number of upper case characters in password.
+    <dd>{{% md %}}Minimum number of upper case characters in a password.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

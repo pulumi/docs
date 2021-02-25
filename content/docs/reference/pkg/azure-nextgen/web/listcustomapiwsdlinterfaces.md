@@ -1,8 +1,8 @@
 
 ---
-title: "ListCustomApiWsdlInterfaces"
-title_tag: "Function ListCustomApiWsdlInterfaces | Module web | Package Azure NextGen"
-meta_desc: "Explore the ListCustomApiWsdlInterfaces function of the web module, including examples, input properties, output properties, and supporting types. "
+title: "listCustomApiWsdlInterfaces"
+title_tag: "azure-nextgen.web.listCustomApiWsdlInterfaces"
+meta_desc: "Documentation for the azure-nextgen.web.listCustomApiWsdlInterfaces function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the ListCustomApiWsdlInterfaces function of the web module, 
 
 
 
-## Using ListCustomApiWsdlInterfaces {#using}
+## Using listCustomApiWsdlInterfaces {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listCustomApiWsdlInterfaces<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListCustomApiWsdlInterfacesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">ListCustomApiWsdlInterfacesResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>listCustomApiWsdlInterfaces<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">ListCustomApiWsdlInterfacesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">ListCustomApiWsdlInterfacesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,14 +29,16 @@ meta_desc: "Explore the ListCustomApiWsdlInterfaces function of the web module, 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListCustomApiWsdlInterfaces<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListCustomApiWsdlInterfacesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">ListCustomApiWsdlInterfacesResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>ListCustomApiWsdlInterfaces<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ListCustomApiWsdlInterfacesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">ListCustomApiWsdlInterfacesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `ListCustomApiWsdlInterfaces` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">ListCustomApiWsdlInterfaces </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">ListCustomApiWsdlInterfacesResult</span>> <span class="p">InvokeAsync(</span><span class="nx">ListCustomApiWsdlInterfacesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">ListCustomApiWsdlInterfacesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">ListCustomApiWsdlInterfacesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -288,7 +290,7 @@ The following arguments are supported:
 
 
 
-## ListCustomApiWsdlInterfaces Result {#result}
+## listCustomApiWsdlInterfaces Result {#result}
 
 The following output properties are available:
 
@@ -364,13 +366,7 @@ The following output properties are available:
 
 
 
-
-
-
 <h4 id="wsdlservice">Wsdl<wbr>Service</h4>
-
-
-
 
 
 
@@ -471,9 +467,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="wsdlserviceresponse">Wsdl<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 

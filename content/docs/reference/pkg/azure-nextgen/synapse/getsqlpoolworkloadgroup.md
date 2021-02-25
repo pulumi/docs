@@ -1,8 +1,8 @@
 
 ---
-title: "GetSqlPoolWorkloadGroup"
-title_tag: "Function GetSqlPoolWorkloadGroup | Module synapse | Package Azure NextGen"
-meta_desc: "Explore the GetSqlPoolWorkloadGroup function of the synapse module, including examples, input properties, output properties, and supporting types. "
+title: "getSqlPoolWorkloadGroup"
+title_tag: "azure-nextgen.synapse.getSqlPoolWorkloadGroup"
+meta_desc: "Documentation for the azure-nextgen.synapse.getSqlPoolWorkloadGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetSqlPoolWorkloadGroup function of the synapse module, 
 
 
 
-## Using GetSqlPoolWorkloadGroup {#using}
+## Using getSqlPoolWorkloadGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSqlPoolWorkloadGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSqlPoolWorkloadGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetSqlPoolWorkloadGroupResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSqlPoolWorkloadGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSqlPoolWorkloadGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSqlPoolWorkloadGroupResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetSqlPoolWorkloadGroup function of the synapse module, 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSqlPoolWorkloadGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSqlPoolWorkloadGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupSqlPoolWorkloadGroupResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSqlPoolWorkloadGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSqlPoolWorkloadGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSqlPoolWorkloadGroupResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSqlPoolWorkloadGroup` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetSqlPoolWorkloadGroup function of the synapse module, 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSqlPoolWorkloadGroup </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetSqlPoolWorkloadGroupResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetSqlPoolWorkloadGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSqlPoolWorkloadGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSqlPoolWorkloadGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -218,7 +218,7 @@ The following arguments are supported:
 
 
 
-## GetSqlPoolWorkloadGroup Result {#result}
+## getSqlPoolWorkloadGroup Result {#result}
 
 The following output properties are available:
 

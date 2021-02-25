@@ -108,7 +108,7 @@ const dataManager = new azure_nextgen.hybriddata.latest.DataManager("dataManager
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataManager</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">DataManagerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataManager</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DataManagerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -116,11 +116,11 @@ const dataManager = new azure_nextgen.hybriddata.latest.DataManager("dataManager
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataManager</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">DataManagerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataManager</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataManager</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DataManagerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataManager</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataManager</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">DataManagerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataManager</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DataManagerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -141,7 +141,7 @@ const dataManager = new azure_nextgen.hybriddata.latest.DataManager("dataManager
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DataManagerArgs</span>
+        <span class="property-type"><a href="#inputs">DataManagerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -210,7 +210,7 @@ const dataManager = new azure_nextgen.hybriddata.latest.DataManager("dataManager
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DataManagerArgs</span>
+        <span class="property-type"><a href="#inputs">DataManagerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -249,7 +249,7 @@ const dataManager = new azure_nextgen.hybriddata.latest.DataManager("dataManager
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">DataManagerArgs</span>
+        <span class="property-type"><a href="#inputs">DataManagerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -272,11 +272,11 @@ const dataManager = new azure_nextgen.hybriddata.latest.DataManager("dataManager
 
 ## DataManager Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DataManager resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DataManager resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -292,17 +292,6 @@ The DataManager resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
-US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
-region is specified on update the request will succeed.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -321,6 +310,17 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Etag of the Resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
+US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
+region is specified on update the request will succeed.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
@@ -357,17 +357,6 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
     <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
-US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
-region is specified on update the request will succeed.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -384,6 +373,17 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Etag of the Resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
+US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
+region is specified on update the request will succeed.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sku_go">
@@ -420,17 +420,6 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
     <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
-US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
-region is specified on update the request will succeed.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -447,6 +436,17 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Etag of the Resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
+US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
+region is specified on update the request will succeed.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
@@ -483,17 +483,6 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
     <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
-US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
-region is specified on update the request will succeed.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -510,6 +499,17 @@ region is specified on update the request will succeed.{{% /md %}}</dd>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Etag of the Resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
+US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo
+region is specified on update the request will succeed.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sku_python">

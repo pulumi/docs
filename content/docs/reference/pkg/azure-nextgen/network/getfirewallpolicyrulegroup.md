@@ -1,8 +1,8 @@
 
 ---
-title: "GetFirewallPolicyRuleGroup"
-title_tag: "Function GetFirewallPolicyRuleGroup | Module network | Package Azure NextGen"
-meta_desc: "Explore the GetFirewallPolicyRuleGroup function of the network module, including examples, input properties, output properties, and supporting types. "
+title: "getFirewallPolicyRuleGroup"
+title_tag: "azure-nextgen.network.getFirewallPolicyRuleGroup"
+meta_desc: "Documentation for the azure-nextgen.network.getFirewallPolicyRuleGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetFirewallPolicyRuleGroup function of the network modul
 
 
 
-## Using GetFirewallPolicyRuleGroup {#using}
+## Using getFirewallPolicyRuleGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFirewallPolicyRuleGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFirewallPolicyRuleGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetFirewallPolicyRuleGroupResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFirewallPolicyRuleGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFirewallPolicyRuleGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFirewallPolicyRuleGroupResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetFirewallPolicyRuleGroup function of the network modul
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFirewallPolicyRuleGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupFirewallPolicyRuleGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupFirewallPolicyRuleGroupResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFirewallPolicyRuleGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupFirewallPolicyRuleGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupFirewallPolicyRuleGroupResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupFirewallPolicyRuleGroup` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetFirewallPolicyRuleGroup function of the network modul
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFirewallPolicyRuleGroup </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetFirewallPolicyRuleGroupResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetFirewallPolicyRuleGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetFirewallPolicyRuleGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFirewallPolicyRuleGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetFirewallPolicyRuleGroup Result {#result}
+## getFirewallPolicyRuleGroup Result {#result}
 
 The following output properties are available:
 
@@ -471,9 +471,6 @@ The following output properties are available:
 
 
 <h4 id="applicationruleconditionresponse">Application<wbr>Rule<wbr>Condition<wbr>Response</h4>
-
-
-
 
 
 
@@ -793,9 +790,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -857,9 +851,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="firewallpolicyfilterruleresponse">Firewall<wbr>Policy<wbr>Filter<wbr>Rule<wbr>Response</h4>
-
-
-
 
 
 
@@ -1035,9 +1026,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1099,9 +1087,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="firewallpolicynatruleresponse">Firewall<wbr>Policy<wbr>Nat<wbr>Rule<wbr>Response</h4>
-
-
-
 
 
 
@@ -1349,9 +1334,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1449,9 +1431,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="natruleconditionresponse">Nat<wbr>Rule<wbr>Condition<wbr>Response</h4>
-
-
-
 
 
 
@@ -1732,9 +1711,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="networkruleconditionresponse">Network<wbr>Rule<wbr>Condition<wbr>Response</h4>
-
-
-
 
 
 

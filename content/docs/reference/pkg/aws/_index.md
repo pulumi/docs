@@ -1,6 +1,6 @@
 ---
 title: "AWS"
-title_tag: "Package AWS"
+title_tag: "AWS Package"
 meta_desc: "A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resources."
 menu:
     reference:
@@ -18,6 +18,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="acm/" title="acm"><span class="symbol module"></span>acm</a></li>
     <li><a href="acmpca/" title="acmpca"><span class="symbol module"></span>acmpca</a></li>
     <li><a href="alb/" title="alb"><span class="symbol module"></span>alb</a></li>
+    <li><a href="amp/" title="amp"><span class="symbol module"></span>amp</a></li>
     <li><a href="apigateway/" title="apigateway"><span class="symbol module"></span>apigateway</a></li>
     <li><a href="apigatewayv2/" title="apigatewayv2"><span class="symbol module"></span>apigatewayv2</a></li>
     <li><a href="appautoscaling/" title="appautoscaling"><span class="symbol module"></span>appautoscaling</a></li>
@@ -134,6 +135,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="ssoadmin/" title="ssoadmin"><span class="symbol module"></span>ssoadmin</a></li>
     <li><a href="storagegateway/" title="storagegateway"><span class="symbol module"></span>storagegateway</a></li>
     <li><a href="swf/" title="swf"><span class="symbol module"></span>swf</a></li>
+    <li><a href="synthetics/" title="synthetics"><span class="symbol module"></span>synthetics</a></li>
     <li><a href="transfer/" title="transfer"><span class="symbol module"></span>transfer</a></li>
     <li><a href="waf/" title="waf"><span class="symbol module"></span>waf</a></li>
     <li><a href="wafregional/" title="wafregional"><span class="symbol module"></span>wafregional</a></li>
@@ -176,24 +178,6 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.25.1</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.html" title="Pulumi.Aws">Pulumi.Aws</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#" title="aws">aws</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aws/#" title="@pulumi/aws">@pulumi/aws</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aws" title="pulumi_aws">pulumi_aws</a></dd>
-
+	<dd>3.30.1</dd>
 </dl>
 

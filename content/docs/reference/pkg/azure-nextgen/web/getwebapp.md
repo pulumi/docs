@@ -1,8 +1,8 @@
 
 ---
-title: "GetWebApp"
-title_tag: "Function GetWebApp | Module web | Package Azure NextGen"
-meta_desc: "Explore the GetWebApp function of the web module, including examples, input properties, output properties, and supporting types. "
+title: "getWebApp"
+title_tag: "azure-nextgen.web.getWebApp"
+meta_desc: "Documentation for the azure-nextgen.web.getWebApp function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetWebApp function of the web module, including examples
 
 
 
-## Using GetWebApp {#using}
+## Using getWebApp {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWebApp<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWebAppArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetWebAppResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWebApp<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWebAppArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetWebAppResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetWebApp function of the web module, including examples
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWebApp<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWebAppArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupWebAppResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWebApp<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWebAppArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupWebAppResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupWebApp` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetWebApp function of the web module, including examples
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetWebApp </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetWebAppResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetWebAppArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetWebAppResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetWebAppArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetWebApp Result {#result}
+## getWebApp Result {#result}
 
 The following output properties are available:
 
@@ -1870,9 +1870,6 @@ http requests{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1937,9 +1934,6 @@ http requests{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2001,9 +1995,6 @@ http requests{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="autohealactionsresponse">Auto<wbr>Heal<wbr>Actions<wbr>Response</h4>
-
-
-
 
 
 
@@ -2147,9 +2138,6 @@ before taking the action{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2250,9 +2238,6 @@ before taking the action{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2350,9 +2335,6 @@ before taking the action{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="autohealtriggersresponse">Auto<wbr>Heal<wbr>Triggers<wbr>Response</h4>
-
-
-
 
 
 
@@ -2525,9 +2507,6 @@ before taking the action{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="cloninginforesponse">Cloning<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 
@@ -2975,9 +2954,6 @@ together to use the same snapshot.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3114,9 +3090,6 @@ together to use the same snapshot.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3229,9 +3202,6 @@ for more details.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3293,9 +3263,6 @@ for more details.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="handlermappingresponse">Handler<wbr>Mapping<wbr>Response</h4>
-
-
-
 
 
 
@@ -3432,9 +3399,6 @@ for more details.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="hostnamesslstateresponse">Host<wbr>Name<wbr>Ssl<wbr>State<wbr>Response</h4>
-
-
-
 
 
 
@@ -3682,9 +3646,6 @@ for more details.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3818,9 +3779,6 @@ for more details.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="ipsecurityrestrictionresponse">Ip<wbr>Security<wbr>Restriction<wbr>Response</h4>
-
-
-
 
 
 
@@ -4320,9 +4278,6 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4495,9 +4450,6 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4598,9 +4550,6 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4698,9 +4647,6 @@ SubnetMask property must not be specified.{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="pushsettingsresponse">Push<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -5068,9 +5014,6 @@ Validation should be performed at the PushRequestHandler.{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5399,9 +5342,6 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5499,9 +5439,6 @@ can be provided in TiPCallback site extension which URL can be specified in <cod
 {{% /choosable %}}
 
 <h4 id="siteconfigresponse">Site<wbr>Config<wbr>Response</h4>
-
-
-
 
 
 
@@ -7625,9 +7562,6 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7761,9 +7695,6 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="sitemachinekeyresponse">Site<wbr>Machine<wbr>Key<wbr>Response</h4>
-
-
-
 
 
 
@@ -7939,9 +7870,6 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8078,9 +8006,6 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8214,9 +8139,6 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="statuscodesbasedtriggerresponse">Status<wbr>Codes<wbr>Based<wbr>Trigger<wbr>Response</h4>
-
-
-
 
 
 
@@ -8428,9 +8350,6 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8469,7 +8388,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
@@ -8529,7 +8448,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
@@ -8589,7 +8508,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
@@ -8649,7 +8568,7 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
@@ -8672,9 +8591,6 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="virtualapplicationresponse">Virtual<wbr>Application<wbr>Response</h4>
-
-
-
 
 
 
@@ -8847,9 +8763,6 @@ This setting only applies to the Consumption and Elastic Plans{{% /md %}}</dd>
 {{% /choosable %}}
 
 <h4 id="virtualdirectoryresponse">Virtual<wbr>Directory<wbr>Response</h4>
-
-
-
 
 
 

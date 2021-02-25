@@ -1,8 +1,8 @@
 
 ---
-title: "GetAlertRule"
-title_tag: "Function GetAlertRule | Module insights | Package Azure NextGen"
-meta_desc: "Explore the GetAlertRule function of the insights module, including examples, input properties, output properties, and supporting types. "
+title: "getAlertRule"
+title_tag: "azure-nextgen.insights.getAlertRule"
+meta_desc: "Documentation for the azure-nextgen.insights.getAlertRule function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetAlertRule function of the insights module, including 
 
 
 
-## Using GetAlertRule {#using}
+## Using getAlertRule {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAlertRule<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAlertRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetAlertRuleResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAlertRule<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAlertRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAlertRuleResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetAlertRule function of the insights module, including 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAlertRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAlertRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupAlertRuleResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAlertRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAlertRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAlertRuleResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupAlertRule` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetAlertRule function of the insights module, including 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAlertRule </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetAlertRuleResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetAlertRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAlertRuleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAlertRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetAlertRule Result {#result}
+## getAlertRule Result {#result}
 
 The following output properties are available:
 
@@ -220,6 +220,15 @@ The following output properties are available:
     <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ruleemailactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Rule<wbr>Email<wbr>Action<wbr>Response</a> | <a href="#rulewebhookactionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Outputs.<wbr>Rule<wbr>Webhook<wbr>Action<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}action that is performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="actions_csharp">
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
@@ -236,6 +245,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the description of the alert rule that will be included in the alert email.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the provisioning state.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_csharp">
@@ -316,6 +334,15 @@ The following output properties are available:
     <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ruleemailactionresponse">Rule<wbr>Email<wbr>Action<wbr>Response</a> | <a href="#rulewebhookactionresponse">Rule<wbr>Webhook<wbr>Action<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}action that is performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="actions_go">
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
@@ -332,6 +359,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the description of the alert rule that will be included in the alert email.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the provisioning state.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_go">
@@ -412,6 +448,15 @@ The following output properties are available:
     <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ruleemailactionresponse">Rule<wbr>Email<wbr>Action<wbr>Response</a> | <a href="#rulewebhookactionresponse">Rule<wbr>Webhook<wbr>Action<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}action that is performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="actions_nodejs">
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
@@ -428,6 +473,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the description of the alert rule that will be included in the alert email.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the provisioning state.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
@@ -508,6 +562,15 @@ The following output properties are available:
     <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ruleemailactionresponse">Rule<wbr>Email<wbr>Action<wbr>Response</a> | <a href="#rulewebhookactionresponse">Rule<wbr>Webhook<wbr>Action<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}action that is performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="actions_python">
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
@@ -524,6 +587,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the description of the alert rule that will be included in the alert email.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}the provisioning state.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_python">
@@ -543,9 +615,6 @@ The following output properties are available:
 
 
 <h4 id="locationthresholdruleconditionresponse">Location<wbr>Threshold<wbr>Rule<wbr>Condition<wbr>Response</h4>
-
-
-
 
 
 
@@ -685,9 +754,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -824,9 +890,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -924,9 +987,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="ruleemailactionresponse">Rule<wbr>Email<wbr>Action<wbr>Response</h4>
-
-
-
 
 
 
@@ -1030,9 +1090,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1097,9 +1154,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1132,6 +1186,15 @@ The following output properties are available:
     <dd>{{% md %}}the event source.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="legacyresourceid_csharp">
+<a href="#legacyresourceid_csharp" style="color: inherit; text-decoration: inherit;">Legacy<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="level_csharp">
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
@@ -1139,6 +1202,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the level.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricnamespace_csharp">
+<a href="#metricnamespace_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operationname_csharp">
@@ -1157,6 +1229,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the resource group name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcelocation_csharp">
+<a href="#resourcelocation_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resourceprovidername_csharp">
@@ -1228,6 +1309,15 @@ The following output properties are available:
     <dd>{{% md %}}the event source.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="legacyresourceid_go">
+<a href="#legacyresourceid_go" style="color: inherit; text-decoration: inherit;">Legacy<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="level_go">
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
 </span>
@@ -1235,6 +1325,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the level.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricnamespace_go">
+<a href="#metricnamespace_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operationname_go">
@@ -1253,6 +1352,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the resource group name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcelocation_go">
+<a href="#resourcelocation_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resourceprovidername_go">
@@ -1324,6 +1432,15 @@ The following output properties are available:
     <dd>{{% md %}}the event source.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="legacyresourceid_nodejs">
+<a href="#legacyresourceid_nodejs" style="color: inherit; text-decoration: inherit;">legacy<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="level_nodejs">
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
@@ -1331,6 +1448,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the level.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricnamespace_nodejs">
+<a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operationname_nodejs">
@@ -1349,6 +1475,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the resource group name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcelocation_nodejs">
+<a href="#resourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resourceprovidername_nodejs">
@@ -1420,6 +1555,15 @@ The following output properties are available:
     <dd>{{% md %}}the event source.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="legacy_resource_id_python">
+<a href="#legacy_resource_id_python" style="color: inherit; text-decoration: inherit;">legacy_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="level_python">
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
 </span>
@@ -1427,6 +1571,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the level.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metric_namespace_python">
+<a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operation_name_python">
@@ -1445,6 +1598,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the resource group name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_location_python">
+<a href="#resource_location_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resource_provider_name_python">
@@ -1488,12 +1650,18 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="legacyresourceid_csharp">
+<a href="#legacyresourceid_csharp" style="color: inherit; text-decoration: inherit;">Legacy<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="metricname_csharp">
@@ -1503,6 +1671,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricnamespace_csharp">
+<a href="#metricnamespace_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcelocation_csharp">
+<a href="#resourcelocation_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resourceuri_csharp">
@@ -1520,6 +1706,15 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="legacyresourceid_go">
+<a href="#legacyresourceid_go" style="color: inherit; text-decoration: inherit;">Legacy<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
 </span>
@@ -1527,6 +1722,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricnamespace_go">
+<a href="#metricnamespace_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcelocation_go">
+<a href="#resourcelocation_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resourceuri_go">
@@ -1544,6 +1757,15 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="legacyresourceid_nodejs">
+<a href="#legacyresourceid_nodejs" style="color: inherit; text-decoration: inherit;">legacy<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
 </span>
@@ -1551,6 +1773,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricnamespace_nodejs">
+<a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcelocation_nodejs">
+<a href="#resourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resourceuri_nodejs">
@@ -1568,6 +1808,15 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="legacy_resource_id_python">
+<a href="#legacy_resource_id_python" style="color: inherit; text-decoration: inherit;">legacy_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="metric_name_python">
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
 </span>
@@ -1575,6 +1824,24 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metric_namespace_python">
+<a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_location_python">
+<a href="#resource_location_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resource_uri_python">
@@ -1588,9 +1855,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="rulewebhookactionresponse">Rule<wbr>Webhook<wbr>Action<wbr>Response</h4>
-
-
-
 
 
 
@@ -1691,9 +1955,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="thresholdruleconditionresponse">Threshold<wbr>Rule<wbr>Condition<wbr>Response</h4>
-
-
-
 
 
 

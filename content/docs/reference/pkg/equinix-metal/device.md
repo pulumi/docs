@@ -1,8 +1,8 @@
 
 ---
 title: "Device"
-title_tag: "Resource Device | Package equinix-metal"
-meta_desc: "Explore the Device resource of the equinix-metal package, including examples, input properties, output properties, lookup functions, and supporting types. Provides an Equinix Metal device resource. This can be used to create,"
+title_tag: "equinix-metal.Device"
+meta_desc: "Documentation for the equinix-metal.Device resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -124,19 +124,19 @@ const web1 = new equinix_metal.Device("web1", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/equinix-metal/#Device">Device</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/equinix-metal/#DeviceArgs">DeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Device</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_equinix-metal/#pulumi_equinix-metal.Device">Device</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">always_pxe</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">billing_cycle</span><span class="p">:</span> <span class="nx">Optional[Union[str, BillingCycle]]</span> = None<span class="p">, </span><span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, Facility]]]</span> = None<span class="p">, </span><span class="nx">force_detach_volumes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hardware_reservation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceIpAddressArgs]]</span> = None<span class="p">, </span><span class="nx">ipxe_script_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[Union[str, OperatingSystem]]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Union[str, Plan]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_ssh_key_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">storage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_reservation_deprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Device</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">always_pxe</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">billing_cycle</span><span class="p">:</span> <span class="nx">Optional[Union[str, BillingCycle]]</span> = None<span class="p">, </span><span class="nx">custom_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">facilities</span><span class="p">:</span> <span class="nx">Optional[Sequence[Union[str, Facility]]]</span> = None<span class="p">, </span><span class="nx">force_detach_volumes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hardware_reservation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DeviceIpAddressArgs]]</span> = None<span class="p">, </span><span class="nx">ipxe_script_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operating_system</span><span class="p">:</span> <span class="nx">Optional[Union[str, OperatingSystem]]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[Union[str, Plan]]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_ssh_key_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">storage</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_reservation_deprovision</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix/?tab=doc#Device">NewDevice</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix/?tab=doc#DeviceArgs">DeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix/?tab=doc#Device">Device</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDevice</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Device</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.EquinixMetal/Pulumi.EquinixMetal.Device.html">Device</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.EquinixMetal/Pulumi.EquinixMetal.DeviceArgs.html">DeviceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Device</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DeviceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -157,7 +157,7 @@ const web1 = new equinix_metal.Device("web1", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/equinix-metal/#DeviceArgs">DeviceArgs</a></span>
+        <span class="property-type"><a href="#inputs">DeviceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -226,7 +226,7 @@ const web1 = new equinix_metal.Device("web1", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix/?tab=doc#DeviceArgs">DeviceArgs</a></span>
+        <span class="property-type"><a href="#inputs">DeviceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -265,7 +265,7 @@ const web1 = new equinix_metal.Device("web1", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.EquinixMetal/Pulumi.EquinixMetal.DeviceArgs.html">DeviceArgs</a></span>
+        <span class="property-type"><a href="#inputs">DeviceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -288,11 +288,11 @@ const web1 = new equinix_metal.Device("web1", {
 
 ## Device Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Device resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Device resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1707,7 +1707,7 @@ Get an existing Device resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/equinix-metal/#DeviceState">DeviceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/equinix-metal/#Device">Device</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DeviceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Device</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1716,11 +1716,11 @@ Get an existing Device resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDevice<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix/?tab=doc#DeviceState">DeviceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix/?tab=doc#Device">Device</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDevice<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DeviceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Device</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.EquinixMetal/Pulumi.EquinixMetal.Device.html">Device</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.EquinixMetal/Pulumi.EquinixMetal..DeviceState.html">DeviceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Device</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DeviceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3206,18 +3206,6 @@ The fields of the network attributes are:
 {{% /choosable %}}
 
 <h4 id="deviceipaddress">Device<wbr>Ip<wbr>Address</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/equinix-metal/types/input/#DeviceIpAddress">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/equinix-metal/types/output/#DeviceIpAddress">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix/?tab=doc#DeviceIpAddressArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix/?tab=doc#DeviceIpAddressOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.EquinixMetal/Pulumi.EquinixMetal.Inputs.DeviceIpAddressArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.EquinixMetal/Pulumi.EquinixMetal.Outputs.DeviceIpAddress.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3364,18 +3352,6 @@ The fields of the network attributes are:
 {{% /choosable %}}
 
 <h4 id="devicenetwork">Device<wbr>Network</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/equinix-metal/types/output/#DeviceNetwork">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix/?tab=doc#DeviceNetworkOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.EquinixMetal/Pulumi.EquinixMetal.Outputs.DeviceNetwork.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3606,18 +3582,6 @@ The fields of the network attributes are:
 {{% /choosable %}}
 
 <h4 id="deviceport">Device<wbr>Port</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/equinix-metal/types/output/#DevicePort">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix/?tab=doc#DevicePortOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.EquinixMetal/Pulumi.EquinixMetal.Outputs.DevicePort.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3885,6 +3849,24 @@ The fields of the network attributes are:
     <dd>yyz1</dd>
     <dt>FRA2</dt>
     <dd>fra2</dd>
+    <dt>AM6</dt>
+    <dd>am6</dd>
+    <dt>DC13</dt>
+    <dd>dc13</dd>
+    <dt>CH3</dt>
+    <dd>ch3</dd>
+    <dt>DA3</dt>
+    <dd>da3</dd>
+    <dt>DA11</dt>
+    <dd>da11</dd>
+    <dt>LA4</dt>
+    <dd>la4</dd>
+    <dt>NY5</dt>
+    <dd>ny5</dd>
+    <dt>SG1</dt>
+    <dd>sg1</dd>
+    <dt>SV15</dt>
+    <dd>sv15</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3924,6 +3906,24 @@ The fields of the network attributes are:
     <dd>yyz1</dd>
     <dt>Facility<wbr>FRA2</dt>
     <dd>fra2</dd>
+    <dt>Facility<wbr>AM6</dt>
+    <dd>am6</dd>
+    <dt>Facility<wbr>DC13</dt>
+    <dd>dc13</dd>
+    <dt>Facility<wbr>CH3</dt>
+    <dd>ch3</dd>
+    <dt>Facility<wbr>DA3</dt>
+    <dd>da3</dd>
+    <dt>Facility<wbr>DA11</dt>
+    <dd>da11</dd>
+    <dt>Facility<wbr>LA4</dt>
+    <dd>la4</dd>
+    <dt>Facility<wbr>NY5</dt>
+    <dd>ny5</dd>
+    <dt>Facility<wbr>SG1</dt>
+    <dd>sg1</dd>
+    <dt>Facility<wbr>SV15</dt>
+    <dd>sv15</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3963,6 +3963,24 @@ The fields of the network attributes are:
     <dd>yyz1</dd>
     <dt>FRA2</dt>
     <dd>fra2</dd>
+    <dt>AM6</dt>
+    <dd>am6</dd>
+    <dt>DC13</dt>
+    <dd>dc13</dd>
+    <dt>CH3</dt>
+    <dd>ch3</dd>
+    <dt>DA3</dt>
+    <dd>da3</dd>
+    <dt>DA11</dt>
+    <dd>da11</dd>
+    <dt>LA4</dt>
+    <dd>la4</dd>
+    <dt>NY5</dt>
+    <dd>ny5</dd>
+    <dt>SG1</dt>
+    <dd>sg1</dd>
+    <dt>SV15</dt>
+    <dd>sv15</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4002,6 +4020,24 @@ The fields of the network attributes are:
     <dd>yyz1</dd>
     <dt>FRA2</dt>
     <dd>fra2</dd>
+    <dt>AM6</dt>
+    <dd>am6</dd>
+    <dt>DC13</dt>
+    <dd>dc13</dd>
+    <dt>CH3</dt>
+    <dd>ch3</dd>
+    <dt>DA3</dt>
+    <dd>da3</dd>
+    <dt>DA11</dt>
+    <dd>da11</dd>
+    <dt>LA4</dt>
+    <dd>la4</dd>
+    <dt>NY5</dt>
+    <dd>ny5</dd>
+    <dt>SG1</dt>
+    <dd>sg1</dd>
+    <dt>SV15</dt>
+    <dd>sv15</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4015,6 +4051,8 @@ The fields of the network attributes are:
     <dd>centos_6</dd>
     <dt>Cent<wbr>OS7</dt>
     <dd>centos_7</dd>
+    <dt>Cent<wbr>OS8</dt>
+    <dd>centos_8</dd>
     <dt>Core<wbr>OSAlpha</dt>
     <dd>coreos_alpha</dd>
     <dt>Core<wbr>OSBeta</dt>
@@ -4027,6 +4065,16 @@ The fields of the network attributes are:
     <dd>debian_8</dd>
     <dt>Debian9</dt>
     <dd>debian_9</dd>
+    <dt>Debian10</dt>
+    <dd>debian_10</dd>
+    <dt>Flatcar<wbr>Alpha</dt>
+    <dd>flatcar_alpha</dd>
+    <dt>Flatcar<wbr>Beta</dt>
+    <dd>flatcar_beta</dd>
+    <dt>Flatcar<wbr>Edge</dt>
+    <dd>flatcar_edge</dd>
+    <dt>Flatcar<wbr>Stable</dt>
+    <dd>flatcar_stable</dd>
     <dt>Free<wbr>BSD10_4</dt>
     <dd>freebsd_10_4</dd>
     <dt>Free<wbr>BSD11_1</dt>
@@ -4045,6 +4093,8 @@ The fields of the network attributes are:
     <dd>rancher</dd>
     <dt>RHEL7</dt>
     <dd>rhel_7</dd>
+    <dt>RHEL8</dt>
+    <dd>rhel_8</dd>
     <dt>Scientific<wbr>Linux6</dt>
     <dd>scientific_6</dd>
     <dt>SLES12SP3</dt>
@@ -4057,12 +4107,22 @@ The fields of the network attributes are:
     <dd>ubuntu_17_10</dd>
     <dt>Ubuntu1804</dt>
     <dd>ubuntu_18_04</dd>
+    <dt>Ubuntu2004</dt>
+    <dd>ubuntu_20_04</dd>
+    <dt>Ubuntu2010</dt>
+    <dd>ubuntu_20_10</dd>
     <dt>VMWare<wbr>Esxi6_5</dt>
     <dd>vmware_esxi_6_5</dd>
+    <dt>VMWare<wbr>Esxi6_7</dt>
+    <dd>vmware_esxi_6_7</dd>
+    <dt>VMWare<wbr>Esxi7_0</dt>
+    <dd>vmware_esxi_7_0</dd>
     <dt>Windows2012R2</dt>
     <dd>windows_2012_r2</dd>
     <dt>Windows2016</dt>
     <dd>windows_2016</dd>
+    <dt>Windows2019</dt>
+    <dd>windows_2019</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4074,6 +4134,8 @@ The fields of the network attributes are:
     <dd>centos_6</dd>
     <dt>Operating<wbr>System<wbr>Cent<wbr>OS7</dt>
     <dd>centos_7</dd>
+    <dt>Operating<wbr>System<wbr>Cent<wbr>OS8</dt>
+    <dd>centos_8</dd>
     <dt>Operating<wbr>System<wbr>Core<wbr>OSAlpha</dt>
     <dd>coreos_alpha</dd>
     <dt>Operating<wbr>System<wbr>Core<wbr>OSBeta</dt>
@@ -4086,6 +4148,16 @@ The fields of the network attributes are:
     <dd>debian_8</dd>
     <dt>Operating<wbr>System<wbr>Debian9</dt>
     <dd>debian_9</dd>
+    <dt>Operating<wbr>System<wbr>Debian10</dt>
+    <dd>debian_10</dd>
+    <dt>Operating<wbr>System<wbr>Flatcar<wbr>Alpha</dt>
+    <dd>flatcar_alpha</dd>
+    <dt>Operating<wbr>System<wbr>Flatcar<wbr>Beta</dt>
+    <dd>flatcar_beta</dd>
+    <dt>Operating<wbr>System<wbr>Flatcar<wbr>Edge</dt>
+    <dd>flatcar_edge</dd>
+    <dt>Operating<wbr>System<wbr>Flatcar<wbr>Stable</dt>
+    <dd>flatcar_stable</dd>
     <dt>Operating<wbr>System_Free<wbr>BSD10_4</dt>
     <dd>freebsd_10_4</dd>
     <dt>Operating<wbr>System_Free<wbr>BSD11_1</dt>
@@ -4104,6 +4176,8 @@ The fields of the network attributes are:
     <dd>rancher</dd>
     <dt>Operating<wbr>System<wbr>RHEL7</dt>
     <dd>rhel_7</dd>
+    <dt>Operating<wbr>System<wbr>RHEL8</dt>
+    <dd>rhel_8</dd>
     <dt>Operating<wbr>System<wbr>Scientific<wbr>Linux6</dt>
     <dd>scientific_6</dd>
     <dt>Operating<wbr>System<wbr>SLES12SP3</dt>
@@ -4116,12 +4190,22 @@ The fields of the network attributes are:
     <dd>ubuntu_17_10</dd>
     <dt>Operating<wbr>System<wbr>Ubuntu1804</dt>
     <dd>ubuntu_18_04</dd>
+    <dt>Operating<wbr>System<wbr>Ubuntu2004</dt>
+    <dd>ubuntu_20_04</dd>
+    <dt>Operating<wbr>System<wbr>Ubuntu2010</dt>
+    <dd>ubuntu_20_10</dd>
     <dt>Operating<wbr>System_VMWare<wbr>Esxi6_5</dt>
     <dd>vmware_esxi_6_5</dd>
+    <dt>Operating<wbr>System_VMWare<wbr>Esxi6_7</dt>
+    <dd>vmware_esxi_6_7</dd>
+    <dt>Operating<wbr>System_VMWare<wbr>Esxi7_0</dt>
+    <dd>vmware_esxi_7_0</dd>
     <dt>Operating<wbr>System<wbr>Windows2012R2</dt>
     <dd>windows_2012_r2</dd>
     <dt>Operating<wbr>System<wbr>Windows2016</dt>
     <dd>windows_2016</dd>
+    <dt>Operating<wbr>System<wbr>Windows2019</dt>
+    <dd>windows_2019</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4133,6 +4217,8 @@ The fields of the network attributes are:
     <dd>centos_6</dd>
     <dt>Cent<wbr>OS7</dt>
     <dd>centos_7</dd>
+    <dt>Cent<wbr>OS8</dt>
+    <dd>centos_8</dd>
     <dt>Core<wbr>OSAlpha</dt>
     <dd>coreos_alpha</dd>
     <dt>Core<wbr>OSBeta</dt>
@@ -4145,6 +4231,16 @@ The fields of the network attributes are:
     <dd>debian_8</dd>
     <dt>Debian9</dt>
     <dd>debian_9</dd>
+    <dt>Debian10</dt>
+    <dd>debian_10</dd>
+    <dt>Flatcar<wbr>Alpha</dt>
+    <dd>flatcar_alpha</dd>
+    <dt>Flatcar<wbr>Beta</dt>
+    <dd>flatcar_beta</dd>
+    <dt>Flatcar<wbr>Edge</dt>
+    <dd>flatcar_edge</dd>
+    <dt>Flatcar<wbr>Stable</dt>
+    <dd>flatcar_stable</dd>
     <dt>Free<wbr>BSD10_4</dt>
     <dd>freebsd_10_4</dd>
     <dt>Free<wbr>BSD11_1</dt>
@@ -4163,6 +4259,8 @@ The fields of the network attributes are:
     <dd>rancher</dd>
     <dt>RHEL7</dt>
     <dd>rhel_7</dd>
+    <dt>RHEL8</dt>
+    <dd>rhel_8</dd>
     <dt>Scientific<wbr>Linux6</dt>
     <dd>scientific_6</dd>
     <dt>SLES12SP3</dt>
@@ -4175,12 +4273,22 @@ The fields of the network attributes are:
     <dd>ubuntu_17_10</dd>
     <dt>Ubuntu1804</dt>
     <dd>ubuntu_18_04</dd>
+    <dt>Ubuntu2004</dt>
+    <dd>ubuntu_20_04</dd>
+    <dt>Ubuntu2010</dt>
+    <dd>ubuntu_20_10</dd>
     <dt>VMWare<wbr>Esxi6_5</dt>
     <dd>vmware_esxi_6_5</dd>
+    <dt>VMWare<wbr>Esxi6_7</dt>
+    <dd>vmware_esxi_6_7</dd>
+    <dt>VMWare<wbr>Esxi7_0</dt>
+    <dd>vmware_esxi_7_0</dd>
     <dt>Windows2012R2</dt>
     <dd>windows_2012_r2</dd>
     <dt>Windows2016</dt>
     <dd>windows_2016</dd>
+    <dt>Windows2019</dt>
+    <dd>windows_2019</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4192,6 +4300,8 @@ The fields of the network attributes are:
     <dd>centos_6</dd>
     <dt>CENT_OS7</dt>
     <dd>centos_7</dd>
+    <dt>CENT_OS8</dt>
+    <dd>centos_8</dd>
     <dt>CORE_OS_ALPHA</dt>
     <dd>coreos_alpha</dd>
     <dt>CORE_OS_BETA</dt>
@@ -4204,6 +4314,16 @@ The fields of the network attributes are:
     <dd>debian_8</dd>
     <dt>DEBIAN9</dt>
     <dd>debian_9</dd>
+    <dt>DEBIAN10</dt>
+    <dd>debian_10</dd>
+    <dt>FLATCAR_ALPHA</dt>
+    <dd>flatcar_alpha</dd>
+    <dt>FLATCAR_BETA</dt>
+    <dd>flatcar_beta</dd>
+    <dt>FLATCAR_EDGE</dt>
+    <dd>flatcar_edge</dd>
+    <dt>FLATCAR_STABLE</dt>
+    <dd>flatcar_stable</dd>
     <dt>FREE_BSD10_4</dt>
     <dd>freebsd_10_4</dd>
     <dt>FREE_BSD11_1</dt>
@@ -4222,6 +4342,8 @@ The fields of the network attributes are:
     <dd>rancher</dd>
     <dt>RHEL7</dt>
     <dd>rhel_7</dd>
+    <dt>RHEL8</dt>
+    <dd>rhel_8</dd>
     <dt>SCIENTIFIC_LINUX6</dt>
     <dd>scientific_6</dd>
     <dt>SLES12_SP3</dt>
@@ -4234,12 +4356,22 @@ The fields of the network attributes are:
     <dd>ubuntu_17_10</dd>
     <dt>UBUNTU1804</dt>
     <dd>ubuntu_18_04</dd>
+    <dt>UBUNTU2004</dt>
+    <dd>ubuntu_20_04</dd>
+    <dt>UBUNTU2010</dt>
+    <dd>ubuntu_20_10</dd>
     <dt>VM_WARE_ESXI6_5</dt>
     <dd>vmware_esxi_6_5</dd>
+    <dt>VM_WARE_ESXI6_7</dt>
+    <dd>vmware_esxi_6_7</dd>
+    <dt>VM_WARE_ESXI7_0</dt>
+    <dd>vmware_esxi_7_0</dd>
     <dt>WINDOWS2012_R2</dt>
     <dd>windows_2012_r2</dd>
     <dt>WINDOWS2016</dt>
     <dd>windows_2016</dd>
+    <dt>WINDOWS2019</dt>
+    <dd>windows_2019</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4271,6 +4403,20 @@ The fields of the network attributes are:
     <dd>baremetal_0</dd>
     <dt>S1Large<wbr>X86</dt>
     <dd>baremetal_s</dd>
+    <dt>C3Small<wbr>X86</dt>
+    <dd>c3.small.x86</dd>
+    <dt>C3Medium<wbr>X86</dt>
+    <dd>c3.medium.x86</dd>
+    <dt>F3Medium<wbr>X86</dt>
+    <dd>f3.medium.x86</dd>
+    <dt>F3Large<wbr>X86</dt>
+    <dd>f3.large.x86</dd>
+    <dt>M3Large<wbr>X86</dt>
+    <dd>m3.large.x86</dd>
+    <dt>S3XLarge<wbr>X86</dt>
+    <dd>s3.xlarge.x86</dd>
+    <dt>N2XLarge<wbr>X86</dt>
+    <dd>n2.xlarge.x86</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4300,6 +4446,20 @@ The fields of the network attributes are:
     <dd>baremetal_0</dd>
     <dt>Plan<wbr>S1Large<wbr>X86</dt>
     <dd>baremetal_s</dd>
+    <dt>Plan<wbr>C3Small<wbr>X86</dt>
+    <dd>c3.small.x86</dd>
+    <dt>Plan<wbr>C3Medium<wbr>X86</dt>
+    <dd>c3.medium.x86</dd>
+    <dt>Plan<wbr>F3Medium<wbr>X86</dt>
+    <dd>f3.medium.x86</dd>
+    <dt>Plan<wbr>F3Large<wbr>X86</dt>
+    <dd>f3.large.x86</dd>
+    <dt>Plan<wbr>M3Large<wbr>X86</dt>
+    <dd>m3.large.x86</dd>
+    <dt>Plan<wbr>S3XLarge<wbr>X86</dt>
+    <dd>s3.xlarge.x86</dd>
+    <dt>Plan<wbr>N2XLarge<wbr>X86</dt>
+    <dd>n2.xlarge.x86</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4329,6 +4489,20 @@ The fields of the network attributes are:
     <dd>baremetal_0</dd>
     <dt>S1Large<wbr>X86</dt>
     <dd>baremetal_s</dd>
+    <dt>C3Small<wbr>X86</dt>
+    <dd>c3.small.x86</dd>
+    <dt>C3Medium<wbr>X86</dt>
+    <dd>c3.medium.x86</dd>
+    <dt>F3Medium<wbr>X86</dt>
+    <dd>f3.medium.x86</dd>
+    <dt>F3Large<wbr>X86</dt>
+    <dd>f3.large.x86</dd>
+    <dt>M3Large<wbr>X86</dt>
+    <dd>m3.large.x86</dd>
+    <dt>S3XLarge<wbr>X86</dt>
+    <dd>s3.xlarge.x86</dd>
+    <dt>N2XLarge<wbr>X86</dt>
+    <dd>n2.xlarge.x86</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4358,6 +4532,20 @@ The fields of the network attributes are:
     <dd>baremetal_0</dd>
     <dt>S1_LARGE_X86</dt>
     <dd>baremetal_s</dd>
+    <dt>C3_SMALL_X86</dt>
+    <dd>c3.small.x86</dd>
+    <dt>C3_MEDIUM_X86</dt>
+    <dd>c3.medium.x86</dd>
+    <dt>F3_MEDIUM_X86</dt>
+    <dd>f3.medium.x86</dd>
+    <dt>F3_LARGE_X86</dt>
+    <dd>f3.large.x86</dd>
+    <dt>M3_LARGE_X86</dt>
+    <dd>m3.large.x86</dd>
+    <dt>S3_X_LARGE_X86</dt>
+    <dd>s3.xlarge.x86</dd>
+    <dt>N2_X_LARGE_X86</dt>
+    <dd>n2.xlarge.x86</dd>
 </dl>
 {{% /choosable %}}
 

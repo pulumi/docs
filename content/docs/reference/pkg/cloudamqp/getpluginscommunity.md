@@ -1,8 +1,8 @@
 
 ---
-title: "GetPluginsCommunity"
-title_tag: "Function GetPluginsCommunity | Package CloudAMQP"
-meta_desc: "Explore the GetPluginsCommunity function of the CloudAMQP package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about available community plugins for the CloudAMQP instance."
+title: "getPluginsCommunity"
+title_tag: "cloudamqp.getPluginsCommunity"
+meta_desc: "Documentation for the cloudamqp.getPluginsCommunity function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -107,13 +107,13 @@ const communitPlugins = cloudamqp.getPluginsCommunity({
 {{% /examples %}}
 
 
-## Using GetPluginsCommunity {#using}
+## Using getPluginsCommunity {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPluginsCommunity<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudamqp/#GetPluginsCommunityArgs">GetPluginsCommunityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudamqp/#GetPluginsCommunityResult">GetPluginsCommunityResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPluginsCommunity<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPluginsCommunityArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPluginsCommunityResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -123,14 +123,16 @@ const communitPlugins = cloudamqp.getPluginsCommunity({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPluginsCommunity<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/v2/go/cloudamqp/?tab=doc#GetPluginsCommunityArgs">GetPluginsCommunityArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/v2/go/cloudamqp/?tab=doc#GetPluginsCommunityResult">GetPluginsCommunityResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPluginsCommunity<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetPluginsCommunityArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetPluginsCommunityResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetPluginsCommunity` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPluginsCommunity </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.CloudAmqp/Pulumi.CloudAmqp.GetPluginsCommunityResult.html">GetPluginsCommunityResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.CloudAmqp/Pulumi.CloudAmqp.GetPluginsCommunityArgs.html">GetPluginsCommunityArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPluginsCommunityResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPluginsCommunityArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -238,7 +240,7 @@ The following arguments are supported:
 
 
 
-## GetPluginsCommunity Result {#result}
+## getPluginsCommunity Result {#result}
 
 The following output properties are available:
 
@@ -387,16 +389,6 @@ The following output properties are available:
 
 
 <h4 id="getpluginscommunityplugin">Get<wbr>Plugins<wbr>Community<wbr>Plugin</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudamqp/types/input/#GetPluginsCommunityPlugin">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudamqp/types/output/#GetPluginsCommunityPlugin">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/v2/go/cloudamqp/?tab=doc#GetPluginsCommunityPluginArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/v2/go/cloudamqp/?tab=doc#GetPluginsCommunityPlugin">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.CloudAmqp/Pulumi.CloudAmqp.Inputs.GetPluginsCommunityPluginArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.CloudAmqp/Pulumi.CloudAmqp.Outputs.GetPluginsCommunityPlugin.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

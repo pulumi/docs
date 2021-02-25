@@ -1,8 +1,8 @@
 
 ---
-title: "GetGroup"
-title_tag: "Function GetGroup | Package Azure AD"
-meta_desc: "Explore the GetGroup function of the Azure AD package, including examples, input properties, output properties, and supporting types. Gets information about an Azure Active Directory group."
+title: "getGroup"
+title_tag: "azuread.getGroup"
+meta_desc: "Documentation for the azuread.getGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -31,7 +31,8 @@ class MyStack : Stack
     {
         var example = Output.Create(AzureAD.GetGroup.InvokeAsync(new AzureAD.GetGroupArgs
         {
-            DisplayName = "A-AD-Group",
+            DisplayName = "MyGroupName",
+            SecurityEnabled = true,
         }));
     }
 
@@ -51,9 +52,11 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := "A-AD-Group"
+		opt0 := "MyGroupName"
+		opt1 := true
 		_, err := azuread.LookupGroup(ctx, &azuread.LookupGroupArgs{
-			DisplayName: &opt0,
+			DisplayName:     &opt0,
+			SecurityEnabled: &opt1,
 		}, nil)
 		if err != nil {
 			return err
@@ -70,7 +73,8 @@ func main() {
 import pulumi
 import pulumi_azuread as azuread
 
-example = azuread.get_group(display_name="A-AD-Group")
+example = azuread.get_group(display_name="MyGroupName",
+    security_enabled=True)
 ```
 
 {{% /example %}}
@@ -82,7 +86,8 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
 const example = pulumi.output(azuread.getGroup({
-    displayName: "A-AD-Group",
+    displayName: "MyGroupName",
+    securityEnabled: true,
 }, { async: true }));
 ```
 
@@ -91,23 +96,23 @@ const example = pulumi.output(azuread.getGroup({
 {{% /examples %}}
 
 
-## Using GetGroup {#using}
+## Using getGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#GetGroupArgs">GetGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#GetGroupResult">GetGroupResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetGroupResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_group(</span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGroupResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_group(</span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mail_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetGroupResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#LookupGroupArgs">LookupGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#LookupGroupResult">LookupGroupResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupGroupResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupGroup` in the Go SDK.
 
@@ -116,7 +121,7 @@ const example = pulumi.output(azuread.getGroup({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetGroup </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.GetGroupResult.html">GetGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.GetGroupArgs.html">GetGroupArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -136,7 +141,17 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The splay name of the Group within Azure Active Directory.
+    <dd>{{% md %}}The display name for the Group.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mailenabled_csharp">
+<a href="#mailenabled_csharp" style="color: inherit; text-decoration: inherit;">Mail<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is mail-enabled.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -155,7 +170,17 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Object ID of the Group within Azure Active Directory.
+    <dd>{{% md %}}Specifies the Object ID of the Group.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securityenabled_csharp">
+<a href="#securityenabled_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is a security group.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -171,7 +196,17 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The splay name of the Group within Azure Active Directory.
+    <dd>{{% md %}}The display name for the Group.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mailenabled_go">
+<a href="#mailenabled_go" style="color: inherit; text-decoration: inherit;">Mail<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is mail-enabled.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -190,7 +225,17 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Object ID of the Group within Azure Active Directory.
+    <dd>{{% md %}}Specifies the Object ID of the Group.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securityenabled_go">
+<a href="#securityenabled_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is a security group.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -206,7 +251,17 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The splay name of the Group within Azure Active Directory.
+    <dd>{{% md %}}The display name for the Group.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mailenabled_nodejs">
+<a href="#mailenabled_nodejs" style="color: inherit; text-decoration: inherit;">mail<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is mail-enabled.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -225,7 +280,17 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Object ID of the Group within Azure Active Directory.
+    <dd>{{% md %}}Specifies the Object ID of the Group.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securityenabled_nodejs">
+<a href="#securityenabled_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is a security group.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -241,7 +306,17 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The splay name of the Group within Azure Active Directory.
+    <dd>{{% md %}}The display name for the Group.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mail_enabled_python">
+<a href="#mail_enabled_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is mail-enabled.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -260,7 +335,17 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the Object ID of the Group within Azure Active Directory.
+    <dd>{{% md %}}Specifies the Object ID of the Group.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="security_enabled_python">
+<a href="#security_enabled_python" style="color: inherit; text-decoration: inherit;">security_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is a security group.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -268,7 +353,7 @@ The following arguments are supported:
 
 
 
-## GetGroup Result {#result}
+## getGroup Result {#result}
 
 The following output properties are available:
 
@@ -285,7 +370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the AD Group.
+    <dd>{{% md %}}The optional description of the Group.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -295,7 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure AD Group.
+    <dd>{{% md %}}The display name for the Group.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -309,13 +394,23 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="mailenabled_csharp">
+<a href="#mailenabled_csharp" style="color: inherit; text-decoration: inherit;">Mail<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is mail-enabled.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="members_csharp">
 <a href="#members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The Object IDs of the Azure AD Group members.
+    <dd>{{% md %}}The Object IDs of the Group members.
 {{% /md %}}</dd>
     <dt class="property- property-deprecated"
             title=", Deprecated">
@@ -343,7 +438,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The Object IDs of the Azure AD Group owners.
+    <dd>{{% md %}}The Object IDs of the Group owners.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="securityenabled_csharp">
+<a href="#securityenabled_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is a security group.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -359,7 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the AD Group.
+    <dd>{{% md %}}The optional description of the Group.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -369,7 +474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure AD Group.
+    <dd>{{% md %}}The display name for the Group.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -383,13 +488,23 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="mailenabled_go">
+<a href="#mailenabled_go" style="color: inherit; text-decoration: inherit;">Mail<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is mail-enabled.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="members_go">
 <a href="#members_go" style="color: inherit; text-decoration: inherit;">Members</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The Object IDs of the Azure AD Group members.
+    <dd>{{% md %}}The Object IDs of the Group members.
 {{% /md %}}</dd>
     <dt class="property- property-deprecated"
             title=", Deprecated">
@@ -417,7 +532,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The Object IDs of the Azure AD Group owners.
+    <dd>{{% md %}}The Object IDs of the Group owners.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="securityenabled_go">
+<a href="#securityenabled_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is a security group.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -433,7 +558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the AD Group.
+    <dd>{{% md %}}The optional description of the Group.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -443,7 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure AD Group.
+    <dd>{{% md %}}The display name for the Group.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -457,13 +582,23 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="mailenabled_nodejs">
+<a href="#mailenabled_nodejs" style="color: inherit; text-decoration: inherit;">mail<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is mail-enabled.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="members_nodejs">
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The Object IDs of the Azure AD Group members.
+    <dd>{{% md %}}The Object IDs of the Group members.
 {{% /md %}}</dd>
     <dt class="property- property-deprecated"
             title=", Deprecated">
@@ -491,7 +626,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The Object IDs of the Azure AD Group owners.
+    <dd>{{% md %}}The Object IDs of the Group owners.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="securityenabled_nodejs">
+<a href="#securityenabled_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is a security group.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -507,7 +652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the AD Group.
+    <dd>{{% md %}}The optional description of the Group.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -517,7 +662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure AD Group.
+    <dd>{{% md %}}The display name for the Group.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -531,13 +676,23 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="mail_enabled_python">
+<a href="#mail_enabled_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is mail-enabled.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="members_python">
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The Object IDs of the Azure AD Group members.
+    <dd>{{% md %}}The Object IDs of the Group members.
 {{% /md %}}</dd>
     <dt class="property- property-deprecated"
             title=", Deprecated">
@@ -565,7 +720,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The Object IDs of the Azure AD Group owners.
+    <dd>{{% md %}}The Object IDs of the Group owners.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="security_enabled_python">
+<a href="#security_enabled_python" style="color: inherit; text-decoration: inherit;">security_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the group is a security group.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

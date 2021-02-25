@@ -1,8 +1,8 @@
 
 ---
 title: "Project"
-title_tag: "Resource Project | Package GitLab"
-meta_desc: "Explore the Project resource of the GitLab package, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "gitlab.Project"
+meta_desc: "Documentation for the gitlab.Project resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -18,19 +18,19 @@ meta_desc: "Explore the Project resource of the GitLab package, including exampl
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#Project">Project</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Project</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gitlab/#pulumi_gitlab.Project">Project</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">approvals_before_merge</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">archived</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">container_registry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">default_branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_with_project_templates_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">import_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initialize_with_readme</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issues_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lfs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">merge_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">merge_requests_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mirror</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mirror_trigger_builds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">only_allow_merge_if_all_discussions_are_resolved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">only_allow_merge_if_pipeline_succeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">packages_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">pages_access_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pipelines_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">push_rules</span><span class="p">:</span> <span class="nx">Optional[ProjectPushRulesArgs]</span> = None<span class="p">, </span><span class="nx">remove_source_branch_after_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">request_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shared_runners_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snippets_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_project_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">use_custom_template</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visibility_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wiki_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Project</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">approvals_before_merge</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">archived</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">container_registry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">default_branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_with_project_templates_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">import_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initialize_with_readme</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issues_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lfs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">merge_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">merge_requests_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mirror</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mirror_overwrites_diverged_branches</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mirror_trigger_builds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">only_allow_merge_if_all_discussions_are_resolved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">only_allow_merge_if_pipeline_succeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">only_mirror_protected_branches</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">packages_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">pages_access_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pipelines_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">push_rules</span><span class="p">:</span> <span class="nx">Optional[ProjectPushRulesArgs]</span> = None<span class="p">, </span><span class="nx">remove_source_branch_after_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">request_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">shared_runners_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snippets_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_project_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">use_custom_template</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visibility_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wiki_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#Project">NewProject</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProject</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.Project.html">Project</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.ProjectArgs.html">ProjectArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Project</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProjectArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -51,7 +51,7 @@ meta_desc: "Explore the Project resource of the GitLab package, including exampl
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ProjectArgs">ProjectArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProjectArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -120,7 +120,7 @@ meta_desc: "Explore the Project resource of the GitLab package, including exampl
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#ProjectArgs">ProjectArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProjectArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -159,7 +159,7 @@ meta_desc: "Explore the Project resource of the GitLab package, including exampl
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.ProjectArgs.html">ProjectArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProjectArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -182,11 +182,11 @@ meta_desc: "Explore the Project resource of the GitLab package, including exampl
 
 ## Project Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Project resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Project resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -328,6 +328,16 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="mirroroverwritesdivergedbranches_csharp">
+<a href="#mirroroverwritesdivergedbranches_csharp" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Overwrites<wbr>Diverged<wbr>Branches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Pull mirror overwrites diverged branches.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mirrortriggerbuilds_csharp">
 <a href="#mirrortriggerbuilds_csharp" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Trigger<wbr>Builds</a>
 </span>
@@ -376,6 +386,16 @@ See `gitlab.Group` for an example.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="onlymirrorprotectedbranches_csharp">
+<a href="#onlymirrorprotectedbranches_csharp" style="color: inherit; text-decoration: inherit;">Only<wbr>Mirror<wbr>Protected<wbr>Branches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Only mirror protected branches.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -672,6 +692,16 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="mirroroverwritesdivergedbranches_go">
+<a href="#mirroroverwritesdivergedbranches_go" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Overwrites<wbr>Diverged<wbr>Branches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Pull mirror overwrites diverged branches.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mirrortriggerbuilds_go">
 <a href="#mirrortriggerbuilds_go" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Trigger<wbr>Builds</a>
 </span>
@@ -720,6 +750,16 @@ See `gitlab.Group` for an example.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="onlymirrorprotectedbranches_go">
+<a href="#onlymirrorprotectedbranches_go" style="color: inherit; text-decoration: inherit;">Only<wbr>Mirror<wbr>Protected<wbr>Branches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Only mirror protected branches.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1016,6 +1056,16 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="mirroroverwritesdivergedbranches_nodejs">
+<a href="#mirroroverwritesdivergedbranches_nodejs" style="color: inherit; text-decoration: inherit;">mirror<wbr>Overwrites<wbr>Diverged<wbr>Branches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Pull mirror overwrites diverged branches.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mirrortriggerbuilds_nodejs">
 <a href="#mirrortriggerbuilds_nodejs" style="color: inherit; text-decoration: inherit;">mirror<wbr>Trigger<wbr>Builds</a>
 </span>
@@ -1064,6 +1114,16 @@ See `gitlab.Group` for an example.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="onlymirrorprotectedbranches_nodejs">
+<a href="#onlymirrorprotectedbranches_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Mirror<wbr>Protected<wbr>Branches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Only mirror protected branches.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1360,6 +1420,16 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="mirror_overwrites_diverged_branches_python">
+<a href="#mirror_overwrites_diverged_branches_python" style="color: inherit; text-decoration: inherit;">mirror_<wbr>overwrites_<wbr>diverged_<wbr>branches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Pull mirror overwrites diverged branches.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mirror_trigger_builds_python">
 <a href="#mirror_trigger_builds_python" style="color: inherit; text-decoration: inherit;">mirror_<wbr>trigger_<wbr>builds</a>
 </span>
@@ -1408,6 +1478,16 @@ See `gitlab.Group` for an example.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="only_mirror_protected_branches_python">
+<a href="#only_mirror_protected_branches_python" style="color: inherit; text-decoration: inherit;">only_<wbr>mirror_<wbr>protected_<wbr>branches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Only mirror protected branches.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1849,20 +1929,20 @@ Get an existing Project resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ProjectState">ProjectState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#Project">Project</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ProjectState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Project</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">approvals_before_merge</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">archived</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">container_registry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">default_branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_with_project_templates_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">http_url_to_repo</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">import_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initialize_with_readme</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issues_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lfs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">merge_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">merge_requests_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mirror</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mirror_trigger_builds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">only_allow_merge_if_all_discussions_are_resolved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">only_allow_merge_if_pipeline_succeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">packages_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">pages_access_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_with_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pipelines_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">push_rules</span><span class="p">:</span> <span class="nx">Optional[ProjectPushRulesArgs]</span> = None<span class="p">, </span><span class="nx">remove_source_branch_after_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">request_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">runners_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_runners_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snippets_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ssh_url_to_repo</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_project_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">use_custom_template</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visibility_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wiki_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Project</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">approvals_before_merge</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">archived</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">container_registry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">default_branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">group_with_project_templates_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">http_url_to_repo</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">import_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initialize_with_readme</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">issues_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">lfs_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">merge_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">merge_requests_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mirror</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mirror_overwrites_diverged_branches</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">mirror_trigger_builds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">only_allow_merge_if_all_discussions_are_resolved</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">only_allow_merge_if_pipeline_succeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">only_mirror_protected_branches</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">packages_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">pages_access_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path_with_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pipelines_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">push_rules</span><span class="p">:</span> <span class="nx">Optional[ProjectPushRulesArgs]</span> = None<span class="p">, </span><span class="nx">remove_source_branch_after_merge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">request_access_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">runners_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shared_runners_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snippets_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ssh_url_to_repo</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">template_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">template_project_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">use_custom_template</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visibility_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wiki_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Project</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#ProjectState">ProjectState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ProjectState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Project</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.Project.html">Project</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab..ProjectState.html">ProjectState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Project</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ProjectState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2113,6 +2193,16 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_mirroroverwritesdivergedbranches_csharp">
+<a href="#state_mirroroverwritesdivergedbranches_csharp" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Overwrites<wbr>Diverged<wbr>Branches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Pull mirror overwrites diverged branches.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_mirrortriggerbuilds_csharp">
 <a href="#state_mirrortriggerbuilds_csharp" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Trigger<wbr>Builds</a>
 </span>
@@ -2161,6 +2251,16 @@ See `gitlab.Group` for an example.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_onlymirrorprotectedbranches_csharp">
+<a href="#state_onlymirrorprotectedbranches_csharp" style="color: inherit; text-decoration: inherit;">Only<wbr>Mirror<wbr>Protected<wbr>Branches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Only mirror protected branches.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2509,6 +2609,16 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_mirroroverwritesdivergedbranches_go">
+<a href="#state_mirroroverwritesdivergedbranches_go" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Overwrites<wbr>Diverged<wbr>Branches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Pull mirror overwrites diverged branches.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_mirrortriggerbuilds_go">
 <a href="#state_mirrortriggerbuilds_go" style="color: inherit; text-decoration: inherit;">Mirror<wbr>Trigger<wbr>Builds</a>
 </span>
@@ -2557,6 +2667,16 @@ See `gitlab.Group` for an example.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_onlymirrorprotectedbranches_go">
+<a href="#state_onlymirrorprotectedbranches_go" style="color: inherit; text-decoration: inherit;">Only<wbr>Mirror<wbr>Protected<wbr>Branches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Only mirror protected branches.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2905,6 +3025,16 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_mirroroverwritesdivergedbranches_nodejs">
+<a href="#state_mirroroverwritesdivergedbranches_nodejs" style="color: inherit; text-decoration: inherit;">mirror<wbr>Overwrites<wbr>Diverged<wbr>Branches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Pull mirror overwrites diverged branches.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_mirrortriggerbuilds_nodejs">
 <a href="#state_mirrortriggerbuilds_nodejs" style="color: inherit; text-decoration: inherit;">mirror<wbr>Trigger<wbr>Builds</a>
 </span>
@@ -2953,6 +3083,16 @@ See `gitlab.Group` for an example.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_onlymirrorprotectedbranches_nodejs">
+<a href="#state_onlymirrorprotectedbranches_nodejs" style="color: inherit; text-decoration: inherit;">only<wbr>Mirror<wbr>Protected<wbr>Branches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Only mirror protected branches.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3301,6 +3441,16 @@ consult the [gitlab documentation](https://docs.gitlab.com/ee/user/project/repos
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_mirror_overwrites_diverged_branches_python">
+<a href="#state_mirror_overwrites_diverged_branches_python" style="color: inherit; text-decoration: inherit;">mirror_<wbr>overwrites_<wbr>diverged_<wbr>branches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Pull mirror overwrites diverged branches.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_mirror_trigger_builds_python">
 <a href="#state_mirror_trigger_builds_python" style="color: inherit; text-decoration: inherit;">mirror_<wbr>trigger_<wbr>builds</a>
 </span>
@@ -3349,6 +3499,16 @@ See `gitlab.Group` for an example.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to true if you want allow merges only if a pipeline succeeds.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_only_mirror_protected_branches_python">
+<a href="#state_only_mirror_protected_branches_python" style="color: inherit; text-decoration: inherit;">only_<wbr>mirror_<wbr>protected_<wbr>branches</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Only mirror protected branches.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3558,18 +3718,6 @@ Repositories are created as private by default.
 
 
 <h4 id="projectpushrules">Project<wbr>Push<wbr>Rules</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gitlab/types/input/#ProjectPushRules">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gitlab/types/output/#ProjectPushRules">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#ProjectPushRulesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#ProjectPushRulesOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.Inputs.ProjectPushRulesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.Outputs.ProjectPushRules.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

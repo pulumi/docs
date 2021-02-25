@@ -156,19 +156,19 @@ const exampleDataLakeGen2Filesystem = new azure.storage.DataLakeGen2Filesystem("
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#DataLakeGen2Filesystem">DataLakeGen2Filesystem</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#DataLakeGen2FilesystemArgs">DataLakeGen2FilesystemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataLakeGen2Filesystem</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DataLakeGen2FilesystemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/storage/#pulumi_azure.storage.DataLakeGen2Filesystem">DataLakeGen2Filesystem</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DataLakeGen2Filesystem</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aces</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataLakeGen2FilesystemAceArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#DataLakeGen2Filesystem">NewDataLakeGen2Filesystem</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#DataLakeGen2FilesystemArgs">DataLakeGen2FilesystemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#DataLakeGen2Filesystem">DataLakeGen2Filesystem</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataLakeGen2Filesystem</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DataLakeGen2FilesystemArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataLakeGen2Filesystem</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.DataLakeGen2Filesystem.html">DataLakeGen2Filesystem</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.DataLakeGen2FilesystemArgs.html">DataLakeGen2FilesystemArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataLakeGen2Filesystem</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DataLakeGen2FilesystemArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -189,7 +189,7 @@ const exampleDataLakeGen2Filesystem = new azure.storage.DataLakeGen2Filesystem("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#DataLakeGen2FilesystemArgs">DataLakeGen2FilesystemArgs</a></span>
+        <span class="property-type"><a href="#inputs">DataLakeGen2FilesystemArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -258,7 +258,7 @@ const exampleDataLakeGen2Filesystem = new azure.storage.DataLakeGen2Filesystem("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#DataLakeGen2FilesystemArgs">DataLakeGen2FilesystemArgs</a></span>
+        <span class="property-type"><a href="#inputs">DataLakeGen2FilesystemArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -297,7 +297,7 @@ const exampleDataLakeGen2Filesystem = new azure.storage.DataLakeGen2Filesystem("
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.DataLakeGen2FilesystemArgs.html">DataLakeGen2FilesystemArgs</a></span>
+        <span class="property-type"><a href="#inputs">DataLakeGen2FilesystemArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -320,11 +320,11 @@ const exampleDataLakeGen2Filesystem = new azure.storage.DataLakeGen2Filesystem("
 
 ## DataLakeGen2Filesystem Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DataLakeGen2Filesystem resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DataLakeGen2Filesystem resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -340,6 +340,16 @@ The DataLakeGen2Filesystem resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Storage Account in which the Data Lake Gen2 File System should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aces_csharp">
+<a href="#aces_csharp" style="color: inherit; text-decoration: inherit;">Aces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datalakegen2filesystemace">List&lt;Data<wbr>Lake<wbr>Gen2Filesystem<wbr>Ace<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `ace` blocks as defined below to specify the entries for the ACL for the path.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -379,6 +389,16 @@ The DataLakeGen2Filesystem resource accepts the following [input]({{< relref "/d
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="aces_go">
+<a href="#aces_go" style="color: inherit; text-decoration: inherit;">Aces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datalakegen2filesystemace">[]Data<wbr>Lake<wbr>Gen2Filesystem<wbr>Ace</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `ace` blocks as defined below to specify the entries for the ACL for the path.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -415,6 +435,16 @@ The DataLakeGen2Filesystem resource accepts the following [input]({{< relref "/d
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="aces_nodejs">
+<a href="#aces_nodejs" style="color: inherit; text-decoration: inherit;">aces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datalakegen2filesystemace">Data<wbr>Lake<wbr>Gen2Filesystem<wbr>Ace[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `ace` blocks as defined below to specify the entries for the ACL for the path.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -448,6 +478,16 @@ The DataLakeGen2Filesystem resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the ID of the Storage Account in which the Data Lake Gen2 File System should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aces_python">
+<a href="#aces_python" style="color: inherit; text-decoration: inherit;">aces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datalakegen2filesystemace">Sequence[Data<wbr>Lake<wbr>Gen2Filesystem<wbr>Ace<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `ace` blocks as defined below to specify the entries for the ACL for the path.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -547,20 +587,20 @@ Get an existing DataLakeGen2Filesystem resource's state with the given name, ID,
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#DataLakeGen2FilesystemState">DataLakeGen2FilesystemState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/storage/#DataLakeGen2Filesystem">DataLakeGen2Filesystem</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DataLakeGen2FilesystemState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DataLakeGen2Filesystem</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DataLakeGen2Filesystem</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">aces</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataLakeGen2FilesystemAceArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">storage_account_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> DataLakeGen2Filesystem</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDataLakeGen2Filesystem<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#DataLakeGen2FilesystemState">DataLakeGen2FilesystemState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage?tab=doc#DataLakeGen2Filesystem">DataLakeGen2Filesystem</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDataLakeGen2Filesystem<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DataLakeGen2FilesystemState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataLakeGen2Filesystem</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.DataLakeGen2Filesystem.html">DataLakeGen2Filesystem</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Storage.DataLakeGen2FilesystemState.html">DataLakeGen2FilesystemState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DataLakeGen2Filesystem</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DataLakeGen2FilesystemState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -667,6 +707,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_aces_csharp">
+<a href="#state_aces_csharp" style="color: inherit; text-decoration: inherit;">Aces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datalakegen2filesystemace">List&lt;Data<wbr>Lake<wbr>Gen2Filesystem<wbr>Ace<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `ace` blocks as defined below to specify the entries for the ACL for the path.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -701,6 +751,16 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_aces_go">
+<a href="#state_aces_go" style="color: inherit; text-decoration: inherit;">Aces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datalakegen2filesystemace">[]Data<wbr>Lake<wbr>Gen2Filesystem<wbr>Ace</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `ace` blocks as defined below to specify the entries for the ACL for the path.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -739,6 +799,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_aces_nodejs">
+<a href="#state_aces_nodejs" style="color: inherit; text-decoration: inherit;">aces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datalakegen2filesystemace">Data<wbr>Lake<wbr>Gen2Filesystem<wbr>Ace[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `ace` blocks as defined below to specify the entries for the ACL for the path.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -773,6 +843,16 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_aces_python">
+<a href="#state_aces_python" style="color: inherit; text-decoration: inherit;">aces</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#datalakegen2filesystemace">Sequence[Data<wbr>Lake<wbr>Gen2Filesystem<wbr>Ace<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `ace` blocks as defined below to specify the entries for the ACL for the path.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -810,6 +890,196 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="datalakegen2filesystemace">Data<wbr>Lake<wbr>Gen2Filesystem<wbr>Ace</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="permissions_csharp">
+<a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the permissions for the entry in `rwx` form. For example, `rwx` gives full permissions but `r--` only gives read permissions.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of entry. Can be `user`, `group`, `mask` or `other`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Object ID of the Azure Active Directory User or Group that the entry relates to. Only valid for `user` or `group` entries.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_csharp">
+<a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the ACE represents an `access` entry or a `default` entry. Default value is `access`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="permissions_go">
+<a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the permissions for the entry in `rwx` form. For example, `rwx` gives full permissions but `r--` only gives read permissions.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of entry. Can be `user`, `group`, `mask` or `other`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Object ID of the Azure Active Directory User or Group that the entry relates to. Only valid for `user` or `group` entries.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_go">
+<a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the ACE represents an `access` entry or a `default` entry. Default value is `access`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="permissions_nodejs">
+<a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the permissions for the entry in `rwx` form. For example, `rwx` gives full permissions but `r--` only gives read permissions.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of entry. Can be `user`, `group`, `mask` or `other`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Object ID of the Azure Active Directory User or Group that the entry relates to. Only valid for `user` or `group` entries.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_nodejs">
+<a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the ACE represents an `access` entry or a `default` entry. Default value is `access`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="permissions_python">
+<a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the permissions for the entry in `rwx` form. For example, `rwx` gives full permissions but `r--` only gives read permissions.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of entry. Can be `user`, `group`, `mask` or `other`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the Object ID of the Azure Active Directory User or Group that the entry relates to. Only valid for `user` or `group` entries.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_python">
+<a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the ACE represents an `access` entry or a `default` entry. Default value is `access`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 ## Import
 
 

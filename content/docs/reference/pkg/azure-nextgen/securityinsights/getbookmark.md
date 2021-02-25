@@ -1,8 +1,8 @@
 
 ---
-title: "GetBookmark"
-title_tag: "Function GetBookmark | Module securityinsights | Package Azure NextGen"
-meta_desc: "Explore the GetBookmark function of the securityinsights module, including examples, input properties, output properties, and supporting types. "
+title: "getBookmark"
+title_tag: "azure-nextgen.securityinsights.getBookmark"
+meta_desc: "Documentation for the azure-nextgen.securityinsights.getBookmark function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,23 +13,23 @@ meta_desc: "Explore the GetBookmark function of the securityinsights module, inc
 
 
 
-## Using GetBookmark {#using}
+## Using getBookmark {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBookmark<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBookmarkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetBookmarkResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBookmark<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBookmarkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBookmarkResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_bookmark(</span><span class="nx">bookmark_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">operational_insights_resource_provider</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBookmarkResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_bookmark(</span><span class="nx">bookmark_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetBookmarkResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBookmark<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBookmarkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupBookmarkResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBookmark<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBookmarkArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBookmarkResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupBookmark` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetBookmark function of the securityinsights module, inc
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBookmark </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetBookmarkResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetBookmarkArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBookmarkResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBookmarkArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -59,15 +59,6 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bookmark ID{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="operationalinsightsresourceprovider_csharp">
-<a href="#operationalinsightsresourceprovider_csharp" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -103,15 +94,6 @@ The following arguments are supported:
     <dd>{{% md %}}Bookmark ID{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="operationalinsightsresourceprovider_go">
-<a href="#operationalinsightsresourceprovider_go" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -143,15 +125,6 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bookmark ID{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="operationalinsightsresourceprovider_nodejs">
-<a href="#operationalinsightsresourceprovider_nodejs" style="color: inherit; text-decoration: inherit;">operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -187,15 +160,6 @@ The following arguments are supported:
     <dd>{{% md %}}Bookmark ID{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="operational_insights_resource_provider_python">
-<a href="#operational_insights_resource_provider_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>insights_<wbr>resource_<wbr>provider</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -218,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetBookmark Result {#result}
+## getBookmark Result {#result}
 
 The following output properties are available:
 
@@ -301,6 +265,15 @@ The following output properties are available:
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="eventtime_csharp">
+<a href="#eventtime_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bookmark event time{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="incidentinfo_csharp">
 <a href="#incidentinfo_csharp" style="color: inherit; text-decoration: inherit;">Incident<wbr>Info</a>
 </span>
@@ -328,6 +301,15 @@ The following output properties are available:
     <dd>{{% md %}}The notes of the bookmark{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="queryendtime_csharp">
+<a href="#queryendtime_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>End<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The end time for the query{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="queryresult_csharp">
 <a href="#queryresult_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Result</a>
 </span>
@@ -335,6 +317,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The query result of the bookmark.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="querystarttime_csharp">
+<a href="#querystarttime_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start time for the query{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="updated_csharp">
@@ -433,6 +424,15 @@ The following output properties are available:
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="eventtime_go">
+<a href="#eventtime_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bookmark event time{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="incidentinfo_go">
 <a href="#incidentinfo_go" style="color: inherit; text-decoration: inherit;">Incident<wbr>Info</a>
 </span>
@@ -460,6 +460,15 @@ The following output properties are available:
     <dd>{{% md %}}The notes of the bookmark{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="queryendtime_go">
+<a href="#queryendtime_go" style="color: inherit; text-decoration: inherit;">Query<wbr>End<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The end time for the query{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="queryresult_go">
 <a href="#queryresult_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Result</a>
 </span>
@@ -467,6 +476,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The query result of the bookmark.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="querystarttime_go">
+<a href="#querystarttime_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start time for the query{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="updated_go">
@@ -565,6 +583,15 @@ The following output properties are available:
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="eventtime_nodejs">
+<a href="#eventtime_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The bookmark event time{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="incidentinfo_nodejs">
 <a href="#incidentinfo_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Info</a>
 </span>
@@ -592,6 +619,15 @@ The following output properties are available:
     <dd>{{% md %}}The notes of the bookmark{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="queryendtime_nodejs">
+<a href="#queryendtime_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>End<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The end time for the query{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="queryresult_nodejs">
 <a href="#queryresult_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Result</a>
 </span>
@@ -599,6 +635,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The query result of the bookmark.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="querystarttime_nodejs">
+<a href="#querystarttime_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start time for the query{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="updated_nodejs">
@@ -697,6 +742,15 @@ The following output properties are available:
     <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="event_time_python">
+<a href="#event_time_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The bookmark event time{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="incident_info_python">
 <a href="#incident_info_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>info</a>
 </span>
@@ -724,6 +778,15 @@ The following output properties are available:
     <dd>{{% md %}}The notes of the bookmark{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="query_end_time_python">
+<a href="#query_end_time_python" style="color: inherit; text-decoration: inherit;">query_<wbr>end_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The end time for the query{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="query_result_python">
 <a href="#query_result_python" style="color: inherit; text-decoration: inherit;">query_<wbr>result</a>
 </span>
@@ -731,6 +794,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The query result of the bookmark.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="query_start_time_python">
+<a href="#query_start_time_python" style="color: inherit; text-decoration: inherit;">query_<wbr>start_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The start time for the query{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="updated_python">
@@ -762,14 +834,11 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="incidentid_csharp">
 <a href="#incidentid_csharp" style="color: inherit; text-decoration: inherit;">Incident<wbr>Id</a>
 </span>
@@ -777,8 +846,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Incident Id{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="relationname_csharp">
 <a href="#relationname_csharp" style="color: inherit; text-decoration: inherit;">Relation<wbr>Name</a>
 </span>
@@ -786,8 +855,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relation Name{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="severity_csharp">
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
@@ -795,8 +864,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
 </span>
@@ -810,8 +879,8 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="incidentid_go">
 <a href="#incidentid_go" style="color: inherit; text-decoration: inherit;">Incident<wbr>Id</a>
 </span>
@@ -819,8 +888,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Incident Id{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="relationname_go">
 <a href="#relationname_go" style="color: inherit; text-decoration: inherit;">Relation<wbr>Name</a>
 </span>
@@ -828,8 +897,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relation Name{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="severity_go">
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
@@ -837,8 +906,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
 </span>
@@ -852,8 +921,8 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="incidentid_nodejs">
 <a href="#incidentid_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Id</a>
 </span>
@@ -861,8 +930,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Incident Id{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="relationname_nodejs">
 <a href="#relationname_nodejs" style="color: inherit; text-decoration: inherit;">relation<wbr>Name</a>
 </span>
@@ -870,8 +939,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Relation Name{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="severity_nodejs">
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
@@ -879,8 +948,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
@@ -894,8 +963,8 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="incident_id_python">
 <a href="#incident_id_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>id</a>
 </span>
@@ -903,8 +972,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Incident Id{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="relation_name_python">
 <a href="#relation_name_python" style="color: inherit; text-decoration: inherit;">relation_<wbr>name</a>
 </span>
@@ -912,8 +981,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Relation Name{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="severity_python">
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
@@ -921,8 +990,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
 </span>
@@ -934,9 +1003,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="userinforesponse">User<wbr>Info<wbr>Response</h4>
-
-
-
 
 
 
@@ -961,8 +1027,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
 </span>
@@ -994,8 +1060,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
 </span>
@@ -1027,8 +1093,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span>
@@ -1060,8 +1126,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span>

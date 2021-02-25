@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package Linode"
-meta_desc: "Explore the Provider resource of the Linode package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the linode package. By default, resources use package-wide configuration"
+title_tag: "linode.Provider"
+meta_desc: "Documentation for the linode.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -23,19 +23,19 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#Provider">Provider</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_linode/#pulumi_linode.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">skip_instance_ready_poll</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ua_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_retry_delay_ms</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_retry_delay_ms</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">skip_instance_ready_poll</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ua_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#Provider">NewProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Provider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.Provider.html">Provider</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Pulumi.LinodeArgs.html">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -53,10 +53,10 @@ construction to achieve fine-grained programmatic control over provider settings
     </dd>
   
     <dt
-        class="property-optional" title="Optional">
+        class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#ProviderArgs">ProviderArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -122,10 +122,10 @@ construction to achieve fine-grained programmatic control over provider settings
     </dd>
   
     <dt
-        class="property-optional" title="Optional">
+        class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/v2/go/linode/?tab=doc#ProviderArgs">ProviderArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -161,10 +161,10 @@ construction to achieve fine-grained programmatic control over provider settings
     </dd>
   
     <dt
-        class="property-optional" title="Optional">
+        class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Pulumi.LinodeArgs.html">ProviderArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -187,17 +187,27 @@ construction to achieve fine-grained programmatic control over provider settings
 
 ## Provider Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Provider resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Provider resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="token_csharp">
+<a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The token that allows you access to your Linode account
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="apiversion_csharp">
@@ -207,6 +217,26 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An HTTP User-Agent Prefix to prepend in API requests.
+ It can also be sourced from the following environment variable: `LINODE_API_VERSION`{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxretrydelayms_csharp">
+<a href="#maxretrydelayms_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retry<wbr>Delay<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum delay in milliseconds before retrying a request.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minretrydelayms_csharp">
+<a href="#minretrydelayms_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Retry<wbr>Delay<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum delay in milliseconds before retrying a request.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -220,16 +250,6 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="token_csharp">
-<a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The token that allows you access to your Linode account
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="uaprefix_csharp">
 <a href="#uaprefix_csharp" style="color: inherit; text-decoration: inherit;">Ua<wbr>Prefix</a>
 </span>
@@ -237,7 +257,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An HTTP User-Agent Prefix to prepend in API requests.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `LINODE_UA_PREFIX`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="url_csharp">
@@ -247,13 +267,23 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP(S) API address of the Linode API to use.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `LINODE_URL`{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="token_go">
+<a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The token that allows you access to your Linode account
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="apiversion_go">
@@ -263,6 +293,26 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An HTTP User-Agent Prefix to prepend in API requests.
+ It can also be sourced from the following environment variable: `LINODE_API_VERSION`{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxretrydelayms_go">
+<a href="#maxretrydelayms_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retry<wbr>Delay<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum delay in milliseconds before retrying a request.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minretrydelayms_go">
+<a href="#minretrydelayms_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Retry<wbr>Delay<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum delay in milliseconds before retrying a request.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -276,16 +326,6 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="token_go">
-<a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The token that allows you access to your Linode account
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="uaprefix_go">
 <a href="#uaprefix_go" style="color: inherit; text-decoration: inherit;">Ua<wbr>Prefix</a>
 </span>
@@ -293,7 +333,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An HTTP User-Agent Prefix to prepend in API requests.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `LINODE_UA_PREFIX`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="url_go">
@@ -303,13 +343,23 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP(S) API address of the Linode API to use.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `LINODE_URL`{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="token_nodejs">
+<a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The token that allows you access to your Linode account
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="apiversion_nodejs">
@@ -319,6 +369,26 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An HTTP User-Agent Prefix to prepend in API requests.
+ It can also be sourced from the following environment variable: `LINODE_API_VERSION`{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxretrydelayms_nodejs">
+<a href="#maxretrydelayms_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retry<wbr>Delay<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Maximum delay in milliseconds before retrying a request.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minretrydelayms_nodejs">
+<a href="#minretrydelayms_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Retry<wbr>Delay<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Minimum delay in milliseconds before retrying a request.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -332,16 +402,6 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="token_nodejs">
-<a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The token that allows you access to your Linode account
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="uaprefix_nodejs">
 <a href="#uaprefix_nodejs" style="color: inherit; text-decoration: inherit;">ua<wbr>Prefix</a>
 </span>
@@ -349,7 +409,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An HTTP User-Agent Prefix to prepend in API requests.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `LINODE_UA_PREFIX`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="url_nodejs">
@@ -359,13 +419,23 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP(S) API address of the Linode API to use.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `LINODE_URL`{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="token_python">
+<a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The token that allows you access to your Linode account
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="api_version_python">
@@ -375,6 +445,26 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An HTTP User-Agent Prefix to prepend in API requests.
+ It can also be sourced from the following environment variable: `LINODE_API_VERSION`{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_retry_delay_ms_python">
+<a href="#max_retry_delay_ms_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retry_<wbr>delay_<wbr>ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum delay in milliseconds before retrying a request.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_retry_delay_ms_python">
+<a href="#min_retry_delay_ms_python" style="color: inherit; text-decoration: inherit;">min_<wbr>retry_<wbr>delay_<wbr>ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Minimum delay in milliseconds before retrying a request.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -388,16 +478,6 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="token_python">
-<a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The token that allows you access to your Linode account
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="ua_prefix_python">
 <a href="#ua_prefix_python" style="color: inherit; text-decoration: inherit;">ua_<wbr>prefix</a>
 </span>
@@ -405,7 +485,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An HTTP User-Agent Prefix to prepend in API requests.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `LINODE_UA_PREFIX`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="url_python">
@@ -415,7 +495,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP(S) API address of the Linode API to use.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `LINODE_URL`{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

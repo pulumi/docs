@@ -1,6 +1,6 @@
 ---
 title: "Okta"
-title_tag: "Package Okta"
+title_tag: "Okta Package"
 meta_desc: "A Pulumi package for creating and managing okta resources."
 menu:
     reference:
@@ -31,6 +31,7 @@ A Pulumi package for creating and managing okta resources.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="adminroletargets" title="AdminRoleTargets"><span class="symbol resource"></span>AdminRoleTargets</a></li>
     <li><a href="eventhook" title="EventHook"><span class="symbol resource"></span>EventHook</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="templatesms" title="TemplateSms"><span class="symbol resource"></span>TemplateSms</a></li>
@@ -45,24 +46,6 @@ A Pulumi package for creating and managing okta resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
 	<dt>Version</dt>
-	<dd>2.7.1</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.html" title="Pulumi.Okta">Pulumi.Okta</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/?tab=doc#" title="okta">okta</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/okta/#" title="@pulumi/okta">@pulumi/okta</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_okta" title="pulumi_okta">pulumi_okta</a></dd>
-
+	<dd>2.11.0</dd>
 </dl>
 

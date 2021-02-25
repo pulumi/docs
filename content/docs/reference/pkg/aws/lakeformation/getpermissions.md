@@ -1,8 +1,8 @@
 
 ---
-title: "GetPermissions"
-title_tag: "Function GetPermissions | Module lakeformation | Package AWS"
-meta_desc: "Explore the GetPermissions function of the lakeformation module, including examples, input properties, output properties, and supporting types. Get permissions for a principal to access metadata in the Data Catalog and data organized in underlying data storage such as Amazon S3. Permissions are granted to a principal, in a Data Catalog, relative to a Lake Formation resource, which includes the Data Catalog, databases, and tables. For more information, see [Security and Access Control to Metadata and Data in Lake Formation](https://docs.aws.amazon.com/lake-formation/latest/dg/security-data-access.html)."
+title: "getPermissions"
+title_tag: "aws.lakeformation.getPermissions"
+meta_desc: "Documentation for the aws.lakeformation.getPermissions function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -107,13 +107,13 @@ const test = aws.lakeformation.getPermissions({
 {{% /examples %}}
 
 
-## Using GetPermissions {#using}
+## Using getPermissions {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPermissions<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lakeformation/#GetPermissionsArgs">GetPermissionsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lakeformation/#GetPermissionsResult">GetPermissionsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPermissions<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPermissionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPermissionsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -123,7 +123,7 @@ const test = aws.lakeformation.getPermissions({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPermissions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lakeformation?tab=doc#LookupPermissionsArgs">LookupPermissionsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lakeformation?tab=doc#LookupPermissionsResult">LookupPermissionsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPermissions<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPermissionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPermissionsResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPermissions` in the Go SDK.
 
@@ -132,7 +132,7 @@ const test = aws.lakeformation.getPermissions({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPermissions </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lakeformation.GetPermissionsResult.html">GetPermissionsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LakeFormation.GetPermissionsArgs.html">GetPermissionsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPermissionsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPermissionsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -448,7 +448,7 @@ The following arguments are supported:
 
 
 
-## GetPermissions Result {#result}
+## getPermissions Result {#result}
 
 The following output properties are available:
 
@@ -857,16 +857,6 @@ The following output properties are available:
 
 
 <h4 id="getpermissionsdatalocation">Get<wbr>Permissions<wbr>Data<wbr>Location</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetPermissionsDataLocation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetPermissionsDataLocation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lakeformation?tab=doc#GetPermissionsDataLocationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lakeformation?tab=doc#GetPermissionsDataLocation">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LakeFormation.Inputs.GetPermissionsDataLocationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LakeFormation.Outputs.GetPermissionsDataLocation.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -975,16 +965,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getpermissionsdatabase">Get<wbr>Permissions<wbr>Database</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetPermissionsDatabase">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetPermissionsDatabase">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lakeformation?tab=doc#GetPermissionsDatabaseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lakeformation?tab=doc#GetPermissionsDatabase">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LakeFormation.Inputs.GetPermissionsDatabaseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LakeFormation.Outputs.GetPermissionsDatabase.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1093,16 +1073,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getpermissionstable">Get<wbr>Permissions<wbr>Table</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetPermissionsTable">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetPermissionsTable">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lakeformation?tab=doc#GetPermissionsTableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lakeformation?tab=doc#GetPermissionsTable">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LakeFormation.Inputs.GetPermissionsTableArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LakeFormation.Outputs.GetPermissionsTable.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1291,16 +1261,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getpermissionstablewithcolumns">Get<wbr>Permissions<wbr>Table<wbr>With<wbr>Columns</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetPermissionsTableWithColumns">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetPermissionsTableWithColumns">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lakeformation?tab=doc#GetPermissionsTableWithColumnsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lakeformation?tab=doc#GetPermissionsTableWithColumns">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LakeFormation.Inputs.GetPermissionsTableWithColumnsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LakeFormation.Outputs.GetPermissionsTableWithColumns.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

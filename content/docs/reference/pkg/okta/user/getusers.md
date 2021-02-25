@@ -1,8 +1,8 @@
 
 ---
-title: "GetUsers"
-title_tag: "Function GetUsers | Module user | Package Okta"
-meta_desc: "Explore the GetUsers function of the user module, including examples, input properties, output properties, and supporting types. Use this data source to retrieve a list of users from Okta."
+title: "getUsers"
+title_tag: "okta.user.getUsers"
+meta_desc: "Documentation for the okta.user.getUsers function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -110,13 +110,13 @@ const example = pulumi.output(okta.user.getUsers({
 {{% /examples %}}
 
 
-## Using GetUsers {#using}
+## Using getUsers {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getUsers<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/user/#GetUsersArgs">GetUsersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/user/#GetUsersResult">GetUsersResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getUsers<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetUsersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetUsersResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -126,14 +126,16 @@ const example = pulumi.output(okta.user.getUsers({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUsers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user?tab=doc#GetUsersArgs">GetUsersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user?tab=doc#GetUsersResult">GetUsersResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetUsers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetUsersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetUsersResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetUsers` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetUsers </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.User.GetUsersResult.html">GetUsersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.User.GetUsersArgs.html">GetUsersArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetUsersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetUsersArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -153,7 +155,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getuserssearch">List&lt;Get<wbr>Users<wbr>Search<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Map of search criteria to use to find users. It supports the following properties.
+    <dd>{{% md %}}Map of search criteria to find users. It supports the following properties.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -179,7 +181,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getuserssearch">[]Get<wbr>Users<wbr>Search</a></span>
     </dt>
-    <dd>{{% md %}}Map of search criteria to use to find users. It supports the following properties.
+    <dd>{{% md %}}Map of search criteria to find users. It supports the following properties.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -205,7 +207,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getuserssearch">Get<wbr>Users<wbr>Search[]</a></span>
     </dt>
-    <dd>{{% md %}}Map of search criteria to use to find users. It supports the following properties.
+    <dd>{{% md %}}Map of search criteria to find users. It supports the following properties.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -231,7 +233,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getuserssearch">Sequence[Get<wbr>Users<wbr>Search<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Map of search criteria to use to find users. It supports the following properties.
+    <dd>{{% md %}}Map of search criteria to find users. It supports the following properties.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -249,7 +251,7 @@ The following arguments are supported:
 
 
 
-## GetUsers Result {#result}
+## getUsers Result {#result}
 
 The following output properties are available:
 
@@ -402,16 +404,6 @@ The following output properties are available:
 
 
 <h4 id="getuserssearch">Get<wbr>Users<wbr>Search</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#GetUsersSearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#GetUsersSearch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user?tab=doc#GetUsersSearchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user?tab=doc#GetUsersSearch">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.User.Inputs.GetUsersSearchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.User.Outputs.GetUsersSearch.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -560,16 +552,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getusersuser">Get<wbr>Users<wbr>User</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#GetUsersUser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#GetUsersUser">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user?tab=doc#GetUsersUserArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/user?tab=doc#GetUsersUser">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.User.Inputs.GetUsersUserArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.User.Outputs.GetUsersUser.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -716,6 +698,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="lastname_csharp">
@@ -1074,6 +1065,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="lastname_go">
 <a href="#lastname_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Name</a>
 </span>
@@ -1430,6 +1430,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="lastname_nodejs">
 <a href="#lastname_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Name</a>
 </span>
@@ -1784,6 +1793,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}user profile property.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="last_name_python">

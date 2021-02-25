@@ -1,6 +1,6 @@
 ---
 title: "extensions"
-title_tag: "Package extensions"
+title_tag: "extensions Package"
 meta_desc: ""
 ---
 
@@ -21,21 +21,6 @@ meta_desc: ""
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.7.7</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/extensions?tab=doc#" title="kubernetes/extensions">kubernetes/extensions</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/extensions/#" title="@pulumi/kubernetes/extensions">@pulumi/kubernetes/extensions</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/extensions" title="pulumi_kubernetes/extensions">pulumi_kubernetes/extensions</a></dd>
-
+	<dd>2.8.2</dd>
 </dl>
 

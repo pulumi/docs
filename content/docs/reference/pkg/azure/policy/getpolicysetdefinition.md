@@ -1,8 +1,8 @@
 
 ---
-title: "GetPolicySetDefinition"
-title_tag: "Function GetPolicySetDefinition | Module policy | Package Azure"
-meta_desc: "Explore the GetPolicySetDefinition function of the policy module, including examples, input properties, output properties, and supporting types. Use this data source to access information about an existing Policy Set Definition."
+title: "getPolicySetDefinition"
+title_tag: "azure.policy.getPolicySetDefinition"
+meta_desc: "Documentation for the azure.policy.getPolicySetDefinition function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -95,13 +95,13 @@ export const id = example.then(example => example.id);
 {{% /examples %}}
 
 
-## Using GetPolicySetDefinition {#using}
+## Using getPolicySetDefinition {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicySetDefinition<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/policy/#GetPolicySetDefinitionArgs">GetPolicySetDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/policy/#GetPolicySetDefinitionResult">GetPolicySetDefinitionResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicySetDefinition<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPolicySetDefinitionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPolicySetDefinitionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -111,7 +111,7 @@ export const id = example.then(example => example.id);
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPolicySetDefinition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/policy?tab=doc#LookupPolicySetDefinitionArgs">LookupPolicySetDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/policy?tab=doc#LookupPolicySetDefinitionResult">LookupPolicySetDefinitionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPolicySetDefinition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPolicySetDefinitionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPolicySetDefinitionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPolicySetDefinition` in the Go SDK.
 
@@ -120,7 +120,7 @@ export const id = example.then(example => example.id);
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPolicySetDefinition </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Policy.GetPolicySetDefinitionResult.html">GetPolicySetDefinitionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Policy.GetPolicySetDefinitionArgs.html">GetPolicySetDefinitionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPolicySetDefinitionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPolicySetDefinitionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -276,7 +276,7 @@ The following arguments are supported:
 
 
 
-## GetPolicySetDefinition Result {#result}
+## getPolicySetDefinition Result {#result}
 
 The following output properties are available:
 
@@ -749,16 +749,6 @@ The following output properties are available:
 
 
 <h4 id="getpolicysetdefinitionpolicydefinitiongroup">Get<wbr>Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPolicySetDefinitionPolicyDefinitionGroup">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/policy?tab=doc#GetPolicySetDefinitionPolicyDefinitionGroup">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Policy.Outputs.GetPolicySetDefinitionPolicyDefinitionGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -983,16 +973,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getpolicysetdefinitionpolicydefinitionreference">Get<wbr>Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPolicySetDefinitionPolicyDefinitionReference">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/policy?tab=doc#GetPolicySetDefinitionPolicyDefinitionReference">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Policy.Outputs.GetPolicySetDefinitionPolicyDefinitionReference.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "ElasticSearch"
-title_tag: "Resource ElasticSearch | Package Aiven"
-meta_desc: "Explore the ElasticSearch resource of the Aiven package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Elasticsearch Resource"
+title_tag: "aiven.ElasticSearch"
+meta_desc: "Documentation for the aiven.ElasticSearch resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -163,19 +163,19 @@ const es1 = new aiven.ElasticSearch("es1", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#ElasticSearch">ElasticSearch</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#ElasticSearchArgs">ElasticSearchArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ElasticSearch</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ElasticSearchArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.ElasticSearch">ElasticSearch</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[ElasticSearchElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_user_config</span><span class="p">:</span> <span class="nx">Optional[ElasticSearchElasticsearchUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElasticSearchServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ElasticSearch</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cloud_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elasticsearch</span><span class="p">:</span> <span class="nx">Optional[ElasticSearchElasticsearchArgs]</span> = None<span class="p">, </span><span class="nx">elasticsearch_user_config</span><span class="p">:</span> <span class="nx">Optional[ElasticSearchElasticsearchUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">maintenance_window_dow</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_integrations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ElasticSearchServiceIntegrationArgs]]</span> = None<span class="p">, </span><span class="nx">service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">termination_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearch">NewElasticSearch</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearchArgs">ElasticSearchArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearch">ElasticSearch</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewElasticSearch</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ElasticSearchArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ElasticSearch</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.ElasticSearch.html">ElasticSearch</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.ElasticSearchArgs.html">ElasticSearchArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ElasticSearch</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ElasticSearchArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -196,7 +196,7 @@ const es1 = new aiven.ElasticSearch("es1", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#ElasticSearchArgs">ElasticSearchArgs</a></span>
+        <span class="property-type"><a href="#inputs">ElasticSearchArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -265,7 +265,7 @@ const es1 = new aiven.ElasticSearch("es1", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearchArgs">ElasticSearchArgs</a></span>
+        <span class="property-type"><a href="#inputs">ElasticSearchArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -304,7 +304,7 @@ const es1 = new aiven.ElasticSearch("es1", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.ElasticSearchArgs.html">ElasticSearchArgs</a></span>
+        <span class="property-type"><a href="#inputs">ElasticSearchArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -327,11 +327,11 @@ const es1 = new aiven.ElasticSearch("es1", {
 
 ## ElasticSearch Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ElasticSearch resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ElasticSearch resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1314,7 +1314,7 @@ Get an existing ElasticSearch resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#ElasticSearchState">ElasticSearchState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#ElasticSearch">ElasticSearch</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">ElasticSearchState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">ElasticSearch</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1323,11 +1323,11 @@ Get an existing ElasticSearch resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetElasticSearch<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearchState">ElasticSearchState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearch">ElasticSearch</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetElasticSearch<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">ElasticSearchState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ElasticSearch</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.ElasticSearch.html">ElasticSearch</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven..ElasticSearchState.html">ElasticSearchState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">ElasticSearch</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">ElasticSearchState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2343,18 +2343,6 @@ deletion is done.
 
 
 <h4 id="elasticsearchcomponent">Elastic<wbr>Search<wbr>Component</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ElasticSearchComponent">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearchComponentOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ElasticSearchComponent.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2633,18 +2621,6 @@ deletion is done.
 {{% /choosable %}}
 
 <h4 id="elasticsearchelasticsearch">Elastic<wbr>Search<wbr>Elasticsearch</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ElasticSearchElasticsearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ElasticSearchElasticsearch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearchElasticsearchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearchElasticsearchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ElasticSearchElasticsearchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ElasticSearchElasticsearch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2711,18 +2687,6 @@ deletion is done.
 {{% /choosable %}}
 
 <h4 id="elasticsearchelasticsearchuserconfig">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ElasticSearchElasticsearchUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ElasticSearchElasticsearchUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearchElasticsearchUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearchElasticsearchUserConfigOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ElasticSearchElasticsearchUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ElasticSearchElasticsearchUserConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2782,6 +2746,16 @@ internet for service nodes that are in a project VPC or another type of private 
     </dt>
     <dd>{{% md %}}Glob pattern and number of indexes matching that pattern to 
 be kept.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="indextemplate_csharp">
+<a href="#indextemplate_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigindextemplate">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Template settings for all new indexe.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2930,6 +2904,16 @@ be kept.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="indextemplate_go">
+<a href="#indextemplate_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigindextemplate">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}Template settings for all new indexe.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ipfilters_go">
 <a href="#ipfilters_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
 </span>
@@ -3072,6 +3056,16 @@ internet for service nodes that are in a project VPC or another type of private 
     </dt>
     <dd>{{% md %}}Glob pattern and number of indexes matching that pattern to 
 be kept.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="indextemplate_nodejs">
+<a href="#indextemplate_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigindextemplate">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}Template settings for all new indexe.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3220,6 +3214,16 @@ be kept.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="index_template_python">
+<a href="#index_template_python" style="color: inherit; text-decoration: inherit;">index_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#elasticsearchelasticsearchuserconfigindextemplate">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Template settings for all new indexe.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ip_filters_python">
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span>
@@ -3305,18 +3309,6 @@ only when a new service is being created.
 {{% /choosable %}}
 
 <h4 id="elasticsearchelasticsearchuserconfigelasticsearch">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Elasticsearch</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ElasticSearchElasticsearchUserConfigElasticsearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ElasticSearchElasticsearchUserConfigElasticsearch">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearchElasticsearchUserConfigElasticsearchArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearchElasticsearchUserConfigElasticsearchOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ElasticSearchElasticsearchUserConfigElasticsearchArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ElasticSearchElasticsearchUserConfigElasticsearch.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4487,18 +4479,6 @@ is automatically lowered if set to higher than maximum value.
 {{% /choosable %}}
 
 <h4 id="elasticsearchelasticsearchuserconfigindexpattern">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Pattern</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ElasticSearchElasticsearchUserConfigIndexPattern">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ElasticSearchElasticsearchUserConfigIndexPattern">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearchElasticsearchUserConfigIndexPatternArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearchElasticsearchUserConfigIndexPatternOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ElasticSearchElasticsearchUserConfigIndexPatternArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ElasticSearchElasticsearchUserConfigIndexPattern.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4608,19 +4588,161 @@ dots and glob characters (* and ?)
 </dl>
 {{% /choosable %}}
 
-<h4 id="elasticsearchelasticsearchuserconfigkibana">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Kibana</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ElasticSearchElasticsearchUserConfigKibana">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ElasticSearchElasticsearchUserConfigKibana">output</a> API doc for this type.
+<h4 id="elasticsearchelasticsearchuserconfigindextemplate">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mappingnestedobjectslimit_csharp">
+<a href="#mappingnestedobjectslimit_csharp" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Nested<wbr>Objects<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of nested JSON objects that 
+a single document can contain across all nested types. This limit helps to prevent out of
+memory errors when a document contains too many nested objects. Default is 10000.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberofreplicas_csharp">
+<a href="#numberofreplicas_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The number of replicas each primary shard has.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberofshards_csharp">
+<a href="#numberofshards_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Shards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The number of primary shards that an index should have.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearchElasticsearchUserConfigKibanaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearchElasticsearchUserConfigKibanaOutput">output</a> API doc for this type.
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mappingnestedobjectslimit_go">
+<a href="#mappingnestedobjectslimit_go" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Nested<wbr>Objects<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of nested JSON objects that 
+a single document can contain across all nested types. This limit helps to prevent out of
+memory errors when a document contains too many nested objects. Default is 10000.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberofreplicas_go">
+<a href="#numberofreplicas_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The number of replicas each primary shard has.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberofshards_go">
+<a href="#numberofshards_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Shards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The number of primary shards that an index should have.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ElasticSearchElasticsearchUserConfigKibanaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ElasticSearchElasticsearchUserConfigKibana.html">output</a> API doc for this type.
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mappingnestedobjectslimit_nodejs">
+<a href="#mappingnestedobjectslimit_nodejs" style="color: inherit; text-decoration: inherit;">mapping<wbr>Nested<wbr>Objects<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of nested JSON objects that 
+a single document can contain across all nested types. This limit helps to prevent out of
+memory errors when a document contains too many nested objects. Default is 10000.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberofreplicas_nodejs">
+<a href="#numberofreplicas_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The number of replicas each primary shard has.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberofshards_nodejs">
+<a href="#numberofshards_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Shards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The number of primary shards that an index should have.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mapping_nested_objects_limit_python">
+<a href="#mapping_nested_objects_limit_python" style="color: inherit; text-decoration: inherit;">mapping_<wbr>nested_<wbr>objects_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of nested JSON objects that 
+a single document can contain across all nested types. This limit helps to prevent out of
+memory errors when a document contains too many nested objects. Default is 10000.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="number_of_replicas_python">
+<a href="#number_of_replicas_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The number of replicas each primary shard has.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="number_of_shards_python">
+<a href="#number_of_shards_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>shards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The number of primary shards that an index should have.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="elasticsearchelasticsearchuserconfigkibana">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Kibana</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4779,18 +4901,6 @@ the Kibana. Note: the memory reserved by Kibana is not available for Elasticsear
 {{% /choosable %}}
 
 <h4 id="elasticsearchelasticsearchuserconfigprivateaccess">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ElasticSearchElasticsearchUserConfigPrivateAccess">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ElasticSearchElasticsearchUserConfigPrivateAccess">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearchElasticsearchUserConfigPrivateAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearchElasticsearchUserConfigPrivateAccessOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ElasticSearchElasticsearchUserConfigPrivateAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ElasticSearchElasticsearchUserConfigPrivateAccess.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4949,18 +5059,6 @@ internet for service nodes that are in a project VPC or another type of private 
 {{% /choosable %}}
 
 <h4 id="elasticsearchelasticsearchuserconfigpublicaccess">Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ElasticSearchElasticsearchUserConfigPublicAccess">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ElasticSearchElasticsearchUserConfigPublicAccess">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearchElasticsearchUserConfigPublicAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearchElasticsearchUserConfigPublicAccessOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ElasticSearchElasticsearchUserConfigPublicAccessArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ElasticSearchElasticsearchUserConfigPublicAccess.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5119,18 +5217,6 @@ internet for service nodes that are in a project VPC or another type of private 
 {{% /choosable %}}
 
 <h4 id="elasticsearchserviceintegration">Elastic<wbr>Search<wbr>Service<wbr>Integration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#ElasticSearchServiceIntegration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#ElasticSearchServiceIntegration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearchServiceIntegrationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ElasticSearchServiceIntegrationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ElasticSearchServiceIntegrationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ElasticSearchServiceIntegration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

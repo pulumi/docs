@@ -2,6 +2,11 @@
 title: Upgrade Your Kubernetes YAML to a Modern Language
 url: /kube2pulumi
 layout: kube2pulumi
+linktitle: kube2pulumi
+menu:
+  converters:
+    identifier: kube2pulumi
+    weight: 3
 meta_desc: See what your Kubernetes YAML would look like in a modern language thanks to Pulumi.
 
 examples:

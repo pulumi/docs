@@ -1,8 +1,8 @@
 
 ---
-title: "GetServerDnsAlias"
-title_tag: "Function GetServerDnsAlias | Module sql | Package Azure NextGen"
-meta_desc: "Explore the GetServerDnsAlias function of the sql module, including examples, input properties, output properties, and supporting types. "
+title: "getServerDnsAlias"
+title_tag: "azure-nextgen.sql.getServerDnsAlias"
+meta_desc: "Documentation for the azure-nextgen.sql.getServerDnsAlias function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetServerDnsAlias function of the sql module, including 
 
 
 
-## Using GetServerDnsAlias {#using}
+## Using getServerDnsAlias {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServerDnsAlias<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServerDnsAliasArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetServerDnsAliasResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServerDnsAlias<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServerDnsAliasArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServerDnsAliasResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetServerDnsAlias function of the sql module, including 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServerDnsAlias<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServerDnsAliasArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupServerDnsAliasResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServerDnsAlias<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServerDnsAliasArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServerDnsAliasResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupServerDnsAlias` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetServerDnsAlias function of the sql module, including 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetServerDnsAlias </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetServerDnsAliasResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetServerDnsAliasArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetServerDnsAliasResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServerDnsAliasArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetServerDnsAlias Result {#result}
+## getServerDnsAlias Result {#result}
 
 The following output properties are available:
 

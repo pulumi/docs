@@ -1,8 +1,8 @@
 
 ---
-title: "GetIscsiTarget"
-title_tag: "Function GetIscsiTarget | Module storagepool | Package Azure NextGen"
-meta_desc: "Explore the GetIscsiTarget function of the storagepool module, including examples, input properties, output properties, and supporting types. "
+title: "getIscsiTarget"
+title_tag: "azure-nextgen.storagepool.getIscsiTarget"
+meta_desc: "Documentation for the azure-nextgen.storagepool.getIscsiTarget function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetIscsiTarget function of the storagepool module, inclu
 
 
 
-## Using GetIscsiTarget {#using}
+## Using getIscsiTarget {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIscsiTarget<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIscsiTargetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetIscsiTargetResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIscsiTarget<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIscsiTargetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIscsiTargetResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetIscsiTarget function of the storagepool module, inclu
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIscsiTarget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIscsiTargetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupIscsiTargetResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIscsiTarget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupIscsiTargetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupIscsiTargetResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupIscsiTarget` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetIscsiTarget function of the storagepool module, inclu
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIscsiTarget </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetIscsiTargetResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetIscsiTargetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetIscsiTargetResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIscsiTargetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -58,7 +58,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Disk Pool.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Disk pool.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="iscsitargetname_csharp">
@@ -91,7 +91,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Disk Pool.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Disk pool.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="iscsitargetname_go">
@@ -124,7 +124,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Disk Pool.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Disk pool.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="iscsitargetname_nodejs">
@@ -157,7 +157,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Disk Pool.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Disk pool.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="iscsi_target_name_python">
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetIscsiTarget Result {#result}
+## getIscsiTarget Result {#result}
 
 The following output properties are available:
 
@@ -217,7 +217,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the operation on the resource{{% /md %}}</dd>
+    <dd>{{% md %}}State of the operation on the resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="status_csharp">
@@ -226,7 +226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operational status of the Disk pool{{% /md %}}</dd>
+    <dd>{{% md %}}Operational status of the iSCSI target.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="targetiqn_csharp">
@@ -235,7 +235,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}iSCSI target iqn (iSCSI Qualified Name); example: iqn.2005-03.org.iscsi:server{{% /md %}}</dd>
+    <dd>{{% md %}}iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tpgs_csharp">
@@ -244,7 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetportalgroupresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Outputs.<wbr>Target<wbr>Portal<wbr>Group<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}list of iSCSI target portal groups{{% /md %}}</dd>
+    <dd>{{% md %}}List of iSCSI target portal groups. Can have 1 portal group at most.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_csharp">
@@ -286,7 +286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the operation on the resource{{% /md %}}</dd>
+    <dd>{{% md %}}State of the operation on the resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="status_go">
@@ -295,7 +295,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operational status of the Disk pool{{% /md %}}</dd>
+    <dd>{{% md %}}Operational status of the iSCSI target.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="targetiqn_go">
@@ -304,7 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}iSCSI target iqn (iSCSI Qualified Name); example: iqn.2005-03.org.iscsi:server{{% /md %}}</dd>
+    <dd>{{% md %}}iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tpgs_go">
@@ -313,7 +313,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetportalgroupresponse">[]Target<wbr>Portal<wbr>Group<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}list of iSCSI target portal groups{{% /md %}}</dd>
+    <dd>{{% md %}}List of iSCSI target portal groups. Can have 1 portal group at most.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_go">
@@ -355,7 +355,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the operation on the resource{{% /md %}}</dd>
+    <dd>{{% md %}}State of the operation on the resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="status_nodejs">
@@ -364,7 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operational status of the Disk pool{{% /md %}}</dd>
+    <dd>{{% md %}}Operational status of the iSCSI target.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="targetiqn_nodejs">
@@ -373,7 +373,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}iSCSI target iqn (iSCSI Qualified Name); example: iqn.2005-03.org.iscsi:server{{% /md %}}</dd>
+    <dd>{{% md %}}iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tpgs_nodejs">
@@ -382,7 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetportalgroupresponse">Target<wbr>Portal<wbr>Group<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}list of iSCSI target portal groups{{% /md %}}</dd>
+    <dd>{{% md %}}List of iSCSI target portal groups. Can have 1 portal group at most.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_nodejs">
@@ -424,7 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}State of the operation on the resource{{% /md %}}</dd>
+    <dd>{{% md %}}State of the operation on the resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="status_python">
@@ -433,7 +433,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Operational status of the Disk pool{{% /md %}}</dd>
+    <dd>{{% md %}}Operational status of the iSCSI target.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="target_iqn_python">
@@ -442,7 +442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}iSCSI target iqn (iSCSI Qualified Name); example: iqn.2005-03.org.iscsi:server{{% /md %}}</dd>
+    <dd>{{% md %}}iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tpgs_python">
@@ -451,7 +451,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetportalgroupresponse">Sequence[Target<wbr>Portal<wbr>Group<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}list of iSCSI target portal groups{{% /md %}}</dd>
+    <dd>{{% md %}}List of iSCSI target portal groups. Can have 1 portal group at most.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_python">
@@ -474,9 +474,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -488,7 +485,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}iSCSI initiator iqn (iSCSI Qualified Name); example: iqn.2005-03.org.iscsi:client{{% /md %}}</dd>
+    <dd>{{% md %}}iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="mappedluns_csharp">
@@ -497,7 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of lun names mapped to the ACL{{% /md %}}</dd>
+    <dd>{{% md %}}List of LUN names mapped to the ACL.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="password_csharp">
@@ -506,7 +503,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
+    <dd>{{% md %}}Password for Challenge Handshake Authentication Protocol (CHAP) authentication.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="username_csharp">
@@ -515,7 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
+    <dd>{{% md %}}Username for Challenge Handshake Authentication Protocol (CHAP) authentication.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -530,7 +527,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}iSCSI initiator iqn (iSCSI Qualified Name); example: iqn.2005-03.org.iscsi:client{{% /md %}}</dd>
+    <dd>{{% md %}}iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="mappedluns_go">
@@ -539,7 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of lun names mapped to the ACL{{% /md %}}</dd>
+    <dd>{{% md %}}List of LUN names mapped to the ACL.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="password_go">
@@ -548,7 +545,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
+    <dd>{{% md %}}Password for Challenge Handshake Authentication Protocol (CHAP) authentication.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="username_go">
@@ -557,7 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
+    <dd>{{% md %}}Username for Challenge Handshake Authentication Protocol (CHAP) authentication.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -572,7 +569,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}iSCSI initiator iqn (iSCSI Qualified Name); example: iqn.2005-03.org.iscsi:client{{% /md %}}</dd>
+    <dd>{{% md %}}iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="mappedluns_nodejs">
@@ -581,7 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of lun names mapped to the ACL{{% /md %}}</dd>
+    <dd>{{% md %}}List of LUN names mapped to the ACL.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="password_nodejs">
@@ -590,7 +587,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
+    <dd>{{% md %}}Password for Challenge Handshake Authentication Protocol (CHAP) authentication.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="username_nodejs">
@@ -599,7 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
+    <dd>{{% md %}}Username for Challenge Handshake Authentication Protocol (CHAP) authentication.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -614,7 +611,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}iSCSI initiator iqn (iSCSI Qualified Name); example: iqn.2005-03.org.iscsi:client{{% /md %}}</dd>
+    <dd>{{% md %}}iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="mapped_luns_python">
@@ -623,7 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of lun names mapped to the ACL{{% /md %}}</dd>
+    <dd>{{% md %}}List of LUN names mapped to the ACL.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="password_python">
@@ -632,7 +629,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Password for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
+    <dd>{{% md %}}Password for Challenge Handshake Authentication Protocol (CHAP) authentication.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="username_python">
@@ -641,14 +638,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Username for Challenge Handshake Authentication Protocol (CHAP) authentication{{% /md %}}</dd>
+    <dd>{{% md %}}Username for Challenge Handshake Authentication Protocol (CHAP) authentication.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="attributesresponse">Attributes<wbr>Response</h4>
-
-
-
 
 
 
@@ -672,7 +666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not write protect is enabled on the luns.{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether or not write protect is enabled on the LUNs.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -696,7 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not write protect is enabled on the luns.{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether or not write protect is enabled on the LUNs.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -720,7 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not write protect is enabled on the luns.{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether or not write protect is enabled on the LUNs.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -744,14 +738,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether or not write protect is enabled on the luns.{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether or not write protect is enabled on the LUNs.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="iscsilunresponse">Iscsi<wbr>Lun<wbr>Response</h4>
-
-
-
 
 
 
@@ -766,7 +757,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique Azure resource id of the managed disk. Required.{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Resource ID of the Managed Disk.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -775,7 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Lun name.{{% /md %}}</dd>
+    <dd>{{% md %}}User defined name for iSCSI LUN; example: "lun0"{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -790,7 +781,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique Azure resource id of the managed disk. Required.{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Resource ID of the Managed Disk.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -799,7 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Lun name.{{% /md %}}</dd>
+    <dd>{{% md %}}User defined name for iSCSI LUN; example: "lun0"{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -814,7 +805,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique Azure resource id of the managed disk. Required.{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Resource ID of the Managed Disk.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -823,7 +814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Lun name.{{% /md %}}</dd>
+    <dd>{{% md %}}User defined name for iSCSI LUN; example: "lun0"{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -838,7 +829,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique Azure resource id of the managed disk. Required.{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Resource ID of the Managed Disk.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -847,14 +838,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Lun name.{{% /md %}}</dd>
+    <dd>{{% md %}}User defined name for iSCSI LUN; example: "lun0"{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="targetportalgroupresponse">Target<wbr>Portal<wbr>Group<wbr>Response</h4>
-
-
-
 
 
 
@@ -869,7 +857,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Acl<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Access Control List (ACL) for an iSCSI target lun{{% /md %}}</dd>
+    <dd>{{% md %}}Access Control List (ACL) for an iSCSI target portal group.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="attributes_csharp">
@@ -878,7 +866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attributesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Attributes<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Attributes of an iSCSI target{{% /md %}}</dd>
+    <dd>{{% md %}}Attributes of an iSCSI target portal group.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="endpoints_csharp">
@@ -887,7 +875,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}list of public ip addresses to connect to the iSCSI target{{% /md %}}</dd>
+    <dd>{{% md %}}List of private IPv4 addresses to connect to the iSCSI target.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="luns_csharp">
@@ -896,7 +884,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iscsilunresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Inputs.<wbr>Iscsi<wbr>Lun<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Lun list to be exposed through the iSCSI target. Required{{% /md %}}</dd>
+    <dd>{{% md %}}List of LUNs to be exposed through iSCSI target portal group.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="port_csharp">
@@ -905,7 +893,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port at which the iSCSI target is available{{% /md %}}</dd>
+    <dd>{{% md %}}The port used by iSCSI target portal group.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="tag_csharp">
@@ -914,7 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The tag associated with the iSCSI target portal group{{% /md %}}</dd>
+    <dd>{{% md %}}The tag associated with the iSCSI target portal group.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -929,7 +917,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclresponse">[]Acl<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Access Control List (ACL) for an iSCSI target lun{{% /md %}}</dd>
+    <dd>{{% md %}}Access Control List (ACL) for an iSCSI target portal group.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="attributes_go">
@@ -938,7 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attributesresponse">Attributes<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Attributes of an iSCSI target{{% /md %}}</dd>
+    <dd>{{% md %}}Attributes of an iSCSI target portal group.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="endpoints_go">
@@ -947,7 +935,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}list of public ip addresses to connect to the iSCSI target{{% /md %}}</dd>
+    <dd>{{% md %}}List of private IPv4 addresses to connect to the iSCSI target.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="luns_go">
@@ -956,7 +944,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iscsilunresponse">[]Iscsi<wbr>Lun<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Lun list to be exposed through the iSCSI target. Required{{% /md %}}</dd>
+    <dd>{{% md %}}List of LUNs to be exposed through iSCSI target portal group.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="port_go">
@@ -965,7 +953,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port at which the iSCSI target is available{{% /md %}}</dd>
+    <dd>{{% md %}}The port used by iSCSI target portal group.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="tag_go">
@@ -974,7 +962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The tag associated with the iSCSI target portal group{{% /md %}}</dd>
+    <dd>{{% md %}}The tag associated with the iSCSI target portal group.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -989,7 +977,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclresponse">Acl<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Access Control List (ACL) for an iSCSI target lun{{% /md %}}</dd>
+    <dd>{{% md %}}Access Control List (ACL) for an iSCSI target portal group.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="attributes_nodejs">
@@ -998,7 +986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attributesresponse">Attributes<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Attributes of an iSCSI target{{% /md %}}</dd>
+    <dd>{{% md %}}Attributes of an iSCSI target portal group.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="endpoints_nodejs">
@@ -1007,7 +995,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}list of public ip addresses to connect to the iSCSI target{{% /md %}}</dd>
+    <dd>{{% md %}}List of private IPv4 addresses to connect to the iSCSI target.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="luns_nodejs">
@@ -1016,7 +1004,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iscsilunresponse">Iscsi<wbr>Lun<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Lun list to be exposed through the iSCSI target. Required{{% /md %}}</dd>
+    <dd>{{% md %}}List of LUNs to be exposed through iSCSI target portal group.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="port_nodejs">
@@ -1025,7 +1013,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The port at which the iSCSI target is available{{% /md %}}</dd>
+    <dd>{{% md %}}The port used by iSCSI target portal group.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="tag_nodejs">
@@ -1034,7 +1022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The tag associated with the iSCSI target portal group{{% /md %}}</dd>
+    <dd>{{% md %}}The tag associated with the iSCSI target portal group.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1049,7 +1037,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aclresponse">Sequence[Acl<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Access Control List (ACL) for an iSCSI target lun{{% /md %}}</dd>
+    <dd>{{% md %}}Access Control List (ACL) for an iSCSI target portal group.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="attributes_python">
@@ -1058,7 +1046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attributesresponse">Attributes<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Attributes of an iSCSI target{{% /md %}}</dd>
+    <dd>{{% md %}}Attributes of an iSCSI target portal group.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="endpoints_python">
@@ -1067,7 +1055,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}list of public ip addresses to connect to the iSCSI target{{% /md %}}</dd>
+    <dd>{{% md %}}List of private IPv4 addresses to connect to the iSCSI target.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="luns_python">
@@ -1076,7 +1064,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#iscsilunresponse">Sequence[Iscsi<wbr>Lun<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Lun list to be exposed through the iSCSI target. Required{{% /md %}}</dd>
+    <dd>{{% md %}}List of LUNs to be exposed through iSCSI target portal group.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="port_python">
@@ -1085,7 +1073,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The port at which the iSCSI target is available{{% /md %}}</dd>
+    <dd>{{% md %}}The port used by iSCSI target portal group.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="tag_python">
@@ -1094,7 +1082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The tag associated with the iSCSI target portal group{{% /md %}}</dd>
+    <dd>{{% md %}}The tag associated with the iSCSI target portal group.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

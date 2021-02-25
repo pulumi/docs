@@ -1,8 +1,8 @@
 
 ---
-title: "GetNetworkContainer"
-title_tag: "Function GetNetworkContainer | Package MongoDB Atlas"
-meta_desc: "Explore the GetNetworkContainer function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.NetworkContainer` describes a Network Peering Container. The resource requires your Project ID and container ID."
+title: "getNetworkContainer"
+title_tag: "mongodbatlas.getNetworkContainer"
+meta_desc: "Documentation for the mongodbatlas.getNetworkContainer function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -19,13 +19,13 @@ meta_desc: "Explore the GetNetworkContainer function of the MongoDB Atlas packag
 
 
 
-## Using GetNetworkContainer {#using}
+## Using getNetworkContainer {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getNetworkContainer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetNetworkContainerArgs">GetNetworkContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetNetworkContainerResult">GetNetworkContainerResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getNetworkContainer<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetNetworkContainerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetNetworkContainerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -35,7 +35,7 @@ meta_desc: "Explore the GetNetworkContainer function of the MongoDB Atlas packag
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNetworkContainer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#LookupNetworkContainerArgs">LookupNetworkContainerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#LookupNetworkContainerResult">LookupNetworkContainerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNetworkContainer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupNetworkContainerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupNetworkContainerResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupNetworkContainer` in the Go SDK.
 
@@ -44,7 +44,7 @@ meta_desc: "Explore the GetNetworkContainer function of the MongoDB Atlas packag
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetNetworkContainer </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetNetworkContainerResult.html">GetNetworkContainerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetNetworkContainerArgs.html">GetNetworkContainerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetNetworkContainerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetNetworkContainerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -160,7 +160,7 @@ The following arguments are supported:
 
 
 
-## GetNetworkContainer Result {#result}
+## getNetworkContainer Result {#result}
 
 The following output properties are available:
 

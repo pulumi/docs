@@ -43,9 +43,11 @@ class MyStack : Stack
             CoreDiskType = "cloud_efficiency",
             CoreInstanceQuantity = 2,
             CoreInstanceType = "hbase.sn1.large",
+            Engine = "hbaseue",
             EngineVersion = "2.0",
             MasterInstanceType = "hbase.sn1.large",
             PayType = "PostPaid",
+            VswitchId = "vsw-123456",
             ZoneId = "cn-shenzhen-b",
         });
     }
@@ -72,9 +74,11 @@ func main() {
 			CoreDiskType:         pulumi.String("cloud_efficiency"),
 			CoreInstanceQuantity: pulumi.Int(2),
 			CoreInstanceType:     pulumi.String("hbase.sn1.large"),
+			Engine:               pulumi.String("hbaseue"),
 			EngineVersion:        pulumi.String("2.0"),
 			MasterInstanceType:   pulumi.String("hbase.sn1.large"),
 			PayType:              pulumi.String("PostPaid"),
+			VswitchId:            pulumi.String("vsw-123456"),
 			ZoneId:               pulumi.String("cn-shenzhen-b"),
 		})
 		if err != nil {
@@ -98,9 +102,11 @@ default = alicloud.hbase.Instance("default",
     core_disk_type="cloud_efficiency",
     core_instance_quantity=2,
     core_instance_type="hbase.sn1.large",
+    engine="hbaseue",
     engine_version="2.0",
     master_instance_type="hbase.sn1.large",
     pay_type="PostPaid",
+    vswitch_id="vsw-123456",
     zone_id="cn-shenzhen-b")
 ```
 
@@ -118,9 +124,11 @@ const defaultInstance = new alicloud.hbase.Instance("default", {
     coreDiskType: "cloud_efficiency",
     coreInstanceQuantity: 2,
     coreInstanceType: "hbase.sn1.large",
+    engine: "hbaseue",
     engineVersion: "2.0",
     masterInstanceType: "hbase.sn1.large",
     payType: "PostPaid",
+    vswitchId: "vsw-123456",
     zoneId: "cn-shenzhen-b",
 });
 ```
@@ -135,19 +143,19 @@ const defaultInstance = new alicloud.hbase.Instance("default", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/hbase/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/hbase/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/hbase/#pulumi_alicloud.hbase.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_renew</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cold_storage_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_instance_quantity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">immediate_delete_flag</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ip_white</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintain_end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintain_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pay_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_renew</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cold_storage_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_disk_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">core_instance_quantity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">core_instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">immediate_delete_flag</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ip_white</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintain_end_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintain_start_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pay_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">vswitch_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/hbase?tab=doc#Instance">NewInstance</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/hbase?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/hbase?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewInstance</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Hbase.Instance.html">Instance</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Hbase.InstanceArgs.html">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Instance</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -168,7 +176,7 @@ const defaultInstance = new alicloud.hbase.Instance("default", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/hbase/#InstanceArgs">InstanceArgs</a></span>
+        <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -237,7 +245,7 @@ const defaultInstance = new alicloud.hbase.Instance("default", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/hbase?tab=doc#InstanceArgs">InstanceArgs</a></span>
+        <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -276,7 +284,7 @@ const defaultInstance = new alicloud.hbase.Instance("default", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Hbase.InstanceArgs.html">InstanceArgs</a></span>
+        <span class="property-type"><a href="#inputs">InstanceArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -299,11 +307,11 @@ const defaultInstance = new alicloud.hbase.Instance("default", {
 
 ## Instance Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Instance resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Instance resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -347,7 +355,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account of the cluster web ui.
+    <dd>{{% md %}}The account of the cluster web ui. Size [0-128].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -367,7 +375,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}0 or 800+. 0 means is_cold_storage = false. 800+ means is_cold_storage = true.
+    <dd>{{% md %}}0 or [800, 1000000], step:10-GB increments. 0 means is_cold_storage = false. [800, 1000000] means is_cold_storage = true.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -378,9 +386,9 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}User-defined HBase instance one core node's storage. Valid when engine=hbase/hbaseue. Bds engine no need core_disk_size, space.Unit: GB. Value range:
-- Custom storage space, value range: [20, 8000].
-- Cluster min=400GB, 40-GB increments.
-- Single min=20GB, 1-GB increments.
+- Custom storage space, value range: [20, 64000].
+- Cluster [400, 64000], step:40-GB increments.
+- Single [20-500GB], step:1-GB increments.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -390,7 +398,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，`-`, ``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
+    <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -400,7 +408,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Default=2. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
+    <dd>{{% md %}}Default=2, [1-200]. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -430,7 +438,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds `.
+    <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds`. Single hbase instance need to set engine=hbase, core_instance_quantity=1.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -490,7 +498,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password of the cluster web ui account.
+    <dd>{{% md %}}The password of the cluster web ui account. Size [0-128].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -500,7 +508,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. Not support convert PrePaid to PostPaid.
+    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. And support convert PrePaid to PostPaid from 1.115.0+.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -530,7 +538,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic.
+    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic. Intl site not support classic network.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -585,7 +593,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account of the cluster web ui.
+    <dd>{{% md %}}The account of the cluster web ui. Size [0-128].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -605,7 +613,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}0 or 800+. 0 means is_cold_storage = false. 800+ means is_cold_storage = true.
+    <dd>{{% md %}}0 or [800, 1000000], step:10-GB increments. 0 means is_cold_storage = false. [800, 1000000] means is_cold_storage = true.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -616,9 +624,9 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}User-defined HBase instance one core node's storage. Valid when engine=hbase/hbaseue. Bds engine no need core_disk_size, space.Unit: GB. Value range:
-- Custom storage space, value range: [20, 8000].
-- Cluster min=400GB, 40-GB increments.
-- Single min=20GB, 1-GB increments.
+- Custom storage space, value range: [20, 64000].
+- Cluster [400, 64000], step:40-GB increments.
+- Single [20-500GB], step:1-GB increments.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -628,7 +636,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，`-`, ``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
+    <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -638,7 +646,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Default=2. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
+    <dd>{{% md %}}Default=2, [1-200]. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -668,7 +676,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds `.
+    <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds`. Single hbase instance need to set engine=hbase, core_instance_quantity=1.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -728,7 +736,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password of the cluster web ui account.
+    <dd>{{% md %}}The password of the cluster web ui account. Size [0-128].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -738,7 +746,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. Not support convert PrePaid to PostPaid.
+    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. And support convert PrePaid to PostPaid from 1.115.0+.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -768,7 +776,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic.
+    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic. Intl site not support classic network.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -823,7 +831,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account of the cluster web ui.
+    <dd>{{% md %}}The account of the cluster web ui. Size [0-128].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -843,7 +851,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}0 or 800+. 0 means is_cold_storage = false. 800+ means is_cold_storage = true.
+    <dd>{{% md %}}0 or [800, 1000000], step:10-GB increments. 0 means is_cold_storage = false. [800, 1000000] means is_cold_storage = true.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -854,9 +862,9 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}User-defined HBase instance one core node's storage. Valid when engine=hbase/hbaseue. Bds engine no need core_disk_size, space.Unit: GB. Value range:
-- Custom storage space, value range: [20, 8000].
-- Cluster min=400GB, 40-GB increments.
-- Single min=20GB, 1-GB increments.
+- Custom storage space, value range: [20, 64000].
+- Cluster [400, 64000], step:40-GB increments.
+- Single [20-500GB], step:1-GB increments.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -866,7 +874,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，`-`, ``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
+    <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -876,7 +884,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Default=2. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
+    <dd>{{% md %}}Default=2, [1-200]. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -906,7 +914,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds `.
+    <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds`. Single hbase instance need to set engine=hbase, core_instance_quantity=1.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -966,7 +974,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password of the cluster web ui account.
+    <dd>{{% md %}}The password of the cluster web ui account. Size [0-128].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -976,7 +984,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. Not support convert PrePaid to PostPaid.
+    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. And support convert PrePaid to PostPaid from 1.115.0+.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1006,7 +1014,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic.
+    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic. Intl site not support classic network.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1061,7 +1069,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The account of the cluster web ui.
+    <dd>{{% md %}}The account of the cluster web ui. Size [0-128].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1081,7 +1089,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}0 or 800+. 0 means is_cold_storage = false. 800+ means is_cold_storage = true.
+    <dd>{{% md %}}0 or [800, 1000000], step:10-GB increments. 0 means is_cold_storage = false. [800, 1000000] means is_cold_storage = true.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1092,9 +1100,9 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}User-defined HBase instance one core node's storage. Valid when engine=hbase/hbaseue. Bds engine no need core_disk_size, space.Unit: GB. Value range:
-- Custom storage space, value range: [20, 8000].
-- Cluster min=400GB, 40-GB increments.
-- Single min=20GB, 1-GB increments.
+- Custom storage space, value range: [20, 64000].
+- Cluster [400, 64000], step:40-GB increments.
+- Single [20-500GB], step:1-GB increments.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1104,7 +1112,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，`-`, ``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
+    <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1114,7 +1122,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Default=2. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
+    <dd>{{% md %}}Default=2, [1-200]. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1144,7 +1152,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds `.
+    <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds`. Single hbase instance need to set engine=hbase, core_instance_quantity=1.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1204,7 +1212,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The password of the cluster web ui account.
+    <dd>{{% md %}}The password of the cluster web ui account. Size [0-128].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1214,7 +1222,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. Not support convert PrePaid to PostPaid.
+    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. And support convert PrePaid to PostPaid from 1.115.0+.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1244,7 +1252,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic.
+    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic. Intl site not support classic network.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1494,7 +1502,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/hbase/#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/hbase/#Instance">Instance</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">InstanceState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Instance</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1503,11 +1511,11 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/hbase?tab=doc#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/hbase?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">InstanceState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Instance</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Hbase.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Hbase.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Instance</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">InstanceState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1620,7 +1628,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account of the cluster web ui.
+    <dd>{{% md %}}The account of the cluster web ui. Size [0-128].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1640,7 +1648,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}0 or 800+. 0 means is_cold_storage = false. 800+ means is_cold_storage = true.
+    <dd>{{% md %}}0 or [800, 1000000], step:10-GB increments. 0 means is_cold_storage = false. [800, 1000000] means is_cold_storage = true.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1651,9 +1659,9 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}User-defined HBase instance one core node's storage. Valid when engine=hbase/hbaseue. Bds engine no need core_disk_size, space.Unit: GB. Value range:
-- Custom storage space, value range: [20, 8000].
-- Cluster min=400GB, 40-GB increments.
-- Single min=20GB, 1-GB increments.
+- Custom storage space, value range: [20, 64000].
+- Cluster [400, 64000], step:40-GB increments.
+- Single [20-500GB], step:1-GB increments.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1663,7 +1671,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，`-`, ``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
+    <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1673,7 +1681,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Default=2. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
+    <dd>{{% md %}}Default=2, [1-200]. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1712,7 +1720,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds `.
+    <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds`. Single hbase instance need to set engine=hbase, core_instance_quantity=1.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1802,7 +1810,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password of the cluster web ui account.
+    <dd>{{% md %}}The password of the cluster web ui account. Size [0-128].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1812,7 +1820,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. Not support convert PrePaid to PostPaid.
+    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. And support convert PrePaid to PostPaid from 1.115.0+.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1862,7 +1870,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic.
+    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic. Intl site not support classic network.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1898,7 +1906,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account of the cluster web ui.
+    <dd>{{% md %}}The account of the cluster web ui. Size [0-128].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1918,7 +1926,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}0 or 800+. 0 means is_cold_storage = false. 800+ means is_cold_storage = true.
+    <dd>{{% md %}}0 or [800, 1000000], step:10-GB increments. 0 means is_cold_storage = false. [800, 1000000] means is_cold_storage = true.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1929,9 +1937,9 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}User-defined HBase instance one core node's storage. Valid when engine=hbase/hbaseue. Bds engine no need core_disk_size, space.Unit: GB. Value range:
-- Custom storage space, value range: [20, 8000].
-- Cluster min=400GB, 40-GB increments.
-- Single min=20GB, 1-GB increments.
+- Custom storage space, value range: [20, 64000].
+- Cluster [400, 64000], step:40-GB increments.
+- Single [20-500GB], step:1-GB increments.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1941,7 +1949,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，`-`, ``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
+    <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1951,7 +1959,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Default=2. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
+    <dd>{{% md %}}Default=2, [1-200]. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1990,7 +1998,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds `.
+    <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds`. Single hbase instance need to set engine=hbase, core_instance_quantity=1.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2080,7 +2088,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password of the cluster web ui account.
+    <dd>{{% md %}}The password of the cluster web ui account. Size [0-128].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2090,7 +2098,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. Not support convert PrePaid to PostPaid.
+    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. And support convert PrePaid to PostPaid from 1.115.0+.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2140,7 +2148,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic.
+    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic. Intl site not support classic network.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2176,7 +2184,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account of the cluster web ui.
+    <dd>{{% md %}}The account of the cluster web ui. Size [0-128].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2196,7 +2204,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}0 or 800+. 0 means is_cold_storage = false. 800+ means is_cold_storage = true.
+    <dd>{{% md %}}0 or [800, 1000000], step:10-GB increments. 0 means is_cold_storage = false. [800, 1000000] means is_cold_storage = true.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2207,9 +2215,9 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}User-defined HBase instance one core node's storage. Valid when engine=hbase/hbaseue. Bds engine no need core_disk_size, space.Unit: GB. Value range:
-- Custom storage space, value range: [20, 8000].
-- Cluster min=400GB, 40-GB increments.
-- Single min=20GB, 1-GB increments.
+- Custom storage space, value range: [20, 64000].
+- Cluster [400, 64000], step:40-GB increments.
+- Single [20-500GB], step:1-GB increments.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2219,7 +2227,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，`-`, ``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
+    <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2229,7 +2237,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Default=2. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
+    <dd>{{% md %}}Default=2, [1-200]. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2268,7 +2276,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds `.
+    <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds`. Single hbase instance need to set engine=hbase, core_instance_quantity=1.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2358,7 +2366,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password of the cluster web ui account.
+    <dd>{{% md %}}The password of the cluster web ui account. Size [0-128].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2368,7 +2376,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. Not support convert PrePaid to PostPaid.
+    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. And support convert PrePaid to PostPaid from 1.115.0+.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2418,7 +2426,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic.
+    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic. Intl site not support classic network.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2454,7 +2462,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The account of the cluster web ui.
+    <dd>{{% md %}}The account of the cluster web ui. Size [0-128].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2474,7 +2482,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}0 or 800+. 0 means is_cold_storage = false. 800+ means is_cold_storage = true.
+    <dd>{{% md %}}0 or [800, 1000000], step:10-GB increments. 0 means is_cold_storage = false. [800, 1000000] means is_cold_storage = true.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2485,9 +2493,9 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}User-defined HBase instance one core node's storage. Valid when engine=hbase/hbaseue. Bds engine no need core_disk_size, space.Unit: GB. Value range:
-- Custom storage space, value range: [20, 8000].
-- Cluster min=400GB, 40-GB increments.
-- Single min=20GB, 1-GB increments.
+- Custom storage space, value range: [20, 64000].
+- Cluster [400, 64000], step:40-GB increments.
+- Single [20-500GB], step:1-GB increments.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2497,7 +2505,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，`-`, ``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
+    <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2507,7 +2515,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Default=2. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
+    <dd>{{% md %}}Default=2, [1-200]. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2546,7 +2554,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds `.
+    <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds`. Single hbase instance need to set engine=hbase, core_instance_quantity=1.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2636,7 +2644,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The password of the cluster web ui account.
+    <dd>{{% md %}}The password of the cluster web ui account. Size [0-128].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2646,7 +2654,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. Not support convert PrePaid to PostPaid.
+    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. And support convert PrePaid to PostPaid from 1.115.0+.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2696,7 +2704,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic.
+    <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic. Intl site not support classic network.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2731,18 +2739,6 @@ The following state arguments are supported:
 
 
 <h4 id="instanceslbconnaddr">Instance<wbr>Slb<wbr>Conn<wbr>Addr</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#InstanceSlbConnAddr">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/hbase?tab=doc#InstanceSlbConnAddrOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Hbase.Outputs.InstanceSlbConnAddr.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2877,18 +2873,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="instanceuiproxyconnaddr">Instance<wbr>Ui<wbr>Proxy<wbr>Conn<wbr>Addr</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#InstanceUiProxyConnAddr">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/hbase?tab=doc#InstanceUiProxyConnAddrOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Hbase.Outputs.InstanceUiProxyConnAddr.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3023,18 +3007,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="instancezkconnaddr">Instance<wbr>Zk<wbr>Conn<wbr>Addr</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#InstanceZkConnAddr">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/hbase?tab=doc#InstanceZkConnAddrOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Hbase.Outputs.InstanceZkConnAddr.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

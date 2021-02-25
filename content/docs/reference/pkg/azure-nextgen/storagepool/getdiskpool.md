@@ -1,8 +1,8 @@
 
 ---
-title: "GetDiskPool"
-title_tag: "Function GetDiskPool | Module storagepool | Package Azure NextGen"
-meta_desc: "Explore the GetDiskPool function of the storagepool module, including examples, input properties, output properties, and supporting types. "
+title: "getDiskPool"
+title_tag: "azure-nextgen.storagepool.getDiskPool"
+meta_desc: "Documentation for the azure-nextgen.storagepool.getDiskPool function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetDiskPool function of the storagepool module, includin
 
 
 
-## Using GetDiskPool {#using}
+## Using getDiskPool {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDiskPool<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDiskPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetDiskPoolResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDiskPool<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDiskPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDiskPoolResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetDiskPool function of the storagepool module, includin
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDiskPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDiskPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupDiskPoolResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDiskPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDiskPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDiskPoolResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDiskPool` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetDiskPool function of the storagepool module, includin
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDiskPool </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetDiskPoolResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetDiskPoolArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDiskPoolResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDiskPoolArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -58,7 +58,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Disk Pool.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Disk pool.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -82,7 +82,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Disk Pool.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Disk pool.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -106,7 +106,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Disk Pool.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Disk pool.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -130,7 +130,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Disk Pool.{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the Disk pool.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetDiskPool Result {#result}
+## getDiskPool Result {#result}
 
 The following output properties are available:
 
@@ -163,7 +163,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Logical zone for DiskPool resource.{{% /md %}}</dd>
+    <dd>{{% md %}}Logical zone for Disk pool resource; example: ["1"].{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -181,7 +181,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
+    <dd>{{% md %}}The geo-location where the resource lives.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_csharp">
@@ -199,7 +199,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the operation on the resource{{% /md %}}</dd>
+    <dd>{{% md %}}State of the operation on the resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="status_csharp">
@@ -208,7 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operational status of the Disk pool{{% /md %}}</dd>
+    <dd>{{% md %}}Operational status of the Disk pool.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="subnetid_csharp">
@@ -217,7 +217,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource id of the subnet for the DiskPool{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Resource ID of a Subnet for the Disk pool.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="systemdata_csharp">
@@ -229,6 +229,15 @@ The following output properties are available:
     <dd>{{% md %}}Resource metadata required by ARM RPC{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="tier_csharp">
+<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines the SKU of VM deployed for Disk pool{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -238,22 +247,22 @@ The following output properties are available:
     <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="additionalcapabilities_csharp">
+<a href="#additionalcapabilities_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Capabilities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of additional capabilities for Disk pool.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="disks_csharp">
 <a href="#disks_csharp" style="color: inherit; text-decoration: inherit;">Disks</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Outputs.<wbr>Disk<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of Azure managed disks to attach to a DiskPool{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="sku_csharp">
-<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage<wbr>Pool.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Sku description.{{% /md %}}</dd>
+    <dd>{{% md %}}List of Azure Managed Disks to attach to a Disk pool. Can attach 8 disks at most.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_csharp">
@@ -277,7 +286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Logical zone for DiskPool resource.{{% /md %}}</dd>
+    <dd>{{% md %}}Logical zone for Disk pool resource; example: ["1"].{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -295,7 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
+    <dd>{{% md %}}The geo-location where the resource lives.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_go">
@@ -313,7 +322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the operation on the resource{{% /md %}}</dd>
+    <dd>{{% md %}}State of the operation on the resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="status_go">
@@ -322,7 +331,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operational status of the Disk pool{{% /md %}}</dd>
+    <dd>{{% md %}}Operational status of the Disk pool.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="subnetid_go">
@@ -331,7 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource id of the subnet for the DiskPool{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Resource ID of a Subnet for the Disk pool.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="systemdata_go">
@@ -343,6 +352,15 @@ The following output properties are available:
     <dd>{{% md %}}Resource metadata required by ARM RPC{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="tier_go">
+<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines the SKU of VM deployed for Disk pool{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -352,22 +370,22 @@ The following output properties are available:
     <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="additionalcapabilities_go">
+<a href="#additionalcapabilities_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Capabilities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of additional capabilities for Disk pool.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="disks_go">
 <a href="#disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskresponse">[]Disk<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of Azure managed disks to attach to a DiskPool{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="sku_go">
-<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Sku description.{{% /md %}}</dd>
+    <dd>{{% md %}}List of Azure Managed Disks to attach to a Disk pool. Can attach 8 disks at most.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_go">
@@ -391,7 +409,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Logical zone for DiskPool resource.{{% /md %}}</dd>
+    <dd>{{% md %}}Logical zone for Disk pool resource; example: ["1"].{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -409,7 +427,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
+    <dd>{{% md %}}The geo-location where the resource lives.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_nodejs">
@@ -427,7 +445,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the operation on the resource{{% /md %}}</dd>
+    <dd>{{% md %}}State of the operation on the resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="status_nodejs">
@@ -436,7 +454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operational status of the Disk pool{{% /md %}}</dd>
+    <dd>{{% md %}}Operational status of the Disk pool.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="subnetid_nodejs">
@@ -445,7 +463,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource id of the subnet for the DiskPool{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Resource ID of a Subnet for the Disk pool.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="systemdata_nodejs">
@@ -457,6 +475,15 @@ The following output properties are available:
     <dd>{{% md %}}Resource metadata required by ARM RPC{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="tier_nodejs">
+<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines the SKU of VM deployed for Disk pool{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -466,22 +493,22 @@ The following output properties are available:
     <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="additionalcapabilities_nodejs">
+<a href="#additionalcapabilities_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Capabilities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of additional capabilities for Disk pool.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="disks_nodejs">
 <a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskresponse">Disk<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of Azure managed disks to attach to a DiskPool{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="sku_nodejs">
-<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Sku description.{{% /md %}}</dd>
+    <dd>{{% md %}}List of Azure Managed Disks to attach to a Disk pool. Can attach 8 disks at most.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
@@ -505,7 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Logical zone for DiskPool resource.{{% /md %}}</dd>
+    <dd>{{% md %}}Logical zone for Disk pool resource; example: ["1"].{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -523,7 +550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
+    <dd>{{% md %}}The geo-location where the resource lives.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_python">
@@ -541,7 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}State of the operation on the resource{{% /md %}}</dd>
+    <dd>{{% md %}}State of the operation on the resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="status_python">
@@ -550,7 +577,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Operational status of the Disk pool{{% /md %}}</dd>
+    <dd>{{% md %}}Operational status of the Disk pool.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="subnet_id_python">
@@ -559,7 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource id of the subnet for the DiskPool{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Resource ID of a Subnet for the Disk pool.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="system_data_python">
@@ -571,6 +598,15 @@ The following output properties are available:
     <dd>{{% md %}}Resource metadata required by ARM RPC{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="tier_python">
+<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Determines the SKU of VM deployed for Disk pool{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -580,22 +616,22 @@ The following output properties are available:
     <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="additional_capabilities_python">
+<a href="#additional_capabilities_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>capabilities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of additional capabilities for Disk pool.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="disks_python">
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#diskresponse">Sequence[Disk<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of Azure managed disks to attach to a DiskPool{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="sku_python">
-<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Sku description.{{% /md %}}</dd>
+    <dd>{{% md %}}List of Azure Managed Disks to attach to a Disk pool. Can attach 8 disks at most.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_python">
@@ -618,9 +654,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -632,7 +665,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique Azure resource id of the managed disk. Required.{{% /md %}}</dd>
+    <dd>{{% md %}}Unique Azure Resource ID of the Managed Disk.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -647,7 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique Azure resource id of the managed disk. Required.{{% /md %}}</dd>
+    <dd>{{% md %}}Unique Azure Resource ID of the Managed Disk.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -662,7 +695,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique Azure resource id of the managed disk. Required.{{% /md %}}</dd>
+    <dd>{{% md %}}Unique Azure Resource ID of the Managed Disk.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -677,225 +710,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique Azure resource id of the managed disk. Required.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="skuresponse">Sku<wbr>Response</h4>
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the SKU. Ex - P3. It is typically a letter+number code{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="capacity_csharp">
-<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_csharp">
-<a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_csharp">
-<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_csharp">
-<a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the SKU. Ex - P3. It is typically a letter+number code{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="capacity_go">
-<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_go">
-<a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_go">
-<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_go">
-<a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the SKU. Ex - P3. It is typically a letter+number code{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="capacity_nodejs">
-<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_nodejs">
-<a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_nodejs">
-<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_nodejs">
-<a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the SKU. Ex - P3. It is typically a letter+number code{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="capacity_python">
-<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_python">
-<a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}If the service has different generations of hardware, for the same SKU, then that can be captured here.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_python">
-<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tier_python">
-<a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.{{% /md %}}</dd>
+    <dd>{{% md %}}Unique Azure Resource ID of the Managed Disk.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="systemmetadataresponse">System<wbr>Metadata<wbr>Response</h4>
-
-
-
 
 
 
@@ -910,7 +729,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
@@ -928,7 +747,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
@@ -937,7 +756,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
@@ -946,7 +765,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string identifier for the identity that last modified the resource{{% /md %}}</dd>
+    <dd>{{% md %}}A string identifier for the identity that last modified the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
@@ -955,7 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -970,7 +789,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
@@ -988,7 +807,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
@@ -997,7 +816,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
@@ -1006,7 +825,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string identifier for the identity that last modified the resource{{% /md %}}</dd>
+    <dd>{{% md %}}A string identifier for the identity that last modified the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
@@ -1015,7 +834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1030,7 +849,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
@@ -1048,7 +867,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
@@ -1057,7 +876,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
@@ -1066,7 +885,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A string identifier for the identity that last modified the resource{{% /md %}}</dd>
+    <dd>{{% md %}}A string identifier for the identity that last modified the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
@@ -1075,7 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1090,7 +909,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
@@ -1108,7 +927,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that created the resource: user, application, managedIdentity.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
@@ -1117,7 +936,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
@@ -1126,7 +945,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A string identifier for the identity that last modified the resource{{% /md %}}</dd>
+    <dd>{{% md %}}A string identifier for the identity that last modified the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
@@ -1135,7 +954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity{{% /md %}}</dd>
+    <dd>{{% md %}}The type of identity that last modified the resource: user, application, managedIdentity.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

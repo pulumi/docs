@@ -11,12 +11,1730 @@ meta_desc: "Documentation for the azure-nextgen.compute.VirtualMachine resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Describes a Virtual Machine.
-Latest API Version: 2020-06-01.
+Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+### Create a Linux vm with a patch setting patchMode of AutomaticByPlatform.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        {
+            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            {
+                VmSize = "Standard_D2s_v3",
+            },
+            Location = "westus",
+            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            {
+                NetworkInterfaces = 
+                {
+                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    {
+                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
+                    },
+                },
+            },
+            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            {
+                AdminPassword = "{your-password}",
+                AdminUsername = "{your-username}",
+                ComputerName = "myVM",
+                LinuxConfiguration = new AzureNextGen.Compute.Latest.Inputs.LinuxConfigurationArgs
+                {
+                    PatchSettings = new AzureNextGen.Compute.Latest.Inputs.LinuxPatchSettingsArgs
+                    {
+                        PatchMode = "AutomaticByPlatform",
+                    },
+                    ProvisionVMAgent = true,
+                },
+            },
+            ResourceGroupName = "myResourceGroup",
+            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            {
+                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                {
+                    Offer = "UbuntuServer",
+                    Publisher = "Canonical",
+                    Sku = "16.04-LTS",
+                    Version = "latest",
+                },
+                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                {
+                    Caching = "ReadWrite",
+                    CreateOption = "FromImage",
+                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    {
+                        StorageAccountType = "Premium_LRS",
+                    },
+                    Name = "myVMosdisk",
+                },
+            },
+            VmName = "myVM",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D2s_v3"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+				LinuxConfiguration: &compute.LinuxConfigurationArgs{
+					PatchSettings: &compute.LinuxPatchSettingsArgs{
+						PatchMode: pulumi.String("AutomaticByPlatform"),
+					},
+					ProvisionVMAgent: pulumi.Bool(true),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("UbuntuServer"),
+					Publisher: pulumi.String("Canonical"),
+					Sku:       pulumi.String("16.04-LTS"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Premium_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+        vm_size="Standard_D2s_v3",
+    ),
+    location="westus",
+    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+            id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary=True,
+        )],
+    ),
+    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+        admin_password="{your-password}",
+        admin_username="{your-username}",
+        computer_name="myVM",
+        linux_configuration=azure_nextgen.compute.latest.LinuxConfigurationArgs(
+            patch_settings=azure_nextgen.compute.latest.LinuxPatchSettingsArgs(
+                patch_mode="AutomaticByPlatform",
+            ),
+            provision_vm_agent=True,
+        ),
+    ),
+    resource_group_name="myResourceGroup",
+    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+            offer="UbuntuServer",
+            publisher="Canonical",
+            sku="16.04-LTS",
+            version="latest",
+        ),
+        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+            caching="ReadWrite",
+            create_option="FromImage",
+            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+                storage_account_type="Premium_LRS",
+            ),
+            name="myVMosdisk",
+        ),
+    ),
+    vm_name="myVM")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+    hardwareProfile: {
+        vmSize: "Standard_D2s_v3",
+    },
+    location: "westus",
+    networkProfile: {
+        networkInterfaces: [{
+            id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
+        }],
+    },
+    osProfile: {
+        adminPassword: "{your-password}",
+        adminUsername: "{your-username}",
+        computerName: "myVM",
+        linuxConfiguration: {
+            patchSettings: {
+                patchMode: "AutomaticByPlatform",
+            },
+            provisionVMAgent: true,
+        },
+    },
+    resourceGroupName: "myResourceGroup",
+    storageProfile: {
+        imageReference: {
+            offer: "UbuntuServer",
+            publisher: "Canonical",
+            sku: "16.04-LTS",
+            version: "latest",
+        },
+        osDisk: {
+            caching: "ReadWrite",
+            createOption: "FromImage",
+            managedDisk: {
+                storageAccountType: "Premium_LRS",
+            },
+            name: "myVMosdisk",
+        },
+    },
+    vmName: "myVM",
+});
+
+```
+
+{{% /example %}}
+
+### Create a Linux vm with a patch setting patchMode of ImageDefault.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        {
+            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            {
+                VmSize = "Standard_D2s_v3",
+            },
+            Location = "westus",
+            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            {
+                NetworkInterfaces = 
+                {
+                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    {
+                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
+                    },
+                },
+            },
+            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            {
+                AdminPassword = "{your-password}",
+                AdminUsername = "{your-username}",
+                ComputerName = "myVM",
+                LinuxConfiguration = new AzureNextGen.Compute.Latest.Inputs.LinuxConfigurationArgs
+                {
+                    PatchSettings = new AzureNextGen.Compute.Latest.Inputs.LinuxPatchSettingsArgs
+                    {
+                        PatchMode = "ImageDefault",
+                    },
+                    ProvisionVMAgent = true,
+                },
+            },
+            ResourceGroupName = "myResourceGroup",
+            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            {
+                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                {
+                    Offer = "UbuntuServer",
+                    Publisher = "Canonical",
+                    Sku = "16.04-LTS",
+                    Version = "latest",
+                },
+                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                {
+                    Caching = "ReadWrite",
+                    CreateOption = "FromImage",
+                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    {
+                        StorageAccountType = "Premium_LRS",
+                    },
+                    Name = "myVMosdisk",
+                },
+            },
+            VmName = "myVM",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D2s_v3"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+				LinuxConfiguration: &compute.LinuxConfigurationArgs{
+					PatchSettings: &compute.LinuxPatchSettingsArgs{
+						PatchMode: pulumi.String("ImageDefault"),
+					},
+					ProvisionVMAgent: pulumi.Bool(true),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("UbuntuServer"),
+					Publisher: pulumi.String("Canonical"),
+					Sku:       pulumi.String("16.04-LTS"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Premium_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+        vm_size="Standard_D2s_v3",
+    ),
+    location="westus",
+    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+            id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary=True,
+        )],
+    ),
+    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+        admin_password="{your-password}",
+        admin_username="{your-username}",
+        computer_name="myVM",
+        linux_configuration=azure_nextgen.compute.latest.LinuxConfigurationArgs(
+            patch_settings=azure_nextgen.compute.latest.LinuxPatchSettingsArgs(
+                patch_mode="ImageDefault",
+            ),
+            provision_vm_agent=True,
+        ),
+    ),
+    resource_group_name="myResourceGroup",
+    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+            offer="UbuntuServer",
+            publisher="Canonical",
+            sku="16.04-LTS",
+            version="latest",
+        ),
+        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+            caching="ReadWrite",
+            create_option="FromImage",
+            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+                storage_account_type="Premium_LRS",
+            ),
+            name="myVMosdisk",
+        ),
+    ),
+    vm_name="myVM")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+    hardwareProfile: {
+        vmSize: "Standard_D2s_v3",
+    },
+    location: "westus",
+    networkProfile: {
+        networkInterfaces: [{
+            id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
+        }],
+    },
+    osProfile: {
+        adminPassword: "{your-password}",
+        adminUsername: "{your-username}",
+        computerName: "myVM",
+        linuxConfiguration: {
+            patchSettings: {
+                patchMode: "ImageDefault",
+            },
+            provisionVMAgent: true,
+        },
+    },
+    resourceGroupName: "myResourceGroup",
+    storageProfile: {
+        imageReference: {
+            offer: "UbuntuServer",
+            publisher: "Canonical",
+            sku: "16.04-LTS",
+            version: "latest",
+        },
+        osDisk: {
+            caching: "ReadWrite",
+            createOption: "FromImage",
+            managedDisk: {
+                storageAccountType: "Premium_LRS",
+            },
+            name: "myVMosdisk",
+        },
+    },
+    vmName: "myVM",
+});
+
+```
+
+{{% /example %}}
+
+### Create a VM with Uefi Settings of secureBoot and vTPM.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        {
+            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            {
+                VmSize = "Standard_D2s_v3",
+            },
+            Location = "westus",
+            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            {
+                NetworkInterfaces = 
+                {
+                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    {
+                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
+                    },
+                },
+            },
+            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            {
+                AdminPassword = "{your-password}",
+                AdminUsername = "{your-username}",
+                ComputerName = "myVM",
+            },
+            ResourceGroupName = "myResourceGroup",
+            SecurityProfile = new AzureNextGen.Compute.Latest.Inputs.SecurityProfileArgs
+            {
+                SecurityType = "TrustedLaunch",
+                UefiSettings = new AzureNextGen.Compute.Latest.Inputs.UefiSettingsArgs
+                {
+                    SecureBootEnabled = true,
+                    VTpmEnabled = true,
+                },
+            },
+            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            {
+                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                {
+                    Offer = "windowsserver-gen2preview-preview",
+                    Publisher = "MicrosoftWindowsServer",
+                    Sku = "windows10-tvm",
+                    Version = "18363.592.2001092016",
+                },
+                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                {
+                    Caching = "ReadOnly",
+                    CreateOption = "FromImage",
+                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    {
+                        StorageAccountType = "StandardSSD_LRS",
+                    },
+                    Name = "myVMosdisk",
+                },
+            },
+            VmName = "myVM",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D2s_v3"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			SecurityProfile: &compute.SecurityProfileArgs{
+				SecurityType: "TrustedLaunch",
+				UefiSettings: &compute.UefiSettingsArgs{
+					SecureBootEnabled: pulumi.Bool(true),
+					VTpmEnabled:       pulumi.Bool(true),
+				},
+			},
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("windowsserver-gen2preview-preview"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("windows10-tvm"),
+					Version:   pulumi.String("18363.592.2001092016"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadOnly",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("StandardSSD_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+        vm_size="Standard_D2s_v3",
+    ),
+    location="westus",
+    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+            id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary=True,
+        )],
+    ),
+    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+        admin_password="{your-password}",
+        admin_username="{your-username}",
+        computer_name="myVM",
+    ),
+    resource_group_name="myResourceGroup",
+    security_profile=azure_nextgen.compute.latest.SecurityProfileArgs(
+        security_type="TrustedLaunch",
+        uefi_settings=azure_nextgen.compute.latest.UefiSettingsArgs(
+            secure_boot_enabled=True,
+            v_tpm_enabled=True,
+        ),
+    ),
+    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+            offer="windowsserver-gen2preview-preview",
+            publisher="MicrosoftWindowsServer",
+            sku="windows10-tvm",
+            version="18363.592.2001092016",
+        ),
+        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+            caching="ReadOnly",
+            create_option="FromImage",
+            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+                storage_account_type="StandardSSD_LRS",
+            ),
+            name="myVMosdisk",
+        ),
+    ),
+    vm_name="myVM")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+    hardwareProfile: {
+        vmSize: "Standard_D2s_v3",
+    },
+    location: "westus",
+    networkProfile: {
+        networkInterfaces: [{
+            id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
+        }],
+    },
+    osProfile: {
+        adminPassword: "{your-password}",
+        adminUsername: "{your-username}",
+        computerName: "myVM",
+    },
+    resourceGroupName: "myResourceGroup",
+    securityProfile: {
+        securityType: "TrustedLaunch",
+        uefiSettings: {
+            secureBootEnabled: true,
+            vTpmEnabled: true,
+        },
+    },
+    storageProfile: {
+        imageReference: {
+            offer: "windowsserver-gen2preview-preview",
+            publisher: "MicrosoftWindowsServer",
+            sku: "windows10-tvm",
+            version: "18363.592.2001092016",
+        },
+        osDisk: {
+            caching: "ReadOnly",
+            createOption: "FromImage",
+            managedDisk: {
+                storageAccountType: "StandardSSD_LRS",
+            },
+            name: "myVMosdisk",
+        },
+    },
+    vmName: "myVM",
+});
+
+```
+
+{{% /example %}}
+
+### Create a Windows vm with a patch setting patchMode of AutomaticByOS.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        {
+            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            {
+                VmSize = "Standard_D1_v2",
+            },
+            Location = "westus",
+            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            {
+                NetworkInterfaces = 
+                {
+                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    {
+                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/nsgExistingNic",
+                        Primary = true,
+                    },
+                },
+            },
+            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            {
+                AdminPassword = "{your-password}",
+                AdminUsername = "{your-username}",
+                ComputerName = "myVM",
+                WindowsConfiguration = new AzureNextGen.Compute.Latest.Inputs.WindowsConfigurationArgs
+                {
+                    EnableAutomaticUpdates = true,
+                    PatchSettings = new AzureNextGen.Compute.Latest.Inputs.PatchSettingsArgs
+                    {
+                        PatchMode = "AutomaticByOS",
+                    },
+                    ProvisionVMAgent = true,
+                },
+            },
+            ResourceGroupName = "myResourceGroup",
+            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            {
+                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                {
+                    Offer = "WindowsServer",
+                    Publisher = "MicrosoftWindowsServer",
+                    Sku = "2016-Datacenter",
+                    Version = "latest",
+                },
+                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                {
+                    Caching = "ReadWrite",
+                    CreateOption = "FromImage",
+                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    {
+                        StorageAccountType = "Premium_LRS",
+                    },
+                    Name = "myVMosdisk",
+                },
+            },
+            VmName = "myVM",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/nsgExistingNic"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+				WindowsConfiguration: &compute.WindowsConfigurationArgs{
+					EnableAutomaticUpdates: pulumi.Bool(true),
+					PatchSettings: &compute.PatchSettingsArgs{
+						PatchMode: pulumi.String("AutomaticByOS"),
+					},
+					ProvisionVMAgent: pulumi.Bool(true),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Premium_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+        vm_size="Standard_D1_v2",
+    ),
+    location="westus",
+    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+            id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/nsgExistingNic",
+            primary=True,
+        )],
+    ),
+    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+        admin_password="{your-password}",
+        admin_username="{your-username}",
+        computer_name="myVM",
+        windows_configuration=azure_nextgen.compute.latest.WindowsConfigurationArgs(
+            enable_automatic_updates=True,
+            patch_settings=azure_nextgen.compute.latest.PatchSettingsArgs(
+                patch_mode="AutomaticByOS",
+            ),
+            provision_vm_agent=True,
+        ),
+    ),
+    resource_group_name="myResourceGroup",
+    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+            offer="WindowsServer",
+            publisher="MicrosoftWindowsServer",
+            sku="2016-Datacenter",
+            version="latest",
+        ),
+        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+            caching="ReadWrite",
+            create_option="FromImage",
+            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+                storage_account_type="Premium_LRS",
+            ),
+            name="myVMosdisk",
+        ),
+    ),
+    vm_name="myVM")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+    hardwareProfile: {
+        vmSize: "Standard_D1_v2",
+    },
+    location: "westus",
+    networkProfile: {
+        networkInterfaces: [{
+            id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/nsgExistingNic",
+            primary: true,
+        }],
+    },
+    osProfile: {
+        adminPassword: "{your-password}",
+        adminUsername: "{your-username}",
+        computerName: "myVM",
+        windowsConfiguration: {
+            enableAutomaticUpdates: true,
+            patchSettings: {
+                patchMode: "AutomaticByOS",
+            },
+            provisionVMAgent: true,
+        },
+    },
+    resourceGroupName: "myResourceGroup",
+    storageProfile: {
+        imageReference: {
+            offer: "WindowsServer",
+            publisher: "MicrosoftWindowsServer",
+            sku: "2016-Datacenter",
+            version: "latest",
+        },
+        osDisk: {
+            caching: "ReadWrite",
+            createOption: "FromImage",
+            managedDisk: {
+                storageAccountType: "Premium_LRS",
+            },
+            name: "myVMosdisk",
+        },
+    },
+    vmName: "myVM",
+});
+
+```
+
+{{% /example %}}
+
+### Create a Windows vm with a patch setting patchMode of AutomaticByPlatform and enableHotpatching set to true.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        {
+            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            {
+                VmSize = "Standard_D1_v2",
+            },
+            Location = "westus",
+            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            {
+                NetworkInterfaces = 
+                {
+                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    {
+                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
+                    },
+                },
+            },
+            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            {
+                AdminPassword = "{your-password}",
+                AdminUsername = "{your-username}",
+                ComputerName = "myVM",
+                WindowsConfiguration = new AzureNextGen.Compute.Latest.Inputs.WindowsConfigurationArgs
+                {
+                    EnableAutomaticUpdates = true,
+                    PatchSettings = new AzureNextGen.Compute.Latest.Inputs.PatchSettingsArgs
+                    {
+                        EnableHotpatching = true,
+                        PatchMode = "AutomaticByPlatform",
+                    },
+                    ProvisionVMAgent = true,
+                },
+            },
+            ResourceGroupName = "myResourceGroup",
+            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            {
+                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                {
+                    Offer = "WindowsServer",
+                    Publisher = "MicrosoftWindowsServer",
+                    Sku = "2016-Datacenter",
+                    Version = "latest",
+                },
+                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                {
+                    Caching = "ReadWrite",
+                    CreateOption = "FromImage",
+                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    {
+                        StorageAccountType = "Premium_LRS",
+                    },
+                    Name = "myVMosdisk",
+                },
+            },
+            VmName = "myVM",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+				WindowsConfiguration: &compute.WindowsConfigurationArgs{
+					EnableAutomaticUpdates: pulumi.Bool(true),
+					PatchSettings: &compute.PatchSettingsArgs{
+						EnableHotpatching: pulumi.Bool(true),
+						PatchMode:         pulumi.String("AutomaticByPlatform"),
+					},
+					ProvisionVMAgent: pulumi.Bool(true),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Premium_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+        vm_size="Standard_D1_v2",
+    ),
+    location="westus",
+    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+            id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary=True,
+        )],
+    ),
+    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+        admin_password="{your-password}",
+        admin_username="{your-username}",
+        computer_name="myVM",
+        windows_configuration=azure_nextgen.compute.latest.WindowsConfigurationArgs(
+            enable_automatic_updates=True,
+            patch_settings=azure_nextgen.compute.latest.PatchSettingsArgs(
+                enable_hotpatching=True,
+                patch_mode="AutomaticByPlatform",
+            ),
+            provision_vm_agent=True,
+        ),
+    ),
+    resource_group_name="myResourceGroup",
+    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+            offer="WindowsServer",
+            publisher="MicrosoftWindowsServer",
+            sku="2016-Datacenter",
+            version="latest",
+        ),
+        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+            caching="ReadWrite",
+            create_option="FromImage",
+            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+                storage_account_type="Premium_LRS",
+            ),
+            name="myVMosdisk",
+        ),
+    ),
+    vm_name="myVM")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+    hardwareProfile: {
+        vmSize: "Standard_D1_v2",
+    },
+    location: "westus",
+    networkProfile: {
+        networkInterfaces: [{
+            id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
+        }],
+    },
+    osProfile: {
+        adminPassword: "{your-password}",
+        adminUsername: "{your-username}",
+        computerName: "myVM",
+        windowsConfiguration: {
+            enableAutomaticUpdates: true,
+            patchSettings: {
+                enableHotpatching: true,
+                patchMode: "AutomaticByPlatform",
+            },
+            provisionVMAgent: true,
+        },
+    },
+    resourceGroupName: "myResourceGroup",
+    storageProfile: {
+        imageReference: {
+            offer: "WindowsServer",
+            publisher: "MicrosoftWindowsServer",
+            sku: "2016-Datacenter",
+            version: "latest",
+        },
+        osDisk: {
+            caching: "ReadWrite",
+            createOption: "FromImage",
+            managedDisk: {
+                storageAccountType: "Premium_LRS",
+            },
+            name: "myVMosdisk",
+        },
+    },
+    vmName: "myVM",
+});
+
+```
+
+{{% /example %}}
+
+### Create a Windows vm with a patch setting patchMode of AutomaticByPlatform.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        {
+            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            {
+                VmSize = "Standard_D1_v2",
+            },
+            Location = "westus",
+            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            {
+                NetworkInterfaces = 
+                {
+                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    {
+                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
+                    },
+                },
+            },
+            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            {
+                AdminPassword = "{your-password}",
+                AdminUsername = "{your-username}",
+                ComputerName = "myVM",
+                WindowsConfiguration = new AzureNextGen.Compute.Latest.Inputs.WindowsConfigurationArgs
+                {
+                    EnableAutomaticUpdates = true,
+                    PatchSettings = new AzureNextGen.Compute.Latest.Inputs.PatchSettingsArgs
+                    {
+                        PatchMode = "AutomaticByPlatform",
+                    },
+                    ProvisionVMAgent = true,
+                },
+            },
+            ResourceGroupName = "myResourceGroup",
+            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            {
+                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                {
+                    Offer = "WindowsServer",
+                    Publisher = "MicrosoftWindowsServer",
+                    Sku = "2016-Datacenter",
+                    Version = "latest",
+                },
+                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                {
+                    Caching = "ReadWrite",
+                    CreateOption = "FromImage",
+                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    {
+                        StorageAccountType = "Premium_LRS",
+                    },
+                    Name = "myVMosdisk",
+                },
+            },
+            VmName = "myVM",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+				WindowsConfiguration: &compute.WindowsConfigurationArgs{
+					EnableAutomaticUpdates: pulumi.Bool(true),
+					PatchSettings: &compute.PatchSettingsArgs{
+						PatchMode: pulumi.String("AutomaticByPlatform"),
+					},
+					ProvisionVMAgent: pulumi.Bool(true),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Premium_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+        vm_size="Standard_D1_v2",
+    ),
+    location="westus",
+    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+            id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary=True,
+        )],
+    ),
+    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+        admin_password="{your-password}",
+        admin_username="{your-username}",
+        computer_name="myVM",
+        windows_configuration=azure_nextgen.compute.latest.WindowsConfigurationArgs(
+            enable_automatic_updates=True,
+            patch_settings=azure_nextgen.compute.latest.PatchSettingsArgs(
+                patch_mode="AutomaticByPlatform",
+            ),
+            provision_vm_agent=True,
+        ),
+    ),
+    resource_group_name="myResourceGroup",
+    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+            offer="WindowsServer",
+            publisher="MicrosoftWindowsServer",
+            sku="2016-Datacenter",
+            version="latest",
+        ),
+        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+            caching="ReadWrite",
+            create_option="FromImage",
+            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+                storage_account_type="Premium_LRS",
+            ),
+            name="myVMosdisk",
+        ),
+    ),
+    vm_name="myVM")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+    hardwareProfile: {
+        vmSize: "Standard_D1_v2",
+    },
+    location: "westus",
+    networkProfile: {
+        networkInterfaces: [{
+            id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
+        }],
+    },
+    osProfile: {
+        adminPassword: "{your-password}",
+        adminUsername: "{your-username}",
+        computerName: "myVM",
+        windowsConfiguration: {
+            enableAutomaticUpdates: true,
+            patchSettings: {
+                patchMode: "AutomaticByPlatform",
+            },
+            provisionVMAgent: true,
+        },
+    },
+    resourceGroupName: "myResourceGroup",
+    storageProfile: {
+        imageReference: {
+            offer: "WindowsServer",
+            publisher: "MicrosoftWindowsServer",
+            sku: "2016-Datacenter",
+            version: "latest",
+        },
+        osDisk: {
+            caching: "ReadWrite",
+            createOption: "FromImage",
+            managedDisk: {
+                storageAccountType: "Premium_LRS",
+            },
+            name: "myVMosdisk",
+        },
+    },
+    vmName: "myVM",
+});
+
+```
+
+{{% /example %}}
+
+### Create a Windows vm with a patch setting patchMode of Manual.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        {
+            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            {
+                VmSize = "Standard_D1_v2",
+            },
+            Location = "westus",
+            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            {
+                NetworkInterfaces = 
+                {
+                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    {
+                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
+                    },
+                },
+            },
+            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            {
+                AdminPassword = "{your-password}",
+                AdminUsername = "{your-username}",
+                ComputerName = "myVM",
+                WindowsConfiguration = new AzureNextGen.Compute.Latest.Inputs.WindowsConfigurationArgs
+                {
+                    EnableAutomaticUpdates = true,
+                    PatchSettings = new AzureNextGen.Compute.Latest.Inputs.PatchSettingsArgs
+                    {
+                        PatchMode = "Manual",
+                    },
+                    ProvisionVMAgent = true,
+                },
+            },
+            ResourceGroupName = "myResourceGroup",
+            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            {
+                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                {
+                    Offer = "WindowsServer",
+                    Publisher = "MicrosoftWindowsServer",
+                    Sku = "2016-Datacenter",
+                    Version = "latest",
+                },
+                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                {
+                    Caching = "ReadWrite",
+                    CreateOption = "FromImage",
+                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    {
+                        StorageAccountType = "Premium_LRS",
+                    },
+                    Name = "myVMosdisk",
+                },
+            },
+            VmName = "myVM",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+				WindowsConfiguration: &compute.WindowsConfigurationArgs{
+					EnableAutomaticUpdates: pulumi.Bool(true),
+					PatchSettings: &compute.PatchSettingsArgs{
+						PatchMode: pulumi.String("Manual"),
+					},
+					ProvisionVMAgent: pulumi.Bool(true),
+				},
+			},
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Premium_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+        vm_size="Standard_D1_v2",
+    ),
+    location="westus",
+    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+            id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary=True,
+        )],
+    ),
+    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+        admin_password="{your-password}",
+        admin_username="{your-username}",
+        computer_name="myVM",
+        windows_configuration=azure_nextgen.compute.latest.WindowsConfigurationArgs(
+            enable_automatic_updates=True,
+            patch_settings=azure_nextgen.compute.latest.PatchSettingsArgs(
+                patch_mode="Manual",
+            ),
+            provision_vm_agent=True,
+        ),
+    ),
+    resource_group_name="myResourceGroup",
+    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+            offer="WindowsServer",
+            publisher="MicrosoftWindowsServer",
+            sku="2016-Datacenter",
+            version="latest",
+        ),
+        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+            caching="ReadWrite",
+            create_option="FromImage",
+            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+                storage_account_type="Premium_LRS",
+            ),
+            name="myVMosdisk",
+        ),
+    ),
+    vm_name="myVM")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+    hardwareProfile: {
+        vmSize: "Standard_D1_v2",
+    },
+    location: "westus",
+    networkProfile: {
+        networkInterfaces: [{
+            id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
+        }],
+    },
+    osProfile: {
+        adminPassword: "{your-password}",
+        adminUsername: "{your-username}",
+        computerName: "myVM",
+        windowsConfiguration: {
+            enableAutomaticUpdates: true,
+            patchSettings: {
+                patchMode: "Manual",
+            },
+            provisionVMAgent: true,
+        },
+    },
+    resourceGroupName: "myResourceGroup",
+    storageProfile: {
+        imageReference: {
+            offer: "WindowsServer",
+            publisher: "MicrosoftWindowsServer",
+            sku: "2016-Datacenter",
+            version: "latest",
+        },
+        osDisk: {
+            caching: "ReadWrite",
+            createOption: "FromImage",
+            managedDisk: {
+                storageAccountType: "Premium_LRS",
+            },
+            name: "myVMosdisk",
+        },
+    },
+    vmName: "myVM",
+});
+
+```
+
+{{% /example %}}
+
 ### Create a custom-image vm from an unmanaged generalized os image.
 {{% example csharp %}}
 ```csharp
@@ -714,6 +2432,239 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
             },
             name: "myVMosdisk",
         },
+    },
+    vmName: "myVM",
+});
+
+```
+
+{{% /example %}}
+
+### Create a vm in a Virtual Machine Scale Set with customer assigned platformFaultDomain.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
+        {
+            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
+            {
+                VmSize = "Standard_D1_v2",
+            },
+            Location = "westus",
+            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
+            {
+                NetworkInterfaces = 
+                {
+                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
+                    {
+                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+                        Primary = true,
+                    },
+                },
+            },
+            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
+            {
+                AdminPassword = "{your-password}",
+                AdminUsername = "{your-username}",
+                ComputerName = "myVM",
+            },
+            PlatformFaultDomain = 1,
+            ResourceGroupName = "myResourceGroup",
+            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
+            {
+                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                {
+                    Offer = "WindowsServer",
+                    Publisher = "MicrosoftWindowsServer",
+                    Sku = "2016-Datacenter",
+                    Version = "latest",
+                },
+                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
+                {
+                    Caching = "ReadWrite",
+                    CreateOption = "FromImage",
+                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
+                    {
+                        StorageAccountType = "Standard_LRS",
+                    },
+                    Name = "myVMosdisk",
+                },
+            },
+            VirtualMachineScaleSet = new AzureNextGen.Compute.Latest.Inputs.SubResourceArgs
+            {
+                Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/{existing-flex-vmss-name-with-platformFaultDomainCount-greater-than-1}",
+            },
+            VmName = "myVM",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
+			HardwareProfile: &compute.HardwareProfileArgs{
+				VmSize: pulumi.String("Standard_D1_v2"),
+			},
+			Location: pulumi.String("westus"),
+			NetworkProfile: &compute.NetworkProfileArgs{
+				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
+					&compute.NetworkInterfaceReferenceArgs{
+						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
+						Primary: pulumi.Bool(true),
+					},
+				},
+			},
+			OsProfile: &compute.OSProfileArgs{
+				AdminPassword: pulumi.String("{your-password}"),
+				AdminUsername: pulumi.String("{your-username}"),
+				ComputerName:  pulumi.String("myVM"),
+			},
+			PlatformFaultDomain: pulumi.Int(1),
+			ResourceGroupName:   pulumi.String("myResourceGroup"),
+			StorageProfile: &compute.StorageProfileArgs{
+				ImageReference: &compute.ImageReferenceArgs{
+					Offer:     pulumi.String("WindowsServer"),
+					Publisher: pulumi.String("MicrosoftWindowsServer"),
+					Sku:       pulumi.String("2016-Datacenter"),
+					Version:   pulumi.String("latest"),
+				},
+				OsDisk: &compute.OSDiskArgs{
+					Caching:      "ReadWrite",
+					CreateOption: pulumi.String("FromImage"),
+					ManagedDisk: &compute.ManagedDiskParametersArgs{
+						StorageAccountType: pulumi.String("Standard_LRS"),
+					},
+					Name: pulumi.String("myVMosdisk"),
+				},
+			},
+			VirtualMachineScaleSet: &compute.SubResourceArgs{
+				Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/{existing-flex-vmss-name-with-platformFaultDomainCount-greater-than-1}"),
+			},
+			VmName: pulumi.String("myVM"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
+    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
+        vm_size="Standard_D1_v2",
+    ),
+    location="westus",
+    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
+        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
+            id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary=True,
+        )],
+    ),
+    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
+        admin_password="{your-password}",
+        admin_username="{your-username}",
+        computer_name="myVM",
+    ),
+    platform_fault_domain=1,
+    resource_group_name="myResourceGroup",
+    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
+        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+            offer="WindowsServer",
+            publisher="MicrosoftWindowsServer",
+            sku="2016-Datacenter",
+            version="latest",
+        ),
+        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
+            caching="ReadWrite",
+            create_option="FromImage",
+            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
+                storage_account_type="Standard_LRS",
+            ),
+            name="myVMosdisk",
+        ),
+    ),
+    virtual_machine_scale_set=azure_nextgen.compute.latest.SubResourceArgs(
+        id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/{existing-flex-vmss-name-with-platformFaultDomainCount-greater-than-1}",
+    ),
+    vm_name="myVM")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
+    hardwareProfile: {
+        vmSize: "Standard_D1_v2",
+    },
+    location: "westus",
+    networkProfile: {
+        networkInterfaces: [{
+            id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
+            primary: true,
+        }],
+    },
+    osProfile: {
+        adminPassword: "{your-password}",
+        adminUsername: "{your-username}",
+        computerName: "myVM",
+    },
+    platformFaultDomain: 1,
+    resourceGroupName: "myResourceGroup",
+    storageProfile: {
+        imageReference: {
+            offer: "WindowsServer",
+            publisher: "MicrosoftWindowsServer",
+            sku: "2016-Datacenter",
+            version: "latest",
+        },
+        osDisk: {
+            caching: "ReadWrite",
+            createOption: "FromImage",
+            managedDisk: {
+                storageAccountType: "Standard_LRS",
+            },
+            name: "myVMosdisk",
+        },
+    },
+    virtualMachineScaleSet: {
+        id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/{existing-flex-vmss-name-with-platformFaultDomainCount-greater-than-1}",
     },
     vmName: "myVM",
 });
@@ -1759,744 +3710,6 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
             createOption: "FromImage",
             managedDisk: {
                 storageAccountType: "Standard_LRS",
-            },
-            name: "myVMosdisk",
-        },
-    },
-    vmName: "myVM",
-});
-
-```
-
-{{% /example %}}
-
-### Create a vm with a patch setting patchMode of AutomaticByOS.
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureNextGen = Pulumi.AzureNextGen;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
-        {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
-            {
-                VmSize = "Standard_D1_v2",
-            },
-            Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
-            {
-                NetworkInterfaces = 
-                {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
-                    {
-                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/nsgExistingNic",
-                        Primary = true,
-                    },
-                },
-            },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
-            {
-                AdminPassword = "{your-password}",
-                AdminUsername = "{your-username}",
-                ComputerName = "myVM",
-                WindowsConfiguration = new AzureNextGen.Compute.Latest.Inputs.WindowsConfigurationArgs
-                {
-                    EnableAutomaticUpdates = true,
-                    PatchSettings = new AzureNextGen.Compute.Latest.Inputs.PatchSettingsArgs
-                    {
-                        PatchMode = "AutomaticByOS",
-                    },
-                    ProvisionVMAgent = true,
-                },
-            },
-            ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
-            {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
-                {
-                    Offer = "WindowsServer",
-                    Publisher = "MicrosoftWindowsServer",
-                    Sku = "2016-Datacenter",
-                    Version = "latest",
-                },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
-                {
-                    Caching = "ReadWrite",
-                    CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
-                    {
-                        StorageAccountType = "Premium_LRS",
-                    },
-                    Name = "myVMosdisk",
-                },
-            },
-            VmName = "myVM",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
-			HardwareProfile: &compute.HardwareProfileArgs{
-				VmSize: pulumi.String("Standard_D1_v2"),
-			},
-			Location: pulumi.String("westus"),
-			NetworkProfile: &compute.NetworkProfileArgs{
-				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
-					&compute.NetworkInterfaceReferenceArgs{
-						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/nsgExistingNic"),
-						Primary: pulumi.Bool(true),
-					},
-				},
-			},
-			OsProfile: &compute.OSProfileArgs{
-				AdminPassword: pulumi.String("{your-password}"),
-				AdminUsername: pulumi.String("{your-username}"),
-				ComputerName:  pulumi.String("myVM"),
-				WindowsConfiguration: &compute.WindowsConfigurationArgs{
-					EnableAutomaticUpdates: pulumi.Bool(true),
-					PatchSettings: &compute.PatchSettingsArgs{
-						PatchMode: pulumi.String("AutomaticByOS"),
-					},
-					ProvisionVMAgent: pulumi.Bool(true),
-				},
-			},
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			StorageProfile: &compute.StorageProfileArgs{
-				ImageReference: &compute.ImageReferenceArgs{
-					Offer:     pulumi.String("WindowsServer"),
-					Publisher: pulumi.String("MicrosoftWindowsServer"),
-					Sku:       pulumi.String("2016-Datacenter"),
-					Version:   pulumi.String("latest"),
-				},
-				OsDisk: &compute.OSDiskArgs{
-					Caching:      "ReadWrite",
-					CreateOption: pulumi.String("FromImage"),
-					ManagedDisk: &compute.ManagedDiskParametersArgs{
-						StorageAccountType: pulumi.String("Premium_LRS"),
-					},
-					Name: pulumi.String("myVMosdisk"),
-				},
-			},
-			VmName: pulumi.String("myVM"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azure_nextgen as azure_nextgen
-
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
-        vm_size="Standard_D1_v2",
-    ),
-    location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
-            id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/nsgExistingNic",
-            primary=True,
-        )],
-    ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
-        admin_password="{your-password}",
-        admin_username="{your-username}",
-        computer_name="myVM",
-        windows_configuration=azure_nextgen.compute.latest.WindowsConfigurationArgs(
-            enable_automatic_updates=True,
-            patch_settings=azure_nextgen.compute.latest.PatchSettingsArgs(
-                patch_mode="AutomaticByOS",
-            ),
-            provision_vm_agent=True,
-        ),
-    ),
-    resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
-            offer="WindowsServer",
-            publisher="MicrosoftWindowsServer",
-            sku="2016-Datacenter",
-            version="latest",
-        ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
-            caching="ReadWrite",
-            create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
-                storage_account_type="Premium_LRS",
-            ),
-            name="myVMosdisk",
-        ),
-    ),
-    vm_name="myVM")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure-nextgen";
-
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
-    hardwareProfile: {
-        vmSize: "Standard_D1_v2",
-    },
-    location: "westus",
-    networkProfile: {
-        networkInterfaces: [{
-            id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/nsgExistingNic",
-            primary: true,
-        }],
-    },
-    osProfile: {
-        adminPassword: "{your-password}",
-        adminUsername: "{your-username}",
-        computerName: "myVM",
-        windowsConfiguration: {
-            enableAutomaticUpdates: true,
-            patchSettings: {
-                patchMode: "AutomaticByOS",
-            },
-            provisionVMAgent: true,
-        },
-    },
-    resourceGroupName: "myResourceGroup",
-    storageProfile: {
-        imageReference: {
-            offer: "WindowsServer",
-            publisher: "MicrosoftWindowsServer",
-            sku: "2016-Datacenter",
-            version: "latest",
-        },
-        osDisk: {
-            caching: "ReadWrite",
-            createOption: "FromImage",
-            managedDisk: {
-                storageAccountType: "Premium_LRS",
-            },
-            name: "myVMosdisk",
-        },
-    },
-    vmName: "myVM",
-});
-
-```
-
-{{% /example %}}
-
-### Create a vm with a patch setting patchMode of AutomaticByPlatform.
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureNextGen = Pulumi.AzureNextGen;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
-        {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
-            {
-                VmSize = "Standard_D1_v2",
-            },
-            Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
-            {
-                NetworkInterfaces = 
-                {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
-                    {
-                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
-                        Primary = true,
-                    },
-                },
-            },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
-            {
-                AdminPassword = "{your-password}",
-                AdminUsername = "{your-username}",
-                ComputerName = "myVM",
-                WindowsConfiguration = new AzureNextGen.Compute.Latest.Inputs.WindowsConfigurationArgs
-                {
-                    EnableAutomaticUpdates = true,
-                    PatchSettings = new AzureNextGen.Compute.Latest.Inputs.PatchSettingsArgs
-                    {
-                        PatchMode = "AutomaticByPlatform",
-                    },
-                    ProvisionVMAgent = true,
-                },
-            },
-            ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
-            {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
-                {
-                    Offer = "WindowsServer",
-                    Publisher = "MicrosoftWindowsServer",
-                    Sku = "2016-Datacenter",
-                    Version = "latest",
-                },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
-                {
-                    Caching = "ReadWrite",
-                    CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
-                    {
-                        StorageAccountType = "Premium_LRS",
-                    },
-                    Name = "myVMosdisk",
-                },
-            },
-            VmName = "myVM",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
-			HardwareProfile: &compute.HardwareProfileArgs{
-				VmSize: pulumi.String("Standard_D1_v2"),
-			},
-			Location: pulumi.String("westus"),
-			NetworkProfile: &compute.NetworkProfileArgs{
-				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
-					&compute.NetworkInterfaceReferenceArgs{
-						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
-						Primary: pulumi.Bool(true),
-					},
-				},
-			},
-			OsProfile: &compute.OSProfileArgs{
-				AdminPassword: pulumi.String("{your-password}"),
-				AdminUsername: pulumi.String("{your-username}"),
-				ComputerName:  pulumi.String("myVM"),
-				WindowsConfiguration: &compute.WindowsConfigurationArgs{
-					EnableAutomaticUpdates: pulumi.Bool(true),
-					PatchSettings: &compute.PatchSettingsArgs{
-						PatchMode: pulumi.String("AutomaticByPlatform"),
-					},
-					ProvisionVMAgent: pulumi.Bool(true),
-				},
-			},
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			StorageProfile: &compute.StorageProfileArgs{
-				ImageReference: &compute.ImageReferenceArgs{
-					Offer:     pulumi.String("WindowsServer"),
-					Publisher: pulumi.String("MicrosoftWindowsServer"),
-					Sku:       pulumi.String("2016-Datacenter"),
-					Version:   pulumi.String("latest"),
-				},
-				OsDisk: &compute.OSDiskArgs{
-					Caching:      "ReadWrite",
-					CreateOption: pulumi.String("FromImage"),
-					ManagedDisk: &compute.ManagedDiskParametersArgs{
-						StorageAccountType: pulumi.String("Premium_LRS"),
-					},
-					Name: pulumi.String("myVMosdisk"),
-				},
-			},
-			VmName: pulumi.String("myVM"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azure_nextgen as azure_nextgen
-
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
-        vm_size="Standard_D1_v2",
-    ),
-    location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
-            id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
-            primary=True,
-        )],
-    ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
-        admin_password="{your-password}",
-        admin_username="{your-username}",
-        computer_name="myVM",
-        windows_configuration=azure_nextgen.compute.latest.WindowsConfigurationArgs(
-            enable_automatic_updates=True,
-            patch_settings=azure_nextgen.compute.latest.PatchSettingsArgs(
-                patch_mode="AutomaticByPlatform",
-            ),
-            provision_vm_agent=True,
-        ),
-    ),
-    resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
-            offer="WindowsServer",
-            publisher="MicrosoftWindowsServer",
-            sku="2016-Datacenter",
-            version="latest",
-        ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
-            caching="ReadWrite",
-            create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
-                storage_account_type="Premium_LRS",
-            ),
-            name="myVMosdisk",
-        ),
-    ),
-    vm_name="myVM")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure-nextgen";
-
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
-    hardwareProfile: {
-        vmSize: "Standard_D1_v2",
-    },
-    location: "westus",
-    networkProfile: {
-        networkInterfaces: [{
-            id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
-            primary: true,
-        }],
-    },
-    osProfile: {
-        adminPassword: "{your-password}",
-        adminUsername: "{your-username}",
-        computerName: "myVM",
-        windowsConfiguration: {
-            enableAutomaticUpdates: true,
-            patchSettings: {
-                patchMode: "AutomaticByPlatform",
-            },
-            provisionVMAgent: true,
-        },
-    },
-    resourceGroupName: "myResourceGroup",
-    storageProfile: {
-        imageReference: {
-            offer: "WindowsServer",
-            publisher: "MicrosoftWindowsServer",
-            sku: "2016-Datacenter",
-            version: "latest",
-        },
-        osDisk: {
-            caching: "ReadWrite",
-            createOption: "FromImage",
-            managedDisk: {
-                storageAccountType: "Premium_LRS",
-            },
-            name: "myVMosdisk",
-        },
-    },
-    vmName: "myVM",
-});
-
-```
-
-{{% /example %}}
-
-### Create a vm with a patch setting patchMode of Manual.
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using AzureNextGen = Pulumi.AzureNextGen;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var virtualMachine = new AzureNextGen.Compute.Latest.VirtualMachine("virtualMachine", new AzureNextGen.Compute.Latest.VirtualMachineArgs
-        {
-            HardwareProfile = new AzureNextGen.Compute.Latest.Inputs.HardwareProfileArgs
-            {
-                VmSize = "Standard_D1_v2",
-            },
-            Location = "westus",
-            NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.NetworkProfileArgs
-            {
-                NetworkInterfaces = 
-                {
-                    new AzureNextGen.Compute.Latest.Inputs.NetworkInterfaceReferenceArgs
-                    {
-                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
-                        Primary = true,
-                    },
-                },
-            },
-            OsProfile = new AzureNextGen.Compute.Latest.Inputs.OSProfileArgs
-            {
-                AdminPassword = "{your-password}",
-                AdminUsername = "{your-username}",
-                ComputerName = "myVM",
-                WindowsConfiguration = new AzureNextGen.Compute.Latest.Inputs.WindowsConfigurationArgs
-                {
-                    EnableAutomaticUpdates = true,
-                    PatchSettings = new AzureNextGen.Compute.Latest.Inputs.PatchSettingsArgs
-                    {
-                        PatchMode = "Manual",
-                    },
-                    ProvisionVMAgent = true,
-                },
-            },
-            ResourceGroupName = "myResourceGroup",
-            StorageProfile = new AzureNextGen.Compute.Latest.Inputs.StorageProfileArgs
-            {
-                ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
-                {
-                    Offer = "WindowsServer",
-                    Publisher = "MicrosoftWindowsServer",
-                    Sku = "2016-Datacenter",
-                    Version = "latest",
-                },
-                OsDisk = new AzureNextGen.Compute.Latest.Inputs.OSDiskArgs
-                {
-                    Caching = "ReadWrite",
-                    CreateOption = "FromImage",
-                    ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.ManagedDiskParametersArgs
-                    {
-                        StorageAccountType = "Premium_LRS",
-                    },
-                    Name = "myVMosdisk",
-                },
-            },
-            VmName = "myVM",
-        });
-    }
-
-}
-
-```
-
-{{% /example %}}
-
-{{% example go %}}
-
-```go
-package main
-
-import (
-	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := compute.NewVirtualMachine(ctx, "virtualMachine", &compute.VirtualMachineArgs{
-			HardwareProfile: &compute.HardwareProfileArgs{
-				VmSize: pulumi.String("Standard_D1_v2"),
-			},
-			Location: pulumi.String("westus"),
-			NetworkProfile: &compute.NetworkProfileArgs{
-				NetworkInterfaces: compute.NetworkInterfaceReferenceArray{
-					&compute.NetworkInterfaceReferenceArgs{
-						Id:      pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}"),
-						Primary: pulumi.Bool(true),
-					},
-				},
-			},
-			OsProfile: &compute.OSProfileArgs{
-				AdminPassword: pulumi.String("{your-password}"),
-				AdminUsername: pulumi.String("{your-username}"),
-				ComputerName:  pulumi.String("myVM"),
-				WindowsConfiguration: &compute.WindowsConfigurationArgs{
-					EnableAutomaticUpdates: pulumi.Bool(true),
-					PatchSettings: &compute.PatchSettingsArgs{
-						PatchMode: pulumi.String("Manual"),
-					},
-					ProvisionVMAgent: pulumi.Bool(true),
-				},
-			},
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			StorageProfile: &compute.StorageProfileArgs{
-				ImageReference: &compute.ImageReferenceArgs{
-					Offer:     pulumi.String("WindowsServer"),
-					Publisher: pulumi.String("MicrosoftWindowsServer"),
-					Sku:       pulumi.String("2016-Datacenter"),
-					Version:   pulumi.String("latest"),
-				},
-				OsDisk: &compute.OSDiskArgs{
-					Caching:      "ReadWrite",
-					CreateOption: pulumi.String("FromImage"),
-					ManagedDisk: &compute.ManagedDiskParametersArgs{
-						StorageAccountType: pulumi.String("Premium_LRS"),
-					},
-					Name: pulumi.String("myVMosdisk"),
-				},
-			},
-			VmName: pulumi.String("myVM"),
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-
-```
-
-{{% /example %}}
-
-{{% example python %}}
-
-```python
-import pulumi
-import pulumi_azure_nextgen as azure_nextgen
-
-virtual_machine = azure_nextgen.compute.latest.VirtualMachine("virtualMachine",
-    hardware_profile=azure_nextgen.compute.latest.HardwareProfileArgs(
-        vm_size="Standard_D1_v2",
-    ),
-    location="westus",
-    network_profile=azure_nextgen.compute.latest.NetworkProfileArgs(
-        network_interfaces=[azure_nextgen.compute.latest.NetworkInterfaceReferenceArgs(
-            id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
-            primary=True,
-        )],
-    ),
-    os_profile=azure_nextgen.compute.latest.OSProfileArgs(
-        admin_password="{your-password}",
-        admin_username="{your-username}",
-        computer_name="myVM",
-        windows_configuration=azure_nextgen.compute.latest.WindowsConfigurationArgs(
-            enable_automatic_updates=True,
-            patch_settings=azure_nextgen.compute.latest.PatchSettingsArgs(
-                patch_mode="Manual",
-            ),
-            provision_vm_agent=True,
-        ),
-    ),
-    resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.compute.latest.StorageProfileArgs(
-        image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
-            offer="WindowsServer",
-            publisher="MicrosoftWindowsServer",
-            sku="2016-Datacenter",
-            version="latest",
-        ),
-        os_disk=azure_nextgen.compute.latest.OSDiskArgs(
-            caching="ReadWrite",
-            create_option="FromImage",
-            managed_disk=azure_nextgen.compute.latest.ManagedDiskParametersArgs(
-                storage_account_type="Premium_LRS",
-            ),
-            name="myVMosdisk",
-        ),
-    ),
-    vm_name="myVM")
-
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure_nextgen from "@pulumi/azure-nextgen";
-
-const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualMachine", {
-    hardwareProfile: {
-        vmSize: "Standard_D1_v2",
-    },
-    location: "westus",
-    networkProfile: {
-        networkInterfaces: [{
-            id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/networkInterfaces/{existing-nic-name}",
-            primary: true,
-        }],
-    },
-    osProfile: {
-        adminPassword: "{your-password}",
-        adminUsername: "{your-username}",
-        computerName: "myVM",
-        windowsConfiguration: {
-            enableAutomaticUpdates: true,
-            patchSettings: {
-                patchMode: "Manual",
-            },
-            provisionVMAgent: true,
-        },
-    },
-    resourceGroupName: "myResourceGroup",
-    storageProfile: {
-        imageReference: {
-            offer: "WindowsServer",
-            publisher: "MicrosoftWindowsServer",
-            sku: "2016-Datacenter",
-            version: "latest",
-        },
-        osDisk: {
-            caching: "ReadWrite",
-            createOption: "FromImage",
-            managedDisk: {
-                storageAccountType: "Premium_LRS",
             },
             name: "myVMosdisk",
         },
@@ -4955,19 +6168,19 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VirtualMachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[AdditionalCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">availability_set</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">billing_profile</span><span class="p">:</span> <span class="nx">Optional[BillingProfileArgs]</span> = None<span class="p">, </span><span class="nx">diagnostics_profile</span><span class="p">:</span> <span class="nx">Optional[DiagnosticsProfileArgs]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, VirtualMachineEvictionPolicyTypes]]</span> = None<span class="p">, </span><span class="nx">extensions_time_budget</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hardware_profile</span><span class="p">:</span> <span class="nx">Optional[HardwareProfileArgs]</span> = None<span class="p">, </span><span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">host_group</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineIdentityArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[NetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[OSProfileArgs]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[PlanArgs]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[Union[str, VirtualMachinePriorityTypes]]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_profile</span><span class="p">:</span> <span class="nx">Optional[SecurityProfileArgs]</span> = None<span class="p">, </span><span class="nx">storage_profile</span><span class="p">:</span> <span class="nx">Optional[StorageProfileArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_scale_set</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">vm_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_capabilities</span><span class="p">:</span> <span class="nx">Optional[AdditionalCapabilitiesArgs]</span> = None<span class="p">, </span><span class="nx">availability_set</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">billing_profile</span><span class="p">:</span> <span class="nx">Optional[BillingProfileArgs]</span> = None<span class="p">, </span><span class="nx">diagnostics_profile</span><span class="p">:</span> <span class="nx">Optional[DiagnosticsProfileArgs]</span> = None<span class="p">, </span><span class="nx">eviction_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, VirtualMachineEvictionPolicyTypes]]</span> = None<span class="p">, </span><span class="nx">extended_location</span><span class="p">:</span> <span class="nx">Optional[ExtendedLocationArgs]</span> = None<span class="p">, </span><span class="nx">extensions_time_budget</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hardware_profile</span><span class="p">:</span> <span class="nx">Optional[HardwareProfileArgs]</span> = None<span class="p">, </span><span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">host_group</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineIdentityArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[NetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[OSProfileArgs]</span> = None<span class="p">, </span><span class="nx">plan</span><span class="p">:</span> <span class="nx">Optional[PlanArgs]</span> = None<span class="p">, </span><span class="nx">platform_fault_domain</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[Union[str, VirtualMachinePriorityTypes]]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_profile</span><span class="p">:</span> <span class="nx">Optional[SecurityProfileArgs]</span> = None<span class="p">, </span><span class="nx">storage_profile</span><span class="p">:</span> <span class="nx">Optional[StorageProfileArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_scale_set</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">vm_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VirtualMachineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VirtualMachineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -4988,7 +6201,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualMachineArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -5057,7 +6270,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualMachineArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -5096,7 +6309,7 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VirtualMachineArgs</span>
+        <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -5119,26 +6332,17 @@ const virtualMachine = new azure_nextgen.compute.latest.VirtualMachine("virtualM
 
 ## VirtualMachine Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VirtualMachine resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The VirtualMachine resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -5204,6 +6408,15 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. <br><br>For Azure Spot virtual machines, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2019-03-01. <br><br>For Azure Spot scale sets, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2017-10-30-preview.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_csharp">
+<a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Virtual Machine.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="extensionstimebudget_csharp">
 <a href="#extensionstimebudget_csharp" style="color: inherit; text-decoration: inherit;">Extensions<wbr>Time<wbr>Budget</a>
 </span>
@@ -5258,6 +6471,15 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="networkprofile_csharp">
 <a href="#networkprofile_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
@@ -5283,6 +6505,15 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#plan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="platformfaultdomain_csharp">
+<a href="#platformfaultdomain_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Fault<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the scale set logical fault domain into which the Virtual Machine will be created. By default, the Virtual Machine will by automatically assigned to a fault domain that best maintains balance across available fault domains.<br><li>This is applicable only if the 'virtualMachineScaleSet' property of this Virtual Machine is set.<li>The Virtual Machine Scale Set that is referenced, must have 'platformFaultDomainCount' &gt; 1.<li>This property cannot be updated once the Virtual Machine is created.<li>Fault domain assignment can be viewed in the Virtual Machine Instance View.<br><br>Minimum api‐version: 2020‐12‐01{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
@@ -5354,15 +6585,6 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -5426,6 +6648,15 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. <br><br>For Azure Spot virtual machines, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2019-03-01. <br><br>For Azure Spot scale sets, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2017-10-30-preview.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_go">
+<a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Virtual Machine.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="extensionstimebudget_go">
 <a href="#extensionstimebudget_go" style="color: inherit; text-decoration: inherit;">Extensions<wbr>Time<wbr>Budget</a>
 </span>
@@ -5480,6 +6711,15 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="networkprofile_go">
 <a href="#networkprofile_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Profile</a>
 </span>
@@ -5505,6 +6745,15 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#plan">Plan</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="platformfaultdomain_go">
+<a href="#platformfaultdomain_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Fault<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the scale set logical fault domain into which the Virtual Machine will be created. By default, the Virtual Machine will by automatically assigned to a fault domain that best maintains balance across available fault domains.<br><li>This is applicable only if the 'virtualMachineScaleSet' property of this Virtual Machine is set.<li>The Virtual Machine Scale Set that is referenced, must have 'platformFaultDomainCount' &gt; 1.<li>This property cannot be updated once the Virtual Machine is created.<li>Fault domain assignment can be viewed in the Virtual Machine Instance View.<br><br>Minimum api‐version: 2020‐12‐01{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="priority_go">
@@ -5576,15 +6825,6 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -5648,6 +6888,15 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. <br><br>For Azure Spot virtual machines, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2019-03-01. <br><br>For Azure Spot scale sets, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2017-10-30-preview.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_nodejs">
+<a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Virtual Machine.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="extensionstimebudget_nodejs">
 <a href="#extensionstimebudget_nodejs" style="color: inherit; text-decoration: inherit;">extensions<wbr>Time<wbr>Budget</a>
 </span>
@@ -5702,6 +6951,15 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="networkprofile_nodejs">
 <a href="#networkprofile_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Profile</a>
 </span>
@@ -5727,6 +6985,15 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#plan">Plan</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="platformfaultdomain_nodejs">
+<a href="#platformfaultdomain_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Fault<wbr>Domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies the scale set logical fault domain into which the Virtual Machine will be created. By default, the Virtual Machine will by automatically assigned to a fault domain that best maintains balance across available fault domains.<br><li>This is applicable only if the 'virtualMachineScaleSet' property of this Virtual Machine is set.<li>The Virtual Machine Scale Set that is referenced, must have 'platformFaultDomainCount' &gt; 1.<li>This property cannot be updated once the Virtual Machine is created.<li>Fault domain assignment can be viewed in the Virtual Machine Instance View.<br><br>Minimum api‐version: 2020‐12‐01{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
@@ -5798,15 +7065,6 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -5870,6 +7128,15 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. <br><br>For Azure Spot virtual machines, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2019-03-01. <br><br>For Azure Spot scale sets, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2017-10-30-preview.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extended_location_python">
+<a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the Virtual Machine.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="extensions_time_budget_python">
 <a href="#extensions_time_budget_python" style="color: inherit; text-decoration: inherit;">extensions_<wbr>time_<wbr>budget</a>
 </span>
@@ -5924,6 +7191,15 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="network_profile_python">
 <a href="#network_profile_python" style="color: inherit; text-decoration: inherit;">network_<wbr>profile</a>
 </span>
@@ -5949,6 +7225,15 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#plan">Plan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="platform_fault_domain_python">
+<a href="#platform_fault_domain_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>fault_<wbr>domain</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies the scale set logical fault domain into which the Virtual Machine will be created. By default, the Virtual Machine will by automatically assigned to a fault domain that best maintains balance across available fault domains.<br><li>This is applicable only if the 'virtualMachineScaleSet' property of this Virtual Machine is set.<li>The Virtual Machine Scale Set that is referenced, must have 'platformFaultDomainCount' &gt; 1.<li>This property cannot be updated once the Virtual Machine is created.<li>Fault domain assignment can be viewed in the Virtual Machine Instance View.<br><br>Minimum api‐version: 2020‐12‐01{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="priority_python">
@@ -7188,7 +8473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Failed", "Succeeded", or "CompletedWithWarnings."{{% /md %}}</dd>
+    <dd>{{% md %}}The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Unknown", "Failed", "Succeeded", or "CompletedWithWarnings."{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7266,7 +8551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Failed", "Succeeded", or "CompletedWithWarnings."{{% /md %}}</dd>
+    <dd>{{% md %}}The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Unknown", "Failed", "Succeeded", or "CompletedWithWarnings."{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7344,7 +8629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Failed", "Succeeded", or "CompletedWithWarnings."{{% /md %}}</dd>
+    <dd>{{% md %}}The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Unknown", "Failed", "Succeeded", or "CompletedWithWarnings."{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7422,7 +8707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Failed", "Succeeded", or "CompletedWithWarnings."{{% /md %}}</dd>
+    <dd>{{% md %}}The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Unknown", "Failed", "Succeeded", or "CompletedWithWarnings."{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7990,6 +9275,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="detachoption_csharp">
+<a href="#detachoption_csharp" style="color: inherit; text-decoration: inherit;">Detach<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#diskdetachoptiontypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Disk<wbr>Detach<wbr>Option<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. <br><br> detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. <br><br> This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
 </span>
@@ -8084,6 +9378,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#cachingtypes">Caching<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="detachoption_go">
+<a href="#detachoption_go" style="color: inherit; text-decoration: inherit;">Detach<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#diskdetachoptiontypes">Disk<wbr>Detach<wbr>Option<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. <br><br> detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. <br><br> This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
@@ -8182,6 +9485,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="detachoption_nodejs">
+<a href="#detachoption_nodejs" style="color: inherit; text-decoration: inherit;">detach<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#diskdetachoptiontypes">Disk<wbr>Detach<wbr>Option<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. <br><br> detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. <br><br> This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
 </span>
@@ -8276,6 +9588,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#cachingtypes">Caching<wbr>Types</a></span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="detach_option_python">
+<a href="#detach_option_python" style="color: inherit; text-decoration: inherit;">detach_<wbr>option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#diskdetachoptiontypes">Disk<wbr>Detach<wbr>Option<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. <br><br> detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. <br><br> This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disk_size_gb_python">
@@ -8394,6 +9715,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="detachoption_csharp">
+<a href="#detachoption_csharp" style="color: inherit; text-decoration: inherit;">Detach<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. <br><br> detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. <br><br> This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>GB</a>
 </span>
@@ -8506,6 +9836,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="detachoption_go">
+<a href="#detachoption_go" style="color: inherit; text-decoration: inherit;">Detach<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. <br><br> detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. <br><br> This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
@@ -8622,6 +9961,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="detachoption_nodejs">
+<a href="#detachoption_nodejs" style="color: inherit; text-decoration: inherit;">detach<wbr>Option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. <br><br> detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. <br><br> This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>GB</a>
 </span>
@@ -8734,6 +10082,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="detach_option_python">
+<a href="#detach_option_python" style="color: inherit; text-decoration: inherit;">detach_<wbr>option</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. <br><br> detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. <br><br> This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disk_size_gb_python">
@@ -9231,6 +10588,36 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Empty</dd>
     <dt>ATTACH</dt>
     <dd>Attach</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="diskdetachoptiontypes">Disk<wbr>Detach<wbr>Option<wbr>Types</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Force<wbr>Detach</dt>
+    <dd>ForceDetach</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Disk<wbr>Detach<wbr>Option<wbr>Types<wbr>Force<wbr>Detach</dt>
+    <dd>ForceDetach</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Force<wbr>Detach</dt>
+    <dd>ForceDetach</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>FORCE_DETACH</dt>
+    <dd>ForceDetach</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9760,6 +11147,232 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
+<h4 id="extendedlocation">Extended<wbr>Location</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#extendedlocationtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Extended<wbr>Location<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#extendedlocationtypes">Extended<wbr>Location<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#extendedlocationtypes">Extended<wbr>Location<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#extendedlocationtypes">Extended<wbr>Location<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="extendedlocationresponse">Extended<wbr>Location<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="extendedlocationtypes">Extended<wbr>Location<wbr>Types</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Edge<wbr>Zone</dt>
+    <dd>EdgeZone</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Extended<wbr>Location<wbr>Types<wbr>Edge<wbr>Zone</dt>
+    <dd>EdgeZone</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Edge<wbr>Zone</dt>
+    <dd>EdgeZone</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>EDGE_ZONE</dt>
+    <dd>EdgeZone</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="hardwareprofile">Hardware<wbr>Profile</h4>
 
 {{% choosable language csharp %}}
@@ -9773,7 +11386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#virtualmachinesizetypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Virtual<wbr>Machine<wbr>Size<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the size of the virtual machine. For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set. For a list of available sizes use these APIs:  <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). <br><br> This list of sizes is no longer updated and the **VirtualMachineSizeTypes** string constants will be removed from the subsequent REST API specification. Use [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) to get the latest sizes.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9788,7 +11401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#virtualmachinesizetypes">Virtual<wbr>Machine<wbr>Size<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the size of the virtual machine. For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set. For a list of available sizes use these APIs:  <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). <br><br> This list of sizes is no longer updated and the **VirtualMachineSizeTypes** string constants will be removed from the subsequent REST API specification. Use [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) to get the latest sizes.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9803,7 +11416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#virtualmachinesizetypes">Virtual<wbr>Machine<wbr>Size<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the size of the virtual machine. For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set. For a list of available sizes use these APIs:  <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). <br><br> This list of sizes is no longer updated and the **VirtualMachineSizeTypes** string constants will be removed from the subsequent REST API specification. Use [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) to get the latest sizes.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9818,7 +11431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#virtualmachinesizetypes">Virtual<wbr>Machine<wbr>Size<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the size of the virtual machine. For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set. For a list of available sizes use these APIs:  <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). <br><br> This list of sizes is no longer updated and the **VirtualMachineSizeTypes** string constants will be removed from the subsequent REST API specification. Use [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) to get the latest sizes.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9835,7 +11448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of the virtual machine. For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set. For a list of available sizes use these APIs:  <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). <br><br> This list of sizes is no longer updated and the **VirtualMachineSizeTypes** string constants will be removed from the subsequent REST API specification. Use [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) to get the latest sizes.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9850,7 +11463,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of the virtual machine. For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set. For a list of available sizes use these APIs:  <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). <br><br> This list of sizes is no longer updated and the **VirtualMachineSizeTypes** string constants will be removed from the subsequent REST API specification. Use [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) to get the latest sizes.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9865,7 +11478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of the virtual machine. For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set. For a list of available sizes use these APIs:  <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). <br><br> This list of sizes is no longer updated and the **VirtualMachineSizeTypes** string constants will be removed from the subsequent REST API specification. Use [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) to get the latest sizes.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9880,7 +11493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the size of the virtual machine. For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set. For a list of available sizes use these APIs:  <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). <br><br> This list of sizes is no longer updated and the **VirtualMachineSizeTypes** string constants will be removed from the subsequent REST API specification. Use [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) to get the latest sizes.{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the size of the virtual machine. <br><br> The enum data type is currently deprecated and will be removed by December 23rd 2023. <br><br> Recommended way to get the list of available sizes is using these APIs: <br><br> [List all available virtual machine sizes in an availability set](https://docs.microsoft.com/rest/api/compute/availabilitysets/listavailablesizes) <br><br> [List all available virtual machine sizes in a region]( https://docs.microsoft.com/en-us/rest/api/compute/resourceskus/list) <br><br> [List all available virtual machine sizes for resizing](https://docs.microsoft.com/rest/api/compute/virtualmachines/listavailablesizes). For more information about virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes). <br><br> The available VM sizes depend on region and availability set.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -10329,52 +11942,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the platform image or marketplace image used to create the virtual machine. The allowed formats are Major.Minor.Build or 'latest'. Major, Minor, and Build are decimal numbers. Specify 'latest' to use the latest version of an image available at deploy time. Even if you use 'latest', the VM image will not automatically update after deploy time even if a new version becomes available.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="inguestpatchmode">In<wbr>Guest<wbr>Patch<wbr>Mode</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Manual</dt>
-    <dd>Manual</dd>
-    <dt>Automatic<wbr>By<wbr>OS</dt>
-    <dd>AutomaticByOS</dd>
-    <dt>Automatic<wbr>By<wbr>Platform</dt>
-    <dd>AutomaticByPlatform</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular">
-    <dt>In<wbr>Guest<wbr>Patch<wbr>Mode<wbr>Manual</dt>
-    <dd>Manual</dd>
-    <dt>In<wbr>Guest<wbr>Patch<wbr>Mode<wbr>Automatic<wbr>By<wbr>OS</dt>
-    <dd>AutomaticByOS</dd>
-    <dt>In<wbr>Guest<wbr>Patch<wbr>Mode<wbr>Automatic<wbr>By<wbr>Platform</dt>
-    <dd>AutomaticByPlatform</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Manual</dt>
-    <dd>Manual</dd>
-    <dt>Automatic<wbr>By<wbr>OS</dt>
-    <dd>AutomaticByOS</dd>
-    <dt>Automatic<wbr>By<wbr>Platform</dt>
-    <dd>AutomaticByPlatform</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular">
-    <dt>MANUAL</dt>
-    <dd>Manual</dd>
-    <dt>AUTOMATIC_BY_OS</dt>
-    <dd>AutomaticByOS</dd>
-    <dt>AUTOMATIC_BY_PLATFORM</dt>
-    <dd>AutomaticByPlatform</dd>
 </dl>
 {{% /choosable %}}
 
@@ -11162,15 +12729,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The number of all available patches expected to be installed over the course of the patch installation operation.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="rebootstatus_csharp">
-<a href="#rebootstatus_csharp" style="color: inherit; text-decoration: inherit;">Reboot<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The reboot status of the machine after the patch operation. It will be in "NotNeeded" status if reboot is not needed after the patch operation. "Required" will be the status once the patch is applied and machine is required to reboot. "Started" will be the reboot status when the machine has started to reboot. "Failed" will be the status if the machine is failed to reboot. "Completed" will be the status once the machine is rebooted successfully{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
 </span>
@@ -11180,22 +12738,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The UTC timestamp when the operation began.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="startedby_csharp">
-<a href="#startedby_csharp" style="color: inherit; text-decoration: inherit;">Started<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The person or system account that started the operation{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Failed", "Succeeded", or "CompletedWithWarnings."{{% /md %}}</dd>
+    <dd>{{% md %}}The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Unknown", "Failed", "Succeeded", or "CompletedWithWarnings."{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -11285,15 +12834,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The number of all available patches expected to be installed over the course of the patch installation operation.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="rebootstatus_go">
-<a href="#rebootstatus_go" style="color: inherit; text-decoration: inherit;">Reboot<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The reboot status of the machine after the patch operation. It will be in "NotNeeded" status if reboot is not needed after the patch operation. "Required" will be the status once the patch is applied and machine is required to reboot. "Started" will be the reboot status when the machine has started to reboot. "Failed" will be the status if the machine is failed to reboot. "Completed" will be the status once the machine is rebooted successfully{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
 </span>
@@ -11303,22 +12843,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The UTC timestamp when the operation began.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="startedby_go">
-<a href="#startedby_go" style="color: inherit; text-decoration: inherit;">Started<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The person or system account that started the operation{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Failed", "Succeeded", or "CompletedWithWarnings."{{% /md %}}</dd>
+    <dd>{{% md %}}The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Unknown", "Failed", "Succeeded", or "CompletedWithWarnings."{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -11408,15 +12939,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The number of all available patches expected to be installed over the course of the patch installation operation.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="rebootstatus_nodejs">
-<a href="#rebootstatus_nodejs" style="color: inherit; text-decoration: inherit;">reboot<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The reboot status of the machine after the patch operation. It will be in "NotNeeded" status if reboot is not needed after the patch operation. "Required" will be the status once the patch is applied and machine is required to reboot. "Started" will be the reboot status when the machine has started to reboot. "Failed" will be the status if the machine is failed to reboot. "Completed" will be the status once the machine is rebooted successfully{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
 </span>
@@ -11426,22 +12948,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The UTC timestamp when the operation began.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="startedby_nodejs">
-<a href="#startedby_nodejs" style="color: inherit; text-decoration: inherit;">started<wbr>By</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The person or system account that started the operation{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Failed", "Succeeded", or "CompletedWithWarnings."{{% /md %}}</dd>
+    <dd>{{% md %}}The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Unknown", "Failed", "Succeeded", or "CompletedWithWarnings."{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -11531,15 +13044,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The number of all available patches expected to be installed over the course of the patch installation operation.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="reboot_status_python">
-<a href="#reboot_status_python" style="color: inherit; text-decoration: inherit;">reboot_<wbr>status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The reboot status of the machine after the patch operation. It will be in "NotNeeded" status if reboot is not needed after the patch operation. "Required" will be the status once the patch is applied and machine is required to reboot. "Started" will be the reboot status when the machine has started to reboot. "Failed" will be the status if the machine is failed to reboot. "Completed" will be the status once the machine is rebooted successfully{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
 </span>
@@ -11549,22 +13053,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The UTC timestamp when the operation began.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="started_by_python">
-<a href="#started_by_python" style="color: inherit; text-decoration: inherit;">started_<wbr>by</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The person or system account that started the operation{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Failed", "Succeeded", or "CompletedWithWarnings."{{% /md %}}</dd>
+    <dd>{{% md %}}The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Unknown", "Failed", "Succeeded", or "CompletedWithWarnings."{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -11582,6 +13077,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether password authentication should be disabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patchsettings_csharp">
+<a href="#patchsettings_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxpatchsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Linux<wbr>Patch<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_csharp">
@@ -11617,6 +13121,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies whether password authentication should be disabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="patchsettings_go">
+<a href="#patchsettings_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxpatchsettings">Linux<wbr>Patch<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="provisionvmagent_go">
 <a href="#provisionvmagent_go" style="color: inherit; text-decoration: inherit;">Provision<wbr>VMAgent</a>
 </span>
@@ -11650,6 +13163,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies whether password authentication should be disabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="patchsettings_nodejs">
+<a href="#patchsettings_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxpatchsettings">Linux<wbr>Patch<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="provisionvmagent_nodejs">
 <a href="#provisionvmagent_nodejs" style="color: inherit; text-decoration: inherit;">provision<wbr>VMAgent</a>
 </span>
@@ -11681,6 +13203,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether password authentication should be disabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patch_settings_python">
+<a href="#patch_settings_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxpatchsettings">Linux<wbr>Patch<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provision_vm_agent_python">
@@ -11718,6 +13249,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies whether password authentication should be disabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="patchsettings_csharp">
+<a href="#patchsettings_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxpatchsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Linux<wbr>Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="provisionvmagent_csharp">
 <a href="#provisionvmagent_csharp" style="color: inherit; text-decoration: inherit;">Provision<wbr>VMAgent</a>
 </span>
@@ -11749,6 +13289,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether password authentication should be disabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patchsettings_go">
+<a href="#patchsettings_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_go">
@@ -11784,6 +13333,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies whether password authentication should be disabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="patchsettings_nodejs">
+<a href="#patchsettings_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="provisionvmagent_nodejs">
 <a href="#provisionvmagent_nodejs" style="color: inherit; text-decoration: inherit;">provision<wbr>VMAgent</a>
 </span>
@@ -11817,6 +13375,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies whether password authentication should be disabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="patch_settings_python">
+<a href="#patch_settings_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Linux.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="provision_vm_agent_python">
 <a href="#provision_vm_agent_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>vm_<wbr>agent</a>
 </span>
@@ -11833,6 +13400,168 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#sshconfigurationresponse">Ssh<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the ssh key configuration for a Linux OS.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="linuxpatchsettings">Linux<wbr>Patch<wbr>Settings</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patchmode_csharp">
+<a href="#patchmode_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#linuxvmguestpatchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Linux<wbr>VMGuest<wbr>Patch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patchmode_go">
+<a href="#patchmode_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#linuxvmguestpatchmode">Linux<wbr>VMGuest<wbr>Patch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patchmode_nodejs">
+<a href="#patchmode_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#linuxvmguestpatchmode">Linux<wbr>VMGuest<wbr>Patch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patch_mode_python">
+<a href="#patch_mode_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#linuxvmguestpatchmode">Linux<wbr>VMGuest<wbr>Patch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="linuxpatchsettingsresponse">Linux<wbr>Patch<wbr>Settings<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patchmode_csharp">
+<a href="#patchmode_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patchmode_go">
+<a href="#patchmode_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patchmode_nodejs">
+<a href="#patchmode_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="patch_mode_python">
+<a href="#patch_mode_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - The virtual machine's default patching configuration is used. <br /><br /> **AutomaticByPlatform** - The virtual machine will be automatically updated by the platform. The property provisionVMAgent must be true{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="linuxvmguestpatchmode">Linux<wbr>VMGuest<wbr>Patch<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Image<wbr>Default</dt>
+    <dd>ImageDefault</dd>
+    <dt>Automatic<wbr>By<wbr>Platform</dt>
+    <dd>AutomaticByPlatform</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Linux<wbr>VMGuest<wbr>Patch<wbr>Mode<wbr>Image<wbr>Default</dt>
+    <dd>ImageDefault</dd>
+    <dt>Linux<wbr>VMGuest<wbr>Patch<wbr>Mode<wbr>Automatic<wbr>By<wbr>Platform</dt>
+    <dd>AutomaticByPlatform</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Image<wbr>Default</dt>
+    <dd>ImageDefault</dd>
+    <dt>Automatic<wbr>By<wbr>Platform</dt>
+    <dd>AutomaticByPlatform</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>IMAGE_DEFAULT</dt>
+    <dd>ImageDefault</dd>
+    <dt>AUTOMATIC_BY_PLATFORM</dt>
+    <dd>AutomaticByPlatform</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14321,13 +16050,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablehotpatching_csharp">
+<a href="#enablehotpatching_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hotpatching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="patchmode_csharp">
 <a href="#patchmode_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#inguestpatchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>In<wbr>Guest<wbr>Patch<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#windowsvmguestpatchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Windows<wbr>VMGuest<wbr>Patch<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14336,13 +16074,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablehotpatching_go">
+<a href="#enablehotpatching_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hotpatching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="patchmode_go">
 <a href="#patchmode_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#inguestpatchmode">In<wbr>Guest<wbr>Patch<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#windowsvmguestpatchmode">Windows<wbr>VMGuest<wbr>Patch<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14351,13 +16098,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablehotpatching_nodejs">
+<a href="#enablehotpatching_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Hotpatching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="patchmode_nodejs">
 <a href="#patchmode_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#inguestpatchmode">In<wbr>Guest<wbr>Patch<wbr>Mode</a></span>
+        <span class="property-type">string | <a href="#windowsvmguestpatchmode">Windows<wbr>VMGuest<wbr>Patch<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14366,13 +16122,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enable_hotpatching_python">
+<a href="#enable_hotpatching_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>hotpatching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="patch_mode_python">
 <a href="#patch_mode_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#inguestpatchmode">In<wbr>Guest<wbr>Patch<wbr>Mode</a></span>
+        <span class="property-type">str | <a href="#windowsvmguestpatchmode">Windows<wbr>VMGuest<wbr>Patch<wbr>Mode</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14383,13 +16148,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablehotpatching_csharp">
+<a href="#enablehotpatching_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hotpatching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="patchmode_csharp">
 <a href="#patchmode_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14398,13 +16172,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablehotpatching_go">
+<a href="#enablehotpatching_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Hotpatching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="patchmode_go">
 <a href="#patchmode_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14413,13 +16196,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enablehotpatching_nodejs">
+<a href="#enablehotpatching_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Hotpatching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="patchmode_nodejs">
 <a href="#patchmode_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14428,13 +16220,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="enable_hotpatching_python">
+<a href="#enable_hotpatching_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>hotpatching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables customers to patch their Azure VMs without requiring a reboot. For enableHotpatching, the 'provisionVMAgent' must be set to true and 'patchMode' must be set to 'AutomaticByPlatform'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="patch_mode_python">
 <a href="#patch_mode_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the mode of in-guest patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the mode of VM Guest Patching to IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false<br /><br /> **AutomaticByOS** - The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true. <br /><br /> ** AutomaticByPlatform** - the virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14884,6 +16685,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_csharp">
+<a href="#securitytype_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitytypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Security<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uefisettings_csharp">
+<a href="#uefisettings_csharp" style="color: inherit; text-decoration: inherit;">Uefi<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uefisettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Uefi<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14899,6 +16718,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_go">
+<a href="#securitytype_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitytypes">Security<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uefisettings_go">
+<a href="#uefisettings_go" style="color: inherit; text-decoration: inherit;">Uefi<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uefisettings">Uefi<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14914,6 +16751,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_nodejs">
+<a href="#securitytype_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitytypes">Security<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uefisettings_nodejs">
+<a href="#uefisettings_nodejs" style="color: inherit; text-decoration: inherit;">uefi<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uefisettings">Uefi<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14929,6 +16784,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="security_type_python">
+<a href="#security_type_python" style="color: inherit; text-decoration: inherit;">security_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitytypes">Security<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uefi_settings_python">
+<a href="#uefi_settings_python" style="color: inherit; text-decoration: inherit;">uefi_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uefisettings">Uefi<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14946,6 +16819,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_csharp">
+<a href="#securitytype_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uefisettings_csharp">
+<a href="#uefisettings_csharp" style="color: inherit; text-decoration: inherit;">Uefi<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uefisettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Uefi<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14961,6 +16852,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_go">
+<a href="#securitytype_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uefisettings_go">
+<a href="#uefisettings_go" style="color: inherit; text-decoration: inherit;">Uefi<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uefisettingsresponse">Uefi<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14976,6 +16885,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securitytype_nodejs">
+<a href="#securitytype_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uefisettings_nodejs">
+<a href="#uefisettings_nodejs" style="color: inherit; text-decoration: inherit;">uefi<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uefisettingsresponse">Uefi<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14991,6 +16918,54 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This property can be used by user in the request to enable or disable the Host Encryption for the virtual machine or virtual machine scale set. This will enable the encryption for all the disks including Resource/Temp disk at host itself. <br><br> Default: The Encryption at host will be disabled unless this property is set to true for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="security_type_python">
+<a href="#security_type_python" style="color: inherit; text-decoration: inherit;">security_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the SecurityType of the virtual machine. It is set as TrustedLaunch to enable UefiSettings. <br><br> Default: UefiSettings will not be enabled unless this property is set as TrustedLaunch.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="uefi_settings_python">
+<a href="#uefi_settings_python" style="color: inherit; text-decoration: inherit;">uefi_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#uefisettingsresponse">Uefi<wbr>Settings<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the security settings like secure boot and vTPM used while creating the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="securitytypes">Security<wbr>Types</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Trusted<wbr>Launch</dt>
+    <dd>TrustedLaunch</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Security<wbr>Types<wbr>Trusted<wbr>Launch</dt>
+    <dd>TrustedLaunch</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Trusted<wbr>Launch</dt>
+    <dd>TrustedLaunch</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>TRUSTED_LAUNCH</dt>
+    <dd>TrustedLaunch</dd>
 </dl>
 {{% /choosable %}}
 
@@ -15169,7 +17144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
@@ -15193,7 +17168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="path_go">
@@ -15217,7 +17192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
@@ -15241,7 +17216,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="path_python">
@@ -15267,7 +17242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
@@ -15291,7 +17266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="path_go">
@@ -15315,7 +17290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
@@ -15339,7 +17314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
+    <dd>{{% md %}}SSH public key certificate used to authenticate with the VM through ssh. The key needs to be at least 2048-bit and in ssh-rsa format. <br><br> For creating ssh keys, see [Create SSH keys on Linux and Mac for Linux VMs in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="path_python">
@@ -15795,6 +17770,202 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource Id{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="uefisettings">Uefi<wbr>Settings</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securebootenabled_csharp">
+<a href="#securebootenabled_csharp" style="color: inherit; text-decoration: inherit;">Secure<wbr>Boot<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vtpmenabled_csharp">
+<a href="#vtpmenabled_csharp" style="color: inherit; text-decoration: inherit;">VTpm<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securebootenabled_go">
+<a href="#securebootenabled_go" style="color: inherit; text-decoration: inherit;">Secure<wbr>Boot<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vtpmenabled_go">
+<a href="#vtpmenabled_go" style="color: inherit; text-decoration: inherit;">VTpm<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securebootenabled_nodejs">
+<a href="#securebootenabled_nodejs" style="color: inherit; text-decoration: inherit;">secure<wbr>Boot<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vtpmenabled_nodejs">
+<a href="#vtpmenabled_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>Tpm<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secure_boot_enabled_python">
+<a href="#secure_boot_enabled_python" style="color: inherit; text-decoration: inherit;">secure_<wbr>boot_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="v_tpm_enabled_python">
+<a href="#v_tpm_enabled_python" style="color: inherit; text-decoration: inherit;">v_<wbr>tpm_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="uefisettingsresponse">Uefi<wbr>Settings<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securebootenabled_csharp">
+<a href="#securebootenabled_csharp" style="color: inherit; text-decoration: inherit;">Secure<wbr>Boot<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vtpmenabled_csharp">
+<a href="#vtpmenabled_csharp" style="color: inherit; text-decoration: inherit;">VTpm<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securebootenabled_go">
+<a href="#securebootenabled_go" style="color: inherit; text-decoration: inherit;">Secure<wbr>Boot<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vtpmenabled_go">
+<a href="#vtpmenabled_go" style="color: inherit; text-decoration: inherit;">VTpm<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="securebootenabled_nodejs">
+<a href="#securebootenabled_nodejs" style="color: inherit; text-decoration: inherit;">secure<wbr>Boot<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vtpmenabled_nodejs">
+<a href="#vtpmenabled_nodejs" style="color: inherit; text-decoration: inherit;">v<wbr>Tpm<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secure_boot_enabled_python">
+<a href="#secure_boot_enabled_python" style="color: inherit; text-decoration: inherit;">secure_<wbr>boot_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether secure boot should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="v_tpm_enabled_python">
+<a href="#v_tpm_enabled_python" style="color: inherit; text-decoration: inherit;">v_<wbr>tpm_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether vTPM should be enabled on the virtual machine. <br><br>Minimum api-version: 2020-12-01{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -17887,7 +20058,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinepatchstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Patch<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The status of virtual machine patch operations.{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] The status of virtual machine patch operations.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="platformfaultdomain_csharp">
@@ -18037,7 +20208,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinepatchstatusresponse">Virtual<wbr>Machine<wbr>Patch<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The status of virtual machine patch operations.{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] The status of virtual machine patch operations.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="platformfaultdomain_go">
@@ -18187,7 +20358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinepatchstatusresponse">Virtual<wbr>Machine<wbr>Patch<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The status of virtual machine patch operations.{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] The status of virtual machine patch operations.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="platformfaultdomain_nodejs">
@@ -18337,7 +20508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinepatchstatusresponse">Virtual<wbr>Machine<wbr>Patch<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The status of virtual machine patch operations.{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] The status of virtual machine patch operations.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="platform_fault_domain_python">
@@ -18391,6 +20562,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="configurationstatuses_csharp">
+<a href="#configurationstatuses_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The enablement status of the specified patchMode{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="availablepatchsummary_csharp">
@@ -18415,6 +20595,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="configurationstatuses_go">
+<a href="#configurationstatuses_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">[]Instance<wbr>View<wbr>Status<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The enablement status of the specified patchMode{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="availablepatchsummary_go">
@@ -18439,6 +20628,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="configurationstatuses_nodejs">
+<a href="#configurationstatuses_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The enablement status of the specified patchMode{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="availablepatchsummary_nodejs">
@@ -18463,6 +20661,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="configuration_statuses_python">
+<a href="#configuration_statuses_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>statuses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The enablement status of the specified patchMode{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="available_patch_summary_python">
@@ -20231,7 +22438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchsettings">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Patch<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_csharp">
@@ -20291,7 +22498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchsettings">Patch<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_go">
@@ -20351,7 +22558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchsettings">Patch<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_nodejs">
@@ -20411,7 +22618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchsettings">Patch<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provision_vm_agent_python">
@@ -20473,7 +22680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_csharp">
@@ -20533,7 +22740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchsettingsresponse">Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_go">
@@ -20593,7 +22800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchsettingsresponse">Patch<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provisionvmagent_nodejs">
@@ -20653,7 +22860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchsettingsresponse">Patch<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies settings related to in-guest patching (KBs).{{% /md %}}</dd>
+    <dd>{{% md %}}[Preview Feature] Specifies settings related to VM Guest Patching on Windows.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="provision_vm_agent_python">
@@ -20681,6 +22888,52 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#winrmconfigurationresponse">Win<wbr>RMConfiguration<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the Windows Remote Management listeners. This enables remote Windows PowerShell.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="windowsvmguestpatchmode">Windows<wbr>VMGuest<wbr>Patch<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Manual</dt>
+    <dd>Manual</dd>
+    <dt>Automatic<wbr>By<wbr>OS</dt>
+    <dd>AutomaticByOS</dd>
+    <dt>Automatic<wbr>By<wbr>Platform</dt>
+    <dd>AutomaticByPlatform</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Windows<wbr>VMGuest<wbr>Patch<wbr>Mode<wbr>Manual</dt>
+    <dd>Manual</dd>
+    <dt>Windows<wbr>VMGuest<wbr>Patch<wbr>Mode<wbr>Automatic<wbr>By<wbr>OS</dt>
+    <dd>AutomaticByOS</dd>
+    <dt>Windows<wbr>VMGuest<wbr>Patch<wbr>Mode<wbr>Automatic<wbr>By<wbr>Platform</dt>
+    <dd>AutomaticByPlatform</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Manual</dt>
+    <dd>Manual</dd>
+    <dt>Automatic<wbr>By<wbr>OS</dt>
+    <dd>AutomaticByOS</dd>
+    <dt>Automatic<wbr>By<wbr>Platform</dt>
+    <dd>AutomaticByPlatform</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>MANUAL</dt>
+    <dd>Manual</dd>
+    <dt>AUTOMATIC_BY_OS</dt>
+    <dd>AutomaticByOS</dd>
+    <dt>AUTOMATIC_BY_PLATFORM</dt>
+    <dd>AutomaticByPlatform</dd>
 </dl>
 {{% /choosable %}}
 ## Import

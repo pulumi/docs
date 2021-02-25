@@ -1,8 +1,8 @@
 
 ---
-title: "GetScopeMap"
-title_tag: "Function GetScopeMap | Module containerregistry | Package Azure NextGen"
-meta_desc: "Explore the GetScopeMap function of the containerregistry module, including examples, input properties, output properties, and supporting types. "
+title: "getScopeMap"
+title_tag: "azure-nextgen.containerregistry.getScopeMap"
+meta_desc: "Documentation for the azure-nextgen.containerregistry.getScopeMap function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetScopeMap function of the containerregistry module, in
 
 
 
-## Using GetScopeMap {#using}
+## Using getScopeMap {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getScopeMap<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetScopeMapArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetScopeMapResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getScopeMap<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetScopeMapArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetScopeMapResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetScopeMap function of the containerregistry module, in
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupScopeMap<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupScopeMapArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupScopeMapResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupScopeMap<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupScopeMapArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupScopeMapResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupScopeMap` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetScopeMap function of the containerregistry module, in
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetScopeMap </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetScopeMapResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetScopeMapArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetScopeMapResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetScopeMapArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetScopeMap Result {#result}
+## getScopeMap Result {#result}
 
 The following output properties are available:
 
@@ -515,9 +515,6 @@ repositories/repository-name/metadata/write{{% /md %}}</dd>
 
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
-
-
-
 
 
 

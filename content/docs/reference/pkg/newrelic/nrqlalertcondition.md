@@ -1,8 +1,8 @@
 
 ---
 title: "NrqlAlertCondition"
-title_tag: "Resource NrqlAlertCondition | Package New Relic"
-meta_desc: "Explore the NrqlAlertCondition resource of the New Relic package, including examples, input properties, output properties, lookup functions, and supporting types. Use this resource to create and manage NRQL alert conditions in New Relic."
+title_tag: "newrelic.NrqlAlertCondition"
+meta_desc: "Documentation for the newrelic.NrqlAlertCondition resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -11,16 +11,14 @@ meta_desc: "Explore the NrqlAlertCondition resource of the New Relic package, in
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this resource to create and manage NRQL alert conditions in New Relic.
+
 ## NRQL
 
 The `nrql` block supports the following arguments:
 
 - `query` - (Required) The NRQL query to execute for the condition.
-- `evaluation_offset` - (Optional*) Represented in minutes and must be within 1-20 minutes (inclusive). NRQL queries are evaluated in one-minute time windows. The start time depends on this value. It's recommended to set this to 3 minutes. An offset of less than 3 minutes will trigger violations sooner, but you may see more false positives and negatives due to data latency. With `evaluation_offset` set to 3 minutes, the NRQL time window applied to your query will be: `SINCE 3 minutes ago UNTIL 2 minutes ago`.<br>
-<small>\***Note**: One of `evaluation_offset` _or_ `since_value` must be set, but not both.</small>
-
-- `since_value` - (Optional*)  **DEPRECATED:** Use `evaluation_offset` instead. The value to be used in the `SINCE <X> minutes ago` clause for the NRQL query. Must be between 1-20 (inclusive). <br>
-<small>\***Note**: One of `evaluation_offset` _or_ `since_value` must be set, but not both.</small>
+- `evaluation_offset` - (Optional) Represented in minutes and must be within 1-20 minutes (inclusive). NRQL queries are evaluated in one-minute time windows. The start time depends on this value. It's recommended to set this to 3 minutes. An offset of less than 3 minutes will trigger violations sooner, but you may see more false positives and negatives due to data latency. With `evaluation_offset` set to 3 minutes, the NRQL time window applied to your query will be: `SINCE 3 minutes ago UNTIL 2 minutes ago`.
+- `since_value` - (Optional)  **DEPRECATED:** Use `evaluation_offset` instead. The value to be used in the `SINCE <X> minutes ago` clause for the NRQL query. Must be between 1-20 (inclusive).
 
 ## Terms
 
@@ -30,7 +28,8 @@ NRQL alert conditions support up to two terms. At least one `term` must have `pr
 
 The `term` block the following arguments:
 
-- `operator` - (Optional) Valid values are `above`, `below`, or `equals` (case insensitive). Defaults to `equals`. Note that when using a `type` of `outlier`, the only valid option here is `above`.
+- `duration` - (Required) In minutes, must be in the range of `1` to `120`, inclusive.
+- `operator` - (Optional) `above`, `below`, or `equal`. Defaults to `equal`. Note that when using a `type` of `outlier`, the only valid option here is `above`.
 - `priority` - (Optional) `critical` or `warning`. Defaults to `critical`.
 - `threshold` - (Required) The value which will trigger a violation. Must be `0` or greater.
 - `threshold_duration` - (Optional) The duration of time, in seconds, that the threshold must violate for in order to create a violation. Value must be a multiple of 60.
@@ -48,19 +47,19 @@ The `term` block the following arguments:
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#NrqlAlertCondition">NrqlAlertCondition</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#NrqlAlertConditionArgs">NrqlAlertConditionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">NrqlAlertCondition</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">NrqlAlertConditionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_newrelic/#pulumi_newrelic.NrqlAlertCondition">NrqlAlertCondition</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">aggregation_window</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">baseline_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">close_violations_on_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">critical</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionCriticalArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expected_groups</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">expiration_duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">fill_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fill_value</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ignore_overlap</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nrql</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionNrqlArgs]</span> = None<span class="p">, </span><span class="nx">open_violation_on_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">open_violation_on_group_overlap</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">runbook_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">terms</span><span class="p">:</span> <span class="nx">Optional[Sequence[NrqlAlertConditionTermArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_function</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_time_limit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_time_limit_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">warning</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionWarningArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NrqlAlertCondition</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">aggregation_window</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">baseline_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">close_violations_on_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">critical</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionCriticalArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">expected_groups</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">expiration_duration</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">fill_option</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fill_value</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">ignore_overlap</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nrql</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionNrqlArgs]</span> = None<span class="p">, </span><span class="nx">open_violation_on_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">open_violation_on_group_overlap</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">policy_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">runbook_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">terms</span><span class="p">:</span> <span class="nx">Optional[Sequence[NrqlAlertConditionTermArgs]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">value_function</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_time_limit</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">violation_time_limit_seconds</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">warning</span><span class="p">:</span> <span class="nx">Optional[NrqlAlertConditionWarningArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#NrqlAlertCondition">NewNrqlAlertCondition</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#NrqlAlertConditionArgs">NrqlAlertConditionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#NrqlAlertCondition">NrqlAlertCondition</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewNrqlAlertCondition</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">NrqlAlertConditionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NrqlAlertCondition</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.NrqlAlertCondition.html">NrqlAlertCondition</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.NrqlAlertConditionArgs.html">NrqlAlertConditionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">NrqlAlertCondition</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">NrqlAlertConditionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -81,7 +80,7 @@ The `term` block the following arguments:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#NrqlAlertConditionArgs">NrqlAlertConditionArgs</a></span>
+        <span class="property-type"><a href="#inputs">NrqlAlertConditionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -150,7 +149,7 @@ The `term` block the following arguments:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#NrqlAlertConditionArgs">NrqlAlertConditionArgs</a></span>
+        <span class="property-type"><a href="#inputs">NrqlAlertConditionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -189,7 +188,7 @@ The `term` block the following arguments:
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.NrqlAlertConditionArgs.html">NrqlAlertConditionArgs</a></span>
+        <span class="property-type"><a href="#inputs">NrqlAlertConditionArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -212,11 +211,11 @@ The `term` block the following arguments:
 
 ## NrqlAlertCondition Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -261,7 +260,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
+    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -341,7 +340,8 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. If static, the 'fill value' will be used for filling gaps in the
+signal. Valid values are: 'NONE', 'LAST_VALUE', or 'STATIC' (case insensitive).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -351,7 +351,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+    <dd>{{% md %}}If using the 'static' fill option, this value will be used for filling gaps in the signal.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -431,7 +431,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -441,8 +441,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -452,8 +451,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -509,7 +507,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
+    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -589,7 +587,8 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. If static, the 'fill value' will be used for filling gaps in the
+signal. Valid values are: 'NONE', 'LAST_VALUE', or 'STATIC' (case insensitive).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -599,7 +598,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+    <dd>{{% md %}}If using the 'static' fill option, this value will be used for filling gaps in the signal.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -679,7 +678,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -689,8 +688,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -700,8 +698,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -757,7 +754,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
+    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -837,7 +834,8 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. If static, the 'fill value' will be used for filling gaps in the
+signal. Valid values are: 'NONE', 'LAST_VALUE', or 'STATIC' (case insensitive).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -847,7 +845,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+    <dd>{{% md %}}If using the 'static' fill option, this value will be used for filling gaps in the signal.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -927,7 +925,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -937,8 +935,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -948,8 +945,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1005,7 +1001,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
+    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1085,7 +1081,8 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. If static, the 'fill value' will be used for filling gaps in the
+signal. Valid values are: 'NONE', 'LAST_VALUE', or 'STATIC' (case insensitive).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1095,7 +1092,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+    <dd>{{% md %}}If using the 'static' fill option, this value will be used for filling gaps in the signal.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1175,7 +1172,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1185,8 +1182,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -1196,8 +1192,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1287,7 +1282,7 @@ Get an existing NrqlAlertCondition resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#NrqlAlertConditionState">NrqlAlertConditionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#NrqlAlertCondition">NrqlAlertCondition</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">NrqlAlertConditionState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">NrqlAlertCondition</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1296,11 +1291,11 @@ Get an existing NrqlAlertCondition resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNrqlAlertCondition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#NrqlAlertConditionState">NrqlAlertConditionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#NrqlAlertCondition">NrqlAlertCondition</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNrqlAlertCondition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">NrqlAlertConditionState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">NrqlAlertCondition</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.NrqlAlertCondition.html">NrqlAlertCondition</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic..NrqlAlertConditionState.html">NrqlAlertConditionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">NrqlAlertCondition</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">NrqlAlertConditionState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1423,7 +1418,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
+    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1503,7 +1498,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. If static, the 'fill value' will be used for filling gaps in the
+signal. Valid values are: 'NONE', 'LAST_VALUE', or 'STATIC' (case insensitive).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1513,7 +1509,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+    <dd>{{% md %}}If using the 'static' fill option, this value will be used for filling gaps in the signal.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1613,7 +1609,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1623,8 +1619,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -1634,8 +1629,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1671,7 +1665,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
+    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1751,7 +1745,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. If static, the 'fill value' will be used for filling gaps in the
+signal. Valid values are: 'NONE', 'LAST_VALUE', or 'STATIC' (case insensitive).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1761,7 +1756,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+    <dd>{{% md %}}If using the 'static' fill option, this value will be used for filling gaps in the signal.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1861,7 +1856,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1871,8 +1866,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -1882,8 +1876,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1919,7 +1912,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
+    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1999,7 +1992,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. If static, the 'fill value' will be used for filling gaps in the
+signal. Valid values are: 'NONE', 'LAST_VALUE', or 'STATIC' (case insensitive).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2009,7 +2003,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+    <dd>{{% md %}}If using the 'static' fill option, this value will be used for filling gaps in the signal.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2109,7 +2103,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2119,8 +2113,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -2130,8 +2123,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2167,7 +2159,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
+    <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2247,7 +2239,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
+    <dd>{{% md %}}Which strategy to use when filling gaps in the signal. If static, the 'fill value' will be used for filling gaps in the
+signal. Valid values are: 'NONE', 'LAST_VALUE', or 'STATIC' (case insensitive).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2257,7 +2250,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}This value will be used for filling gaps in the signal.
+    <dd>{{% md %}}If using the 'static' fill option, this value will be used for filling gaps in the signal.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2357,7 +2350,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
+    <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive). Defaults to `single_value`.
 {{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2367,8 +2360,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS` (case insensitive).
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -2378,8 +2370,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
-<small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
+    <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit` instead. Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `3600`, `7200`, `14400`, `28800`, `43200`, and `86400`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2404,18 +2395,6 @@ The following state arguments are supported:
 
 
 <h4 id="nrqlalertconditioncritical">Nrql<wbr>Alert<wbr>Condition<wbr>Critical</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#NrqlAlertConditionCritical">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#NrqlAlertConditionCritical">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#NrqlAlertConditionCriticalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#NrqlAlertConditionCriticalOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Inputs.NrqlAlertConditionCriticalArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Outputs.NrqlAlertConditionCritical.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2658,18 +2637,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="nrqlalertconditionnrql">Nrql<wbr>Alert<wbr>Condition<wbr>Nrql</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#NrqlAlertConditionNrql">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#NrqlAlertConditionNrql">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#NrqlAlertConditionNrqlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#NrqlAlertConditionNrqlOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Inputs.NrqlAlertConditionNrqlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Outputs.NrqlAlertConditionNrql.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2804,18 +2771,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="nrqlalertconditionterm">Nrql<wbr>Alert<wbr>Condition<wbr>Term</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#NrqlAlertConditionTerm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#NrqlAlertConditionTerm">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#NrqlAlertConditionTermArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#NrqlAlertConditionTermOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Inputs.NrqlAlertConditionTermArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Outputs.NrqlAlertConditionTerm.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3094,18 +3049,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="nrqlalertconditionwarning">Nrql<wbr>Alert<wbr>Condition<wbr>Warning</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/input/#NrqlAlertConditionWarning">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#NrqlAlertConditionWarning">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#NrqlAlertConditionWarningArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#NrqlAlertConditionWarningOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Inputs.NrqlAlertConditionWarningArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.Outputs.NrqlAlertConditionWarning.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

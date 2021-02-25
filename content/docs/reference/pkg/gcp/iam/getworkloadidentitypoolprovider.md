@@ -1,8 +1,8 @@
 
 ---
-title: "GetWorkloadIdentityPoolProvider"
-title_tag: "Function GetWorkloadIdentityPoolProvider | Module iam | Package GCP"
-meta_desc: "Explore the GetWorkloadIdentityPoolProvider function of the iam module, including examples, input properties, output properties, and supporting types. "
+title: "getWorkloadIdentityPoolProvider"
+title_tag: "gcp.iam.getWorkloadIdentityPoolProvider"
+meta_desc: "Documentation for the gcp.iam.getWorkloadIdentityPoolProvider function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetWorkloadIdentityPoolProvider function of the iam modu
 
 
 
-## Using GetWorkloadIdentityPoolProvider {#using}
+## Using getWorkloadIdentityPoolProvider {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWorkloadIdentityPoolProvider<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iam/#GetWorkloadIdentityPoolProviderArgs">GetWorkloadIdentityPoolProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iam/#GetWorkloadIdentityPoolProviderResult">GetWorkloadIdentityPoolProviderResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getWorkloadIdentityPoolProvider<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetWorkloadIdentityPoolProviderArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetWorkloadIdentityPoolProviderResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetWorkloadIdentityPoolProvider function of the iam modu
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWorkloadIdentityPoolProvider<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iam?tab=doc#LookupWorkloadIdentityPoolProviderArgs">LookupWorkloadIdentityPoolProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iam?tab=doc#LookupWorkloadIdentityPoolProviderResult">LookupWorkloadIdentityPoolProviderResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupWorkloadIdentityPoolProvider<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupWorkloadIdentityPoolProviderArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupWorkloadIdentityPoolProviderResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupWorkloadIdentityPoolProvider` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetWorkloadIdentityPoolProvider function of the iam modu
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetWorkloadIdentityPoolProvider </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iam.GetWorkloadIdentityPoolProviderResult.html">GetWorkloadIdentityPoolProviderResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iam.GetWorkloadIdentityPoolProviderArgs.html">GetWorkloadIdentityPoolProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetWorkloadIdentityPoolProviderResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetWorkloadIdentityPoolProviderArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -206,7 +206,7 @@ is not provided, the provider project is used.
 
 
 
-## GetWorkloadIdentityPoolProvider Result {#result}
+## getWorkloadIdentityPoolProvider Result {#result}
 
 The following output properties are available:
 
@@ -715,16 +715,6 @@ The following output properties are available:
 
 
 <h4 id="getworkloadidentitypoolprovideraw">Get<wbr>Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Aw</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetWorkloadIdentityPoolProviderAw">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iam?tab=doc#GetWorkloadIdentityPoolProviderAw">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iam.Outputs.GetWorkloadIdentityPoolProviderAw.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -789,16 +779,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getworkloadidentitypoolprovideroidc">Get<wbr>Workload<wbr>Identity<wbr>Pool<wbr>Provider<wbr>Oidc</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetWorkloadIdentityPoolProviderOidc">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/iam?tab=doc#GetWorkloadIdentityPoolProviderOidc">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Iam.Outputs.GetWorkloadIdentityPoolProviderOidc.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

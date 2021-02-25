@@ -1,8 +1,8 @@
 
 ---
-title: "GetCustomerGateways"
-title_tag: "Function GetCustomerGateways | Module vpn | Package AliCloud"
-meta_desc: "Explore the GetCustomerGateways function of the vpn module, including examples, input properties, output properties, and supporting types. The VPN customers gateways data source lists a number of VPN customer gateways resource information owned by an Alicloud account."
+title: "getCustomerGateways"
+title_tag: "alicloud.vpn.getCustomerGateways"
+meta_desc: "Documentation for the alicloud.vpn.getCustomerGateways function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -111,13 +111,13 @@ const foo = pulumi.output(alicloud.vpn.getCustomerGateways({
 {{% /examples %}}
 
 
-## Using GetCustomerGateways {#using}
+## Using getCustomerGateways {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCustomerGateways<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpn/#GetCustomerGatewaysArgs">GetCustomerGatewaysArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpn/#GetCustomerGatewaysResult">GetCustomerGatewaysResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCustomerGateways<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCustomerGatewaysArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCustomerGatewaysResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -127,14 +127,16 @@ const foo = pulumi.output(alicloud.vpn.getCustomerGateways({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCustomerGateways<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpn?tab=doc#GetCustomerGatewaysArgs">GetCustomerGatewaysArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpn?tab=doc#GetCustomerGatewaysResult">GetCustomerGatewaysResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCustomerGateways<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetCustomerGatewaysArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetCustomerGatewaysResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetCustomerGateways` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCustomerGateways </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpn.GetCustomerGatewaysResult.html">GetCustomerGatewaysResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpn.GetCustomerGatewaysArgs.html">GetCustomerGatewaysArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCustomerGatewaysResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCustomerGatewaysArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -290,7 +292,7 @@ The following arguments are supported:
 
 
 
-## GetCustomerGateways Result {#result}
+## getCustomerGateways Result {#result}
 
 The following output properties are available:
 
@@ -551,16 +553,6 @@ The following output properties are available:
 
 
 <h4 id="getcustomergatewaysgateway">Get<wbr>Customer<wbr>Gateways<wbr>Gateway</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetCustomerGatewaysGateway">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpn?tab=doc#GetCustomerGatewaysGateway">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Vpn.Outputs.GetCustomerGatewaysGateway.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetBranch"
-title_tag: "Function GetBranch | Package GitHub"
-meta_desc: "Explore the GetBranch function of the GitHub package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a repository branch."
+title: "getBranch"
+title_tag: "github.getBranch"
+meta_desc: "Documentation for the github.getBranch function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -44,7 +44,7 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-github/sdk/v2/go/github"
+	"github.com/pulumi/pulumi-github/sdk/v3/go/github"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,13 +92,13 @@ const development = pulumi.output(github.getBranch({
 {{% /examples %}}
 
 
-## Using GetBranch {#using}
+## Using getBranch {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBranch<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/github/#GetBranchArgs">GetBranchArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/github/#GetBranchResult">GetBranchResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBranch<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBranchArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBranchResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -108,7 +108,7 @@ const development = pulumi.output(github.getBranch({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBranch<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#LookupBranchArgs">LookupBranchArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-github/sdk/v2/go/github/?tab=doc#LookupBranchResult">LookupBranchResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBranch<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBranchArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBranchResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupBranch` in the Go SDK.
 
@@ -117,7 +117,7 @@ const development = pulumi.output(github.getBranch({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBranch </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.GetBranchResult.html">GetBranchResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Github/Pulumi.Github.GetBranchArgs.html">GetBranchArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBranchResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBranchArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -233,7 +233,7 @@ The following arguments are supported:
 
 
 
-## GetBranch Result {#result}
+## getBranch Result {#result}
 
 The following output properties are available:
 

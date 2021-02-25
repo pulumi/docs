@@ -1,8 +1,8 @@
 
 ---
-title: "GetDeploymentAtScope"
-title_tag: "Function GetDeploymentAtScope | Module resources | Package Azure NextGen"
-meta_desc: "Explore the GetDeploymentAtScope function of the resources module, including examples, input properties, output properties, and supporting types. "
+title: "getDeploymentAtScope"
+title_tag: "azure-nextgen.resources.getDeploymentAtScope"
+meta_desc: "Documentation for the azure-nextgen.resources.getDeploymentAtScope function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetDeploymentAtScope function of the resources module, i
 
 
 
-## Using GetDeploymentAtScope {#using}
+## Using getDeploymentAtScope {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDeploymentAtScope<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDeploymentAtScopeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetDeploymentAtScopeResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDeploymentAtScope<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDeploymentAtScopeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDeploymentAtScopeResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetDeploymentAtScope function of the resources module, i
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDeploymentAtScope<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDeploymentAtScopeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupDeploymentAtScopeResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDeploymentAtScope<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDeploymentAtScopeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDeploymentAtScopeResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDeploymentAtScope` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetDeploymentAtScope function of the resources module, i
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDeploymentAtScope </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetDeploymentAtScopeResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetDeploymentAtScopeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDeploymentAtScopeResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDeploymentAtScopeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetDeploymentAtScope Result {#result}
+## getDeploymentAtScope Result {#result}
 
 The following output properties are available:
 
@@ -402,9 +402,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -502,9 +499,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="aliaspathresponse">Alias<wbr>Path<wbr>Response</h4>
-
-
-
 
 
 
@@ -680,9 +674,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -816,9 +807,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="aliasresponse">Alias<wbr>Response</h4>
-
-
-
 
 
 
@@ -1066,9 +1054,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1166,9 +1151,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="basicdependencyresponse">Basic<wbr>Dependency<wbr>Response</h4>
-
-
-
 
 
 
@@ -1308,9 +1290,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1372,9 +1351,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="dependencyresponse">Dependency<wbr>Response</h4>
-
-
-
 
 
 
@@ -1547,9 +1523,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="deploymentpropertiesextendedresponse">Deployment<wbr>Properties<wbr>Extended<wbr>Response</h4>
-
-
-
 
 
 
@@ -2193,9 +2166,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2293,9 +2263,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="errorresponseresponse">Error<wbr>Response<wbr>Response</h4>
-
-
-
 
 
 
@@ -2507,9 +2474,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2646,9 +2610,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2746,9 +2707,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="providerextendedlocationresponse">Provider<wbr>Extended<wbr>Location<wbr>Response</h4>
-
-
-
 
 
 
@@ -2885,9 +2843,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="providerresourcetyperesponse">Provider<wbr>Resource<wbr>Type<wbr>Response</h4>
-
-
-
 
 
 
@@ -3243,9 +3198,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3454,9 +3406,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3521,9 +3470,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3547,13 +3493,22 @@ The following output properties are available:
     <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="querystring_csharp">
+<a href="#querystring_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="relativepath_csharp">
 <a href="#relativepath_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Applicable only if this template link references a Template Spec. This relativePath property can optionally be used to reference a Template Spec artifact by path.{{% /md %}}</dd>
+    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="uri_csharp">
@@ -3589,13 +3544,22 @@ The following output properties are available:
     <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="querystring_go">
+<a href="#querystring_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="relativepath_go">
 <a href="#relativepath_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Applicable only if this template link references a Template Spec. This relativePath property can optionally be used to reference a Template Spec artifact by path.{{% /md %}}</dd>
+    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="uri_go">
@@ -3631,13 +3595,22 @@ The following output properties are available:
     <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="querystring_nodejs">
+<a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="relativepath_nodejs">
 <a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Applicable only if this template link references a Template Spec. This relativePath property can optionally be used to reference a Template Spec artifact by path.{{% /md %}}</dd>
+    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="uri_nodejs">
@@ -3673,13 +3646,22 @@ The following output properties are available:
     <dd>{{% md %}}The resource id of a Template Spec. Use either the id or uri property, but not both.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="query_string_python">
+<a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="relative_path_python">
 <a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Applicable only if this template link references a Template Spec. This relativePath property can optionally be used to reference a Template Spec artifact by path.{{% /md %}}</dd>
+    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="uri_python">

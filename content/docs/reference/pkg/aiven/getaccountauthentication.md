@@ -1,8 +1,8 @@
 
 ---
-title: "GetAccountAuthentication"
-title_tag: "Function GetAccountAuthentication | Package Aiven"
-meta_desc: "Explore the GetAccountAuthentication function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Account Authentication Data Source"
+title: "getAccountAuthentication"
+title_tag: "aiven.getAccountAuthentication"
+meta_desc: "Documentation for the aiven.getAccountAuthentication function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -17,13 +17,13 @@ The Account Authentication data source provides information about the existing A
 
 
 
-## Using GetAccountAuthentication {#using}
+## Using getAccountAuthentication {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAccountAuthentication<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#GetAccountAuthenticationArgs">GetAccountAuthenticationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#GetAccountAuthenticationResult">GetAccountAuthenticationResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAccountAuthentication<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAccountAuthenticationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAccountAuthenticationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -33,7 +33,7 @@ The Account Authentication data source provides information about the existing A
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAccountAuthentication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupAccountAuthenticationArgs">LookupAccountAuthenticationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupAccountAuthenticationResult">LookupAccountAuthenticationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAccountAuthentication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAccountAuthenticationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAccountAuthenticationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupAccountAuthentication` in the Go SDK.
 
@@ -42,7 +42,7 @@ The Account Authentication data source provides information about the existing A
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAccountAuthentication </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.GetAccountAuthenticationResult.html">GetAccountAuthenticationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.GetAccountAuthenticationArgs.html">GetAccountAuthenticationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAccountAuthenticationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAccountAuthenticationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -558,7 +558,7 @@ The following arguments are supported:
 
 
 
-## GetAccountAuthentication Result {#result}
+## getAccountAuthentication Result {#result}
 
 The following output properties are available:
 

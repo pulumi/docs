@@ -439,19 +439,19 @@ const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule(
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ScheduledQueryRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ScheduledQueryRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[Union[AlertingActionArgs, LogToMetricActionArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[Union[str, Enabled]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[ScheduleArgs]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[SourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">action</span><span class="p">:</span> <span class="nx">Optional[Union[AlertingActionArgs, LogToMetricActionArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[Union[str, Enabled]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[ScheduleArgs]</span> = None<span class="p">, </span><span class="nx">source</span><span class="p">:</span> <span class="nx">Optional[SourceArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewScheduledQueryRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ScheduledQueryRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScheduledQueryRule</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewScheduledQueryRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ScheduledQueryRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ScheduledQueryRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ScheduledQueryRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ScheduledQueryRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ScheduledQueryRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -472,7 +472,7 @@ const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule(
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ScheduledQueryRuleArgs</span>
+        <span class="property-type"><a href="#inputs">ScheduledQueryRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -541,7 +541,7 @@ const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule(
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ScheduledQueryRuleArgs</span>
+        <span class="property-type"><a href="#inputs">ScheduledQueryRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -580,7 +580,7 @@ const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule(
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ScheduledQueryRuleArgs</span>
+        <span class="property-type"><a href="#inputs">ScheduledQueryRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -603,11 +603,11 @@ const scheduledQueryRule = new azure_nextgen.insights.latest.ScheduledQueryRule(
 
 ## ScheduledQueryRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -623,15 +623,6 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#alertingaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Alerting<wbr>Action<wbr>Args</a> | <a href="#logtometricaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Inputs.<wbr>Log<wbr>To<wbr>Metric<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -670,6 +661,15 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of the alert rule{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
@@ -677,6 +677,15 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string | <a href="#enabled">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Enabled</a></span>
     </dt>
     <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="schedule_csharp">
@@ -710,15 +719,6 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#alertingaction">Alerting<wbr>Action</a> | <a href="#logtometricaction">Log<wbr>To<wbr>Metric<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -757,6 +757,15 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of the alert rule{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
@@ -764,6 +773,15 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string | <a href="#enabled">Enabled</a></span>
     </dt>
     <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="schedule_go">
@@ -797,15 +815,6 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#alertingaction">Alerting<wbr>Action</a> | <a href="#logtometricaction">Log<wbr>To<wbr>Metric<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -844,6 +853,15 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The display name of the alert rule{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
@@ -851,6 +869,15 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string | <a href="#enabled">Enabled</a></span>
     </dt>
     <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="schedule_nodejs">
@@ -884,15 +911,6 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#alertingaction">Alerting<wbr>Action<wbr>Args</a> | <a href="#logtometricaction">Log<wbr>To<wbr>Metric<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Action needs to be taken on rule execution.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -931,6 +949,15 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
     <dd>{{% md %}}The description of the Log Search rule.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The display name of the alert rule{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
@@ -938,6 +965,15 @@ The ScheduledQueryRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str | <a href="#enabled">Enabled</a></span>
     </dt>
     <dd>{{% md %}}The flag which indicates whether the Log Search rule is enabled. Value should be true or false{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="schedule_python">
@@ -971,6 +1007,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="createdwithapiversion_csharp">
+<a href="#createdwithapiversion_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>With<wbr>Api<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The api-version used when creating this alert rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -978,6 +1032,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="islegacyloganalyticsrule_csharp">
+<a href="#islegacyloganalyticsrule_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Legacy<wbr>Log<wbr>Analytics<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}True if alert rule is legacy Log Analytic rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="lastupdatedtime_csharp">
@@ -1022,6 +1094,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="createdwithapiversion_go">
+<a href="#createdwithapiversion_go" style="color: inherit; text-decoration: inherit;">Created<wbr>With<wbr>Api<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The api-version used when creating this alert rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -1029,6 +1119,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="islegacyloganalyticsrule_go">
+<a href="#islegacyloganalyticsrule_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Legacy<wbr>Log<wbr>Analytics<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}True if alert rule is legacy Log Analytic rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="lastupdatedtime_go">
@@ -1073,6 +1181,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="createdwithapiversion_nodejs">
+<a href="#createdwithapiversion_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>With<wbr>Api<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The api-version used when creating this alert rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -1080,6 +1206,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="islegacyloganalyticsrule_nodejs">
+<a href="#islegacyloganalyticsrule_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Legacy<wbr>Log<wbr>Analytics<wbr>Rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}True if alert rule is legacy Log Analytic rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="lastupdatedtime_nodejs">
@@ -1124,6 +1268,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="created_with_api_version_python">
+<a href="#created_with_api_version_python" style="color: inherit; text-decoration: inherit;">created_<wbr>with_<wbr>api_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The api-version used when creating this alert rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention.  Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields. {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -1131,6 +1293,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="is_legacy_log_analytics_rule_python">
+<a href="#is_legacy_log_analytics_rule_python" style="color: inherit; text-decoration: inherit;">is_<wbr>legacy_<wbr>log_<wbr>analytics_<wbr>rule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}True if alert rule is legacy Log Analytic rule{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="last_updated_time_python">
@@ -1854,6 +2034,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="tabular">
+    <dt>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>GreaterThanOrEqual</dd>
+    <dt>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>LessThanOrEqual</dd>
     <dt>Greater<wbr>Than</dt>
     <dd>GreaterThan</dd>
     <dt>Less<wbr>Than</dt>
@@ -1865,6 +2049,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="tabular">
+    <dt>Conditional<wbr>Operator<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>GreaterThanOrEqual</dd>
+    <dt>Conditional<wbr>Operator<wbr>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>LessThanOrEqual</dd>
     <dt>Conditional<wbr>Operator<wbr>Greater<wbr>Than</dt>
     <dd>GreaterThan</dd>
     <dt>Conditional<wbr>Operator<wbr>Less<wbr>Than</dt>
@@ -1876,6 +2064,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="tabular">
+    <dt>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>GreaterThanOrEqual</dd>
+    <dt>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>LessThanOrEqual</dd>
     <dt>Greater<wbr>Than</dt>
     <dd>GreaterThan</dd>
     <dt>Less<wbr>Than</dt>
@@ -1887,6 +2079,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="tabular">
+    <dt>GREATER_THAN_OR_EQUAL</dt>
+    <dd>GreaterThanOrEqual</dd>
+    <dt>LESS_THAN_OR_EQUAL</dt>
+    <dd>LessThanOrEqual</dd>
     <dt>GREATER_THAN</dt>
     <dd>GreaterThan</dd>
     <dt>LESS_THAN</dt>

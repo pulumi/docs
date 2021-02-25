@@ -1,8 +1,8 @@
 
 ---
-title: "GetSecurityGroups"
-title_tag: "Function GetSecurityGroups | Module ec2 | Package AWS"
-meta_desc: "Explore the GetSecurityGroups function of the ec2 module, including examples, input properties, output properties, and supporting types. Use this data source to get IDs and VPC membership of Security Groups that are created"
+title: "getSecurityGroups"
+title_tag: "aws.ec2.getSecurityGroups"
+meta_desc: "Documentation for the aws.ec2.getSecurityGroups function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -102,13 +102,13 @@ const test = pulumi.output(aws.ec2.getSecurityGroups({
 {{% /examples %}}
 
 
-## Using GetSecurityGroups {#using}
+## Using getSecurityGroups {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSecurityGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#GetSecurityGroupsArgs">GetSecurityGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#GetSecurityGroupsResult">GetSecurityGroupsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSecurityGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSecurityGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSecurityGroupsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -118,14 +118,16 @@ const test = pulumi.output(aws.ec2.getSecurityGroups({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetSecurityGroupsArgs">GetSecurityGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetSecurityGroupsResult">GetSecurityGroupsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetSecurityGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetSecurityGroupsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetSecurityGroups` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSecurityGroups </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetSecurityGroupsResult.html">GetSecurityGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetSecurityGroupsArgs.html">GetSecurityGroupsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSecurityGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSecurityGroupsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -145,9 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritygroupsfilter">List&lt;Get<wbr>Security<wbr>Groups<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}One or more name/value pairs to use as filters. There are
-several valid keys, for a full reference, check out
-[describe-security-groups in the AWS CLI reference][1].
+    <dd>{{% md %}}One or more name/value pairs to use as filters. There are several valid keys, for a full reference, check out [describe-security-groups in the AWS CLI reference][1].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -157,8 +157,7 @@ several valid keys, for a full reference, check out
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags, each pair of which must exactly match for
-desired security groups.
+    <dd>{{% md %}}A map of tags, each pair of which must exactly match for desired security groups.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -174,9 +173,7 @@ desired security groups.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritygroupsfilter">[]Get<wbr>Security<wbr>Groups<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}One or more name/value pairs to use as filters. There are
-several valid keys, for a full reference, check out
-[describe-security-groups in the AWS CLI reference][1].
+    <dd>{{% md %}}One or more name/value pairs to use as filters. There are several valid keys, for a full reference, check out [describe-security-groups in the AWS CLI reference][1].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -186,8 +183,7 @@ several valid keys, for a full reference, check out
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags, each pair of which must exactly match for
-desired security groups.
+    <dd>{{% md %}}A map of tags, each pair of which must exactly match for desired security groups.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -203,9 +199,7 @@ desired security groups.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritygroupsfilter">Get<wbr>Security<wbr>Groups<wbr>Filter[]</a></span>
     </dt>
-    <dd>{{% md %}}One or more name/value pairs to use as filters. There are
-several valid keys, for a full reference, check out
-[describe-security-groups in the AWS CLI reference][1].
+    <dd>{{% md %}}One or more name/value pairs to use as filters. There are several valid keys, for a full reference, check out [describe-security-groups in the AWS CLI reference][1].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -215,8 +209,7 @@ several valid keys, for a full reference, check out
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags, each pair of which must exactly match for
-desired security groups.
+    <dd>{{% md %}}A map of tags, each pair of which must exactly match for desired security groups.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -232,9 +225,7 @@ desired security groups.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecuritygroupsfilter">Sequence[Get<wbr>Security<wbr>Groups<wbr>Filter<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}One or more name/value pairs to use as filters. There are
-several valid keys, for a full reference, check out
-[describe-security-groups in the AWS CLI reference][1].
+    <dd>{{% md %}}One or more name/value pairs to use as filters. There are several valid keys, for a full reference, check out [describe-security-groups in the AWS CLI reference][1].
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -244,8 +235,7 @@ several valid keys, for a full reference, check out
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags, each pair of which must exactly match for
-desired security groups.
+    <dd>{{% md %}}A map of tags, each pair of which must exactly match for desired security groups.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -253,7 +243,7 @@ desired security groups.
 
 
 
-## GetSecurityGroups Result {#result}
+## getSecurityGroups Result {#result}
 
 The following output properties are available:
 
@@ -262,6 +252,16 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="arns_csharp">
+<a href="#arns_csharp" style="color: inherit; text-decoration: inherit;">Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}ARNs of the matched security groups.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -299,8 +299,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The VPC IDs of the matched security groups. The data source's tag or filter *will span VPCs*
-unless the `vpc-id` filter is also used.
+    <dd>{{% md %}}The VPC IDs of the matched security groups. The data source's tag or filter *will span VPCs* unless the `vpc-id` filter is also used.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -317,6 +316,16 @@ unless the `vpc-id` filter is also used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="arns_go">
+<a href="#arns_go" style="color: inherit; text-decoration: inherit;">Arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}ARNs of the matched security groups.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -354,8 +363,7 @@ unless the `vpc-id` filter is also used.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The VPC IDs of the matched security groups. The data source's tag or filter *will span VPCs*
-unless the `vpc-id` filter is also used.
+    <dd>{{% md %}}The VPC IDs of the matched security groups. The data source's tag or filter *will span VPCs* unless the `vpc-id` filter is also used.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -372,6 +380,16 @@ unless the `vpc-id` filter is also used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="arns_nodejs">
+<a href="#arns_nodejs" style="color: inherit; text-decoration: inherit;">arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}ARNs of the matched security groups.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -409,8 +427,7 @@ unless the `vpc-id` filter is also used.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The VPC IDs of the matched security groups. The data source's tag or filter *will span VPCs*
-unless the `vpc-id` filter is also used.
+    <dd>{{% md %}}The VPC IDs of the matched security groups. The data source's tag or filter *will span VPCs* unless the `vpc-id` filter is also used.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -427,6 +444,16 @@ unless the `vpc-id` filter is also used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="arns_python">
+<a href="#arns_python" style="color: inherit; text-decoration: inherit;">arns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}ARNs of the matched security groups.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -464,8 +491,7 @@ unless the `vpc-id` filter is also used.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The VPC IDs of the matched security groups. The data source's tag or filter *will span VPCs*
-unless the `vpc-id` filter is also used.
+    <dd>{{% md %}}The VPC IDs of the matched security groups. The data source's tag or filter *will span VPCs* unless the `vpc-id` filter is also used.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -486,16 +512,6 @@ unless the `vpc-id` filter is also used.
 
 
 <h4 id="getsecuritygroupsfilter">Get<wbr>Security<wbr>Groups<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSecurityGroupsFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSecurityGroupsFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetSecurityGroupsFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetSecurityGroupsFilter">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetSecurityGroupsFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetSecurityGroupsFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

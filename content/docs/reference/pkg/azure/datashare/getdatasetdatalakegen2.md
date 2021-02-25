@@ -1,8 +1,8 @@
 
 ---
-title: "GetDatasetDataLakeGen2"
-title_tag: "Function GetDatasetDataLakeGen2 | Module datashare | Package Azure"
-meta_desc: "Explore the GetDatasetDataLakeGen2 function of the datashare module, including examples, input properties, output properties, and supporting types. Use this data source to access information about an existing Data Share Data Lake Gen2 Dataset."
+title: "getDatasetDataLakeGen2"
+title_tag: "azure.datashare.getDatasetDataLakeGen2"
+meta_desc: "Documentation for the azure.datashare.getDatasetDataLakeGen2 function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -98,13 +98,13 @@ export const id = example.then(example => example.id);
 {{% /examples %}}
 
 
-## Using GetDatasetDataLakeGen2 {#using}
+## Using getDatasetDataLakeGen2 {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDatasetDataLakeGen2<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/datashare/#GetDatasetDataLakeGen2Args">GetDatasetDataLakeGen2Args</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/datashare/#GetDatasetDataLakeGen2Result">GetDatasetDataLakeGen2Result</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDatasetDataLakeGen2<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDatasetDataLakeGen2Args</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDatasetDataLakeGen2Result</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -114,7 +114,7 @@ export const id = example.then(example => example.id);
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDatasetDataLakeGen2<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datashare?tab=doc#LookupDatasetDataLakeGen2Args">LookupDatasetDataLakeGen2Args</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datashare?tab=doc#LookupDatasetDataLakeGen2Result">LookupDatasetDataLakeGen2Result</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDatasetDataLakeGen2<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDatasetDataLakeGen2Args</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDatasetDataLakeGen2Result</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDatasetDataLakeGen2` in the Go SDK.
 
@@ -123,7 +123,7 @@ export const id = example.then(example => example.id);
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDatasetDataLakeGen2 </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Datashare.GetDatasetDataLakeGen2Result.html">GetDatasetDataLakeGen2Result</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataShare.GetDatasetDataLakeGen2Args.html">GetDatasetDataLakeGen2Args</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDatasetDataLakeGen2Result</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDatasetDataLakeGen2Args</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -239,7 +239,7 @@ The following arguments are supported:
 
 
 
-## GetDatasetDataLakeGen2 Result {#result}
+## getDatasetDataLakeGen2 Result {#result}
 
 The following output properties are available:
 

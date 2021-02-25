@@ -1,6 +1,6 @@
 ---
 title: "scheduling"
-title_tag: "Package scheduling"
+title_tag: "scheduling Package"
 meta_desc: ""
 ---
 
@@ -23,21 +23,6 @@ meta_desc: ""
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.7.7</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/scheduling?tab=doc#" title="kubernetes/scheduling">kubernetes/scheduling</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/scheduling/#" title="@pulumi/kubernetes/scheduling">@pulumi/kubernetes/scheduling</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/scheduling" title="pulumi_kubernetes/scheduling">pulumi_kubernetes/scheduling</a></dd>
-
+	<dd>2.8.2</dd>
 </dl>
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetAFDOriginGroup"
-title_tag: "Function GetAFDOriginGroup | Module cdn | Package Azure NextGen"
-meta_desc: "Explore the GetAFDOriginGroup function of the cdn module, including examples, input properties, output properties, and supporting types. "
+title: "getAFDOriginGroup"
+title_tag: "azure-nextgen.cdn.getAFDOriginGroup"
+meta_desc: "Documentation for the azure-nextgen.cdn.getAFDOriginGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetAFDOriginGroup function of the cdn module, including 
 
 
 
-## Using GetAFDOriginGroup {#using}
+## Using getAFDOriginGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAFDOriginGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAFDOriginGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetAFDOriginGroupResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAFDOriginGroup<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAFDOriginGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAFDOriginGroupResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetAFDOriginGroup function of the cdn module, including 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAFDOriginGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAFDOriginGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupAFDOriginGroupResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAFDOriginGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAFDOriginGroupArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAFDOriginGroupResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupAFDOriginGroup` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetAFDOriginGroup function of the cdn module, including 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAFDOriginGroup </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetAFDOriginGroupResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetAFDOriginGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAFDOriginGroupResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAFDOriginGroupArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetAFDOriginGroup Result {#result}
+## getAFDOriginGroup Result {#result}
 
 The following output properties are available:
 
@@ -618,9 +618,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -793,9 +790,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -893,9 +887,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="loadbalancingsettingsparametersresponse">Load<wbr>Balancing<wbr>Settings<wbr>Parameters<wbr>Response</h4>
-
-
-
 
 
 
@@ -1035,9 +1026,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1171,9 +1159,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
-
-
-
 
 
 

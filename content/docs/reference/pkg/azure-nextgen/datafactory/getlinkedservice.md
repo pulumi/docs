@@ -1,8 +1,8 @@
 
 ---
-title: "GetLinkedService"
-title_tag: "Function GetLinkedService | Module datafactory | Package Azure NextGen"
-meta_desc: "Explore the GetLinkedService function of the datafactory module, including examples, input properties, output properties, and supporting types. "
+title: "getLinkedService"
+title_tag: "azure-nextgen.datafactory.getLinkedService"
+meta_desc: "Documentation for the azure-nextgen.datafactory.getLinkedService function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetLinkedService function of the datafactory module, inc
 
 
 
-## Using GetLinkedService {#using}
+## Using getLinkedService {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLinkedService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLinkedServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetLinkedServiceResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getLinkedService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetLinkedServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetLinkedServiceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetLinkedService function of the datafactory module, inc
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLinkedService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLinkedServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupLinkedServiceResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLinkedService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupLinkedServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupLinkedServiceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupLinkedService` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetLinkedService function of the datafactory module, inc
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetLinkedService </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetLinkedServiceResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetLinkedServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetLinkedServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetLinkedServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetLinkedService Result {#result}
+## getLinkedService Result {#result}
 
 The following output properties are available:
 
@@ -399,9 +399,6 @@ The following output properties are available:
 
 
 <h4 id="amazonmwslinkedserviceresponse">Amazon<wbr>MWSLinked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -937,9 +934,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1325,9 +1319,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="amazons3linkedserviceresponse">Amazon<wbr>S3Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -1719,9 +1710,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2107,9 +2095,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azureblobfslinkedserviceresponse">Azure<wbr>Blob<wbr>FSLinked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -2534,9 +2519,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azureblobstoragelinkedserviceresponse">Azure<wbr>Blob<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -3072,9 +3054,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3424,9 +3403,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuredatalakeanalyticslinkedserviceresponse">Azure<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -3887,9 +3863,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuredatalakestorelinkedserviceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -4389,9 +4362,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4708,9 +4678,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4894,6 +4861,15 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_csharp">
+<a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The policy id for limiting the ability to configure clusters based on a user defined set of rules. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="workspaceresourceid_csharp">
@@ -5091,6 +5067,15 @@ The following output properties are available:
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="policyid_go">
+<a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The policy id for limiting the ability to configure clusters based on a user defined set of rules. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="workspaceresourceid_go">
 <a href="#workspaceresourceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Resource<wbr>Id</a>
 </span>
@@ -5284,6 +5269,15 @@ The following output properties are available:
         <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_nodejs">
+<a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The policy id for limiting the ability to configure clusters based on a user defined set of rules. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="workspaceresourceid_nodejs">
@@ -5481,6 +5475,15 @@ The following output properties are available:
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="policy_id_python">
+<a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The policy id for limiting the ability to configure clusters based on a user defined set of rules. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="workspace_resource_id_python">
 <a href="#workspace_resource_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>resource_<wbr>id</a>
 </span>
@@ -5492,9 +5495,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azurefilestoragelinkedserviceresponse">Azure<wbr>File<wbr>Storage<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -6030,9 +6030,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6313,9 +6310,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6524,9 +6518,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6660,9 +6651,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuremllinkedserviceresponse">Azure<wbr>MLLinked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -7090,9 +7078,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7517,9 +7502,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -7797,9 +7779,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuremysqllinkedserviceresponse">Azure<wbr>My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -8083,9 +8062,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8366,9 +8342,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8646,9 +8619,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuresqldwlinkedserviceresponse">Azure<wbr>Sql<wbr>DWLinked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -9076,9 +9046,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -9500,9 +9467,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuresqlmilinkedserviceresponse">Azure<wbr>Sql<wbr>MILinked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -9930,9 +9894,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -10285,9 +10246,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -10637,9 +10595,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="cassandralinkedserviceresponse">Cassandra<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -11028,9 +10983,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="commondataserviceforappslinkedserviceresponse">Common<wbr>Data<wbr>Service<wbr>For<wbr>Apps<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -11638,9 +11590,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -12101,9 +12050,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -12456,9 +12402,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -12700,9 +12643,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="couchbaselinkedserviceresponse">Couchbase<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -12986,9 +12926,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -13158,9 +13095,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="db2linkedserviceresponse">Db2Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -13660,9 +13594,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -13940,9 +13871,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="dynamicsaxlinkedserviceresponse">Dynamics<wbr>AXLinked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -14331,9 +14259,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="dynamicscrmlinkedserviceresponse">Dynamics<wbr>Crm<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -14941,9 +14866,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -15548,9 +15470,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -15975,9 +15894,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -16291,9 +16207,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="ftpserverlinkedserviceresponse">Ftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -16754,9 +16667,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="googleadwordslinkedserviceresponse">Google<wbr>Ad<wbr>Words<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -17325,9 +17235,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="googlebigquerylinkedserviceresponse">Google<wbr>Big<wbr>Query<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -17935,9 +17842,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -18254,9 +18158,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -18534,9 +18435,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="hbaselinkedserviceresponse">HBase<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -19108,9 +19006,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -19568,9 +19463,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="hdinsightondemandlinkedserviceresponse">HDInsight<wbr>On<wbr>Demand<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -20934,9 +20826,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -21286,9 +21175,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="hivelinkedserviceresponse">Hive<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -22076,9 +21962,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -22539,9 +22422,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -22999,9 +22879,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="impalalinkedserviceresponse">Impala<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -23573,9 +23450,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -23964,9 +23838,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -24100,9 +23971,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="jiralinkedserviceresponse">Jira<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -24566,9 +24434,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -24702,9 +24567,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="magentolinkedserviceresponse">Magento<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -25096,9 +24958,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -25376,9 +25235,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="marketolinkedserviceresponse">Marketo<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -25806,9 +25662,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -26197,9 +26050,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -26441,9 +26291,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="mongodblinkedserviceresponse">Mongo<wbr>Db<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -26979,9 +26826,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -27223,9 +27067,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="mysqllinkedserviceresponse">My<wbr>Sql<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -27509,9 +27350,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -27789,9 +27627,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="odatalinkedserviceresponse">OData<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -28435,9 +28270,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -28826,9 +28658,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -29181,9 +29010,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -29461,9 +29287,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="oracleservicecloudlinkedserviceresponse">Oracle<wbr>Service<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -29891,9 +29714,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -29991,9 +29811,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="paypallinkedserviceresponse">Paypal<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -30418,9 +30235,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="phoenixlinkedserviceresponse">Phoenix<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -31028,9 +30842,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -31308,9 +31119,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="prestolinkedserviceresponse">Presto<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -31990,9 +31798,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -32489,9 +32294,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -32913,9 +32715,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="restservicelinkedserviceresponse">Rest<wbr>Service<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -33487,9 +33286,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -33875,9 +33671,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="salesforcemarketingcloudlinkedserviceresponse">Salesforce<wbr>Marketing<wbr>Cloud<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -34305,9 +34098,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -34732,9 +34522,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -35123,9 +34910,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -35442,9 +35226,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -35758,9 +35539,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="saphanalinkedserviceresponse">Sap<wbr>Hana<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -36149,9 +35927,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="sapopenhublinkedserviceresponse">Sap<wbr>Open<wbr>Hub<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -36720,9 +36495,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="saptablelinkedserviceresponse">Sap<wbr>Table<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -37474,9 +37246,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -37649,9 +37418,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -37713,9 +37479,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="servicenowlinkedserviceresponse">Service<wbr>Now<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -38248,9 +38011,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="sftpserverlinkedserviceresponse">Sftp<wbr>Server<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -38822,9 +38582,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -39174,9 +38931,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="shopifylinkedserviceresponse">Shopify<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -39568,9 +39322,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -39848,9 +39599,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="sparklinkedserviceresponse">Spark<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -40530,9 +40278,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -40846,9 +40591,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="squarelinkedserviceresponse">Square<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -41348,9 +41090,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -41775,9 +41514,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -42166,9 +41902,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -42449,9 +42182,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -42513,9 +42243,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="webbasicauthenticationresponse">Web<wbr>Basic<wbr>Authentication<wbr>Response</h4>
-
-
-
 
 
 
@@ -42655,9 +42382,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -42791,9 +42515,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="weblinkedserviceresponse">Web<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -43002,9 +42723,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="xerolinkedserviceresponse">Xero<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 
@@ -43469,9 +43187,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="zoholinkedserviceresponse">Zoho<wbr>Linked<wbr>Service<wbr>Response</h4>
-
-
-
 
 
 

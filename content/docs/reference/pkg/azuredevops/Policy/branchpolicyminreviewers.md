@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azuredevops.Policy.BranchPolicyMinReviewers re
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 <p class="resource-deprecated">Deprecated: {{% md %}}azuredevops.policy.BranchPolicyMinReviewers has been deprecated in favor of azuredevops.BranchPolicyMinReviewers{{% /md %}}</p>
 
-Manages a minimum reviewer branch policy within Azure DevOps.
+Branch policy for reviewers on pull requests. Includes the minimum number of reviewers and other conditions.
 ## Relevant Links
 
 - [Azure DevOps Service REST API 5.1 - Policy Configurations](https://docs.microsoft.com/en-us/rest/api/azure/devops/policy/configurations/create?view=azure-devops-rest-5.1)
@@ -48,8 +48,12 @@ class MyStack : Stack
             Blocking = true,
             Settings = new AzureDevOps.Inputs.BranchPolicyMinReviewersSettingsArgs
             {
-                ReviewerCount = 2,
+                ReviewerCount = 7,
                 SubmitterCanVote = false,
+                LastPusherCannotApprove = true,
+                AllowCompletionWithRejectsOrWaits = false,
+                OnPushResetApprovedVotes = true,
+                OnLastIterationRequireVote = false,
                 Scopes = 
                 {
                     new AzureDevOps.Inputs.BranchPolicyMinReviewersSettingsScopeArgs
@@ -60,7 +64,7 @@ class MyStack : Stack
                     },
                     new AzureDevOps.Inputs.BranchPolicyMinReviewersSettingsScopeArgs
                     {
-                        RepositoryId = git.Id,
+                        RepositoryId = null,
                         RepositoryRef = "refs/heads/releases",
                         MatchType = "Prefix",
                     },
@@ -80,6 +84,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops"
+	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -103,8 +108,12 @@ func main() {
 			Enabled:   pulumi.Bool(true),
 			Blocking:  pulumi.Bool(true),
 			Settings: &azuredevops.BranchPolicyMinReviewersSettingsArgs{
-				ReviewerCount:    pulumi.Int(2),
-				SubmitterCanVote: pulumi.Bool(false),
+				ReviewerCount:                     pulumi.Int(7),
+				SubmitterCanVote:                  pulumi.Bool(false),
+				LastPusherCannotApprove:           pulumi.Bool(true),
+				AllowCompletionWithRejectsOrWaits: pulumi.Bool(false),
+				OnPushResetApprovedVotes:          pulumi.Bool(true),
+				OnLastIterationRequireVote:        pulumi.Bool(false),
 				Scopes: azuredevops.BranchPolicyMinReviewersSettingsScopeArray{
 					&azuredevops.BranchPolicyMinReviewersSettingsScopeArgs{
 						RepositoryId:  git.ID(),
@@ -112,7 +121,7 @@ func main() {
 						MatchType:     pulumi.String("Exact"),
 					},
 					&azuredevops.BranchPolicyMinReviewersSettingsScopeArgs{
-						RepositoryId:  git.ID(),
+						RepositoryId:  nil,
 						RepositoryRef: pulumi.String("refs/heads/releases"),
 						MatchType:     pulumi.String("Prefix"),
 					},
@@ -145,8 +154,12 @@ branch_policy_min_reviewers = azuredevops.BranchPolicyMinReviewers("branchPolicy
     enabled=True,
     blocking=True,
     settings=azuredevops.BranchPolicyMinReviewersSettingsArgs(
-        reviewer_count=2,
+        reviewer_count=7,
         submitter_can_vote=False,
+        last_pusher_cannot_approve=True,
+        allow_completion_with_rejects_or_waits=False,
+        on_push_reset_approved_votes=True,
+        on_last_iteration_require_vote=False,
         scopes=[
             azuredevops.BranchPolicyMinReviewersSettingsScopeArgs(
                 repository_id=git.id,
@@ -154,7 +167,7 @@ branch_policy_min_reviewers = azuredevops.BranchPolicyMinReviewers("branchPolicy
                 match_type="Exact",
             ),
             azuredevops.BranchPolicyMinReviewersSettingsScopeArgs(
-                repository_id=git.id,
+                repository_id=None,
                 repository_ref="refs/heads/releases",
                 match_type="Prefix",
             ),
@@ -182,8 +195,12 @@ const branchPolicyMinReviewers = new azuredevops.BranchPolicyMinReviewers("branc
     enabled: true,
     blocking: true,
     settings: {
-        reviewerCount: 2,
+        reviewerCount: 7,
         submitterCanVote: false,
+        lastPusherCannotApprove: true,
+        allowCompletionWithRejectsOrWaits: false,
+        onPushResetApprovedVotes: true,
+        onLastIterationRequireVote: false,
         scopes: [
             {
                 repositoryId: git.id,
@@ -191,7 +208,7 @@ const branchPolicyMinReviewers = new azuredevops.BranchPolicyMinReviewers("branc
                 matchType: "Exact",
             },
             {
-                repositoryId: git.id,
+                repositoryId: undefined,
                 repositoryRef: "refs/heads/releases",
                 matchType: "Prefix",
             },
@@ -210,19 +227,19 @@ const branchPolicyMinReviewers = new azuredevops.BranchPolicyMinReviewers("branc
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuredevops/Policy/#BranchPolicyMinReviewers">BranchPolicyMinReviewers</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuredevops/Policy/#BranchPolicyMinReviewersArgs">BranchPolicyMinReviewersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BranchPolicyMinReviewers</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BranchPolicyMinReviewersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azuredevops/Policy/#pulumi_azuredevops.Policy.BranchPolicyMinReviewers">BranchPolicyMinReviewers</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">blocking</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[_policy.BranchPolicyMinReviewersSettingsArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BranchPolicyMinReviewers</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">blocking</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[_policy.BranchPolicyMinReviewersSettingsArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/policy?tab=doc#BranchPolicyMinReviewers">NewBranchPolicyMinReviewers</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/policy?tab=doc#BranchPolicyMinReviewersArgs">BranchPolicyMinReviewersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/policy?tab=doc#BranchPolicyMinReviewers">BranchPolicyMinReviewers</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBranchPolicyMinReviewers</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BranchPolicyMinReviewersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BranchPolicyMinReviewers</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureDevOps/Pulumi.AzureDevOps.Policy.BranchPolicyMinReviewers.html">BranchPolicyMinReviewers</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureDevOps/Pulumi.AzureDevOps.Policy.BranchPolicyMinReviewersArgs.html">BranchPolicyMinReviewersArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BranchPolicyMinReviewers</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BranchPolicyMinReviewersArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -243,7 +260,7 @@ const branchPolicyMinReviewers = new azuredevops.BranchPolicyMinReviewers("branc
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/azuredevops/Policy/#BranchPolicyMinReviewersArgs">BranchPolicyMinReviewersArgs</a></span>
+        <span class="property-type"><a href="#inputs">BranchPolicyMinReviewersArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -312,7 +329,7 @@ const branchPolicyMinReviewers = new azuredevops.BranchPolicyMinReviewers("branc
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/policy?tab=doc#BranchPolicyMinReviewersArgs">BranchPolicyMinReviewersArgs</a></span>
+        <span class="property-type"><a href="#inputs">BranchPolicyMinReviewersArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -351,7 +368,7 @@ const branchPolicyMinReviewers = new azuredevops.BranchPolicyMinReviewers("branc
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureDevOps/Pulumi.AzureDevOps.Policy.BranchPolicyMinReviewersArgs.html">BranchPolicyMinReviewersArgs</a></span>
+        <span class="property-type"><a href="#inputs">BranchPolicyMinReviewersArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -374,11 +391,11 @@ const branchPolicyMinReviewers = new azuredevops.BranchPolicyMinReviewers("branc
 
 ## BranchPolicyMinReviewers Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The BranchPolicyMinReviewers resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The BranchPolicyMinReviewers resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -641,7 +658,7 @@ Get an existing BranchPolicyMinReviewers resource's state with the given name, I
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuredevops/Policy/#BranchPolicyMinReviewersState">BranchPolicyMinReviewersState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuredevops/Policy/#BranchPolicyMinReviewers">BranchPolicyMinReviewers</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">BranchPolicyMinReviewersState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">BranchPolicyMinReviewers</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -650,11 +667,11 @@ Get an existing BranchPolicyMinReviewers resource's state with the given name, I
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBranchPolicyMinReviewers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/policy?tab=doc#BranchPolicyMinReviewersState">BranchPolicyMinReviewersState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/policy?tab=doc#BranchPolicyMinReviewers">BranchPolicyMinReviewers</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBranchPolicyMinReviewers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">BranchPolicyMinReviewersState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BranchPolicyMinReviewers</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureDevOps/Pulumi.AzureDevOps.Policy.BranchPolicyMinReviewers.html">BranchPolicyMinReviewers</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureDevOps/Pulumi.AzureDevOps.Policy.BranchPolicyMinReviewersState.html">BranchPolicyMinReviewersState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">BranchPolicyMinReviewers</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">BranchPolicyMinReviewersState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -950,32 +967,10 @@ The following state arguments are supported:
 
 
 <h4 id="branchpolicyminreviewerssettings">Branch<wbr>Policy<wbr>Min<wbr>Reviewers<wbr>Settings</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BranchPolicyMinReviewersSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#BranchPolicyMinReviewersSettings">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/policy?tab=doc#BranchPolicyMinReviewersSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/policy?tab=doc#BranchPolicyMinReviewersSettingsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureDevOps/Pulumi.AzureDevOps.Policy.Inputs.BranchPolicyMinReviewersSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AzureDevOps/Pulumi.AzureDevOps.Policy.Outputs.BranchPolicyMinReviewersSettings.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="reviewercount_csharp">
-<a href="#reviewercount_csharp" style="color: inherit; text-decoration: inherit;">Reviewer<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The number of reviewrs needed to approve.
-{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="scopes_csharp">
@@ -988,13 +983,73 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="allowcompletionwithrejectsorwaits_csharp">
+<a href="#allowcompletionwithrejectsorwaits_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Completion<wbr>With<wbr>Rejects<wbr>Or<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Allow completion even if some reviewers vote to wait or reject. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastpushercannotapprove_csharp">
+<a href="#lastpushercannotapprove_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Pusher<wbr>Cannot<wbr>Approve</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Prohibit the most recent pusher from approving their own changes. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="onlastiterationrequirevote_csharp">
+<a href="#onlastiterationrequirevote_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Last<wbr>Iteration<wbr>Require<wbr>Vote</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}On last iteration require vote. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="onpushresetallvotes_csharp">
+<a href="#onpushresetallvotes_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Push<wbr>Reset<wbr>All<wbr>Votes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When new changes are pushed reset all code reviewer votes. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="onpushresetapprovedvotes_csharp">
+<a href="#onpushresetapprovedvotes_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Push<wbr>Reset<wbr>Approved<wbr>Votes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When new changes are pushed reset all approval votes (does not reset votes to reject or wait). Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reviewercount_csharp">
+<a href="#reviewercount_csharp" style="color: inherit; text-decoration: inherit;">Reviewer<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of reviewers needed to approve.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="submittercanvote_csharp">
 <a href="#submittercanvote_csharp" style="color: inherit; text-decoration: inherit;">Submitter<wbr>Can<wbr>Vote</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Controls whether or not the submitter's vote counts. Defaults to `false`.
+    <dd>{{% md %}}Allow requesters to approve their own changes. Defaults to `false`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1002,16 +1057,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="reviewercount_go">
-<a href="#reviewercount_go" style="color: inherit; text-decoration: inherit;">Reviewer<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The number of reviewrs needed to approve.
-{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="scopes_go">
@@ -1024,13 +1069,73 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="allowcompletionwithrejectsorwaits_go">
+<a href="#allowcompletionwithrejectsorwaits_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Completion<wbr>With<wbr>Rejects<wbr>Or<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Allow completion even if some reviewers vote to wait or reject. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastpushercannotapprove_go">
+<a href="#lastpushercannotapprove_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Pusher<wbr>Cannot<wbr>Approve</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Prohibit the most recent pusher from approving their own changes. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="onlastiterationrequirevote_go">
+<a href="#onlastiterationrequirevote_go" style="color: inherit; text-decoration: inherit;">On<wbr>Last<wbr>Iteration<wbr>Require<wbr>Vote</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}On last iteration require vote. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="onpushresetallvotes_go">
+<a href="#onpushresetallvotes_go" style="color: inherit; text-decoration: inherit;">On<wbr>Push<wbr>Reset<wbr>All<wbr>Votes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When new changes are pushed reset all code reviewer votes. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="onpushresetapprovedvotes_go">
+<a href="#onpushresetapprovedvotes_go" style="color: inherit; text-decoration: inherit;">On<wbr>Push<wbr>Reset<wbr>Approved<wbr>Votes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When new changes are pushed reset all approval votes (does not reset votes to reject or wait). Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reviewercount_go">
+<a href="#reviewercount_go" style="color: inherit; text-decoration: inherit;">Reviewer<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of reviewers needed to approve.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="submittercanvote_go">
 <a href="#submittercanvote_go" style="color: inherit; text-decoration: inherit;">Submitter<wbr>Can<wbr>Vote</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Controls whether or not the submitter's vote counts. Defaults to `false`.
+    <dd>{{% md %}}Allow requesters to approve their own changes. Defaults to `false`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1038,16 +1143,6 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="reviewercount_nodejs">
-<a href="#reviewercount_nodejs" style="color: inherit; text-decoration: inherit;">reviewer<wbr>Count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The number of reviewrs needed to approve.
-{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="scopes_nodejs">
@@ -1060,13 +1155,73 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="allowcompletionwithrejectsorwaits_nodejs">
+<a href="#allowcompletionwithrejectsorwaits_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Completion<wbr>With<wbr>Rejects<wbr>Or<wbr>Waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Allow completion even if some reviewers vote to wait or reject. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastpushercannotapprove_nodejs">
+<a href="#lastpushercannotapprove_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Pusher<wbr>Cannot<wbr>Approve</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Prohibit the most recent pusher from approving their own changes. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="onlastiterationrequirevote_nodejs">
+<a href="#onlastiterationrequirevote_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Last<wbr>Iteration<wbr>Require<wbr>Vote</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}On last iteration require vote. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="onpushresetallvotes_nodejs">
+<a href="#onpushresetallvotes_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Push<wbr>Reset<wbr>All<wbr>Votes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When new changes are pushed reset all code reviewer votes. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="onpushresetapprovedvotes_nodejs">
+<a href="#onpushresetapprovedvotes_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Push<wbr>Reset<wbr>Approved<wbr>Votes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When new changes are pushed reset all approval votes (does not reset votes to reject or wait). Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reviewercount_nodejs">
+<a href="#reviewercount_nodejs" style="color: inherit; text-decoration: inherit;">reviewer<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of reviewers needed to approve.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="submittercanvote_nodejs">
 <a href="#submittercanvote_nodejs" style="color: inherit; text-decoration: inherit;">submitter<wbr>Can<wbr>Vote</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Controls whether or not the submitter's vote counts. Defaults to `false`.
+    <dd>{{% md %}}Allow requesters to approve their own changes. Defaults to `false`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1074,16 +1229,6 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="reviewer_count_python">
-<a href="#reviewer_count_python" style="color: inherit; text-decoration: inherit;">reviewer_<wbr>count</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The number of reviewrs needed to approve.
-{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="scopes_python">
@@ -1096,30 +1241,78 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="allow_completion_with_rejects_or_waits_python">
+<a href="#allow_completion_with_rejects_or_waits_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>completion_<wbr>with_<wbr>rejects_<wbr>or_<wbr>waits</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Allow completion even if some reviewers vote to wait or reject. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_pusher_cannot_approve_python">
+<a href="#last_pusher_cannot_approve_python" style="color: inherit; text-decoration: inherit;">last_<wbr>pusher_<wbr>cannot_<wbr>approve</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Prohibit the most recent pusher from approving their own changes. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="on_last_iteration_require_vote_python">
+<a href="#on_last_iteration_require_vote_python" style="color: inherit; text-decoration: inherit;">on_<wbr>last_<wbr>iteration_<wbr>require_<wbr>vote</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}On last iteration require vote. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="on_push_reset_all_votes_python">
+<a href="#on_push_reset_all_votes_python" style="color: inherit; text-decoration: inherit;">on_<wbr>push_<wbr>reset_<wbr>all_<wbr>votes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When new changes are pushed reset all code reviewer votes. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="on_push_reset_approved_votes_python">
+<a href="#on_push_reset_approved_votes_python" style="color: inherit; text-decoration: inherit;">on_<wbr>push_<wbr>reset_<wbr>approved_<wbr>votes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When new changes are pushed reset all approval votes (does not reset votes to reject or wait). Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reviewer_count_python">
+<a href="#reviewer_count_python" style="color: inherit; text-decoration: inherit;">reviewer_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of reviewers needed to approve.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="submitter_can_vote_python">
 <a href="#submitter_can_vote_python" style="color: inherit; text-decoration: inherit;">submitter_<wbr>can_<wbr>vote</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Controls whether or not the submitter's vote counts. Defaults to `false`.
+    <dd>{{% md %}}Allow requesters to approve their own changes. Defaults to `false`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="branchpolicyminreviewerssettingsscope">Branch<wbr>Policy<wbr>Min<wbr>Reviewers<wbr>Settings<wbr>Scope</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azuredevops/types/input/#BranchPolicyMinReviewersSettingsScope">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azuredevops/types/output/#BranchPolicyMinReviewersSettingsScope">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/policy?tab=doc#BranchPolicyMinReviewersSettingsScopeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/policy?tab=doc#BranchPolicyMinReviewersSettingsScopeOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureDevOps/Pulumi.AzureDevOps.Policy.Inputs.BranchPolicyMinReviewersSettingsScopeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AzureDevOps/Pulumi.AzureDevOps.Policy.Outputs.BranchPolicyMinReviewersSettingsScope.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

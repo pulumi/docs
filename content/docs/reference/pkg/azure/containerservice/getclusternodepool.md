@@ -1,8 +1,8 @@
 
 ---
-title: "GetClusterNodePool"
-title_tag: "Function GetClusterNodePool | Module containerservice | Package Azure"
-meta_desc: "Explore the GetClusterNodePool function of the containerservice module, including examples, input properties, output properties, and supporting types. Use this data source to access information about an existing Kubernetes Cluster Node Pool."
+title: "getClusterNodePool"
+title_tag: "azure.containerservice.getClusterNodePool"
+meta_desc: "Documentation for the azure.containerservice.getClusterNodePool function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -102,13 +102,13 @@ export const id = example.then(example => example.id);
 {{% /examples %}}
 
 
-## Using GetClusterNodePool {#using}
+## Using getClusterNodePool {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getClusterNodePool<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/containerservice/#GetClusterNodePoolArgs">GetClusterNodePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/containerservice/#GetClusterNodePoolResult">GetClusterNodePoolResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getClusterNodePool<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetClusterNodePoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetClusterNodePoolResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -118,14 +118,16 @@ export const id = example.then(example => example.id);
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusterNodePool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetClusterNodePoolArgs">GetClusterNodePoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/containerservice?tab=doc#GetClusterNodePoolResult">GetClusterNodePoolResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusterNodePool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetClusterNodePoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetClusterNodePoolResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetClusterNodePool` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetClusterNodePool </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Containerservice.GetClusterNodePoolResult.html">GetClusterNodePoolResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ContainerService.GetClusterNodePoolArgs.html">GetClusterNodePoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetClusterNodePoolResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetClusterNodePoolArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -281,7 +283,7 @@ The following arguments are supported:
 
 
 
-## GetClusterNodePool Result {#result}
+## getClusterNodePool Result {#result}
 
 The following output properties are available:
 
@@ -516,6 +518,16 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the Kubernetes Cluster Node Pool.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="upgradesettings_csharp">
+<a href="#upgradesettings_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodepoolupgradesetting">List&lt;Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Setting&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `upgrade_settings` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -772,6 +784,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="upgradesettings_go">
+<a href="#upgradesettings_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodepoolupgradesetting">[]Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Setting</a></span>
+    </dt>
+    <dd>{{% md %}}A `upgrade_settings` block as documented below.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
 </span>
@@ -1022,6 +1044,16 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the Kubernetes Cluster Node Pool.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="upgradesettings_nodejs">
+<a href="#upgradesettings_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodepoolupgradesetting">Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Setting[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `upgrade_settings` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1278,6 +1310,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="upgrade_settings_python">
+<a href="#upgrade_settings_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusternodepoolupgradesetting">Sequence[Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Setting]</a></span>
+    </dt>
+    <dd>{{% md %}}A `upgrade_settings` block as documented below.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
 </span>
@@ -1295,6 +1337,80 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Subnet in which this Node Pool exists.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+
+
+
+## Supporting Types
+
+
+<h4 id="getclusternodepoolupgradesetting">Get<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Setting</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxsurge_csharp">
+<a href="#maxsurge_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxsurge_go">
+<a href="#maxsurge_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Surge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxsurge_nodejs">
+<a href="#maxsurge_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Surge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="max_surge_python">
+<a href="#max_surge_python" style="color: inherit; text-decoration: inherit;">max_<wbr>surge</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The maximum number or percentage of nodes which will be added to the Node Pool size during an upgrade.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

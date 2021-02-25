@@ -565,7 +565,7 @@ comprehensive guide.
 
 A very powerful capability this unlocks is the ability to spin up
 ephemeral environments solely for purposes of acceptance testing.
-Pulumi's concept of [projects and stacks]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}) is
+Pulumi's concept of [projects and stacks]({{< relref "/docs/guides/organizing-projects-stacks" >}}) is
 designed to make it very easy to stand up entirely isolated and
 independent environments, and to tear them down, all in either a few
 easy CLI gestures, or by using the integration testing framework.

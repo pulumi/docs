@@ -1,8 +1,8 @@
 
 ---
-title: "GetBackendAddressPool"
-title_tag: "Function GetBackendAddressPool | Module lb | Package Azure"
-meta_desc: "Explore the GetBackendAddressPool function of the lb module, including examples, input properties, output properties, and supporting types. Use this data source to access information about an existing Load Balancer&#39;s Backend Address Pool."
+title: "getBackendAddressPool"
+title_tag: "azure.lb.getBackendAddressPool"
+meta_desc: "Documentation for the azure.lb.getBackendAddressPool function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -127,13 +127,13 @@ export const backendIpConfigurationIds = data.azurerm_lb_backend_address_pool.be
 {{% /examples %}}
 
 
-## Using GetBackendAddressPool {#using}
+## Using getBackendAddressPool {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBackendAddressPool<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/lb/#GetBackendAddressPoolArgs">GetBackendAddressPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/lb/#GetBackendAddressPoolResult">GetBackendAddressPoolResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBackendAddressPool<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBackendAddressPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBackendAddressPoolResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -143,7 +143,7 @@ export const backendIpConfigurationIds = data.azurerm_lb_backend_address_pool.be
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBackendAddressPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb?tab=doc#LookupBackendAddressPoolArgs">LookupBackendAddressPoolArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb?tab=doc#LookupBackendAddressPoolResult">LookupBackendAddressPoolResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBackendAddressPool<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBackendAddressPoolArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBackendAddressPoolResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupBackendAddressPool` in the Go SDK.
 
@@ -152,7 +152,7 @@ export const backendIpConfigurationIds = data.azurerm_lb_backend_address_pool.be
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBackendAddressPool </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Lb.GetBackendAddressPoolResult.html">GetBackendAddressPoolResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Lb.GetBackendAddressPoolArgs.html">GetBackendAddressPoolArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBackendAddressPoolResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBackendAddressPoolArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -268,7 +268,7 @@ The following arguments are supported:
 
 
 
-## GetBackendAddressPool Result {#result}
+## getBackendAddressPool Result {#result}
 
 The following output properties are available:
 
@@ -279,13 +279,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="backendaddresses_csharp">
+<a href="#backendaddresses_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbackendaddresspoolbackendaddress">List&lt;Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `backend_address` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="backendipconfigurations_csharp">
 <a href="#backendipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbackendaddresspoolbackendipconfiguration">List&lt;Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Ip<wbr>Configuration&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of references to IP addresses defined in network interfaces.
+    <dd>{{% md %}}A list of references to IP addresses defined in network interfaces.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -296,6 +306,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="loadbalancingrules_csharp">
+<a href="#loadbalancingrules_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of the Load Balancing Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -314,7 +334,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Backend Address Pool.
+    <dd>{{% md %}}The name of the Backend Address.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="outboundrules_csharp">
+<a href="#outboundrules_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of the Load Balancing Outbound Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -324,13 +354,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="backendaddresses_go">
+<a href="#backendaddresses_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbackendaddresspoolbackendaddress">[]Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `backend_address` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="backendipconfigurations_go">
 <a href="#backendipconfigurations_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbackendaddresspoolbackendipconfiguration">[]Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Ip<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}An array of references to IP addresses defined in network interfaces.
+    <dd>{{% md %}}A list of references to IP addresses defined in network interfaces.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -341,6 +381,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="loadbalancingrules_go">
+<a href="#loadbalancingrules_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of the Load Balancing Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -359,7 +409,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Backend Address Pool.
+    <dd>{{% md %}}The name of the Backend Address.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="outboundrules_go">
+<a href="#outboundrules_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of the Load Balancing Outbound Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -369,13 +429,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="backendaddresses_nodejs">
+<a href="#backendaddresses_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbackendaddresspoolbackendaddress">Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `backend_address` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="backendipconfigurations_nodejs">
 <a href="#backendipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Ip<wbr>Configurations</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbackendaddresspoolbackendipconfiguration">Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Ip<wbr>Configuration[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of references to IP addresses defined in network interfaces.
+    <dd>{{% md %}}A list of references to IP addresses defined in network interfaces.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -386,6 +456,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="loadbalancingrules_nodejs">
+<a href="#loadbalancingrules_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of the Load Balancing Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -404,7 +484,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Backend Address Pool.
+    <dd>{{% md %}}The name of the Backend Address.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="outboundrules_nodejs">
+<a href="#outboundrules_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of the Load Balancing Outbound Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -414,13 +504,23 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="backend_addresses_python">
+<a href="#backend_addresses_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getbackendaddresspoolbackendaddress">Sequence[Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `backend_address` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="backend_ip_configurations_python">
 <a href="#backend_ip_configurations_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>ip_<wbr>configurations</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getbackendaddresspoolbackendipconfiguration">Sequence[Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Ip<wbr>Configuration]</a></span>
     </dt>
-    <dd>{{% md %}}An array of references to IP addresses defined in network interfaces.
+    <dd>{{% md %}}A list of references to IP addresses defined in network interfaces.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -431,6 +531,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="load_balancing_rules_python">
+<a href="#load_balancing_rules_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of the Load Balancing Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -449,7 +559,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Backend Address Pool.
+    <dd>{{% md %}}The name of the Backend Address.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="outbound_rules_python">
+<a href="#outbound_rules_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of the Load Balancing Outbound Rules associated with this Backend Address Pool.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -460,17 +580,155 @@ The following output properties are available:
 ## Supporting Types
 
 
-<h4 id="getbackendaddresspoolbackendipconfiguration">Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Ip<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetBackendAddressPoolBackendIpConfiguration">output</a> API doc for this type.
+<h4 id="getbackendaddresspoolbackendaddress">Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Address</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipaddress_csharp">
+<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Static IP address for this Load Balancer within the Virtual Network.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Backend Address Pool.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnetworkid_csharp">
+<a href="#virtualnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Virtual Network where the Backend Address of the Load Balancer exists.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/lb?tab=doc#GetBackendAddressPoolBackendIpConfiguration">output</a> API doc for this type.
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipaddress_go">
+<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Static IP address for this Load Balancer within the Virtual Network.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Backend Address Pool.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnetworkid_go">
+<a href="#virtualnetworkid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Virtual Network where the Backend Address of the Load Balancer exists.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Lb.Outputs.GetBackendAddressPoolBackendIpConfiguration.html">output</a> API doc for this type.
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ipaddress_nodejs">
+<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Static IP address for this Load Balancer within the Virtual Network.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Backend Address Pool.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnetworkid_nodejs">
+<a href="#virtualnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Virtual Network where the Backend Address of the Load Balancer exists.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="ip_address_python">
+<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Static IP address for this Load Balancer within the Virtual Network.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Backend Address Pool.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="virtual_network_id_python">
+<a href="#virtual_network_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Virtual Network where the Backend Address of the Load Balancer exists.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getbackendaddresspoolbackendipconfiguration">Get<wbr>Backend<wbr>Address<wbr>Pool<wbr>Backend<wbr>Ip<wbr>Configuration</h4>
 
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetServiceIntegrationEndpoint"
-title_tag: "Function GetServiceIntegrationEndpoint | Package Aiven"
-meta_desc: "Explore the GetServiceIntegrationEndpoint function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Service Integration Endpoint Data Source"
+title: "getServiceIntegrationEndpoint"
+title_tag: "aiven.getServiceIntegrationEndpoint"
+meta_desc: "Documentation for the aiven.getServiceIntegrationEndpoint function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -95,23 +95,23 @@ const myendpoint = aiven_project_myproject.project.apply(project => aiven.getSer
 {{% /examples %}}
 
 
-## Using GetServiceIntegrationEndpoint {#using}
+## Using getServiceIntegrationEndpoint {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServiceIntegrationEndpoint<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#GetServiceIntegrationEndpointArgs">GetServiceIntegrationEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#GetServiceIntegrationEndpointResult">GetServiceIntegrationEndpointResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServiceIntegrationEndpoint<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServiceIntegrationEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServiceIntegrationEndpointResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service_integration_endpoint(</span><span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointDatadogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalKafkaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">jolokia_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointJolokiaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointPrometheusUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointRsyslogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">signalfx_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointSignalfxUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceIntegrationEndpointResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_service_integration_endpoint(</span><span class="nx">datadog_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointDatadogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">endpoint_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">endpoint_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_kafka_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalKafkaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_schema_registry_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointExternalSchemaRegistryUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">jolokia_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointJolokiaUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">prometheus_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointPrometheusUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">rsyslog_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointRsyslogUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">signalfx_user_config</span><span class="p">:</span> <span class="nx">Optional[GetServiceIntegrationEndpointSignalfxUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetServiceIntegrationEndpointResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServiceIntegrationEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupServiceIntegrationEndpointArgs">LookupServiceIntegrationEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupServiceIntegrationEndpointResult">LookupServiceIntegrationEndpointResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServiceIntegrationEndpoint<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServiceIntegrationEndpointArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServiceIntegrationEndpointResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupServiceIntegrationEndpoint` in the Go SDK.
 
@@ -120,7 +120,7 @@ const myendpoint = aiven_project_myproject.project.apply(project => aiven.getSer
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetServiceIntegrationEndpoint </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.GetServiceIntegrationEndpointResult.html">GetServiceIntegrationEndpointResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.GetServiceIntegrationEndpointArgs.html">GetServiceIntegrationEndpointArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetServiceIntegrationEndpointResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServiceIntegrationEndpointArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -216,6 +216,15 @@ By the time of writing the only available option is `datadog`.
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointexternalkafkauserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalschemaregistryuserconfig_csharp">
+<a href="#externalschemaregistryuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalschemaregistryuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -348,6 +357,15 @@ By the time of writing the only available option is `datadog`.
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="externalschemaregistryuserconfig_go">
+<a href="#externalschemaregistryuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalschemaregistryuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="jolokiauserconfig_go">
 <a href="#jolokiauserconfig_go" style="color: inherit; text-decoration: inherit;">Jolokia<wbr>User<wbr>Config</a>
 </span>
@@ -472,6 +490,15 @@ By the time of writing the only available option is `datadog`.
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointexternalkafkauserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalschemaregistryuserconfig_nodejs">
+<a href="#externalschemaregistryuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalschemaregistryuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -604,6 +631,15 @@ By the time of writing the only available option is `datadog`.
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="external_schema_registry_user_config_python">
+<a href="#external_schema_registry_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>schema_<wbr>registry_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalschemaregistryuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="jolokia_user_config_python">
 <a href="#jolokia_user_config_python" style="color: inherit; text-decoration: inherit;">jolokia_<wbr>user_<wbr>config</a>
 </span>
@@ -644,7 +680,7 @@ By the time of writing the only available option is `datadog`.
 
 
 
-## GetServiceIntegrationEndpoint Result {#result}
+## getServiceIntegrationEndpoint Result {#result}
 
 The following output properties are available:
 
@@ -744,6 +780,15 @@ By the time of writing the only available option is `datadog`.
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointexternalkafkauserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="externalschemaregistryuserconfig_csharp">
+<a href="#externalschemaregistryuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalschemaregistryuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -883,6 +928,15 @@ By the time of writing the only available option is `datadog`.
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="externalschemaregistryuserconfig_go">
+<a href="#externalschemaregistryuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalschemaregistryuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="jolokiauserconfig_go">
 <a href="#jolokiauserconfig_go" style="color: inherit; text-decoration: inherit;">Jolokia<wbr>User<wbr>Config</a>
 </span>
@@ -1014,6 +1068,15 @@ By the time of writing the only available option is `datadog`.
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getserviceintegrationendpointexternalkafkauserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="externalschemaregistryuserconfig_nodejs">
+<a href="#externalschemaregistryuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalschemaregistryuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1153,6 +1216,15 @@ By the time of writing the only available option is `datadog`.
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="external_schema_registry_user_config_python">
+<a href="#external_schema_registry_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>schema_<wbr>registry_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getserviceintegrationendpointexternalschemaregistryuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="jolokia_user_config_python">
 <a href="#jolokia_user_config_python" style="color: inherit; text-decoration: inherit;">jolokia_<wbr>user_<wbr>config</a>
 </span>
@@ -1197,16 +1269,6 @@ By the time of writing the only available option is `datadog`.
 
 
 <h4 id="getserviceintegrationendpointdatadoguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Datadog<wbr>User<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationEndpointDatadogUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationEndpointDatadogUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointDatadogUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointDatadogUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationEndpointDatadogUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationEndpointDatadogUserConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1379,16 +1441,6 @@ By the time of writing the only available option is `datadog`.
 {{% /choosable %}}
 
 <h4 id="getserviceintegrationendpointexternalawscloudwatchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1561,16 +1613,6 @@ By the time of writing the only available option is `datadog`.
 {{% /choosable %}}
 
 <h4 id="getserviceintegrationendpointexternalelasticsearchlogsuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationEndpointExternalElasticsearchLogsUserConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1779,16 +1821,6 @@ By the time of writing the only available option is `datadog`.
 {{% /choosable %}}
 
 <h4 id="getserviceintegrationendpointexternalgooglecloudlogginguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1925,16 +1957,6 @@ By the time of writing the only available option is `datadog`.
 {{% /choosable %}}
 
 <h4 id="getserviceintegrationendpointexternalkafkauserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Kafka<wbr>User<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationEndpointExternalKafkaUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationEndpointExternalKafkaUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointExternalKafkaUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointExternalKafkaUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationEndpointExternalKafkaUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationEndpointExternalKafkaUserConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1945,6 +1967,33 @@ By the time of writing the only available option is `datadog`.
             title="Optional">
         <span id="bootstrapservers_csharp">
 <a href="#bootstrapservers_csharp" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="saslmechanism_csharp">
+<a href="#saslmechanism_csharp" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Mechanism</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="saslplainpassword_csharp">
+<a href="#saslplainpassword_csharp" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Plain<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="saslplainusername_csharp">
+<a href="#saslplainusername_csharp" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Plain<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1986,6 +2035,15 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslendpointidentificationalgorithm_csharp">
+<a href="#sslendpointidentificationalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Endpoint<wbr>Identification<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1996,6 +2054,33 @@ By the time of writing the only available option is `datadog`.
             title="Optional">
         <span id="bootstrapservers_go">
 <a href="#bootstrapservers_go" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="saslmechanism_go">
+<a href="#saslmechanism_go" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Mechanism</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="saslplainpassword_go">
+<a href="#saslplainpassword_go" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Plain<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="saslplainusername_go">
+<a href="#saslplainusername_go" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Plain<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2037,6 +2122,15 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslendpointidentificationalgorithm_go">
+<a href="#sslendpointidentificationalgorithm_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Endpoint<wbr>Identification<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2047,6 +2141,33 @@ By the time of writing the only available option is `datadog`.
             title="Optional">
         <span id="bootstrapservers_nodejs">
 <a href="#bootstrapservers_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="saslmechanism_nodejs">
+<a href="#saslmechanism_nodejs" style="color: inherit; text-decoration: inherit;">sasl<wbr>Mechanism</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="saslplainpassword_nodejs">
+<a href="#saslplainpassword_nodejs" style="color: inherit; text-decoration: inherit;">sasl<wbr>Plain<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="saslplainusername_nodejs">
+<a href="#saslplainusername_nodejs" style="color: inherit; text-decoration: inherit;">sasl<wbr>Plain<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2088,6 +2209,15 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sslendpointidentificationalgorithm_nodejs">
+<a href="#sslendpointidentificationalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Endpoint<wbr>Identification<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2098,6 +2228,33 @@ By the time of writing the only available option is `datadog`.
             title="Optional">
         <span id="bootstrap_servers_python">
 <a href="#bootstrap_servers_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sasl_mechanism_python">
+<a href="#sasl_mechanism_python" style="color: inherit; text-decoration: inherit;">sasl_<wbr>mechanism</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sasl_plain_password_python">
+<a href="#sasl_plain_password_python" style="color: inherit; text-decoration: inherit;">sasl_<wbr>plain_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sasl_plain_username_python">
+<a href="#sasl_plain_username_python" style="color: inherit; text-decoration: inherit;">sasl_<wbr>plain_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2139,20 +2296,191 @@ By the time of writing the only available option is `datadog`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssl_endpoint_identification_algorithm_python">
+<a href="#ssl_endpoint_identification_algorithm_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>endpoint_<wbr>identification_<wbr>algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getserviceintegrationendpointexternalschemaregistryuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>External<wbr>Schema<wbr>Registry<wbr>User<wbr>Config</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authentication_csharp">
+<a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="basicauthpassword_csharp">
+<a href="#basicauthpassword_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="basicauthusername_csharp">
+<a href="#basicauthusername_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="url_csharp">
+<a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authentication_go">
+<a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="basicauthpassword_go">
+<a href="#basicauthpassword_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="basicauthusername_go">
+<a href="#basicauthusername_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="url_go">
+<a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authentication_nodejs">
+<a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="basicauthpassword_nodejs">
+<a href="#basicauthpassword_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="basicauthusername_nodejs">
+<a href="#basicauthusername_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="url_nodejs">
+<a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authentication_python">
+<a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="basic_auth_password_python">
+<a href="#basic_auth_password_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="basic_auth_username_python">
+<a href="#basic_auth_username_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="url_python">
+<a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="getserviceintegrationendpointjolokiauserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Jolokia<wbr>User<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationEndpointJolokiaUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationEndpointJolokiaUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointJolokiaUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointJolokiaUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationEndpointJolokiaUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationEndpointJolokiaUserConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2253,16 +2581,6 @@ By the time of writing the only available option is `datadog`.
 {{% /choosable %}}
 
 <h4 id="getserviceintegrationendpointprometheususerconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Prometheus<wbr>User<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationEndpointPrometheusUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationEndpointPrometheusUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointPrometheusUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointPrometheusUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationEndpointPrometheusUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationEndpointPrometheusUserConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2363,16 +2681,6 @@ By the time of writing the only available option is `datadog`.
 {{% /choosable %}}
 
 <h4 id="getserviceintegrationendpointrsysloguserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Rsyslog<wbr>User<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationEndpointRsyslogUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationEndpointRsyslogUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointRsyslogUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointRsyslogUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationEndpointRsyslogUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationEndpointRsyslogUserConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2725,16 +3033,6 @@ By the time of writing the only available option is `datadog`.
 {{% /choosable %}}
 
 <h4 id="getserviceintegrationendpointsignalfxuserconfig">Get<wbr>Service<wbr>Integration<wbr>Endpoint<wbr>Signalfx<wbr>User<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetServiceIntegrationEndpointSignalfxUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetServiceIntegrationEndpointSignalfxUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointSignalfxUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetServiceIntegrationEndpointSignalfxUserConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetServiceIntegrationEndpointSignalfxUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetServiceIntegrationEndpointSignalfxUserConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

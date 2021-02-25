@@ -32,19 +32,16 @@ class MyStack : Stack
             Parameters = 
             {
                 { "certificateAuthority", "Symantec" },
-                { "expirationDate", "2020-11-03T12:10:13" },
                 { "secretSource", new AzureNextGen.Cdn.Latest.Inputs.ResourceReferenceArgs
                 {
                     Id = "/subscriptions/subid/resourcegroups/RG/providers/Microsoft.KeyVault/vault/kvName/certificate/certName",
                 } },
                 { "secretVersion", "67c452f83c804aed80aa3a21e523c226" },
-                { "subject", "www.foo.contoso.com" },
                 { "subjectAlternativeNames", 
                 {
                     "foo.contoso.com",
                     "www3.foo.contoso.com",
                 } },
-                { "thumbprint", "fjio4pu930t2909irf2304809" },
                 { "type", "CustomerCertificate" },
                 { "useLatestVersion", false },
             },
@@ -73,17 +70,14 @@ import pulumi_azure_nextgen as azure_nextgen
 secret = azure_nextgen.cdn.latest.Secret("secret",
     parameters={
         "certificateAuthority": "Symantec",
-        "expirationDate": "2020-11-03T12:10:13",
         "secretSource": azure_nextgen.cdn.latest.ResourceReferenceArgs(
             id="/subscriptions/subid/resourcegroups/RG/providers/Microsoft.KeyVault/vault/kvName/certificate/certName",
         ),
         "secretVersion": "67c452f83c804aed80aa3a21e523c226",
-        "subject": "www.foo.contoso.com",
         "subjectAlternativeNames": [
             "foo.contoso.com",
             "www3.foo.contoso.com",
         ],
-        "thumbprint": "fjio4pu930t2909irf2304809",
         "type": "CustomerCertificate",
         "useLatestVersion": False,
     },
@@ -104,17 +98,14 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const secret = new azure_nextgen.cdn.latest.Secret("secret", {
     parameters: {
         certificateAuthority: "Symantec",
-        expirationDate: "2020-11-03T12:10:13",
         secretSource: {
             id: "/subscriptions/subid/resourcegroups/RG/providers/Microsoft.KeyVault/vault/kvName/certificate/certName",
         },
         secretVersion: "67c452f83c804aed80aa3a21e523c226",
-        subject: "www.foo.contoso.com",
         subjectAlternativeNames: [
             "foo.contoso.com",
             "www3.foo.contoso.com",
         ],
-        thumbprint: "fjio4pu930t2909irf2304809",
         type: "CustomerCertificate",
         useLatestVersion: false,
     },
@@ -135,7 +126,7 @@ const secret = new azure_nextgen.cdn.latest.Secret("secret", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Secret</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">SecretArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Secret</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">SecretArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -143,11 +134,11 @@ const secret = new azure_nextgen.cdn.latest.Secret("secret", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecret</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">SecretArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Secret</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewSecret</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">SecretArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Secret</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Secret</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">SecretArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Secret</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">SecretArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -168,7 +159,7 @@ const secret = new azure_nextgen.cdn.latest.Secret("secret", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SecretArgs</span>
+        <span class="property-type"><a href="#inputs">SecretArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -237,7 +228,7 @@ const secret = new azure_nextgen.cdn.latest.Secret("secret", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SecretArgs</span>
+        <span class="property-type"><a href="#inputs">SecretArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -276,7 +267,7 @@ const secret = new azure_nextgen.cdn.latest.Secret("secret", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">SecretArgs</span>
+        <span class="property-type"><a href="#inputs">SecretArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -299,11 +290,11 @@ const secret = new azure_nextgen.cdn.latest.Secret("secret", {
 
 ## Secret Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Secret resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Secret resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -757,15 +748,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Certificate issuing authority.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="expirationdate_csharp">
-<a href="#expirationdate_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate expiration date.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="secretversion_csharp">
 <a href="#secretversion_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Version</a>
 </span>
@@ -775,15 +757,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Version of the secret to be used{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="subject_csharp">
-<a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Subject name in the certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="subjectalternativenames_csharp">
 <a href="#subjectalternativenames_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alternative<wbr>Names</a>
 </span>
@@ -791,15 +764,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of SANs.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="thumbprint_csharp">
-<a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate thumbprint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="uselatestversion_csharp">
@@ -835,15 +799,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Certificate issuing authority.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="expirationdate_go">
-<a href="#expirationdate_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate expiration date.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="secretversion_go">
 <a href="#secretversion_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Version</a>
 </span>
@@ -853,15 +808,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Version of the secret to be used{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="subject_go">
-<a href="#subject_go" style="color: inherit; text-decoration: inherit;">Subject</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Subject name in the certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="subjectalternativenames_go">
 <a href="#subjectalternativenames_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alternative<wbr>Names</a>
 </span>
@@ -869,15 +815,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of SANs.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="thumbprint_go">
-<a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate thumbprint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="uselatestversion_go">
@@ -913,15 +850,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Certificate issuing authority.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="expirationdate_nodejs">
-<a href="#expirationdate_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate expiration date.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="secretversion_nodejs">
 <a href="#secretversion_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Version</a>
 </span>
@@ -931,15 +859,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Version of the secret to be used{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="subject_nodejs">
-<a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Subject name in the certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="subjectalternativenames_nodejs">
 <a href="#subjectalternativenames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alternative<wbr>Names</a>
 </span>
@@ -947,15 +866,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of SANs.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="thumbprint_nodejs">
-<a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate thumbprint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="uselatestversion_nodejs">
@@ -991,15 +901,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Certificate issuing authority.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="expiration_date_python">
-<a href="#expiration_date_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Certificate expiration date.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="secret_version_python">
 <a href="#secret_version_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>version</a>
 </span>
@@ -1009,15 +910,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Version of the secret to be used{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="subject_python">
-<a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Subject name in the certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="subject_alternative_names_python">
 <a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
 </span>
@@ -1025,15 +917,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of SANs.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="thumbprint_python">
-<a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Certificate thumbprint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="use_latest_version_python">
@@ -1071,15 +954,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Certificate issuing authority.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="expirationdate_csharp">
-<a href="#expirationdate_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate expiration date.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="secretversion_csharp">
 <a href="#secretversion_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Version</a>
 </span>
@@ -1089,15 +963,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Version of the secret to be used{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="subject_csharp">
-<a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Subject name in the certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="subjectalternativenames_csharp">
 <a href="#subjectalternativenames_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alternative<wbr>Names</a>
 </span>
@@ -1105,15 +970,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of SANs.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="thumbprint_csharp">
-<a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate thumbprint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="uselatestversion_csharp">
@@ -1149,15 +1005,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Certificate issuing authority.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="expirationdate_go">
-<a href="#expirationdate_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate expiration date.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="secretversion_go">
 <a href="#secretversion_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Version</a>
 </span>
@@ -1167,15 +1014,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Version of the secret to be used{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="subject_go">
-<a href="#subject_go" style="color: inherit; text-decoration: inherit;">Subject</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Subject name in the certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="subjectalternativenames_go">
 <a href="#subjectalternativenames_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alternative<wbr>Names</a>
 </span>
@@ -1183,15 +1021,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of SANs.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="thumbprint_go">
-<a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate thumbprint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="uselatestversion_go">
@@ -1227,15 +1056,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Certificate issuing authority.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="expirationdate_nodejs">
-<a href="#expirationdate_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate expiration date.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="secretversion_nodejs">
 <a href="#secretversion_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Version</a>
 </span>
@@ -1245,15 +1065,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Version of the secret to be used{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="subject_nodejs">
-<a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Subject name in the certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="subjectalternativenames_nodejs">
 <a href="#subjectalternativenames_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alternative<wbr>Names</a>
 </span>
@@ -1261,15 +1072,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of SANs.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="thumbprint_nodejs">
-<a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate thumbprint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="uselatestversion_nodejs">
@@ -1305,15 +1107,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Certificate issuing authority.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="expiration_date_python">
-<a href="#expiration_date_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Certificate expiration date.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="secret_version_python">
 <a href="#secret_version_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>version</a>
 </span>
@@ -1323,15 +1116,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Version of the secret to be used{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="subject_python">
-<a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Subject name in the certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="subject_alternative_names_python">
 <a href="#subject_alternative_names_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alternative_<wbr>names</a>
 </span>
@@ -1339,15 +1123,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of SANs.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="thumbprint_python">
-<a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Certificate thumbprint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="use_latest_version_python">
@@ -1365,132 +1140,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="expirationdate_csharp">
-<a href="#expirationdate_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate expiration date.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="subject_csharp">
-<a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Subject name in the certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="thumbprint_csharp">
-<a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate thumbprint.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="expirationdate_go">
-<a href="#expirationdate_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate expiration date.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="subject_go">
-<a href="#subject_go" style="color: inherit; text-decoration: inherit;">Subject</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Subject name in the certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="thumbprint_go">
-<a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate thumbprint.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="expirationdate_nodejs">
-<a href="#expirationdate_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate expiration date.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="subject_nodejs">
-<a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Subject name in the certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="thumbprint_nodejs">
-<a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate thumbprint.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="expiration_date_python">
-<a href="#expiration_date_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Certificate expiration date.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="subject_python">
-<a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Subject name in the certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="thumbprint_python">
-<a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Certificate thumbprint.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1499,132 +1166,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="expirationdate_csharp">
-<a href="#expirationdate_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate expiration date.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="subject_csharp">
-<a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Subject name in the certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="thumbprint_csharp">
-<a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate thumbprint.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="expirationdate_go">
-<a href="#expirationdate_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate expiration date.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="subject_go">
-<a href="#subject_go" style="color: inherit; text-decoration: inherit;">Subject</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Subject name in the certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="thumbprint_go">
-<a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate thumbprint.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="expirationdate_nodejs">
-<a href="#expirationdate_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate expiration date.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="subject_nodejs">
-<a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Subject name in the certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="thumbprint_nodejs">
-<a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Certificate thumbprint.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="expiration_date_python">
-<a href="#expiration_date_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>date</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Certificate expiration date.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="subject_python">
-<a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Subject name in the certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="thumbprint_python">
-<a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Certificate thumbprint.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

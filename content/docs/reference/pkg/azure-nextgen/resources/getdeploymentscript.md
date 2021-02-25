@@ -1,8 +1,8 @@
 
 ---
-title: "GetDeploymentScript"
-title_tag: "Function GetDeploymentScript | Module resources | Package Azure NextGen"
-meta_desc: "Explore the GetDeploymentScript function of the resources module, including examples, input properties, output properties, and supporting types. "
+title: "getDeploymentScript"
+title_tag: "azure-nextgen.resources.getDeploymentScript"
+meta_desc: "Documentation for the azure-nextgen.resources.getDeploymentScript function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetDeploymentScript function of the resources module, in
 
 
 
-## Using GetDeploymentScript {#using}
+## Using getDeploymentScript {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDeploymentScript<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDeploymentScriptArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetDeploymentScriptResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDeploymentScript<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDeploymentScriptArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDeploymentScriptResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetDeploymentScript function of the resources module, in
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDeploymentScript<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDeploymentScriptArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupDeploymentScriptResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDeploymentScript<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDeploymentScriptArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDeploymentScriptResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDeploymentScript` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetDeploymentScript function of the resources module, in
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDeploymentScript </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetDeploymentScriptResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetDeploymentScriptArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDeploymentScriptResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDeploymentScriptArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetDeploymentScript Result {#result}
+## getDeploymentScript Result {#result}
 
 The following output properties are available:
 
@@ -164,15 +164,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String Id used to locate any resource on Azure.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="identity_csharp">
-<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Outputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="kind_csharp">
@@ -220,6 +211,15 @@ The following output properties are available:
     <dd>{{% md %}}Type of this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Resources.<wbr>Outputs.<wbr>Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -242,15 +242,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String Id used to locate any resource on Azure.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="identity_go">
-<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="kind_go">
@@ -298,6 +289,15 @@ The following output properties are available:
     <dd>{{% md %}}Type of this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -320,15 +320,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String Id used to locate any resource on Azure.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="identity_nodejs">
-<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="kind_nodejs">
@@ -376,6 +367,15 @@ The following output properties are available:
     <dd>{{% md %}}Type of this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -398,15 +398,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String Id used to locate any resource on Azure.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="identity_python">
-<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="kind_python">
@@ -454,6 +445,15 @@ The following output properties are available:
     <dd>{{% md %}}Type of this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedserviceidentityresponse">Managed<wbr>Service<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Optional property. Managed identity to be used for this deployment script. Currently, only user-assigned MSI is supported.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -474,21 +474,9 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tenantid_csharp">
-<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the Azure Active Directory.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
@@ -515,15 +503,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tenantid_go">
-<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the Azure Active Directory.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -546,15 +525,6 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tenantid_nodejs">
-<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the Azure Active Directory.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
@@ -581,15 +551,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="tenant_id_python">
-<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the Azure Active Directory.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -610,9 +571,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
-
-
-
 
 
 
@@ -654,7 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
@@ -714,7 +672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
@@ -774,7 +732,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
@@ -834,7 +792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
@@ -857,9 +815,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response</h4>
-
-
-
 
 
 

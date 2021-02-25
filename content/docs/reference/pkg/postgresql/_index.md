@@ -1,6 +1,6 @@
 ---
 title: "PostgreSQL"
-title_tag: "Module PostgreSQL | Package PostgreSQL"
+title_tag: "postgresql.PostgreSQL"
 meta_desc: "A Pulumi package for creating and managing postgresql cloud resources."
 menu:
     reference:
@@ -19,6 +19,7 @@ A Pulumi package for creating and managing postgresql cloud resources.
     <li><a href="defaultprivileges" title="DefaultPrivileges"><span class="symbol resource"></span>DefaultPrivileges</a></li>
     <li><a href="extension" title="Extension"><span class="symbol resource"></span>Extension</a></li>
     <li><a href="grant" title="Grant"><span class="symbol resource"></span>Grant</a></li>
+    <li><a href="grantrole" title="GrantRole"><span class="symbol resource"></span>GrantRole</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
     <li><a href="schema" title="Schema"><span class="symbol resource"></span>Schema</a></li>
@@ -33,24 +34,6 @@ A Pulumi package for creating and managing postgresql cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`postgresql` Terraform Provider](https://github.com/terraform-providers/terraform-provider-postgresql).</dd>
 	<dt>Version</dt>
-	<dd>2.5.3</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.PostgreSql/Pulumi.PostgreSql.html" title="Pulumi.PostgreSql">Pulumi.PostgreSql</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/v2/go/postgresql/?tab=doc#" title="postgresql">postgresql</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#" title="@pulumi/postgresql">@pulumi/postgresql</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_postgresql" title="pulumi_postgresql">pulumi_postgresql</a></dd>
-
+	<dd>2.7.2</dd>
 </dl>
 

@@ -159,7 +159,7 @@ const webhook = new azure_nextgen.containerregistry.latest.Webhook("webhook", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">WebhookArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebhookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -167,11 +167,11 @@ const webhook = new azure_nextgen.containerregistry.latest.Webhook("webhook", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebhook</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">WebhookArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Webhook</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebhook</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebhookArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Webhook</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">WebhookArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Webhook</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WebhookArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -192,7 +192,7 @@ const webhook = new azure_nextgen.containerregistry.latest.Webhook("webhook", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WebhookArgs</span>
+        <span class="property-type"><a href="#inputs">WebhookArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -261,7 +261,7 @@ const webhook = new azure_nextgen.containerregistry.latest.Webhook("webhook", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WebhookArgs</span>
+        <span class="property-type"><a href="#inputs">WebhookArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -300,7 +300,7 @@ const webhook = new azure_nextgen.containerregistry.latest.Webhook("webhook", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">WebhookArgs</span>
+        <span class="property-type"><a href="#inputs">WebhookArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -323,11 +323,11 @@ const webhook = new azure_nextgen.containerregistry.latest.Webhook("webhook", {
 
 ## Webhook Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Webhook resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Webhook resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -343,15 +343,6 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Registry.<wbr>Webhook<wbr>Action&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The list of actions that trigger the webhook to post notifications.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the webhook. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="registryname_csharp">
@@ -399,6 +390,15 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Custom headers that will be added to the webhook notifications.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the webhook. This cannot be changed after the resource is created.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
@@ -439,15 +439,6 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of actions that trigger the webhook to post notifications.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the webhook. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="registryname_go">
@@ -495,6 +486,15 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Custom headers that will be added to the webhook notifications.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the webhook. This cannot be changed after the resource is created.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
 </span>
@@ -535,15 +535,6 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string | Webhook<wbr>Action[]</span>
     </dt>
     <dd>{{% md %}}The list of actions that trigger the webhook to post notifications.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the webhook. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="registryname_nodejs">
@@ -591,6 +582,15 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Custom headers that will be added to the webhook notifications.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the webhook. This cannot be changed after the resource is created.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
 </span>
@@ -631,15 +631,6 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Sequence[Union[str, Webhook<wbr>Action]]</span>
     </dt>
     <dd>{{% md %}}The list of actions that trigger the webhook to post notifications.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location of the webhook. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="registry_name_python">
@@ -685,6 +676,15 @@ The Webhook resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Custom headers that will be added to the webhook notifications.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location of the webhook. This cannot be changed after the resource is created.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scope_python">

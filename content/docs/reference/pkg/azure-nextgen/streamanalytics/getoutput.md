@@ -1,8 +1,8 @@
 
 ---
-title: "GetOutput"
-title_tag: "Function GetOutput | Module streamanalytics | Package Azure NextGen"
-meta_desc: "Explore the GetOutput function of the streamanalytics module, including examples, input properties, output properties, and supporting types. "
+title: "getOutput"
+title_tag: "azure-nextgen.streamanalytics.getOutput"
+meta_desc: "Documentation for the azure-nextgen.streamanalytics.getOutput function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetOutput function of the streamanalytics module, includ
 
 
 
-## Using GetOutput {#using}
+## Using getOutput {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getOutput<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetOutputArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetOutputResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getOutput<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetOutputArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetOutputResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetOutput function of the streamanalytics module, includ
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupOutput<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupOutputArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupOutputResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupOutput<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupOutputArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupOutputResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupOutput` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetOutput function of the streamanalytics module, includ
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetOutput </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetOutputResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetOutputArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetOutputResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetOutputArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetOutput Result {#result}
+## getOutput Result {#result}
 
 The following output properties are available:
 
@@ -474,9 +474,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -502,9 +499,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuredatalakestoreoutputdatasourceresponse">Azure<wbr>Data<wbr>Lake<wbr>Store<wbr>Output<wbr>Data<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -824,9 +818,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1032,9 +1023,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azuretableoutputdatasourceresponse">Azure<wbr>Table<wbr>Output<wbr>Data<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -1318,9 +1306,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1529,9 +1514,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1629,9 +1611,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="diagnosticconditionresponse">Diagnostic<wbr>Condition<wbr>Response</h4>
-
-
-
 
 
 
@@ -1771,9 +1750,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1835,9 +1811,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="documentdboutputdatasourceresponse">Document<wbr>Db<wbr>Output<wbr>Data<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -2085,9 +2058,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2296,9 +2266,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2396,9 +2363,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="powerbioutputdatasourceresponse">Power<wbr>BIOutput<wbr>Data<wbr>Source<wbr>Response</h4>
-
-
-
 
 
 
@@ -2682,9 +2646,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2893,9 +2854,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3101,9 +3059,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="storageaccountresponse">Storage<wbr>Account<wbr>Response</h4>
-
-
-
 
 
 

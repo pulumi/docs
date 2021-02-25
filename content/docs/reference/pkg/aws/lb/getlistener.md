@@ -1,8 +1,8 @@
 
 ---
-title: "GetListener"
-title_tag: "Function GetListener | Module lb | Package AWS"
-meta_desc: "Explore the GetListener function of the lb module, including examples, input properties, output properties, and supporting types. &gt; **Note:** `aws.alb.Listener` is known as `aws.lb.Listener`. The functionality is identical."
+title: "getListener"
+title_tag: "aws.lb.getListener"
+meta_desc: "Documentation for the aws.lb.getListener function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -139,13 +139,13 @@ const selected443 = selected.then(selected => aws.lb.getListener({
 {{% /examples %}}
 
 
-## Using GetListener {#using}
+## Using getListener {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getListener<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lb/#GetListenerArgs">GetListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lb/#GetListenerResult">GetListenerResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getListener<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetListenerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetListenerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -155,7 +155,7 @@ const selected443 = selected.then(selected => aws.lb.getListener({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupListener<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#LookupListenerArgs">LookupListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#LookupListenerResult">LookupListenerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupListener<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupListenerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupListenerResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupListener` in the Go SDK.
 
@@ -164,7 +164,7 @@ const selected443 = selected.then(selected => aws.lb.getListener({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetListener </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lb.GetListenerResult.html">GetListenerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LB.GetListenerArgs.html">GetListenerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetListenerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetListenerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -320,7 +320,7 @@ The following arguments are supported:
 
 
 
-## GetListener Result {#result}
+## getListener Result {#result}
 
 The following output properties are available:
 
@@ -649,16 +649,6 @@ The following output properties are available:
 
 
 <h4 id="getlistenerdefaultaction">Get<wbr>Listener<wbr>Default<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#GetListenerDefaultAction">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LB.Outputs.GetListenerDefaultAction.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -690,6 +680,15 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlistenerdefaultactionfixedresponse">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="forwards_csharp">
+<a href="#forwards_csharp" style="color: inherit; text-decoration: inherit;">Forwards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforward">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -763,6 +762,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="forwards_go">
+<a href="#forwards_go" style="color: inherit; text-decoration: inherit;">Forwards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforward">[]Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="order_go">
 <a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
 </span>
@@ -828,6 +836,15 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlistenerdefaultactionfixedresponse">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="forwards_nodejs">
+<a href="#forwards_nodejs" style="color: inherit; text-decoration: inherit;">forwards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforward">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -901,6 +918,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="forwards_python">
+<a href="#forwards_python" style="color: inherit; text-decoration: inherit;">forwards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforward">Sequence[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
 </span>
@@ -939,16 +965,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getlistenerdefaultactionauthenticatecognito">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionAuthenticateCognito">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#GetListenerDefaultActionAuthenticateCognito">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LB.Outputs.GetListenerDefaultActionAuthenticateCognito.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1265,16 +1281,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getlistenerdefaultactionauthenticateoidc">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionAuthenticateOidc">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#GetListenerDefaultActionAuthenticateOidc">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LB.Outputs.GetListenerDefaultActionAuthenticateOidc.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1699,16 +1705,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getlistenerdefaultactionfixedresponse">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionFixedResponse">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#GetListenerDefaultActionFixedResponse">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LB.Outputs.GetListenerDefaultActionFixedResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1844,17 +1840,311 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
-<h4 id="getlistenerdefaultactionredirect">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionRedirect">output</a> API doc for this type.
+<h4 id="getlistenerdefaultactionforward">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="stickinesses_csharp">
+<a href="#stickinesses_csharp" style="color: inherit; text-decoration: inherit;">Stickinesses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforwardstickiness">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="targetgroups_csharp">
+<a href="#targetgroups_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforwardtargetgroup">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb?tab=doc#GetListenerDefaultActionRedirect">output</a> API doc for this type.
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="stickinesses_go">
+<a href="#stickinesses_go" style="color: inherit; text-decoration: inherit;">Stickinesses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforwardstickiness">[]Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="targetgroups_go">
+<a href="#targetgroups_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforwardtargetgroup">[]Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="stickinesses_nodejs">
+<a href="#stickinesses_nodejs" style="color: inherit; text-decoration: inherit;">stickinesses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforwardstickiness">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="targetgroups_nodejs">
+<a href="#targetgroups_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforwardtargetgroup">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="stickinesses_python">
+<a href="#stickinesses_python" style="color: inherit; text-decoration: inherit;">stickinesses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforwardstickiness">Sequence[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="target_groups_python">
+<a href="#target_groups_python" style="color: inherit; text-decoration: inherit;">target_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionforwardtargetgroup">Sequence[Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getlistenerdefaultactionforwardstickiness">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness</h4>
+
+
+
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LB.Outputs.GetListenerDefaultActionRedirect.html">output</a> API doc for this type.
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="duration_csharp">
+<a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="duration_go">
+<a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="duration_nodejs">
+<a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="duration_python">
+<a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getlistenerdefaultactionforwardtargetgroup">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The arn of the listener. Required if `load_balancer_arn` and `port` is not set.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="weight_csharp">
+<a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The arn of the listener. Required if `load_balancer_arn` and `port` is not set.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="weight_go">
+<a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The arn of the listener. Required if `load_balancer_arn` and `port` is not set.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="weight_nodejs">
+<a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The arn of the listener. Required if `load_balancer_arn` and `port` is not set.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="weight_python">
+<a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getlistenerdefaultactionredirect">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect</h4>
 
 
 

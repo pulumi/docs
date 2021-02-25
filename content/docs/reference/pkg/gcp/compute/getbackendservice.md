@@ -1,8 +1,8 @@
 
 ---
-title: "GetBackendService"
-title_tag: "Function GetBackendService | Module compute | Package GCP"
-meta_desc: "Explore the GetBackendService function of the compute module, including examples, input properties, output properties, and supporting types. Provide access to a Backend Service&#39;s attribute. For more information"
+title: "getBackendService"
+title_tag: "gcp.compute.getBackendService"
+meta_desc: "Documentation for the gcp.compute.getBackendService function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -17,13 +17,13 @@ and the [API](https://cloud.google.com/compute/docs/reference/latest/backendServ
 
 
 
-## Using GetBackendService {#using}
+## Using getBackendService {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBackendService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#GetBackendServiceArgs">GetBackendServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#GetBackendServiceResult">GetBackendServiceResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBackendService<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBackendServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBackendServiceResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -33,7 +33,7 @@ and the [API](https://cloud.google.com/compute/docs/reference/latest/backendServ
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBackendService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#LookupBackendServiceArgs">LookupBackendServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#LookupBackendServiceResult">LookupBackendServiceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBackendService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupBackendServiceArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupBackendServiceResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupBackendService` in the Go SDK.
 
@@ -42,7 +42,7 @@ and the [API](https://cloud.google.com/compute/docs/reference/latest/backendServ
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBackendService </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GetBackendServiceResult.html">GetBackendServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GetBackendServiceArgs.html">GetBackendServiceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBackendServiceResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBackendServiceArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -158,7 +158,7 @@ The following arguments are supported:
 
 
 
-## GetBackendService Result {#result}
+## getBackendService Result {#result}
 
 The following output properties are available:
 
@@ -1215,16 +1215,6 @@ The following output properties are available:
 
 
 <h4 id="getbackendservicebackend">Get<wbr>Backend<wbr>Service<wbr>Backend</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceBackend">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetBackendServiceBackend">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetBackendServiceBackend.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1653,16 +1643,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getbackendservicecdnpolicy">Get<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceCdnPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetBackendServiceCdnPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetBackendServiceCdnPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2015,16 +1995,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getbackendservicecdnpolicycachekeypolicy">Get<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceCdnPolicyCacheKeyPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetBackendServiceCdnPolicyCacheKeyPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetBackendServiceCdnPolicyCacheKeyPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2233,16 +2203,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getbackendservicecdnpolicynegativecachingpolicy">Get<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceCdnPolicyNegativeCachingPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetBackendServiceCdnPolicyNegativeCachingPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetBackendServiceCdnPolicyNegativeCachingPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2343,16 +2303,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getbackendservicecircuitbreaker">Get<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breaker</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceCircuitBreaker">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetBackendServiceCircuitBreaker">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetBackendServiceCircuitBreaker.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2597,16 +2547,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getbackendservicecircuitbreakerconnecttimeout">Get<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breaker<wbr>Connect<wbr>Timeout</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceCircuitBreakerConnectTimeout">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetBackendServiceCircuitBreakerConnectTimeout">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetBackendServiceCircuitBreakerConnectTimeout.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2707,16 +2647,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getbackendserviceconsistenthash">Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceConsistentHash">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetBackendServiceConsistentHash">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetBackendServiceConsistentHash.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2853,16 +2783,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getbackendserviceconsistenthashhttpcooky">Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cooky</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceConsistentHashHttpCooky">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetBackendServiceConsistentHashHttpCooky">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetBackendServiceConsistentHashHttpCooky.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3003,16 +2923,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getbackendserviceconsistenthashhttpcookyttl">Get<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cooky<wbr>Ttl</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceConsistentHashHttpCookyTtl">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetBackendServiceConsistentHashHttpCookyTtl">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetBackendServiceConsistentHashHttpCookyTtl.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3113,16 +3023,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getbackendserviceiap">Get<wbr>Backend<wbr>Service<wbr>Iap</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceIap">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetBackendServiceIap">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetBackendServiceIap.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3259,16 +3159,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getbackendservicelogconfig">Get<wbr>Backend<wbr>Service<wbr>Log<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceLogConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetBackendServiceLogConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetBackendServiceLogConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3369,16 +3259,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getbackendserviceoutlierdetection">Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceOutlierDetection">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetBackendServiceOutlierDetection">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetBackendServiceOutlierDetection.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3803,16 +3683,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getbackendserviceoutlierdetectionbaseejectiontime">Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceOutlierDetectionBaseEjectionTime">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetBackendServiceOutlierDetectionBaseEjectionTime">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetBackendServiceOutlierDetectionBaseEjectionTime.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3913,16 +3783,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getbackendserviceoutlierdetectioninterval">Get<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendServiceOutlierDetectionInterval">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetBackendServiceOutlierDetectionInterval">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetBackendServiceOutlierDetectionInterval.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

@@ -155,7 +155,7 @@ const referenceDataSet = new azure_nextgen.timeseriesinsights.latest.ReferenceDa
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReferenceDataSet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">ReferenceDataSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">ReferenceDataSet</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ReferenceDataSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -163,11 +163,11 @@ const referenceDataSet = new azure_nextgen.timeseriesinsights.latest.ReferenceDa
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReferenceDataSet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">ReferenceDataSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReferenceDataSet</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewReferenceDataSet</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ReferenceDataSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">ReferenceDataSet</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReferenceDataSet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ReferenceDataSetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">ReferenceDataSet</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ReferenceDataSetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -188,7 +188,7 @@ const referenceDataSet = new azure_nextgen.timeseriesinsights.latest.ReferenceDa
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReferenceDataSetArgs</span>
+        <span class="property-type"><a href="#inputs">ReferenceDataSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -257,7 +257,7 @@ const referenceDataSet = new azure_nextgen.timeseriesinsights.latest.ReferenceDa
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReferenceDataSetArgs</span>
+        <span class="property-type"><a href="#inputs">ReferenceDataSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -296,7 +296,7 @@ const referenceDataSet = new azure_nextgen.timeseriesinsights.latest.ReferenceDa
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ReferenceDataSetArgs</span>
+        <span class="property-type"><a href="#inputs">ReferenceDataSetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -319,11 +319,11 @@ const referenceDataSet = new azure_nextgen.timeseriesinsights.latest.ReferenceDa
 
 ## ReferenceDataSet Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The ReferenceDataSet resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ReferenceDataSet resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -348,15 +348,6 @@ The ReferenceDataSet resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#referencedatasetkeyproperty">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Inputs.<wbr>Reference<wbr>Data<wbr>Set<wbr>Key<wbr>Property<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of key properties for the reference data set.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="referencedatasetname_csharp">
@@ -384,6 +375,15 @@ The ReferenceDataSet resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string | <a href="#datastringcomparisonbehavior">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Data<wbr>String<wbr>Comparison<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}The reference data set key comparison behavior can be set using this property. By default, the value is 'Ordinal' - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When 'OrdinalIgnoreCase' is set, case insensitive comparison will be used.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -419,15 +419,6 @@ The ReferenceDataSet resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The list of key properties for the reference data set.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="referencedatasetname_go">
 <a href="#referencedatasetname_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Data<wbr>Set<wbr>Name</a>
 </span>
@@ -453,6 +444,15 @@ The ReferenceDataSet resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string | <a href="#datastringcomparisonbehavior">Data<wbr>String<wbr>Comparison<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}The reference data set key comparison behavior can be set using this property. By default, the value is 'Ordinal' - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When 'OrdinalIgnoreCase' is set, case insensitive comparison will be used.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -488,15 +488,6 @@ The ReferenceDataSet resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The list of key properties for the reference data set.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="referencedatasetname_nodejs">
 <a href="#referencedatasetname_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Data<wbr>Set<wbr>Name</a>
 </span>
@@ -522,6 +513,15 @@ The ReferenceDataSet resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string | <a href="#datastringcomparisonbehavior">Data<wbr>String<wbr>Comparison<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}The reference data set key comparison behavior can be set using this property. By default, the value is 'Ordinal' - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When 'OrdinalIgnoreCase' is set, case insensitive comparison will be used.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -557,15 +557,6 @@ The ReferenceDataSet resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The list of key properties for the reference data set.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="reference_data_set_name_python">
 <a href="#reference_data_set_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>data_<wbr>set_<wbr>name</a>
 </span>
@@ -591,6 +582,15 @@ The ReferenceDataSet resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str | <a href="#datastringcomparisonbehavior">Data<wbr>String<wbr>Comparison<wbr>Behavior</a></span>
     </dt>
     <dd>{{% md %}}The reference data set key comparison behavior can be set using this property. By default, the value is 'Ordinal' - which means case sensitive key comparison will be performed while joining reference data with events or while adding new reference data. When 'OrdinalIgnoreCase' is set, case insensitive comparison will be used.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">

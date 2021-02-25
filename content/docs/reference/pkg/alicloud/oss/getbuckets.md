@@ -1,8 +1,8 @@
 
 ---
-title: "GetBuckets"
-title_tag: "Function GetBuckets | Module oss | Package AliCloud"
-meta_desc: "Explore the GetBuckets function of the oss module, including examples, input properties, output properties, and supporting types. This data source provides the OSS buckets of the current Alibaba Cloud user."
+title: "getBuckets"
+title_tag: "alicloud.oss.getBuckets"
+meta_desc: "Documentation for the alicloud.oss.getBuckets function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -96,13 +96,13 @@ export const firstOssBucketName = ossBucketsDs.buckets[0].name;
 {{% /examples %}}
 
 
-## Using GetBuckets {#using}
+## Using getBuckets {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBuckets<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/oss/#GetBucketsArgs">GetBucketsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/oss/#GetBucketsResult">GetBucketsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getBuckets<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetBucketsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetBucketsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -112,14 +112,16 @@ export const firstOssBucketName = ossBucketsDs.buckets[0].name;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBuckets<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#GetBucketsArgs">GetBucketsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#GetBucketsResult">GetBucketsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBuckets<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetBucketsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetBucketsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetBuckets` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBuckets </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Oss.GetBucketsResult.html">GetBucketsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Oss.GetBucketsArgs.html">GetBucketsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetBucketsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetBucketsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -231,7 +233,7 @@ The following arguments are supported:
 
 
 
-## GetBuckets Result {#result}
+## getBuckets Result {#result}
 
 The following output properties are available:
 
@@ -460,16 +462,6 @@ The following output properties are available:
 
 
 <h4 id="getbucketsbucket">Get<wbr>Buckets<wbr>Bucket</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBucketsBucket">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#GetBucketsBucket">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Oss.Outputs.GetBucketsBucket.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1214,16 +1206,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getbucketsbucketcorsrule">Get<wbr>Buckets<wbr>Bucket<wbr>Cors<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBucketsBucketCorsRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#GetBucketsBucketCorsRule">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Oss.Outputs.GetBucketsBucketCorsRule.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1452,16 +1434,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getbucketsbucketlifecyclerule">Get<wbr>Buckets<wbr>Bucket<wbr>Lifecycle<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBucketsBucketLifecycleRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#GetBucketsBucketLifecycleRule">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Oss.Outputs.GetBucketsBucketLifecycleRule.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1650,16 +1622,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getbucketsbucketlifecycleruleexpiration">Get<wbr>Buckets<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBucketsBucketLifecycleRuleExpiration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#GetBucketsBucketLifecycleRuleExpiration">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Oss.Outputs.GetBucketsBucketLifecycleRuleExpiration.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1768,16 +1730,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getbucketsbucketlogging">Get<wbr>Buckets<wbr>Bucket<wbr>Logging</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBucketsBucketLogging">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#GetBucketsBucketLogging">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Oss.Outputs.GetBucketsBucketLogging.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1886,16 +1838,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getbucketsbucketrefererconfig">Get<wbr>Buckets<wbr>Bucket<wbr>Referer<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBucketsBucketRefererConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#GetBucketsBucketRefererConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Oss.Outputs.GetBucketsBucketRefererConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2004,16 +1946,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getbucketsbucketserversideencryptionrule">Get<wbr>Buckets<wbr>Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBucketsBucketServerSideEncryptionRule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#GetBucketsBucketServerSideEncryptionRule">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Oss.Outputs.GetBucketsBucketServerSideEncryptionRule.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2122,16 +2054,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getbucketsbucketversioning">Get<wbr>Buckets<wbr>Bucket<wbr>Versioning</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBucketsBucketVersioning">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#GetBucketsBucketVersioning">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Oss.Outputs.GetBucketsBucketVersioning.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2200,16 +2122,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getbucketsbucketwebsite">Get<wbr>Buckets<wbr>Bucket<wbr>Website</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBucketsBucketWebsite">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/oss?tab=doc#GetBucketsBucketWebsite">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Oss.Outputs.GetBucketsBucketWebsite.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

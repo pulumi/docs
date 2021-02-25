@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.storage.BlobInventoryPolicy reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The storage account blob inventory policy.
+Latest API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -26,21 +27,21 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var blobInventoryPolicy = new AzureNextGen.Storage.V20200801Preview.BlobInventoryPolicy("blobInventoryPolicy", new AzureNextGen.Storage.V20200801Preview.BlobInventoryPolicyArgs
+        var blobInventoryPolicy = new AzureNextGen.Storage.Latest.BlobInventoryPolicy("blobInventoryPolicy", new AzureNextGen.Storage.Latest.BlobInventoryPolicyArgs
         {
             AccountName = "sto9699",
             BlobInventoryPolicyName = "default",
-            Policy = new AzureNextGen.Storage.V20200801Preview.Inputs.BlobInventoryPolicySchemaArgs
+            Policy = new AzureNextGen.Storage.Latest.Inputs.BlobInventoryPolicySchemaArgs
             {
                 Destination = "containerName",
                 Enabled = true,
                 Rules = 
                 {
-                    new AzureNextGen.Storage.V20200801Preview.Inputs.BlobInventoryPolicyRuleArgs
+                    new AzureNextGen.Storage.Latest.Inputs.BlobInventoryPolicyRuleArgs
                     {
-                        Definition = new AzureNextGen.Storage.V20200801Preview.Inputs.BlobInventoryPolicyDefinitionArgs
+                        Definition = new AzureNextGen.Storage.Latest.Inputs.BlobInventoryPolicyDefinitionArgs
                         {
-                            Filters = new AzureNextGen.Storage.V20200801Preview.Inputs.BlobInventoryPolicyFilterArgs
+                            Filters = new AzureNextGen.Storage.Latest.Inputs.BlobInventoryPolicyFilterArgs
                             {
                                 BlobTypes = 
                                 {
@@ -79,7 +80,7 @@ class MyStack : Stack
 package main
 
 import (
-	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/v20200801preview"
+	storage "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/storage/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -133,15 +134,15 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-blob_inventory_policy = azure_nextgen.storage.v20200801preview.BlobInventoryPolicy("blobInventoryPolicy",
+blob_inventory_policy = azure_nextgen.storage.latest.BlobInventoryPolicy("blobInventoryPolicy",
     account_name="sto9699",
     blob_inventory_policy_name="default",
-    policy=azure_nextgen.storage.v20200801preview.BlobInventoryPolicySchemaArgs(
+    policy=azure_nextgen.storage.latest.BlobInventoryPolicySchemaArgs(
         destination="containerName",
         enabled=True,
-        rules=[azure_nextgen.storage.v20200801preview.BlobInventoryPolicyRuleArgs(
-            definition=azure_nextgen.storage.v20200801preview.BlobInventoryPolicyDefinitionArgs(
-                filters=azure_nextgen.storage.v20200801preview.BlobInventoryPolicyFilterArgs(
+        rules=[azure_nextgen.storage.latest.BlobInventoryPolicyRuleArgs(
+            definition=azure_nextgen.storage.latest.BlobInventoryPolicyDefinitionArgs(
+                filters=azure_nextgen.storage.latest.BlobInventoryPolicyFilterArgs(
                     blob_types=[
                         "blockBlob",
                         "appendBlob",
@@ -172,7 +173,7 @@ blob_inventory_policy = azure_nextgen.storage.v20200801preview.BlobInventoryPoli
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const blobInventoryPolicy = new azure_nextgen.storage.v20200801preview.BlobInventoryPolicy("blobInventoryPolicy", {
+const blobInventoryPolicy = new azure_nextgen.storage.latest.BlobInventoryPolicy("blobInventoryPolicy", {
     accountName: "sto9699",
     blobInventoryPolicyName: "default",
     policy: {
@@ -214,7 +215,7 @@ const blobInventoryPolicy = new azure_nextgen.storage.v20200801preview.BlobInven
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BlobInventoryPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">BlobInventoryPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">BlobInventoryPolicy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">BlobInventoryPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -222,11 +223,11 @@ const blobInventoryPolicy = new azure_nextgen.storage.v20200801preview.BlobInven
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBlobInventoryPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">BlobInventoryPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BlobInventoryPolicy</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewBlobInventoryPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">BlobInventoryPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">BlobInventoryPolicy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BlobInventoryPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">BlobInventoryPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">BlobInventoryPolicy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">BlobInventoryPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -247,7 +248,7 @@ const blobInventoryPolicy = new azure_nextgen.storage.v20200801preview.BlobInven
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BlobInventoryPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">BlobInventoryPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -316,7 +317,7 @@ const blobInventoryPolicy = new azure_nextgen.storage.v20200801preview.BlobInven
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BlobInventoryPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">BlobInventoryPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -355,7 +356,7 @@ const blobInventoryPolicy = new azure_nextgen.storage.v20200801preview.BlobInven
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">BlobInventoryPolicyArgs</span>
+        <span class="property-type"><a href="#inputs">BlobInventoryPolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -378,11 +379,11 @@ const blobInventoryPolicy = new azure_nextgen.storage.v20200801preview.BlobInven
 
 ## BlobInventoryPolicy Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The BlobInventoryPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The BlobInventoryPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1917,7 +1918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
@@ -1977,7 +1978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
@@ -2037,7 +2038,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
@@ -2097,7 +2098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
@@ -2124,7 +2125,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:storage/v20200801preview:BlobInventoryPolicy DefaultInventoryPolicy /subscriptions/{subscription-id}/resourceGroups/res7687/providers/Microsoft.Storage/storageAccounts/sto9699/inventoryPolicies/default 
+$ pulumi import azure-nextgen:storage/latest:BlobInventoryPolicy DefaultInventoryPolicy /subscriptions/{subscription-id}/resourceGroups/res7687/providers/Microsoft.Storage/storageAccounts/sto9699/inventoryPolicies/default 
 ```
 
 

@@ -104,7 +104,7 @@ $ aws s3 ls $(pulumi stack output BucketName)
 Notice that your `index.html` file has been added to the bucket:
 
 ```bash
-2020-08-27 12:30:24         68 index.html
+2020-08-27 12:30:24         70 index.html
 ```
 
 {{% choosable language javascript %}}

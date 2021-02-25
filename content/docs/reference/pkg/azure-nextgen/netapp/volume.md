@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.netapp.Volume resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Volume resource
-Latest API Version: 2020-09-01.
+Latest API Version: 2020-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -136,19 +136,19 @@ const volume = new azure_nextgen.netapp.latest.Volume("volume", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">VolumeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_protection</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesDataProtectionArgs]</span> = None<span class="p">, </span><span class="nx">export_policy</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesExportPolicyArgs]</span> = None<span class="p">, </span><span class="nx">is_restoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mount_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[MountTargetPropertiesArgs]]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_style</span><span class="p">:</span> <span class="nx">Optional[Union[str, SecurityStyle]]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServiceLevel]]</span> = None<span class="p">, </span><span class="nx">smb_continuously_available</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">smb_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snapshot_directory_visible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throughput_mibps</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">usage_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">volume_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backup_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_protection</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesDataProtectionArgs]</span> = None<span class="p">, </span><span class="nx">encryption_key_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">export_policy</span><span class="p">:</span> <span class="nx">Optional[VolumePropertiesExportPolicyArgs]</span> = None<span class="p">, </span><span class="nx">is_restoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kerberos_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_style</span><span class="p">:</span> <span class="nx">Optional[Union[str, SecurityStyle]]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[Union[str, ServiceLevel]]</span> = None<span class="p">, </span><span class="nx">smb_continuously_available</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">smb_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snapshot_directory_visible</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">snapshot_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">throughput_mibps</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">usage_threshold</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">volume_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVolume</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">VolumeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVolume</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">VolumeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -169,7 +169,7 @@ const volume = new azure_nextgen.netapp.latest.Volume("volume", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VolumeArgs</span>
+        <span class="property-type"><a href="#inputs">VolumeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -238,7 +238,7 @@ const volume = new azure_nextgen.netapp.latest.Volume("volume", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VolumeArgs</span>
+        <span class="property-type"><a href="#inputs">VolumeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -277,7 +277,7 @@ const volume = new azure_nextgen.netapp.latest.Volume("volume", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">VolumeArgs</span>
+        <span class="property-type"><a href="#inputs">VolumeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -300,11 +300,11 @@ const volume = new azure_nextgen.netapp.latest.Volume("volume", {
 
 ## Volume Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Volume resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Volume resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -329,15 +329,6 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique file path for the volume. Used when creating mount targets{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="poolname_csharp">
@@ -403,6 +394,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}DataProtection type volumes include an object containing details of the replication{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="encryptionkeysource_csharp">
+<a href="#encryptionkeysource_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encryption Key Source. Possible values are: 'Microsoft.NetApp'{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="exportpolicy_csharp">
 <a href="#exportpolicy_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Policy</a>
 </span>
@@ -430,13 +430,13 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="mounttargets_csharp">
-<a href="#mounttargets_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Targets</a>
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mounttargetproperties">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Inputs.<wbr>Mount<wbr>Target<wbr>Properties<wbr>Args&gt;</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="protocoltypes_csharp">
@@ -445,7 +445,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Set of protocol types{{% /md %}}</dd>
+    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS fro SMB protocol{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="securitystyle_csharp">
@@ -454,7 +454,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#securitystyle">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Security<wbr>Style</a></span>
     </dt>
-    <dd>{{% md %}}The security style of volume{{% /md %}}</dd>
+    <dd>{{% md %}}The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="servicelevel_csharp">
@@ -490,7 +490,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled (true) the volume will contain a read-only .snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd>
+    <dd>{{% md %}}If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="snapshotid_csharp">
@@ -551,15 +551,6 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique file path for the volume. Used when creating mount targets{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="poolname_go">
@@ -625,6 +616,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}DataProtection type volumes include an object containing details of the replication{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="encryptionkeysource_go">
+<a href="#encryptionkeysource_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encryption Key Source. Possible values are: 'Microsoft.NetApp'{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="exportpolicy_go">
 <a href="#exportpolicy_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Policy</a>
 </span>
@@ -652,13 +652,13 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="mounttargets_go">
-<a href="#mounttargets_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Targets</a>
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mounttargetproperties">[]Mount<wbr>Target<wbr>Properties</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="protocoltypes_go">
@@ -667,7 +667,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Set of protocol types{{% /md %}}</dd>
+    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS fro SMB protocol{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="securitystyle_go">
@@ -676,7 +676,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#securitystyle">Security<wbr>Style</a></span>
     </dt>
-    <dd>{{% md %}}The security style of volume{{% /md %}}</dd>
+    <dd>{{% md %}}The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="servicelevel_go">
@@ -712,7 +712,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled (true) the volume will contain a read-only .snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd>
+    <dd>{{% md %}}If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="snapshotid_go">
@@ -773,15 +773,6 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique file path for the volume. Used when creating mount targets{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="poolname_nodejs">
@@ -847,6 +838,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}DataProtection type volumes include an object containing details of the replication{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="encryptionkeysource_nodejs">
+<a href="#encryptionkeysource_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key<wbr>Source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encryption Key Source. Possible values are: 'Microsoft.NetApp'{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="exportpolicy_nodejs">
 <a href="#exportpolicy_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Policy</a>
 </span>
@@ -874,13 +874,13 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="mounttargets_nodejs">
-<a href="#mounttargets_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Targets</a>
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mounttargetproperties">Mount<wbr>Target<wbr>Properties[]</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="protocoltypes_nodejs">
@@ -889,7 +889,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Set of protocol types{{% /md %}}</dd>
+    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS fro SMB protocol{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="securitystyle_nodejs">
@@ -898,7 +898,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#securitystyle">Security<wbr>Style</a></span>
     </dt>
-    <dd>{{% md %}}The security style of volume{{% /md %}}</dd>
+    <dd>{{% md %}}The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="servicelevel_nodejs">
@@ -934,7 +934,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If enabled (true) the volume will contain a read-only .snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd>
+    <dd>{{% md %}}If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="snapshotid_nodejs">
@@ -995,15 +995,6 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique file path for the volume. Used when creating mount targets{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="pool_name_python">
@@ -1069,6 +1060,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}DataProtection type volumes include an object containing details of the replication{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="encryption_key_source_python">
+<a href="#encryption_key_source_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key_<wbr>source</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Encryption Key Source. Possible values are: 'Microsoft.NetApp'{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="export_policy_python">
 <a href="#export_policy_python" style="color: inherit; text-decoration: inherit;">export_<wbr>policy</a>
 </span>
@@ -1096,13 +1096,13 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="mount_targets_python">
-<a href="#mount_targets_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>targets</a>
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mounttargetproperties">Sequence[Mount<wbr>Target<wbr>Properties<wbr>Args]</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_types_python">
@@ -1111,7 +1111,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Set of protocol types{{% /md %}}</dd>
+    <dd>{{% md %}}Set of protocol types, default NFSv3, CIFS fro SMB protocol{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="security_style_python">
@@ -1120,7 +1120,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#securitystyle">Security<wbr>Style</a></span>
     </dt>
-    <dd>{{% md %}}The security style of volume{{% /md %}}</dd>
+    <dd>{{% md %}}The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="service_level_python">
@@ -1156,7 +1156,7 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If enabled (true) the volume will contain a read-only .snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd>
+    <dd>{{% md %}}If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume's snapshots (default to true).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="snapshot_id_python">
@@ -1235,6 +1235,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="mounttargets_csharp">
+<a href="#mounttargets_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mounttargetpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Net<wbr>App.<wbr>Outputs.<wbr>Mount<wbr>Target<wbr>Properties<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1293,6 +1302,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="mounttargets_go">
+<a href="#mounttargets_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mounttargetpropertiesresponse">[]Mount<wbr>Target<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_go">
@@ -1355,6 +1373,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="mounttargets_nodejs">
+<a href="#mounttargets_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mounttargetpropertiesresponse">Mount<wbr>Target<wbr>Properties<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1413,6 +1440,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="mount_targets_python">
+<a href="#mount_targets_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>targets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#mounttargetpropertiesresponse">Sequence[Mount<wbr>Target<wbr>Properties<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of mount targets{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_python">
@@ -2548,104 +2584,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Read and write access{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="mounttargetproperties">Mount<wbr>Target<wbr>Properties</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="filesystemid_csharp">
-<a href="#filesystemid_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}UUID v4 used to identify the MountTarget{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="smbserverfqdn_csharp">
-<a href="#smbserverfqdn_csharp" style="color: inherit; text-decoration: inherit;">Smb<wbr>Server<wbr>Fqdn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SMB server's Fully Qualified Domain Name, FQDN{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="filesystemid_go">
-<a href="#filesystemid_go" style="color: inherit; text-decoration: inherit;">File<wbr>System<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}UUID v4 used to identify the MountTarget{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="smbserverfqdn_go">
-<a href="#smbserverfqdn_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>Server<wbr>Fqdn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SMB server's Fully Qualified Domain Name, FQDN{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="filesystemid_nodejs">
-<a href="#filesystemid_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}UUID v4 used to identify the MountTarget{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="smbserverfqdn_nodejs">
-<a href="#smbserverfqdn_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Server<wbr>Fqdn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SMB server's Fully Qualified Domain Name, FQDN{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="file_system_id_python">
-<a href="#file_system_id_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}UUID v4 used to identify the MountTarget{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="smb_server_fqdn_python">
-<a href="#smb_server_fqdn_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>server_<wbr>fqdn</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The SMB server's Fully Qualified Domain Name, FQDN{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

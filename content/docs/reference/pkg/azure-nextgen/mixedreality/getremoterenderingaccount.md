@@ -1,8 +1,8 @@
 
 ---
-title: "GetRemoteRenderingAccount"
-title_tag: "Function GetRemoteRenderingAccount | Module mixedreality | Package Azure NextGen"
-meta_desc: "Explore the GetRemoteRenderingAccount function of the mixedreality module, including examples, input properties, output properties, and supporting types. "
+title: "getRemoteRenderingAccount"
+title_tag: "azure-nextgen.mixedreality.getRemoteRenderingAccount"
+meta_desc: "Documentation for the azure-nextgen.mixedreality.getRemoteRenderingAccount function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetRemoteRenderingAccount function of the mixedreality m
 
 
 
-## Using GetRemoteRenderingAccount {#using}
+## Using getRemoteRenderingAccount {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRemoteRenderingAccount<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRemoteRenderingAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetRemoteRenderingAccountResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRemoteRenderingAccount<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRemoteRenderingAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRemoteRenderingAccountResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetRemoteRenderingAccount function of the mixedreality m
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRemoteRenderingAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRemoteRenderingAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupRemoteRenderingAccountResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRemoteRenderingAccount<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRemoteRenderingAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupRemoteRenderingAccountResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupRemoteRenderingAccount` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetRemoteRenderingAccount function of the mixedreality m
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRemoteRenderingAccount </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetRemoteRenderingAccountResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetRemoteRenderingAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetRemoteRenderingAccountResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRemoteRenderingAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetRemoteRenderingAccount Result {#result}
+## getRemoteRenderingAccount Result {#result}
 
 The following output properties are available:
 
@@ -254,6 +254,15 @@ The following output properties are available:
         <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Mixed<wbr>Reality.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku associated with this account{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="storageaccountname_csharp">
+<a href="#storageaccountname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the storage account associated with this accountId{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_csharp">
@@ -370,6 +379,15 @@ The following output properties are available:
     <dd>{{% md %}}The sku associated with this account{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="storageaccountname_go">
+<a href="#storageaccountname_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the storage account associated with this accountId{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -482,6 +500,15 @@ The following output properties are available:
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The sku associated with this account{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="storageaccountname_nodejs">
+<a href="#storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the storage account associated with this accountId{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
@@ -598,6 +625,15 @@ The following output properties are available:
     <dd>{{% md %}}The sku associated with this account{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="storage_account_name_python">
+<a href="#storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the storage account associated with this accountId{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -615,9 +651,6 @@ The following output properties are available:
 
 
 <h4 id="identityresponse">Identity<wbr>Response</h4>
-
-
-
 
 
 
@@ -754,9 +787,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
-
-
-
 
 
 
@@ -968,9 +998,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1009,7 +1036,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
@@ -1069,7 +1096,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
@@ -1129,7 +1156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
@@ -1189,7 +1216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">

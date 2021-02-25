@@ -26,7 +26,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var account = new AzureNextGen.VisualStudio.V20171101Preview.Account("account", new AzureNextGen.VisualStudio.V20171101Preview.AccountArgs
+        var account = new AzureNextGen.VisualStudio.V20140401Preview.Account("account", new AzureNextGen.VisualStudio.V20140401Preview.AccountArgs
         {
             AccountName = "Example",
             Location = "Central US",
@@ -50,7 +50,7 @@ class MyStack : Stack
 package main
 
 import (
-	visualstudio "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/visualstudio/v20171101preview"
+	visualstudio "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/visualstudio/v20140401preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -82,7 +82,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-account = azure_nextgen.visualstudio.v20171101preview.Account("account",
+account = azure_nextgen.visualstudio.v20140401preview.Account("account",
     account_name="Example",
     location="Central US",
     operation_type="create",
@@ -101,7 +101,7 @@ account = azure_nextgen.visualstudio.v20171101preview.Account("account",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const account = new azure_nextgen.visualstudio.v20171101preview.Account("account", {
+const account = new azure_nextgen.visualstudio.v20140401preview.Account("account", {
     accountName: "Example",
     location: "Central US",
     operationType: "create",
@@ -123,7 +123,7 @@ const account = new azure_nextgen.visualstudio.v20171101preview.Account("account
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">AccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Account</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -131,11 +131,11 @@ const account = new azure_nextgen.visualstudio.v20171101preview.Account("account
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">AccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Account</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">AccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Account</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -156,7 +156,7 @@ const account = new azure_nextgen.visualstudio.v20171101preview.Account("account
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AccountArgs</span>
+        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -225,7 +225,7 @@ const account = new azure_nextgen.visualstudio.v20171101preview.Account("account
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AccountArgs</span>
+        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -264,7 +264,7 @@ const account = new azure_nextgen.visualstudio.v20171101preview.Account("account
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">AccountArgs</span>
+        <span class="property-type"><a href="#inputs">AccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -287,11 +287,11 @@ const account = new azure_nextgen.visualstudio.v20171101preview.Account("account
 
 ## Account Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Account resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Account resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -779,7 +779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:visualstudio/v20171101preview:Account VS-Example-Group /subscriptions/0de7f055-dbea-498d-8e9e-da287eedca90/resourceGroups/VS-Example-Group/providers/Microsoft.VisualStudio/account/Example 
+$ pulumi import azure-nextgen:visualstudio/v20140401preview:Account VS-Example-Group /subscriptions/0de7f055-dbea-498d-8e9e-da287eedca90/resourceGroups/VS-Example-Group/providers/Microsoft.VisualStudio/account/Example 
 ```
 
 

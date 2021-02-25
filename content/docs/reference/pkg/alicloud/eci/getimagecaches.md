@@ -1,8 +1,8 @@
 
 ---
-title: "GetImageCaches"
-title_tag: "Function GetImageCaches | Module eci | Package AliCloud"
-meta_desc: "Explore the GetImageCaches function of the eci module, including examples, input properties, output properties, and supporting types. Provides a collection of ECI Image Cache to the specified filters."
+title: "getImageCaches"
+title_tag: "alicloud.eci.getImageCaches"
+meta_desc: "Documentation for the alicloud.eci.getImageCaches function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -17,13 +17,13 @@ Provides a collection of ECI Image Cache to the specified filters.
 
 
 
-## Using GetImageCaches {#using}
+## Using getImageCaches {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getImageCaches<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/eci/#GetImageCachesArgs">GetImageCachesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/eci/#GetImageCachesResult">GetImageCachesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getImageCaches<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetImageCachesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetImageCachesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -33,14 +33,16 @@ Provides a collection of ECI Image Cache to the specified filters.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetImageCaches<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetImageCachesArgs">GetImageCachesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetImageCachesResult">GetImageCachesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetImageCaches<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetImageCachesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetImageCachesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetImageCaches` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetImageCaches </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.GetImageCachesResult.html">GetImageCachesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.GetImageCachesArgs.html">GetImageCachesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetImageCachesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetImageCachesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -352,7 +354,7 @@ The following arguments are supported:
 
 
 
-## GetImageCaches Result {#result}
+## getImageCaches Result {#result}
 
 The following output properties are available:
 
@@ -777,16 +779,6 @@ The following output properties are available:
 
 
 <h4 id="getimagecachescach">Get<wbr>Image<wbr>Caches<wbr>Cach</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetImageCachesCach">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetImageCachesCach">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.GetImageCachesCach.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1215,16 +1207,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getimagecachescachevent">Get<wbr>Image<wbr>Caches<wbr>Cach<wbr>Event</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetImageCachesCachEvent">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetImageCachesCachEvent">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.GetImageCachesCachEvent.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

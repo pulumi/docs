@@ -19,6 +19,8 @@ Provides a resource to create an AWS Firewall Manager policy. You need to be usi
 
 {{% example csharp %}}
 ```csharp
+using System.Collections.Generic;
+using System.Text.Json;
 using Pulumi;
 using Aws = Pulumi.Aws;
 
@@ -26,11 +28,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var test = new Aws.WafRegional.RuleGroup("test", new Aws.WafRegional.RuleGroupArgs
+        var exampleRuleGroup = new Aws.WafRegional.RuleGroup("exampleRuleGroup", new Aws.WafRegional.RuleGroupArgs
         {
             MetricName = "WAFRuleGroupExample",
         });
-        var example = new Aws.Fms.Policy("example", new Aws.Fms.PolicyArgs
+        var examplePolicy = new Aws.Fms.Policy("examplePolicy", new Aws.Fms.PolicyArgs
         {
             ExcludeResourceTags = false,
             RemediationEnabled = false,
@@ -40,24 +42,28 @@ class MyStack : Stack
             },
             SecurityServicePolicyData = new Aws.Fms.Inputs.PolicySecurityServicePolicyDataArgs
             {
-                ManagedServiceData = test.Id.Apply(id => @$"      {{
-        ""type"": ""WAF"",
-        ""ruleGroups"":
-          [{{
-            ""id"":""{id}"",
-            ""overrideAction"" : {{
-              ""type"": ""COUNT""
-            }}
-          }}],
-        ""defaultAction"":
-        {{
-          ""type"": ""BLOCK""
-        }},
-        ""overrideCustomerWebACLAssociation"": false
-      }}
-
-"),
                 Type = "WAF",
+                ManagedServiceData = exampleRuleGroup.Id.Apply(id => JsonSerializer.Serialize(new Dictionary<string, object?>
+                {
+                    { "type", "WAF" },
+                    { "ruleGroups", new[]
+                        {
+                            new Dictionary<string, object?>
+                            {
+                                { "id", id },
+                                { "overrideAction", new Dictionary<string, object?>
+                                {
+                                    { "type", "COUNT" },
+                                } },
+                            },
+                        }
+                     },
+                    { "defaultAction", new Dictionary<string, object?>
+                    {
+                        { "type", "BLOCK" },
+                    } },
+                    { "overrideCustomerWebACLAssociation", false },
+                })),
             },
         });
     }
@@ -72,7 +78,7 @@ class MyStack : Stack
 package main
 
 import (
-	"fmt"
+	"encoding/json"
 
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/fms"
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional"
@@ -81,23 +87,43 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		test, err := wafregional.NewRuleGroup(ctx, "test", &wafregional.RuleGroupArgs{
+		exampleRuleGroup, err := wafregional.NewRuleGroup(ctx, "exampleRuleGroup", &wafregional.RuleGroupArgs{
 			MetricName: pulumi.String("WAFRuleGroupExample"),
 		})
 		if err != nil {
 			return err
 		}
-		_, err = fms.NewPolicy(ctx, "example", &fms.PolicyArgs{
+		_, err = fms.NewPolicy(ctx, "examplePolicy", &fms.PolicyArgs{
 			ExcludeResourceTags: pulumi.Bool(false),
 			RemediationEnabled:  pulumi.Bool(false),
 			ResourceTypeLists: pulumi.StringArray{
 				pulumi.String("AWS::ElasticLoadBalancingV2::LoadBalancer"),
 			},
 			SecurityServicePolicyData: &fms.PolicySecurityServicePolicyDataArgs{
-				ManagedServiceData: test.ID().ApplyT(func(id string) (string, error) {
-					return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "      {\n", "        \"type\": \"WAF\",\n", "        \"ruleGroups\":\n", "          [{\n", "            \"id\":\"", id, "\",\n", "            \"overrideAction\" : {\n", "              \"type\": \"COUNT\"\n", "            }\n", "          }],\n", "        \"defaultAction\":\n", "        {\n", "          \"type\": \"BLOCK\"\n", "        },\n", "        \"overrideCustomerWebACLAssociation\": false\n", "      }\n", "\n"), nil
-				}).(pulumi.StringOutput),
 				Type: pulumi.String("WAF"),
+				ManagedServiceData: exampleRuleGroup.ID().ApplyT(func(id string) (pulumi.String, error) {
+					var _zero pulumi.String
+					tmpJSON0, err := json.Marshal(map[string]interface{}{
+						"type": "WAF",
+						"ruleGroups": []map[string]interface{}{
+							map[string]interface{}{
+								"id": id,
+								"overrideAction": map[string]interface{}{
+									"type": "COUNT",
+								},
+							},
+						},
+						"defaultAction": map[string]interface{}{
+							"type": "BLOCK",
+						},
+						"overrideCustomerWebACLAssociation": false,
+					})
+					if err != nil {
+						return _zero, err
+					}
+					json0 := string(tmpJSON0)
+					return pulumi.String(json0), nil
+				}).(pulumi.StringOutput),
 			},
 		})
 		if err != nil {
@@ -113,32 +139,29 @@ func main() {
 {{% example python %}}
 ```python
 import pulumi
+import json
 import pulumi_aws as aws
 
-test = aws.wafregional.RuleGroup("test", metric_name="WAFRuleGroupExample")
-example = aws.fms.Policy("example",
+example_rule_group = aws.wafregional.RuleGroup("exampleRuleGroup", metric_name="WAFRuleGroupExample")
+example_policy = aws.fms.Policy("examplePolicy",
     exclude_resource_tags=False,
     remediation_enabled=False,
     resource_type_lists=["AWS::ElasticLoadBalancingV2::LoadBalancer"],
     security_service_policy_data=aws.fms.PolicySecurityServicePolicyDataArgs(
-        managed_service_data=test.id.apply(lambda id: f"""      {{
-        "type": "WAF",
-        "ruleGroups":
-          [{{
-            "id":"{id}",
-            "overrideAction" : {{
-              "type": "COUNT"
-            }}
-          }}],
-        "defaultAction":
-        {{
-          "type": "BLOCK"
-        }},
-        "overrideCustomerWebACLAssociation": false
-      }}
-
-"""),
         type="WAF",
+        managed_service_data=example_rule_group.id.apply(lambda id: json.dumps({
+            "type": "WAF",
+            "ruleGroups": [{
+                "id": id,
+                "overrideAction": {
+                    "type": "COUNT",
+                },
+            }],
+            "defaultAction": {
+                "type": "BLOCK",
+            },
+            "overrideCustomerWebACLAssociation": False,
+        })),
     ))
 ```
 
@@ -150,31 +173,26 @@ example = aws.fms.Policy("example",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const test = new aws.wafregional.RuleGroup("test", {
-    metricName: "WAFRuleGroupExample",
-});
-const example = new aws.fms.Policy("example", {
+const exampleRuleGroup = new aws.wafregional.RuleGroup("exampleRuleGroup", {metricName: "WAFRuleGroupExample"});
+const examplePolicy = new aws.fms.Policy("examplePolicy", {
     excludeResourceTags: false,
     remediationEnabled: false,
     resourceTypeLists: ["AWS::ElasticLoadBalancingV2::LoadBalancer"],
     securityServicePolicyData: {
-        managedServiceData: pulumi.interpolate`      {
-        "type": "WAF",
-        "ruleGroups":
-          [{
-            "id":"${test.id}",
-            "overrideAction" : {
-              "type": "COUNT"
-            }
-          }],
-        "defaultAction":
-        {
-          "type": "BLOCK"
-        },
-        "overrideCustomerWebACLAssociation": false
-      }
-`,
         type: "WAF",
+        managedServiceData: exampleRuleGroup.id.apply(id => JSON.stringify({
+            type: "WAF",
+            ruleGroups: [{
+                id: id,
+                overrideAction: {
+                    type: "COUNT",
+                },
+            }],
+            defaultAction: {
+                type: "BLOCK",
+            },
+            overrideCustomerWebACLAssociation: false,
+        })),
     },
 });
 ```
@@ -189,19 +207,19 @@ const example = new aws.fms.Policy("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/fms/#Policy">Policy</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/fms/#PolicyArgs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/fms/#pulumi_aws.fms.Policy">Policy</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">delete_all_policy_resources</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">exclude_map</span><span class="p">:</span> <span class="nx">Optional[PolicyExcludeMapArgs]</span> = None<span class="p">, </span><span class="nx">exclude_resource_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">include_map</span><span class="p">:</span> <span class="nx">Optional[PolicyIncludeMapArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remediation_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_type_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">security_service_policy_data</span><span class="p">:</span> <span class="nx">Optional[PolicySecurityServicePolicyDataArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">delete_all_policy_resources</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">exclude_map</span><span class="p">:</span> <span class="nx">Optional[PolicyExcludeMapArgs]</span> = None<span class="p">, </span><span class="nx">exclude_resource_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">include_map</span><span class="p">:</span> <span class="nx">Optional[PolicyIncludeMapArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remediation_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_type_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">security_service_policy_data</span><span class="p">:</span> <span class="nx">Optional[PolicySecurityServicePolicyDataArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/fms?tab=doc#Policy">NewPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/fms?tab=doc#PolicyArgs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/fms?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPolicy</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Policy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Fms.Policy.html">Policy</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Fms.PolicyArgs.html">PolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -222,7 +240,7 @@ const example = new aws.fms.Policy("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/fms/#PolicyArgs">PolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">PolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -291,7 +309,7 @@ const example = new aws.fms.Policy("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/fms?tab=doc#PolicyArgs">PolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">PolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -330,7 +348,7 @@ const example = new aws.fms.Policy("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Fms.PolicyArgs.html">PolicyArgs</a></span>
+        <span class="property-type"><a href="#inputs">PolicyArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -353,11 +371,11 @@ const example = new aws.fms.Policy("example", {
 
 ## Policy Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Policy resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Policy resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -373,16 +391,6 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value, if true the tags that are specified in the `resource_tags` are not protected by this policy. If set to false and resource_tags are populated, resources that contain tags will be protected by this policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="resourcetypelists_csharp">
-<a href="#resourcetypelists_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type<wbr>Lists</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}A list of resource types to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -454,6 +462,26 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}A map of resource tags, that if present will filter protections on resources based on the exclude_resource_tags.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_csharp">
+<a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A resource type to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`, `AWS::EC2::Instance`, `AWS::EC2::NetworkInterface`, `AWS::EC2::SecurityGroup`. Conflicts with `resource_type_list`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcetypelists_csharp">
+<a href="#resourcetypelists_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of resource types to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`, `AWS::EC2::Instance`, `AWS::EC2::NetworkInterface`, `AWS::EC2::SecurityGroup`, and `AWS::EC2::VPC`. Conflicts with `resource_type`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -469,16 +497,6 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value, if true the tags that are specified in the `resource_tags` are not protected by this policy. If set to false and resource_tags are populated, resources that contain tags will be protected by this policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="resourcetypelists_go">
-<a href="#resourcetypelists_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type<wbr>Lists</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of resource types to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -550,6 +568,26 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}A map of resource tags, that if present will filter protections on resources based on the exclude_resource_tags.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_go">
+<a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A resource type to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`, `AWS::EC2::Instance`, `AWS::EC2::NetworkInterface`, `AWS::EC2::SecurityGroup`. Conflicts with `resource_type_list`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcetypelists_go">
+<a href="#resourcetypelists_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of resource types to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`, `AWS::EC2::Instance`, `AWS::EC2::NetworkInterface`, `AWS::EC2::SecurityGroup`, and `AWS::EC2::VPC`. Conflicts with `resource_type`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -565,16 +603,6 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean value, if true the tags that are specified in the `resource_tags` are not protected by this policy. If set to false and resource_tags are populated, resources that contain tags will be protected by this policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="resourcetypelists_nodejs">
-<a href="#resourcetypelists_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type<wbr>Lists</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of resource types to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -646,6 +674,26 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}A map of resource tags, that if present will filter protections on resources based on the exclude_resource_tags.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcetype_nodejs">
+<a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A resource type to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`, `AWS::EC2::Instance`, `AWS::EC2::NetworkInterface`, `AWS::EC2::SecurityGroup`. Conflicts with `resource_type_list`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcetypelists_nodejs">
+<a href="#resourcetypelists_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of resource types to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`, `AWS::EC2::Instance`, `AWS::EC2::NetworkInterface`, `AWS::EC2::SecurityGroup`, and `AWS::EC2::VPC`. Conflicts with `resource_type`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -661,16 +709,6 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean value, if true the tags that are specified in the `resource_tags` are not protected by this policy. If set to false and resource_tags are populated, resources that contain tags will be protected by this policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="resource_type_lists_python">
-<a href="#resource_type_lists_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type_<wbr>lists</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of resource types to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -741,6 +779,26 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of resource tags, that if present will filter protections on resources based on the exclude_resource_tags.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_type_python">
+<a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A resource type to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`, `AWS::EC2::Instance`, `AWS::EC2::NetworkInterface`, `AWS::EC2::SecurityGroup`. Conflicts with `resource_type_list`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_type_lists_python">
+<a href="#resource_type_lists_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type_<wbr>lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of resource types to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`, `AWS::EC2::Instance`, `AWS::EC2::NetworkInterface`, `AWS::EC2::SecurityGroup`, and `AWS::EC2::VPC`. Conflicts with `resource_type`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -896,20 +954,20 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/fms/#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/fms/#Policy">Policy</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">PolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Policy</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_all_policy_resources</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">exclude_map</span><span class="p">:</span> <span class="nx">Optional[PolicyExcludeMapArgs]</span> = None<span class="p">, </span><span class="nx">exclude_resource_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">include_map</span><span class="p">:</span> <span class="nx">Optional[PolicyIncludeMapArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_update_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remediation_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_type_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">security_service_policy_data</span><span class="p">:</span> <span class="nx">Optional[PolicySecurityServicePolicyDataArgs]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_all_policy_resources</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">exclude_map</span><span class="p">:</span> <span class="nx">Optional[PolicyExcludeMapArgs]</span> = None<span class="p">, </span><span class="nx">exclude_resource_tags</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">include_map</span><span class="p">:</span> <span class="nx">Optional[PolicyIncludeMapArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_update_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remediation_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_type_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">security_service_policy_data</span><span class="p">:</span> <span class="nx">Optional[PolicySecurityServicePolicyDataArgs]</span> = None<span class="p">) -&gt;</span> Policy</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/fms?tab=doc#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/fms?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">PolicyState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Policy</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Fms.Policy.html">Policy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Fms.PolicyState.html">PolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Policy</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">PolicyState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1105,13 +1163,23 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_resourcetype_csharp">
+<a href="#state_resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A resource type to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`, `AWS::EC2::Instance`, `AWS::EC2::NetworkInterface`, `AWS::EC2::SecurityGroup`. Conflicts with `resource_type_list`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_resourcetypelists_csharp">
 <a href="#state_resourcetypelists_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of resource types to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`.
+    <dd>{{% md %}}A list of resource types to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`, `AWS::EC2::Instance`, `AWS::EC2::NetworkInterface`, `AWS::EC2::SecurityGroup`, and `AWS::EC2::VPC`. Conflicts with `resource_type`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1220,13 +1288,23 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_resourcetype_go">
+<a href="#state_resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A resource type to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`, `AWS::EC2::Instance`, `AWS::EC2::NetworkInterface`, `AWS::EC2::SecurityGroup`. Conflicts with `resource_type_list`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_resourcetypelists_go">
 <a href="#state_resourcetypelists_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of resource types to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`.
+    <dd>{{% md %}}A list of resource types to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`, `AWS::EC2::Instance`, `AWS::EC2::NetworkInterface`, `AWS::EC2::SecurityGroup`, and `AWS::EC2::VPC`. Conflicts with `resource_type`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1335,13 +1413,23 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_resourcetype_nodejs">
+<a href="#state_resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A resource type to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`, `AWS::EC2::Instance`, `AWS::EC2::NetworkInterface`, `AWS::EC2::SecurityGroup`. Conflicts with `resource_type_list`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_resourcetypelists_nodejs">
 <a href="#state_resourcetypelists_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of resource types to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`.
+    <dd>{{% md %}}A list of resource types to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`, `AWS::EC2::Instance`, `AWS::EC2::NetworkInterface`, `AWS::EC2::SecurityGroup`, and `AWS::EC2::VPC`. Conflicts with `resource_type`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1450,13 +1538,23 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_resource_type_python">
+<a href="#state_resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A resource type to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`, `AWS::EC2::Instance`, `AWS::EC2::NetworkInterface`, `AWS::EC2::SecurityGroup`. Conflicts with `resource_type_list`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_resource_type_lists_python">
 <a href="#state_resource_type_lists_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of resource types to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`.
+    <dd>{{% md %}}A list of resource types to protect, valid values are: `AWS::ElasticLoadBalancingV2::LoadBalancer`, `AWS::ApiGateway::Stage`, `AWS::CloudFront::Distribution`, `AWS::EC2::Instance`, `AWS::EC2::NetworkInterface`, `AWS::EC2::SecurityGroup`, and `AWS::EC2::VPC`. Conflicts with `resource_type`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1481,18 +1579,6 @@ The following state arguments are supported:
 
 
 <h4 id="policyexcludemap">Policy<wbr>Exclude<wbr>Map</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyExcludeMap">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyExcludeMap">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/fms?tab=doc#PolicyExcludeMapArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/fms?tab=doc#PolicyExcludeMapOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Fms.Inputs.PolicyExcludeMapArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Fms.Outputs.PolicyExcludeMap.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1595,18 +1681,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="policyincludemap">Policy<wbr>Include<wbr>Map</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyIncludeMap">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyIncludeMap">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/fms?tab=doc#PolicyIncludeMapArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/fms?tab=doc#PolicyIncludeMapOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Fms.Inputs.PolicyIncludeMapArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Fms.Outputs.PolicyIncludeMap.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1709,18 +1783,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="policysecurityservicepolicydata">Policy<wbr>Security<wbr>Service<wbr>Policy<wbr>Data</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicySecurityServicePolicyData">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicySecurityServicePolicyData">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/fms?tab=doc#PolicySecurityServicePolicyDataArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/fms?tab=doc#PolicySecurityServicePolicyDataOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Fms.Inputs.PolicySecurityServicePolicyDataArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Fms.Outputs.PolicySecurityServicePolicyData.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1733,7 +1795,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}valid values are `BLOCK` or `COUNT`.
+    <dd>{{% md %}}The service that the policy is using to protect the resources. Valid values are `WAFV2`, `WAF`, `SHIELD_ADVANCED`, `SECURITY_GROUPS_COMMON`, `SECURITY_GROUPS_CONTENT_AUDIT`, and `SECURITY_GROUPS_USAGE_AUDIT`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1743,7 +1805,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Details about the service that are specific to the service type, in JSON format. For service type SHIELD_ADVANCED, this is an empty string.
+    <dd>{{% md %}}Details about the service that are specific to the service type, in JSON format. For service type `SHIELD_ADVANCED`, this is an empty string. Examples depending on `type` can be found in the [AWS Firewall Manager SecurityServicePolicyData API Reference](https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_SecurityServicePolicyData.html).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1759,7 +1821,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}valid values are `BLOCK` or `COUNT`.
+    <dd>{{% md %}}The service that the policy is using to protect the resources. Valid values are `WAFV2`, `WAF`, `SHIELD_ADVANCED`, `SECURITY_GROUPS_COMMON`, `SECURITY_GROUPS_CONTENT_AUDIT`, and `SECURITY_GROUPS_USAGE_AUDIT`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1769,7 +1831,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Details about the service that are specific to the service type, in JSON format. For service type SHIELD_ADVANCED, this is an empty string.
+    <dd>{{% md %}}Details about the service that are specific to the service type, in JSON format. For service type `SHIELD_ADVANCED`, this is an empty string. Examples depending on `type` can be found in the [AWS Firewall Manager SecurityServicePolicyData API Reference](https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_SecurityServicePolicyData.html).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1785,7 +1847,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}valid values are `BLOCK` or `COUNT`.
+    <dd>{{% md %}}The service that the policy is using to protect the resources. Valid values are `WAFV2`, `WAF`, `SHIELD_ADVANCED`, `SECURITY_GROUPS_COMMON`, `SECURITY_GROUPS_CONTENT_AUDIT`, and `SECURITY_GROUPS_USAGE_AUDIT`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1795,7 +1857,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Details about the service that are specific to the service type, in JSON format. For service type SHIELD_ADVANCED, this is an empty string.
+    <dd>{{% md %}}Details about the service that are specific to the service type, in JSON format. For service type `SHIELD_ADVANCED`, this is an empty string. Examples depending on `type` can be found in the [AWS Firewall Manager SecurityServicePolicyData API Reference](https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_SecurityServicePolicyData.html).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1811,7 +1873,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}valid values are `BLOCK` or `COUNT`.
+    <dd>{{% md %}}The service that the policy is using to protect the resources. Valid values are `WAFV2`, `WAF`, `SHIELD_ADVANCED`, `SECURITY_GROUPS_COMMON`, `SECURITY_GROUPS_CONTENT_AUDIT`, and `SECURITY_GROUPS_USAGE_AUDIT`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1821,7 +1883,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Details about the service that are specific to the service type, in JSON format. For service type SHIELD_ADVANCED, this is an empty string.
+    <dd>{{% md %}}Details about the service that are specific to the service type, in JSON format. For service type `SHIELD_ADVANCED`, this is an empty string. Examples depending on `type` can be found in the [AWS Firewall Manager SecurityServicePolicyData API Reference](https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_SecurityServicePolicyData.html).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

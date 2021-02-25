@@ -1,8 +1,8 @@
 
 ---
-title: "GetCustomerGateway"
-title_tag: "Function GetCustomerGateway | Module ec2 | Package AWS"
-meta_desc: "Explore the GetCustomerGateway function of the ec2 module, including examples, input properties, output properties, and supporting types. Get an existing AWS Customer Gateway."
+title: "getCustomerGateway"
+title_tag: "aws.ec2.getCustomerGateway"
+meta_desc: "Documentation for the aws.ec2.getCustomerGateway function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -157,13 +157,13 @@ const transit = new aws.ec2.VpnConnection("transit", {
 {{% /examples %}}
 
 
-## Using GetCustomerGateway {#using}
+## Using getCustomerGateway {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCustomerGateway<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#GetCustomerGatewayArgs">GetCustomerGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#GetCustomerGatewayResult">GetCustomerGatewayResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCustomerGateway<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCustomerGatewayArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCustomerGatewayResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -173,7 +173,7 @@ const transit = new aws.ec2.VpnConnection("transit", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCustomerGateway<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupCustomerGatewayArgs">LookupCustomerGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupCustomerGatewayResult">LookupCustomerGatewayResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCustomerGateway<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCustomerGatewayArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCustomerGatewayResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCustomerGateway` in the Go SDK.
 
@@ -182,7 +182,7 @@ const transit = new aws.ec2.VpnConnection("transit", {
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCustomerGateway </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetCustomerGatewayResult.html">GetCustomerGatewayResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetCustomerGatewayArgs.html">GetCustomerGatewayArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCustomerGatewayResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCustomerGatewayArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -338,7 +338,7 @@ The following arguments are supported:
 
 
 
-## GetCustomerGateway Result {#result}
+## getCustomerGateway Result {#result}
 
 The following output properties are available:
 
@@ -366,6 +366,16 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Optional) The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="devicename_csharp">
+<a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) A name for the customer gateway device.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -443,6 +453,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="devicename_go">
+<a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) A name for the customer gateway device.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -514,6 +534,16 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Optional) The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="devicename_nodejs">
+<a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) A name for the customer gateway device.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -591,6 +621,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="device_name_python">
+<a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Optional) A name for the customer gateway device.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -647,16 +687,6 @@ The following output properties are available:
 
 
 <h4 id="getcustomergatewayfilter">Get<wbr>Customer<wbr>Gateway<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetCustomerGatewayFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetCustomerGatewayFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetCustomerGatewayFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetCustomerGatewayFilter">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetCustomerGatewayFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetCustomerGatewayFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

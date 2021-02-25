@@ -17,266 +17,6 @@ Creates a WAFv2 Web ACL Association.
 [1]: https://docs.aws.amazon.com/waf/latest/APIReference/API_AssociateWebACL.html
 [2]: https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html#web_acl_id
 
-{{% examples %}}
-## Example Usage
-
-{{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var exampleRestApi = new Aws.ApiGateway.RestApi("exampleRestApi", new Aws.ApiGateway.RestApiArgs
-        {
-        });
-        var exampleResource = new Aws.ApiGateway.Resource("exampleResource", new Aws.ApiGateway.ResourceArgs
-        {
-            RestApi = exampleRestApi.Id,
-            ParentId = exampleRestApi.RootResourceId,
-            PathPart = "mytestresource",
-        });
-        var exampleMethod = new Aws.ApiGateway.Method("exampleMethod", new Aws.ApiGateway.MethodArgs
-        {
-            RestApi = exampleRestApi.Id,
-            ResourceId = exampleResource.Id,
-            HttpMethod = "GET",
-            Authorization = "NONE",
-        });
-        var exampleIntegration = new Aws.ApiGateway.Integration("exampleIntegration", new Aws.ApiGateway.IntegrationArgs
-        {
-            RestApi = exampleRestApi.Id,
-            ResourceId = exampleResource.Id,
-            HttpMethod = exampleMethod.HttpMethod,
-            Type = "MOCK",
-        });
-        var exampleDeployment = new Aws.ApiGateway.Deployment("exampleDeployment", new Aws.ApiGateway.DeploymentArgs
-        {
-            RestApi = exampleRestApi.Id,
-        }, new CustomResourceOptions
-        {
-            DependsOn = 
-            {
-                exampleIntegration,
-            },
-        });
-        var exampleStage = new Aws.ApiGateway.Stage("exampleStage", new Aws.ApiGateway.StageArgs
-        {
-            StageName = "test",
-            RestApi = exampleRestApi.Id,
-            Deployment = exampleDeployment.Id,
-        });
-        var exampleWebAcl = new Aws.WafV2.WebAcl("exampleWebAcl", new Aws.WafV2.WebAclArgs
-        {
-            Scope = "REGIONAL",
-            DefaultAction = new Aws.WafV2.Inputs.WebAclDefaultActionArgs
-            {
-                Allow = ,
-            },
-            VisibilityConfig = new Aws.WafV2.Inputs.WebAclVisibilityConfigArgs
-            {
-                CloudwatchMetricsEnabled = false,
-                MetricName = "friendly-metric-name",
-                SampledRequestsEnabled = false,
-            },
-        });
-        var exampleWebAclAssociation = new Aws.WafV2.WebAclAssociation("exampleWebAclAssociation", new Aws.WafV2.WebAclAssociationArgs
-        {
-            ResourceArn = exampleStage.Arn,
-            WebAclArn = exampleWebAcl.Arn,
-        });
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway"
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		exampleRestApi, err := apigateway.NewRestApi(ctx, "exampleRestApi", nil)
-		if err != nil {
-			return err
-		}
-		exampleResource, err := apigateway.NewResource(ctx, "exampleResource", &apigateway.ResourceArgs{
-			RestApi:  exampleRestApi.ID(),
-			ParentId: exampleRestApi.RootResourceId,
-			PathPart: pulumi.String("mytestresource"),
-		})
-		if err != nil {
-			return err
-		}
-		exampleMethod, err := apigateway.NewMethod(ctx, "exampleMethod", &apigateway.MethodArgs{
-			RestApi:       exampleRestApi.ID(),
-			ResourceId:    exampleResource.ID(),
-			HttpMethod:    pulumi.String("GET"),
-			Authorization: pulumi.String("NONE"),
-		})
-		if err != nil {
-			return err
-		}
-		exampleIntegration, err := apigateway.NewIntegration(ctx, "exampleIntegration", &apigateway.IntegrationArgs{
-			RestApi:    exampleRestApi.ID(),
-			ResourceId: exampleResource.ID(),
-			HttpMethod: exampleMethod.HttpMethod,
-			Type:       pulumi.String("MOCK"),
-		})
-		if err != nil {
-			return err
-		}
-		exampleDeployment, err := apigateway.NewDeployment(ctx, "exampleDeployment", &apigateway.DeploymentArgs{
-			RestApi: exampleRestApi.ID(),
-		}, pulumi.DependsOn([]pulumi.Resource{
-			exampleIntegration,
-		}))
-		if err != nil {
-			return err
-		}
-		exampleStage, err := apigateway.NewStage(ctx, "exampleStage", &apigateway.StageArgs{
-			StageName:  pulumi.String("test"),
-			RestApi:    exampleRestApi.ID(),
-			Deployment: exampleDeployment.ID(),
-		})
-		if err != nil {
-			return err
-		}
-		exampleWebAcl, err := wafv2.NewWebAcl(ctx, "exampleWebAcl", &wafv2.WebAclArgs{
-			Scope: pulumi.String("REGIONAL"),
-			DefaultAction: &wafv2.WebAclDefaultActionArgs{
-				Allow: nil,
-			},
-			VisibilityConfig: &wafv2.WebAclVisibilityConfigArgs{
-				CloudwatchMetricsEnabled: pulumi.Bool(false),
-				MetricName:               pulumi.String("friendly-metric-name"),
-				SampledRequestsEnabled:   pulumi.Bool(false),
-			},
-		})
-		if err != nil {
-			return err
-		}
-		_, err = wafv2.NewWebAclAssociation(ctx, "exampleWebAclAssociation", &wafv2.WebAclAssociationArgs{
-			ResourceArn: exampleStage.Arn,
-			WebAclArn:   exampleWebAcl.Arn,
-		})
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example_rest_api = aws.apigateway.RestApi("exampleRestApi")
-example_resource = aws.apigateway.Resource("exampleResource",
-    rest_api=example_rest_api.id,
-    parent_id=example_rest_api.root_resource_id,
-    path_part="mytestresource")
-example_method = aws.apigateway.Method("exampleMethod",
-    rest_api=example_rest_api.id,
-    resource_id=example_resource.id,
-    http_method="GET",
-    authorization="NONE")
-example_integration = aws.apigateway.Integration("exampleIntegration",
-    rest_api=example_rest_api.id,
-    resource_id=example_resource.id,
-    http_method=example_method.http_method,
-    type="MOCK")
-example_deployment = aws.apigateway.Deployment("exampleDeployment", rest_api=example_rest_api.id,
-opts=pulumi.ResourceOptions(depends_on=[example_integration]))
-example_stage = aws.apigateway.Stage("exampleStage",
-    stage_name="test",
-    rest_api=example_rest_api.id,
-    deployment=example_deployment.id)
-example_web_acl = aws.wafv2.WebAcl("exampleWebAcl",
-    scope="REGIONAL",
-    default_action=aws.wafv2.WebAclDefaultActionArgs(
-        allow=aws.wafv2.WebAclDefaultActionAllowArgs(),
-    ),
-    visibility_config=aws.wafv2.WebAclVisibilityConfigArgs(
-        cloudwatch_metrics_enabled=False,
-        metric_name="friendly-metric-name",
-        sampled_requests_enabled=False,
-    ))
-example_web_acl_association = aws.wafv2.WebAclAssociation("exampleWebAclAssociation",
-    resource_arn=example_stage.arn,
-    web_acl_arn=example_web_acl.arn)
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const exampleRestApi = new aws.apigateway.RestApi("exampleRestApi", {});
-const exampleResource = new aws.apigateway.Resource("exampleResource", {
-    restApi: exampleRestApi.id,
-    parentId: exampleRestApi.rootResourceId,
-    pathPart: "mytestresource",
-});
-const exampleMethod = new aws.apigateway.Method("exampleMethod", {
-    restApi: exampleRestApi.id,
-    resourceId: exampleResource.id,
-    httpMethod: "GET",
-    authorization: "NONE",
-});
-const exampleIntegration = new aws.apigateway.Integration("exampleIntegration", {
-    restApi: exampleRestApi.id,
-    resourceId: exampleResource.id,
-    httpMethod: exampleMethod.httpMethod,
-    type: "MOCK",
-});
-const exampleDeployment = new aws.apigateway.Deployment("exampleDeployment", {restApi: exampleRestApi.id}, {
-    dependsOn: [exampleIntegration],
-});
-const exampleStage = new aws.apigateway.Stage("exampleStage", {
-    stageName: "test",
-    restApi: exampleRestApi.id,
-    deployment: exampleDeployment.id,
-});
-const exampleWebAcl = new aws.wafv2.WebAcl("exampleWebAcl", {
-    scope: "REGIONAL",
-    defaultAction: {
-        allow: {},
-    },
-    visibilityConfig: {
-        cloudwatchMetricsEnabled: false,
-        metricName: "friendly-metric-name",
-        sampledRequestsEnabled: false,
-    },
-});
-const exampleWebAclAssociation = new aws.wafv2.WebAclAssociation("exampleWebAclAssociation", {
-    resourceArn: exampleStage.arn,
-    webAclArn: exampleWebAcl.arn,
-});
-```
-
-{{% /example %}}
-
-{{% /examples %}}
 
 
 ## Create a WebAclAssociation Resource {#create}
@@ -284,19 +24,19 @@ const exampleWebAclAssociation = new aws.wafv2.WebAclAssociation("exampleWebAclA
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafv2/#WebAclAssociation">WebAclAssociation</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafv2/#WebAclAssociationArgs">WebAclAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebAclAssociation</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebAclAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/wafv2/#pulumi_aws.wafv2.WebAclAssociation">WebAclAssociation</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">resource_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_acl_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WebAclAssociation</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">resource_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_acl_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#WebAclAssociation">NewWebAclAssociation</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#WebAclAssociationArgs">WebAclAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#WebAclAssociation">WebAclAssociation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebAclAssociation</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebAclAssociationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAclAssociation</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.WebAclAssociation.html">WebAclAssociation</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.WebAclAssociationArgs.html">WebAclAssociationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebAclAssociation</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WebAclAssociationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -317,7 +57,7 @@ const exampleWebAclAssociation = new aws.wafv2.WebAclAssociation("exampleWebAclA
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafv2/#WebAclAssociationArgs">WebAclAssociationArgs</a></span>
+        <span class="property-type"><a href="#inputs">WebAclAssociationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -386,7 +126,7 @@ const exampleWebAclAssociation = new aws.wafv2.WebAclAssociation("exampleWebAclA
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#WebAclAssociationArgs">WebAclAssociationArgs</a></span>
+        <span class="property-type"><a href="#inputs">WebAclAssociationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -425,7 +165,7 @@ const exampleWebAclAssociation = new aws.wafv2.WebAclAssociation("exampleWebAclA
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.WebAclAssociationArgs.html">WebAclAssociationArgs</a></span>
+        <span class="property-type"><a href="#inputs">WebAclAssociationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -448,11 +188,11 @@ const exampleWebAclAssociation = new aws.wafv2.WebAclAssociation("exampleWebAclA
 
 ## WebAclAssociation Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The WebAclAssociation resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The WebAclAssociation resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -635,7 +375,7 @@ Get an existing WebAclAssociation resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafv2/#WebAclAssociationState">WebAclAssociationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafv2/#WebAclAssociation">WebAclAssociation</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">WebAclAssociationState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">WebAclAssociation</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -644,11 +384,11 @@ Get an existing WebAclAssociation resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWebAclAssociation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#WebAclAssociationState">WebAclAssociationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafv2?tab=doc#WebAclAssociation">WebAclAssociation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWebAclAssociation<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">WebAclAssociationState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebAclAssociation</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.WebAclAssociation.html">WebAclAssociation</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafV2.WebAclAssociationState.html">WebAclAssociationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">WebAclAssociation</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">WebAclAssociationState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}

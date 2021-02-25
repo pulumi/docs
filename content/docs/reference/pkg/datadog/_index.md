@@ -1,6 +1,6 @@
 ---
 title: "Datadog"
-title_tag: "Package Datadog"
+title_tag: "Datadog Package"
 meta_desc: "A Pulumi package for creating and managing Datadog resources."
 menu:
     reference:
@@ -68,24 +68,6 @@ A Pulumi package for creating and managing Datadog resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
 	<dt>Version</dt>
-	<dd>2.15.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.html" title="Pulumi.Datadog">Pulumi.Datadog</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#" title="datadog">datadog</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/datadog/#" title="@pulumi/datadog">@pulumi/datadog</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_datadog" title="pulumi_datadog">pulumi_datadog</a></dd>
-
+	<dd>2.16.1</dd>
 </dl>
 

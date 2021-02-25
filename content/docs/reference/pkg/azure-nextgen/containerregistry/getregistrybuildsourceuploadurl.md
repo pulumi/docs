@@ -1,8 +1,8 @@
 
 ---
-title: "GetRegistryBuildSourceUploadUrl"
-title_tag: "Function GetRegistryBuildSourceUploadUrl | Module containerregistry | Package Azure NextGen"
-meta_desc: "Explore the GetRegistryBuildSourceUploadUrl function of the containerregistry module, including examples, input properties, output properties, and supporting types. "
+title: "getRegistryBuildSourceUploadUrl"
+title_tag: "azure-nextgen.containerregistry.getRegistryBuildSourceUploadUrl"
+meta_desc: "Documentation for the azure-nextgen.containerregistry.getRegistryBuildSourceUploadUrl function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetRegistryBuildSourceUploadUrl function of the containe
 
 
 
-## Using GetRegistryBuildSourceUploadUrl {#using}
+## Using getRegistryBuildSourceUploadUrl {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRegistryBuildSourceUploadUrl<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRegistryBuildSourceUploadUrlArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetRegistryBuildSourceUploadUrlResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRegistryBuildSourceUploadUrl<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRegistryBuildSourceUploadUrlArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRegistryBuildSourceUploadUrlResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,14 +29,16 @@ meta_desc: "Explore the GetRegistryBuildSourceUploadUrl function of the containe
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegistryBuildSourceUploadUrl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRegistryBuildSourceUploadUrlArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">GetRegistryBuildSourceUploadUrlResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegistryBuildSourceUploadUrl<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRegistryBuildSourceUploadUrlArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRegistryBuildSourceUploadUrlResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetRegistryBuildSourceUploadUrl` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRegistryBuildSourceUploadUrl </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetRegistryBuildSourceUploadUrlResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetRegistryBuildSourceUploadUrlArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetRegistryBuildSourceUploadUrlResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRegistryBuildSourceUploadUrlArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -144,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetRegistryBuildSourceUploadUrl Result {#result}
+## getRegistryBuildSourceUploadUrl Result {#result}
 
 The following output properties are available:
 

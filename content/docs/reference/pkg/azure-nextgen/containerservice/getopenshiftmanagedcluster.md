@@ -1,8 +1,8 @@
 
 ---
-title: "GetOpenShiftManagedCluster"
-title_tag: "Function GetOpenShiftManagedCluster | Module containerservice | Package Azure NextGen"
-meta_desc: "Explore the GetOpenShiftManagedCluster function of the containerservice module, including examples, input properties, output properties, and supporting types. "
+title: "getOpenShiftManagedCluster"
+title_tag: "azure-nextgen.containerservice.getOpenShiftManagedCluster"
+meta_desc: "Documentation for the azure-nextgen.containerservice.getOpenShiftManagedCluster function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetOpenShiftManagedCluster function of the containerserv
 
 
 
-## Using GetOpenShiftManagedCluster {#using}
+## Using getOpenShiftManagedCluster {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getOpenShiftManagedCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetOpenShiftManagedClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetOpenShiftManagedClusterResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getOpenShiftManagedCluster<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetOpenShiftManagedClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetOpenShiftManagedClusterResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetOpenShiftManagedCluster function of the containerserv
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupOpenShiftManagedCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupOpenShiftManagedClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupOpenShiftManagedClusterResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupOpenShiftManagedCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupOpenShiftManagedClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupOpenShiftManagedClusterResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupOpenShiftManagedCluster` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetOpenShiftManagedCluster function of the containerserv
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetOpenShiftManagedCluster </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetOpenShiftManagedClusterResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetOpenShiftManagedClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetOpenShiftManagedClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetOpenShiftManagedClusterArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following arguments are supported:
 
 
 
-## GetOpenShiftManagedCluster Result {#result}
+## getOpenShiftManagedCluster Result {#result}
 
 The following output properties are available:
 
@@ -762,9 +762,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -898,9 +895,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="openshiftmanagedclusteraadidentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>AADIdentity<wbr>Provider<wbr>Response</h4>
-
-
-
 
 
 
@@ -1073,9 +1067,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="openshiftmanagedclusteragentpoolprofileresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Agent<wbr>Pool<wbr>Profile<wbr>Response</h4>
-
-
-
 
 
 
@@ -1323,9 +1314,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1387,9 +1375,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="openshiftmanagedclusteridentityproviderresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Identity<wbr>Provider<wbr>Response</h4>
-
-
-
 
 
 
@@ -1490,9 +1475,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="openshiftmanagedclustermasterpoolprofileresponse">Open<wbr>Shift<wbr>Managed<wbr>Cluster<wbr>Master<wbr>Pool<wbr>Profile<wbr>Response</h4>
-
-
-
 
 
 
@@ -1704,9 +1686,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1840,9 +1819,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="purchaseplanresponse">Purchase<wbr>Plan<wbr>Response</h4>
-
-
-
 
 
 

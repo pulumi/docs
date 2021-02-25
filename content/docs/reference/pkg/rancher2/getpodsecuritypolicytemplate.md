@@ -1,8 +1,8 @@
 
 ---
-title: "GetPodSecurityPolicyTemplate"
-title_tag: "Function GetPodSecurityPolicyTemplate | Package Rancher 2"
-meta_desc: "Explore the GetPodSecurityPolicyTemplate function of the Rancher 2 package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about a Rancher v2 PodSecurityPolicyTemplate."
+title: "getPodSecurityPolicyTemplate"
+title_tag: "rancher2.getPodSecurityPolicyTemplate"
+meta_desc: "Documentation for the rancher2.getPodSecurityPolicyTemplate function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,13 +88,13 @@ const foo = pulumi.output(rancher2.getPodSecurityPolicyTemplate({
 {{% /examples %}}
 
 
-## Using GetPodSecurityPolicyTemplate {#using}
+## Using getPodSecurityPolicyTemplate {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPodSecurityPolicyTemplate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#GetPodSecurityPolicyTemplateArgs">GetPodSecurityPolicyTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#GetPodSecurityPolicyTemplateResult">GetPodSecurityPolicyTemplateResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPodSecurityPolicyTemplate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPodSecurityPolicyTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPodSecurityPolicyTemplateResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -104,7 +104,7 @@ const foo = pulumi.output(rancher2.getPodSecurityPolicyTemplate({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPodSecurityPolicyTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#LookupPodSecurityPolicyTemplateArgs">LookupPodSecurityPolicyTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#LookupPodSecurityPolicyTemplateResult">LookupPodSecurityPolicyTemplateResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPodSecurityPolicyTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPodSecurityPolicyTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPodSecurityPolicyTemplateResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPodSecurityPolicyTemplate` in the Go SDK.
 
@@ -113,7 +113,7 @@ const foo = pulumi.output(rancher2.getPodSecurityPolicyTemplate({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPodSecurityPolicyTemplate </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.GetPodSecurityPolicyTemplateResult.html">GetPodSecurityPolicyTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.GetPodSecurityPolicyTemplateArgs.html">GetPodSecurityPolicyTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPodSecurityPolicyTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPodSecurityPolicyTemplateArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -1265,7 +1265,7 @@ The following arguments are supported:
 
 
 
-## GetPodSecurityPolicyTemplate Result {#result}
+## getPodSecurityPolicyTemplate Result {#result}
 
 The following output properties are available:
 
@@ -2350,16 +2350,6 @@ The following output properties are available:
 
 
 <h4 id="getpodsecuritypolicytemplateallowedcsidriver">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateAllowedCsiDriver">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateAllowedCsiDriver">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateAllowedCsiDriverArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateAllowedCsiDriver">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.GetPodSecurityPolicyTemplateAllowedCsiDriverArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetPodSecurityPolicyTemplateAllowedCsiDriver.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2428,16 +2418,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getpodsecuritypolicytemplateallowedflexvolume">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateAllowedFlexVolume">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateAllowedFlexVolume">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateAllowedFlexVolumeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateAllowedFlexVolume">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.GetPodSecurityPolicyTemplateAllowedFlexVolumeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetPodSecurityPolicyTemplateAllowedFlexVolume.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2502,16 +2482,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getpodsecuritypolicytemplateallowedhostpath">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateAllowedHostPath">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateAllowedHostPath">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateAllowedHostPathArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateAllowedHostPath">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.GetPodSecurityPolicyTemplateAllowedHostPathArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetPodSecurityPolicyTemplateAllowedHostPath.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2612,16 +2582,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getpodsecuritypolicytemplatefsgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateFsGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateFsGroup">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateFsGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateFsGroup">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.GetPodSecurityPolicyTemplateFsGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetPodSecurityPolicyTemplateFsGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2722,16 +2682,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getpodsecuritypolicytemplatefsgrouprange">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group<wbr>Range</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateFsGroupRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateFsGroupRange">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateFsGroupRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateFsGroupRange">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.GetPodSecurityPolicyTemplateFsGroupRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetPodSecurityPolicyTemplateFsGroupRange.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2832,16 +2782,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getpodsecuritypolicytemplatehostport">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Host<wbr>Port</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateHostPort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateHostPort">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateHostPortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateHostPort">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.GetPodSecurityPolicyTemplateHostPortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetPodSecurityPolicyTemplateHostPort.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2942,16 +2882,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getpodsecuritypolicytemplaterunasgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateRunAsGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateRunAsGroup">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateRunAsGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateRunAsGroup">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.GetPodSecurityPolicyTemplateRunAsGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetPodSecurityPolicyTemplateRunAsGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3052,16 +2982,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getpodsecuritypolicytemplaterunasgrouprange">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Range</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateRunAsGroupRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateRunAsGroupRange">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateRunAsGroupRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateRunAsGroupRange">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.GetPodSecurityPolicyTemplateRunAsGroupRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetPodSecurityPolicyTemplateRunAsGroupRange.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3162,16 +3082,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getpodsecuritypolicytemplaterunasuser">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateRunAsUser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateRunAsUser">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateRunAsUserArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateRunAsUser">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.GetPodSecurityPolicyTemplateRunAsUserArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetPodSecurityPolicyTemplateRunAsUser.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3272,16 +3182,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getpodsecuritypolicytemplaterunasuserrange">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Range</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateRunAsUserRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateRunAsUserRange">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateRunAsUserRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateRunAsUserRange">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.GetPodSecurityPolicyTemplateRunAsUserRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetPodSecurityPolicyTemplateRunAsUserRange.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3382,16 +3282,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getpodsecuritypolicytemplateruntimeclass">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateRuntimeClass">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateRuntimeClass">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateRuntimeClassArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateRuntimeClass">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.GetPodSecurityPolicyTemplateRuntimeClassArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetPodSecurityPolicyTemplateRuntimeClass.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3492,16 +3382,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getpodsecuritypolicytemplateselinux">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateSeLinux">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateSeLinux">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateSeLinuxArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateSeLinux">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.GetPodSecurityPolicyTemplateSeLinuxArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetPodSecurityPolicyTemplateSeLinux.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3602,16 +3482,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getpodsecuritypolicytemplateselinuxselinuxoption">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Se<wbr>Linux<wbr>Option</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateSeLinuxSeLinuxOption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateSeLinuxSeLinuxOption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateSeLinuxSeLinuxOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateSeLinuxSeLinuxOption">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.GetPodSecurityPolicyTemplateSeLinuxSeLinuxOptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetPodSecurityPolicyTemplateSeLinuxSeLinuxOption.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3784,16 +3654,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getpodsecuritypolicytemplatesupplementalgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateSupplementalGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateSupplementalGroup">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateSupplementalGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateSupplementalGroup">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.GetPodSecurityPolicyTemplateSupplementalGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetPodSecurityPolicyTemplateSupplementalGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3894,16 +3754,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getpodsecuritypolicytemplatesupplementalgrouprange">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group<wbr>Range</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateSupplementalGroupRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateSupplementalGroupRange">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateSupplementalGroupRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetPodSecurityPolicyTemplateSupplementalGroupRange">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Inputs.GetPodSecurityPolicyTemplateSupplementalGroupRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Outputs.GetPodSecurityPolicyTemplateSupplementalGroupRange.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

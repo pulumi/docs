@@ -1,8 +1,8 @@
 
 ---
-title: "GetTable"
-title_tag: "Function GetTable | Module dynamodb | Package AWS"
-meta_desc: "Explore the GetTable function of the dynamodb module, including examples, input properties, output properties, and supporting types. Provides information about a DynamoDB table."
+title: "getTable"
+title_tag: "aws.dynamodb.getTable"
+meta_desc: "Documentation for the aws.dynamodb.getTable function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,13 +88,13 @@ const tableName = pulumi.output(aws.dynamodb.getTable({
 {{% /examples %}}
 
 
-## Using GetTable {#using}
+## Using getTable {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTable<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dynamodb/#GetTableArgs">GetTableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dynamodb/#GetTableResult">GetTableResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getTable<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetTableArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetTableResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -104,7 +104,7 @@ const tableName = pulumi.output(aws.dynamodb.getTable({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#LookupTableArgs">LookupTableArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#LookupTableResult">LookupTableResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupTable<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupTableArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupTableResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupTable` in the Go SDK.
 
@@ -113,7 +113,7 @@ const tableName = pulumi.output(aws.dynamodb.getTable({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetTable </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dynamodb.GetTableResult.html">GetTableResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.GetTableArgs.html">GetTableArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetTableResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetTableArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -261,7 +261,7 @@ The following arguments are supported:
 
 
 
-## GetTable Result {#result}
+## getTable Result {#result}
 
 The following output properties are available:
 
@@ -1022,16 +1022,6 @@ The following output properties are available:
 
 
 <h4 id="gettableattribute">Get<wbr>Table<wbr>Attribute</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableAttribute">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#GetTableAttribute">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Outputs.GetTableAttribute.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1136,16 +1126,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="gettableglobalsecondaryindex">Get<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableGlobalSecondaryIndex">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#GetTableGlobalSecondaryIndex">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Outputs.GetTableGlobalSecondaryIndex.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1430,16 +1410,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="gettablelocalsecondaryindex">Get<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableLocalSecondaryIndex">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#GetTableLocalSecondaryIndex">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Outputs.GetTableLocalSecondaryIndex.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1616,16 +1586,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="gettablepointintimerecovery">Get<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTablePointInTimeRecovery">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#GetTablePointInTimeRecovery">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Outputs.GetTablePointInTimeRecovery.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1690,16 +1650,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="gettablereplica">Get<wbr>Table<wbr>Replica</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableReplica">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#GetTableReplica">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Outputs.GetTableReplica.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1764,16 +1714,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="gettableserversideencryption">Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetTableServerSideEncryption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableServerSideEncryption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#GetTableServerSideEncryptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#GetTableServerSideEncryption">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Inputs.GetTableServerSideEncryptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Outputs.GetTableServerSideEncryption.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1874,16 +1814,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="gettablettl">Get<wbr>Table<wbr>Ttl</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableTtl">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/dynamodb?tab=doc#GetTableTtl">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.Outputs.GetTableTtl.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

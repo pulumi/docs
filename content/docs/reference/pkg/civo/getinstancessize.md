@@ -19,7 +19,7 @@ meta_desc: "Explore the GetInstancesSize function of the Civo package, including
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstancesSize<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/civo/#GetInstancesSizeArgs">GetInstancesSizeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/civo/#GetInstancesSizeResult">GetInstancesSizeResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstancesSize<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetInstancesSizeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetInstancesSizeResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,14 +29,14 @@ meta_desc: "Explore the GetInstancesSize function of the Civo package, including
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstancesSize<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#GetInstancesSizeArgs">GetInstancesSizeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#GetInstancesSizeResult">GetInstancesSizeResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstancesSize<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetInstancesSizeArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetInstancesSizeResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInstancesSize </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.GetInstancesSizeResult.html">GetInstancesSizeResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.GetInstancesSizeArgs.html">GetInstancesSizeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetInstancesSizeResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetInstancesSizeArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -329,16 +329,6 @@ The following output properties are available:
 
 
 <h4 id="getinstancessizefilter">Get<wbr>Instances<wbr>Size<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/civo/types/input/#GetInstancesSizeFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/civo/types/output/#GetInstancesSizeFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#GetInstancesSizeFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#GetInstancesSizeFilter">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.Inputs.GetInstancesSizeFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.Outputs.GetInstancesSizeFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -439,16 +429,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getinstancessizesize">Get<wbr>Instances<wbr>Size<wbr>Size</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/civo/types/output/#GetInstancesSizeSize">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#GetInstancesSizeSize">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.Outputs.GetInstancesSizeSize.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -729,16 +709,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getinstancessizesort">Get<wbr>Instances<wbr>Size<wbr>Sort</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/civo/types/input/#GetInstancesSizeSort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/civo/types/output/#GetInstancesSizeSort">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#GetInstancesSizeSortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#GetInstancesSizeSort">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.Inputs.GetInstancesSizeSortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.Outputs.GetInstancesSizeSort.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetVpcPeeringConnection"
-title_tag: "Function GetVpcPeeringConnection | Module ec2 | Package AWS"
-meta_desc: "Explore the GetVpcPeeringConnection function of the ec2 module, including examples, input properties, output properties, and supporting types. The VPC Peering Connection data source provides details about"
+title: "getVpcPeeringConnection"
+title_tag: "aws.ec2.getVpcPeeringConnection"
+meta_desc: "Documentation for the aws.ec2.getVpcPeeringConnection function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -136,13 +136,13 @@ const route = new aws.ec2.Route("route", {
 {{% /examples %}}
 
 
-## Using GetVpcPeeringConnection {#using}
+## Using getVpcPeeringConnection {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVpcPeeringConnection<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#GetVpcPeeringConnectionArgs">GetVpcPeeringConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#GetVpcPeeringConnectionResult">GetVpcPeeringConnectionResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVpcPeeringConnection<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVpcPeeringConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVpcPeeringConnectionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -152,7 +152,7 @@ const route = new aws.ec2.Route("route", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcPeeringConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupVpcPeeringConnectionArgs">LookupVpcPeeringConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupVpcPeeringConnectionResult">LookupVpcPeeringConnectionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcPeeringConnection<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVpcPeeringConnectionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVpcPeeringConnectionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVpcPeeringConnection` in the Go SDK.
 
@@ -161,7 +161,7 @@ const route = new aws.ec2.Route("route", {
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVpcPeeringConnection </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetVpcPeeringConnectionResult.html">GetVpcPeeringConnectionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetVpcPeeringConnectionArgs.html">GetVpcPeeringConnectionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetVpcPeeringConnectionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVpcPeeringConnectionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -181,7 +181,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
+    <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -221,7 +221,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the accepter VPC of the specific VPC Peering Connection to retrieve.
+    <dd>{{% md %}}The primary CIDR block of the accepter VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -308,7 +308,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
+    <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -348,7 +348,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the accepter VPC of the specific VPC Peering Connection to retrieve.
+    <dd>{{% md %}}The primary CIDR block of the accepter VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -435,7 +435,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
+    <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -475,7 +475,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the accepter VPC of the specific VPC Peering Connection to retrieve.
+    <dd>{{% md %}}The primary CIDR block of the accepter VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -562,7 +562,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
+    <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -602,7 +602,7 @@ a pair on the desired VPC Peering Connection.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The CIDR block of the accepter VPC of the specific VPC Peering Connection to retrieve.
+    <dd>{{% md %}}The primary CIDR block of the accepter VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -681,7 +681,7 @@ a pair on the desired VPC Peering Connection.
 
 
 
-## GetVpcPeeringConnection Result {#result}
+## getVpcPeeringConnection Result {#result}
 
 The following output properties are available:
 
@@ -709,7 +709,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A CIDR block associated to the VPC of the specific VPC Peering Connection.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="cidrblocksets_csharp">
+<a href="#cidrblocksets_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block<wbr>Sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcpeeringconnectioncidrblockset">List&lt;Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Cidr<wbr>Block<wbr>Set&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of objects with CIDR blocks of the requester VPC.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -737,6 +748,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="peercidrblocksets_csharp">
+<a href="#peercidrblocksets_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Cidr<wbr>Block<wbr>Sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcpeeringconnectionpeercidrblockset">List&lt;Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Peer<wbr>Cidr<wbr>Block<wbr>Set&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of objects with CIDR blocks of the accepter VPC.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="peerownerid_csharp">
@@ -845,7 +866,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A CIDR block associated to the VPC of the specific VPC Peering Connection.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="cidrblocksets_go">
+<a href="#cidrblocksets_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block<wbr>Sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcpeeringconnectioncidrblockset">[]Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Cidr<wbr>Block<wbr>Set</a></span>
+    </dt>
+    <dd>{{% md %}}List of objects with CIDR blocks of the requester VPC.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -873,6 +905,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="peercidrblocksets_go">
+<a href="#peercidrblocksets_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Cidr<wbr>Block<wbr>Sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcpeeringconnectionpeercidrblockset">[]Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Peer<wbr>Cidr<wbr>Block<wbr>Set</a></span>
+    </dt>
+    <dd>{{% md %}}List of objects with CIDR blocks of the accepter VPC.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="peerownerid_go">
@@ -981,7 +1023,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A CIDR block associated to the VPC of the specific VPC Peering Connection.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="cidrblocksets_nodejs">
+<a href="#cidrblocksets_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block<wbr>Sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcpeeringconnectioncidrblockset">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Cidr<wbr>Block<wbr>Set[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of objects with CIDR blocks of the requester VPC.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1009,6 +1062,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="peercidrblocksets_nodejs">
+<a href="#peercidrblocksets_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Cidr<wbr>Block<wbr>Sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcpeeringconnectionpeercidrblockset">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Peer<wbr>Cidr<wbr>Block<wbr>Set[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of objects with CIDR blocks of the accepter VPC.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="peerownerid_nodejs">
@@ -1117,7 +1180,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A CIDR block associated to the VPC of the specific VPC Peering Connection.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="cidr_block_sets_python">
+<a href="#cidr_block_sets_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block_<wbr>sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcpeeringconnectioncidrblockset">Sequence[Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Cidr<wbr>Block<wbr>Set]</a></span>
+    </dt>
+    <dd>{{% md %}}List of objects with CIDR blocks of the requester VPC.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -1145,6 +1219,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="peer_cidr_block_sets_python">
+<a href="#peer_cidr_block_sets_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>cidr_<wbr>block_<wbr>sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcpeeringconnectionpeercidrblockset">Sequence[Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Peer<wbr>Cidr<wbr>Block<wbr>Set]</a></span>
+    </dt>
+    <dd>{{% md %}}List of objects with CIDR blocks of the accepter VPC.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="peer_owner_id_python">
@@ -1237,17 +1321,75 @@ The following output properties are available:
 ## Supporting Types
 
 
-<h4 id="getvpcpeeringconnectionfilter">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpcPeeringConnectionFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcPeeringConnectionFilter">output</a> API doc for this type.
+<h4 id="getvpcpeeringconnectioncidrblockset">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Cidr<wbr>Block<wbr>Set</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cidrblock_csharp">
+<a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetVpcPeeringConnectionFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetVpcPeeringConnectionFilter">output</a> API doc for this type.
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cidrblock_go">
+<a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetVpcPeeringConnectionFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetVpcPeeringConnectionFilter.html">output</a> API doc for this type.
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cidrblock_nodejs">
+<a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cidr_block_python">
+<a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getvpcpeeringconnectionfilter">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter</h4>
 
 
 
@@ -1359,6 +1501,74 @@ A VPC Peering Connection will be selected if any one of the given values matches
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 A VPC Peering Connection will be selected if any one of the given values matches.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getvpcpeeringconnectionpeercidrblockset">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Peer<wbr>Cidr<wbr>Block<wbr>Set</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cidrblock_csharp">
+<a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cidrblock_go">
+<a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cidrblock_nodejs">
+<a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="cidr_block_python">
+<a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The primary CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

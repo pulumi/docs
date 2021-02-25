@@ -1,8 +1,8 @@
 
 ---
-title: "GetAmi"
-title_tag: "Function GetAmi | Package AWS"
-meta_desc: "Explore the GetAmi function of the AWS package, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of a registered AMI for use in other"
+title: "getAmi"
+title_tag: "aws.getAmi"
+meta_desc: "Documentation for the aws.getAmi function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -188,13 +188,13 @@ const example = pulumi.output(aws.getAmi({
 {{% /examples %}}
 
 
-## Using GetAmi {#using}
+## Using getAmi {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAmi<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/#GetAmiArgs">GetAmiArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/#GetAmiResult">GetAmiResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAmi<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAmiArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAmiResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -204,14 +204,16 @@ const example = pulumi.output(aws.getAmi({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAmi<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAmiArgs">GetAmiArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAmiResult">GetAmiResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAmi<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAmiArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAmiResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAmi` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAmi </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GetAmiResult.html">GetAmiResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GetAmiArgs.html">GetAmiArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAmiResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAmiArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -527,7 +529,7 @@ options to narrow down the list AWS returns.
 
 
 
-## GetAmi Result {#result}
+## getAmi Result {#result}
 
 The following output properties are available:
 
@@ -601,6 +603,16 @@ instance stores).
     </dt>
     <dd>{{% md %}}The description of the AMI that was provided during image
 creation.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="enasupport_csharp">
+<a href="#enasupport_csharp" style="color: inherit; text-decoration: inherit;">Ena<wbr>Support</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -715,6 +727,16 @@ for machine images.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="platformdetails_csharp">
+<a href="#platformdetails_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The platform details associated with the billing code of the AMI.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="productcodes_csharp">
 <a href="#productcodes_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Codes</a>
 </span>
@@ -821,6 +843,16 @@ is successfully registered and can be used to launch an instance.
     <dd>{{% md %}}Any tags assigned to the image.
 * `tags.#.key` - The key name of the tag.
 * `tags.#.value` - The value of the tag.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="usageoperation_csharp">
+<a href="#usageoperation_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Operation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -943,6 +975,16 @@ creation.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="enasupport_go">
+<a href="#enasupport_go" style="color: inherit; text-decoration: inherit;">Ena<wbr>Support</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="hypervisor_go">
 <a href="#hypervisor_go" style="color: inherit; text-decoration: inherit;">Hypervisor</a>
 </span>
@@ -1054,6 +1096,16 @@ for machine images.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="platformdetails_go">
+<a href="#platformdetails_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The platform details associated with the billing code of the AMI.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="productcodes_go">
 <a href="#productcodes_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Codes</a>
 </span>
@@ -1160,6 +1212,16 @@ is successfully registered and can be used to launch an instance.
     <dd>{{% md %}}Any tags assigned to the image.
 * `tags.#.key` - The key name of the tag.
 * `tags.#.value` - The value of the tag.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="usageoperation_go">
+<a href="#usageoperation_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Operation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1282,6 +1344,16 @@ creation.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="enasupport_nodejs">
+<a href="#enasupport_nodejs" style="color: inherit; text-decoration: inherit;">ena<wbr>Support</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="hypervisor_nodejs">
 <a href="#hypervisor_nodejs" style="color: inherit; text-decoration: inherit;">hypervisor</a>
 </span>
@@ -1393,6 +1465,16 @@ for machine images.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="platformdetails_nodejs">
+<a href="#platformdetails_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The platform details associated with the billing code of the AMI.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="productcodes_nodejs">
 <a href="#productcodes_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Codes</a>
 </span>
@@ -1499,6 +1581,16 @@ is successfully registered and can be used to launch an instance.
     <dd>{{% md %}}Any tags assigned to the image.
 * `tags.#.key` - The key name of the tag.
 * `tags.#.value` - The value of the tag.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="usageoperation_nodejs">
+<a href="#usageoperation_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Operation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1621,6 +1713,16 @@ creation.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="ena_support_python">
+<a href="#ena_support_python" style="color: inherit; text-decoration: inherit;">ena_<wbr>support</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="hypervisor_python">
 <a href="#hypervisor_python" style="color: inherit; text-decoration: inherit;">hypervisor</a>
 </span>
@@ -1729,6 +1831,16 @@ for machine images.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value is Windows for `Windows` AMIs; otherwise blank.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="platform_details_python">
+<a href="#platform_details_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The platform details associated with the billing code of the AMI.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1841,6 +1953,16 @@ is successfully registered and can be used to launch an instance.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="usage_operation_python">
+<a href="#usage_operation_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>operation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The operation of the Amazon EC2 instance and the billing code that is associated with the AMI.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="virtualization_type_python">
 <a href="#virtualization_type_python" style="color: inherit; text-decoration: inherit;">virtualization_<wbr>type</a>
 </span>
@@ -1896,16 +2018,6 @@ is successfully registered and can be used to launch an instance.
 
 
 <h4 id="getamiblockdevicemapping">Get<wbr>Ami<wbr>Block<wbr>Device<wbr>Mapping</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiBlockDeviceMapping">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAmiBlockDeviceMapping">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Outputs.GetAmiBlockDeviceMapping.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2078,16 +2190,6 @@ is successfully registered and can be used to launch an instance.
 {{% /choosable %}}
 
 <h4 id="getamifilter">Get<wbr>Ami<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetAmiFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAmiFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAmiFilter">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Inputs.GetAmiFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Outputs.GetAmiFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2192,16 +2294,6 @@ is successfully registered and can be used to launch an instance.
 {{% /choosable %}}
 
 <h4 id="getamiproductcode">Get<wbr>Ami<wbr>Product<wbr>Code</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiProductCode">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/?tab=doc#GetAmiProductCode">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Outputs.GetAmiProductCode.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

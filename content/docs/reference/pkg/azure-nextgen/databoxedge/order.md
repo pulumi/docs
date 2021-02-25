@@ -171,19 +171,19 @@ const order = new azure_nextgen.databoxedge.latest.Order("order", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Order</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">OrderArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Order</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">OrderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Order</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">contact_information</span><span class="p">:</span> <span class="nx">Optional[ContactDetailsArgs]</span> = None<span class="p">, </span><span class="nx">current_status</span><span class="p">:</span> <span class="nx">Optional[OrderStatusArgs]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shipment_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ShipmentType]]</span> = None<span class="p">, </span><span class="nx">shipping_address</span><span class="p">:</span> <span class="nx">Optional[AddressArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Order</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">contact_information</span><span class="p">:</span> <span class="nx">Optional[ContactDetailsArgs]</span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">shipment_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, ShipmentType]]</span> = None<span class="p">, </span><span class="nx">shipping_address</span><span class="p">:</span> <span class="nx">Optional[AddressArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrder</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">OrderArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Order</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewOrder</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">OrderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Order</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Order</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">OrderArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Order</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">OrderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -204,7 +204,7 @@ const order = new azure_nextgen.databoxedge.latest.Order("order", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OrderArgs</span>
+        <span class="property-type"><a href="#inputs">OrderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -273,7 +273,7 @@ const order = new azure_nextgen.databoxedge.latest.Order("order", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OrderArgs</span>
+        <span class="property-type"><a href="#inputs">OrderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -312,7 +312,7 @@ const order = new azure_nextgen.databoxedge.latest.Order("order", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">OrderArgs</span>
+        <span class="property-type"><a href="#inputs">OrderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -335,11 +335,11 @@ const order = new azure_nextgen.databoxedge.latest.Order("order", {
 
 ## Order Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Order resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Order resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -373,15 +373,6 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="currentstatus_csharp">
-<a href="#currentstatus_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Order<wbr>Status<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Current status of the order.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="shipmenttype_csharp">
@@ -435,15 +426,6 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="currentstatus_go">
-<a href="#currentstatus_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderstatus">Order<wbr>Status</a></span>
-    </dt>
-    <dd>{{% md %}}Current status of the order.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="shipmenttype_go">
 <a href="#shipmenttype_go" style="color: inherit; text-decoration: inherit;">Shipment<wbr>Type</a>
 </span>
@@ -493,15 +475,6 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="currentstatus_nodejs">
-<a href="#currentstatus_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderstatus">Order<wbr>Status</a></span>
-    </dt>
-    <dd>{{% md %}}Current status of the order.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="shipmenttype_nodejs">
@@ -555,15 +528,6 @@ The Order resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="current_status_python">
-<a href="#current_status_python" style="color: inherit; text-decoration: inherit;">current_<wbr>status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#orderstatus">Order<wbr>Status<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Current status of the order.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="shipment_type_python">
 <a href="#shipment_type_python" style="color: inherit; text-decoration: inherit;">shipment_<wbr>type</a>
 </span>
@@ -593,6 +557,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="currentstatus_csharp">
+<a href="#currentstatus_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#orderstatusresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Order<wbr>Status<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Current status of the order.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="deliverytrackinginfo_csharp">
@@ -664,6 +637,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="currentstatus_go">
+<a href="#currentstatus_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#orderstatusresponse">Order<wbr>Status<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Current status of the order.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="deliverytrackinginfo_go">
 <a href="#deliverytrackinginfo_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Tracking<wbr>Info</a>
 </span>
@@ -733,6 +715,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="currentstatus_nodejs">
+<a href="#currentstatus_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#orderstatusresponse">Order<wbr>Status<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Current status of the order.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="deliverytrackinginfo_nodejs">
 <a href="#deliverytrackinginfo_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Tracking<wbr>Info</a>
 </span>
@@ -800,6 +791,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="current_status_python">
+<a href="#current_status_python" style="color: inherit; text-decoration: inherit;">current_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#orderstatusresponse">Order<wbr>Status<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Current status of the order.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="delivery_tracking_info_python">
@@ -1769,262 +1769,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The phone number.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="orderstate">Order<wbr>State</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Untracked</dt>
-    <dd>Untracked</dd>
-    <dt>Awaiting<wbr>Fulfilment</dt>
-    <dd>AwaitingFulfilment</dd>
-    <dt>Awaiting<wbr>Preparation</dt>
-    <dd>AwaitingPreparation</dd>
-    <dt>Awaiting<wbr>Shipment</dt>
-    <dd>AwaitingShipment</dd>
-    <dt>Shipped</dt>
-    <dd>Shipped</dd>
-    <dt>Arriving</dt>
-    <dd>Arriving</dd>
-    <dt>Delivered</dt>
-    <dd>Delivered</dd>
-    <dt>Replacement<wbr>Requested</dt>
-    <dd>ReplacementRequested</dd>
-    <dt>Lost<wbr>Device</dt>
-    <dd>LostDevice</dd>
-    <dt>Declined</dt>
-    <dd>Declined</dd>
-    <dt>Return<wbr>Initiated</dt>
-    <dd>ReturnInitiated</dd>
-    <dt>Awaiting<wbr>Return<wbr>Shipment</dt>
-    <dd>AwaitingReturnShipment</dd>
-    <dt>Shipped<wbr>Back</dt>
-    <dd>ShippedBack</dd>
-    <dt>Collected<wbr>At<wbr>Microsoft</dt>
-    <dd>CollectedAtMicrosoft</dd>
-    <dt>Awaiting<wbr>Pickup</dt>
-    <dd>AwaitingPickup</dd>
-    <dt>Pickup<wbr>Completed</dt>
-    <dd>PickupCompleted</dd>
-    <dt>Awaiting<wbr>Drop</dt>
-    <dd>AwaitingDrop</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular">
-    <dt>Order<wbr>State<wbr>Untracked</dt>
-    <dd>Untracked</dd>
-    <dt>Order<wbr>State<wbr>Awaiting<wbr>Fulfilment</dt>
-    <dd>AwaitingFulfilment</dd>
-    <dt>Order<wbr>State<wbr>Awaiting<wbr>Preparation</dt>
-    <dd>AwaitingPreparation</dd>
-    <dt>Order<wbr>State<wbr>Awaiting<wbr>Shipment</dt>
-    <dd>AwaitingShipment</dd>
-    <dt>Order<wbr>State<wbr>Shipped</dt>
-    <dd>Shipped</dd>
-    <dt>Order<wbr>State<wbr>Arriving</dt>
-    <dd>Arriving</dd>
-    <dt>Order<wbr>State<wbr>Delivered</dt>
-    <dd>Delivered</dd>
-    <dt>Order<wbr>State<wbr>Replacement<wbr>Requested</dt>
-    <dd>ReplacementRequested</dd>
-    <dt>Order<wbr>State<wbr>Lost<wbr>Device</dt>
-    <dd>LostDevice</dd>
-    <dt>Order<wbr>State<wbr>Declined</dt>
-    <dd>Declined</dd>
-    <dt>Order<wbr>State<wbr>Return<wbr>Initiated</dt>
-    <dd>ReturnInitiated</dd>
-    <dt>Order<wbr>State<wbr>Awaiting<wbr>Return<wbr>Shipment</dt>
-    <dd>AwaitingReturnShipment</dd>
-    <dt>Order<wbr>State<wbr>Shipped<wbr>Back</dt>
-    <dd>ShippedBack</dd>
-    <dt>Order<wbr>State<wbr>Collected<wbr>At<wbr>Microsoft</dt>
-    <dd>CollectedAtMicrosoft</dd>
-    <dt>Order<wbr>State<wbr>Awaiting<wbr>Pickup</dt>
-    <dd>AwaitingPickup</dd>
-    <dt>Order<wbr>State<wbr>Pickup<wbr>Completed</dt>
-    <dd>PickupCompleted</dd>
-    <dt>Order<wbr>State<wbr>Awaiting<wbr>Drop</dt>
-    <dd>AwaitingDrop</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Untracked</dt>
-    <dd>Untracked</dd>
-    <dt>Awaiting<wbr>Fulfilment</dt>
-    <dd>AwaitingFulfilment</dd>
-    <dt>Awaiting<wbr>Preparation</dt>
-    <dd>AwaitingPreparation</dd>
-    <dt>Awaiting<wbr>Shipment</dt>
-    <dd>AwaitingShipment</dd>
-    <dt>Shipped</dt>
-    <dd>Shipped</dd>
-    <dt>Arriving</dt>
-    <dd>Arriving</dd>
-    <dt>Delivered</dt>
-    <dd>Delivered</dd>
-    <dt>Replacement<wbr>Requested</dt>
-    <dd>ReplacementRequested</dd>
-    <dt>Lost<wbr>Device</dt>
-    <dd>LostDevice</dd>
-    <dt>Declined</dt>
-    <dd>Declined</dd>
-    <dt>Return<wbr>Initiated</dt>
-    <dd>ReturnInitiated</dd>
-    <dt>Awaiting<wbr>Return<wbr>Shipment</dt>
-    <dd>AwaitingReturnShipment</dd>
-    <dt>Shipped<wbr>Back</dt>
-    <dd>ShippedBack</dd>
-    <dt>Collected<wbr>At<wbr>Microsoft</dt>
-    <dd>CollectedAtMicrosoft</dd>
-    <dt>Awaiting<wbr>Pickup</dt>
-    <dd>AwaitingPickup</dd>
-    <dt>Pickup<wbr>Completed</dt>
-    <dd>PickupCompleted</dd>
-    <dt>Awaiting<wbr>Drop</dt>
-    <dd>AwaitingDrop</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular">
-    <dt>UNTRACKED</dt>
-    <dd>Untracked</dd>
-    <dt>AWAITING_FULFILMENT</dt>
-    <dd>AwaitingFulfilment</dd>
-    <dt>AWAITING_PREPARATION</dt>
-    <dd>AwaitingPreparation</dd>
-    <dt>AWAITING_SHIPMENT</dt>
-    <dd>AwaitingShipment</dd>
-    <dt>SHIPPED</dt>
-    <dd>Shipped</dd>
-    <dt>ARRIVING</dt>
-    <dd>Arriving</dd>
-    <dt>DELIVERED</dt>
-    <dd>Delivered</dd>
-    <dt>REPLACEMENT_REQUESTED</dt>
-    <dd>ReplacementRequested</dd>
-    <dt>LOST_DEVICE</dt>
-    <dd>LostDevice</dd>
-    <dt>DECLINED</dt>
-    <dd>Declined</dd>
-    <dt>RETURN_INITIATED</dt>
-    <dd>ReturnInitiated</dd>
-    <dt>AWAITING_RETURN_SHIPMENT</dt>
-    <dd>AwaitingReturnShipment</dd>
-    <dt>SHIPPED_BACK</dt>
-    <dd>ShippedBack</dd>
-    <dt>COLLECTED_AT_MICROSOFT</dt>
-    <dd>CollectedAtMicrosoft</dd>
-    <dt>AWAITING_PICKUP</dt>
-    <dd>AwaitingPickup</dd>
-    <dt>PICKUP_COMPLETED</dt>
-    <dd>PickupCompleted</dd>
-    <dt>AWAITING_DROP</dt>
-    <dd>AwaitingDrop</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="orderstatus">Order<wbr>Status</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="status_csharp">
-<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#orderstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Order<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}Status of the order as per the allowed status types.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="comments_csharp">
-<a href="#comments_csharp" style="color: inherit; text-decoration: inherit;">Comments</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Comments related to this status change.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="status_go">
-<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#orderstate">Order<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}Status of the order as per the allowed status types.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="comments_go">
-<a href="#comments_go" style="color: inherit; text-decoration: inherit;">Comments</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Comments related to this status change.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="status_nodejs">
-<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#orderstate">Order<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}Status of the order as per the allowed status types.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="comments_nodejs">
-<a href="#comments_nodejs" style="color: inherit; text-decoration: inherit;">comments</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Comments related to this status change.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="status_python">
-<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#orderstate">Order<wbr>State</a></span>
-    </dt>
-    <dd>{{% md %}}Status of the order as per the allowed status types.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="comments_python">
-<a href="#comments_python" style="color: inherit; text-decoration: inherit;">comments</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Comments related to this status change.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

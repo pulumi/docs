@@ -1,8 +1,8 @@
 
 ---
-title: "GetClusters"
-title_tag: "Function GetClusters | Package MongoDB Atlas"
-meta_desc: "Explore the GetClusters function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.Cluster` describes all Clusters by the provided project_id. The data source requires your Project ID."
+title: "getClusters"
+title_tag: "mongodbatlas.getClusters"
+meta_desc: "Documentation for the mongodbatlas.getClusters function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -187,13 +187,13 @@ const testClusters = testCluster.projectId.apply(projectId => mongodbatlas.getCl
 {{% /examples %}}
 
 
-## Using GetClusters {#using}
+## Using getClusters {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getClusters<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetClustersArgs">GetClustersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetClustersResult">GetClustersResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getClusters<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetClustersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetClustersResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -203,14 +203,16 @@ const testClusters = testCluster.projectId.apply(projectId => mongodbatlas.getCl
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusters<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetClustersArgs">GetClustersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetClustersResult">GetClustersResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetClusters<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetClustersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetClustersResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetClusters` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetClusters </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetClustersResult.html">GetClustersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetClustersArgs.html">GetClustersArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetClustersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetClustersArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -286,7 +288,7 @@ The following arguments are supported:
 
 
 
-## GetClusters Result {#result}
+## getClusters Result {#result}
 
 The following output properties are available:
 
@@ -439,16 +441,6 @@ The following output properties are available:
 
 
 <h4 id="getclustersresult">Get<wbr>Clusters<wbr>Result</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#GetClustersResult">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetClustersResultType">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GetClustersResult.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -536,10 +528,17 @@ The following output properties are available:
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
 - `connection_strings.standard` -   Public mongodb:// connection string for this cluster.
 - `connection_strings.standard_srv` - Public mongodb+srv:// connection string for this cluster. The mongodb+srv protocol tells the driver to look up the seed list of hosts in DNS. Atlas synchronizes this list with the nodes in a cluster. If the connection string uses this URI format, you don’t need to append the seed list or change the URI if the nodes change. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.standard.
-- `connection_strings.aws_private_link` -  [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster.
-- `connection_strings.aws_private_link_srv` - [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink.
+- `connection_strings.aws_private_link` -  [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. **DEPRECATED** Use `connection_strings.private_endpoint[n].connection_string` instead.
+- `connection_strings.aws_private_link_srv` - [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink. **DEPRECATED** `connection_strings.private_endpoint[n].srv_connection_string` instead.
 - `connection_strings.private` -   [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
 - `connection_strings.private_srv` -  [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
+- `connection_strings.private_endpoint.#.connection_string` - Private-endpoint-aware `mongodb://`connection string for this private endpoint.
+- `connection_strings.private_endpoint.#.srv_connection_string` - Private-endpoint-aware `mongodb+srv://` connection string for this private endpoint.
+- `connection_strings.private_endpoint.#.type` - Type of MongoDB process that you connect to with the connection strings. Atlas returns `MONGOD` for replica sets, or `MONGOS` for sharded clusters.
+- `connection_strings.private_endpoint.#.endpoints` - Private endpoint through which you connect to Atlas when you use `connection_strings.private_endpoint[n].connection_string` or `connection_strings.private_endpoint[n].srv_connection_string`
+- `connection_strings.private_endoint.#.endpoints.#.endpoint_id` - Unique identifier of the private endpoint.
+- `connection_strings.private_endpoint.#.endpoints.#.provider_name` - Cloud provider to which you deployed the private endpoint. Atlas returns `AWS` or `AZURE`.
+- `connection_strings.private_endpoint.#.endpoints.#.region` - Region to which you deployed the private endpoint.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -913,10 +912,17 @@ The following output properties are available:
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
 - `connection_strings.standard` -   Public mongodb:// connection string for this cluster.
 - `connection_strings.standard_srv` - Public mongodb+srv:// connection string for this cluster. The mongodb+srv protocol tells the driver to look up the seed list of hosts in DNS. Atlas synchronizes this list with the nodes in a cluster. If the connection string uses this URI format, you don’t need to append the seed list or change the URI if the nodes change. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.standard.
-- `connection_strings.aws_private_link` -  [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster.
-- `connection_strings.aws_private_link_srv` - [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink.
+- `connection_strings.aws_private_link` -  [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. **DEPRECATED** Use `connection_strings.private_endpoint[n].connection_string` instead.
+- `connection_strings.aws_private_link_srv` - [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink. **DEPRECATED** `connection_strings.private_endpoint[n].srv_connection_string` instead.
 - `connection_strings.private` -   [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
 - `connection_strings.private_srv` -  [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
+- `connection_strings.private_endpoint.#.connection_string` - Private-endpoint-aware `mongodb://`connection string for this private endpoint.
+- `connection_strings.private_endpoint.#.srv_connection_string` - Private-endpoint-aware `mongodb+srv://` connection string for this private endpoint.
+- `connection_strings.private_endpoint.#.type` - Type of MongoDB process that you connect to with the connection strings. Atlas returns `MONGOD` for replica sets, or `MONGOS` for sharded clusters.
+- `connection_strings.private_endpoint.#.endpoints` - Private endpoint through which you connect to Atlas when you use `connection_strings.private_endpoint[n].connection_string` or `connection_strings.private_endpoint[n].srv_connection_string`
+- `connection_strings.private_endoint.#.endpoints.#.endpoint_id` - Unique identifier of the private endpoint.
+- `connection_strings.private_endpoint.#.endpoints.#.provider_name` - Cloud provider to which you deployed the private endpoint. Atlas returns `AWS` or `AZURE`.
+- `connection_strings.private_endpoint.#.endpoints.#.region` - Region to which you deployed the private endpoint.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1290,10 +1296,17 @@ The following output properties are available:
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
 - `connection_strings.standard` -   Public mongodb:// connection string for this cluster.
 - `connection_strings.standard_srv` - Public mongodb+srv:// connection string for this cluster. The mongodb+srv protocol tells the driver to look up the seed list of hosts in DNS. Atlas synchronizes this list with the nodes in a cluster. If the connection string uses this URI format, you don’t need to append the seed list or change the URI if the nodes change. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.standard.
-- `connection_strings.aws_private_link` -  [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster.
-- `connection_strings.aws_private_link_srv` - [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink.
+- `connection_strings.aws_private_link` -  [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. **DEPRECATED** Use `connection_strings.private_endpoint[n].connection_string` instead.
+- `connection_strings.aws_private_link_srv` - [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink. **DEPRECATED** `connection_strings.private_endpoint[n].srv_connection_string` instead.
 - `connection_strings.private` -   [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
 - `connection_strings.private_srv` -  [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
+- `connection_strings.private_endpoint.#.connection_string` - Private-endpoint-aware `mongodb://`connection string for this private endpoint.
+- `connection_strings.private_endpoint.#.srv_connection_string` - Private-endpoint-aware `mongodb+srv://` connection string for this private endpoint.
+- `connection_strings.private_endpoint.#.type` - Type of MongoDB process that you connect to with the connection strings. Atlas returns `MONGOD` for replica sets, or `MONGOS` for sharded clusters.
+- `connection_strings.private_endpoint.#.endpoints` - Private endpoint through which you connect to Atlas when you use `connection_strings.private_endpoint[n].connection_string` or `connection_strings.private_endpoint[n].srv_connection_string`
+- `connection_strings.private_endoint.#.endpoints.#.endpoint_id` - Unique identifier of the private endpoint.
+- `connection_strings.private_endpoint.#.endpoints.#.provider_name` - Cloud provider to which you deployed the private endpoint. Atlas returns `AWS` or `AZURE`.
+- `connection_strings.private_endpoint.#.endpoints.#.region` - Region to which you deployed the private endpoint.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1667,10 +1680,17 @@ The following output properties are available:
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
 - `connection_strings.standard` -   Public mongodb:// connection string for this cluster.
 - `connection_strings.standard_srv` - Public mongodb+srv:// connection string for this cluster. The mongodb+srv protocol tells the driver to look up the seed list of hosts in DNS. Atlas synchronizes this list with the nodes in a cluster. If the connection string uses this URI format, you don’t need to append the seed list or change the URI if the nodes change. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.standard.
-- `connection_strings.aws_private_link` -  [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster.
-- `connection_strings.aws_private_link_srv` - [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink.
+- `connection_strings.aws_private_link` -  [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. **DEPRECATED** Use `connection_strings.private_endpoint[n].connection_string` instead.
+- `connection_strings.aws_private_link_srv` - [Private-endpoint-aware](https://docs.atlas.mongodb.com/security-private-endpoint/#private-endpoint-connection-strings) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a AWS PrivateLink connection to this cluster. Use this URI format if your driver supports it. If it doesn’t, use connectionStrings.awsPrivateLink. **DEPRECATED** `connection_strings.private_endpoint[n].srv_connection_string` instead.
 - `connection_strings.private` -   [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
 - `connection_strings.private_srv` -  [Network-peering-endpoint-aware](https://docs.atlas.mongodb.com/security-vpc-peering/#vpc-peering) mongodb+srv://connection strings for each interface VPC endpoint you configured to connect to this cluster. Returned only if you created a network peering connection to this cluster.
+- `connection_strings.private_endpoint.#.connection_string` - Private-endpoint-aware `mongodb://`connection string for this private endpoint.
+- `connection_strings.private_endpoint.#.srv_connection_string` - Private-endpoint-aware `mongodb+srv://` connection string for this private endpoint.
+- `connection_strings.private_endpoint.#.type` - Type of MongoDB process that you connect to with the connection strings. Atlas returns `MONGOD` for replica sets, or `MONGOS` for sharded clusters.
+- `connection_strings.private_endpoint.#.endpoints` - Private endpoint through which you connect to Atlas when you use `connection_strings.private_endpoint[n].connection_string` or `connection_strings.private_endpoint[n].srv_connection_string`
+- `connection_strings.private_endoint.#.endpoints.#.endpoint_id` - Unique identifier of the private endpoint.
+- `connection_strings.private_endpoint.#.endpoints.#.provider_name` - Cloud provider to which you deployed the private endpoint. Atlas returns `AWS` or `AZURE`.
+- `connection_strings.private_endpoint.#.endpoints.#.region` - Region to which you deployed the private endpoint.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1961,16 +1981,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclustersresultbiconnector">Get<wbr>Clusters<wbr>Result<wbr>Bi<wbr>Connector</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#GetClustersResultBiConnector">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetClustersResultBiConnector">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GetClustersResultBiConnector.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2079,16 +2089,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclustersresultconnectionstrings">Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#GetClustersResultConnectionStrings">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetClustersResultConnectionStrings">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GetClustersResultConnectionStrings.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2120,6 +2120,15 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="privateendpoints_csharp">
+<a href="#privateendpoints_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustersresultconnectionstringsprivateendpoint">List&lt;Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -2184,6 +2193,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="privateendpoints_go">
+<a href="#privateendpoints_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustersresultconnectionstringsprivateendpoint">[]Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="privatesrv_go">
 <a href="#privatesrv_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Srv</a>
 </span>
@@ -2240,6 +2258,15 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="privateendpoints_nodejs">
+<a href="#privateendpoints_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustersresultconnectionstringsprivateendpoint">Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -2304,6 +2331,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="private_endpoints_python">
+<a href="#private_endpoints_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustersresultconnectionstringsprivateendpoint">Sequence[Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="private_srv_python">
 <a href="#private_srv_python" style="color: inherit; text-decoration: inherit;">private_<wbr>srv</a>
 </span>
@@ -2332,17 +2368,319 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
-<h4 id="getclustersresultlabel">Get<wbr>Clusters<wbr>Result<wbr>Label</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#GetClustersResultLabel">output</a> API doc for this type.
+<h4 id="getclustersresultconnectionstringsprivateendpoint">Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="connectionstring_csharp">
+<a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="endpoints_csharp">
+<a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustersresultconnectionstringsprivateendpointendpoint">List&lt;Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="srvconnectionstring_csharp">
+<a href="#srvconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Srv<wbr>Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetClustersResultLabel">output</a> API doc for this type.
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="connectionstring_go">
+<a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="endpoints_go">
+<a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustersresultconnectionstringsprivateendpointendpoint">[]Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="srvconnectionstring_go">
+<a href="#srvconnectionstring_go" style="color: inherit; text-decoration: inherit;">Srv<wbr>Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="connectionstring_nodejs">
+<a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="endpoints_nodejs">
+<a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustersresultconnectionstringsprivateendpointendpoint">Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="srvconnectionstring_nodejs">
+<a href="#srvconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">srv<wbr>Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="connection_string_python">
+<a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="endpoints_python">
+<a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclustersresultconnectionstringsprivateendpointendpoint">Sequence[Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="srv_connection_string_python">
+<a href="#srv_connection_string_python" style="color: inherit; text-decoration: inherit;">srv_<wbr>connection_<wbr>string</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getclustersresultconnectionstringsprivateendpointendpoint">Get<wbr>Clusters<wbr>Result<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint</h4>
+
+
+
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GetClustersResultLabel.html">output</a> API doc for this type.
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpointid_csharp">
+<a href="#endpointid_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="providername_csharp">
+<a href="#providername_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the cloud service provider on which the servers are provisioned.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpointid_go">
+<a href="#endpointid_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="providername_go">
+<a href="#providername_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the cloud service provider on which the servers are provisioned.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpointid_nodejs">
+<a href="#endpointid_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="providername_nodejs">
+<a href="#providername_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates the cloud service provider on which the servers are provisioned.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpoint_id_python">
+<a href="#endpoint_id_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="provider_name_python">
+<a href="#provider_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates the cloud service provider on which the servers are provisioned.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getclustersresultlabel">Get<wbr>Clusters<wbr>Result<wbr>Label</h4>
 
 
 
@@ -2451,16 +2789,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclustersresultreplicationspec">Get<wbr>Clusters<wbr>Result<wbr>Replication<wbr>Spec</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#GetClustersResultReplicationSpec">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetClustersResultReplicationSpec">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GetClustersResultReplicationSpec.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2649,16 +2977,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclustersresultreplicationspecregionsconfig">Get<wbr>Clusters<wbr>Result<wbr>Replication<wbr>Spec<wbr>Regions<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#GetClustersResultReplicationSpecRegionsConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetClustersResultReplicationSpecRegionsConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GetClustersResultReplicationSpecRegionsConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2887,16 +3205,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclustersresultsnapshotbackuppolicy">Get<wbr>Clusters<wbr>Result<wbr>Snapshot<wbr>Backup<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#GetClustersResultSnapshotBackupPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetClustersResultSnapshotBackupPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GetClustersResultSnapshotBackupPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3213,16 +3521,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclustersresultsnapshotbackuppolicypolicy">Get<wbr>Clusters<wbr>Result<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#GetClustersResultSnapshotBackupPolicyPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetClustersResultSnapshotBackupPolicyPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GetClustersResultSnapshotBackupPolicyPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3327,16 +3625,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getclustersresultsnapshotbackuppolicypolicypolicyitem">Get<wbr>Clusters<wbr>Result<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#GetClustersResultSnapshotBackupPolicyPolicyPolicyItem">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetClustersResultSnapshotBackupPolicyPolicyPolicyItem">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GetClustersResultSnapshotBackupPolicyPolicyPolicyItem.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

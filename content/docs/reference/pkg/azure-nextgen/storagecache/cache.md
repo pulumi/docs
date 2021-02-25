@@ -53,8 +53,8 @@ class MyStack : Stack
                         BindDn = "cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
                         BindPassword = "<bindPassword>",
                     },
-                    ExtendedGroupsEnabled = true,
-                    LdapBaseDn = "dc=contosoad,dc=contoso,dc=local",
+                    ExtendedGroups = true,
+                    LdapBaseDN = "dc=contosoad,dc=contoso,dc=local",
                     LdapServer = "192.0.2.12",
                     UsernameSource = "LDAP",
                 },
@@ -143,10 +143,10 @@ func main() {
 						BindDn:       pulumi.String("cn=ldapadmin,dc=contosoad,dc=contoso,dc=local"),
 						BindPassword: pulumi.String("<bindPassword>"),
 					},
-					ExtendedGroupsEnabled: pulumi.Bool(true),
-					LdapBaseDn:            pulumi.String("dc=contosoad,dc=contoso,dc=local"),
-					LdapServer:            pulumi.String("192.0.2.12"),
-					UsernameSource:        pulumi.String("LDAP"),
+					ExtendedGroups: pulumi.Bool(true),
+					LdapBaseDN:     pulumi.String("dc=contosoad,dc=contoso,dc=local"),
+					LdapServer:     pulumi.String("192.0.2.12"),
+					UsernameSource: pulumi.String("LDAP"),
 				},
 			},
 			EncryptionSettings: &storagecache.CacheEncryptionSettingsArgs{
@@ -220,7 +220,7 @@ cache = azure_nextgen.storagecache.latest.Cache("cache",
                 bind_dn="cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
                 bind_password="<bindPassword>",
             ),
-            extended_groups_enabled=True,
+            extended_groups=True,
             ldap_base_dn="dc=contosoad,dc=contoso,dc=local",
             ldap_server="192.0.2.12",
             username_source="LDAP",
@@ -286,8 +286,8 @@ const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
                 bindDn: "cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
                 bindPassword: "<bindPassword>",
             },
-            extendedGroupsEnabled: true,
-            ldapBaseDn: "dc=contosoad,dc=contoso,dc=local",
+            extendedGroups: true,
+            ldapBaseDN: "dc=contosoad,dc=contoso,dc=local",
             ldapServer: "192.0.2.12",
             usernameSource: "LDAP",
         },
@@ -350,8 +350,8 @@ class MyStack : Stack
                         BindDn = "cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
                         BindPassword = "<bindPassword>",
                     },
-                    ExtendedGroupsEnabled = true,
-                    LdapBaseDn = "dc=contosoad,dc=contoso,dc=local",
+                    ExtendedGroups = true,
+                    LdapBaseDN = "dc=contosoad,dc=contoso,dc=local",
                     LdapServer = "192.0.2.12",
                     UsernameSource = "LDAP",
                 },
@@ -429,10 +429,10 @@ func main() {
 						BindDn:       pulumi.String("cn=ldapadmin,dc=contosoad,dc=contoso,dc=local"),
 						BindPassword: pulumi.String("<bindPassword>"),
 					},
-					ExtendedGroupsEnabled: pulumi.Bool(true),
-					LdapBaseDn:            pulumi.String("dc=contosoad,dc=contoso,dc=local"),
-					LdapServer:            pulumi.String("192.0.2.12"),
-					UsernameSource:        pulumi.String("LDAP"),
+					ExtendedGroups: pulumi.Bool(true),
+					LdapBaseDN:     pulumi.String("dc=contosoad,dc=contoso,dc=local"),
+					LdapServer:     pulumi.String("192.0.2.12"),
+					UsernameSource: pulumi.String("LDAP"),
 				},
 			},
 			EncryptionSettings: &storagecache.CacheEncryptionSettingsArgs{
@@ -495,7 +495,7 @@ cache = azure_nextgen.storagecache.latest.Cache("cache",
                 bind_dn="cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
                 bind_password="<bindPassword>",
             ),
-            extended_groups_enabled=True,
+            extended_groups=True,
             ldap_base_dn="dc=contosoad,dc=contoso,dc=local",
             ldap_server="192.0.2.12",
             username_source="LDAP",
@@ -550,8 +550,8 @@ const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
                 bindDn: "cn=ldapadmin,dc=contosoad,dc=contoso,dc=local",
                 bindPassword: "<bindPassword>",
             },
-            extendedGroupsEnabled: true,
-            ldapBaseDn: "dc=contosoad,dc=contoso,dc=local",
+            extendedGroups: true,
+            ldapBaseDN: "dc=contosoad,dc=contoso,dc=local",
             ldapServer: "192.0.2.12",
             usernameSource: "LDAP",
         },
@@ -599,7 +599,7 @@ const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">CacheArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -607,11 +607,11 @@ const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCache</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">CacheArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cache</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCache</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cache</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">CacheArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cache</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">CacheArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -632,7 +632,7 @@ const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">CacheArgs</span>
+        <span class="property-type"><a href="#inputs">CacheArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -701,7 +701,7 @@ const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">CacheArgs</span>
+        <span class="property-type"><a href="#inputs">CacheArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -740,7 +740,7 @@ const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">CacheArgs</span>
+        <span class="property-type"><a href="#inputs">CacheArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -763,11 +763,11 @@ const cache = new azure_nextgen.storagecache.latest.Cache("cache", {
 
 ## Cache Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Cache resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Cache resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -3581,8 +3581,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedgroupsenabled_csharp">
-<a href="#extendedgroupsenabled_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups<wbr>Enabled</a>
+        <span id="extendedgroups_csharp">
+<a href="#extendedgroups_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -3600,7 +3600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-optional"
             title="Optional">
         <span id="ldapbasedn_csharp">
-<a href="#ldapbasedn_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>Dn</a>
+<a href="#ldapbasedn_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>DN</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3686,8 +3686,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedgroupsenabled_go">
-<a href="#extendedgroupsenabled_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups<wbr>Enabled</a>
+        <span id="extendedgroups_go">
+<a href="#extendedgroups_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -3705,7 +3705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-optional"
             title="Optional">
         <span id="ldapbasedn_go">
-<a href="#ldapbasedn_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>Dn</a>
+<a href="#ldapbasedn_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>DN</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3791,8 +3791,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedgroupsenabled_nodejs">
-<a href="#extendedgroupsenabled_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Groups<wbr>Enabled</a>
+        <span id="extendedgroups_nodejs">
+<a href="#extendedgroups_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
@@ -3810,7 +3810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-optional"
             title="Optional">
         <span id="ldapbasedn_nodejs">
-<a href="#ldapbasedn_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Base<wbr>Dn</a>
+<a href="#ldapbasedn_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Base<wbr>DN</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3896,8 +3896,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="extended_groups_enabled_python">
-<a href="#extended_groups_enabled_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>groups_<wbr>enabled</a>
+        <span id="extended_groups_python">
+<a href="#extended_groups_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -4110,8 +4110,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedgroupsenabled_csharp">
-<a href="#extendedgroupsenabled_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups<wbr>Enabled</a>
+        <span id="extendedgroups_csharp">
+<a href="#extendedgroups_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -4129,7 +4129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-optional"
             title="Optional">
         <span id="ldapbasedn_csharp">
-<a href="#ldapbasedn_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>Dn</a>
+<a href="#ldapbasedn_csharp" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>DN</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -4224,8 +4224,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedgroupsenabled_go">
-<a href="#extendedgroupsenabled_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups<wbr>Enabled</a>
+        <span id="extendedgroups_go">
+<a href="#extendedgroups_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -4243,7 +4243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-optional"
             title="Optional">
         <span id="ldapbasedn_go">
-<a href="#ldapbasedn_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>Dn</a>
+<a href="#ldapbasedn_go" style="color: inherit; text-decoration: inherit;">Ldap<wbr>Base<wbr>DN</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -4338,8 +4338,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="extendedgroupsenabled_nodejs">
-<a href="#extendedgroupsenabled_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Groups<wbr>Enabled</a>
+        <span id="extendedgroups_nodejs">
+<a href="#extendedgroups_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
@@ -4357,7 +4357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dt class="property-optional"
             title="Optional">
         <span id="ldapbasedn_nodejs">
-<a href="#ldapbasedn_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Base<wbr>Dn</a>
+<a href="#ldapbasedn_nodejs" style="color: inherit; text-decoration: inherit;">ldap<wbr>Base<wbr>DN</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -4452,8 +4452,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Whether or not the LDAP connection should be encrypted.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="extended_groups_enabled_python">
-<a href="#extended_groups_enabled_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>groups_<wbr>enabled</a>
+        <span id="extended_groups_python">
+<a href="#extended_groups_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -5960,7 +5960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
@@ -6020,7 +6020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
@@ -6080,7 +6080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
@@ -6140,7 +6140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">

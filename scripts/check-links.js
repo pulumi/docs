@@ -262,6 +262,7 @@ function getDefaultExcludedKeywords() {
         "https://codepen.io",
         "https://twitter.com",
         "https://t.co",
+        "https://www.akamai.com",
     ];
 }
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetApplicationGatewayBackendHealthOnDemand"
-title_tag: "Function GetApplicationGatewayBackendHealthOnDemand | Module network | Package Azure NextGen"
-meta_desc: "Explore the GetApplicationGatewayBackendHealthOnDemand function of the network module, including examples, input properties, output properties, and supporting types. "
+title: "getApplicationGatewayBackendHealthOnDemand"
+title_tag: "azure-nextgen.network.getApplicationGatewayBackendHealthOnDemand"
+meta_desc: "Documentation for the azure-nextgen.network.getApplicationGatewayBackendHealthOnDemand function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetApplicationGatewayBackendHealthOnDemand function of t
 
 
 
-## Using GetApplicationGatewayBackendHealthOnDemand {#using}
+## Using getApplicationGatewayBackendHealthOnDemand {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApplicationGatewayBackendHealthOnDemand<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetApplicationGatewayBackendHealthOnDemandArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetApplicationGatewayBackendHealthOnDemandResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApplicationGatewayBackendHealthOnDemand<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetApplicationGatewayBackendHealthOnDemandArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetApplicationGatewayBackendHealthOnDemandResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,14 +29,16 @@ meta_desc: "Explore the GetApplicationGatewayBackendHealthOnDemand function of t
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplicationGatewayBackendHealthOnDemand<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetApplicationGatewayBackendHealthOnDemandArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">GetApplicationGatewayBackendHealthOnDemandResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplicationGatewayBackendHealthOnDemand<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetApplicationGatewayBackendHealthOnDemandArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetApplicationGatewayBackendHealthOnDemandResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetApplicationGatewayBackendHealthOnDemand` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetApplicationGatewayBackendHealthOnDemand </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetApplicationGatewayBackendHealthOnDemandResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetApplicationGatewayBackendHealthOnDemandArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetApplicationGatewayBackendHealthOnDemandResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetApplicationGatewayBackendHealthOnDemandArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -468,7 +470,7 @@ The following arguments are supported:
 
 
 
-## GetApplicationGatewayBackendHealthOnDemand Result {#result}
+## getApplicationGatewayBackendHealthOnDemand Result {#result}
 
 The following output properties are available:
 
@@ -577,9 +579,6 @@ The following output properties are available:
 
 
 <h4 id="applicationgatewaybackendaddresspoolresponse">Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool<wbr>Response</h4>
-
-
-
 
 
 
@@ -863,9 +862,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -966,9 +962,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1066,9 +1059,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="applicationgatewaybackendhealthserverresponse">Application<wbr>Gateway<wbr>Backend<wbr>Health<wbr>Server<wbr>Response</h4>
-
-
-
 
 
 
@@ -1241,9 +1231,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="applicationgatewaybackendhttpsettingsresponse">Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -1923,9 +1910,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2023,9 +2007,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="applicationgatewayprobehealthresponsematch">Application<wbr>Gateway<wbr>Probe<wbr>Health<wbr>Response<wbr>Match</h4>
-
-
-
 
 
 
@@ -2129,13 +2110,7 @@ The following output properties are available:
 
 
 
-
-
-
 <h4 id="applicationsecuritygroupresponse">Application<wbr>Security<wbr>Group<wbr>Response</h4>
-
-
-
 
 
 
@@ -2452,9 +2427,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="backendaddresspoolresponse">Backend<wbr>Address<wbr>Pool<wbr>Response</h4>
-
-
-
 
 
 
@@ -2882,9 +2854,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2982,9 +2951,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="ddossettingsresponse">Ddos<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -3121,9 +3087,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="delegationresponse">Delegation<wbr>Response</h4>
-
-
-
 
 
 
@@ -3371,9 +3334,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3474,9 +3434,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -3574,9 +3531,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="flowlogresponse">Flow<wbr>Log<wbr>Response</h4>
-
-
-
 
 
 
@@ -4109,9 +4063,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="frontendipconfigurationresponse">Frontend<wbr>IPConfiguration<wbr>Response</h4>
-
-
-
 
 
 
@@ -4719,9 +4670,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -4963,9 +4911,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="ipconfigurationresponse">IPConfiguration<wbr>Response</h4>
-
-
-
 
 
 
@@ -5282,9 +5227,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="inboundnatruleresponse">Inbound<wbr>Nat<wbr>Rule<wbr>Response</h4>
-
-
-
 
 
 
@@ -5784,9 +5726,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -5884,9 +5823,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="loadbalancerbackendaddressresponse">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Response</h4>
-
-
-
 
 
 
@@ -6098,9 +6034,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6309,9 +6242,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -6445,9 +6375,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="networkinterfaceipconfigurationresponse">Network<wbr>Interface<wbr>IPConfiguration<wbr>Response</h4>
-
-
-
 
 
 
@@ -7052,9 +6979,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="networkinterfaceresponse">Network<wbr>Interface<wbr>Response</h4>
-
-
-
 
 
 
@@ -7842,9 +7766,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -8086,9 +8007,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="networksecuritygroupresponse">Network<wbr>Security<wbr>Group<wbr>Response</h4>
-
-
-
 
 
 
@@ -8588,9 +8506,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -9087,9 +9002,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -9442,9 +9354,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -9581,9 +9490,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -9717,9 +9623,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="publicipaddressresponse">Public<wbr>IPAddress<wbr>Response</h4>
-
-
-
 
 
 
@@ -10471,9 +10374,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -10571,9 +10471,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="resourcenavigationlinkresponse">Resource<wbr>Navigation<wbr>Link<wbr>Response</h4>
-
-
-
 
 
 
@@ -10857,9 +10754,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -10957,9 +10851,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="routeresponse">Route<wbr>Response</h4>
-
-
-
 
 
 
@@ -11312,9 +11203,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="routetableresponse">Route<wbr>Table<wbr>Response</h4>
-
-
-
 
 
 
@@ -11739,9 +11627,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="securityruleresponse">Security<wbr>Rule<wbr>Response</h4>
-
-
-
 
 
 
@@ -12493,9 +12378,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -12848,9 +12730,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -13128,9 +13007,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="serviceendpointpolicyresponse">Service<wbr>Endpoint<wbr>Policy<wbr>Response</h4>
-
-
-
 
 
 
@@ -13522,9 +13398,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -13661,9 +13534,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -13728,9 +13598,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -13792,9 +13659,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="subnetresponse">Subnet<wbr>Response</h4>
-
-
-
 
 
 
@@ -14582,9 +14446,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -14793,9 +14654,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -14857,9 +14715,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="virtualnetworktapresponse">Virtual<wbr>Network<wbr>Tap<wbr>Response</h4>
-
-
-
 
 
 

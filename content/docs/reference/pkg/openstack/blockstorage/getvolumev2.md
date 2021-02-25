@@ -1,8 +1,8 @@
 
 ---
-title: "GetVolumeV2"
-title_tag: "Function GetVolumeV2 | Module blockstorage | Package Open Stack"
-meta_desc: "Explore the GetVolumeV2 function of the blockstorage module, including examples, input properties, output properties, and supporting types. Use this data source to get information about an existing volume."
+title: "getVolumeV2"
+title_tag: "openstack.blockstorage.getVolumeV2"
+meta_desc: "Documentation for the openstack.blockstorage.getVolumeV2 function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,13 +89,13 @@ const volume1 = pulumi.output(openstack.blockstorage.getVolumeV2({
 {{% /examples %}}
 
 
-## Using GetVolumeV2 {#using}
+## Using getVolumeV2 {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVolumeV2<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/blockstorage/#GetVolumeV2Args">GetVolumeV2Args</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/blockstorage/#GetVolumeV2Result">GetVolumeV2Result</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVolumeV2<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetVolumeV2Args</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetVolumeV2Result</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -105,7 +105,7 @@ const volume1 = pulumi.output(openstack.blockstorage.getVolumeV2({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVolumeV2<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/blockstorage?tab=doc#LookupVolumeV2Args">LookupVolumeV2Args</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/blockstorage?tab=doc#LookupVolumeV2Result">LookupVolumeV2Result</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVolumeV2<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupVolumeV2Args</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupVolumeV2Result</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupVolumeV2` in the Go SDK.
 
@@ -114,7 +114,7 @@ const volume1 = pulumi.output(openstack.blockstorage.getVolumeV2({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVolumeV2 </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Blockstorage.GetVolumeV2Result.html">GetVolumeV2Result</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.BlockStorage.GetVolumeV2Args.html">GetVolumeV2Args</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetVolumeV2Result</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetVolumeV2Args</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -394,7 +394,7 @@ client. If omitted, the `region` argument of the provider is used.
 
 
 
-## GetVolumeV2 Result {#result}
+## getVolumeV2 Result {#result}
 
 The following output properties are available:
 

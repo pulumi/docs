@@ -1,8 +1,8 @@
 
 ---
-title: "GetFileSystems"
-title_tag: "Function GetFileSystems | Module nas | Package AliCloud"
-meta_desc: "Explore the GetFileSystems function of the nas module, including examples, input properties, output properties, and supporting types. This data source provides FileSystems available to the user."
+title: "getFileSystems"
+title_tag: "alicloud.nas.getFileSystems"
+meta_desc: "Documentation for the alicloud.nas.getFileSystems function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -12,7 +12,7 @@ meta_desc: "Explore the GetFileSystems function of the nas module, including exa
 
 This data source provides FileSystems available to the user.
 
-> NOTE: Available in 1.35.0+
+> **NOTE**: Available in 1.35.0+
 
 
 {{% examples %}}
@@ -102,13 +102,13 @@ export const alicloudNasFileSystemsId = fs.systems[0].id;
 {{% /examples %}}
 
 
-## Using GetFileSystems {#using}
+## Using getFileSystems {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFileSystems<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/nas/#GetFileSystemsArgs">GetFileSystemsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/nas/#GetFileSystemsResult">GetFileSystemsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFileSystems<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFileSystemsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFileSystemsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -118,14 +118,16 @@ export const alicloudNasFileSystemsId = fs.systems[0].id;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFileSystems<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/nas?tab=doc#GetFileSystemsArgs">GetFileSystemsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/nas?tab=doc#GetFileSystemsResult">GetFileSystemsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFileSystems<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetFileSystemsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetFileSystemsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetFileSystems` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFileSystems </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Nas.GetFileSystemsResult.html">GetFileSystemsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Nas.GetFileSystemsArgs.html">GetFileSystemsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetFileSystemsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFileSystemsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -174,7 +176,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific ProtocolType.
+    <dd>{{% md %}}Filter results by a specific ProtocolType. Valid values: `NFS` and `SMB`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -184,7 +186,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific StorageType.
+    <dd>{{% md %}}Filter results by a specific StorageType. Valid values: `Capacity` and `Performance`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -229,7 +231,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific ProtocolType.
+    <dd>{{% md %}}Filter results by a specific ProtocolType. Valid values: `NFS` and `SMB`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -239,7 +241,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific StorageType.
+    <dd>{{% md %}}Filter results by a specific StorageType. Valid values: `Capacity` and `Performance`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -284,7 +286,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific ProtocolType.
+    <dd>{{% md %}}Filter results by a specific ProtocolType. Valid values: `NFS` and `SMB`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -294,7 +296,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific StorageType.
+    <dd>{{% md %}}Filter results by a specific StorageType. Valid values: `Capacity` and `Performance`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -339,7 +341,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific ProtocolType.
+    <dd>{{% md %}}Filter results by a specific ProtocolType. Valid values: `NFS` and `SMB`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -349,7 +351,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific StorageType.
+    <dd>{{% md %}}Filter results by a specific StorageType. Valid values: `Capacity` and `Performance`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -357,7 +359,7 @@ The following arguments are supported:
 
 
 
-## GetFileSystems Result {#result}
+## getFileSystems Result {#result}
 
 The following output properties are available:
 
@@ -706,16 +708,6 @@ The following output properties are available:
 
 
 <h4 id="getfilesystemssystem">Get<wbr>File<wbr>Systems<wbr>System</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetFileSystemsSystem">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/nas?tab=doc#GetFileSystemsSystem">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Nas.Outputs.GetFileSystemsSystem.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -770,7 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific ProtocolType.
+    <dd>{{% md %}}Filter results by a specific ProtocolType. Valid values: `NFS` and `SMB`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -790,7 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific StorageType.
+    <dd>{{% md %}}Filter results by a specific StorageType. Valid values: `Capacity` and `Performance`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -846,7 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific ProtocolType.
+    <dd>{{% md %}}Filter results by a specific ProtocolType. Valid values: `NFS` and `SMB`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -866,7 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific StorageType.
+    <dd>{{% md %}}Filter results by a specific StorageType. Valid values: `Capacity` and `Performance`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -922,7 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific ProtocolType.
+    <dd>{{% md %}}Filter results by a specific ProtocolType. Valid values: `NFS` and `SMB`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -942,7 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific StorageType.
+    <dd>{{% md %}}Filter results by a specific StorageType. Valid values: `Capacity` and `Performance`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -998,7 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific ProtocolType.
+    <dd>{{% md %}}Filter results by a specific ProtocolType. Valid values: `NFS` and `SMB`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1018,7 +1010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Filter results by a specific StorageType.
+    <dd>{{% md %}}Filter results by a specific StorageType. Valid values: `Capacity` and `Performance`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

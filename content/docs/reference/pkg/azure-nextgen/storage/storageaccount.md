@@ -31,6 +31,7 @@ class MyStack : Stack
         {
             AccountName = "sto4445",
             AllowBlobPublicAccess = false,
+            AllowSharedKeyAccess = true,
             Encryption = new AzureNextGen.Storage.Latest.Inputs.EncryptionArgs
             {
                 KeySource = "Microsoft.Storage",
@@ -93,6 +94,7 @@ func main() {
 		_, err := storage.NewStorageAccount(ctx, "storageAccount", &storage.StorageAccountArgs{
 			AccountName:           pulumi.String("sto4445"),
 			AllowBlobPublicAccess: pulumi.Bool(false),
+			AllowSharedKeyAccess:  pulumi.Bool(true),
 			Encryption: &storage.EncryptionArgs{
 				KeySource:                       pulumi.String("Microsoft.Storage"),
 				RequireInfrastructureEncryption: pulumi.Bool(false),
@@ -145,6 +147,7 @@ import pulumi_azure_nextgen as azure_nextgen
 storage_account = azure_nextgen.storage.latest.StorageAccount("storageAccount",
     account_name="sto4445",
     allow_blob_public_access=False,
+    allow_shared_key_access=True,
     encryption=azure_nextgen.storage.latest.EncryptionArgs(
         key_source="Microsoft.Storage",
         require_infrastructure_encryption=False,
@@ -190,6 +193,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const storageAccount = new azure_nextgen.storage.latest.StorageAccount("storageAccount", {
     accountName: "sto4445",
     allowBlobPublicAccess: false,
+    allowSharedKeyAccess: true,
     encryption: {
         keySource: "Microsoft.Storage",
         requireInfrastructureEncryption: false,
@@ -235,19 +239,19 @@ const storageAccount = new azure_nextgen.storage.latest.StorageAccount("storageA
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">StorageAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">StorageAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[AccessTier]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">azure_files_identity_based_authentication</span><span class="p">:</span> <span class="nx">Optional[AzureFilesIdentityBasedAuthenticationArgs]</span> = None<span class="p">, </span><span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[CustomDomainArgs]</span> = None<span class="p">, </span><span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_hns_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, Kind]]</span> = None<span class="p">, </span><span class="nx">large_file_shares_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, LargeFileSharesState]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[Union[str, MinimumTlsVersion]]</span> = None<span class="p">, </span><span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[NetworkRuleSetArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_preference</span><span class="p">:</span> <span class="nx">Optional[RoutingPreferenceArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_tier</span><span class="p">:</span> <span class="nx">Optional[AccessTier]</span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">allow_blob_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_shared_key_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">azure_files_identity_based_authentication</span><span class="p">:</span> <span class="nx">Optional[AzureFilesIdentityBasedAuthenticationArgs]</span> = None<span class="p">, </span><span class="nx">custom_domain</span><span class="p">:</span> <span class="nx">Optional[CustomDomainArgs]</span> = None<span class="p">, </span><span class="nx">enable_https_traffic_only</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">is_hns_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, Kind]]</span> = None<span class="p">, </span><span class="nx">large_file_shares_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, LargeFileSharesState]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">minimum_tls_version</span><span class="p">:</span> <span class="nx">Optional[Union[str, MinimumTlsVersion]]</span> = None<span class="p">, </span><span class="nx">network_rule_set</span><span class="p">:</span> <span class="nx">Optional[NetworkRuleSetArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">routing_preference</span><span class="p">:</span> <span class="nx">Optional[RoutingPreferenceArgs]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStorageAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">StorageAccountArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StorageAccount</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewStorageAccount</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">StorageAccountArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">StorageAccount</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">StorageAccountArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">StorageAccount</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">StorageAccountArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -268,7 +272,7 @@ const storageAccount = new azure_nextgen.storage.latest.StorageAccount("storageA
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StorageAccountArgs</span>
+        <span class="property-type"><a href="#inputs">StorageAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -337,7 +341,7 @@ const storageAccount = new azure_nextgen.storage.latest.StorageAccount("storageA
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StorageAccountArgs</span>
+        <span class="property-type"><a href="#inputs">StorageAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -376,7 +380,7 @@ const storageAccount = new azure_nextgen.storage.latest.StorageAccount("storageA
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">StorageAccountArgs</span>
+        <span class="property-type"><a href="#inputs">StorageAccountArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -399,11 +403,11 @@ const storageAccount = new azure_nextgen.storage.latest.StorageAccount("storageA
 
 ## StorageAccount Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The StorageAccount resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The StorageAccount resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -428,15 +432,6 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Storage.<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}Required. Indicates the type of storage account.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -473,6 +468,15 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowsharedkeyaccess_csharp">
+<a href="#allowsharedkeyaccess_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Shared<wbr>Key<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="azurefilesidentitybasedauthentication_csharp">
@@ -538,6 +542,15 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="minimumtlsversion_csharp">
 <a href="#minimumtlsversion_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
 </span>
@@ -598,15 +611,6 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Required. Indicates the type of storage account.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -641,6 +645,15 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowsharedkeyaccess_go">
+<a href="#allowsharedkeyaccess_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Shared<wbr>Key<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="azurefilesidentitybasedauthentication_go">
@@ -706,6 +719,15 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="minimumtlsversion_go">
 <a href="#minimumtlsversion_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Tls<wbr>Version</a>
 </span>
@@ -766,15 +788,6 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Required. Indicates the type of storage account.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -809,6 +822,15 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowsharedkeyaccess_nodejs">
+<a href="#allowsharedkeyaccess_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Shared<wbr>Key<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="azurefilesidentitybasedauthentication_nodejs">
@@ -874,6 +896,15 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="minimumtlsversion_nodejs">
 <a href="#minimumtlsversion_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Tls<wbr>Version</a>
 </span>
@@ -934,15 +965,6 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Required. Indicates the type of storage account.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -977,6 +999,15 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allow_shared_key_access_python">
+<a href="#allow_shared_key_access_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>shared_<wbr>key_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="azure_files_identity_based_authentication_python">
@@ -1040,6 +1071,15 @@ The StorageAccount resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str | <a href="#largefilesharesstate">Large<wbr>File<wbr>Shares<wbr>State</a></span>
     </dt>
     <dd>{{% md %}}Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Required. Gets or sets the location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a resource cannot be changed once it is created, but if an identical geo region is specified on update, the request will succeed.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_tls_version_python">

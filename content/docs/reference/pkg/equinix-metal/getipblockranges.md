@@ -1,8 +1,8 @@
 
 ---
-title: "GetIpBlockRanges"
-title_tag: "Function GetIpBlockRanges | Package equinix-metal"
-meta_desc: "Explore the GetIpBlockRanges function of the equinix-metal package, including examples, input properties, output properties, and supporting types. Use this datasource to get CIDR expressions for allocated IP blocks of all the types in a project, optionally filtered by facility."
+title: "getIpBlockRanges"
+title_tag: "equinix-metal.getIpBlockRanges"
+meta_desc: "Documentation for the equinix-metal.getIpBlockRanges function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -102,13 +102,13 @@ export const out = test;
 {{% /examples %}}
 
 
-## Using GetIpBlockRanges {#using}
+## Using getIpBlockRanges {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIpBlockRanges<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/equinix-metal/#GetIpBlockRangesArgs">GetIpBlockRangesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/equinix-metal/#GetIpBlockRangesResult">GetIpBlockRangesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getIpBlockRanges<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetIpBlockRangesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetIpBlockRangesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -118,14 +118,16 @@ export const out = test;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIpBlockRanges<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix/?tab=doc#GetIpBlockRangesArgs">GetIpBlockRangesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix/?tab=doc#GetIpBlockRangesResult">GetIpBlockRangesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIpBlockRanges<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetIpBlockRangesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetIpBlockRangesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetIpBlockRanges` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetIpBlockRanges </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.EquinixMetal/Pulumi.EquinixMetal.GetIpBlockRangesResult.html">GetIpBlockRangesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.EquinixMetal/Pulumi.EquinixMetal.GetIpBlockRangesArgs.html">GetIpBlockRangesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetIpBlockRangesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetIpBlockRangesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -241,7 +243,7 @@ The following arguments are supported:
 
 
 
-## GetIpBlockRanges Result {#result}
+## getIpBlockRanges Result {#result}
 
 The following output properties are available:
 

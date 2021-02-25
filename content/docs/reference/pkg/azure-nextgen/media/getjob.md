@@ -1,8 +1,8 @@
 
 ---
-title: "GetJob"
-title_tag: "Function GetJob | Module media | Package Azure NextGen"
-meta_desc: "Explore the GetJob function of the media module, including examples, input properties, output properties, and supporting types. "
+title: "getJob"
+title_tag: "azure-nextgen.media.getJob"
+meta_desc: "Documentation for the azure-nextgen.media.getJob function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetJob function of the media module, including examples,
 
 
 
-## Using GetJob {#using}
+## Using getJob {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetJobResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetJobResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetJob function of the media module, including examples,
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupJobResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupJobResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupJob` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetJob function of the media module, including examples,
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetJob </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetJobResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetJobResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -218,7 +218,7 @@ The following arguments are supported:
 
 
 
-## GetJob Result {#result}
+## getJob Result {#result}
 
 The following output properties are available:
 
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobinputassetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Job<wbr>Input<wbr>Asset<wbr>Response</a> | <a href="#jobinputclipresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Job<wbr>Input<wbr>Clip<wbr>Response</a> | <a href="#jobinputhttpresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Job<wbr>Input<wbr>Http<wbr>Response</a> | <a href="#jobinputsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Job<wbr>Inputs<wbr>Response</a></span>
+        <span class="property-type"><a href="#jobinputassetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Job<wbr>Input<wbr>Asset<wbr>Response</a> | <a href="#jobinputclipresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Job<wbr>Input<wbr>Clip<wbr>Response</a> | <a href="#jobinputhttpresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Job<wbr>Input<wbr>Http<wbr>Response</a> | <a href="#jobinputsequenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Job<wbr>Input<wbr>Sequence<wbr>Response</a> | <a href="#jobinputsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Job<wbr>Inputs<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Job.{{% /md %}}</dd>
     <dt class="property-"
@@ -308,6 +308,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the job.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="systemdata_csharp">
+<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_csharp">
@@ -383,7 +392,7 @@ The following output properties are available:
 <a href="#input_go" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobinputassetresponse">Job<wbr>Input<wbr>Asset<wbr>Response</a> | <a href="#jobinputclipresponse">Job<wbr>Input<wbr>Clip<wbr>Response</a> | <a href="#jobinputhttpresponse">Job<wbr>Input<wbr>Http<wbr>Response</a> | <a href="#jobinputsresponse">Job<wbr>Inputs<wbr>Response</a></span>
+        <span class="property-type"><a href="#jobinputassetresponse">Job<wbr>Input<wbr>Asset<wbr>Response</a> | <a href="#jobinputclipresponse">Job<wbr>Input<wbr>Clip<wbr>Response</a> | <a href="#jobinputhttpresponse">Job<wbr>Input<wbr>Http<wbr>Response</a> | <a href="#jobinputsequenceresponse">Job<wbr>Input<wbr>Sequence<wbr>Response</a> | <a href="#jobinputsresponse">Job<wbr>Inputs<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Job.{{% /md %}}</dd>
     <dt class="property-"
@@ -431,6 +440,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the job.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="systemdata_go">
+<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_go">
@@ -506,7 +524,7 @@ The following output properties are available:
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobinputassetresponse">Job<wbr>Input<wbr>Asset<wbr>Response</a> | <a href="#jobinputclipresponse">Job<wbr>Input<wbr>Clip<wbr>Response</a> | <a href="#jobinputhttpresponse">Job<wbr>Input<wbr>Http<wbr>Response</a> | <a href="#jobinputsresponse">Job<wbr>Inputs<wbr>Response</a></span>
+        <span class="property-type"><a href="#jobinputassetresponse">Job<wbr>Input<wbr>Asset<wbr>Response</a> | <a href="#jobinputclipresponse">Job<wbr>Input<wbr>Clip<wbr>Response</a> | <a href="#jobinputhttpresponse">Job<wbr>Input<wbr>Http<wbr>Response</a> | <a href="#jobinputsequenceresponse">Job<wbr>Input<wbr>Sequence<wbr>Response</a> | <a href="#jobinputsresponse">Job<wbr>Inputs<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Job.{{% /md %}}</dd>
     <dt class="property-"
@@ -554,6 +572,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current state of the job.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="systemdata_nodejs">
+<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_nodejs">
@@ -629,7 +656,7 @@ The following output properties are available:
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobinputassetresponse">Job<wbr>Input<wbr>Asset<wbr>Response</a> | <a href="#jobinputclipresponse">Job<wbr>Input<wbr>Clip<wbr>Response</a> | <a href="#jobinputhttpresponse">Job<wbr>Input<wbr>Http<wbr>Response</a> | <a href="#jobinputsresponse">Job<wbr>Inputs<wbr>Response</a></span>
+        <span class="property-type"><a href="#jobinputassetresponse">Job<wbr>Input<wbr>Asset<wbr>Response</a> | <a href="#jobinputclipresponse">Job<wbr>Input<wbr>Clip<wbr>Response</a> | <a href="#jobinputhttpresponse">Job<wbr>Input<wbr>Http<wbr>Response</a> | <a href="#jobinputsequenceresponse">Job<wbr>Input<wbr>Sequence<wbr>Response</a> | <a href="#jobinputsresponse">Job<wbr>Inputs<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Job.{{% /md %}}</dd>
     <dt class="property-"
@@ -679,6 +706,15 @@ The following output properties are available:
     <dd>{{% md %}}The current state of the job.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="system_data_python">
+<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -723,9 +759,6 @@ The following output properties are available:
 
 
 <h4 id="absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</h4>
-
-
-
 
 
 
@@ -789,10 +822,299 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
+<h4 id="audiotrackdescriptorresponse">Audio<wbr>Track<wbr>Descriptor<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channelmapping_csharp">
+<a href="#channelmapping_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Mapping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channelmapping_go">
+<a href="#channelmapping_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Mapping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channelmapping_nodejs">
+<a href="#channelmapping_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Mapping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channel_mapping_python">
+<a href="#channel_mapping_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>mapping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="fromallinputfileresponse">From<wbr>All<wbr>Input<wbr>File<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includedtracks_csharp">
+<a href="#includedtracks_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Tracks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includedtracks_go">
+<a href="#includedtracks_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Tracks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includedtracks_nodejs">
+<a href="#includedtracks_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Tracks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Audio<wbr>Track<wbr>Descriptor<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response | Video<wbr>Track<wbr>Descriptor<wbr>Response[]</span>
+    </dt>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="included_tracks_python">
+<a href="#included_tracks_python" style="color: inherit; text-decoration: inherit;">included_<wbr>tracks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Union[Audio<wbr>Track<wbr>Descriptor<wbr>Response<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response<wbr>Args, Video<wbr>Track<wbr>Descriptor<wbr>Response<wbr>Args]]</span>
+    </dt>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="fromeachinputfileresponse">From<wbr>Each<wbr>Input<wbr>File<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includedtracks_csharp">
+<a href="#includedtracks_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Tracks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includedtracks_go">
+<a href="#includedtracks_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Tracks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includedtracks_nodejs">
+<a href="#includedtracks_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Tracks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Audio<wbr>Track<wbr>Descriptor<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response | Video<wbr>Track<wbr>Descriptor<wbr>Response[]</span>
+    </dt>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="included_tracks_python">
+<a href="#included_tracks_python" style="color: inherit; text-decoration: inherit;">included_<wbr>tracks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Union[Audio<wbr>Track<wbr>Descriptor<wbr>Response<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response<wbr>Args, Video<wbr>Track<wbr>Descriptor<wbr>Response<wbr>Args]]</span>
+    </dt>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="inputfileresponse">Input<wbr>File<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filename_csharp">
+<a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the file that this input definition applies to.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includedtracks_csharp">
+<a href="#includedtracks_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Tracks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filename_go">
+<a href="#filename_go" style="color: inherit; text-decoration: inherit;">Filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the file that this input definition applies to.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includedtracks_go">
+<a href="#includedtracks_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Tracks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filename_nodejs">
+<a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the file that this input definition applies to.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includedtracks_nodejs">
+<a href="#includedtracks_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Tracks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Audio<wbr>Track<wbr>Descriptor<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response | Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response | Video<wbr>Track<wbr>Descriptor<wbr>Response[]</span>
+    </dt>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filename_python">
+<a href="#filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the file that this input definition applies to.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="included_tracks_python">
+<a href="#included_tracks_python" style="color: inherit; text-decoration: inherit;">included_<wbr>tracks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Union[Audio<wbr>Track<wbr>Descriptor<wbr>Response<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response<wbr>Args, Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response<wbr>Args, Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response<wbr>Args, Video<wbr>Track<wbr>Descriptor<wbr>Response<wbr>Args]]</span>
+    </dt>
+    <dd>{{% md %}}The list of TrackDescriptors which define the metadata and selection of tracks in the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="joberrordetailresponse">Job<wbr>Error<wbr>Detail<wbr>Response</h4>
-
-
-
 
 
 
@@ -893,9 +1215,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="joberrorresponse">Job<wbr>Error<wbr>Response</h4>
-
-
-
 
 
 
@@ -1107,9 +1426,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1140,6 +1456,15 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputdefinitions_csharp">
+<a href="#inputdefinitions_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Definitions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
@@ -1193,6 +1518,15 @@ The following output properties are available:
     <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="inputdefinitions_go">
+<a href="#inputdefinitions_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Definitions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
 </span>
@@ -1242,6 +1576,15 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputdefinitions_nodejs">
+<a href="#inputdefinitions_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Definitions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">From<wbr>All<wbr>Input<wbr>File<wbr>Response | From<wbr>Each<wbr>Input<wbr>File<wbr>Response | Input<wbr>File<wbr>Response[]</span>
+    </dt>
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
@@ -1295,6 +1638,15 @@ The following output properties are available:
     <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="input_definitions_python">
+<a href="#input_definitions_python" style="color: inherit; text-decoration: inherit;">input_<wbr>definitions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Union[From<wbr>All<wbr>Input<wbr>File<wbr>Response<wbr>Args, From<wbr>Each<wbr>Input<wbr>File<wbr>Response<wbr>Args, Input<wbr>File<wbr>Response<wbr>Args]]</span>
+    </dt>
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
@@ -1315,9 +1667,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="jobinputclipresponse">Job<wbr>Input<wbr>Clip<wbr>Response</h4>
-
-
-
 
 
 
@@ -1342,6 +1691,15 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputdefinitions_csharp">
+<a href="#inputdefinitions_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Definitions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
@@ -1386,6 +1744,15 @@ The following output properties are available:
     <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="inputdefinitions_go">
+<a href="#inputdefinitions_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Definitions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
 </span>
@@ -1426,6 +1793,15 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputdefinitions_nodejs">
+<a href="#inputdefinitions_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Definitions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">From<wbr>All<wbr>Input<wbr>File<wbr>Response | From<wbr>Each<wbr>Input<wbr>File<wbr>Response | Input<wbr>File<wbr>Response[]</span>
+    </dt>
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
@@ -1470,6 +1846,15 @@ The following output properties are available:
     <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="input_definitions_python">
+<a href="#input_definitions_python" style="color: inherit; text-decoration: inherit;">input_<wbr>definitions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Union[From<wbr>All<wbr>Input<wbr>File<wbr>Response<wbr>Args, From<wbr>Each<wbr>Input<wbr>File<wbr>Response<wbr>Args, Input<wbr>File<wbr>Response<wbr>Args]]</span>
+    </dt>
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
@@ -1490,9 +1875,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="jobinputhttpresponse">Job<wbr>Input<wbr>Http<wbr>Response</h4>
-
-
-
 
 
 
@@ -1526,6 +1908,15 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputdefinitions_csharp">
+<a href="#inputdefinitions_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Definitions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
@@ -1579,6 +1970,15 @@ The following output properties are available:
     <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="inputdefinitions_go">
+<a href="#inputdefinitions_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Definitions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
 </span>
@@ -1628,6 +2028,15 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputdefinitions_nodejs">
+<a href="#inputdefinitions_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Definitions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">From<wbr>All<wbr>Input<wbr>File<wbr>Response | From<wbr>Each<wbr>Input<wbr>File<wbr>Response | Input<wbr>File<wbr>Response[]</span>
+    </dt>
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
@@ -1681,6 +2090,15 @@ The following output properties are available:
     <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="input_definitions_python">
+<a href="#input_definitions_python" style="color: inherit; text-decoration: inherit;">input_<wbr>definitions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Union[From<wbr>All<wbr>Input<wbr>File<wbr>Response<wbr>Args, From<wbr>Each<wbr>Input<wbr>File<wbr>Response<wbr>Args, Input<wbr>File<wbr>Response<wbr>Args]]</span>
+    </dt>
+    <dd>{{% md %}}Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
 </span>
@@ -1700,10 +2118,71 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
+<h4 id="jobinputsequenceresponse">Job<wbr>Input<wbr>Sequence<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputs_csharp">
+<a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobinputclipresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Input<wbr>Clip<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputs_go">
+<a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobinputclipresponse">[]Job<wbr>Input<wbr>Clip<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputs_nodejs">
+<a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobinputclipresponse">Job<wbr>Input<wbr>Clip<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="inputs_python">
+<a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobinputclipresponse">Sequence[Job<wbr>Input<wbr>Clip<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}JobInputs that make up the timeline.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="jobinputsresponse">Job<wbr>Inputs<wbr>Response</h4>
-
-
-
 
 
 
@@ -1746,7 +2225,7 @@ The following output properties are available:
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Job<wbr>Input<wbr>Asset<wbr>Response | Job<wbr>Input<wbr>Clip<wbr>Response | Job<wbr>Input<wbr>Http<wbr>Response | Job<wbr>Inputs<wbr>Response[]</span>
+        <span class="property-type">Job<wbr>Input<wbr>Asset<wbr>Response | Job<wbr>Input<wbr>Clip<wbr>Response | Job<wbr>Input<wbr>Http<wbr>Response | Job<wbr>Input<wbr>Sequence<wbr>Response | Job<wbr>Inputs<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd>
 </dl>
@@ -1761,16 +2240,13 @@ The following output properties are available:
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Job<wbr>Input<wbr>Asset<wbr>Response<wbr>Args, Job<wbr>Input<wbr>Clip<wbr>Response<wbr>Args, Job<wbr>Input<wbr>Http<wbr>Response<wbr>Args, Job<wbr>Inputs<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Job<wbr>Input<wbr>Asset<wbr>Response<wbr>Args, Job<wbr>Input<wbr>Clip<wbr>Response<wbr>Args, Job<wbr>Input<wbr>Http<wbr>Response<wbr>Args, Job<wbr>Input<wbr>Sequence<wbr>Response<wbr>Args, Job<wbr>Inputs<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="joboutputassetresponse">Job<wbr>Output<wbr>Asset<wbr>Response</h4>
-
-
-
 
 
 
@@ -2050,10 +2526,723 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
+<h4 id="selectaudiotrackbyattributeresponse">Select<wbr>Audio<wbr>Track<wbr>By<wbr>Attribute<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="attribute_csharp">
+<a href="#attribute_csharp" style="color: inherit; text-decoration: inherit;">Attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="filter_csharp">
+<a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channelmapping_csharp">
+<a href="#channelmapping_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Mapping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filtervalue_csharp">
+<a href="#filtervalue_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="attribute_go">
+<a href="#attribute_go" style="color: inherit; text-decoration: inherit;">Attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="filter_go">
+<a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channelmapping_go">
+<a href="#channelmapping_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Mapping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filtervalue_go">
+<a href="#filtervalue_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="attribute_nodejs">
+<a href="#attribute_nodejs" style="color: inherit; text-decoration: inherit;">attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="filter_nodejs">
+<a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channelmapping_nodejs">
+<a href="#channelmapping_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Mapping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filtervalue_nodejs">
+<a href="#filtervalue_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="attribute_python">
+<a href="#attribute_python" style="color: inherit; text-decoration: inherit;">attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="filter_python">
+<a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channel_mapping_python">
+<a href="#channel_mapping_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>mapping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_value_python">
+<a href="#filter_value_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="selectaudiotrackbyidresponse">Select<wbr>Audio<wbr>Track<wbr>By<wbr>Id<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="trackid_csharp">
+<a href="#trackid_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channelmapping_csharp">
+<a href="#channelmapping_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Mapping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="trackid_go">
+<a href="#trackid_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channelmapping_go">
+<a href="#channelmapping_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Mapping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="trackid_nodejs">
+<a href="#trackid_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channelmapping_nodejs">
+<a href="#channelmapping_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Mapping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="track_id_python">
+<a href="#track_id_python" style="color: inherit; text-decoration: inherit;">track_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channel_mapping_python">
+<a href="#channel_mapping_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>mapping</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="selectvideotrackbyattributeresponse">Select<wbr>Video<wbr>Track<wbr>By<wbr>Attribute<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="attribute_csharp">
+<a href="#attribute_csharp" style="color: inherit; text-decoration: inherit;">Attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="filter_csharp">
+<a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filtervalue_csharp">
+<a href="#filtervalue_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="attribute_go">
+<a href="#attribute_go" style="color: inherit; text-decoration: inherit;">Attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="filter_go">
+<a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filtervalue_go">
+<a href="#filtervalue_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="attribute_nodejs">
+<a href="#attribute_nodejs" style="color: inherit; text-decoration: inherit;">attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="filter_nodejs">
+<a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filtervalue_nodejs">
+<a href="#filtervalue_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="attribute_python">
+<a href="#attribute_python" style="color: inherit; text-decoration: inherit;">attribute</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The TrackAttribute to filter the tracks by.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="filter_python">
+<a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filter_value_python">
+<a href="#filter_value_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property. For TrackAttribute.Bitrate, this should be an integer value in bits per second (e.g: '1500000').  The TrackAttribute.Language is not supported for video tracks.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="selectvideotrackbyidresponse">Select<wbr>Video<wbr>Track<wbr>By<wbr>Id<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="trackid_csharp">
+<a href="#trackid_csharp" style="color: inherit; text-decoration: inherit;">Track<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="trackid_go">
+<a href="#trackid_go" style="color: inherit; text-decoration: inherit;">Track<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="trackid_nodejs">
+<a href="#trackid_nodejs" style="color: inherit; text-decoration: inherit;">track<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="track_id_python">
+<a href="#track_id_python" style="color: inherit; text-decoration: inherit;">track_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Track identifier to select{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_csharp">
+<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_csharp">
+<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_csharp">
+<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_csharp">
+<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_csharp">
+<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_go">
+<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_go">
+<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_go">
+<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_go">
+<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_go">
+<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_nodejs">
+<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_nodejs">
+<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_nodejs">
+<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_nodejs">
+<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_nodejs">
+<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_by_python">
+<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_by_type_python">
+<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_at_python">
+<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_python">
+<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_type_python">
+<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</h4>
-
-
-
 
 
 
@@ -2114,6 +3303,34 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time position on the timeline of the input media based on Utc time.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="videotrackdescriptorresponse">Video<wbr>Track<wbr>Descriptor<wbr>Response</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
 </dl>
 {{% /choosable %}}
 

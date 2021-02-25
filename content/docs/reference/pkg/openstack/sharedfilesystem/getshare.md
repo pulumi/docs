@@ -1,8 +1,8 @@
 
 ---
-title: "GetShare"
-title_tag: "Function GetShare | Module sharedfilesystem | Package Open Stack"
-meta_desc: "Explore the GetShare function of the sharedfilesystem module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available Shared File System share."
+title: "getShare"
+title_tag: "openstack.sharedfilesystem.getShare"
+meta_desc: "Documentation for the openstack.sharedfilesystem.getShare function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,13 +89,13 @@ const share1 = pulumi.output(openstack.sharedfilesystem.getShare({
 {{% /examples %}}
 
 
-## Using GetShare {#using}
+## Using getShare {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getShare<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/sharedfilesystem/#GetShareArgs">GetShareArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/sharedfilesystem/#GetShareResult">GetShareResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getShare<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetShareArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetShareResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -105,7 +105,7 @@ const share1 = pulumi.output(openstack.sharedfilesystem.getShare({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupShare<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/sharedfilesystem?tab=doc#LookupShareArgs">LookupShareArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/sharedfilesystem?tab=doc#LookupShareResult">LookupShareResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupShare<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupShareArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupShareResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupShare` in the Go SDK.
 
@@ -114,7 +114,7 @@ const share1 = pulumi.output(openstack.sharedfilesystem.getShare({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetShare </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Sharedfilesystem.GetShareResult.html">GetShareResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.SharedFileSystem.GetShareArgs.html">GetShareArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetShareResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetShareArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -538,7 +538,7 @@ strings.
 
 
 
-## GetShare Result {#result}
+## getShare Result {#result}
 
 The following output properties are available:
 
@@ -1183,16 +1183,6 @@ locations.
 
 
 <h4 id="getshareexportlocation">Get<wbr>Share<wbr>Export<wbr>Location</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetShareExportLocation">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/sharedfilesystem?tab=doc#GetShareExportLocation">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.SharedFileSystem.Outputs.GetShareExportLocation.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

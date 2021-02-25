@@ -1,8 +1,8 @@
 
 ---
-title: "GetDataLakeSettings"
-title_tag: "Function GetDataLakeSettings | Module lakeformation | Package AWS"
-meta_desc: "Explore the GetDataLakeSettings function of the lakeformation module, including examples, input properties, output properties, and supporting types. Get Lake Formation principals designated as data lake administrators and lists of principal permission entries for default create database and default create table permissions."
+title: "getDataLakeSettings"
+title_tag: "aws.lakeformation.getDataLakeSettings"
+meta_desc: "Documentation for the aws.lakeformation.getDataLakeSettings function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,13 +89,13 @@ const example = pulumi.output(aws.lakeformation.getDataLakeSettings({
 {{% /examples %}}
 
 
-## Using GetDataLakeSettings {#using}
+## Using getDataLakeSettings {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDataLakeSettings<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lakeformation/#GetDataLakeSettingsArgs">GetDataLakeSettingsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lakeformation/#GetDataLakeSettingsResult">GetDataLakeSettingsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDataLakeSettings<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDataLakeSettingsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDataLakeSettingsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -105,7 +105,7 @@ const example = pulumi.output(aws.lakeformation.getDataLakeSettings({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDataLakeSettings<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lakeformation?tab=doc#LookupDataLakeSettingsArgs">LookupDataLakeSettingsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lakeformation?tab=doc#LookupDataLakeSettingsResult">LookupDataLakeSettingsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDataLakeSettings<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDataLakeSettingsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDataLakeSettingsResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDataLakeSettings` in the Go SDK.
 
@@ -114,7 +114,7 @@ const example = pulumi.output(aws.lakeformation.getDataLakeSettings({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDataLakeSettings </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lakeformation.GetDataLakeSettingsResult.html">GetDataLakeSettingsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LakeFormation.GetDataLakeSettingsArgs.html">GetDataLakeSettingsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDataLakeSettingsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDataLakeSettingsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -190,7 +190,7 @@ The following arguments are supported:
 
 
 
-## GetDataLakeSettings Result {#result}
+## getDataLakeSettings Result {#result}
 
 The following output properties are available:
 
@@ -463,16 +463,6 @@ The following output properties are available:
 
 
 <h4 id="getdatalakesettingscreatedatabasedefaultpermission">Get<wbr>Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Database<wbr>Default<wbr>Permission</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDataLakeSettingsCreateDatabaseDefaultPermission">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lakeformation?tab=doc#GetDataLakeSettingsCreateDatabaseDefaultPermission">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LakeFormation.Outputs.GetDataLakeSettingsCreateDatabaseDefaultPermission.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -581,16 +571,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getdatalakesettingscreatetabledefaultpermission">Get<wbr>Data<wbr>Lake<wbr>Settings<wbr>Create<wbr>Table<wbr>Default<wbr>Permission</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDataLakeSettingsCreateTableDefaultPermission">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lakeformation?tab=doc#GetDataLakeSettingsCreateTableDefaultPermission">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.LakeFormation.Outputs.GetDataLakeSettingsCreateTableDefaultPermission.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

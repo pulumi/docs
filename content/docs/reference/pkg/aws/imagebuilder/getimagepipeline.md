@@ -1,8 +1,8 @@
 
 ---
-title: "GetImagePipeline"
-title_tag: "Function GetImagePipeline | Module imagebuilder | Package AWS"
-meta_desc: "Explore the GetImagePipeline function of the imagebuilder module, including examples, input properties, output properties, and supporting types. Provides details about an Image Builder Image Pipeline."
+title: "getImagePipeline"
+title_tag: "aws.imagebuilder.getImagePipeline"
+meta_desc: "Documentation for the aws.imagebuilder.getImagePipeline function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,13 +88,13 @@ const example = pulumi.output(aws.imagebuilder.getImagePipeline({
 {{% /examples %}}
 
 
-## Using GetImagePipeline {#using}
+## Using getImagePipeline {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getImagePipeline<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/imagebuilder/#GetImagePipelineArgs">GetImagePipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/imagebuilder/#GetImagePipelineResult">GetImagePipelineResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getImagePipeline<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetImagePipelineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetImagePipelineResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -104,7 +104,7 @@ const example = pulumi.output(aws.imagebuilder.getImagePipeline({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupImagePipeline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/imagebuilder?tab=doc#LookupImagePipelineArgs">LookupImagePipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/imagebuilder?tab=doc#LookupImagePipelineResult">LookupImagePipelineResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupImagePipeline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupImagePipelineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupImagePipelineResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupImagePipeline` in the Go SDK.
 
@@ -113,7 +113,7 @@ const example = pulumi.output(aws.imagebuilder.getImagePipeline({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetImagePipeline </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Imagebuilder.GetImagePipelineResult.html">GetImagePipelineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ImageBuilder.GetImagePipelineArgs.html">GetImagePipelineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetImagePipelineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetImagePipelineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -229,7 +229,7 @@ The following arguments are supported:
 
 
 
-## GetImagePipeline Result {#result}
+## getImagePipeline Result {#result}
 
 The following output properties are available:
 
@@ -942,16 +942,6 @@ The following output properties are available:
 
 
 <h4 id="getimagepipelineimagetestsconfiguration">Get<wbr>Image<wbr>Pipeline<wbr>Image<wbr>Tests<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetImagePipelineImageTestsConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/imagebuilder?tab=doc#GetImagePipelineImageTestsConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ImageBuilder.Outputs.GetImagePipelineImageTestsConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1060,16 +1050,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getimagepipelineschedule">Get<wbr>Image<wbr>Pipeline<wbr>Schedule</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetImagePipelineSchedule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/imagebuilder?tab=doc#GetImagePipelineSchedule">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ImageBuilder.Outputs.GetImagePipelineSchedule.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

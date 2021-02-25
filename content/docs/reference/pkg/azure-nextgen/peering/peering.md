@@ -671,7 +671,7 @@ const peering = new azure_nextgen.peering.latest.Peering("peering", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx">PeeringArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">PeeringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -679,11 +679,11 @@ const peering = new azure_nextgen.peering.latest.Peering("peering", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPeering</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx">PeeringArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Peering</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewPeering</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">PeeringArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Peering</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">PeeringArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Peering</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">PeeringArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -704,7 +704,7 @@ const peering = new azure_nextgen.peering.latest.Peering("peering", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PeeringArgs</span>
+        <span class="property-type"><a href="#inputs">PeeringArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -773,7 +773,7 @@ const peering = new azure_nextgen.peering.latest.Peering("peering", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PeeringArgs</span>
+        <span class="property-type"><a href="#inputs">PeeringArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -812,7 +812,7 @@ const peering = new azure_nextgen.peering.latest.Peering("peering", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">PeeringArgs</span>
+        <span class="property-type"><a href="#inputs">PeeringArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -835,11 +835,11 @@ const peering = new azure_nextgen.peering.latest.Peering("peering", {
 
 ## Peering Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Peering resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Peering resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -855,15 +855,6 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Peering.<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the peering.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="peeringname_csharp">
@@ -911,6 +902,15 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The properties that define an exchange peering.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="peeringlocation_csharp">
 <a href="#peeringlocation_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Location</a>
 </span>
@@ -942,15 +942,6 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the peering.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="peeringname_go">
@@ -998,6 +989,15 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The properties that define an exchange peering.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="peeringlocation_go">
 <a href="#peeringlocation_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Location</a>
 </span>
@@ -1029,15 +1029,6 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the peering.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="peeringname_nodejs">
@@ -1085,6 +1076,15 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The properties that define an exchange peering.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="peeringlocation_nodejs">
 <a href="#peeringlocation_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Location</a>
 </span>
@@ -1116,15 +1116,6 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of the peering.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="peering_name_python">
@@ -1170,6 +1161,15 @@ The Peering resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#peeringpropertiesexchange">Peering<wbr>Properties<wbr>Exchange<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The properties that define an exchange peering.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="peering_location_python">

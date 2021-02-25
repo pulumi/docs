@@ -1,8 +1,8 @@
 
 ---
-title: "GetRoute"
-title_tag: "Function GetRoute | Module cdn | Package Azure NextGen"
-meta_desc: "Explore the GetRoute function of the cdn module, including examples, input properties, output properties, and supporting types. "
+title: "getRoute"
+title_tag: "azure-nextgen.cdn.getRoute"
+meta_desc: "Documentation for the azure-nextgen.cdn.getRoute function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -13,13 +13,13 @@ meta_desc: "Explore the GetRoute function of the cdn module, including examples,
 
 
 
-## Using GetRoute {#using}
+## Using getRoute {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRoute<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRouteArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx">GetRouteResult</span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRoute<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRouteArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRouteResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -29,7 +29,7 @@ meta_desc: "Explore the GetRoute function of the cdn module, including examples,
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRoute<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRouteArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx">LookupRouteResult</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRoute<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupRouteArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupRouteResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupRoute` in the Go SDK.
 
@@ -38,7 +38,7 @@ meta_desc: "Explore the GetRoute function of the cdn module, including examples,
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRoute </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx">GetRouteResult</span>> <span class="p">InvokeAsync(</span><span class="nx">GetRouteArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetRouteResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRouteArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -218,7 +218,7 @@ The following arguments are supported:
 
 
 
-## GetRoute Result {#result}
+## getRoute Result {#result}
 
 The following output properties are available:
 
@@ -346,15 +346,6 @@ The following output properties are available:
     <dd>{{% md %}}whether this route will be linked to the default endpoint domain.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="optimizationtype_csharp">
-<a href="#optimizationtype_csharp" style="color: inherit; text-decoration: inherit;">Optimization<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies what scenario the customer wants this AzureFrontDoor endpoint to optimize for, e.g. Download, Media services. With this information, AzureFrontDoor can apply scenario driven optimization.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="originpath_csharp">
 <a href="#originpath_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Path</a>
 </span>
@@ -379,7 +370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines how AzureFrontDoor caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd>
+    <dd>{{% md %}}Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="rulesets_csharp">
@@ -523,15 +514,6 @@ The following output properties are available:
     <dd>{{% md %}}whether this route will be linked to the default endpoint domain.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="optimizationtype_go">
-<a href="#optimizationtype_go" style="color: inherit; text-decoration: inherit;">Optimization<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies what scenario the customer wants this AzureFrontDoor endpoint to optimize for, e.g. Download, Media services. With this information, AzureFrontDoor can apply scenario driven optimization.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="originpath_go">
 <a href="#originpath_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Path</a>
 </span>
@@ -556,7 +538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines how AzureFrontDoor caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd>
+    <dd>{{% md %}}Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="rulesets_go">
@@ -700,15 +682,6 @@ The following output properties are available:
     <dd>{{% md %}}whether this route will be linked to the default endpoint domain.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="optimizationtype_nodejs">
-<a href="#optimizationtype_nodejs" style="color: inherit; text-decoration: inherit;">optimization<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies what scenario the customer wants this AzureFrontDoor endpoint to optimize for, e.g. Download, Media services. With this information, AzureFrontDoor can apply scenario driven optimization.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="originpath_nodejs">
 <a href="#originpath_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Path</a>
 </span>
@@ -733,7 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Defines how AzureFrontDoor caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd>
+    <dd>{{% md %}}Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="rulesets_nodejs">
@@ -877,15 +850,6 @@ The following output properties are available:
     <dd>{{% md %}}whether this route will be linked to the default endpoint domain.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="optimization_type_python">
-<a href="#optimization_type_python" style="color: inherit; text-decoration: inherit;">optimization_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies what scenario the customer wants this AzureFrontDoor endpoint to optimize for, e.g. Download, Media services. With this information, AzureFrontDoor can apply scenario driven optimization.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="origin_path_python">
 <a href="#origin_path_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>path</a>
 </span>
@@ -910,7 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Defines how AzureFrontDoor caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd>
+    <dd>{{% md %}}Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="rule_sets_python">
@@ -939,9 +903,6 @@ The following output properties are available:
 
 
 <h4 id="compressionsettingsresponse">Compression<wbr>Settings<wbr>Response</h4>
-
-
-
 
 
 
@@ -1045,9 +1006,6 @@ The following output properties are available:
 
 
 
-
-
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1109,9 +1067,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
-
-
-
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: "equinix-metal"
-title_tag: "Module equinix-metal | Package equinix-metal"
+title: "Equinix Metal"
+title_tag: "equinix-metal.Equinix Metal"
 meta_desc: "A Pulumi package for creating and managing equinix-metal cloud resources."
 menu:
     reference:
@@ -55,24 +55,6 @@ A Pulumi package for creating and managing equinix-metal cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`metal` Terraform Provider](https://github.com/equinix/terraform-provider-metal).</dd>
 	<dt>Version</dt>
-	<dd>1.0.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.EquinixMetal/Pulumi.EquinixMetal.html" title="Pulumi.EquinixMetal">Pulumi.EquinixMetal</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-equinix-metal/sdk/go/equinix/?tab=doc#" title="equinix">equinix</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/equinix-metal/#" title="@pulumi/equinix-metal">@pulumi/equinix-metal</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_equinix_metal" title="pulumi_equinix_metal">pulumi_equinix_metal</a></dd>
-
+	<dd>1.1.2</dd>
 </dl>
 
