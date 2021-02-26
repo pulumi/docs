@@ -2,20 +2,21 @@
 title: "Supercharging our GitHub Action with the Automation API"
 authors: 
   - paul-stack
-  - simen-olsen
+  - simen-a-w-olsen
 tags: 
   - github-actions
   - automation-api
 date: "2021-03-01"
 #meta_image: ""
-meta_desc: "Simen Olsen and Paul Stack talk about the new GitHub Action powered by the Pulumi Automation API"
+meta_desc: "Simen A. W. Olsen and Paul Stack talk about the new GitHub Action powered by the Pulumi Automation API"
 ---
 
-**Guest Article:** [Simen A. W. Olsen](https://github.com/cobraz) is a Software Architect and Manager at [Bjerk](https://bjerk.io), 
+**Guest Article:** [Simen A. W. Olsen](https://github.com/cobraz) is a Software Architect and Manager at [Bjerk](https://bjerk.io),
 a software development agency based in Oslo, Norway has joins Paul Stack to talk about the new GitHub Action powered by
 the Pulumi Automation API.
 
-In this article, we'll take a look at how our [GitHub Action](https://github.com/pulumi/actions) has been re-architected to be built on top of our [Automation API]({{< relref "/blog/automation-api" >}}).
+In this article, we'll take a look at how our [GitHub Action](https://github.com/pulumi/actions) has been re-architected
+to be built on top of our [Automation API]({{< relref "/blog/automation-api" >}}).
 
 <!--more-->
 
