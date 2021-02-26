@@ -13,29 +13,20 @@
 {{ end }}
 
 {{ define "main" }}
-    <section id="features">
+    <section class="mb-16 pt-8">
         <div class="container mx-auto flex flex-col lg:flex-row">
             <div class="w-full lg:w-1/2 px-8">
                 <h2>{{ .Params.features.title }}</h2>
                 <p>{{ .Params.features.description | markdownify }}</p>
-            </div>
-            <div class="w-full lg:w-1/2 px-8">
-                <h2>{{ .Params.requirements.title }}</h2>
-                {{ .Params.requirements.description | markdownify }}
-            </div>
-        </div>
-    </section>
 
-    <section id="contact">
-        <div class="container mx-auto px-8 mb-16">
-            <h2>{{ .Params.contact.title }}</h2>
-            <p>
-                {{ .Params.contact.description | markdownify }}
-            </p>
-            <div class="w-full flex">
-                <div class="mx-auto">
-                    {{ partial "form-section" (dict "form" .Params.contact.form) }}
-                </div>
+                <h2>{{ .Params.requirements.title }}</h2>
+                <p>{{ .Params.requirements.description | markdownify }}</p>
+
+                <h2>{{ .Params.contact.title }}</h2>
+                <p>{{ .Params.contact.description | markdownify }}</p>
+            </div>
+            <div class="w-full lg:w-1/2 px-8 mt-4">
+                {{ partial "form-section" (dict "form" .Params.contact.form) }}
             </div>
         </div>
     </section>
