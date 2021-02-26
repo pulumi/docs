@@ -7,12 +7,12 @@ tags:
   - github-actions
   - automation-api
 date: "2021-03-01"
-#meta_image: ""
+meta_image: "gha.png"
 meta_desc: "Simen A. W. Olsen and Paul Stack talk about the new GitHub Action powered by the Pulumi Automation API"
 ---
 
 **Guest Article:** [Simen A. W. Olsen](https://github.com/cobraz) is a Software Architect and Manager at [Bjerk](https://bjerk.io),
-a software development agency based in Oslo, Norway has joins Paul Stack to talk about the new GitHub Action powered by
+a software development agency based in Oslo, Norway, joins Paul Stack to talk about the new GitHub Action powered by
 the Pulumi Automation API.
 
 In this article, we'll take a look at how our [GitHub Action](https://github.com/pulumi/actions) has been re-architected
@@ -20,15 +20,15 @@ to be built on top of our [Automation API]({{< relref "/blog/automation-api" >}}
 
 <!--more-->
 
-As a GitHub Actions launch partner in 2018, we launched our original GitHub Action, built as a [Docker container action](https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action).
-This Action packaged all the necessary prerequisites along with the Pulumi CLI to allow users to
-be able to run Pulumi commands. As the Pulumi ecosystem has grown, so too did the container run in GitHub Actions.
+As a GitHub Actions launch partner in 2018, we released our original GitHub Action, built as a [Docker container action](https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action).
+This Action packaged all the prerequisites with the Pulumi CLI to let users
+run Pulumi commands. As the Pulumi ecosystem has grown, so too did the container run in GitHub Actions.
 
 Since then, GitHub released an alternative way to create a GitHub Action
-[by simply writing JavaScript](https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action).
-At Pulumi, and in our community, we love expressing everything we possibly can in code, so this new support got us quite
+[by writing JavaScript](https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action).
+At Pulumi, and in our community, we love expressing everything we possibly can in code, so the new JavaScript support got us quite
 excited about the "better together" possibilities! [Enter Pulumi's new Automation API]({{< relref "/blog/automation-api" >}}),
-a new feature we launched in public preview in October 2020. This new capability lets you do infrastructure as code
+a new feature we launched in public preview in October 2020. This new capability lets you build infrastructure as code
 &mdash;in pure code&mdash; without even needing to run a CLI. This sounded like a perfect match for a JavaScript Action.
 Creating a JavaScript Action allows us to programmatically invoke the right Pulumi commands in response to actions, without needing to awkwardly
 script a CLI. Instead, we were able to leverage the Automation API to fundamentally rethink our GitHub Action.
@@ -88,12 +88,12 @@ const main = async () => {
 
 The Action code is clean and concise because the power lies in the Automation API itself. The Action uses the Automation
 API to drive Pulumi as part of your GitHub Actions workflows. This means that as Pulumi makes changes to the Automation
-API, your workflows will be able to take advantage of them as soon as they're released! And, of course, you can always
+API, your workflows cam take advantage of them as soon as they're released! And, of course, you can always
 write your own custom logic using the Automation API like our Action does.
 
 ### Customizing Your Environment
 
-The new Action also allows you to be in control of the environment that it runs on. By comparison, the old Docker-based
+The new Action puts you in control of the environment that it runs on. By comparison, the previous Docker-based
 Action bundled specific tool versions, which left your CI pipeline at the mercy of our opinionated container. Now, if
 you want to pin to specific versions of NodeJS / Python / Go / .NET or even Pulumi, you have that power!
 
@@ -133,7 +133,7 @@ jobs:
 
 ### Cloud Interaction
 
-The old Docker-based Action would look for the `GOOGLE_CREDENTIALS` environment
+The previous Docker-based Action would look for the `GOOGLE_CREDENTIALS` environment
 variable; if your workflow set that variable, the Action would run the following commands on your behalf:
 
 ```shell
@@ -141,7 +141,7 @@ gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS
 gcloud --quiet auth configure-docker $GOOGLE_DOCKER_HOSTNAME_LIST
 ```
 
-With this new action, you're fully in control of your authentication to your cloud providers. To authenticate
+With the new Action, you're fully in control of  authentication to cloud providers. To authenticate
 with AWS / Azure / Google Cloud, you can now use their official Actions:
 
 {{% chooser cloud "aws,azure,gcp" / %}}
@@ -190,7 +190,7 @@ on your workflow's action.
 ### Faster
 
 The new GitHub Action is much smaller and no longer needs to download a (very!) large Docker container. In the Docker-based
-Action, we commonly saw workflows take up to 3 minutes just to download the container. The new Action is much faster;
+Action, we frequently saw workflows take up to 3 minutes to download the container. The new Action is much faster;
 let's take a look:
 
 #### Old Docker-based Action (v1)
@@ -204,7 +204,7 @@ let's take a look:
 The new Pulumi GitHub Action is ready for you to use. Here's how to get started:
 
 - Already use the v1 Pulumi GitHub Action? Migrate to the new one with our [migration guide](TODO-link).
-- New to Pulumi and GitHub Actions? Use our [getting started guide]({{< relref "/docs/guides/continuous-delivery/github-actions/" >}}) to set up your first Pulumi workflow.
+- New to Pulumi and GitHub Actions? Use our [getting started guide]({{< relref "/docs/guides/continuous-delivery/github-actions" >}}) to set up your first Pulumi workflow.
 
 We're eager to hear your feedback on this new Action. If you haven’t already signed up for our [Community Slack](https://slack.pulumi.com/), it’s
 quick and easy! You can join in on conversations you like and get help from other community members, as well as the Pulumi Team. That’s it for now!
