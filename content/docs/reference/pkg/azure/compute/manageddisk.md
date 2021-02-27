@@ -477,7 +477,7 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The method to use when creating the managed disk. Changing this forces a new resource to be created. Possible values include:
+    <dd>{{% md %}}The method to use when creating the managed disk. Changing this forces a new resource to be created. Possible values include: `Attach`, `Copy`, `Empty`, `FromImage`, `Import`, `Restore` and `Upload`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -653,7 +653,7 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The method to use when creating the managed disk. Changing this forces a new resource to be created. Possible values include:
+    <dd>{{% md %}}The method to use when creating the managed disk. Changing this forces a new resource to be created. Possible values include: `Attach`, `Copy`, `Empty`, `FromImage`, `Import`, `Restore` and `Upload`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -829,7 +829,7 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The method to use when creating the managed disk. Changing this forces a new resource to be created. Possible values include:
+    <dd>{{% md %}}The method to use when creating the managed disk. Changing this forces a new resource to be created. Possible values include: `Attach`, `Copy`, `Empty`, `FromImage`, `Import`, `Restore` and `Upload`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1005,7 +1005,7 @@ The ManagedDisk resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The method to use when creating the managed disk. Changing this forces a new resource to be created. Possible values include:
+    <dd>{{% md %}}The method to use when creating the managed disk. Changing this forces a new resource to be created. Possible values include: `Attach`, `Copy`, `Empty`, `FromImage`, `Import`, `Restore` and `Upload`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
