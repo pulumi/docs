@@ -25,8 +25,8 @@ Previewing update (dev):
 
      Type                                                         Name                     Plan
      pulumi:pulumi:Stack                                          quickstart-dev
- +   ├─ azure-native:storage:StorageAccountStaticWebsite   staticWebsite            create
- +   └─ azure-native:storage:Blob                          index.html               create
+ +   ├─ azure-native:storage:StorageAccountStaticWebsite          staticWebsite            create
+ +   └─ azure-native:storage:Blob                                 index.html               create
 
 Outputs:
   + staticEndpoint   : "https://sa8dd8af62.z22.web.core.windows.net/"
@@ -49,8 +49,8 @@ Updating (dev):
 
      Type                                                         Name                     Status
      pulumi:pulumi:Stack                                          quickstart-dev
- +   ├─ azure-native:storage:StorageAccountStaticWebsite   staticWebsite            created
- +   └─ azure-native:storage:Blob                          index.html               created
+ +   ├─ azure-native:storage:StorageAccountStaticWebsite          staticWebsite            created
+ +   └─ azure-native:storage:Blob                                 index.html               created
 
 Outputs:
     primaryStorageKey: "<key_value>"
