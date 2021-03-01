@@ -203,7 +203,7 @@ let's take a look:
 
 The new Pulumi GitHub Action is ready for you to use. Here's how to get started:
 
-- Already use the v1 Pulumi GitHub Action? Migrate to the new one with our [migration guide]({{< relref "/docs/guides/continuous-delivery/github-actions/#migrating-from-github-action-v1" >}}).
+- Already use the v1 Pulumi GitHub Action? Migrate to the new one with our [migration guide]({{< relref "/docs/guides/continuous-delivery/github-actions#migrating-from-github-action-v1" >}}).
 - New to Pulumi and GitHub Actions? Use our [getting started guide]({{< relref "/docs/guides/continuous-delivery/github-actions" >}}) to set up your first Pulumi workflow.
 
 We're eager to hear your feedback on this new Action. If you haven’t already signed up for our [Community Slack](https://slack.pulumi.com/), it’s
