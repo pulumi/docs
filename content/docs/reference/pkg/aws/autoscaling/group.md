@@ -4326,7 +4326,7 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument defines the Launch Template. Defined below.
+    <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4352,7 +4352,7 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument defines the Launch Template. Defined below.
+    <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4378,7 +4378,7 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument defines the Launch Template. Defined below.
+    <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4404,7 +4404,7 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplatelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Nested argument defines the Launch Template. Defined below.
+    <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4582,6 +4582,16 @@ this provider to skip all Capacity Waiting behavior.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="launchtemplatespecification_csharp">
+<a href="#launchtemplatespecification_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverridelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="weightedcapacity_csharp">
 <a href="#weightedcapacity_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
 </span>
@@ -4605,6 +4615,16 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Override the instance type in the Launch Template.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="launchtemplatespecification_go">
+<a href="#launchtemplatespecification_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverridelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Launch<wbr>Template<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4634,6 +4654,16 @@ this provider to skip all Capacity Waiting behavior.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="launchtemplatespecification_nodejs">
+<a href="#launchtemplatespecification_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverridelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Launch<wbr>Template<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="weightedcapacity_nodejs">
 <a href="#weightedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
 </span>
@@ -4660,6 +4690,16 @@ this provider to skip all Capacity Waiting behavior.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="launch_template_specification_python">
+<a href="#launch_template_specification_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>specification</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupmixedinstancespolicylaunchtemplateoverridelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Launch<wbr>Template<wbr>Specification<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Override the instance launch template specification in the Launch Template.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="weighted_capacity_python">
 <a href="#weighted_capacity_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>capacity</a>
 </span>
@@ -4667,6 +4707,152 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of capacity units, which gives the instance type a proportional weight to other instance types.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="groupmixedinstancespolicylaunchtemplateoverridelaunchtemplatespecification">Group<wbr>Mixed<wbr>Instances<wbr>Policy<wbr>Launch<wbr>Template<wbr>Override<wbr>Launch<wbr>Template<wbr>Specification</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="launchtemplateid_csharp">
+<a href="#launchtemplateid_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the launch template. Conflicts with `launch_template_name`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="launchtemplatename_csharp">
+<a href="#launchtemplatename_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the launch template. Conflicts with `launch_template_id`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="launchtemplateid_go">
+<a href="#launchtemplateid_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the launch template. Conflicts with `launch_template_name`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="launchtemplatename_go">
+<a href="#launchtemplatename_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the launch template. Conflicts with `launch_template_id`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="launchtemplateid_nodejs">
+<a href="#launchtemplateid_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the launch template. Conflicts with `launch_template_name`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="launchtemplatename_nodejs">
+<a href="#launchtemplatename_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the launch template. Conflicts with `launch_template_id`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="launch_template_id_python">
+<a href="#launch_template_id_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the launch template. Conflicts with `launch_template_name`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="launch_template_name_python">
+<a href="#launch_template_name_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the launch template. Conflicts with `launch_template_id`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Template version. Can be version number, `$Latest`, or `$Default`. (Default: `$Default`).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

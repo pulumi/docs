@@ -1327,7 +1327,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var currentUser = Output.Create(Aws.GetCanonicalUserId.InvokeAsync());
+        var currentUser = Output.Create(Aws.S3.GetCanonicalUserId.InvokeAsync());
         var bucket = new Aws.S3.Bucket("bucket", new Aws.S3.BucketArgs
         {
             Grants = 
@@ -1365,14 +1365,13 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/s3"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		currentUser, err := aws.GetCanonicalUserId(ctx, nil, nil)
+		currentUser, err := s3.GetCanonicalUserId(ctx, nil, nil)
 		if err != nil {
 			return err
 		}
@@ -1410,7 +1409,7 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-current_user = aws.get_canonical_user_id()
+current_user = aws.s3.get_canonical_user_id()
 bucket = aws.s3.Bucket("bucket", grants=[
     aws.s3.BucketGrantArgs(
         id=current_user.id,
@@ -1436,7 +1435,7 @@ bucket = aws.s3.Bucket("bucket", grants=[
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const currentUser = aws.getCanonicalUserId({});
+const currentUser = aws.s3.getCanonicalUserId({});
 const bucket = new aws.s3.Bucket("bucket", {grants: [
     {
         id: currentUser.then(currentUser => currentUser.id),

@@ -28,7 +28,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var exampleAmi = Output.Create(Aws.GetAmi.InvokeAsync(new Aws.GetAmiArgs
+        var exampleAmi = Output.Create(Aws.Ec2.GetAmi.InvokeAsync(new Aws.Ec2.GetAmiArgs
         {
             MostRecent = true,
             Owners = 
@@ -37,7 +37,7 @@ class MyStack : Stack
             },
             Filters = 
             {
-                new Aws.Inputs.GetAmiFilterArgs
+                new Aws.Ec2.Inputs.GetAmiFilterArgs
                 {
                     Name = "name",
                     Values = 
@@ -73,7 +73,6 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/licensemanager"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
@@ -82,13 +81,13 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := true
-		exampleAmi, err := aws.GetAmi(ctx, &aws.GetAmiArgs{
+		exampleAmi, err := ec2.LookupAmi(ctx, &ec2.LookupAmiArgs{
 			MostRecent: &opt0,
 			Owners: []string{
 				"amazon",
 			},
-			Filters: []aws.GetAmiFilter{
-				aws.GetAmiFilter{
+			Filters: []ec2.GetAmiFilter{
+				ec2.GetAmiFilter{
 					Name: "name",
 					Values: []string{
 						"amzn-ami-vpc-nat*",
@@ -131,9 +130,9 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-example_ami = aws.get_ami(most_recent=True,
+example_ami = aws.ec2.get_ami(most_recent=True,
     owners=["amazon"],
-    filters=[aws.GetAmiFilterArgs(
+    filters=[aws.ec2.GetAmiFilterArgs(
         name="name",
         values=["amzn-ami-vpc-nat*"],
     )])
@@ -154,7 +153,7 @@ example_association = aws.licensemanager.Association("exampleAssociation",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleAmi = aws.getAmi({
+const exampleAmi = aws.ec2.getAmi({
     mostRecent: true,
     owners: ["amazon"],
     filters: [{

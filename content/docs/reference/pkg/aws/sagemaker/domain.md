@@ -195,6 +195,211 @@ const exampleRole = new aws.iam.Role("exampleRole", {
 
 {{% /example %}}
 
+### Using Custom Images
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testImage = new Aws.Sagemaker.Image("testImage", new Aws.Sagemaker.ImageArgs
+        {
+            ImageName = "example",
+            RoleArn = aws_iam_role.Test.Arn,
+        });
+        var testAppImageConfig = new Aws.Sagemaker.AppImageConfig("testAppImageConfig", new Aws.Sagemaker.AppImageConfigArgs
+        {
+            AppImageConfigName = "example",
+            KernelGatewayImageConfig = new Aws.Sagemaker.Inputs.AppImageConfigKernelGatewayImageConfigArgs
+            {
+                KernelSpec = new Aws.Sagemaker.Inputs.AppImageConfigKernelGatewayImageConfigKernelSpecArgs
+                {
+                    Name = "example",
+                },
+            },
+        });
+        var testImageVersion = new Aws.Sagemaker.ImageVersion("testImageVersion", new Aws.Sagemaker.ImageVersionArgs
+        {
+            ImageName = testImage.Id,
+            BaseImage = "base-image",
+        });
+        var testDomain = new Aws.Sagemaker.Domain("testDomain", new Aws.Sagemaker.DomainArgs
+        {
+            DomainName = "example",
+            AuthMode = "IAM",
+            VpcId = aws_vpc.Test.Id,
+            SubnetIds = 
+            {
+                aws_subnet.Test.Id,
+            },
+            DefaultUserSettings = new Aws.Sagemaker.Inputs.DomainDefaultUserSettingsArgs
+            {
+                ExecutionRole = aws_iam_role.Test.Arn,
+                KernelGatewayAppSettings = new Aws.Sagemaker.Inputs.DomainDefaultUserSettingsKernelGatewayAppSettingsArgs
+                {
+                    CustomImages = 
+                    {
+                        new Aws.Sagemaker.Inputs.DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArgs
+                        {
+                            AppImageConfigName = testAppImageConfig.AppImageConfigName,
+                            ImageName = testImageVersion.ImageName,
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		testImage, err := sagemaker.NewImage(ctx, "testImage", &sagemaker.ImageArgs{
+			ImageName: pulumi.String("example"),
+			RoleArn:   pulumi.Any(aws_iam_role.Test.Arn),
+		})
+		if err != nil {
+			return err
+		}
+		testAppImageConfig, err := sagemaker.NewAppImageConfig(ctx, "testAppImageConfig", &sagemaker.AppImageConfigArgs{
+			AppImageConfigName: pulumi.String("example"),
+			KernelGatewayImageConfig: &sagemaker.AppImageConfigKernelGatewayImageConfigArgs{
+				KernelSpec: &sagemaker.AppImageConfigKernelGatewayImageConfigKernelSpecArgs{
+					Name: pulumi.String("example"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		testImageVersion, err := sagemaker.NewImageVersion(ctx, "testImageVersion", &sagemaker.ImageVersionArgs{
+			ImageName: testImage.ID(),
+			BaseImage: pulumi.String("base-image"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = sagemaker.NewDomain(ctx, "testDomain", &sagemaker.DomainArgs{
+			DomainName: pulumi.String("example"),
+			AuthMode:   pulumi.String("IAM"),
+			VpcId:      pulumi.Any(aws_vpc.Test.Id),
+			SubnetIds: pulumi.StringArray{
+				pulumi.Any(aws_subnet.Test.Id),
+			},
+			DefaultUserSettings: &sagemaker.DomainDefaultUserSettingsArgs{
+				ExecutionRole: pulumi.Any(aws_iam_role.Test.Arn),
+				KernelGatewayAppSettings: &sagemaker.DomainDefaultUserSettingsKernelGatewayAppSettingsArgs{
+					CustomImages: sagemaker.DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArray{
+						&sagemaker.DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArgs{
+							AppImageConfigName: testAppImageConfig.AppImageConfigName,
+							ImageName:          testImageVersion.ImageName,
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_image = aws.sagemaker.Image("testImage",
+    image_name="example",
+    role_arn=aws_iam_role["test"]["arn"])
+test_app_image_config = aws.sagemaker.AppImageConfig("testAppImageConfig",
+    app_image_config_name="example",
+    kernel_gateway_image_config=aws.sagemaker.AppImageConfigKernelGatewayImageConfigArgs(
+        kernel_spec=aws.sagemaker.AppImageConfigKernelGatewayImageConfigKernelSpecArgs(
+            name="example",
+        ),
+    ))
+test_image_version = aws.sagemaker.ImageVersion("testImageVersion",
+    image_name=test_image.id,
+    base_image="base-image")
+test_domain = aws.sagemaker.Domain("testDomain",
+    domain_name="example",
+    auth_mode="IAM",
+    vpc_id=aws_vpc["test"]["id"],
+    subnet_ids=[aws_subnet["test"]["id"]],
+    default_user_settings=aws.sagemaker.DomainDefaultUserSettingsArgs(
+        execution_role=aws_iam_role["test"]["arn"],
+        kernel_gateway_app_settings=aws.sagemaker.DomainDefaultUserSettingsKernelGatewayAppSettingsArgs(
+            custom_images=[aws.sagemaker.DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArgs(
+                app_image_config_name=test_app_image_config.app_image_config_name,
+                image_name=test_image_version.image_name,
+            )],
+        ),
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const testImage = new aws.sagemaker.Image("testImage", {
+    imageName: "example",
+    roleArn: aws_iam_role.test.arn,
+});
+const testAppImageConfig = new aws.sagemaker.AppImageConfig("testAppImageConfig", {
+    appImageConfigName: "example",
+    kernelGatewayImageConfig: {
+        kernelSpec: {
+            name: "example",
+        },
+    },
+});
+const testImageVersion = new aws.sagemaker.ImageVersion("testImageVersion", {
+    imageName: testImage.id,
+    baseImage: "base-image",
+});
+const testDomain = new aws.sagemaker.Domain("testDomain", {
+    domainName: "example",
+    authMode: "IAM",
+    vpcId: aws_vpc.test.id,
+    subnetIds: [aws_subnet.test.id],
+    defaultUserSettings: {
+        executionRole: aws_iam_role.test.arn,
+        kernelGatewayAppSettings: {
+            customImages: [{
+                appImageConfigName: testAppImageConfig.appImageConfigName,
+                imageName: testImageVersion.imageName,
+            }],
+        },
+    },
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -1853,8 +2058,8 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultresourcespec_csharp">
 <a href="#defaultresourcespec_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
 </span>
@@ -1869,8 +2074,8 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultresourcespec_go">
 <a href="#defaultresourcespec_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
 </span>
@@ -1885,8 +2090,8 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultresourcespec_nodejs">
 <a href="#defaultresourcespec_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Resource<wbr>Spec</a>
 </span>
@@ -1901,8 +2106,8 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="default_resource_spec_python">
 <a href="#default_resource_spec_python" style="color: inherit; text-decoration: inherit;">default_<wbr>resource_<wbr>spec</a>
 </span>
@@ -1927,7 +2132,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1937,7 +2142,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1953,7 +2158,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1963,7 +2168,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1979,7 +2184,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1989,7 +2194,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2005,7 +2210,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2015,7 +2220,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2025,16 +2230,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="defaultresourcespec_csharp">
-<a href="#defaultresourcespec_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
-{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="customimages_csharp">
@@ -2045,22 +2240,22 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultresourcespec_csharp">
+<a href="#defaultresourcespec_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="defaultresourcespec_go">
-<a href="#defaultresourcespec_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
-{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="customimages_go">
@@ -2071,22 +2266,22 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
 {{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="defaultresourcespec_nodejs">
-<a href="#defaultresourcespec_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Resource<wbr>Spec</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultresourcespec_go">
+<a href="#defaultresourcespec_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
     <dt class="property-optional"
             title="Optional">
         <span id="customimages_nodejs">
@@ -2097,22 +2292,22 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultresourcespec_nodejs">
+<a href="#defaultresourcespec_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Resource<wbr>Spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
+    </dt>
+    <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="default_resource_spec_python">
-<a href="#default_resource_spec_python" style="color: inherit; text-decoration: inherit;">default_<wbr>resource_<wbr>spec</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
-{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="custom_images_python">
@@ -2122,6 +2317,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingscustomimage">Sequence[Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_resource_spec_python">
+<a href="#default_resource_spec_python" style="color: inherit; text-decoration: inherit;">default_<wbr>resource_<wbr>spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2285,7 +2490,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2295,7 +2500,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2311,7 +2516,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2321,7 +2526,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2337,7 +2542,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2347,7 +2552,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2363,7 +2568,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2373,7 +2578,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2529,8 +2734,8 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultresourcespec_csharp">
 <a href="#defaultresourcespec_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
 </span>
@@ -2545,8 +2750,8 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultresourcespec_go">
 <a href="#defaultresourcespec_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
 </span>
@@ -2561,8 +2766,8 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultresourcespec_nodejs">
 <a href="#defaultresourcespec_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Resource<wbr>Spec</a>
 </span>
@@ -2577,8 +2782,8 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="default_resource_spec_python">
 <a href="#default_resource_spec_python" style="color: inherit; text-decoration: inherit;">default_<wbr>resource_<wbr>spec</a>
 </span>
@@ -2603,7 +2808,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2613,7 +2818,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2629,7 +2834,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2639,7 +2844,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2655,7 +2860,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2665,7 +2870,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2681,7 +2886,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2691,7 +2896,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

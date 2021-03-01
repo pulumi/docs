@@ -26,12 +26,12 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var ubuntu = Output.Create(Aws.GetAmi.InvokeAsync(new Aws.GetAmiArgs
+        var ubuntu = Output.Create(Aws.Ec2.GetAmi.InvokeAsync(new Aws.Ec2.GetAmiArgs
         {
             MostRecent = true,
             Filters = 
             {
-                new Aws.Inputs.GetAmiFilterArgs
+                new Aws.Ec2.Inputs.GetAmiFilterArgs
                 {
                     Name = "name",
                     Values = 
@@ -39,7 +39,7 @@ class MyStack : Stack
                         "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*",
                     },
                 },
-                new Aws.Inputs.GetAmiFilterArgs
+                new Aws.Ec2.Inputs.GetAmiFilterArgs
                 {
                     Name = "virtualization-type",
                     Values = 
@@ -74,7 +74,6 @@ class MyStack : Stack
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws"
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
@@ -82,16 +81,16 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		opt0 := true
-		ubuntu, err := aws.GetAmi(ctx, &aws.GetAmiArgs{
+		ubuntu, err := ec2.LookupAmi(ctx, &ec2.LookupAmiArgs{
 			MostRecent: &opt0,
-			Filters: []aws.GetAmiFilter{
-				aws.GetAmiFilter{
+			Filters: []ec2.GetAmiFilter{
+				ec2.GetAmiFilter{
 					Name: "name",
 					Values: []string{
 						"ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*",
 					},
 				},
-				aws.GetAmiFilter{
+				ec2.GetAmiFilter{
 					Name: "virtualization-type",
 					Values: []string{
 						"hvm",
@@ -127,13 +126,13 @@ func main() {
 import pulumi
 import pulumi_aws as aws
 
-ubuntu = aws.get_ami(most_recent=True,
+ubuntu = aws.ec2.get_ami(most_recent=True,
     filters=[
-        aws.GetAmiFilterArgs(
+        aws.ec2.GetAmiFilterArgs(
             name="name",
             values=["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"],
         ),
-        aws.GetAmiFilterArgs(
+        aws.ec2.GetAmiFilterArgs(
             name="virtualization-type",
             values=["hvm"],
         ),
@@ -155,7 +154,7 @@ web = aws.ec2.Instance("web",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = aws.getAmi({
+const ubuntu = aws.ec2.getAmi({
     mostRecent: true,
     filters: [
         {
