@@ -365,18 +365,18 @@ If you previously used GitHub Action v1, the following are changes you should kn
 * GitHub Action v2 now runs natively, so the action workflow needs to have the correct environment configured. For
   example, if you are running a NodeJS (for example) app then you need to ensure that your action has NodeJS available to it:
 
-    ```yaml
-    - uses: actions/setup-node@v1
-      with:
-          node-version: 14.x
-    ```
+```yaml
+- uses: actions/setup-node@v1
+  with:
+    node-version: 14.x
+```
 
 For additional examples, see the sample workflows available in our [Actions repository](https://github.com/pulumi/actions/tree/master/.github/workflows).
 
 * GitHub Action v2 no longer runs `npm ci | npm install | pip3 install | pipenv install`. Please ensure that you install
   your dependencies before Pulumi commands are executed. For example:
 
-    ```
-    - run: pip install -r requirements
-      working-directory: infra
-    ```
+```yaml
+- run: pip install -r requirements
+  working-directory: infra
+```
