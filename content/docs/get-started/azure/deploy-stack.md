@@ -25,8 +25,8 @@ Previewing update (dev):
 
     Type                                              Name             Plan
  +   pulumi:pulumi:Stack                              quickstart-dev   create
- +   ├─ azure-native:resources/latest:ResourceGroup   resourceGroup    create
- +   └─ azure-native:storage/latest:StorageAccount    sa               create
+ +   ├─ azure-native:resources:ResourceGroup          resourceGroup    create
+ +   └─ azure-native:storage:StorageAccount           sa               create
 
 Resources:
     + 3 to create
@@ -45,8 +45,8 @@ Updating (dev):
 
      Type                                             Name             Status
  +   pulumi:pulumi:Stack                              quickstart-dev   created
- +   ├─ azure-native:resources/latest:ResourceGroup   resourceGroup    created
- +   └─ azure-native:storage/latest:StorageAccount    sa               created
+ +   ├─ azure-native:resources:ResourceGroup          resourceGroup    created
+ +   └─ azure-native:storage:StorageAccount           sa               created
 
 Outputs:
     primaryStorageKey: "<key_value>"

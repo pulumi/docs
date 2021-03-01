@@ -130,17 +130,13 @@ Now use all of these cloud resources, and a local `FileAsset` resource, to uploa
 
 ```typescript
 // Upload the file
-["index.html"].map(name =>
-    new storage.Blob(name, {
-        blobName: name,
-        resourceGroupName: resourceGroup.name,
-        accountName: account.name,
-        containerName: staticWebsite.containerName,
-        type: storage.BlobType.Block,
-        source: new pulumi.asset.FileAsset(`./site/${name}`),
-        contentType: "text/html",
-    }),
-);
+const indexHtml = new storage.Blob("index.html", {
+    resourceGroupName: resourceGroup.name,
+    accountName: storageAccount.name,
+    containerName: staticWebsite.containerName,
+    source: new pulumi.asset.FileAsset("./site/index.html"),
+    contentType: "text/html",
+});
 ```
 
 {{% /choosable %}}
@@ -149,12 +145,10 @@ Now use all of these cloud resources, and a local `FileAsset` resource, to uploa
 
 ```python
 # Upload the file
-index_html = storage.Blob("index_html",
-    blob_name="index.html",
+index_html = storage.Blob("index.html",
     resource_group_name=resource_group.name,
     account_name=account.name,
     container_name=static_website.container_name,
-    type=storage.BlobType.BLOCK,
     source=pulumi.FileAsset("./site/index.html"),
     content_type="text/html")
 ```
@@ -164,12 +158,10 @@ index_html = storage.Blob("index_html",
 
 ```go
 // Upload the file
-_, err = storage.NewBlob(ctx, "index_html", &storage.BlobArgs{
-    BlobName:          pulumi.String("index.html"),
+_, err = storage.NewBlob(ctx, "index.html", &storage.BlobArgs{
     ResourceGroupName: resourceGroup.Name,
     AccountName:       account.Name,
     ContainerName:     staticWebsite.ContainerName,
-    Type:              storage.BlobTypeBlock,
     Source:            pulumi.NewFileAsset("./site/index.html"),
     ContentType:       pulumi.String("text/html"),
 })
@@ -183,13 +175,11 @@ if err != nil {
 
 ```csharp
 // Upload the file
-var index_html = new Blob("index_html", new BlobArgs
+var index_html = new Blob("index.html", new BlobArgs
 {
-    BlobName = "index.html",
     ResourceGroupName = resourceGroup.Name,
     AccountName = storageAccount.Name,
     ContainerName = staticWebsite.ContainerName,
-    Type = BlobType.Block,
     Source = new FileAsset("./site/index.html"),
     ContentType = "text/html",
 });

@@ -27,14 +27,14 @@ Previewing destroy (dev):
 
      Type                                                         Name                     Plan
  -   pulumi:pulumi:Stack                                          quickstart-dev           delete
- -   ├─ azure-native:storage/latest:Blob                          index.html               delete
- -   ├─ azure-native:storage/latest:StorageAccountStaticWebsite   staticWebsite            delete
- -   ├─ azure-native:storage/latest:StorageAccount                sa                       delete
- -   └─ azure-native:resources/latest:ResourceGroup               resourceGroup            delete
+ -   ├─ azure-native:storage:Blob                                 index.html               delete
+ -   ├─ azure-native:storage:StorageAccountStaticWebsite          staticWebsite            delete
+ -   ├─ azure-native:storage:StorageAccount                       sa                       delete
+ -   └─ azure-native:resources:ResourceGroup                      resourceGroup            delete
 
 Outputs:
   - primaryStorageKey: "<key_value>"
-  - staticEndpoint   : "https://mystorageaccount.z22.web.core.windows.net/"
+  - staticEndpoint   : "https://sa8dd8af62.z22.web.core.windows.net/"
 
 Resources:
     - 5 to delete
@@ -44,14 +44,14 @@ Destroying (dev):
 
      Type                                                         Name                     Status
  -   pulumi:pulumi:Stack                                          quickstart-dev           deleted
- -   ├─ azure-native:storage/latest:Blob                          index.html               deleted
- -   ├─ azure-native:storage/latest:StorageAccountStaticWebsite   staticWebsite            deleted
- -   ├─ azure-native:storage/latest:StorageAccount                sa                       deleted
- -   └─ azure-native:resources/latest:ResourceGroup               resourceGroup            deleted
+ -   ├─ azure-native:storage:Blob                                 index.html               deleted
+ -   ├─ azure-native:storage:StorageAccountStaticWebsite          staticWebsite            deleted
+ -   ├─ azure-native:storage:StorageAccount                       sa                       deleted
+ -   └─ azure-native:resources:ResourceGroup                      resourceGroup            deleted
 
 Outputs:
   - primaryStorageKey: "<key_value>"
-  - staticEndpoint   : "https://mystorageaccount.z22.web.core.windows.net/"
+  - staticEndpoint   : "https://sa8dd8af62.z22.web.core.windows.net/"
 
 Resources:
     - 5 deleted

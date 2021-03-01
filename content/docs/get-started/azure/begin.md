@@ -58,9 +58,13 @@ Finally, configure Pulumi with Microsoft Azure.
 
 ### Configure Pulumi to access your Microsoft Azure account
 
-Pulumi requires cloud credentials to manage and provision resources. Pulumi can authenticate to Azure using an IAM user or service principal that has **Programmatic access** with rights to deploy and manage your Azure resources.
+Pulumi requires cloud credentials to manage and provision resources. Pulumi can authenticate to Azure using a user account or service principal that has **Programmatic access** with rights to deploy and manage your Azure resources.
 
-In this guide, you will need an IAM user account with permissions to create and populate Blob storage containers and provide anonymous access to a Blob file.
+{{% notes type="info" %}}
+Pulumi relies on the Azure SDK to authenticate requests from your computer to Azure. Your credentials are never sent to pulumi.com.
+{{% /notes %}}
+
+In this guide, you will need a user account with permissions to create and populate Blob storage containers and provide anonymous access to a Blob file.
 
 When developing locally, we recommend that you install the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) and then authorize access with a user account.
 

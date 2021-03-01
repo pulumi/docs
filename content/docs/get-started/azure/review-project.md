@@ -57,8 +57,8 @@ export const primaryStorageKey = storageAccountKeys.keys[0].value;
 
 ```python
 import pulumi
-from pulumi_azure_native.storage import latest as storage
-from pulumi_azure_native.resources import latest as resources
+from pulumi_azure_native import storage
+from pulumi_azure_native import resources
 
 # Create an Azure Resource Group
 resource_group = resources.ResourceGroup("resource_group")
@@ -142,9 +142,9 @@ func main() {
 ```csharp
 using System.Threading.Tasks;
 using Pulumi;
-using Pulumi.AzureNative.Resources.Latest;
-using Pulumi.AzureNative.Storage.Latest;
-using Pulumi.AzureNative.Storage.Latest.Inputs;
+using Pulumi.AzureNative.Resources;
+using Pulumi.AzureNative.Storage;
+using Pulumi.AzureNative.Storage.Inputs;
 
 class MyStack : Stack
 {
