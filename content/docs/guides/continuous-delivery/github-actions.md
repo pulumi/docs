@@ -12,6 +12,11 @@ aliases:
 - /docs/console/continuous-delivery/github-actions/
 ---
 
+{{% notes type="info" %}}
+The content and examples in this guide refer to Pulumi's GitHub Action v2. Pulumi's GitHub Action v1 has been deprecated
+and will reach its End of Life (EOL) on August 31st, 2021.
+{{% /notes %}}
+
 Pulumi's [GitHub Actions](https://developer.github.com/actions) help you deploy apps and
 infrastructure to your cloud of choice, using nothing but code in your favorite language
 and GitHub. This includes previewing, validating, and collaborating on proposed
@@ -73,18 +78,25 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
-      - uses: pulumi/actions@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-region: ${{ env.AWS_REGION }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Install Pulumi CLI
+        uses: pulumi/action-install-pulumi-cli@v1.0.1
+      - run: npm install
+      - uses: pulumi/actions@v2
         with:
           command: preview
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-          IS_PR_WORKFLOW: true
 
 ```
-
-Note that we've set several environment variables, some of which are referenced as [GitHub Actions secrets](https://help.github.com/en/articles/virtual-environments-for-github-actions#creating-and-using-secrets-encrypted-variables) (which we'll provide values for later), to expose to the workflow job at runtime.
 
 #### The push Workflow File
 
@@ -106,12 +118,22 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
-      - uses: pulumi/actions@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-region: ${{ env.AWS_REGION }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Install Pulumi CLI
+        uses: pulumi/action-install-pulumi-cli@v1.0.1
+      - run: npm install
+      - uses: pulumi/actions@v2
         with:
           command: up
         env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
 
@@ -193,11 +215,9 @@ to copy the output of the `pulumi` invocation on the Pull Request. This option d
 have as rich an output display as the Pulumi GitHub App, as it simply copies the raw
 output of the Pulumi CLI.
 
-To allow your GitHub Action to leave Pull Request comments, you'll need to set the
-`COMMENT_ON_PR` environment variable, and add `GITHUB_TOKEN` to the list of `secrets`
-passed to the action. (The `GITHUB_TOKEN` value will already be set in the running
-environment, so there's no need to add one explicitly as a secret.) Add the following two
-lines to the `env` block of the preview action:
+To allow your GitHub Action to leave Pull Request comments, you'll need to add
+`comment-on-pr` and `github-token` to the list of inputs
+passed to the action. Update the action as follows:
 
 ```diff
 name: Pulumi
@@ -205,17 +225,31 @@ on:
   - pull_request
 jobs:
   preview:
-    ...
+    name: Preview
+    runs-on: ubuntu-latest
     steps:
-      ...
-      - uses: pulumi/actions@v0.0.2
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-region: ${{ env.AWS_REGION }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Install Pulumi CLI
+        uses: pulumi/action-install-pulumi-cli@v1.0.1
+      - run: npm install
+      - uses: pulumi/actions@v2
         with:
           command: preview
+          comment-on-pr: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
-          ...
-          IS_PR_WORKFLOW: pr
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          COMMENT_ON_PR: 1
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
 
 Example comment when using GitHub Actions directly:
@@ -230,7 +264,7 @@ You can configure how Pulumi's GitHub Actions work to have more control about wh
 
 By default, the Pulumi GitHub Action assumes your Pulumi project is in your repo's root
 directory. If you are using a different root directory for your project, simply set the
-`PULUMI_ROOT` variable in your workflow action, with a relative path to your Pulumi
+`work-dir` variable in your workflow action, with a relative path to your Pulumi
 project directory. For example:
 
 ```hcl
@@ -239,47 +273,110 @@ on:
   - pull_request
 jobs:
   preview:
-    ...
+    name: Preview
+    runs-on: ubuntu-latest
     steps:
-      ...
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-region: ${{ env.AWS_REGION }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Install Pulumi CLI
+        uses: pulumi/action-install-pulumi-cli@v1.0.1
+      - run: npm install
+      - uses: pulumi/actions@v2
+        with:
+          command: preview
+          comment-on-pr: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          work-dir: infra
         env:
-          ...
-          PULUMI_ROOT: infra
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
 
 This tells Pulumi that the project can be found underneath the repo's `infra` directory.
 
-### Branch Mappings
+### Stacks
 
 Pulumi has a concept of *stacks*, which are isolated environments for your application
-(e.g., production, staging, or even distinct services). By default, the GitHub Action will
-assume a project has a single stack, and will associate the `master` branch with it. For
-more sophisticated scenarios, this can be overridden by adding a `.pulumi/ci.json` file to
-your repository as well.
+(e.g., production, staging, or even distinct services).
 
-This file is simply a JSON map of GitHub branch names to Pulumi stacks. For example:
+A stack name is a required input for the Pulumi Action. You can pass a stack name using the `stack-name` input
+paramter as follows:
 
-```json
-{
-    "master": "production",
-    "staging": "staging"
-}
+```yaml
+name: Pulumi
+on:
+  - pull_request
+jobs:
+  preview:
+    name: Preview
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-region: ${{ env.AWS_REGION }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Install Pulumi CLI
+        uses: pulumi/action-install-pulumi-cli@v1.0.1
+      - run: npm install
+      - uses: pulumi/actions@v2
+        with:
+          command: preview
+          comment-on-pr: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          work-dir: infra
+          stack-name: dev
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
-
-Often, we'll map `master` to a `production` stack, and `staging` to a distinct `staging`
-stack, and then use Pull Requests to promote code between the two. This mappings file is
-intentionally flexible.
 
 Note that you'll need to create these stacks [in the usual
 way]({{< relref "/docs/intro/concepts/stack" >}}) using the Pulumi Console or CLI.
 After setting this up, everything will be on autopilot.
 
-## Demos and Examples
+## Migrating from GitHub Action v1
 
-To see some examples of this in action, see the following links:
+If you previously used GitHub Action v1, the following are changes you should know about when migrating from v1 to v2:
 
-* [Our introductory blog post]({{< relref "continuous-delivery-to-any-cloud-using-github-actions-and-pulumi" >}})
-* [Dockerized Ruby on Rails, in Kubernetes, with hosted Cloud SQL](https://github.com/pulumi/actions-example-gke-rails)
-* [Short 90 second video from GitHub Universe Keynote](https://www.youtube.com/watch?time_continue=56&v=59SxB2uY9E0)
-* [Short 90 second video on GitOps and Pull Request workflows](https://www.youtube.com/watch?v=MKbDVDBuKUA)
-* [Longer 7 minute video exploring the ins and outs of Pulumi GitHub Actions in practice](https://www.youtube.com/watch?time_continue=1&v=1Et2TkuxqJg)
+* The following inputs have changed from environment variables to action inputs:
+    * `PULUMI_ROOT` is now `work-dir`
+    * `PULUMI_BACKEND_URL` is now `cloud-url`
+    * `COMMENT_ON_PR` is now `comment-on-pr`
+    * `GITHUB_TOKEN` is now `github-token`
+
+* `IS_PR_WORKFLOW` is no longer used. GitHub Action v2 is able to understand if the workflow is a pull_request due to the action type.
+
+* GitHub Action v2 now runs natively, so the action workflow needs to have the correct environment configured. For
+  example, if you are running a NodeJS (for example) app then you need to ensure that your action has NodeJS available to it:
+
+```yaml
+- uses: actions/setup-node@v1
+  with:
+    node-version: 14.x
+```
+
+For additional examples, see the sample workflows available in our [Actions repository](https://github.com/pulumi/actions/tree/master/.github/workflows).
+
+* GitHub Action v2 no longer runs `npm ci | npm install | pip3 install | pipenv install`. Please ensure that you install
+  your dependencies before Pulumi commands are executed. For example:
+
+```yaml
+- run: pip install -r requirements
+  working-directory: infra
+```
