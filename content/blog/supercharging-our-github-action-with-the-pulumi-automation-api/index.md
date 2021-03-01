@@ -12,7 +12,7 @@ meta_desc: "Simen A. W. Olsen and Paul Stack talk about the new GitHub Action po
 ---
 
 **Guest Article:** [Simen A. W. Olsen](https://github.com/cobraz) is a Software Architect and Manager at [Bjerk](https://bjerk.io),
-a software development agency based in Oslo, Norway, joins Paul Stack to talk about the new GitHub Action powered by
+a software development agency based in Oslo, Norway. He joins Paul Stack to talk about the new GitHub Action powered by
 the Pulumi Automation API.
 
 In this article, we'll take a look at how our [GitHub Action](https://github.com/pulumi/actions) has been re-architected
@@ -28,8 +28,8 @@ Since then, GitHub released an alternative way to create a GitHub Action
 [by writing JavaScript](https://docs.github.com/en/actions/creating-actions/creating-a-javascript-action).
 At Pulumi, and in our community, we love expressing everything we possibly can in code, so the new JavaScript support got us quite
 excited about the "better together" possibilities! [Enter Pulumi's new Automation API]({{< relref "/blog/automation-api" >}}),
-a new feature we launched in public preview in October 2020. This new capability lets you build infrastructure as code
-&mdash;in pure code&mdash; without even needing to run a CLI. This sounded like a perfect match for a JavaScript Action.
+a new feature we launched in public preview in October 2020. This new capability lets you build infrastructure as code&mdash;in
+pure code&mdash;without even needing to run a CLI. This sounded like a perfect match for a JavaScript Action.
 Creating a JavaScript Action allows us to programmatically invoke the right Pulumi commands in response to actions, without needing to awkwardly
 script a CLI. Instead, we were able to leverage the Automation API to fundamentally rethink our GitHub Action.
 
@@ -87,9 +87,9 @@ const main = async () => {
 ```
 
 The Action code is clean and concise because the power lies in the Automation API itself. The Action uses the Automation
-API to drive Pulumi as part of your GitHub Actions workflows. This means that as Pulumi makes changes to the Automation
-API, your workflows cam take advantage of them as soon as they're released! And, of course, you can always
-write your own custom logic using the Automation API like our Action does.
+API to drive Pulumi as part of your GitHub Actions workflows. This means that your workflows can take advantage of changes to Pulumi
+and the Automation API as soon as they're released! And, of course, you can always write your own custom logic
+using the Automation API like our Action does.
 
 ### Customizing Your Environment
 
@@ -203,7 +203,7 @@ let's take a look:
 
 The new Pulumi GitHub Action is ready for you to use. Here's how to get started:
 
-- Already use the v1 Pulumi GitHub Action? Migrate to the new one with our [migration guide](TODO-link).
+- Already use the v1 Pulumi GitHub Action? Migrate to the new one with our [migration guide]({{< relref "/docs/guides/continuous-delivery/github-actions/#migrating-from-github-action-v1 >}}).
 - New to Pulumi and GitHub Actions? Use our [getting started guide]({{< relref "/docs/guides/continuous-delivery/github-actions" >}}) to set up your first Pulumi workflow.
 
 We're eager to hear your feedback on this new Action. If you haven’t already signed up for our [Community Slack](https://slack.pulumi.com/), it’s
