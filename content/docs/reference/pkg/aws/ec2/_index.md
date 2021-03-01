@@ -87,10 +87,13 @@ Explore the resources and functions of the aws.ec2 module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getami" title="GetAmi"><span class="symbol function"></span>GetAmi</a></li>
+    <li><a href="getamiids" title="GetAmiIds"><span class="symbol function"></span>GetAmiIds</a></li>
     <li><a href="getcoippool" title="GetCoipPool"><span class="symbol function"></span>GetCoipPool</a></li>
     <li><a href="getcoippools" title="GetCoipPools"><span class="symbol function"></span>GetCoipPools</a></li>
     <li><a href="getcustomergateway" title="GetCustomerGateway"><span class="symbol function"></span>GetCustomerGateway</a></li>
     <li><a href="getdedicatedhost" title="GetDedicatedHost"><span class="symbol function"></span>GetDedicatedHost</a></li>
+    <li><a href="getelasticip" title="GetElasticIp"><span class="symbol function"></span>GetElasticIp</a></li>
     <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
     <li><a href="getinstancetype" title="GetInstanceType"><span class="symbol function"></span>GetInstanceType</a></li>
     <li><a href="getinstancetypeoffering" title="GetInstanceTypeOffering"><span class="symbol function"></span>GetInstanceTypeOffering</a></li>
@@ -111,6 +114,7 @@ Explore the resources and functions of the aws.ec2 module.
     <li><a href="getnetworkacls" title="GetNetworkAcls"><span class="symbol function"></span>GetNetworkAcls</a></li>
     <li><a href="getnetworkinterface" title="GetNetworkInterface"><span class="symbol function"></span>GetNetworkInterface</a></li>
     <li><a href="getnetworkinterfaces" title="GetNetworkInterfaces"><span class="symbol function"></span>GetNetworkInterfaces</a></li>
+    <li><a href="getprefixlist" title="GetPrefixList"><span class="symbol function"></span>GetPrefixList</a></li>
     <li><a href="getroute" title="GetRoute"><span class="symbol function"></span>GetRoute</a></li>
     <li><a href="getroutetable" title="GetRouteTable"><span class="symbol function"></span>GetRouteTable</a></li>
     <li><a href="getroutetables" title="GetRouteTables"><span class="symbol function"></span>GetRouteTables</a></li>
@@ -138,6 +142,6 @@ Explore the resources and functions of the aws.ec2 module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.30.1</dd>
+	<dd>3.31.0</dd>
 </dl>
 
