@@ -48,6 +48,7 @@ class MyStack : Stack
         {
             ApiManagementName = exampleService.Name,
             ResourceGroupName = exampleResourceGroup.Name,
+            ResourceId = exampleInsights.Id,
             ApplicationInsights = new Azure.ApiManagement.Inputs.LoggerApplicationInsightsArgs
             {
                 InstrumentationKey = exampleInsights.InstrumentationKey,
@@ -100,6 +101,7 @@ func main() {
 		_, err = apimanagement.NewLogger(ctx, "exampleLogger", &apimanagement.LoggerArgs{
 			ApiManagementName: exampleService.Name,
 			ResourceGroupName: exampleResourceGroup.Name,
+			ResourceId:        exampleInsights.ID(),
 			ApplicationInsights: &apimanagement.LoggerApplicationInsightsArgs{
 				InstrumentationKey: exampleInsights.InstrumentationKey,
 			},
@@ -133,6 +135,7 @@ example_service = azure.apimanagement.Service("exampleService",
 example_logger = azure.apimanagement.Logger("exampleLogger",
     api_management_name=example_service.name,
     resource_group_name=example_resource_group.name,
+    resource_id=example_insights.id,
     application_insights=azure.apimanagement.LoggerApplicationInsightsArgs(
         instrumentation_key=example_insights.instrumentation_key,
     ))
@@ -162,6 +165,7 @@ const exampleService = new azure.apimanagement.Service("exampleService", {
 const exampleLogger = new azure.apimanagement.Logger("exampleLogger", {
     apiManagementName: exampleService.name,
     resourceGroupName: exampleResourceGroup.name,
+    resourceId: exampleInsights.id,
     applicationInsights: {
         instrumentationKey: exampleInsights.instrumentationKey,
     },
@@ -182,7 +186,7 @@ const exampleLogger = new azure.apimanagement.Logger("exampleLogger", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Logger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_insights</span><span class="p">:</span> <span class="nx">Optional[LoggerApplicationInsightsArgs]</span> = None<span class="p">, </span><span class="nx">buffered</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub</span><span class="p">:</span> <span class="nx">Optional[LoggerEventhubArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Logger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_insights</span><span class="p">:</span> <span class="nx">Optional[LoggerApplicationInsightsArgs]</span> = None<span class="p">, </span><span class="nx">buffered</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub</span><span class="p">:</span> <span class="nx">Optional[LoggerEventhubArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -423,6 +427,16 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The name of this Logger, which must be unique within the API Management Service. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target resource id which will be linked in the API-Management portal page.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -498,6 +512,16 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this Logger, which must be unique within the API Management Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target resource id which will be linked in the API-Management portal page.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -575,6 +599,16 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}The name of this Logger, which must be unique within the API Management Service. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target resource id which will be linked in the API-Management portal page.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -650,6 +684,16 @@ The Logger resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this Logger, which must be unique within the API Management Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The target resource id which will be linked in the API-Management portal page.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -734,7 +778,7 @@ Get an existing Logger resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_insights</span><span class="p">:</span> <span class="nx">Optional[LoggerApplicationInsightsArgs]</span> = None<span class="p">, </span><span class="nx">buffered</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub</span><span class="p">:</span> <span class="nx">Optional[LoggerEventhubArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Logger</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_insights</span><span class="p">:</span> <span class="nx">Optional[LoggerApplicationInsightsArgs]</span> = None<span class="p">, </span><span class="nx">buffered</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">eventhub</span><span class="p">:</span> <span class="nx">Optional[LoggerEventhubArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Logger</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -917,6 +961,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resourceid_csharp">
+<a href="#state_resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target resource id which will be linked in the API-Management portal page.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -992,6 +1046,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resourceid_go">
+<a href="#state_resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target resource id which will be linked in the API-Management portal page.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1069,6 +1133,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resourceid_nodejs">
+<a href="#state_resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target resource id which will be linked in the API-Management portal page.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1144,6 +1218,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_resource_id_python">
+<a href="#state_resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The target resource id which will be linked in the API-Management portal page.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

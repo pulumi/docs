@@ -453,7 +453,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Cluster<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `virtual_network_configuration` block as defined below.
+    <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -609,7 +609,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Cluster<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}A `virtual_network_configuration` block as defined below.
+    <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -765,7 +765,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Cluster<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}A `virtual_network_configuration` block as defined below.
+    <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -921,7 +921,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Cluster<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `virtual_network_configuration` block as defined below.
+    <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1367,7 +1367,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Cluster<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `virtual_network_configuration` block as defined below.
+    <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1543,7 +1543,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Cluster<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}A `virtual_network_configuration` block as defined below.
+    <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1719,7 +1719,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Cluster<wbr>Virtual<wbr>Network<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}A `virtual_network_configuration` block as defined below.
+    <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1895,7 +1895,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustervirtualnetworkconfiguration">Cluster<wbr>Virtual<wbr>Network<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `virtual_network_configuration` block as defined below.
+    <dd>{{% md %}}A `virtual_network_configuration` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

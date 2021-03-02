@@ -1978,7 +1978,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicycustomrulematchcondition">List&lt;Firewall<wbr>Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}One or more `match_condition` block defined below.
+    <dd>{{% md %}}One or more `match_condition` block defined below. Can support up to `10` `match_condition` blocks.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2064,7 +2064,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicycustomrulematchcondition">[]Firewall<wbr>Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}One or more `match_condition` block defined below.
+    <dd>{{% md %}}One or more `match_condition` block defined below. Can support up to `10` `match_condition` blocks.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2150,7 +2150,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicycustomrulematchcondition">Firewall<wbr>Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition[]</a></span>
     </dt>
-    <dd>{{% md %}}One or more `match_condition` block defined below.
+    <dd>{{% md %}}One or more `match_condition` block defined below. Can support up to `10` `match_condition` blocks.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2236,7 +2236,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpolicycustomrulematchcondition">Sequence[Firewall<wbr>Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}One or more `match_condition` block defined below.
+    <dd>{{% md %}}One or more `match_condition` block defined below. Can support up to `10` `match_condition` blocks.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2284,7 +2284,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Up to `100` possible values to match.
+    <dd>{{% md %}}Up to `600` possible values to match. Limit is in total across all `match_condition` blocks and `match_values` arguments. String value itself can be up to `256` characters long.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2350,7 +2350,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Up to `100` possible values to match.
+    <dd>{{% md %}}Up to `600` possible values to match. Limit is in total across all `match_condition` blocks and `match_values` arguments. String value itself can be up to `256` characters long.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2416,7 +2416,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Up to `100` possible values to match.
+    <dd>{{% md %}}Up to `600` possible values to match. Limit is in total across all `match_condition` blocks and `match_values` arguments. String value itself can be up to `256` characters long.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2482,7 +2482,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Up to `100` possible values to match.
+    <dd>{{% md %}}Up to `600` possible values to match. Limit is in total across all `match_condition` blocks and `match_values` arguments. String value itself can be up to `256` characters long.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3498,7 +3498,7 @@ The following state arguments are supported:
 FrontDoor Web Application Firewall Policy can be imported using the `resource id`, e.g.
 
 ```sh
- $ pulumi import azure:frontdoor/firewallPolicy:FirewallPolicy example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example-rg/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/example-fdwafpolicy
+ $ pulumi import azure:frontdoor/firewallPolicy:FirewallPolicy example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example-rg/providers/Microsoft.Network/frontDoorWebApplicationFirewallPolicies/examplefdwafpolicy
 ```
 
 

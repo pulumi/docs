@@ -261,7 +261,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password to access the certificate's private key. This must and can only be specified when `format` is `Pfx`.
+    <dd>{{% md %}}The password to access the certificate's private key. This can only be specified when `format` is `Pfx`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -336,7 +336,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password to access the certificate's private key. This must and can only be specified when `format` is `Pfx`.
+    <dd>{{% md %}}The password to access the certificate's private key. This can only be specified when `format` is `Pfx`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -411,7 +411,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password to access the certificate's private key. This must and can only be specified when `format` is `Pfx`.
+    <dd>{{% md %}}The password to access the certificate's private key. This can only be specified when `format` is `Pfx`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -486,7 +486,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The password to access the certificate's private key. This must and can only be specified when `format` is `Pfx`.
+    <dd>{{% md %}}The password to access the certificate's private key. This can only be specified when `format` is `Pfx`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -812,7 +812,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password to access the certificate's private key. This must and can only be specified when `format` is `Pfx`.
+    <dd>{{% md %}}The password to access the certificate's private key. This can only be specified when `format` is `Pfx`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -907,7 +907,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password to access the certificate's private key. This must and can only be specified when `format` is `Pfx`.
+    <dd>{{% md %}}The password to access the certificate's private key. This can only be specified when `format` is `Pfx`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1002,7 +1002,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password to access the certificate's private key. This must and can only be specified when `format` is `Pfx`.
+    <dd>{{% md %}}The password to access the certificate's private key. This can only be specified when `format` is `Pfx`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1097,7 +1097,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The password to access the certificate's private key. This must and can only be specified when `format` is `Pfx`.
+    <dd>{{% md %}}The password to access the certificate's private key. This can only be specified when `format` is `Pfx`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

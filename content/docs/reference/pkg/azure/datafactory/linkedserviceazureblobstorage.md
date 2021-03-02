@@ -153,7 +153,7 @@ const exampleLinkedServiceAzureBlobStorage = new azure.datafactory.LinkedService
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">LinkedServiceAzureBlobStorage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">LinkedServiceAzureBlobStorage</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sas_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_principal_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_principal_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_managed_identity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -326,16 +326,6 @@ The LinkedServiceAzureBlobStorage resource accepts the following [input]({{< rel
 
     <dt class="property-required"
             title="Required">
-        <span id="connectionstring_csharp">
-<a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The connection string. Required if `account_endpoint`, `account_key`, and `database` are unspecified.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="datafactoryname_csharp">
 <a href="#datafactoryname_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
 </span>
@@ -373,6 +363,16 @@ The LinkedServiceAzureBlobStorage resource accepts the following [input]({{< rel
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the Data Factory Linked Service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectionstring_csharp">
+<a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The connection string. Conflicts with `sas_uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -414,22 +414,62 @@ The LinkedServiceAzureBlobStorage resource accepts the following [input]({{< rel
     </dt>
     <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sasuri_csharp">
+<a href="#sasuri_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SAS URI. Conflicts with `connection_string`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalid_csharp">
+<a href="#serviceprincipalid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Blob Storage account. Required if `service_principal_key` is set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalkey_csharp">
+<a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service principal key in which to authenticate against the AAzure Blob Storage account.  Required if `service_principal_id` is set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Blob Storage account.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usemanagedidentity_csharp">
+<a href="#usemanagedidentity_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Managed<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to use the Data Factory's managed identity to authenticate against the Azure Blob Storage account. Incompatible with `service_principal_id` and `service_principal_key`
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="connectionstring_go">
-<a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The connection string. Required if `account_endpoint`, `account_key`, and `database` are unspecified.
-{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="datafactoryname_go">
@@ -472,6 +512,16 @@ The LinkedServiceAzureBlobStorage resource accepts the following [input]({{< rel
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="connectionstring_go">
+<a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The connection string. Conflicts with `sas_uri`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -510,22 +560,62 @@ The LinkedServiceAzureBlobStorage resource accepts the following [input]({{< rel
     </dt>
     <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sasuri_go">
+<a href="#sasuri_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SAS URI. Conflicts with `connection_string`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalid_go">
+<a href="#serviceprincipalid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Blob Storage account. Required if `service_principal_key` is set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalkey_go">
+<a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service principal key in which to authenticate against the AAzure Blob Storage account.  Required if `service_principal_id` is set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Blob Storage account.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usemanagedidentity_go">
+<a href="#usemanagedidentity_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Managed<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to use the Data Factory's managed identity to authenticate against the Azure Blob Storage account. Incompatible with `service_principal_id` and `service_principal_key`
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="connectionstring_nodejs">
-<a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The connection string. Required if `account_endpoint`, `account_key`, and `database` are unspecified.
-{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="datafactoryname_nodejs">
@@ -568,6 +658,16 @@ The LinkedServiceAzureBlobStorage resource accepts the following [input]({{< rel
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="connectionstring_nodejs">
+<a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The connection string. Conflicts with `sas_uri`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -606,22 +706,62 @@ The LinkedServiceAzureBlobStorage resource accepts the following [input]({{< rel
     </dt>
     <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sasuri_nodejs">
+<a href="#sasuri_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SAS URI. Conflicts with `connection_string`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalid_nodejs">
+<a href="#serviceprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Blob Storage account. Required if `service_principal_key` is set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceprincipalkey_nodejs">
+<a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service principal key in which to authenticate against the AAzure Blob Storage account.  Required if `service_principal_id` is set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Blob Storage account.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usemanagedidentity_nodejs">
+<a href="#usemanagedidentity_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Managed<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to use the Data Factory's managed identity to authenticate against the Azure Blob Storage account. Incompatible with `service_principal_id` and `service_principal_key`
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="connection_string_python">
-<a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The connection string. Required if `account_endpoint`, `account_key`, and `database` are unspecified.
-{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="data_factory_name_python">
@@ -664,6 +804,16 @@ The LinkedServiceAzureBlobStorage resource accepts the following [input]({{< rel
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="connection_string_python">
+<a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The connection string. Conflicts with `sas_uri`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -701,6 +851,56 @@ The LinkedServiceAzureBlobStorage resource accepts the following [input]({{< rel
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of parameters to associate with the Data Factory Linked Service.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sas_uri_python">
+<a href="#sas_uri_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The SAS URI. Conflicts with `connection_string`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_principal_id_python">
+<a href="#service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Blob Storage account. Required if `service_principal_key` is set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="service_principal_key_python">
+<a href="#service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The service principal key in which to authenticate against the AAzure Blob Storage account.  Required if `service_principal_id` is set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Blob Storage account.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="use_managed_identity_python">
+<a href="#use_managed_identity_python" style="color: inherit; text-decoration: inherit;">use_<wbr>managed_<wbr>identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to use the Data Factory's managed identity to authenticate against the Azure Blob Storage account. Incompatible with `service_principal_id` and `service_principal_key`
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -785,7 +985,7 @@ Get an existing LinkedServiceAzureBlobStorage resource's state with the given na
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> LinkedServiceAzureBlobStorage</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_runtime_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sas_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_principal_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_principal_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_managed_identity</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> LinkedServiceAzureBlobStorage</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -926,7 +1126,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string. Required if `account_endpoint`, `account_key`, and `database` are unspecified.
+    <dd>{{% md %}}The connection string. Conflicts with `sas_uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -988,6 +1188,56 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service. Changing this forces a new resource
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sasuri_csharp">
+<a href="#state_sasuri_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SAS URI. Conflicts with `connection_string`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_serviceprincipalid_csharp">
+<a href="#state_serviceprincipalid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Blob Storage account. Required if `service_principal_key` is set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_serviceprincipalkey_csharp">
+<a href="#state_serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service principal key in which to authenticate against the AAzure Blob Storage account.  Required if `service_principal_id` is set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tenantid_csharp">
+<a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Blob Storage account.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_usemanagedidentity_csharp">
+<a href="#state_usemanagedidentity_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Managed<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to use the Data Factory's managed identity to authenticate against the Azure Blob Storage account. Incompatible with `service_principal_id` and `service_principal_key`
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1022,7 +1272,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string. Required if `account_endpoint`, `account_key`, and `database` are unspecified.
+    <dd>{{% md %}}The connection string. Conflicts with `sas_uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1084,6 +1334,56 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service. Changing this forces a new resource
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sasuri_go">
+<a href="#state_sasuri_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SAS URI. Conflicts with `connection_string`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_serviceprincipalid_go">
+<a href="#state_serviceprincipalid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Blob Storage account. Required if `service_principal_key` is set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_serviceprincipalkey_go">
+<a href="#state_serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Principal<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service principal key in which to authenticate against the AAzure Blob Storage account.  Required if `service_principal_id` is set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tenantid_go">
+<a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Blob Storage account.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_usemanagedidentity_go">
+<a href="#state_usemanagedidentity_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Managed<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to use the Data Factory's managed identity to authenticate against the Azure Blob Storage account. Incompatible with `service_principal_id` and `service_principal_key`
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1118,7 +1418,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The connection string. Required if `account_endpoint`, `account_key`, and `database` are unspecified.
+    <dd>{{% md %}}The connection string. Conflicts with `sas_uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1180,6 +1480,56 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service. Changing this forces a new resource
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sasuri_nodejs">
+<a href="#state_sasuri_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SAS URI. Conflicts with `connection_string`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_serviceprincipalid_nodejs">
+<a href="#state_serviceprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Blob Storage account. Required if `service_principal_key` is set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_serviceprincipalkey_nodejs">
+<a href="#state_serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Principal<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service principal key in which to authenticate against the AAzure Blob Storage account.  Required if `service_principal_id` is set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tenantid_nodejs">
+<a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Blob Storage account.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_usemanagedidentity_nodejs">
+<a href="#state_usemanagedidentity_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Managed<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to use the Data Factory's managed identity to authenticate against the Azure Blob Storage account. Incompatible with `service_principal_id` and `service_principal_key`
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1214,7 +1564,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The connection string. Required if `account_endpoint`, `account_key`, and `database` are unspecified.
+    <dd>{{% md %}}The connection string. Conflicts with `sas_uri`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1275,6 +1625,56 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Data Factory Linked Service. Changing this forces a new resource
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sas_uri_python">
+<a href="#state_sas_uri_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The SAS URI. Conflicts with `connection_string`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_service_principal_id_python">
+<a href="#state_service_principal_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The service principal id in which to authenticate against the Azure Blob Storage account. Required if `service_principal_key` is set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_service_principal_key_python">
+<a href="#state_service_principal_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>principal_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The service principal key in which to authenticate against the AAzure Blob Storage account.  Required if `service_principal_id` is set.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tenant_id_python">
+<a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Blob Storage account.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_use_managed_identity_python">
+<a href="#state_use_managed_identity_python" style="color: inherit; text-decoration: inherit;">use_<wbr>managed_<wbr>identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to use the Data Factory's managed identity to authenticate against the Azure Blob Storage account. Incompatible with `service_principal_id` and `service_principal_key`
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

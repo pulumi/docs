@@ -163,7 +163,7 @@ const exampleService = new azure.apimanagement.Service("exampleService", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceAdditionalLocationArgs]]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">hostname_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceHostnameConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_sender_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[ServicePolicyArgs]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[ServiceProtocolsArgs]</span> = None<span class="p">, </span><span class="nx">publisher_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publisher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security</span><span class="p">:</span> <span class="nx">Optional[ServiceSecurityArgs]</span> = None<span class="p">, </span><span class="nx">sign_in</span><span class="p">:</span> <span class="nx">Optional[ServiceSignInArgs]</span> = None<span class="p">, </span><span class="nx">sign_up</span><span class="p">:</span> <span class="nx">Optional[ServiceSignUpArgs]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceVirtualNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">virtual_network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceAdditionalLocationArgs]]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">hostname_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceHostnameConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_sender_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[ServicePolicyArgs]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[ServiceProtocolsArgs]</span> = None<span class="p">, </span><span class="nx">publisher_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publisher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security</span><span class="p">:</span> <span class="nx">Optional[ServiceSecurityArgs]</span> = None<span class="p">, </span><span class="nx">sign_in</span><span class="p">:</span> <span class="nx">Optional[ServiceSignInArgs]</span> = None<span class="p">, </span><span class="nx">sign_up</span><span class="p">:</span> <span class="nx">Optional[ServiceSignUpArgs]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenant_access</span><span class="p">:</span> <span class="nx">Optional[ServiceTenantAccessArgs]</span> = None<span class="p">, </span><span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceVirtualNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">virtual_network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -506,6 +506,16 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="tenantaccess_csharp">
+<a href="#tenantaccess_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `tenant_access` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtualnetworkconfiguration_csharp">
 <a href="#virtualnetworkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
 </span>
@@ -700,6 +710,16 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantaccess_go">
+<a href="#tenantaccess_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}A `tenant_access` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -900,6 +920,16 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="tenantaccess_nodejs">
+<a href="#tenantaccess_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}A `tenant_access` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="virtualnetworkconfiguration_nodejs">
 <a href="#virtualnetworkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Configuration</a>
 </span>
@@ -1094,6 +1124,16 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenant_access_python">
+<a href="#tenant_access_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `tenant_access` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1519,7 +1559,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceAdditionalLocationArgs]]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">developer_portal_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_regional_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostname_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceHostnameConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_api_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_sender_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[ServicePolicyArgs]</span> = None<span class="p">, </span><span class="nx">portal_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[ServiceProtocolsArgs]</span> = None<span class="p">, </span><span class="nx">public_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">publisher_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publisher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scm_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security</span><span class="p">:</span> <span class="nx">Optional[ServiceSecurityArgs]</span> = None<span class="p">, </span><span class="nx">sign_in</span><span class="p">:</span> <span class="nx">Optional[ServiceSignInArgs]</span> = None<span class="p">, </span><span class="nx">sign_up</span><span class="p">:</span> <span class="nx">Optional[ServiceSignUpArgs]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceVirtualNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">virtual_network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceAdditionalLocationArgs]]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCertificateArgs]]</span> = None<span class="p">, </span><span class="nx">developer_portal_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_regional_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hostname_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceHostnameConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ServiceIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_api_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_sender_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy</span><span class="p">:</span> <span class="nx">Optional[ServicePolicyArgs]</span> = None<span class="p">, </span><span class="nx">portal_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[ServiceProtocolsArgs]</span> = None<span class="p">, </span><span class="nx">public_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">publisher_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">publisher_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scm_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security</span><span class="p">:</span> <span class="nx">Optional[ServiceSecurityArgs]</span> = None<span class="p">, </span><span class="nx">sign_in</span><span class="p">:</span> <span class="nx">Optional[ServiceSignInArgs]</span> = None<span class="p">, </span><span class="nx">sign_up</span><span class="p">:</span> <span class="nx">Optional[ServiceSignUpArgs]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenant_access</span><span class="p">:</span> <span class="nx">Optional[ServiceTenantAccessArgs]</span> = None<span class="p">, </span><span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[ServiceVirtualNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">virtual_network_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1884,6 +1924,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_tenantaccess_csharp">
+<a href="#state_tenantaccess_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `tenant_access` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_virtualnetworkconfiguration_csharp">
 <a href="#state_virtualnetworkconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Configuration</a>
 </span>
@@ -2158,6 +2208,16 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tenantaccess_go">
+<a href="#state_tenantaccess_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}A `tenant_access` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2438,6 +2498,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_tenantaccess_nodejs">
+<a href="#state_tenantaccess_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}A `tenant_access` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_virtualnetworkconfiguration_nodejs">
 <a href="#state_virtualnetworkconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Configuration</a>
 </span>
@@ -2712,6 +2782,16 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_tenant_access_python">
+<a href="#state_tenant_access_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicetenantaccess">Service<wbr>Tenant<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `tenant_access` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4613,7 +4693,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Tenant ID associated with this Managed Service Identity.
+    <dd>{{% md %}}The identifier for the tenant access information contract.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4659,7 +4739,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Tenant ID associated with this Managed Service Identity.
+    <dd>{{% md %}}The identifier for the tenant access information contract.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4705,7 +4785,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Tenant ID associated with this Managed Service Identity.
+    <dd>{{% md %}}The identifier for the tenant access information contract.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4751,7 +4831,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Tenant ID associated with this Managed Service Identity.
+    <dd>{{% md %}}The identifier for the tenant access information contract.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5950,6 +6030,192 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Terms of Service which users are required to agree to in order to sign up.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="servicetenantaccess">Service<wbr>Tenant<wbr>Access</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the access to the management api be enabled?
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primarykey_csharp">
+<a href="#primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Primary access key for the tenant access information contract.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secondarykey_csharp">
+<a href="#secondarykey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Secondary access key for the tenant access information contract.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for the tenant access information contract.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the access to the management api be enabled?
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primarykey_go">
+<a href="#primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Primary access key for the tenant access information contract.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secondarykey_go">
+<a href="#secondarykey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Secondary access key for the tenant access information contract.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for the tenant access information contract.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should the access to the management api be enabled?
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primarykey_nodejs">
+<a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Primary access key for the tenant access information contract.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secondarykey_nodejs">
+<a href="#secondarykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Secondary access key for the tenant access information contract.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identifier for the tenant access information contract.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the access to the management api be enabled?
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="primary_key_python">
+<a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Primary access key for the tenant access information contract.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secondary_key_python">
+<a href="#secondary_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Secondary access key for the tenant access information contract.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identifier for the tenant access information contract.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

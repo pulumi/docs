@@ -428,7 +428,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cachepatchschedule">List&lt;Cache<wbr>Patch<wbr>Schedule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below - only available for Premium SKU's.
+    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -596,7 +596,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cachepatchschedule">[]Cache<wbr>Patch<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below - only available for Premium SKU's.
+    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -764,7 +764,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cachepatchschedule">Cache<wbr>Patch<wbr>Schedule[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below - only available for Premium SKU's.
+    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -932,7 +932,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cachepatchschedule">Sequence[Cache<wbr>Patch<wbr>Schedule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below - only available for Premium SKU's.
+    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1559,7 +1559,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cachepatchschedule">List&lt;Cache<wbr>Patch<wbr>Schedule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below - only available for Premium SKU's.
+    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1797,7 +1797,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cachepatchschedule">[]Cache<wbr>Patch<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below - only available for Premium SKU's.
+    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2035,7 +2035,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cachepatchschedule">Cache<wbr>Patch<wbr>Schedule[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below - only available for Premium SKU's.
+    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2273,7 +2273,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cachepatchschedule">Sequence[Cache<wbr>Patch<wbr>Schedule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below - only available for Premium SKU's.
+    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
