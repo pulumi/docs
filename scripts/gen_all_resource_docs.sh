@@ -14,7 +14,7 @@ REPOS=(
     "alicloud"
     "aws"
     "azure"
-    "azure-nextgen"
+    "azure-native"
     "azuread"
     "cloudamqp"
     "cloudflare"

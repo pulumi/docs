@@ -19,7 +19,7 @@ TOOL_RESDOCGEN="./tools/resourcedocsgen/"
 PROVIDERS=(
     "aws"
     "azure"
-    "azure-nextgen"
+    "azure-native"
     "azuread"
     "gcp"
 )
@@ -32,9 +32,6 @@ popd
 generate_docs() {
     provider=$1
     repository="pulumi-${provider}"
-    if [ "$provider" = "azure-nextgen" ]; then
-        repository="pulumi-azure-nextgen-provider"
-    fi
 
     echo -e "\033[0;95m--- Updating repo pulumi/${repository} ---\033[0m"
     pushd "../${repository}"
