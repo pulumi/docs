@@ -9,6 +9,6 @@ about:
     title: About PulumiUP
     description: |
         Virtual events are rough. Video call fatigue is real, and we are excited to bring you
-        something different. PulumiUP is combination of live content and binge-able content, giving
-        you the option to enjoy the content on your schedule.
+        something different. PulumiUP is combination of live and binge-able content, giving
+        you the ability to enjoy the sessions on your time.
 ---
