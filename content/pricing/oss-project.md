@@ -26,7 +26,7 @@ requirements:
     title: Program Requirements
     description: |
         **Not seeking profit** --- Your project must be part of an open source foundation that does
-        not seek to make a profit through any means. The organization must be a valid 501(c)(3)
+        not seek to make a profit through any means. The organization must be a valid `501(c)(3)`
         organization with an Employer Identification Number (EIN).
 
         **OSI-approved open source license** --- Your project must be published under an [OSI-approved](https://opensource.org/licenses) open source license.
@@ -44,6 +44,6 @@ contact:
         for renewal, we will work with you to make any needed transition as smooth as possible.
 
     form:
-        headline: Open Source Program Application
+        headline: Pulumi Open Source Free Tier
         hubspot_form_id: 7465fe09-5022-4f43-b86f-3a571da9106a
 ---
