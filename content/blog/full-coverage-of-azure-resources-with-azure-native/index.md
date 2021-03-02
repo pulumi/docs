@@ -15,9 +15,9 @@ Today, we’re excited to announce that this new provider is now the default way
 
 <!--more-->
 
-Already use the [classic Pulumi-Azure provider](https://www.pulumi.com/docs/reference/pkg/azure/)? You can migrate to Azure-Native now using the [migration guide]({{< relref "/docs/intro/cloud-providers/azure/from-classic" >}}). If you prefer to wait until general availability, stay tuned for updates: we expect to reach general availability in Spring of this year.
+Already use the [classic Pulumi-Azure provider](https://www.pulumi.com/docs/reference/pkg/azure/)? You can migrate to Azure-Native now using the [migration guide]({{< relref "/docs/intro/cloud-providers/azure/from-classic" >}}). If you prefer to wait until general availability, stay tuned for updates: we expect to reach general availability in the spring of this year.
 
-Alongside this announcement, we’re also formalizing a new concept: a Pulumi “native provider”. A native provider provides functionality mapped directly from the underlying API; in the case of the new Azure Provider, functionality is mapped directly from the Azure Resource Manager API surface. Going forward, you’ll be able to find these next-generation Pulumi providers directly from the name: just look for the “-Native” suffix.
+Alongside this announcement, we’re also formalizing a new concept: a Pulumi “native provider”. A native provider provides functionality mapped directly from the underlying API; in the case of the new Azure Provider, functionality is mapped directly from the Azure Resource Manager API surface. Going forward, you’ll be able to find these next-generation Pulumi providers directly from the name by looking for the “-Native” suffix.
 
 ## Native to Azure
 
@@ -132,7 +132,7 @@ func main() {
 
 The top-level resources will use stable API versions and take no arbitrary breaking changes within a given major version of the package once we reach general availability; during the preview, breaking changes may appear in `0.x` minor versions.
 
-We still provide access to every version of every ARM API if you want to use a brand-new version or a specific version from the past. Each API version is mapped to its own module or namespace within the resource provider.
+We still provide access to every version of every ARM API if you want to use the latest version or a specific version from the past. Each API version is mapped to its own module or namespace within the resource provider.
 
 ### Auto-Naming
 
@@ -194,7 +194,7 @@ func main() {
 
 Pass an explicit value to the `resourceGroupName` property if you want to control the resource's exact name.
 
-However, suppose you create a sub-resource, e.g., a container under a storage account, a database under a database account, or a slot under a web app. In that case, Pulumi will not append any random suffix because the names of those resources don’t have to be globally unique.
+However, suppose you create a sub-resource, e.g., a container under a storage account, a database under a database account, or a slot under a web app. In that case, Pulumi will not append a random suffix because those resources names don’t have to be globally unique.
 
 You can also apply [transformations](https://www.pulumi.com/docs/intro/concepts/resources/#transformations) to define your own naming schemas: see [this example](https://github.com/matwilko/Pulumi.AzureNextGen.Ambient/blob/434c4beccffdd8d1180e385ff5fe298867a285af/AutoNaming.cs) from our community.
 
@@ -271,7 +271,7 @@ $ pulumi new azure-go
 {{< /choosable >}}
 {{< /chooser >}}
 
-Several larger examples are available in the Pulumi Examples repo:
+Several more extensive examples are available in the Pulumi Examples repo:
 
 - Web Applications with Azure App Service and Docker: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-appservice-docker), [C#](https://github.com/pulumi/examples/tree/master/azure-cs-appservice-docker), [Python](https://github.com/pulumi/examples/tree/master/azure-py-appservice-docker), [Go](https://github.com/pulumi/examples/tree/master/azure-go-appservice-docker)
 - Azure AKS cluster: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-aks), [C#](https://github.com/pulumi/examples/tree/master/azure-cs-aks), [Python](https://github.com/pulumi/examples/tree/master/azure-py-aks), [Go](https://github.com/pulumi/examples/tree/master/azure-go-aks)
