@@ -1,5 +1,5 @@
 ---
-title: "Static Website Using Azure Blob Storage and CDN | TypeScript"
+title: "Static Website Using Azure Blob Storage and CDN | Go"
 h1: "Static Website Using Azure Blob Storage and CDN"
 linktitle: "Static Website Using Azure Blob Storage and CDN"
 no_edit_this_page: true
@@ -9,16 +9,14 @@ no_edit_this_page: true
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/mktutorial. -->
 
 <p class="mb-4 flex">
-    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/azure-ts-static-website" target="_blank">
+    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/azure-go-static-website" target="_blank">
         <span><i class="fab fa-github pr-2"></i> View Code</span>
     </a>
 
-    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-ts-static-website" target="_blank">
+    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-go-static-website" target="_blank">
         <img src="https://get.pulumi.com/new/button.svg" alt="Deploy">
     </a>
 </p>
-
-Based on https://github.com/zemien/static-website-ARM-template
 
 
 This example configures [Static website hosting in Azure Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-static-website).
@@ -37,12 +35,6 @@ In addition to the Storage itself, a CDN is configured to serve files from the B
 
     ```
     $ az login
-    ```
-
-1.  Restore NPM dependencies:
-
-    ```
-    $ npm install
     ```
 
 1.  Set the Azure region location to use:

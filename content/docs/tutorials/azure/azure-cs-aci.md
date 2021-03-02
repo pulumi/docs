@@ -1,5 +1,5 @@
 ---
-title: "Azure Container Instances on Linux | Go"
+title: "Azure Container Instances on Linux | C#"
 h1: "Azure Container Instances on Linux"
 linktitle: "Azure Container Instances on Linux"
 no_edit_this_page: true
@@ -9,11 +9,11 @@ no_edit_this_page: true
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/mktutorial. -->
 
 <p class="mb-4 flex">
-    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/azure-go-aci" target="_blank">
+    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/azure-cs-aci" target="_blank">
         <span><i class="fab fa-github pr-2"></i> View Code</span>
     </a>
 
-    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-go-aci" target="_blank">
+    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-cs-aci" target="_blank">
         <img src="https://get.pulumi.com/new/button.svg" alt="Deploy">
     </a>
 </p>
@@ -34,7 +34,7 @@ Starting point for building web application hosted in Azure Container Instances.
     ```
     $ az login
     ```
-   
+    
 1. Set the Azure region location to use:
     
     ```
@@ -49,14 +49,22 @@ Starting point for building web application hosted in Azure Container Instances.
     ...
 
     Performing changes:
-    ...
+
+        Type                                              Name              Status     
+    +   pulumi:pulumi:Stack                               azure-cs-aci-dev  created
+    +   ├─ azure-native:resources:ResourceGroup           aci-rg            created      
+    +   └─ azure-native:containerinstance:ContainerGroup  helloworld        created
+
+    Outputs:
+        containerIPv4Address: "20.56.239.40"
+
     Resources:
         + 3 created
 
     Duration: 1m18s
     ```
 
-1.  Check the deployed endpoint:
+1.  Check the deployed endpoints:
 
     ```
     $ pulumi stack output containerIPv4Address
@@ -68,3 +76,4 @@ Starting point for building web application hosted in Azure Container Instances.
     </head>
     ...
     ```
+

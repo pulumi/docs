@@ -1,5 +1,5 @@
 ---
-title: "Azure Kubernetes Service (AKS) Cluster using the native Azure Provider | Go"
+title: "Azure Kubernetes Service (AKS) Cluster using the native Azure Provider | TypeScript"
 h1: "Azure Kubernetes Service (AKS) Cluster using the native Azure Provider"
 linktitle: "Azure Kubernetes Service (AKS) Cluster using the native Azure Provider"
 no_edit_this_page: true
@@ -9,11 +9,11 @@ no_edit_this_page: true
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/mktutorial. -->
 
 <p class="mb-4 flex">
-    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/azure-go-aks" target="_blank">
+    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/azure-ts-aks" target="_blank">
         <span><i class="fab fa-github pr-2"></i> View Code</span>
     </a>
 
-    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-go-aks" target="_blank">
+    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-ts-aks" target="_blank">
         <img src="https://get.pulumi.com/new/button.svg" alt="Deploy">
     </a>
 </p>
@@ -28,7 +28,8 @@ To deploy your infrastructure, follow the below steps.
 ### Prerequisites
 
 1. [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
-1. [Configure Azure Credentials](https://www.pulumi.com/docs/intro/cloud-providers/azure/setup/)
+2. [Install node.js](https://nodejs.org/en/download/)
+3. [Configure Azure Credentials](https://www.pulumi.com/docs/intro/cloud-providers/azure/setup/)
 
 ### Steps
 
@@ -38,6 +39,12 @@ After cloning this repo, from this working directory, run these commands:
 
     ```bash
     $ pulumi stack init dev
+    ```
+
+1. Next, install the dependencies:
+
+    ```bash
+    $ npm install
     ```
 
 1. Set the Azure region location to use:

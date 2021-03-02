@@ -1,7 +1,7 @@
 ---
-title: "Deploying Azure Functions | TypeScript"
-h1: "Deploying Azure Functions"
-linktitle: "Deploying Azure Functions"
+title: "Azure Container Instances on Linux | TypeScript"
+h1: "Azure Container Instances on Linux"
+linktitle: "Azure Container Instances on Linux"
 no_edit_this_page: true
 ---
 
@@ -9,17 +9,17 @@ no_edit_this_page: true
 <!-- To change it, please see https://github.com/pulumi/docs/tree/master/tools/mktutorial. -->
 
 <p class="mb-4 flex">
-    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/azure-ts-functions" target="_blank">
+    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/azure-ts-aci" target="_blank">
         <span><i class="fab fa-github pr-2"></i> View Code</span>
     </a>
 
-    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-ts-functions" target="_blank">
+    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-ts-aci" target="_blank">
         <img src="https://get.pulumi.com/new/button.svg" alt="Deploy">
     </a>
 </p>
 
 
-Starting point for building serverless applications hosted in Azure Functions.
+Starting point for building web application hosted in Azure Container Instances.
 
 ## Running the App
 
@@ -57,7 +57,7 @@ Starting point for building serverless applications hosted in Azure Functions.
     Performing changes:
     ...
     Resources:
-        + 8 created
+        + 3 created
 
     Duration: 1m18s
     ```
@@ -65,9 +65,13 @@ Starting point for building serverless applications hosted in Azure Functions.
 1.  Check the deployed endpoint:
 
     ```
-    $ pulumi stack output endpoint
-    https://appg-fsprfojnnlr.azurewebsites.net/api/HelloNode?name=Pulumi
-    $ curl "$(pulumi stack output endpoint)"
-    Hello from Node.js, Pulumi
+    $ pulumi stack output containerIPv4Address
+    13.83.66.37
+    $ curl "$(pulumi stack output containerIPv4Address)"
+    <html>
+    <head>
+        <title>Welcome to Azure Container Instances!</title>
+    </head>
+    ...
     ```
 
