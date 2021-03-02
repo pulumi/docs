@@ -4,99 +4,101 @@
 
 $pageBackgroundColor: #11151c;
 
-$lightGreen: theme('colors.green.400');
-$darkGreen: theme('colors.green.700');
-$veryDarkGreen: theme('colors.green.900');
-
-$lightBlue: theme('colors.blue.400');
-$darkBlue: theme('colors.blue.700');
-$veryDarkBlue: theme('colors.blue.900');
-
 $lightOrange: theme('colors.orange.400');
 $darkOrange: theme('colors.orange.700');
 $veryDarkOrange: theme('colors.orange.900');
 
 .neon-container {
-  display: table-cell;
   text-align: center;
   vertical-align: middle;
 }
 
-.neon {
-    font: 400 19vh "Vibur";
-    line-height: 9vw;
-    color: $lightGreen;
-    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $darkGreen, 0 0 0.5em $darkGreen, 0 0 0.1em $darkGreen, 0 10px 3px #000;
-
-    animation: neon 3s linear infinite;
-    -moz-animation: neon 3s linear infinite;
-    -webkit-animation: neon 3s linear infinite;
-    -o-animation: neon 3s linear infinite;
+@mixin neon-sign-defaults($fontSize: 4rem) {
+  font-family: "Vibur";
+  font-size: $fontSize;
 }
 
-.neon-basic {
-  color: $lightOrange;
-  text-shadow: 0 0 3vw $darkOrange;
+@mixin neon-sign-animation($light, $medium, $dark, $pulseTime, $name) {
+    animation: $name $pulseTime linear infinite;
+    -moz-animation: $name $pulseTime linear infinite;
+    -webkit-animation: $name $pulseTime linear infinite;
+    -o-animation: $name $pulseTime linear infinite;
 
-  animation: neon-basic 3s linear infinite;
-  -moz-animation: neon-basic 3s linear infinite;
-  -webkit-animation: neon-basic 3s linear infinite;
-  -o-animation: neon-basic 3s linear infinite;
-}
-
-.flux {
-    font: 400 19vh "Vibur";
-    line-height: 9vw;
-    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $darkBlue, 0 0 0.5em $darkBlue, 0 0 0.1em $darkBlue, 0 10px 3px #000;
-
-    color: $lightBlue;
-    animation: flux 4s linear infinite;
-    -moz-animation: flux 4s linear infinite;
-    -webkit-animation: flux 4s linear infinite;
-    -o-animation: flux 4s linear infinite;
-}
-
-@keyframes flux {
-  0%,
-  100% {
-    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $darkBlue, 0 0 0.5em $darkBlue, 0 0 0.1em $darkBlue, 0 10px 3px #000;
-    color: $lightBlue;
-  }
-  50% {
-    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $veryDarkBlue, 0 0 0.5em $veryDarkBlue, 0 0 0.1em $veryDarkBlue, 0 10px 3px #000;
-    color: $darkBlue;
-  }
-}
-
-@keyframes neon {
-    0%,
-    100% {
-      text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $darkGreen, 0 0 0.5em $darkGreen, 0 0 0.1em $darkGreen, 0 10px 3px #000;
-      color: $lightGreen;
-    }
-    50% {
-      text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $veryDarkGreen, 0 0 0.5em $veryDarkGreen, 0 0 0.1em $veryDarkGreen, 0 10px 3px #000;
-      color: $darkGreen;
+    @keyframes #{$name} {
+      0%,
+      100% {
+        text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $medium, 0 0 0.5em $medium, 0 0 0.1em $medium, 0 10px 3px #000;
+        color: $light;
+      }
+      50% {
+        text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $dark, 0 0 0.5em $dark, 0 0 0.1em $dark, 0 10px 3px #000;
+        color: $medium;
+      }
     }
 }
 
-@keyframes neon-basic {
-  0%,
-  100% {
-    text-shadow: 0 0 1vw $darkOrange, 0 0 3vw $darkOrange, 0 0 10vw $darkOrange, 0 0 .4vw $lightOrange;
-    color: $lightOrange;
+@mixin neon-sign-purple($fontSize, $name: "neon-sign-purple-pulse", $animate: true) {
+  @include neon-sign-defaults($fontSize);
+  @if $animate {
+    @include neon-sign-animation(theme('colors.purple.300'), theme('colors.purple.600'), theme('colors.purple.800'), 4s, $name);
   }
-  50% {
-    text-shadow: 0 0 .5vw $veryDarkOrange, 0 0 3vw $veryDarkOrange, 0 0 10vw $veryDarkOrange, 0 0 .4vw $darkOrange;
-    color: $darkOrange;
+
+  color: theme('colors.purple.400');
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em theme('colors.purple.700'), 0 0 0.5em theme('colors.purple.700'), 0 0 0.1em theme('colors.purple.700'), 0 10px 3px #000;
+}
+
+@mixin neon-sign-green($fontSize, $name: "neon-sign-green-pulse", $animate: true) {
+  @include neon-sign-defaults($fontSize);
+  @if $animate {
+    @include neon-sign-animation(theme('colors.green.400'), theme('colors.green.700'), theme('colors.green.900'), 3s, $name);
+  }
+
+  color: theme('colors.blue.400');
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em theme('colors.green.700'), 0 0 0.5em theme('colors.green.700'), 0 0 0.1em theme('colors.green.700'), 0 10px 3px #000;
+}
+
+@mixin neon-sign-blue($fontSize, $name: "neon-sign-blue-pulse", $animate: true) {
+  @include neon-sign-defaults($fontSize);
+  @if $animate {
+    @include neon-sign-animation(theme('colors.blue.400'), theme('colors.blue.700'), theme('colors.blue.900'), 4s, $name);
+  }
+
+  color: theme('colors.blue.400');
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em theme('colors.blue.700'), 0 0 0.5em theme('colors.blue.700'), 0 0 0.1em theme('colors.blue.700'), 0 10px 3px #000;
+}
+
+@mixin neon-sign-orange($fontSize, $name: "neon-sign-orange-pulse", $animate: true) {
+  @include neon-sign-defaults($fontSize);
+  @if $animate {
+    @include neon-sign-animation(theme('colors.orange.400'), theme('colors.orange.700'), theme('colors.orange.900'), 4s, $name);
+  }
+
+  color: theme('colors.orange.400');
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em theme('colors.orange.700'), 0 0 0.5em theme('colors.orange.700'), 0 0 0.1em theme('colors.orange.700'), 0 10px 3px #000;
+}
+
+.blue-neon-sign-xl {
+  @include neon-sign-blue(6rem);
+
+  @screen lg {
+    @include neon-sign-blue(8rem);
   }
 }
 
-.pulumi-up-hero {
-    height: 650px;
-    background: url(/images/pulumi-up/nighthawks_smoke.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+.green-neon-sign-xl {
+  @include neon-sign-green(6rem);
+
+  @screen lg {
+    @include neon-sign-green(8rem);
+  }
+}
+
+.speaker-neon-label {
+  @include neon-sign-purple(2rem, "speaker-label", false);
+}
+
+.date-countdown {
+  @include neon-sign-orange(2.25rem, "date-countdown", false);
 }
 
 .pulumi-up-body {
