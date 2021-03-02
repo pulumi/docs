@@ -29,7 +29,7 @@ with App Service.
 1.  Create a new stack:
 
     ```
-    $ pulumi stack init azure-appservice
+    $ pulumi stack init dev
     ```
 
 1.  Login to Azure CLI (you will be prompted to do this during deployment if you forget this step):
@@ -43,13 +43,13 @@ with App Service.
     ```
     $ npm install
     ```
-    
+
 1. Set the Azure region location to use:
     
     ```
-    $ pulumi config set azure:location westus2
+    $ pulumi config set azure-native:location westus2
     ```
-
+  
 1. Define SQL Server password (make it complex enough to satisfy Azure policy):
 
     ```
@@ -78,7 +78,7 @@ with App Service.
     $ curl "$(pulumi stack output endpoint)"
     <html>
         <body>
-            <h1>Greetings from Azure App Service!</h1>
+            <h1>Greetings from Azure App Service (courtesy of Pulumi)!</h1>
         </body>
     </html>
     ```

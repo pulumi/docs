@@ -25,8 +25,8 @@ The alternative is to use an infrastructure as code tool to automate building an
 
 Ready to get up and running quickly right away?
 
-1. Bootstrap a project `$ pulumi new https://github.com/pulumi/examples/tree/master/azure-nextgen-py-synapse`.
-2. Follow the steps outlined in [README](https://github.com/pulumi/examples/blob/master/azure-nextgen-py-synapse/README.md).
+1. Bootstrap a project `$ pulumi new https://github.com/pulumi/examples/tree/master/azure-py-synapse`.
+2. Follow the steps outlined in [README](https://github.com/pulumi/examples/blob/master/azure-py-synapse/README.md).
 3. Go to `https://web.azuresynapse.net` and sign in to your new workspace.
 
 For additional information on how provisioning Azure Synapse with infrastructure as code, please read on.
@@ -434,7 +434,7 @@ var sqlPool = new SqlPool("sqlPool", new SqlPoolArgs
     SqlPoolName = "SQLPOOL1",
     Collation = "SQL_Latin1_General_CP1_CI_AS",
     CreateMode = "Default",
-    Sku = new Pulumi.AzureNextGen.Synapse.V20190601Preview.Inputs.SkuArgs
+    Sku = new Pulumi.AzureNative.Synapse.Inputs.SkuArgs
     {
         Name = "DW100c"
     },
@@ -550,19 +550,19 @@ $ pulumi up
 Do you want to perform this update? yes
 Updating (dev)
 
-     Type                                                            Name                  Plan
- +   pulumi:pulumi:Stack                                             azure-py-synapse-dev  created
- +   ├─ azure-nextgen:resources/latest:ResourceGroup                 resourceGroup         created
- +   ├─ azure-nextgen:storage/latest:StorageAccount                  storageAccount        created
- +   ├─ azure-nextgen:storage/latest:BlobContainer                   users                 created
- +   ├─ azure-nextgen:synapse/v20190601preview:Workspace             workspace             created
- +   ├─ random:index:RandomUuid                                      roleName              created
- +   └─ azure-nextgen:authorization/v20200401preview:RoleAssignment  storageAccess         created
- +   ├─ random:index:RandomUuid                                      userRoleName          created
- +   ├─ azure-nextgen:authorization/v20200401preview:RoleAssignment  userAccess            created
- +   ├─ azure-nextgen:synapse/v20190601preview:IpFirewallRule        allowAll              created
- +   ├─ azure-nextgen:synapse/v20190601preview:SqlPool               sqlPool               created
- +   ├─ azure-nextgen:synapse/v20190601preview:BigDataPool           sparkPool             created
+     Type                                          Name                  Plan
+ +   pulumi:pulumi:Stack                           azure-py-synapse-dev  created
+ +   ├─ azure-native:resources:ResourceGroup       resourceGroup         created
+ +   ├─ azure-native:storage:StorageAccount        storageAccount        created
+ +   ├─ azure-native:storage:BlobContainer         users                 created
+ +   ├─ azure-native:synapse:Workspace             workspace             created
+ +   ├─ random:index:RandomUuid                    roleName              created
+ +   └─ azure-native:authorization:RoleAssignment  storageAccess         created
+ +   ├─ random:index:RandomUuid                    userRoleName          created
+ +   ├─ azure-native:authorization:RoleAssignment  userAccess            created
+ +   ├─ azure-native:synapse:IpFirewallRule        allowAll              created
+ +   ├─ azure-native:synapse:SqlPool               sqlPool               created
+ +   ├─ azure-native:synapse:BigDataPool           sparkPool             created
 
  Resources:
     + 12 created
@@ -576,4 +576,4 @@ You can now navigate to the [Azure Synapse Quickstart, Step 2](https://docs.micr
 
 Azure Synapse is a managed analytics service that accelerates time to insight across data warehouses and big data workloads. A Synapse workspace is a critical component of your cloud infrastructure that you should provision with infrastructure as code and other management best practices.
 
-Pulumi and Azure NextGen provider open up full access to all types of Azure resources using your favorite programming languages, including Python, C#, and TypeScript. Navigate to the complete Azure Synapse example in [Python](https://github.com/pulumi/examples/tree/master/azure-nextgen-py-synapse), [C#](https://github.com/pulumi/examples/tree/master/azure-nextgen-cs-synapse), or [TypeScript](https://github.com/pulumi/examples/tree/master/azure-nextgen-ts-synapse) and get started today.
+Pulumi and the native Azure provider open up full access to all types of Azure resources using your favorite programming languages, including Python, C#, and TypeScript. Navigate to the complete Azure Synapse example in [Python](https://github.com/pulumi/examples/tree/master/azure-py-synapse), [C#](https://github.com/pulumi/examples/tree/master/azure-cs-synapse), or [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-synapse) and get started today.

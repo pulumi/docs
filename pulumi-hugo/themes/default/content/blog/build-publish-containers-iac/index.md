@@ -882,7 +882,7 @@ var registryInfo = new Docker.ImageRegistry
 
 #### Learn More About ACR
 
-ACR offers advanced functionality not shown here, including configuring retention policies, storage account details, and geo-replication options. For more details on these and more, see Pulumi's [Azure NextGen](https://www.pulumi.com/docs/reference/pkg/azure-nextgen/containerregistry/registry/) or [Azure](https://www.pulumi.com/docs/reference/pkg/azure/containerservice/registry/) API documentation, or [Azure's product page](https://azure.microsoft.com/en-us/services/container-registry/).
+ACR offers advanced functionality not shown here, including configuring retention policies, storage account details, and geo-replication options. For more details on these and more, see Pulumi's [Azure-Native](https://www.pulumi.com/docs/reference/pkg/azure-native/containerregistry/registry/) or [Azure](https://www.pulumi.com/docs/reference/pkg/azure/containerservice/registry/) API documentation, or [Azure's product page](https://azure.microsoft.com/en-us/services/container-registry/).
 
 > To view another cloud provider's registry details, [select a new cloud in the switcher above](#prepare-a-container-registry).
 

@@ -12,18 +12,20 @@ menu:
 aliases: ["/docs/quickstart/azure/create-project/"]
 ---
 
-Let's get started with a new project in a new directory.
+Now that you have set up your environment by installing Pulumi, installing your preferred language runtime, and configuring your AWS credentials, let's get started with creating your first Pulumi program.
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+In this guide you will:
 
-{{% choosable language javascript %}}
+- Create a new Pulumi project.
+- Provision a new Blob storage container.
+- Add an `index.html` file to your container.
+- Serve the `index.html` as a static website.
+- Destroy the resources you've provisioned.
 
-```bash
-$ mkdir quickstart && cd quickstart
-$ pulumi new azure-javascript
-```
+To get started, first create a new directory and project.
 
-{{% /choosable %}}
+{{< chooser language "typescript,python,go,csharp" / >}}
+
 {{% choosable language typescript %}}
 
 ```bash
@@ -58,40 +60,25 @@ $ pulumi new azure-go
 
 {{% /choosable %}}
 
+The [`pulumi new`]({{< relref "/docs/reference/cli/pulumi_new" >}}) command creates a new Pulumi project with some basic scaffolding based on the cloud and language specified.
+
 {{< cli-note >}}
 
 After logging in, the CLI will proceed with walking you through creating a new project.
-
-```
-This command will walk you through creating a new Pulumi project.
-
-Enter a value or leave blank to accept the (default), and press <ENTER>.
-Press ^C at any time to quit.
-
-project name: (quickstart)
-project description: (A minimal Azure Pulumi program)
-Created project 'quickstart'
-
-stack name: (dev)
-Created stack 'dev'
-
-azure:environment: The Azure environment to use (`public`, `usgovernment`, `german`, `china`): (public)
-azure:location: The Azure location to use: (WestUS)
-Saved config
-```
 
 First, you will be asked for a project name and description. Hit `ENTER` to accept the default values or specify new values.
 
 Next, you will be asked for the name of a stack. Hit `ENTER` to accept the default value of `dev`.
 
+For Azure projects, the default region is `WestUS`; however, you can change the region for your stack by using the `pulumi config set` command as shown below:
+
+```bash
+pulumi config set azure-native:location EastUS
+```
+
 > What are [projects]({{< relref "/docs/intro/concepts/project" >}}) and [stacks]({{< relref "/docs/intro/concepts/stack" >}})? Pulumi projects and stacks let you organize Pulumi code. Consider a Pulumi _project_ to be analogous to a GitHub repo---a single place for code---and a _stack_ to be an instance of that code with a separate configuration. For instance, _Project Foo_ may have multiple stacks for different development environments (Dev, Test, or Prod), or perhaps for different cloud configurations (geographic region for example). See [Organizing Projects and Stacks]({{< relref "/docs/guides/organizing-projects-stacks" >}}) for some best practices on organizing your Pulumi projects and stacks.
 
-Next, you will be prompted for some configuration values for the stack.
-
-For Azure projects, you will be prompted for the Azure environment and location. You can accept the default values or
-provide your own.
-
-{{% choosable language "javascript,typescript" %}}
+{{% choosable language "typescript" %}}
 After some dependency installations from `npm`, the project and stack will be ready.
 {{% /choosable %}}
 

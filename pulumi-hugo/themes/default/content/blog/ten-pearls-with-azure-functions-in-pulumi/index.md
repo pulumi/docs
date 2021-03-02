@@ -45,7 +45,7 @@ Azure Functions can be written in many languages, and Pulumi supports whatever c
 
 ### 1. Deploy a .NET Function App
 
-[ [Runnable Example](https://github.com/pulumi/examples/tree/master/azure-ts-functions-raw) ]
+[ [Runnable Example](https://github.com/pulumi/examples/tree/master/azure-ts-functions-many) ]
 
 Many Function Apps are .NET applications created with native tooling like Visual Studio or the Functions CLI. Pulumi can simply deploy such an application in only a few lines of JavaScript:
 
@@ -108,7 +108,7 @@ Node.js is another runtime supported by Azure Functions. Like before, you can us
 
 ### 3. Define Node.js Functions as Inline Callbacks
 
-[ [Runnable Example](https://github.com/pulumi/examples/tree/master/azure-ts-functions) ]
+[ [Runnable Example](https://github.com/pulumi/examples/tree/master/classic-azure-ts-functions) ]
 
 A TypeScript or a JavaScript function becomes an Azure Function deployed to the cloud:
 

@@ -1,7 +1,7 @@
 ---
-title: "Custom Docker Image running in Azure Container Instances | Go"
-h1: "Custom Docker Image running in Azure Container Instances"
-linktitle: "Custom Docker Image running in Azure Container Instances"
+title: "Azure Container Instances on Linux | Go"
+h1: "Azure Container Instances on Linux"
+linktitle: "Azure Container Instances on Linux"
 no_edit_this_page: true
 ---
 
@@ -21,62 +21,50 @@ no_edit_this_page: true
 
 Starting point for building web application hosted in Azure Container Instances.
 
-## Deploying the App
-
-To deploy your infrastructure, follow the below steps.
-
-### Prerequisites
-
-1. [Install Pulumi](https://www.pulumi.com/docs/get-started/install/)
-1. [Configure Azure](https://www.pulumi.com/docs/intro/cloud-providers/azure/setup/)
-
-### Steps
+## Running the App
 
 1.  Create a new stack:
 
-    ```bash
+    ```
     $ pulumi stack init dev
     ```
 
 1.  Login to Azure CLI (you will be prompted to do this during deployment if you forget this step):
 
-    ```bash
+    ```
     $ az login
     ```
-
-1.  Configure the location to deploy the resources to:
-
-    ```bash
-    $ pulumi config set azure:location <location>
+   
+1. Set the Azure region location to use:
+    
+    ```
+    $ pulumi config set azure-native:location westus2
     ```
 
 1.  Run `pulumi up` to preview and deploy changes:
 
-    ```bash
+    ```
     $ pulumi up
+    Previewing changes:
     ...
 
-1.  Check the deployed container endpoint:
+    Performing changes:
+    ...
+    Resources:
+        + 3 created
+
+    Duration: 1m18s
+    ```
+
+1.  Check the deployed endpoint:
 
     ```
-    $ pulumi stack output endpoint
-    acigo.westus.azurecontainer.io
-    $ curl "$(pulumi stack output endpoint)"
+    $ pulumi stack output containerIPv4Address
+    13.83.66.37
+    $ curl "$(pulumi stack output containerIPv4Address)"
     <html>
-    <head><meta charset="UTF-8">
-    <title>Hello, Pulumi!</title></head>
-    <body>
-        <p>Hello, containers!</p>
-        <p>Made with ❤️ with <a href="https://pulumi.com">Pulumi</a></p>
-    </body></html>
+    <head>
+        <title>Welcome to Azure Container Instances!</title>
+    </head>
+    ...
     ```
-
-1. From there, feel free to experiment. Simply making edits and running `pulumi up` will incrementally update your stack.
-
-1. Once you've finished experimenting, tear down your stack's resources by destroying and removing it:
-
-    ```bash
-    $ pulumi destroy --yes
-    $ pulumi stack rm --yes
-    ```
-
