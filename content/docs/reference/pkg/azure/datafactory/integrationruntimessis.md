@@ -1603,6 +1603,16 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
+        <span id="serverendpoint_csharp">
+<a href="#serverendpoint_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint of an Azure SQL Server that will be used to host the SSIS catalog.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="administratorlogin_csharp">
 <a href="#administratorlogin_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login</a>
 </span>
@@ -1611,8 +1621,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Administrator login name for the SQL Server.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="administratorpassword_csharp">
 <a href="#administratorpassword_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Password</a>
 </span>
@@ -1620,16 +1630,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Administrator login password for the SQL Server.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="serverendpoint_csharp">
-<a href="#serverendpoint_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint of an Azure SQL Server that will be used to host the SSIS catalog.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1649,6 +1649,16 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
+        <span id="serverendpoint_go">
+<a href="#serverendpoint_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint of an Azure SQL Server that will be used to host the SSIS catalog.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="administratorlogin_go">
 <a href="#administratorlogin_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login</a>
 </span>
@@ -1657,8 +1667,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Administrator login name for the SQL Server.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="administratorpassword_go">
 <a href="#administratorpassword_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Password</a>
 </span>
@@ -1666,16 +1676,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Administrator login password for the SQL Server.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="serverendpoint_go">
-<a href="#serverendpoint_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint of an Azure SQL Server that will be used to host the SSIS catalog.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1695,6 +1695,16 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
+        <span id="serverendpoint_nodejs">
+<a href="#serverendpoint_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint of an Azure SQL Server that will be used to host the SSIS catalog.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="administratorlogin_nodejs">
 <a href="#administratorlogin_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login</a>
 </span>
@@ -1703,8 +1713,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Administrator login name for the SQL Server.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="administratorpassword_nodejs">
 <a href="#administratorpassword_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Password</a>
 </span>
@@ -1712,16 +1722,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Administrator login password for the SQL Server.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="serverendpoint_nodejs">
-<a href="#serverendpoint_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint of an Azure SQL Server that will be used to host the SSIS catalog.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1741,6 +1741,16 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
+        <span id="server_endpoint_python">
+<a href="#server_endpoint_python" style="color: inherit; text-decoration: inherit;">server_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The endpoint of an Azure SQL Server that will be used to host the SSIS catalog.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="administrator_login_python">
 <a href="#administrator_login_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login</a>
 </span>
@@ -1749,8 +1759,8 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Administrator login name for the SQL Server.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="administrator_password_python">
 <a href="#administrator_password_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>password</a>
 </span>
@@ -1758,16 +1768,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Administrator login password for the SQL Server.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="server_endpoint_python">
-<a href="#server_endpoint_python" style="color: inherit; text-decoration: inherit;">server_<wbr>endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The endpoint of an Azure SQL Server that will be used to host the SSIS catalog.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

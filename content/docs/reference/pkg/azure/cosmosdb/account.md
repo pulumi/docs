@@ -450,7 +450,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountgeolocation">List&lt;Account<wbr>Geo<wbr>Location<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location.
+    <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location. Value is a `geo_location` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -490,7 +490,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">List&lt;Account<wbr>Capability<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, `EnableServerless`, and `mongoEnableDocLevelTTL`.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -636,7 +636,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountgeolocation">[]Account<wbr>Geo<wbr>Location</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location.
+    <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location. Value is a `geo_location` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -676,7 +676,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">[]Account<wbr>Capability</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, `EnableServerless`, and `mongoEnableDocLevelTTL`.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -822,7 +822,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountgeolocation">Account<wbr>Geo<wbr>Location[]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location.
+    <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location. Value is a `geo_location` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -862,7 +862,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">Account<wbr>Capability[]</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, `EnableServerless`, and `mongoEnableDocLevelTTL`.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1008,7 +1008,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountgeolocation">Sequence[Account<wbr>Geo<wbr>Location<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location.
+    <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location. Value is a `geo_location` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1048,7 +1048,7 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">Sequence[Account<wbr>Capability<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, `EnableServerless`, and `mongoEnableDocLevelTTL`.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1848,7 +1848,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">List&lt;Account<wbr>Capability<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, `EnableServerless`, and `mongoEnableDocLevelTTL`.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1918,7 +1918,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountgeolocation">List&lt;Account<wbr>Geo<wbr>Location<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location.
+    <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location. Value is a `geo_location` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2150,7 +2150,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">[]Account<wbr>Capability</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, `EnableServerless`, and `mongoEnableDocLevelTTL`.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2220,7 +2220,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountgeolocation">[]Account<wbr>Geo<wbr>Location</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location.
+    <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location. Value is a `geo_location` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2452,7 +2452,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">Account<wbr>Capability[]</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, `EnableServerless`, and `mongoEnableDocLevelTTL`.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2522,7 +2522,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountgeolocation">Account<wbr>Geo<wbr>Location[]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location.
+    <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location. Value is a `geo_location` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2754,7 +2754,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountcapability">Sequence[Account<wbr>Capability<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Possible values are `EnableAggregationPipeline`, `EnableCassandra`, `EnableGremlin`, `EnableTable`, `MongoDBv3.4`, `EnableServerless`, and `mongoEnableDocLevelTTL`.
+    <dd>{{% md %}}The capabilities which should be enabled for this Cosmos DB account. Value is a `capabilities` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2824,7 +2824,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accountgeolocation">Sequence[Account<wbr>Geo<wbr>Location<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location.
+    <dd>{{% md %}}Specifies a `geo_location` resource, used to define where data should be replicated with the `failover_priority` 0 specifying the primary location. Value is a `geo_location` block as defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

@@ -535,16 +535,15 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The name of the NetApp Snapshot. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property as been deprecated as the API no longer supports tags and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -611,16 +610,15 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The name of the NetApp Snapshot. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property as been deprecated as the API no longer supports tags and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -687,16 +685,15 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The name of the NetApp Snapshot. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property as been deprecated as the API no longer supports tags and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -763,16 +760,15 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The name of the NetApp Snapshot. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property as been deprecated as the API no longer supports tags and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -1019,16 +1015,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the resource group where the NetApp Snapshot should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property as been deprecated as the API no longer supports tags and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_volumename_csharp">
@@ -1095,16 +1090,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the resource group where the NetApp Snapshot should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property as been deprecated as the API no longer supports tags and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_volumename_go">
@@ -1171,16 +1165,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the resource group where the NetApp Snapshot should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property as been deprecated as the API no longer supports tags and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_volumename_nodejs">
@@ -1247,16 +1240,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the resource group where the NetApp Snapshot should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property as been deprecated as the API no longer supports tags and will be removed in version 3.0 of the provider.{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_volume_name_python">

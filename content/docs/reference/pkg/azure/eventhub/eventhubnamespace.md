@@ -344,7 +344,7 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Valid values range from `1` - `20`.
+    <dd>{{% md %}}Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Default capacity has a maximum of `20`, but can be increased in blocks of 20 on a committed purchase basis.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -470,7 +470,7 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Valid values range from `1` - `20`.
+    <dd>{{% md %}}Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Default capacity has a maximum of `20`, but can be increased in blocks of 20 on a committed purchase basis.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -596,7 +596,7 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Valid values range from `1` - `20`.
+    <dd>{{% md %}}Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Default capacity has a maximum of `20`, but can be increased in blocks of 20 on a committed purchase basis.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -722,7 +722,7 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Valid values range from `1` - `20`.
+    <dd>{{% md %}}Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Default capacity has a maximum of `20`, but can be increased in blocks of 20 on a committed purchase basis.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1274,7 +1274,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Valid values range from `1` - `20`.
+    <dd>{{% md %}}Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Default capacity has a maximum of `20`, but can be increased in blocks of 20 on a committed purchase basis.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1464,7 +1464,7 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Valid values range from `1` - `20`.
+    <dd>{{% md %}}Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Default capacity has a maximum of `20`, but can be increased in blocks of 20 on a committed purchase basis.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1654,7 +1654,7 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Valid values range from `1` - `20`.
+    <dd>{{% md %}}Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Default capacity has a maximum of `20`, but can be increased in blocks of 20 on a committed purchase basis.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1844,7 +1844,7 @@ authorization rule `RootManageSharedAccessKey`, which is generated when disaster
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Valid values range from `1` - `20`.
+    <dd>{{% md %}}Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Default capacity has a maximum of `20`, but can be increased in blocks of 20 on a committed purchase basis.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

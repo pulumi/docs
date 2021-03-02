@@ -353,7 +353,7 @@ The Container resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of MetaData for this Container.
+    <dd>{{% md %}}A mapping of MetaData for this Container. All metadata keys should be lowercase.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -399,7 +399,7 @@ The Container resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A mapping of MetaData for this Container.
+    <dd>{{% md %}}A mapping of MetaData for this Container. All metadata keys should be lowercase.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -445,7 +445,7 @@ The Container resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A mapping of MetaData for this Container.
+    <dd>{{% md %}}A mapping of MetaData for this Container. All metadata keys should be lowercase.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -491,7 +491,7 @@ The Container resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A mapping of MetaData for this Container.
+    <dd>{{% md %}}A mapping of MetaData for this Container. All metadata keys should be lowercase.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -857,7 +857,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of MetaData for this Container.
+    <dd>{{% md %}}A mapping of MetaData for this Container. All metadata keys should be lowercase.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -933,7 +933,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A mapping of MetaData for this Container.
+    <dd>{{% md %}}A mapping of MetaData for this Container. All metadata keys should be lowercase.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1009,7 +1009,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A mapping of MetaData for this Container.
+    <dd>{{% md %}}A mapping of MetaData for this Container. All metadata keys should be lowercase.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1085,7 +1085,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A mapping of MetaData for this Container.
+    <dd>{{% md %}}A mapping of MetaData for this Container. All metadata keys should be lowercase.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

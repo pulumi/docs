@@ -377,7 +377,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcachepatchschedule">List&lt;Get<wbr>Cache<wbr>Patch<wbr>Schedule&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below - only available for Premium SKU's.
+    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -606,7 +606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcachepatchschedule">[]Get<wbr>Cache<wbr>Patch<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below - only available for Premium SKU's.
+    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -835,7 +835,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcachepatchschedule">Get<wbr>Cache<wbr>Patch<wbr>Schedule[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below - only available for Premium SKU's.
+    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1064,7 +1064,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcachepatchschedule">Sequence[Get<wbr>Cache<wbr>Patch<wbr>Schedule]</a></span>
     </dt>
-    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below - only available for Premium SKU's.
+    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
