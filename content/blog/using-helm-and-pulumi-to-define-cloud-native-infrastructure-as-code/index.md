@@ -39,7 +39,7 @@ Specifically, we:
   CosmosDB
 - Deploy a Node.js Helm Chart that references it.
 
-If you have the Azure command line, try [running the example](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean)
+If you have the Azure command line, try [running the example](https://github.com/pulumi/examples/tree/master/classic-azure-ts-aks-mean)
 with `pulumi up`!
 
 {{< highlight javascript >}}

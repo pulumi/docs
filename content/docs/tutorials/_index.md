@@ -32,10 +32,10 @@ From VMs to Serverless to Containers, our collection of tutorials below represen
             <a href="{{< relref "azure" >}}"><img class="h-10" src="/logos/tech/azure.svg" alt="Azure"></a>
         </p>
         <ul class="p2 ml-2">
-            <li><a href="{{< relref "azure/container-webserver" >}}">Azure Container Instances</a></li>
+            <li><a href="{{< relref "azure/azure-cs-appservice-docker" >}}">Azure App Service</a></li>
+            <li><a href="{{< relref "azure/azure-py-aks" >}}">Azure Kubernetes Service</a></li>
+            <li><a href="{{< relref "azure/azure-go-aci" >}}">Azure Container Instances</a></li>
             <li><a href="{{< relref "azure/azure-ts-webserver" >}}">Azure Virtual Machine</a></li>
-            <li><a href="{{< relref "azure/azure-ts-serverless-url-shortener-global" >}}">CosmosDB and Functions</a></li>
-            <li><a href="{{< relref "azure/azure-ts-appservice-springboot" >}}">Azure App Service</a></li>
         </ul>
         <p class="mt-6">
             <a class="btn btn-secondary" href="{{< relref "azure" >}}">VIEW MORE</a>

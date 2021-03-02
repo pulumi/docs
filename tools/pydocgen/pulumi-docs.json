@@ -44,9 +44,9 @@
       "terraform_provider_name": "azurerm"
     },
     {
-      "name": "Pulumi Azure NextGen",
-      "package_name": "pulumi_azure_nextgen",
-      "pulumi_provider_name": "azure-nextgen",
+      "name": "Pulumi Azure Native",
+      "package_name": "pulumi_azure_native",
+      "pulumi_provider_name": "azure-native",
       "terraform_provider_name": ""
     },
     {

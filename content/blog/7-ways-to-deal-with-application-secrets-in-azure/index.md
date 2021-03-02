@@ -286,4 +286,4 @@ While security practices may vary depending on application requirements, Pulumi 
 - It provides a built-in mechanism to manage external secrets.
 - It is a great way to take advantage of Azure features like Managed identities and RBAC in a cohesive way.
 
-Infrastructure as Code helps make your applications secure and reliable. Refer to [this full example](https://github.com/pulumi/examples/tree/master/azure-ts-msi-keyvault-rbac) of using Key Vault, Managed identities, RBAC with App Service and Pulumi.
+Infrastructure as Code helps make your applications secure and reliable. Refer to [this full example](https://github.com/pulumi/examples/tree/master/classic-azure-ts-msi-keyvault-rbac) of using Key Vault, Managed identities, RBAC with App Service and Pulumi.

@@ -278,7 +278,7 @@ We can deploy and configure virtual machines programmatically using scripts and 
 
 We have more virtual machine examples for other cloud providers. Check out:
 
-- [Azure VM Scale Sets](https://github.com/pulumi/examples/tree/master/azure-py-vm-scaleset)
+- [Azure VM Scale Sets](https://github.com/pulumi/examples/tree/master/classic-azure-py-vm-scaleset)
 - [Pulumi DigitalOcean Droplets](https://github.com/pulumi/examples/tree/master/digitalocean-ts-loadbalanced-droplets)
 - [GCP Nginx Server Using Compute Engine](https://github.com/pulumi/examples/tree/master/gcp-py-instance-nginx)
 - [VSphere](https://github.com/pulumi/pulumi-vsphere/tree/master/examples/)

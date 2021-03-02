@@ -82,7 +82,7 @@ and maintainable.
 While you can run stateful workloads on Kubernetes using StatefulSets,
 it's often better to use a managed service from your cloud provider.
 Since Pulumi can [manage cloud resources as well as k8s resources]({{< relref "pulumi-heart-google-cloud-platform" >}})
-it's easy to bridge that gap! Try adding in a [managed database](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean),
+it's easy to bridge that gap! Try adding in a [managed database](https://github.com/pulumi/examples/tree/master/classic-azure-ts-aks-mean),
 [message queue]({{< relref "pulumi-and-epsagon-define-deploy-and-monitor-serverless-applications" >}})
 or [object store](https://github.com/pulumi/examples/tree/master/kubernetes-ts-s3-rollout),
 and see how much simpler your k8s app can be. When your app is already

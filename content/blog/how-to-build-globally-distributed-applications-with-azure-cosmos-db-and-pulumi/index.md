@@ -188,7 +188,7 @@ const products = new CosmosApp("products", {
 });
 ```
 
-[ [Full Example](https://github.com/pulumi/examples/tree/master/azure-ts-cosmosapp-component/functionApp.ts) ]
+[ [Full Example](https://github.com/pulumi/examples/tree/master/classic-azure-ts-cosmosapp-component/functionApp.ts) ]
 
 ## Cosmos App with Container Instances
 
@@ -286,7 +286,7 @@ const aci = new CosmosApp("aci", {
 
 Shopping Cart workload expects both reads and writes from the end-users, so the team decides to enable multi-master support in their Cosmos DB instance.
 
-[ [Full Example](https://github.com/pulumi/examples/tree/master/azure-ts-cosmosapp-component/aci.ts) ]
+[ [Full Example](https://github.com/pulumi/examples/tree/master/classic-azure-ts-cosmosapp-component/aci.ts) ]
 
 ## Cosmos App with Virtual Machine Scale Sets
 
@@ -325,7 +325,7 @@ function buildVMScaleSetApp({ cosmosAccount, database }: GlobalContext) {
 
 The code also uses a collection with the MongoDB protocol compatibility because that’s what the application expects.
 
-[ [Full Example](https://github.com/pulumi/examples/tree/master/azure-ts-cosmosapp-component/vms.ts) ]
+[ [Full Example](https://github.com/pulumi/examples/tree/master/classic-azure-ts-cosmosapp-component/vms.ts) ]
 
 ## Conclusion
 

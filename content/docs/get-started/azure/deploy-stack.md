@@ -12,21 +12,21 @@ menu:
 aliases: ["/docs/quickstart/azure/deploy-stack/"]
 ---
 
-Let's go ahead and deploy the stack:
+Let's go ahead and deploy your stack:
 
 ```bash
 $ pulumi up
 ```
 
-This command instructs Pulumi to determine the resources needed to create the stack. First, a preview is shown of the changes that will be made:
+This command evaluates your program and determines the resource updates to make. First, a preview is shown that outlines the changes that will be made when you run the update:
 
 ```
 Previewing update (dev):
 
-     Type                         Name            Plan
- +   pulumi:pulumi:Stack          quickstart-dev  create
- +   ├─ azure:core:ResourceGroup  resourceGroup   create
- +   └─ azure:storage:Account     storage         create
+    Type                                              Name             Plan
+ +   pulumi:pulumi:Stack                              quickstart-dev   create
+ +   ├─ azure-native:resources:ResourceGroup          resourceGroup    create
+ +   └─ azure-native:storage:StorageAccount           sa               create
 
 Resources:
     + 3 to create
@@ -37,19 +37,19 @@ Do you want to perform this update?
   details
 ```
 
-Choosing `yes` will create resources in Azure.
+Once the preview has finished, you are given three options to choose from. Choosing `details` will show you a rich diff of the changes to be made. Choosing `yes` will create your new storage account in Azure. Choosing `no` will return you to the user prompt without performing the update operation.
 
 ```
 Do you want to perform this update? yes
 Updating (dev):
 
-     Type                         Name            Status
- +   pulumi:pulumi:Stack          quickstart-dev  created
- +   ├─ azure:core:ResourceGroup  resourceGroup   created
- +   └─ azure:storage:Account     storage         created
+     Type                                             Name             Status
+ +   pulumi:pulumi:Stack                              quickstart-dev   created
+ +   ├─ azure-native:resources:ResourceGroup          resourceGroup    created
+ +   └─ azure-native:storage:StorageAccount           sa               created
 
 Outputs:
-    connectionString: "[secret]"
+    primaryStorageKey: "<key_value>"
 
 Resources:
     + 3 created
@@ -57,10 +57,44 @@ Resources:
 Duration: 26s
 ```
 
-The storage account's connection string that we exported is shown as a [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}).
+Remember the output you defined in the previous step? That [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}) can be seen in the `Outputs:` section of your update. You can access your outputs from the CLI by running the `pulumi stack output [property-name]` command. For example you can print the primary key of your bucket with the following command:
+
+{{% choosable language typescript %}}
+
+```bash
+$ pulumi stack output primaryStorageKey
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```bash
+$ pulumi stack output primary_storage_key
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```bash
+$ pulumi stack output primaryStorageKey
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```bash
+$ pulumi stack output PrimaryStorageKey
+```
+
+{{% /choosable %}}
+
+Running that command will print out the storage account's primary key.
 
 {{< console-note >}}
 
-Next, we'll make some modifications to the program.
+Now that your storage account has been provisioned, let's modify it to host a static website.
 
 {{< get-started-stepper >}}
