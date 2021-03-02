@@ -15,15 +15,15 @@
                     <p class="text-lg">{{ .Params.about.description | markdownify }}</p>
                 </div>
                 <div class="text-center p-4">
-                    <h4 class="text-gray-100 md:mr-8 mt-2 text-2xl">Enter your email to be first to know when registrations starts</h4>
+                    <h4 class="text-gray-100 md:mr-8 mt-2 text-2xl">{{ .Params.form.label }}</h4>
                     <div class="flex items-center justify-center">
-                        <pulumi-hubspot-form form-id="8457d25f-b10e-406c-b366-abf311d48caa" class="newsletter newsletter-long"></pulumi-hubspot-form>
+                        <pulumi-hubspot-form form-id="{{ .Params.form.form_id }}" class="newsletter newsletter-long"></pulumi-hubspot-form>
                     </div>
                 </div>
                 <div class="w-full flex items-center justify-center mt-8 p-4">
                     <div class="relative inline-block">
-                        <p class="mb-12 text-2xl">You miss 100% of the events you don't register for.</p>
-                        <p class="absolute bottom-0 right-0 text-lg italic">~ The Pulumipus</p>
+                        <p class="mb-12 text-2xl">{{ .Params.quote.quote }}</p>
+                        <p class="absolute bottom-0 right-0 text-lg italic">~ {{ .Params.quote.name }}</p>
                     </div>
                 </div>
             </section>
