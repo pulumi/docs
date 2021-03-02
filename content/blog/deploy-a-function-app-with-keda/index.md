@@ -262,7 +262,7 @@ const app = new KedaStorageQueueHandler("queue-handler", {
 });
 ```
 
-You can find the full code of the components, the sample program, and steps to run it in [this example](https://github.com/pulumi/examples/tree/master/azure-ts-aks-keda).
+You can find the full code of the components, the sample program, and steps to run it in [this example](https://github.com/pulumi/examples/tree/master/classic-azure-ts-aks-keda).
 
 ## Conclusion
 
@@ -276,4 +276,4 @@ can combine Docker image creation, Kubernetes cluster provisioning, Helm chart
 installation, and KEDA deployment in a single program, written in your favorite
 general-purpose language.
 
-Get started with [Azure Kubernetes Service (AKS) Cluster and Azure Functions with KEDA](https://github.com/pulumi/examples/tree/master/azure-ts-aks-keda).
+Get started with [Azure Kubernetes Service (AKS) Cluster and Azure Functions with KEDA](https://github.com/pulumi/examples/tree/master/classic-azure-ts-aks-keda).

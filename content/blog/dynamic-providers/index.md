@@ -86,7 +86,7 @@ Similar to the previous example, this is another example of a shortcoming of the
 
 Along with adding a custom domain to the CDN endpoint, this dynamic provider also enables HTTPS provided by Azure's one-click [HTTPS enablement](https://docs.microsoft.com/en-us/azure/cdn/cdn-custom-ssl?tabs=option-1-default-enable-https-with-a-cdn-managed-certificate).
 
-As before, details such as the creation of the CDN profile and its endpoint are omitted for clarity. You can check out the full example [here](https://github.com/pulumi/examples/tree/master/azure-ts-dynamicresource).
+As before, details such as the creation of the CDN profile and its endpoint are omitted for clarity. You can check out the full example [here](https://github.com/pulumi/examples/tree/master/classic-azure-ts-dynamicresource).
 
 ```ts
 ...

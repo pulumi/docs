@@ -21,20 +21,14 @@ The native Azure provider supports several options for providing access to Azure
 
 ## Getting Started
 
-**TODO: Update this section.**
-
 The quickest way to get started with Azure is to follow the [Get Started]({{< relref "/docs/get-started/azure" >}}) guide.
 
-Additionally, a tutorial is available to follow:
-
-* [Azure Container Instances Web Server]({{< relref "/docs/tutorials/azure/container-webserver" >}}): Create an NGINX web server Azure Container Instance
-
-In addition to the tutorial, several interesting examples are available complete with instructions:
+From there, you can dive deeper with additional Azure examples:
 
 * [Azure Function Apps](https://github.com/pulumi/examples/tree/master/azure-ts-functions): Create a serverless function
 * [Azure AppService with SQL and AppInsights](https://github.com/pulumi/examples/tree/master/azure-ts-appservice): Build an AppService web application that uses SQL and AppInsights
-* [Azure Kubernetes Service (AKS) Cluster](https://github.com/pulumi/examples/tree/master/azure-ts-aks-helm): Create an AKS cluster and deploy a Helm Chart into it
-* [Azure CosmosDB, AKS and Node.js](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean): Stands up an AKS cluster and a MongoDB-flavored instance of CosmosDB used by a Node.js application.
+* [Azure Kubernetes Service (AKS) Cluster](https://github.com/pulumi/examples/tree/master/azure-ts-aks): Create an AKS cluster
+* [Azure Container Instances](https://github.com/pulumi/examples/tree/master/azure-ts-aci): Deploy a web app to Azure Container Intances
 
 ## Migration
 

@@ -134,7 +134,7 @@ export const k8sProvider = new k8s.Provider("aksK8s", {
 });
 ```
 
-The code above is an abbreviated example of this [AKS deployment](https://github.com/pulumi/examples/tree/master/azure-ts-aks-helm) on GitHub.
+The code above is an abbreviated example of this [AKS deployment](https://github.com/pulumi/examples/tree/master/classic-azure-ts-aks-helm) on GitHub.
 
 {{% /choosable %}}
 {{% choosable cloud gcp %}}
