@@ -445,7 +445,7 @@ While running `pulumi up` with the code above, you will likely see a warning
 ```
   Type                                     Name                 Plan   Info
   pulumi:pulumi:Stack                      proj-dev
- =└─ azure-native:storage/StorageAccount  storagecreatedbyarm  import [diff: -accessTier,enableHttpsTrafficOnly,encryption,networkRuleSet
+ =└─ azure-native:storage:StorageAccount  storagecreatedbyarm  import [diff: -accessTier,enableHttpsTrafficOnly,encryption,networkRuleSet
 
 Diagnostics:
   azure-native:storage:StorageAccount (storagecreatedbyarm):

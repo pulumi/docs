@@ -353,7 +353,7 @@ type BucketArgs struct {
 
 ## Try them out!
 
-You can find enum types integrated into `v3.19.0` of the [AWS provider](https://www.pulumi.com/docs/reference/pkg/aws/) and `v0.7.0` of the [Azure-Native provider](https://www.pulumi.com/docs/reference/pkg/azure-native/), and we will be adding enums to other providers in the coming weeks and months.
+You can find enum types integrated into `v3.19.0` of the [AWS provider](https://www.pulumi.com/docs/reference/pkg/aws/) and `v0.7.1` of the [Azure-Native provider](https://www.pulumi.com/docs/reference/pkg/azure-native/), and we will be adding enums to other providers in the coming weeks and months.
 
 **Azure-Native**: In the native Azure provider, all properties labeled as enums in the OpenAPI spec are represented as such. In all, there are over 1300 enums provided in the SDKs. The native Azure provider uses both "strict" and "relaxed" enums since the OpenAPI specification explicitly defines its properties as such.
 

@@ -55,7 +55,7 @@ hero:
 
                 func main() {
                     pulumi.Run(func(ctx *pulumi.Context) error {
-                        resourceGroup, err := resources.NewResourceGroup(ctx, "resourceGroup")
+                        resourceGroup, err := resources.NewResourceGroup(ctx, "resourceGroup", nil)
                         if err != nil {
                             return err
                         }

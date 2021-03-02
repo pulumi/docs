@@ -7,7 +7,7 @@ Pulumi currently has two providers to manage resources in Microsoft Azure: [clas
 
 ## Key Difference between Azure and Azure-Native
 
-The classic Pulumi Azure provider is based on the Terraform AzureRM provider. Every resource in this provider is manually implemented using Azure Go SDK. The API of each resource is defined by its developer and doesn’t have to match the Microsoft Azure's API.
+The classic Pulumi Azure provider is based on the Terraform AzureRM provider. Every resource in this provider is manually implemented using the Azure Go SDK. The API of each resource is defined by its developer and doesn’t have to match the Microsoft Azure's API.
 
 The native Pulumi Azure provider is based on the Open API specifications of Azure Resource Manager published by Microsoft. Pulumi generates resources automatically from those API specifications. This approach ensures higher quality and higher fidelity with the Azure platform. Every property of each resource is always represented in the SDKs.
 

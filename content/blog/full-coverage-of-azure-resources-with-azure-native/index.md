@@ -1,6 +1,6 @@
 ---
 title: "Full Coverage of Azure Resources with Azure-Native"
-date: 2021-02-24
+date: 2021-03-02
 meta_desc: "Pulumi’s Azure-Native provider is the most comprehensive IaC solution for Microsoft Azure"
 meta_image: azure-native.png
 authors:
@@ -15,15 +15,13 @@ Today, we’re excited to announce that this new provider is now the default way
 
 <!--more-->
 
-Already use the [classic Pulumi-Azure provider](https://www.pulumi.com/docs/reference/pkg/azure/)? You can migrate to Azure-Native now using the [migration guide]({{< relref "/docs/intro/cloud-providers/azure/from-classic" >}}). If you prefer to wait until general availability, stay tuned for updates: we expect to reach GA in Spring of this year.
+Already use the [classic Pulumi-Azure provider](https://www.pulumi.com/docs/reference/pkg/azure/)? You can migrate to Azure-Native now using the [migration guide]({{< relref "/docs/intro/cloud-providers/azure/from-classic" >}}). If you prefer to wait until general availability, stay tuned for updates: we expect to reach general availability in Spring of this year.
 
 Alongside this announcement, we’re also formalizing a new concept: a Pulumi “native provider”. A native provider provides functionality mapped directly from the underlying API; in the case of the new Azure Provider, functionality is mapped directly from the Azure Resource Manager API surface. Going forward, you’ll be able to find these next-generation Pulumi providers directly from the name: just look for the “-Native” suffix.
 
 ## Native to Azure
 
-The native Azure provider implements the best support possible for the Azure platform in Pulumi. We designed the native provider to expose the entire API surface of Azure to developers and operators, now and forever.
-
-As of today, the native provider supports 1010 resource types, 120 of them added since the initial preview in September 2020. Every property of each resource is always represented in the SDKs.
+The native Azure provider implements the best possible support for the Azure platform in Pulumi. It exposes the entire API surface of Azure to developers and operators, now and forever. As of today, the native provider supports 1,010 resource types, 120 of them added since the initial preview in September 2020. Every property of each resource is always represented in the SDKs.
 
 Unlike the classic Azure provider, which requires manual work to keep updated, we designed the native provider to stay always up-to-date with Azure API additions and changes. We generate Pulumi SDKs for the native Azure provider automatically from Azure API specifications published by Microsoft. We publish daily builds of the provider and have published 210 versions of the provider in the last six months.
 
@@ -31,7 +29,7 @@ Unlike the classic Azure provider, which requires manual work to keep updated, w
 
 The native Azure provider comes with several significant improvements over the Azure NextGen preview. These changes bring more features of the Pulumi experience to the native Azure provider.
 
-### Top-level resources
+### Top-level Resources
 
 Every resource is now available in the top-level (versionless) module of its resource provider. You don't have to choose the API version explicitly: we will apply the default for you.
 
@@ -111,7 +109,7 @@ import (
 
 func main() {
    pulumi.Run(func(ctx *pulumi.Context) error {
-       resourceGroup, err := resources.NewResourceGroup(ctx, "resourceGroup")
+       resourceGroup, err := resources.NewResourceGroup(ctx, "resourceGroup", nil)
        if err != nil {
            return err
        }
@@ -132,7 +130,7 @@ func main() {
 {{< /choosable >}}
 {{< /chooser >}}
 
-The top-level resources will use stable API versions and take no arbitrary breaking changes within a given major version of the package (minor version while in preview).
+The top-level resources will use stable API versions and take no arbitrary breaking changes within a given major version of the package once we reach general availability; during the preview, breaking changes may appear in `0.x` minor versions.
 
 We still provide access to every version of every ARM API if you want to use a brand-new version or a specific version from the past. Each API version is mapped to its own module or namespace within the resource provider.
 
@@ -185,7 +183,7 @@ import (
 
 func main() {
    pulumi.Run(func(ctx *pulumi.Context) error {
-       _, err := resources.NewResourceGroup(ctx, "resourceGroup")
+       _, err := resources.NewResourceGroup(ctx, "resourceGroup", nil)
        return err
    })
 }
@@ -219,6 +217,10 @@ Unfortunately, some Azure capabilities aren’t yet available via the Azure Reso
 - Managing Azure KeyVault secrets and keys.
 
 By combining full support for the ARM APIs with these additional extensions, Pulumi's native Azure provider provides the broadest support for managing Azure resources with infrastructure-as-code.
+
+## Open-Source
+
+The native Azure provider for Pulumi is fully open-source. The code is available on GitHub at [pulumi-azure-native](https://github.com/pulumi/pulumi-azure-native).
 
 ## Migrate from Azure NextGen to Azure-Native
 
@@ -269,11 +271,11 @@ $ pulumi new azure-go
 
 Over the following days, we will be switching our documentation, tutorials, examples, and getting started guides to default to the native provider for all Azure-related experience.
 
-(TODO: update) Several larger examples are available in the Pulumi Examples repo:
+Several larger examples are available in the Pulumi Examples repo:
 
-- Web Applications with Azure App Service and Docker: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-nextgen-ts-appservice-docker), [C#](https://github.com/pulumi/examples/tree/master/azure-nextgen-cs-appservice-docker), [Python](https://github.com/pulumi/examples/tree/master/azure-nextgen-py-appservice-docker), [Go](https://github.com/pulumi/examples/tree/master/azure-nextgen-go-appservice-docker)
-- Azure AKS cluster: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-nextgen-ts-aks), [C#](https://github.com/pulumi/examples/tree/master/azure-nextgen-cs-aks), [Python](https://github.com/pulumi/examples/tree/master/azure-nextgen-py-aks), [Go](https://github.com/pulumi/examples/tree/master/azure-nextgen-go-aks)
-- Web Application with Azure Container Instances: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-nextgen-ts-aci), [C#](https://github.com/pulumi/examples/tree/master/azure-nextgen-cs-aci), [Python](https://github.com/pulumi/examples/tree/master/azure-nextgen-py-aci), [Go](https://github.com/pulumi/examples/tree/master/azure-nextgen-go-aci)
-- Web Server Using Azure Virtual Machine: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-nextgen-ts-webserver), [Python](https://github.com/pulumi/examples/tree/master/azure-nextgen-py-webserver)
+- Web Applications with Azure App Service and Docker: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-appservice-docker), [C#](https://github.com/pulumi/examples/tree/master/azure-cs-appservice-docker), [Python](https://github.com/pulumi/examples/tree/master/azure-py-appservice-docker), [Go](https://github.com/pulumi/examples/tree/master/azure-go-appservice-docker)
+- Azure AKS cluster: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-aks), [C#](https://github.com/pulumi/examples/tree/master/azure-cs-aks), [Python](https://github.com/pulumi/examples/tree/master/azure-py-aks), [Go](https://github.com/pulumi/examples/tree/master/azure-go-aks)
+- Web Application with Azure Container Instances: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-aci), [C#](https://github.com/pulumi/examples/tree/master/azure-cs-aci), [Python](https://github.com/pulumi/examples/tree/master/azure-py-aci), [Go](https://github.com/pulumi/examples/tree/master/azure-go-aci)
+- Web Server Using Azure Virtual Machine: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-webserver), [Python](https://github.com/pulumi/examples/tree/master/azure-py-webserver)
 
 You can browse [API reference docs](https://www.pulumi.com/docs/reference/pkg/azure-native/) with inline examples or explore the [Pulumi Azure-Native SDKs](https://github.com/pulumi/pulumi-azure-native) repository.

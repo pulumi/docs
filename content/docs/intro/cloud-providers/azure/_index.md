@@ -49,12 +49,9 @@ If you are migrating from Azure Resource Manager templates, read our [Migrate Fr
 {{% choosable language typescript %}}
 
 ```typescript
-import * as resources from "@pulumi/azure-nextgen/resources/latest";
+import * as resources from "@pulumi/azure-native/resources";
 
-const resourceGroup = new resources.ResourceGroup("resourceGroup", {
-  resourceGroupName: "my-rg",
-  location: "WestUS",
-});
+const resourceGroup = new resources.ResourceGroup("resourceGroup");
 ```
 
 {{% /choosable %}}
@@ -62,11 +59,9 @@ const resourceGroup = new resources.ResourceGroup("resourceGroup", {
 {{% choosable language python %}}
 
 ```python
-import pulumi_azure_nextgen as azure_nextgen
+import pulumi_azure_native as azure_native
 
-resource_group = azure_nextgen.resources.latest.ResourceGroup("resourceGroup",
-                                                              resource_group_name="my-rg",
-                                                              location="WestUS")
+resource_group = azure_native.resources.ResourceGroup("resourceGroup")
 ```
 
 {{% /choosable %}}
@@ -75,17 +70,13 @@ resource_group = azure_nextgen.resources.latest.ResourceGroup("resourceGroup",
 
 ```csharp
 using Pulumi;
-using AzureNextGen = Pulumi.AzureNextGen;
+using Pulumi.AzureNative.Resources;
 
 class MyStack : Stack
 {
     public MyStack()
     {
-        var resourceGroup = new AzureNextGen.Resources.Latest.ResourceGroup("resourceGroup", new AzureNextGen.Resources.Latest.ResourceGroupArgs
-        {
-            ResourceGroupName = "my-rg",
-            Location = "WestUS",
-        });
+        var resourceGroup = new ResourceGroup("resourceGroup");
     }
 
 }
@@ -104,16 +95,13 @@ class Program
 package main
 
 import (
-    resources "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/resources/latest"
+    "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
     "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
-        _, err := resources.NewResourceGroup(ctx, "resourceGroup", &resources.ResourceGroupArgs{
-            ResourceGroupName: pulumi.String("my-rg"),
-            Location:          pulumi.String("WestUS"),
-        })
+        _, err := resources.NewResourceGroup(ctx, "resourceGroup", nil)
         if err != nil {
             return err
         }
