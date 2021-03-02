@@ -332,8 +332,8 @@ The TargetSSLProxy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate
-connections between users and the load balancer. Currently, exactly
-one SSL certificate must be specified.
+connections between users and the load balancer. At least one
+SSL certificate must be specified.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -422,8 +422,8 @@ resource will not have any SSL policy configured.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate
-connections between users and the load balancer. Currently, exactly
-one SSL certificate must be specified.
+connections between users and the load balancer. At least one
+SSL certificate must be specified.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -512,8 +512,8 @@ resource will not have any SSL policy configured.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate
-connections between users and the load balancer. Currently, exactly
-one SSL certificate must be specified.
+connections between users and the load balancer. At least one
+SSL certificate must be specified.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -602,8 +602,8 @@ resource will not have any SSL policy configured.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate
-connections between users and the load balancer. Currently, exactly
-one SSL certificate must be specified.
+connections between users and the load balancer. At least one
+SSL certificate must be specified.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1082,8 +1082,8 @@ Possible values are `NONE` and `PROXY_V1`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate
-connections between users and the load balancer. Currently, exactly
-one SSL certificate must be specified.
+connections between users and the load balancer. At least one
+SSL certificate must be specified.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1202,8 +1202,8 @@ Possible values are `NONE` and `PROXY_V1`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate
-connections between users and the load balancer. Currently, exactly
-one SSL certificate must be specified.
+connections between users and the load balancer. At least one
+SSL certificate must be specified.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1322,8 +1322,8 @@ Possible values are `NONE` and `PROXY_V1`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate
-connections between users and the load balancer. Currently, exactly
-one SSL certificate must be specified.
+connections between users and the load balancer. At least one
+SSL certificate must be specified.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1442,8 +1442,8 @@ Possible values are `NONE` and `PROXY_V1`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate
-connections between users and the load balancer. Currently, exactly
-one SSL certificate must be specified.
+connections between users and the load balancer. At least one
+SSL certificate must be specified.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

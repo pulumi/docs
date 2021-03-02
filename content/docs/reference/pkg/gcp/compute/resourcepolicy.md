@@ -548,7 +548,7 @@ The ResourcePolicy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+    <dd>{{% md %}}Resource policy for instances used for placement configuration.
 Structure is documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -613,7 +613,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+    <dd>{{% md %}}Resource policy for instances used for placement configuration.
 Structure is documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -678,7 +678,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+    <dd>{{% md %}}Resource policy for instances used for placement configuration.
 Structure is documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -743,7 +743,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+    <dd>{{% md %}}Resource policy for instances used for placement configuration.
 Structure is documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1038,7 +1038,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+    <dd>{{% md %}}Resource policy for instances used for placement configuration.
 Structure is documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1113,7 +1113,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+    <dd>{{% md %}}Resource policy for instances used for placement configuration.
 Structure is documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1188,7 +1188,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+    <dd>{{% md %}}Resource policy for instances used for placement configuration.
 Structure is documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1263,7 +1263,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcepolicygroupplacementpolicy">Resource<wbr>Policy<wbr>Group<wbr>Placement<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Policy for creating snapshots of persistent disks.
+    <dd>{{% md %}}Resource policy for instances used for placement configuration.
 Structure is documented below.
 {{% /md %}}</dd>
     <dt class="property-optional"

@@ -42,6 +42,7 @@ class MyStack : Stack
         });
         var foo = new Gcp.BigQuery.Table("foo", new Gcp.BigQuery.TableArgs
         {
+            DeletionProtection = false,
             DatasetId = bar.DatasetId,
             TableId = "job_query_table",
         });
@@ -97,8 +98,9 @@ func main() {
 			return err
 		}
 		foo, err := bigquery.NewTable(ctx, "foo", &bigquery.TableArgs{
-			DatasetId: bar.DatasetId,
-			TableId:   pulumi.String("job_query_table"),
+			DeletionProtection: pulumi.Bool(false),
+			DatasetId:          bar.DatasetId,
+			TableId:            pulumi.String("job_query_table"),
 		})
 		if err != nil {
 			return err
@@ -143,6 +145,7 @@ bar = gcp.bigquery.Dataset("bar",
     description="This is a test description",
     location="US")
 foo = gcp.bigquery.Table("foo",
+    deletion_protection=False,
     dataset_id=bar.dataset_id,
     table_id="job_query_table")
 job = gcp.bigquery.Job("job",
@@ -180,6 +183,7 @@ const bar = new gcp.bigquery.Dataset("bar", {
     location: "US",
 });
 const foo = new gcp.bigquery.Table("foo", {
+    deletionProtection: false,
     datasetId: bar.datasetId,
     tableId: "job_query_table",
 });
@@ -225,6 +229,7 @@ class MyStack : Stack
         });
         var foo = new Gcp.BigQuery.Table("foo", new Gcp.BigQuery.TableArgs
         {
+            DeletionProtection = false,
             DatasetId = bar.DatasetId,
             TableId = "job_query_table",
         });
@@ -282,8 +287,9 @@ func main() {
 			return err
 		}
 		foo, err := bigquery.NewTable(ctx, "foo", &bigquery.TableArgs{
-			DatasetId: bar.DatasetId,
-			TableId:   pulumi.String("job_query_table"),
+			DeletionProtection: pulumi.Bool(false),
+			DatasetId:          bar.DatasetId,
+			TableId:            pulumi.String("job_query_table"),
 		})
 		if err != nil {
 			return err
@@ -329,6 +335,7 @@ bar = gcp.bigquery.Dataset("bar",
     description="This is a test description",
     location="US")
 foo = gcp.bigquery.Table("foo",
+    deletion_protection=False,
     dataset_id=bar.dataset_id,
     table_id="job_query_table")
 job = gcp.bigquery.Job("job",
@@ -367,6 +374,7 @@ const bar = new gcp.bigquery.Dataset("bar", {
     location: "US",
 });
 const foo = new gcp.bigquery.Table("foo", {
+    deletionProtection: false,
     datasetId: bar.datasetId,
     tableId: "job_query_table",
 });
@@ -413,6 +421,7 @@ class MyStack : Stack
         });
         var foo = new Gcp.BigQuery.Table("foo", new Gcp.BigQuery.TableArgs
         {
+            DeletionProtection = false,
             DatasetId = bar.DatasetId,
             TableId = "job_load_table",
         });
@@ -473,8 +482,9 @@ func main() {
 			return err
 		}
 		foo, err := bigquery.NewTable(ctx, "foo", &bigquery.TableArgs{
-			DatasetId: bar.DatasetId,
-			TableId:   pulumi.String("job_load_table"),
+			DeletionProtection: pulumi.Bool(false),
+			DatasetId:          bar.DatasetId,
+			TableId:            pulumi.String("job_load_table"),
 		})
 		if err != nil {
 			return err
@@ -523,6 +533,7 @@ bar = gcp.bigquery.Dataset("bar",
     description="This is a test description",
     location="US")
 foo = gcp.bigquery.Table("foo",
+    deletion_protection=False,
     dataset_id=bar.dataset_id,
     table_id="job_load_table")
 job = gcp.bigquery.Job("job",
@@ -562,6 +573,7 @@ const bar = new gcp.bigquery.Dataset("bar", {
     location: "US",
 });
 const foo = new gcp.bigquery.Table("foo", {
+    deletionProtection: false,
     datasetId: bar.datasetId,
     tableId: "job_load_table",
 });
@@ -609,6 +621,7 @@ class MyStack : Stack
         });
         var source_oneTable = new Gcp.BigQuery.Table("source-oneTable", new Gcp.BigQuery.TableArgs
         {
+            DeletionProtection = false,
             DatasetId = source_oneDataset.DatasetId,
             TableId = "job_extract_table",
             Schema = @"[
@@ -684,9 +697,10 @@ func main() {
 			return err
 		}
 		_, err = bigquery.NewTable(ctx, "source_oneTable", &bigquery.TableArgs{
-			DatasetId: source_oneDataset.DatasetId,
-			TableId:   pulumi.String("job_extract_table"),
-			Schema:    pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "[\n", "  {\n", "    \"name\": \"name\",\n", "    \"type\": \"STRING\",\n", "    \"mode\": \"NULLABLE\"\n", "  },\n", "  {\n", "    \"name\": \"post_abbr\",\n", "    \"type\": \"STRING\",\n", "    \"mode\": \"NULLABLE\"\n", "  },\n", "  {\n", "    \"name\": \"date\",\n", "    \"type\": \"DATE\",\n", "    \"mode\": \"NULLABLE\"\n", "  }\n", "]\n")),
+			DeletionProtection: pulumi.Bool(false),
+			DatasetId:          source_oneDataset.DatasetId,
+			TableId:            pulumi.String("job_extract_table"),
+			Schema:             pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "[\n", "  {\n", "    \"name\": \"name\",\n", "    \"type\": \"STRING\",\n", "    \"mode\": \"NULLABLE\"\n", "  },\n", "  {\n", "    \"name\": \"post_abbr\",\n", "    \"type\": \"STRING\",\n", "    \"mode\": \"NULLABLE\"\n", "  },\n", "  {\n", "    \"name\": \"date\",\n", "    \"type\": \"DATE\",\n", "    \"mode\": \"NULLABLE\"\n", "  }\n", "]\n")),
 		})
 		if err != nil {
 			return err
@@ -735,6 +749,7 @@ source_one_dataset = gcp.bigquery.Dataset("source-oneDataset",
     description="This is a test description",
     location="US")
 source_one_table = gcp.bigquery.Table("source-oneTable",
+    deletion_protection=False,
     dataset_id=source_one_dataset.dataset_id,
     table_id="job_extract_table",
     schema="""[
@@ -785,6 +800,7 @@ const source_oneDataset = new gcp.bigquery.Dataset("source-oneDataset", {
     location: "US",
 });
 const source_oneTable = new gcp.bigquery.Table("source-oneTable", {
+    deletionProtection: false,
     datasetId: source_oneDataset.datasetId,
     tableId: "job_extract_table",
     schema: `[
