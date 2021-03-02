@@ -15,7 +15,7 @@ hero:
     cta_text: Apply
 
 features:
-    title: Program Features
+    title: Features
     description: |
         The Pulumi Open Source Free Tier provides the Pro Tier of the Pulumi Service at no cost
         to qualifying projects that want a Pulumi managed service with features such as dashboards,
@@ -23,7 +23,7 @@ features:
         25 team members and unlimited project stacks.
 
 requirements:
-    title: Program Requirements
+    title: Requirements
     description: |
         **Not seeking profit** --- Your project must be part of an open source foundation that does
         not seek to make a profit through any means. The organization must be a valid `501(c)(3)`
