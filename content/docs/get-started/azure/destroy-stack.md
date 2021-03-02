@@ -42,12 +42,12 @@ Resources:
 Do you want to perform this destroy? yes
 Destroying (dev):
 
-     Type                                                         Name                     Status
- -   pulumi:pulumi:Stack                                          quickstart-dev           deleted
- -   ├─ azure-native:storage:Blob                                 index.html               deleted
- -   ├─ azure-native:storage:StorageAccountStaticWebsite          staticWebsite            deleted
- -   ├─ azure-native:storage:StorageAccount                       sa                       deleted
- -   └─ azure-native:resources:ResourceGroup                      resourceGroup            deleted
+     Type                                                   Name                Status
+ -   pulumi:pulumi:Stack                                    quickstart-dev      deleted
+ -   ├─ azure-native:storage:Blob                           index.html          deleted
+ -   ├─ azure-native:storage:StorageAccountStaticWebsite    staticWebsite       deleted
+ -   ├─ azure-native:storage:StorageAccount                 sa                  deleted
+ -   └─ azure-native:resources:ResourceGroup                resourceGroup       deleted
 
 Outputs:
   - primaryStorageKey: "<key_value>"
@@ -66,7 +66,7 @@ entirely from the Pulumi Service, along with all of its update history.
 Congratulations! You've successfully provisioned some cloud resources using Pulumi. By completing this guide you have successfully:
 
 - Created a Pulumi new project.
-- Provisioned a new Azure Blob storage account and container.
+- Provisioned a new Azure storage account and container.
 - Added an `index.html` file to your container.
 - Served the `index.html` as a static website.
 - Destroyed the resources you've provisioned.

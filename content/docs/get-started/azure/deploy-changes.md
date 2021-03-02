@@ -23,10 +23,10 @@ Pulumi will run the `preview` step of the update, which computes the minimally d
 ```
 Previewing update (dev):
 
-     Type                                                         Name                     Plan
-     pulumi:pulumi:Stack                                          quickstart-dev
- +   ├─ azure-native:storage:StorageAccountStaticWebsite          staticWebsite            create
- +   └─ azure-native:storage:Blob                                 index.html               create
+     Type                                                   Name                 Plan
+     pulumi:pulumi:Stack                                    quickstart-dev
+ +   ├─ azure-native:storage:StorageAccountStaticWebsite    staticWebsite        create
+ +   └─ azure-native:storage:Blob                           index.html           create
 
 Outputs:
   + staticEndpoint   : "https://sa8dd8af62.z22.web.core.windows.net/"
@@ -47,10 +47,10 @@ Choosing `yes` will proceed with the update by uploading the `index.html` file t
 Do you want to perform this update? yes
 Updating (dev):
 
-     Type                                                         Name                     Status
-     pulumi:pulumi:Stack                                          quickstart-dev
- +   ├─ azure-native:storage:StorageAccountStaticWebsite          staticWebsite            created
- +   └─ azure-native:storage:Blob                                 index.html               created
+     Type                                                   Name                Status
+     pulumi:pulumi:Stack                                    quickstart-dev
+ +   ├─ azure-native:storage:StorageAccountStaticWebsite    staticWebsite       created
+ +   └─ azure-native:storage:Blob                           index.html          created
 
 Outputs:
     primaryStorageKey: "<key_value>"

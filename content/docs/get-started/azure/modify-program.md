@@ -12,7 +12,7 @@ menu:
 aliases: ["/docs/quickstart/azure/modify-program/"]
 ---
 
-Now that your Blob storage account is provisioned, let's add a file to it. First, create a new directory called `site`.
+Now that your storage account is provisioned, let's add a file to it. First, create a new directory called `site`.
 
 ```bash
 mkdir site

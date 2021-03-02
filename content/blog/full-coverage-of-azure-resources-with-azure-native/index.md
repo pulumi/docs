@@ -235,6 +235,8 @@ Note that the Azure resources are not affected by this migration.
 
 ## Getting Started
 
+If you are new to Pulumi, follow our [Get Started]({{< relref "/docs/get-started/azure" >}}) guide.
+
 From now on, the `azure-*` templates will reference the native Azure provider. It's easier to get started than ever:
 
 {{< chooser language "typescript,python,csharp,go" >}}
@@ -268,8 +270,6 @@ $ pulumi new azure-go
 
 {{< /choosable >}}
 {{< /chooser >}}
-
-Over the following days, we will be switching our documentation, tutorials, examples, and getting started guides to default to the native provider for all Azure-related experience.
 
 Several larger examples are available in the Pulumi Examples repo:
 

@@ -37,7 +37,7 @@ Do you want to perform this update?
   details
 ```
 
-Once the preview has finished, you are given three options to choose from. Choosing `details` will show you a rich diff of the changes to be made. Choosing `yes` will create your new Blob storage account in Azure. Choosing `no` will return you to the user prompt without performing the update operation.
+Once the preview has finished, you are given three options to choose from. Choosing `details` will show you a rich diff of the changes to be made. Choosing `yes` will create your new storage account in Azure. Choosing `no` will return you to the user prompt without performing the update operation.
 
 ```
 Do you want to perform this update? yes
