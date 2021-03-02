@@ -1,6 +1,6 @@
 ---
-title: "azure-native"
-title_tag: "azure-native Package"
+title: "Azure Native"
+title_tag: "Azure Native Package"
 meta_desc: "A native Pulumi package for creating and managing Azure resources."
 menu:
     reference:
