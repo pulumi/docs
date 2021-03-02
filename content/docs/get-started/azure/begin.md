@@ -20,7 +20,7 @@ aliases: [
 ]
 ---
 
-Before we get started using Pulumi, let's run through a few quick steps to ensure our environment is setup correctly.
+Before you get started using Pulumi, let's run through a few quick steps to ensure your environment is set up correctly.
 
 ### Install Pulumi
 
@@ -30,15 +30,15 @@ All Windows examples in this tutorial assume you are running in PowerShell.
 {{% /notes %}}
 {{< /install-pulumi >}}
 
-Next, we'll install the required language runtime.
+Next, install the required language runtime, if you have not already.
 
 ### Install Language Runtime
 
 #### Choose Your Language
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% choosable language "javascript,typescript" %}}
+{{% choosable language "typescript" %}}
 {{< install-node >}}
 {{% /choosable %}}
 
@@ -54,12 +54,32 @@ Next, we'll install the required language runtime.
 {{< install-dotnet >}}
 {{% /choosable %}}
 
-Next, we'll configure Azure.
+Finally, configure Pulumi with Microsoft Azure.
 
-### Configure Azure
+### Configure Pulumi to access your Microsoft Azure account
 
-<a href="{{< relref "/docs/intro/cloud-providers/azure/setup" >}}" target="_blank">Configure Azure</a> so the Pulumi CLI can connect to Azure. If you have previously configured the <a href="https://docs.microsoft.com/en-us/cli/azure/" target="_blank">Azure CLI</a>, `az`, Pulumi will respect and use your configuration settings.
+Pulumi requires cloud credentials to manage and provision resources. Pulumi can authenticate to Azure using a user account or service principal that has **Programmatic access** with rights to deploy and manage your Azure resources.
 
-Next, we'll create a new project.
+{{% notes type="info" %}}
+Pulumi relies on the Azure SDK to authenticate requests from your computer to Azure. Your credentials are never sent to pulumi.com.
+{{% /notes %}}
+
+In this guide, you will need a user account with permissions to create and populate Blob storage containers and provide anonymous access to a Blob file.
+
+When developing locally, we recommend that you install the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) and then authorize access with a user account.
+
+```bash
+az login
+```
+
+After successfully logging in, you are ready to go.
+
+{{% notes type="info" %}}
+The Azure CLI, and thus Pulumi, will use the default subscription for the account. You can change the active subscription with the [`az account set`](https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest#az_account_set) command.
+{{% /notes %}}
+
+For additional information on authenticating with Azure, or to login with a service principal, see [Azure Setup]({{< relref "/docs/intro/cloud-providers/azure/setup" >}}).
+
+Next, you'll create a new project.
 
 {{< get-started-stepper >}}
