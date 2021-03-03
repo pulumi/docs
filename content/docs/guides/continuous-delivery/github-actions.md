@@ -93,6 +93,7 @@ jobs:
       - uses: pulumi/actions@v2
         with:
           command: preview
+          stack-name: dev
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 
@@ -133,6 +134,7 @@ jobs:
       - uses: pulumi/actions@v2
         with:
           command: up
+          stack-name: dev
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 ```
@@ -246,6 +248,7 @@ jobs:
       - uses: pulumi/actions@v2
         with:
           command: preview
+          stack-name: dev
           comment-on-pr: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
@@ -294,6 +297,7 @@ jobs:
       - uses: pulumi/actions@v2
         with:
           command: preview
+          stack-name: dev
           comment-on-pr: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           work-dir: infra
@@ -370,6 +374,8 @@ If you previously used GitHub Action v1, the following are changes you should kn
   with:
     node-version: 14.x
 ```
+
+* A `.pulumi\ci.json` file is no longer used for defining stacks for each branch. You need to use `stack-name` as described above. 
 
 For additional examples, see the sample workflows available in our [Actions repository](https://github.com/pulumi/actions/tree/master/.github/workflows).
 
