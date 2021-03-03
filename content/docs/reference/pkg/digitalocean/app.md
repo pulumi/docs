@@ -423,7 +423,7 @@ const mono_repo_example = new digitalocean.App("mono-repo-example", {
             name: "starter-db",
             production: false,
         }],
-        domains: [{
+        domainNames: [{
             name: "foo.example.com",
         }],
         name: "mono-repo-example",
@@ -1398,6 +1398,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appspecdatabase">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>App<wbr>Spec<wbr>Database<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domainnames_csharp">
+<a href="#domainnames_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appspecdomainname">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>App<wbr>Spec<wbr>Domain<wbr>Name<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a domain where the application will be made available.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="domains_csharp">
@@ -1488,6 +1498,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appspecdatabase">[]App<wbr>Spec<wbr>Database</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domainnames_go">
+<a href="#domainnames_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appspecdomainname">[]App<wbr>Spec<wbr>Domain<wbr>Name</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a domain where the application will be made available.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="domains_go">
@@ -1578,6 +1598,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appspecdatabase">App<wbr>Spec<wbr>Database[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domainnames_nodejs">
+<a href="#domainnames_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appspecdomainname">App<wbr>Spec<wbr>Domain<wbr>Name[]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a domain where the application will be made available.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="domains_nodejs">
@@ -1668,6 +1698,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#appspecdatabase">Sequence[App<wbr>Spec<wbr>Database<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domain_names_python">
+<a href="#domain_names_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appspecdomainname">Sequence[App<wbr>Spec<wbr>Domain<wbr>Name<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes a domain where the application will be made available.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="domains_python">
@@ -2038,6 +2078,192 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the database engine.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="appspecdomainname">App<wbr>Spec<wbr>Domain<wbr>Name</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the component.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="wildcard_csharp">
+<a href="#wildcard_csharp" style="color: inherit; text-decoration: inherit;">Wildcard</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean indicating whether the domain includes all sub-domains, in addition to the given domain.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the domain uses DigitalOcean DNS and you would like App Platform to automatically manage it for you, set this to the name of the domain on your account.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the component.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="wildcard_go">
+<a href="#wildcard_go" style="color: inherit; text-decoration: inherit;">Wildcard</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean indicating whether the domain includes all sub-domains, in addition to the given domain.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the domain uses DigitalOcean DNS and you would like App Platform to automatically manage it for you, set this to the name of the domain on your account.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the component.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="wildcard_nodejs">
+<a href="#wildcard_nodejs" style="color: inherit; text-decoration: inherit;">wildcard</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A boolean indicating whether the domain includes all sub-domains, in addition to the given domain.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the domain uses DigitalOcean DNS and you would like App Platform to automatically manage it for you, set this to the name of the domain on your account.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the component.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="wildcard_python">
+<a href="#wildcard_python" style="color: inherit; text-decoration: inherit;">wildcard</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A boolean indicating whether the domain includes all sub-domains, in addition to the given domain.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If the domain uses DigitalOcean DNS and you would like App Platform to automatically manage it for you, set this to the name of the domain on your account.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
