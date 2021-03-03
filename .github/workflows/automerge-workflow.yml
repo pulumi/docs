@@ -1,5 +1,6 @@
 jobs:
   automerge:
+    if: github.event.pull_request.head.repo.full_name == github.repository
     name: Automerge Workflow
     runs-on: ubuntu-18.04
     steps:
