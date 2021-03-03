@@ -1,7 +1,5 @@
 // Neon Animation found on Codepen
 // https://codepen.io/Trinca/pen/NAvpWa
-@import url(//fonts.googleapis.com/css?family=Vibur);
-
 $pageBackgroundColor: #11151c;
 
 $lightOrange: theme('colors.orange.400');
@@ -103,45 +101,4 @@ $veryDarkOrange: theme('colors.orange.900');
 
 .pulumi-up-body {
     background-color: $pageBackgroundColor;
-}
-
-%dialog-box {
-  border-radius: 1em;
-  color: $white;
-  margin: 5% auto;
-  padding: 2em;
-  position: relative;
-  width: 95%;
-
-  &:before {
-    background: $pageBackgroundColor;
-    content: attr(data-title);
-    left: 50%;
-    padding: 0 1em;
-    position: absolute;
-    text-transform: uppercase;
-    top: -0.6em;
-    text-align: center;
-    transform: translateX(-50%);
-  }
-}
-
-@mixin dialog-box ($color: #05d5fc){
-  @extend %dialog-box;
-  font-size: 1.3rem;
-  border: 0.2em solid $color;
-  box-shadow:
-    inset 0 0 0.4em $color,
-    0 0 0.4em $color;
-
-  &:before {
-    //border-left: 0.2em solid $color;
-    //border-right: 0.2em solid $color;
-    color: $lightOrange;
-    text-shadow: 0 0 0.4em $lightOrange;
-  }
-}
-
-.dialog-box_purple {
-  @include dialog-box(theme('colors.purple.400'));
 }
