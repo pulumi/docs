@@ -1,7 +1,7 @@
 jobs:
   automerge:
     name: Automerge Workflow
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - env:
           GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}

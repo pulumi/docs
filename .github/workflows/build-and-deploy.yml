@@ -11,7 +11,7 @@ jobs:
     env:
       GOPATH: ${{ github.workspace }}
     name: Install deps and build site
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
 
       - uses: actions/checkout@v2
