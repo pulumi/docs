@@ -62,7 +62,10 @@ var green = await WorkspaceStack.SelectAsync("green", workspace);
 await green.UpAsync();
 
 // do your cutover to "green" logic
+// and then teardown "blue"
 
 var blue = await WorkspaceStack.SelectAsync("blue", workspace);
 await blue.DestroyAsync();
 ```
+
+See the full Automation API examples in [C#](https://github.com/pulumi/automation-api-examples/tree/main/dotnet).
