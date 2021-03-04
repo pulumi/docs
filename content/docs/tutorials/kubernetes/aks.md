@@ -31,7 +31,7 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
     This installs the dependent packages [needed]({{< relref "/docs/intro/concepts/how-pulumi-works" >}}) for our Pulumi program.
 
 	```bash
-	$ pip install pulumi pulumi_azure pulumi_kubernetes
+	$ pip install pulumi pulumi-azure pulumi-azuread pulumi-kubernetes
 	```
 
 1. Configure the Pulumi settings for the project:
@@ -60,7 +60,7 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
     from pulumi import ResourceOptions
     from pulumi_azure.core import ResourceGroup
     from pulumi_azure.role import Assignment
-    from pulumi_azure.ad import Application, ServicePrincipal, ServicePrincipalPassword
+    from pulumi_azuread import Application, ServicePrincipal, ServicePrincipalPassword
     from pulumi_azure.containerservice import KubernetesCluster, Registry
     from pulumi_azure.network import VirtualNetwork, Subnet
     from pulumi_kubernetes import Provider
