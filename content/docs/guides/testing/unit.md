@@ -331,21 +331,19 @@ pulumi.runtime.setMocks({
 });
 
 describe("Infrastructure", function() {
-    let infra: typeof import('../index');
+    let infra: typeof import("../index");
 
     before(async function() {
         // It's important to import the program _after_ the mocks are defined.
-        infra = await import('../index');
+        infra = await import("../index");
     })
 
     describe("#server", function() {
-        const server = infra.server;
         // TODO(check 1): Instances have a Name tag.
         // TODO(check 2): Instances must not use an inline userData script.
     });
 
     describe("#group", function() {
-        const group = infra.group;
         // TODO(check 3): Instances must not have SSH open to the Internet.
     });
 });
@@ -444,7 +442,7 @@ Now let's implement our first test: ensuring that instances have a `Name` tag. T
 ```typescript
 // check 1: Instances have a Name tag.
 it("must have a name tag", function(done) {
-    pulumi.all([server.urn, server.tags]).apply(([urn, tags]) => {
+    pulumi.all([infra.server.urn, infra.server.tags]).apply(([urn, tags]) => {
         if (!tags || !tags["Name"]) {
             done(new Error(`Missing a name tag on server ${urn}`));
         } else {
@@ -520,7 +518,7 @@ Now let's write our second check to assert that `userdata` property is empty:
 ```typescript
 // check 2: Instances must not use an inline userData script.
 it("must not use userData (use an AMI instead)", function(done) {
-    pulumi.all([server.urn, server.userData]).apply(([urn, userData]) => {
+    pulumi.all([infra.server.urn, infra.server.userData]).apply(([urn, userData]) => {
         if (userData) {
             done(new Error(`Illegal use of userData on server ${urn}`));
         } else {
@@ -586,7 +584,7 @@ And finally, let's write our third check. It’s a bit more complex because we'r
 ```typescript
 // check 3: Instances must not have SSH open to the Internet.
 it("must not open port 22 (SSH) to the Internet", function(done) {
-    pulumi.all([ group.urn, group.ingress ]).apply(([ urn, ingress ]) => {
+    pulumi.all([infra.group.urn, infra.group.ingress]).apply(([ urn, ingress ]) => {
         if (ingress.find(rule =>
             rule.fromPort === 22 && (rule.cidrBlocks || []).find(block => block === "0.0.0.0/0"))) {
                 done(new Error(`Illegal SSH port 22 open to the Internet (CIDR 0.0.0.0/0) on group ${urn}`));
