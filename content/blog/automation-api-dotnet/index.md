@@ -51,10 +51,10 @@ using var stack = await LocalWorkspace.CreateOrSelectStackAsync(stackArgs);
 await stack.UpAsync();
 ```
 
-Since the Automation API can be invoked and debugged like any other code, it enables you to put together complex deployment workflows such as a blue-green deployment model.
+Since the Automation API can be invoked and debugged like any other code, it enables you to put together complex deployment workflows such as a blue-green deployment model:
 
 ```csharp
-var workspace = await LocalWorkspace.CreateAsync(new LocalWorkspaceOptions
+using var workspace = await LocalWorkspace.CreateAsync(new LocalWorkspaceOptions
 {
     Program = PulumiFn.Create<ApplicationStack>(), // use your existing Pulumi.Stack implementation
     ProjectSettings = new ProjectSettings("projectName", ProjectRuntimeName.Dotnet),
