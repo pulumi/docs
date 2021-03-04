@@ -1,9 +1,9 @@
 ---
 title: "Supercharging our GitHub Action with the Automation API"
-authors: 
+authors:
   - paul-stack
   - simen-a-w-olsen
-tags: 
+tags:
   - github-actions
   - automation-api
 date: "2021-03-01"
@@ -72,7 +72,7 @@ const main = async () => {
       return stdout;
     },
   };
-  
+
   const output = await actions[config.command]();
 
   const outputs = await stack.outputs();
@@ -182,9 +182,9 @@ with AWS / Azure / Google Cloud, you can now use their official Actions:
 {{< /choosable >}}
 
 We recommend that you store all sensitive environment variables, like cloud credentials, in the
-Actions [secret storage](https://developer.github.com/actions/creating-workflows/storing-secrets/)
+Actions [secret storage](https://docs.github.com/en/actions/reference/encrypted-secrets/)
 and consume them using
-[the `secrets` attribute](https://developer.github.com/actions/creating-workflows/workflow-configuration-options/#actions-attributes)
+[the `secrets` attribute](https://docs.github.com/en/actions/reference/encrypted-secrets#using-encrypted-secrets-in-a-workflow)
 on your workflow's action.
 
 ### Faster
