@@ -1,4 +1,4 @@
-# Community Repos, Libraries, Components, Projects, etc
+# Community Code
 
 Here is a curated list of community created repositories, libraries, components, projects, and code. If you believe something is missing, send us a pull request. 
 
