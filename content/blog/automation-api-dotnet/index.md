@@ -5,6 +5,7 @@ meta_desc: "C# developers can programmatically build infrastructure (with out a 
 meta_image: automation_api.png
 authors:
 - joshua-studt
+- sophia-parafina
 tags:
 - Automation API
 - C#
