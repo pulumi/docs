@@ -202,7 +202,7 @@ const docsHandlerFunc = new aws.lambda.Function("docsHandlerFunc", {
 });
 
 // Finally, register the Lambda to fire when a new Object arrives:
-docs.onObjectCreated("docsHandler", docsHandlerFunc);
+docsBucket.onObjectCreated("docsHandler", docsHandlerFunc);
 ```
 
 Any of [the supported Lambda runtimes](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html) can be used,

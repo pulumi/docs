@@ -137,7 +137,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Cloud Run Service.
+    <dd>{{% md %}}The name of the Runtime Configurator configuration.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -164,7 +164,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Cloud Run Service.
+    <dd>{{% md %}}The name of the Runtime Configurator configuration.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -191,7 +191,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Cloud Run Service.
+    <dd>{{% md %}}The name of the Runtime Configurator configuration.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -218,7 +218,7 @@ is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Cloud Run Service.
+    <dd>{{% md %}}The name of the Runtime Configurator configuration.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

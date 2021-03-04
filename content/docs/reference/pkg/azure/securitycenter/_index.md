@@ -12,6 +12,7 @@ Explore the resources and functions of the azure.securitycenter module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="advancedthreatprotection" title="AdvancedThreatProtection"><span class="symbol resource"></span>AdvancedThreatProtection</a></li>
+    <li><a href="assessmentmetadata" title="AssessmentMetadata"><span class="symbol resource"></span>AssessmentMetadata</a></li>
     <li><a href="autoprovisioning" title="AutoProvisioning"><span class="symbol resource"></span>AutoProvisioning</a></li>
     <li><a href="automation" title="Automation"><span class="symbol resource"></span>Automation</a></li>
     <li><a href="contact" title="Contact"><span class="symbol resource"></span>Contact</a></li>
@@ -29,6 +30,6 @@ Explore the resources and functions of the azure.securitycenter module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.48.0</dd>
+	<dd>3.49.0</dd>
 </dl>
 

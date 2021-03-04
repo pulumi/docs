@@ -3630,6 +3630,15 @@ Conflicts with `query_file_uri`
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="maxfailurestotal_csharp">
+<a href="#maxfailurestotal_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Failures<wbr>Total</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3640,6 +3649,15 @@ Conflicts with `query_file_uri`
             title="Required">
         <span id="maxfailuresperhour_go">
 <a href="#maxfailuresperhour_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Failures<wbr>Per<wbr>Hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="maxfailurestotal_go">
+<a href="#maxfailurestotal_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Failures<wbr>Total</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -3660,6 +3678,15 @@ Conflicts with `query_file_uri`
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="maxfailurestotal_nodejs">
+<a href="#maxfailurestotal_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Failures<wbr>Total</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3670,6 +3697,15 @@ Conflicts with `query_file_uri`
             title="Required">
         <span id="max_failures_per_hour_python">
 <a href="#max_failures_per_hour_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failures_<wbr>per_<wbr>hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="max_failures_total_python">
+<a href="#max_failures_total_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failures_<wbr>total</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>

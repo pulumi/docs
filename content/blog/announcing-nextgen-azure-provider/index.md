@@ -9,6 +9,10 @@ tags:
    - azure
 ---
 
+{{% notes type="info" %}}
+The next-generation Azure provider is now [Azure-Native]({{< relref "/blog/full-coverage-of-azure-resources-with-azure-native" >}}).
+{{% /notes %}}
+
 We are excited to announce the beta release of a next generation Microsoft Azure provider for Pulumi. Azure has been a rapidly growing cloud platform among Pulumi users over the last year, and with the next generation Azure provider, we are doubling down on providing the best support possible for the Azure platform in Pulumi. We designed the new provider to expose the entire API surface of Azure to developers and operators, now and forever.
 
 The new Azure provider for Pulumi (`azure-nextgen`) works directly with the Azure Resource Manager (ARM) platform instead of depending on a handwritten layer as with the previous provider. This approach ensures higher quality and higher fidelity with the Azure platform.
@@ -239,9 +243,9 @@ $ pulumi new azure-nextgen-go
 
 Several larger examples are available in the Pulumi Examples repo:
 
-- Web Applications with Azure App Service and Docker: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-nextgen-ts-appservice-docker), [C#](https://github.com/pulumi/examples/tree/master/azure-nextgen-cs-appservice-docker), [Python](https://github.com/pulumi/examples/tree/master/azure-nextgen-py-appservice-docker), [Go](https://github.com/pulumi/examples/tree/master/azure-nextgen-go-appservice-docker)
-- Azure AKS cluster: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-nextgen-ts-aks), [C#](https://github.com/pulumi/examples/tree/master/azure-nextgen-cs-aks), [Python](https://github.com/pulumi/examples/tree/master/azure-nextgen-py-aks), [Go](https://github.com/pulumi/examples/tree/master/azure-nextgen-go-aks)
-- Web Application with Azure Container Instances: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-nextgen-ts-aci), [C#](https://github.com/pulumi/examples/tree/master/azure-nextgen-cs-aci), [Python](https://github.com/pulumi/examples/tree/master/azure-nextgen-py-aci), [Go](https://github.com/pulumi/examples/tree/master/azure-nextgen-go-aci)
-- Web Server Using Azure Virtual Machine: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-nextgen-ts-webserver), [Python](https://github.com/pulumi/examples/tree/master/azure-nextgen-py-webserver)
+- Web Applications with Azure App Service and Docker: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-appservice-docker), [C#](https://github.com/pulumi/examples/tree/master/azure-cs-appservice-docker), [Python](https://github.com/pulumi/examples/tree/master/azure-py-appservice-docker), [Go](https://github.com/pulumi/examples/tree/master/azure-go-appservice-docker)
+- Azure AKS cluster: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-aks), [C#](https://github.com/pulumi/examples/tree/master/azure-cs-aks), [Python](https://github.com/pulumi/examples/tree/master/azure-py-aks), [Go](https://github.com/pulumi/examples/tree/master/azure-go-aks)
+- Web Application with Azure Container Instances: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-aci), [C#](https://github.com/pulumi/examples/tree/master/azure-cs-aci), [Python](https://github.com/pulumi/examples/tree/master/azure-py-aci), [Go](https://github.com/pulumi/examples/tree/master/azure-go-aci)
+- Web Server Using Azure Virtual Machine: [TypeScript](https://github.com/pulumi/examples/tree/master/azure-ts-webserver), [Python](https://github.com/pulumi/examples/tree/master/azure-py-webserver)
 
 You can browse [API reference docs](https://www.pulumi.com/docs/reference/pkg/azure-nextgen/) with inline examples or explore the [Pulumi Azure NextGen SDKs](https://github.com/pulumi/pulumi-azure-nextgen) repository.

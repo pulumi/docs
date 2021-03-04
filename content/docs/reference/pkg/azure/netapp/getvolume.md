@@ -327,6 +327,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="dataprotectionreplications_csharp">
+<a href="#dataprotectionreplications_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Protection<wbr>Replications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvolumedataprotectionreplication">List&lt;Get<wbr>Volume<wbr>Data<wbr>Protection<wbr>Replication&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -444,6 +453,15 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="dataprotectionreplications_go">
+<a href="#dataprotectionreplications_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Protection<wbr>Replications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvolumedataprotectionreplication">[]Get<wbr>Volume<wbr>Data<wbr>Protection<wbr>Replication</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -569,6 +587,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="dataprotectionreplications_nodejs">
+<a href="#dataprotectionreplications_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Protection<wbr>Replications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvolumedataprotectionreplication">Get<wbr>Volume<wbr>Data<wbr>Protection<wbr>Replication[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -690,6 +717,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="data_protection_replications_python">
+<a href="#data_protection_replications_python" style="color: inherit; text-decoration: inherit;">data_<wbr>protection_<wbr>replications</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvolumedataprotectionreplication">Sequence[Get<wbr>Volume<wbr>Data<wbr>Protection<wbr>Replication]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -794,6 +830,184 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The unique file path of the volume.
 {{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+
+
+
+## Supporting Types
+
+
+<h4 id="getvolumedataprotectionreplication">Get<wbr>Volume<wbr>Data<wbr>Protection<wbr>Replication</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpointtype_csharp">
+<a href="#endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="remotevolumelocation_csharp">
+<a href="#remotevolumelocation_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Volume<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="remotevolumeresourceid_csharp">
+<a href="#remotevolumeresourceid_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Volume<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="replicationschedule_csharp">
+<a href="#replicationschedule_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpointtype_go">
+<a href="#endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="remotevolumelocation_go">
+<a href="#remotevolumelocation_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Volume<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="remotevolumeresourceid_go">
+<a href="#remotevolumeresourceid_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Volume<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="replicationschedule_go">
+<a href="#replicationschedule_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpointtype_nodejs">
+<a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="remotevolumelocation_nodejs">
+<a href="#remotevolumelocation_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Volume<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="remotevolumeresourceid_nodejs">
+<a href="#remotevolumeresourceid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Volume<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="replicationschedule_nodejs">
+<a href="#replicationschedule_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="endpoint_type_python">
+<a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="remote_volume_location_python">
+<a href="#remote_volume_location_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>volume_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="remote_volume_resource_id_python">
+<a href="#remote_volume_resource_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>volume_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="replication_schedule_python">
+<a href="#replication_schedule_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

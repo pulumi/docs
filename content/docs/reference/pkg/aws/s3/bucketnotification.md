@@ -37,7 +37,7 @@ class MyStack : Stack
     ""Version"":""2012-10-17"",
     ""Statement"":[{{
         ""Effect"": ""Allow"",
-        ""Principal"": {{""AWS"":""*""}},
+        ""Principal"": {{ ""Service"": ""s3.amazonaws.com"" }},
         ""Action"": ""SNS:Publish"",
         ""Resource"": ""arn:aws:sns:*:*:s3-event-notification-topic"",
         ""Condition"":{{
@@ -90,7 +90,7 @@ func main() {
 		}
 		topic, err := sns.NewTopic(ctx, "topic", &sns.TopicArgs{
 			Policy: bucket.Arn.ApplyT(func(arn string) (string, error) {
-				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\":\"2012-10-17\",\n", "    \"Statement\":[{\n", "        \"Effect\": \"Allow\",\n", "        \"Principal\": {\"AWS\":\"*\"},\n", "        \"Action\": \"SNS:Publish\",\n", "        \"Resource\": \"arn:aws:sns:*:*:s3-event-notification-topic\",\n", "        \"Condition\":{\n", "            \"ArnLike\":{\"aws:SourceArn\":\"", arn, "\"}\n", "        }\n", "    }]\n", "}\n"), nil
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "    \"Version\":\"2012-10-17\",\n", "    \"Statement\":[{\n", "        \"Effect\": \"Allow\",\n", "        \"Principal\": { \"Service\": \"s3.amazonaws.com\" },\n", "        \"Action\": \"SNS:Publish\",\n", "        \"Resource\": \"arn:aws:sns:*:*:s3-event-notification-topic\",\n", "        \"Condition\":{\n", "            \"ArnLike\":{\"aws:SourceArn\":\"", arn, "\"}\n", "        }\n", "    }]\n", "}\n"), nil
 			}).(pulumi.StringOutput),
 		})
 		if err != nil {
@@ -128,7 +128,7 @@ topic = aws.sns.Topic("topic", policy=bucket.arn.apply(lambda arn: f"""{{
     "Version":"2012-10-17",
     "Statement":[{{
         "Effect": "Allow",
-        "Principal": {{"AWS":"*"}},
+        "Principal": {{ "Service": "s3.amazonaws.com" }},
         "Action": "SNS:Publish",
         "Resource": "arn:aws:sns:*:*:s3-event-notification-topic",
         "Condition":{{
@@ -159,7 +159,7 @@ const topic = new aws.sns.Topic("topic", {policy: pulumi.interpolate`{
     "Version":"2012-10-17",
     "Statement":[{
         "Effect": "Allow",
-        "Principal": {"AWS":"*"},
+        "Principal": { "Service": "s3.amazonaws.com" },
         "Action": "SNS:Publish",
         "Resource": "arn:aws:sns:*:*:s3-event-notification-topic",
         "Condition":{

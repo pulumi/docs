@@ -38,7 +38,7 @@ Snowflake’s success meant they needed to make some large-scale changes to thei
 
 The complexity and scale of this change were daunting. Each cloud provider does things differently and Snowflake’s architecture is made up of more than a dozen components that must both seamlessly support those differences and work in concert with each other. There is a great deal of intraservice communication and the requirements for data security are high.
 
-However, to make life even more interesting, all deployments had to be completed in three months Because Snowflake wanted to unveil its new platform at its company-wide annual conference.
+However, to make life even more interesting, all deployments had to be completed in three months because Snowflake wanted to unveil its new platform at its company-wide annual conference.
 
 The complexity of the project, along with the tight deadline, meant that the Snowflake cloud engineering team had to ask themselves if the tools they were currently using could do the job or was it time for a change?
 
@@ -70,4 +70,4 @@ Changing what you use to write your software is a big decision but Snowflake fou
 
 ## Next Steps
 
-Snowflake has big plans for the future and Pulumi is a part of them. One initiative is to leverage Pulumi to expand their support for GCP. Given the scale of their multi-cloud, multi-region environments, security and automation are two strategic investment areas. Snowflake plans to  use Pulumi to help manage this complexity and streamline deployments: “We’re looking forward to using Pulumi CrossGuard to apply security policies to protect our stacks and the new ‘nextgen’ Pulumi Azure Provider is going to be a huge timesaver for us as well because it automatically supports all the latest Azure features,” says Jonas-Taha El Sesiy. “Beyond that, we’re investing a lot in testability and using the Automation API for infrastructure so we can move to more of a GitOps model, and Pulumi will play a huge role in enabling that too.”
+Snowflake has big plans for the future and Pulumi is a part of them. One initiative is to leverage Pulumi to expand their support for GCP. Given the scale of their multi-cloud, multi-region environments, security and automation are two strategic investment areas. Snowflake plans to  use Pulumi to help manage this complexity and streamline deployments: “We’re looking forward to using Pulumi CrossGuard to apply security policies to protect our stacks and the new native Pulumi Azure provider is going to be a huge timesaver for us as well because it automatically supports all the latest Azure features,” says Jonas-Taha El Sesiy. “Beyond that, we’re investing a lot in testability and using the Automation API for infrastructure so we can move to more of a GitOps model, and Pulumi will play a huge role in enabling that too.”

@@ -30,6 +30,6 @@ Explore the resources and functions of the gcp.cloudidentity module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.12.0</dd>
+	<dd>4.13.0</dd>
 </dl>
 

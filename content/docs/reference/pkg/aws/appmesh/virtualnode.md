@@ -2324,7 +2324,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the policy is enforced. Default is `true`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ports_csharp">
@@ -2359,7 +2360,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the policy is enforced. Default is `true`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ports_go">
@@ -2394,7 +2396,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the policy is enforced. Default is `true`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ports_nodejs">
@@ -2429,7 +2432,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the policy is enforced. Default is `true`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ports_python">
@@ -2942,7 +2946,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the policy is enforced. Default is `true`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ports_csharp">
@@ -2977,7 +2982,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the policy is enforced. Default is `true`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ports_go">
@@ -3012,7 +3018,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the policy is enforced. Default is `true`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ports_nodejs">
@@ -3047,7 +3054,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Whether the policy is enforced. Default is `true`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ports_python">

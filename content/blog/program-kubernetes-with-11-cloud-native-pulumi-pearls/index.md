@@ -337,7 +337,7 @@ usual way:
 ![deploy-1](./deploy-1.gif)
 
 An even more exciting example that highlights mixing cloud resources
-alongside a Helm Chart, check out [our example](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean)
+alongside a Helm Chart, check out [our example](https://github.com/pulumi/examples/tree/master/classic-azure-ts-aks-mean)
 that creates a MEAN stack that uses Azure CosmosDB as the storage layer
 for an otherwise ordinary Helm Chart, alleviating the burden of needing
 to worry about persistent volumes, stateful services, and the associated
@@ -507,7 +507,7 @@ functioning GKE cluster with a canary deployment up and running:
 
 In addition to the GKE example, our examples repo also has fully
 functioning examples for doing the same thing with
-[Azure's AKS](https://github.com/pulumi/examples/tree/master/azure-ts-aks-helm)
+[Azure's AKS](https://github.com/pulumi/examples/tree/master/classic-azure-ts-aks-helm)
 and [AWS's EKS](https://github.com/pulumi/examples/tree/master/aws-ts-eks). A
 Kubernetes cluster for everybody!
 

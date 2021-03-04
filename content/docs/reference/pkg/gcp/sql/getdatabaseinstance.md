@@ -2248,6 +2248,15 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="insightsconfigs_csharp">
+<a href="#insightsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Insights<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettinginsightsconfig">List&lt;Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Insights<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="ipconfigurations_csharp">
 <a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span>
@@ -2423,6 +2432,15 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
     </dt>
     <dd>{{% md %}}The type of data disk.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="insightsconfigs_go">
+<a href="#insightsconfigs_go" style="color: inherit; text-decoration: inherit;">Insights<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettinginsightsconfig">[]Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Insights<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="ipconfigurations_go">
@@ -2602,6 +2620,15 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="insightsconfigs_nodejs">
+<a href="#insightsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">insights<wbr>Configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettinginsightsconfig">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Insights<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="ipconfigurations_nodejs">
 <a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
 </span>
@@ -2777,6 +2804,15 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
     </dt>
     <dd>{{% md %}}The type of data disk.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="insights_configs_python">
+<a href="#insights_configs_python" style="color: inherit; text-decoration: inherit;">insights_<wbr>configs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatabaseinstancesettinginsightsconfig">Sequence[Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Insights<wbr>Config<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="ip_configurations_python">
@@ -3181,6 +3217,194 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A CIDR notation IPv4 or IPv6 address that is allowed to access this instance.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getdatabaseinstancesettinginsightsconfig">Get<wbr>Database<wbr>Instance<wbr>Setting<wbr>Insights<wbr>Config</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="queryinsightsenabled_csharp">
+<a href="#queryinsightsenabled_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Insights<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}True if Query Insights feature is enabled.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="querystringlength_csharp">
+<a href="#querystringlength_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="recordapplicationtags_csharp">
+<a href="#recordapplicationtags_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Application<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}True if Query Insights will record application tags from query when enabled.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="recordclientaddress_csharp">
+<a href="#recordclientaddress_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Client<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}True if Query Insights will record client address when enabled.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="queryinsightsenabled_go">
+<a href="#queryinsightsenabled_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Insights<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}True if Query Insights feature is enabled.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="querystringlength_go">
+<a href="#querystringlength_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="recordapplicationtags_go">
+<a href="#recordapplicationtags_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Application<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}True if Query Insights will record application tags from query when enabled.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="recordclientaddress_go">
+<a href="#recordclientaddress_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Client<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}True if Query Insights will record client address when enabled.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="queryinsightsenabled_nodejs">
+<a href="#queryinsightsenabled_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Insights<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}True if Query Insights feature is enabled.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="querystringlength_nodejs">
+<a href="#querystringlength_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="recordapplicationtags_nodejs">
+<a href="#recordapplicationtags_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Application<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}True if Query Insights will record application tags from query when enabled.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="recordclientaddress_nodejs">
+<a href="#recordclientaddress_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Client<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}True if Query Insights will record client address when enabled.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="query_insights_enabled_python">
+<a href="#query_insights_enabled_python" style="color: inherit; text-decoration: inherit;">query_<wbr>insights_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}True if Query Insights feature is enabled.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="query_string_length_python">
+<a href="#query_string_length_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>length</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="record_application_tags_python">
+<a href="#record_application_tags_python" style="color: inherit; text-decoration: inherit;">record_<wbr>application_<wbr>tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}True if Query Insights will record application tags from query when enabled.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="record_client_address_python">
+<a href="#record_client_address_python" style="color: inherit; text-decoration: inherit;">record_<wbr>client_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}True if Query Insights will record client address when enabled.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

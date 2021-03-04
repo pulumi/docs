@@ -39,6 +39,11 @@ Explore the resources and functions of the gcp.iap module.
     <li><a href="webtypecomputeiampolicy" title="WebTypeComputeIamPolicy"><span class="symbol resource"></span>WebTypeComputeIamPolicy</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getclient" title="GetClient"><span class="symbol function"></span>GetClient</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -48,6 +53,6 @@ Explore the resources and functions of the gcp.iap module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.12.0</dd>
+	<dd>4.13.0</dd>
 </dl>
 

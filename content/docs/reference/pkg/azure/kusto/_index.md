@@ -19,6 +19,7 @@ Explore the resources and functions of the azure.kusto module.
     <li><a href="databaseprincipal" title="DatabasePrincipal"><span class="symbol resource"></span>DatabasePrincipal</a></li>
     <li><a href="databaseprincipalassignment" title="DatabasePrincipalAssignment"><span class="symbol resource"></span>DatabasePrincipalAssignment</a></li>
     <li><a href="eventhubdataconnection" title="EventhubDataConnection"><span class="symbol resource"></span>EventhubDataConnection</a></li>
+    <li><a href="iothubdataconnection" title="IotHubDataConnection"><span class="symbol resource"></span>IotHubDataConnection</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -35,6 +36,6 @@ Explore the resources and functions of the azure.kusto module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.48.0</dd>
+	<dd>3.49.0</dd>
 </dl>
 

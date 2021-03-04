@@ -19,6 +19,8 @@ Provides a resource to create an AWS Firewall Manager policy. You need to be usi
 
 {{% example csharp %}}
 ```csharp
+using System.Collections.Generic;
+using System.Text.Json;
 using Pulumi;
 using Aws = Pulumi.Aws;
 
@@ -26,11 +28,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var test = new Aws.WafRegional.RuleGroup("test", new Aws.WafRegional.RuleGroupArgs
+        var exampleRuleGroup = new Aws.WafRegional.RuleGroup("exampleRuleGroup", new Aws.WafRegional.RuleGroupArgs
         {
             MetricName = "WAFRuleGroupExample",
         });
-        var example = new Aws.Fms.Policy("example", new Aws.Fms.PolicyArgs
+        var examplePolicy = new Aws.Fms.Policy("examplePolicy", new Aws.Fms.PolicyArgs
         {
             ExcludeResourceTags = false,
             RemediationEnabled = false,
@@ -40,24 +42,28 @@ class MyStack : Stack
             },
             SecurityServicePolicyData = new Aws.Fms.Inputs.PolicySecurityServicePolicyDataArgs
             {
-                ManagedServiceData = test.Id.Apply(id => @$"      {{
-        ""type"": ""WAF"",
-        ""ruleGroups"":
-          [{{
-            ""id"":""{id}"",
-            ""overrideAction"" : {{
-              ""type"": ""COUNT""
-            }}
-          }}],
-        ""defaultAction"":
-        {{
-          ""type"": ""BLOCK""
-        }},
-        ""overrideCustomerWebACLAssociation"": false
-      }}
-
-"),
                 Type = "WAF",
+                ManagedServiceData = exampleRuleGroup.Id.Apply(id => JsonSerializer.Serialize(new Dictionary<string, object?>
+                {
+                    { "type", "WAF" },
+                    { "ruleGroups", new[]
+                        {
+                            new Dictionary<string, object?>
+                            {
+                                { "id", id },
+                                { "overrideAction", new Dictionary<string, object?>
+                                {
+                                    { "type", "COUNT" },
+                                } },
+                            },
+                        }
+                     },
+                    { "defaultAction", new Dictionary<string, object?>
+                    {
+                        { "type", "BLOCK" },
+                    } },
+                    { "overrideCustomerWebACLAssociation", false },
+                })),
             },
         });
     }
@@ -72,7 +78,7 @@ class MyStack : Stack
 package main
 
 import (
-	"fmt"
+	"encoding/json"
 
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/fms"
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/wafregional"
@@ -81,23 +87,43 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		test, err := wafregional.NewRuleGroup(ctx, "test", &wafregional.RuleGroupArgs{
+		exampleRuleGroup, err := wafregional.NewRuleGroup(ctx, "exampleRuleGroup", &wafregional.RuleGroupArgs{
 			MetricName: pulumi.String("WAFRuleGroupExample"),
 		})
 		if err != nil {
 			return err
 		}
-		_, err = fms.NewPolicy(ctx, "example", &fms.PolicyArgs{
+		_, err = fms.NewPolicy(ctx, "examplePolicy", &fms.PolicyArgs{
 			ExcludeResourceTags: pulumi.Bool(false),
 			RemediationEnabled:  pulumi.Bool(false),
 			ResourceTypeLists: pulumi.StringArray{
 				pulumi.String("AWS::ElasticLoadBalancingV2::LoadBalancer"),
 			},
 			SecurityServicePolicyData: &fms.PolicySecurityServicePolicyDataArgs{
-				ManagedServiceData: test.ID().ApplyT(func(id string) (string, error) {
-					return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "      {\n", "        \"type\": \"WAF\",\n", "        \"ruleGroups\":\n", "          [{\n", "            \"id\":\"", id, "\",\n", "            \"overrideAction\" : {\n", "              \"type\": \"COUNT\"\n", "            }\n", "          }],\n", "        \"defaultAction\":\n", "        {\n", "          \"type\": \"BLOCK\"\n", "        },\n", "        \"overrideCustomerWebACLAssociation\": false\n", "      }\n", "\n"), nil
-				}).(pulumi.StringOutput),
 				Type: pulumi.String("WAF"),
+				ManagedServiceData: exampleRuleGroup.ID().ApplyT(func(id string) (pulumi.String, error) {
+					var _zero pulumi.String
+					tmpJSON0, err := json.Marshal(map[string]interface{}{
+						"type": "WAF",
+						"ruleGroups": []map[string]interface{}{
+							map[string]interface{}{
+								"id": id,
+								"overrideAction": map[string]interface{}{
+									"type": "COUNT",
+								},
+							},
+						},
+						"defaultAction": map[string]interface{}{
+							"type": "BLOCK",
+						},
+						"overrideCustomerWebACLAssociation": false,
+					})
+					if err != nil {
+						return _zero, err
+					}
+					json0 := string(tmpJSON0)
+					return pulumi.String(json0), nil
+				}).(pulumi.StringOutput),
 			},
 		})
 		if err != nil {
@@ -113,32 +139,29 @@ func main() {
 {{% example python %}}
 ```python
 import pulumi
+import json
 import pulumi_aws as aws
 
-test = aws.wafregional.RuleGroup("test", metric_name="WAFRuleGroupExample")
-example = aws.fms.Policy("example",
+example_rule_group = aws.wafregional.RuleGroup("exampleRuleGroup", metric_name="WAFRuleGroupExample")
+example_policy = aws.fms.Policy("examplePolicy",
     exclude_resource_tags=False,
     remediation_enabled=False,
     resource_type_lists=["AWS::ElasticLoadBalancingV2::LoadBalancer"],
     security_service_policy_data=aws.fms.PolicySecurityServicePolicyDataArgs(
-        managed_service_data=test.id.apply(lambda id: f"""      {{
-        "type": "WAF",
-        "ruleGroups":
-          [{{
-            "id":"{id}",
-            "overrideAction" : {{
-              "type": "COUNT"
-            }}
-          }}],
-        "defaultAction":
-        {{
-          "type": "BLOCK"
-        }},
-        "overrideCustomerWebACLAssociation": false
-      }}
-
-"""),
         type="WAF",
+        managed_service_data=example_rule_group.id.apply(lambda id: json.dumps({
+            "type": "WAF",
+            "ruleGroups": [{
+                "id": id,
+                "overrideAction": {
+                    "type": "COUNT",
+                },
+            }],
+            "defaultAction": {
+                "type": "BLOCK",
+            },
+            "overrideCustomerWebACLAssociation": False,
+        })),
     ))
 ```
 
@@ -150,31 +173,26 @@ example = aws.fms.Policy("example",
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const test = new aws.wafregional.RuleGroup("test", {
-    metricName: "WAFRuleGroupExample",
-});
-const example = new aws.fms.Policy("example", {
+const exampleRuleGroup = new aws.wafregional.RuleGroup("exampleRuleGroup", {metricName: "WAFRuleGroupExample"});
+const examplePolicy = new aws.fms.Policy("examplePolicy", {
     excludeResourceTags: false,
     remediationEnabled: false,
     resourceTypeLists: ["AWS::ElasticLoadBalancingV2::LoadBalancer"],
     securityServicePolicyData: {
-        managedServiceData: pulumi.interpolate`      {
-        "type": "WAF",
-        "ruleGroups":
-          [{
-            "id":"${test.id}",
-            "overrideAction" : {
-              "type": "COUNT"
-            }
-          }],
-        "defaultAction":
-        {
-          "type": "BLOCK"
-        },
-        "overrideCustomerWebACLAssociation": false
-      }
-`,
         type: "WAF",
+        managedServiceData: exampleRuleGroup.id.apply(id => JSON.stringify({
+            type: "WAF",
+            ruleGroups: [{
+                id: id,
+                overrideAction: {
+                    type: "COUNT",
+                },
+            }],
+            defaultAction: {
+                type: "BLOCK",
+            },
+            overrideCustomerWebACLAssociation: false,
+        })),
     },
 });
 ```
@@ -1777,7 +1795,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}valid values are `BLOCK` or `COUNT`.
+    <dd>{{% md %}}The service that the policy is using to protect the resources. Valid values are `WAFV2`, `WAF`, `SHIELD_ADVANCED`, `SECURITY_GROUPS_COMMON`, `SECURITY_GROUPS_CONTENT_AUDIT`, and `SECURITY_GROUPS_USAGE_AUDIT`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1787,7 +1805,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Details about the service that are specific to the service type, in JSON format. For service type SHIELD_ADVANCED, this is an empty string.
+    <dd>{{% md %}}Details about the service that are specific to the service type, in JSON format. For service type `SHIELD_ADVANCED`, this is an empty string. Examples depending on `type` can be found in the [AWS Firewall Manager SecurityServicePolicyData API Reference](https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_SecurityServicePolicyData.html).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1803,7 +1821,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}valid values are `BLOCK` or `COUNT`.
+    <dd>{{% md %}}The service that the policy is using to protect the resources. Valid values are `WAFV2`, `WAF`, `SHIELD_ADVANCED`, `SECURITY_GROUPS_COMMON`, `SECURITY_GROUPS_CONTENT_AUDIT`, and `SECURITY_GROUPS_USAGE_AUDIT`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1813,7 +1831,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Details about the service that are specific to the service type, in JSON format. For service type SHIELD_ADVANCED, this is an empty string.
+    <dd>{{% md %}}Details about the service that are specific to the service type, in JSON format. For service type `SHIELD_ADVANCED`, this is an empty string. Examples depending on `type` can be found in the [AWS Firewall Manager SecurityServicePolicyData API Reference](https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_SecurityServicePolicyData.html).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1829,7 +1847,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}valid values are `BLOCK` or `COUNT`.
+    <dd>{{% md %}}The service that the policy is using to protect the resources. Valid values are `WAFV2`, `WAF`, `SHIELD_ADVANCED`, `SECURITY_GROUPS_COMMON`, `SECURITY_GROUPS_CONTENT_AUDIT`, and `SECURITY_GROUPS_USAGE_AUDIT`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1839,7 +1857,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Details about the service that are specific to the service type, in JSON format. For service type SHIELD_ADVANCED, this is an empty string.
+    <dd>{{% md %}}Details about the service that are specific to the service type, in JSON format. For service type `SHIELD_ADVANCED`, this is an empty string. Examples depending on `type` can be found in the [AWS Firewall Manager SecurityServicePolicyData API Reference](https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_SecurityServicePolicyData.html).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1855,7 +1873,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}valid values are `BLOCK` or `COUNT`.
+    <dd>{{% md %}}The service that the policy is using to protect the resources. Valid values are `WAFV2`, `WAF`, `SHIELD_ADVANCED`, `SECURITY_GROUPS_COMMON`, `SECURITY_GROUPS_CONTENT_AUDIT`, and `SECURITY_GROUPS_USAGE_AUDIT`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1865,7 +1883,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Details about the service that are specific to the service type, in JSON format. For service type SHIELD_ADVANCED, this is an empty string.
+    <dd>{{% md %}}Details about the service that are specific to the service type, in JSON format. For service type `SHIELD_ADVANCED`, this is an empty string. Examples depending on `type` can be found in the [AWS Firewall Manager SecurityServicePolicyData API Reference](https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_SecurityServicePolicyData.html).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

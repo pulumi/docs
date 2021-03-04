@@ -12,24 +12,28 @@ menu:
 aliases: ["/docs/quickstart/azure/deploy-changes/"]
 ---
 
-Now let's deploy our changes.
+Deploy your changes by using `pulumi up` again.
 
 ```bash
 $ pulumi up
 ```
 
-Pulumi computes the minimally disruptive change to achieve the desired state described by the program.
+Pulumi will run the `preview` step of the update, which computes the minimally disruptive change to achieve the desired state described by the program.
 
 ```
 Previewing update (dev):
 
-     Type                      Name                     Plan       Info
-     pulumi:pulumi:Stack       quickstart-dev
- ~   └─ azure:storage:Account  storage                  update     [diff: ~tags]
+     Type                                                   Name                 Plan
+     pulumi:pulumi:Stack                                    quickstart-dev
+ +   ├─ azure-native:storage:StorageAccountStaticWebsite    staticWebsite        create
+ +   └─ azure-native:storage:Blob                           index.html           create
+
+Outputs:
+  + staticEndpoint   : "https://sa8dd8af62.z22.web.core.windows.net/"
 
 Resources:
-    ~ 1 to update
-    2 unchanged
+    + 2 to create
+    3 unchanged
 
 Do you want to perform this update?
   yes
@@ -37,28 +41,72 @@ Do you want to perform this update?
   details
 ```
 
-Pulumi will update the storage account to add the tag. The resource group hasn't changed so it remains as-is.
-
-Choosing `yes` will proceed with the update.
+Choosing `yes` will proceed with the update by uploading the `index.html` file to a storage container in your account and enabling static website support on the container.
 
 ```
 Do you want to perform this update? yes
 Updating (dev):
 
-     Type                      Name                     Status      Info
-     pulumi:pulumi:Stack       quickstart-dev
- ~   └─ azure:storage:Account  storage                  updated     [diff: ~tags]
+     Type                                                   Name                Status
+     pulumi:pulumi:Stack                                    quickstart-dev
+ +   ├─ azure-native:storage:StorageAccountStaticWebsite    staticWebsite       created
+ +   └─ azure-native:storage:Blob                           index.html          created
 
 Outputs:
-    connectionString: "[secret]"
+    primaryStorageKey: "<key_value>"
+  + staticEndpoint   : "https://sa8dd8af62.z22.web.core.windows.net/"
 
 Resources:
-    ~ 1 updated
-    2 unchanged
+    + 2 created
+    3 unchanged
 
 Duration: 4s
 ```
 
-Next, we'll destroy the stack.
+You can check out your new static website at the URL in the `Outputs` section of your update or you can make a `curl` request and see the contents of your `index.html` object printed out in your terminal.
+
+{{% choosable language typescript %}}
+
+```bash
+$ curl $(pulumi stack output staticEndpoint)
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```bash
+$ curl $(pulumi stack output static_endpoint)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```bash
+$ curl $(pulumi stack output staticEndpoint)
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```bash
+$ curl $(pulumi stack output StaticEndpoint)
+```
+
+{{% /choosable %}}
+
+And you should see:
+
+```bash
+<html>
+    <body>
+        <h1>Hello, Pulumi!</h1>
+    </body>
+</html>
+```
+
+Now that you have deployed your site, you will destroy the resources.
 
 {{< get-started-stepper >}}

@@ -119,7 +119,7 @@ resources to check out:
 - Tutorial: Create a Kubernetes cluster on a cloud provider
   [Amazon EKS]({{< relref "/docs/tutorials/kubernetes/eks" >}}),
   [Google GKE]({{< relref "/docs/tutorials/kubernetes/gke" >}}), or
-  [Azure AKS](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean)
+  [Azure AKS](https://github.com/pulumi/examples/tree/master/classic-azure-ts-aks-mean)
 - Tutorial: [Operate and deploy to a Kubernetes cluster]({{< relref "/docs/tutorials/kubernetes/exposed-deployment" >}})
 - Docs: [Pulumi docs]({{< relref "/docs/reference" >}}), including an
   [overview of the programming model]({{< relref "/docs/intro/concepts" >}})

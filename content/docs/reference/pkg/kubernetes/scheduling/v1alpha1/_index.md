@@ -22,6 +22,6 @@ Explore the resources and functions of the kubernetes.scheduling/v1alpha1 module
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.8.1</dd>
+	<dd>2.8.2</dd>
 </dl>
 

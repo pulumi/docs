@@ -66,7 +66,7 @@ Although Pulumi for Go is in “preview” status until 2.0 is released, it supp
 - Getting started with Go and [AWS]({{< relref "/docs/get-started/aws" >}}), [Azure]({{< relref "/docs/get-started/azure" >}}), or [Google Cloud]({{< relref "/docs/get-started/gcp" >}}).
 - Author and deploy serverless functions in Go on [AWS Lambda](https://github.com/pulumi/examples/tree/master/aws-go-lambda) and [GCP Cloud Functions](https://github.com/pulumi/examples/tree/master/gcp-go-functions).
 - Build a serverless container-based application on [AWS ECS Fargate](https://github.com/pulumi/examples/tree/master/aws-go-fargate).
-- Deploy a web server on a virtual machine with [AWS](https://github.com/pulumi/examples/tree/master/aws-go-webserver) or [Azure](https://github.com/pulumi/examples/tree/master/azure-go-webserver-component).
+- Deploy a web server on a virtual machine with [AWS](https://github.com/pulumi/examples/tree/master/aws-go-webserver) or [Azure](https://github.com/pulumi/examples/tree/master/classic-azure-go-webserver-component).
 - Deploy a Kubernetes cluster using [Azure Kubernetes Service](https://github.com/pulumi/examples/tree/master/azure-go-aks).
 
 To keep up with our progress, follow our [Go project on Github](https://github.com/orgs/pulumi/projects/7), and feel free to [open a new issue](https://github.com/pulumi/pulumi/issues/new) with ideas, feedback, and bugs. [Join the community in Slack](https://slack.pulumi.com/) to discuss your scenarios, and to get any needed assistance from the team and other end users.

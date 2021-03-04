@@ -8,7 +8,7 @@ on:
       - pulumi-cli
 jobs:
   pull-request:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     needs: build-pulumi-cli-docs
     steps:
       - name: checkout docs repo
@@ -27,7 +27,7 @@ jobs:
           github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
 
   build-pulumi-cli-docs:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - name: set the pulumi version
         run: |

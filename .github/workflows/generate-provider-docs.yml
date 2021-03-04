@@ -15,7 +15,7 @@ on:
 
 jobs:
   pull-request:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     needs: build-tfgen-provider-docs
     steps:
       - name: checkout docs repo
@@ -31,7 +31,7 @@ jobs:
           github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
 
   build-tfgen-provider-docs:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - run: echo "Building ${{ env.PROVIDER_NAME }} docs @ ${{ env.PROVIDER_VERSION }}"
       - if: github.event.action != 'non-resource-provider'

@@ -25,6 +25,12 @@ Explore the resources and functions of the aws.apigatewayv2 module.
     <li><a href="vpclink" title="VpcLink"><span class="symbol resource"></span>VpcLink</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getapi" title="GetApi"><span class="symbol function"></span>GetApi</a></li>
+    <li><a href="getapis" title="GetApis"><span class="symbol function"></span>GetApis</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -34,6 +40,6 @@ Explore the resources and functions of the aws.apigatewayv2 module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.30.0</dd>
+	<dd>3.31.0</dd>
 </dl>
 

@@ -30,6 +30,7 @@ Explore the resources and functions of the aws.s3 module.
     <li><a href="getbucket" title="GetBucket"><span class="symbol function"></span>GetBucket</a></li>
     <li><a href="getbucketobject" title="GetBucketObject"><span class="symbol function"></span>GetBucketObject</a></li>
     <li><a href="getbucketobjects" title="GetBucketObjects"><span class="symbol function"></span>GetBucketObjects</a></li>
+    <li><a href="getcanonicaluserid" title="GetCanonicalUserId"><span class="symbol function"></span>GetCanonicalUserId</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -41,6 +42,6 @@ Explore the resources and functions of the aws.s3 module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.30.0</dd>
+	<dd>3.31.0</dd>
 </dl>
 

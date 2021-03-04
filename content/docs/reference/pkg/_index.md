@@ -20,11 +20,7 @@ explore what's possible, you've come to the right place.
 
 ### Core Providers
 
-{{< resource-providers "aws,azure,gcp,kubernetes" >}}
-
-### Next Generation Providers
-
-{{< resource-providers "azure-nextgen" >}}
+{{< resource-providers "aws,azure-native,gcp,kubernetes" >}}
 
 ### Cloud Providers
 
@@ -53,6 +49,10 @@ explore what's possible, you've come to the right place.
 ### Utilities
 
 {{< resource-providers "random,tls,cloudinit" false >}}
+
+### Classic Providers
+
+{{< resource-providers "azure" >}}
 
 ## Package Documentation
 

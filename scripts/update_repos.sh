@@ -14,7 +14,7 @@ TOOLS_REPOS=(
     "pulumi-aws"
     "pulumi-awsx"
     "pulumi-azure"
-    "pulumi-azure-nextgen"
+    "pulumi-azure-native"
     "pulumi-azuread"
     "pulumi-azuredevops"
     "pulumi-civo"

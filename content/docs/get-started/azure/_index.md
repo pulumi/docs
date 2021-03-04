@@ -11,8 +11,6 @@ menu:
 aliases: ["/docs/quickstart/azure/"]
 ---
 
-{{< cloud-intro "Azure" >}}
-
-To get started we will walk through installing Pulumi, installing your preferred language runtime (if needed), and setting up the Azure CLI. Click the button below to get started.
+{{< cloud-intro "Microsoft Azure" >}}
 
 {{< get-started-stepper >}}

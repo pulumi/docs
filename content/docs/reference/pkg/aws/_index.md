@@ -62,6 +62,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="ec2clientvpn/" title="ec2clientvpn"><span class="symbol module"></span>ec2clientvpn</a></li>
     <li><a href="ec2transitgateway/" title="ec2transitgateway"><span class="symbol module"></span>ec2transitgateway</a></li>
     <li><a href="ecr/" title="ecr"><span class="symbol module"></span>ecr</a></li>
+    <li><a href="ecrpublic/" title="ecrpublic"><span class="symbol module"></span>ecrpublic</a></li>
     <li><a href="ecs/" title="ecs"><span class="symbol module"></span>ecs</a></li>
     <li><a href="efs/" title="efs"><span class="symbol module"></span>efs</a></li>
     <li><a href="eks/" title="eks"><span class="symbol module"></span>eks</a></li>
@@ -178,6 +179,6 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.30.0</dd>
+	<dd>3.31.0</dd>
 </dl>
 

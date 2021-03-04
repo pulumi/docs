@@ -19,6 +19,7 @@ Explore the resources and functions of the aws.cognito module.
     <li><a href="userpool" title="UserPool"><span class="symbol resource"></span>UserPool</a></li>
     <li><a href="userpoolclient" title="UserPoolClient"><span class="symbol resource"></span>UserPoolClient</a></li>
     <li><a href="userpooldomain" title="UserPoolDomain"><span class="symbol resource"></span>UserPoolDomain</a></li>
+    <li><a href="userpooluicustomization" title="UserPoolUICustomization"><span class="symbol resource"></span>UserPoolUICustomization</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -35,6 +36,6 @@ Explore the resources and functions of the aws.cognito module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.30.0</dd>
+	<dd>3.31.0</dd>
 </dl>
 

@@ -122,12 +122,12 @@ works with public and private cloud resources as well as
 Kubernetes, enabling deployment of Kubernetes resources and
 AWS/Azure/GCP resources using a single deployment workflow. For example,
 you can
-[stand up a managed Kubernetes cluster and deploying a Helm chart to it](https://github.com/pulumi/examples/blob/master/azure-ts-aks-mean/index.ts).
+[stand up a managed Kubernetes cluster and deploying a Helm chart to it](https://github.com/pulumi/examples/blob/master/classic-azure-ts-aks-mean/index.ts).
 
 [![Managed Kubernetes Cluster plus Helm Chart deployment](./kubernetes-plus-helm-chart.png)
 
 Another fun example is
-[provisioning and consuming an Azure CosmosDB from within your Kubernetes app](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean).
+[provisioning and consuming an Azure CosmosDB from within your Kubernetes app](https://github.com/pulumi/examples/tree/master/classic-azure-ts-aks-mean).
 
 ## Learn More
 
@@ -142,7 +142,7 @@ resources to check out:
 - Tutorial: Create a Kubernetes cluster on a cloud provider
   [Amazon EKS]({{< relref "/docs/tutorials/kubernetes/eks" >}}),
   [Google GKE]({{< relref "/docs/tutorials/kubernetes/gke" >}}), or
-  [Azure AKS](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean)
+  [Azure AKS](https://github.com/pulumi/examples/tree/master/classic-azure-ts-aks-mean)
 - Tutorial: [Operate and deploy to a Kubernetes cluster]({{< relref "/docs/tutorials/kubernetes/exposed-deployment" >}})
 - Docs: [Pulumi docs]({{< relref "/docs/reference" >}}), including an
   [overview of the programming model]({{< relref "/docs/intro/concepts" >}})
