@@ -78,8 +78,7 @@ The example shows two scenarios:
     http://hello-app91dfea21.azurewebsites.net/hello
     $ curl "$(pulumi stack output helloEndpoint)"
     Hello, world!
-    ```
-    
+
     $ pulumi stack output getStartedEndpoint
     http://get-started-15da13.azurewebsites.net
     $ curl "$(pulumi stack output getStartedEndpoint)"
