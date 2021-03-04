@@ -108,7 +108,7 @@ Node.js is another runtime supported by Azure Functions. Like before, you can us
 
 ### 3. Define Node.js Functions as Inline Callbacks
 
-[ [Runnable Example](https://github.com/pulumi/examples/tree/master/classic-azure-ts-functions) ]
+[ [Runnable Example](https://github.com/pulumi/pulumi-azure/blob/master/examples/http/) ]
 
 A TypeScript or a JavaScript function becomes an Azure Function deployed to the cloud:
 
