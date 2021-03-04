@@ -1,6 +1,6 @@
 ---
 title: "Automate Your Infrastructure with Automation API and C#"
-date: tbd
+date: 2021-03-08
 meta_desc: "C# developers can programmatically build infrastructure (with out a CLI) using the Pulumi Automation API package. "
 meta_image: automation_api.png
 authors:
@@ -15,13 +15,13 @@ tags:
 
 {{% notes type="info" %}}
 Joshua Studt is a Solutions Architect at Financial Independence Group and a Pulumi Community member who contributed the C# package for Automation API.
-{{% /notes %}
+{{% /notes %}}
+
 Currently available in public preview, Pulumi's Automation API lets you to programmatically call upon the Pulumi engine to provision your infrastructure. Today, we are excited to announce C# support for Automation API, enabling .NET developers to automate infrastructure deployments, create complex orchestration workflows, build custom ops tooling, and build cloud frameworks. Read more about the Automation API [here]({{< relref "/blog/automation-api" >}}).
 
 ## Using Automation API in .NET
 
 The `Pulumi.Automation` [NuGet package](https://www.nuget.org/packages/Pulumi.Automation) exposes a `LocalWorkspace` for  creating and managing Pulumi [Stacks]({{< relref "/docs/intro/concepts/stack" >}}), and a `WorkspaceStack` that is a programmatic representation of a Stack for updating, refreshing, previewing, and destroying cloud resources. The Automation API makes it trivial to run Pulumi programs inline:
-
 
 ```csharp
 var program = PulumiFn.Create(() =>
@@ -72,4 +72,4 @@ var blue = await WorkspaceStack.SelectAsync("blue", workspace);
 await blue.DestroyAsync();
 ```
 
-See full Automation API examples in [C#](https://github.com/pulumi/automation-api-examples/tree/main/dotnet).
+See full Automation API examples in [C#](https://github.com/pulumi/automation-api-examples/tree/main/dotnet). Let us know if you're using Automation API on [Twitter](https://twitter.com/PulumiCorp) or in [Pulumi Comunity Slack](https://slack.pulumi.com/).
