@@ -16,5 +16,8 @@ Here is a curated list of community created repositories, libraries, components,
 
 [pulumi-kubernetes-deployments](https://github.com/vitobotta/pulumi-kubernetes-deployments) - Automate deployments of applications and services to K8s
 
+## Components
+[pulumi-aws-vpc](https://github.com/jen20/pulumi-aws-vpc) - VPC component for AWS
+
 ## Cool Code/Projects
 [Tinkerbell](https://github.com/tinkerbell) - Bare metal provisioning engine
