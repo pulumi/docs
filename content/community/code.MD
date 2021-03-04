@@ -1,6 +1,6 @@
 # Community Code
 
-Here is a curated list of community created repositories, libraries, components, projects, and code. If you believe something is missing, send us a pull request. 
+Here is a curated list of community created repositories, libraries, components, projects, and code that use Pulumi. If you believe something is missing, send us a pull request. 
 
 
 ## Frameworks/Platforms
