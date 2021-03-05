@@ -282,6 +282,112 @@ const example = new aws.apigatewayv2.Integration("example", {
 
 {{% /example %}}
 
+### Private Integration
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Aws.ApiGatewayV2.Integration("example", new Aws.ApiGatewayV2.IntegrationArgs
+        {
+            ApiId = aws_apigatewayv2_api.Example.Id,
+            CredentialsArn = aws_iam_role.Example.Arn,
+            Description = "Example with a load balancer",
+            IntegrationType = "HTTP_PROXY",
+            IntegrationUri = aws_lb_listener.Example.Arn,
+            ConnectionType = "VPC_LINK",
+            ConnectionId = aws_apigatewayv2_vpc_link.Example.Id,
+            TlsConfig = new Aws.ApiGatewayV2.Inputs.IntegrationTlsConfigArgs
+            {
+                ServerNameToVerify = "example.com",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigatewayv2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := apigatewayv2.NewIntegration(ctx, "example", &apigatewayv2.IntegrationArgs{
+			ApiId:           pulumi.Any(aws_apigatewayv2_api.Example.Id),
+			CredentialsArn:  pulumi.Any(aws_iam_role.Example.Arn),
+			Description:     pulumi.String("Example with a load balancer"),
+			IntegrationType: pulumi.String("HTTP_PROXY"),
+			IntegrationUri:  pulumi.Any(aws_lb_listener.Example.Arn),
+			ConnectionType:  pulumi.String("VPC_LINK"),
+			ConnectionId:    pulumi.Any(aws_apigatewayv2_vpc_link.Example.Id),
+			TlsConfig: &apigatewayv2.IntegrationTlsConfigArgs{
+				ServerNameToVerify: pulumi.String("example.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example = aws.apigatewayv2.Integration("example",
+    api_id=aws_apigatewayv2_api["example"]["id"],
+    credentials_arn=aws_iam_role["example"]["arn"],
+    description="Example with a load balancer",
+    integration_type="HTTP_PROXY",
+    integration_uri=aws_lb_listener["example"]["arn"],
+    connection_type="VPC_LINK",
+    connection_id=aws_apigatewayv2_vpc_link["example"]["id"],
+    tls_config=aws.apigatewayv2.IntegrationTlsConfigArgs(
+        server_name_to_verify="example.com",
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const example = new aws.apigatewayv2.Integration("example", {
+    apiId: aws_apigatewayv2_api.example.id,
+    credentialsArn: aws_iam_role.example.arn,
+    description: "Example with a load balancer",
+    integrationType: "HTTP_PROXY",
+    integrationUri: aws_lb_listener.example.arn,
+    connectionType: "VPC_LINK",
+    connectionId: aws_apigatewayv2_vpc_link.example.id,
+    tlsConfig: {
+        serverNameToVerify: "example.com",
+    },
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -484,7 +590,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration type of an integration.
-Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs).
+Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs). For an HTTP API private integration, use `HTTP_PROXY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -675,7 +781,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration type of an integration.
-Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs).
+Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs). For an HTTP API private integration, use `HTTP_PROXY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -866,7 +972,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration type of an integration.
-Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs).
+Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs). For an HTTP API private integration, use `HTTP_PROXY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1057,7 +1163,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration type of an integration.
-Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs).
+Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs). For an HTTP API private integration, use `HTTP_PROXY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1558,7 +1664,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration type of an integration.
-Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs).
+Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs). For an HTTP API private integration, use `HTTP_PROXY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1759,7 +1865,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration type of an integration.
-Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs).
+Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs). For an HTTP API private integration, use `HTTP_PROXY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1960,7 +2066,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The integration type of an integration.
-Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs).
+Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs). For an HTTP API private integration, use `HTTP_PROXY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2161,7 +2267,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The integration type of an integration.
-Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs).
+Valid values: `AWS` (supported only for WebSocket APIs), `AWS_PROXY`, `HTTP` (supported only for WebSocket APIs), `HTTP_PROXY`, `MOCK` (supported only for WebSocket APIs). For an HTTP API private integration, use `HTTP_PROXY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

@@ -566,22 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamiblockdevicemapping">List&lt;Get<wbr>Ami<wbr>Block<wbr>Device<wbr>Mapping&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The block device mappings of the AMI.
-* `block_device_mappings.#.device_name` - The physical name of the device.
-* `block_device_mappings.#.ebs.delete_on_termination` - `true` if the EBS volume
-will be deleted on termination.
-* `block_device_mappings.#.ebs.encrypted` - `true` if the EBS volume
-is encrypted.
-* `block_device_mappings.#.ebs.iops` - `0` if the EBS volume is
-not a provisioned IOPS image, otherwise the supported IOPS count.
-* `block_device_mappings.#.ebs.snapshot_id` - The ID of the snapshot.
-* `block_device_mappings.#.ebs.volume_size` - The size of the volume, in GiB.
-* `block_device_mappings.#.ebs.throughput` - The throughput that the EBS volume supports, in MiB/s.
-* `block_device_mappings.#.ebs.volume_type` - The volume type.
-* `block_device_mappings.#.no_device` - Suppresses the specified device
-included in the block device mapping of the AMI.
-* `block_device_mappings.#.virtual_name` - The virtual device name (for
-instance stores).
+    <dd>{{% md %}}Set of objects with block device mappings of the AMI.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -935,22 +920,7 @@ is successfully registered and can be used to launch an instance.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamiblockdevicemapping">[]Get<wbr>Ami<wbr>Block<wbr>Device<wbr>Mapping</a></span>
     </dt>
-    <dd>{{% md %}}The block device mappings of the AMI.
-* `block_device_mappings.#.device_name` - The physical name of the device.
-* `block_device_mappings.#.ebs.delete_on_termination` - `true` if the EBS volume
-will be deleted on termination.
-* `block_device_mappings.#.ebs.encrypted` - `true` if the EBS volume
-is encrypted.
-* `block_device_mappings.#.ebs.iops` - `0` if the EBS volume is
-not a provisioned IOPS image, otherwise the supported IOPS count.
-* `block_device_mappings.#.ebs.snapshot_id` - The ID of the snapshot.
-* `block_device_mappings.#.ebs.volume_size` - The size of the volume, in GiB.
-* `block_device_mappings.#.ebs.throughput` - The throughput that the EBS volume supports, in MiB/s.
-* `block_device_mappings.#.ebs.volume_type` - The volume type.
-* `block_device_mappings.#.no_device` - Suppresses the specified device
-included in the block device mapping of the AMI.
-* `block_device_mappings.#.virtual_name` - The virtual device name (for
-instance stores).
+    <dd>{{% md %}}Set of objects with block device mappings of the AMI.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1304,22 +1274,7 @@ is successfully registered and can be used to launch an instance.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamiblockdevicemapping">Get<wbr>Ami<wbr>Block<wbr>Device<wbr>Mapping[]</a></span>
     </dt>
-    <dd>{{% md %}}The block device mappings of the AMI.
-* `block_device_mappings.#.device_name` - The physical name of the device.
-* `block_device_mappings.#.ebs.delete_on_termination` - `true` if the EBS volume
-will be deleted on termination.
-* `block_device_mappings.#.ebs.encrypted` - `true` if the EBS volume
-is encrypted.
-* `block_device_mappings.#.ebs.iops` - `0` if the EBS volume is
-not a provisioned IOPS image, otherwise the supported IOPS count.
-* `block_device_mappings.#.ebs.snapshot_id` - The ID of the snapshot.
-* `block_device_mappings.#.ebs.volume_size` - The size of the volume, in GiB.
-* `block_device_mappings.#.ebs.throughput` - The throughput that the EBS volume supports, in MiB/s.
-* `block_device_mappings.#.ebs.volume_type` - The volume type.
-* `block_device_mappings.#.no_device` - Suppresses the specified device
-included in the block device mapping of the AMI.
-* `block_device_mappings.#.virtual_name` - The virtual device name (for
-instance stores).
+    <dd>{{% md %}}Set of objects with block device mappings of the AMI.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1673,22 +1628,7 @@ is successfully registered and can be used to launch an instance.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getamiblockdevicemapping">Sequence[Get<wbr>Ami<wbr>Block<wbr>Device<wbr>Mapping]</a></span>
     </dt>
-    <dd>{{% md %}}The block device mappings of the AMI.
-* `block_device_mappings.#.device_name` - The physical name of the device.
-* `block_device_mappings.#.ebs.delete_on_termination` - `true` if the EBS volume
-will be deleted on termination.
-* `block_device_mappings.#.ebs.encrypted` - `true` if the EBS volume
-is encrypted.
-* `block_device_mappings.#.ebs.iops` - `0` if the EBS volume is
-not a provisioned IOPS image, otherwise the supported IOPS count.
-* `block_device_mappings.#.ebs.snapshot_id` - The ID of the snapshot.
-* `block_device_mappings.#.ebs.volume_size` - The size of the volume, in GiB.
-* `block_device_mappings.#.ebs.throughput` - The throughput that the EBS volume supports, in MiB/s.
-* `block_device_mappings.#.ebs.volume_type` - The volume type.
-* `block_device_mappings.#.no_device` - Suppresses the specified device
-included in the block device mapping of the AMI.
-* `block_device_mappings.#.virtual_name` - The virtual device name (for
-instance stores).
+    <dd>{{% md %}}Set of objects with block device mappings of the AMI.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -2032,7 +1972,8 @@ is successfully registered and can be used to launch an instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The physical name of the device.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="ebs_csharp">
@@ -2041,7 +1982,8 @@ is successfully registered and can be used to launch an instance.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Map containing EBS information, if the device is EBS based. Unlike most object attributes, these are accessed directly (e.g. `ebs.volume_size` or `ebs["volume_size"]`) rather than accessed through the first element of a list (e.g. `ebs[0].volume_size`).
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="nodevice_csharp">
@@ -2050,7 +1992,8 @@ is successfully registered and can be used to launch an instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Suppresses the specified device included in the block device mapping of the AMI.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="virtualname_csharp">
@@ -2059,7 +2002,8 @@ is successfully registered and can be used to launch an instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The virtual device name (for instance stores).
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2074,7 +2018,8 @@ is successfully registered and can be used to launch an instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The physical name of the device.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="ebs_go">
@@ -2083,7 +2028,8 @@ is successfully registered and can be used to launch an instance.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Map containing EBS information, if the device is EBS based. Unlike most object attributes, these are accessed directly (e.g. `ebs.volume_size` or `ebs["volume_size"]`) rather than accessed through the first element of a list (e.g. `ebs[0].volume_size`).
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="nodevice_go">
@@ -2092,7 +2038,8 @@ is successfully registered and can be used to launch an instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Suppresses the specified device included in the block device mapping of the AMI.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="virtualname_go">
@@ -2101,7 +2048,8 @@ is successfully registered and can be used to launch an instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The virtual device name (for instance stores).
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2116,7 +2064,8 @@ is successfully registered and can be used to launch an instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The physical name of the device.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="ebs_nodejs">
@@ -2125,7 +2074,8 @@ is successfully registered and can be used to launch an instance.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Map containing EBS information, if the device is EBS based. Unlike most object attributes, these are accessed directly (e.g. `ebs.volume_size` or `ebs["volume_size"]`) rather than accessed through the first element of a list (e.g. `ebs[0].volume_size`).
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="nodevice_nodejs">
@@ -2134,7 +2084,8 @@ is successfully registered and can be used to launch an instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Suppresses the specified device included in the block device mapping of the AMI.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="virtualname_nodejs">
@@ -2143,7 +2094,8 @@ is successfully registered and can be used to launch an instance.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The virtual device name (for instance stores).
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2158,7 +2110,8 @@ is successfully registered and can be used to launch an instance.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The physical name of the device.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="ebs_python">
@@ -2167,7 +2120,8 @@ is successfully registered and can be used to launch an instance.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Map containing EBS information, if the device is EBS based. Unlike most object attributes, these are accessed directly (e.g. `ebs.volume_size` or `ebs["volume_size"]`) rather than accessed through the first element of a list (e.g. `ebs[0].volume_size`).
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="no_device_python">
@@ -2176,7 +2130,8 @@ is successfully registered and can be used to launch an instance.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Suppresses the specified device included in the block device mapping of the AMI.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="virtual_name_python">
@@ -2185,7 +2140,8 @@ is successfully registered and can be used to launch an instance.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The virtual device name (for instance stores).
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

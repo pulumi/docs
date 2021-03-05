@@ -219,7 +219,7 @@ The RolePolicyAttachment resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}The role the policy should be applied to
+    <dd>{{% md %}}The name of the IAM role to which the policy should be applied
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -245,7 +245,7 @@ The RolePolicyAttachment resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}The role the policy should be applied to
+    <dd>{{% md %}}The name of the IAM role to which the policy should be applied
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -271,7 +271,7 @@ The RolePolicyAttachment resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string | Role</span>
     </dt>
-    <dd>{{% md %}}The role the policy should be applied to
+    <dd>{{% md %}}The name of the IAM role to which the policy should be applied
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -297,7 +297,7 @@ The RolePolicyAttachment resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str | str</span>
     </dt>
-    <dd>{{% md %}}The role the policy should be applied to
+    <dd>{{% md %}}The name of the IAM role to which the policy should be applied
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -513,7 +513,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}The role the policy should be applied to
+    <dd>{{% md %}}The name of the IAM role to which the policy should be applied
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -539,7 +539,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | string</span>
     </dt>
-    <dd>{{% md %}}The role the policy should be applied to
+    <dd>{{% md %}}The name of the IAM role to which the policy should be applied
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -565,7 +565,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | Role</span>
     </dt>
-    <dd>{{% md %}}The role the policy should be applied to
+    <dd>{{% md %}}The name of the IAM role to which the policy should be applied
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -591,7 +591,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str | str</span>
     </dt>
-    <dd>{{% md %}}The role the policy should be applied to
+    <dd>{{% md %}}The name of the IAM role to which the policy should be applied
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

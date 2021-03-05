@@ -76,7 +76,7 @@ class MyStack : Stack
         {
             DbInstanceIdentifier = aws_db_instance.Example.Id,
             DbProxyName = exampleProxy.Name,
-            TargetGroupName = exampleProxyDefaultTargetGroup.DbProxyName,
+            TargetGroupName = exampleProxyDefaultTargetGroup.Name,
         });
     }
 
@@ -124,7 +124,7 @@ example_proxy_default_target_group = aws.rds.ProxyDefaultTargetGroup("examplePro
 example_proxy_target = aws.rds.ProxyTarget("exampleProxyTarget",
     db_instance_identifier=aws_db_instance["example"]["id"],
     db_proxy_name=example_proxy.name,
-    target_group_name=example_proxy_default_target_group.db_proxy_name)
+    target_group_name=example_proxy_default_target_group.name)
 ```
 
 {{% /example %}}
@@ -167,7 +167,7 @@ const exampleProxyDefaultTargetGroup = new aws.rds.ProxyDefaultTargetGroup("exam
 const exampleProxyTarget = new aws.rds.ProxyTarget("exampleProxyTarget", {
     dbInstanceIdentifier: aws_db_instance.example.id,
     dbProxyName: exampleProxy.name,
-    targetGroupName: exampleProxyDefaultTargetGroup.dbProxyName,
+    targetGroupName: exampleProxyDefaultTargetGroup.name,
 });
 ```
 

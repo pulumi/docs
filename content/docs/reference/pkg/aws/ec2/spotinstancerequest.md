@@ -414,7 +414,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestebsblockdevice">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
+    <dd>{{% md %}}One or more configuration blocks with additional EBS block devices to attach to the instance. Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -444,7 +444,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details.
+    <dd>{{% md %}}One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -605,7 +605,7 @@ If left empty instances are launched and terminated individually.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Customize details about the root block device of the instance. See Block Devices below for details.
+    <dd>{{% md %}}Configuration block to customize details about the root block device of the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a list containing one object.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -866,7 +866,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestebsblockdevice">[]Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
+    <dd>{{% md %}}One or more configuration blocks with additional EBS block devices to attach to the instance. Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -896,7 +896,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">[]Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details.
+    <dd>{{% md %}}One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1057,7 +1057,7 @@ If left empty instances are launched and terminated individually.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}Customize details about the root block device of the instance. See Block Devices below for details.
+    <dd>{{% md %}}Configuration block to customize details about the root block device of the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a list containing one object.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1318,7 +1318,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestebsblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
+    <dd>{{% md %}}One or more configuration blocks with additional EBS block devices to attach to the instance. Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1348,7 +1348,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
     </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details.
+    <dd>{{% md %}}One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1509,7 +1509,7 @@ If left empty instances are launched and terminated individually.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}Customize details about the root block device of the instance. See Block Devices below for details.
+    <dd>{{% md %}}Configuration block to customize details about the root block device of the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a list containing one object.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1770,7 +1770,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestebsblockdevice">Sequence[Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
+    <dd>{{% md %}}One or more configuration blocks with additional EBS block devices to attach to the instance. Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1800,7 +1800,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">Sequence[Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details.
+    <dd>{{% md %}}One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1961,7 +1961,7 @@ If left empty instances are launched and terminated individually.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Customize details about the root block device of the instance. See Block Devices below for details.
+    <dd>{{% md %}}Configuration block to customize details about the root block device of the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a list containing one object.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2863,7 +2863,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestebsblockdevice">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
+    <dd>{{% md %}}One or more configuration blocks with additional EBS block devices to attach to the instance. Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2893,7 +2893,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details.
+    <dd>{{% md %}}One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3133,7 +3133,7 @@ is only available if you've enabled DNS hostnames for your VPC
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Customize details about the root block device of the instance. See Block Devices below for details.
+    <dd>{{% md %}}Configuration block to customize details about the root block device of the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a list containing one object.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3428,7 +3428,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestebsblockdevice">[]Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
+    <dd>{{% md %}}One or more configuration blocks with additional EBS block devices to attach to the instance. Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3458,7 +3458,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">[]Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details.
+    <dd>{{% md %}}One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3698,7 +3698,7 @@ is only available if you've enabled DNS hostnames for your VPC
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}Customize details about the root block device of the instance. See Block Devices below for details.
+    <dd>{{% md %}}Configuration block to customize details about the root block device of the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a list containing one object.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3993,7 +3993,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestebsblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
+    <dd>{{% md %}}One or more configuration blocks with additional EBS block devices to attach to the instance. Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4023,7 +4023,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
     </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details.
+    <dd>{{% md %}}One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4263,7 +4263,7 @@ is only available if you've enabled DNS hostnames for your VPC
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}Customize details about the root block device of the instance. See Block Devices below for details.
+    <dd>{{% md %}}Configuration block to customize details about the root block device of the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a list containing one object.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4558,7 +4558,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestebsblockdevice">Sequence[Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
+    <dd>{{% md %}}One or more configuration blocks with additional EBS block devices to attach to the instance. Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4588,7 +4588,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">Sequence[Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details.
+    <dd>{{% md %}}One or more configuration blocks to customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a set of objects.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4828,7 +4828,7 @@ is only available if you've enabled DNS hostnames for your VPC
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Customize details about the root block device of the instance. See Block Devices below for details.
+    <dd>{{% md %}}Configuration block to customize details about the root block device of the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a list containing one object.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
