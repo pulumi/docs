@@ -18,7 +18,7 @@ tags:
 Joshua Studt is a Solutions Architect at Financial Independence Group and a Pulumi Community member who contributed the C# package for Automation API.
 {{% /notes %}}
 
-Currently available in public preview, Pulumi's Automation API lets you to programmatically call upon the Pulumi engine to provision your infrastructure. Today, we are excited to announce C# support for Automation API, enabling .NET developers to automate infrastructure deployments, create complex orchestration workflows, build custom ops tooling, and build cloud frameworks. Read more about the Automation API [here]({{< relref "/blog/automation-api" >}}).
+Currently available in public preview, Pulumi's Automation API enables you to provision your infrastructure programmatically using the Pulumi engine. Today, we are excited to announce C# support for Automation API, enabling .NET developers to automate infrastructure deployments, create complex orchestration workflows, build custom ops tooling, and build cloud frameworks. Read more about the Automation API [here]({{< relref "/blog/automation-api" >}}).
 
 ## Using Automation API in .NET
 
