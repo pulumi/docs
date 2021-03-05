@@ -138,6 +138,13 @@ function getRedirect(uri: string): string | undefined {
 // getSDKRedirect conditionally redirects based on whether the request URL points
 // to an SDK doc that we no longer host.
 function getSDKRedirect(uri: string): string | undefined {
+
+    // Redirect docs requests for azure-nextgen to azure-native, matching with or without
+    // a trailing slash.
+    if (uri.match(/\/docs\/reference\/pkg\/azure-nextgen$|azure-nextgen\//)) {
+        return uri.replace("azure-nextgen", "azure-native");
+    }
+
     // Return early if the request doesn't match the prefixes we care about.
     if (!uri.match(/\/docs\/reference\/pkg\/nodejs|python|dotnet\//)) {
         return undefined;
