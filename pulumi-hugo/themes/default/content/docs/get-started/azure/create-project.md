@@ -70,10 +70,18 @@ First, you will be asked for a project name and description. Hit `ENTER` to acce
 
 Next, you will be asked for the name of a stack. Hit `ENTER` to accept the default value of `dev`.
 
-For Azure projects, the default region is `WestUS`; however, you can change the region for your stack by using the `pulumi config set` command as shown below:
+For Azure projects, you will be prompted for the Azure location. You can accept the default value of `WestUS` or choose another location.
+
+To list all available locations, use the `az account list-locations` command.
 
 ```bash
-pulumi config set azure-native:location EastUS
+$ az account list-locations
+```
+
+You can then change the region for your stack by using the `pulumi config set` command as shown below:
+
+```bash
+pulumi config set azure-native:location eastus
 ```
 
 > What are [projects]({{< relref "/docs/intro/concepts/project" >}}) and [stacks]({{< relref "/docs/intro/concepts/stack" >}})? Pulumi projects and stacks let you organize Pulumi code. Consider a Pulumi _project_ to be analogous to a GitHub repo---a single place for code---and a _stack_ to be an instance of that code with a separate configuration. For instance, _Project Foo_ may have multiple stacks for different development environments (Dev, Test, or Prod), or perhaps for different cloud configurations (geographic region for example). See [Organizing Projects and Stacks]({{< relref "/docs/guides/organizing-projects-stacks" >}}) for some best practices on organizing your Pulumi projects and stacks.

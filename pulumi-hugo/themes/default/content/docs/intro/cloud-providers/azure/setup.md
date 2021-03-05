@@ -70,7 +70,7 @@ Once obtained, there are two ways to communicate your authorization tokens to Pu
     $ pulumi config set azure-native:clientId <clientID>
     $ pulumi config set azure-native:clientSecret <clientSecret> --secret
     $ pulumi config set azure-native:tenantId <tenantID>
-    $ pulumi config set azure-native:subscriptionId <subscriptionId>
+    $ pulumi config set azure-native:subscriptionId <subscriptionID>
     ```
 
 ### Creating a Service Principal
