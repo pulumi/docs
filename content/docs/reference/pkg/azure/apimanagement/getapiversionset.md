@@ -1,8 +1,8 @@
 
 ---
-title: "GetApiVersionSet"
-title_tag: "Function GetApiVersionSet | Module apimanagement | Package Azure"
-meta_desc: "Explore the GetApiVersionSet function of the apimanagement module, including examples, input properties, output properties, and supporting types. Uses this data source to access information about an API Version Set within an API Management Service."
+title: "getApiVersionSet"
+title_tag: "azure.apimanagement.getApiVersionSet"
+meta_desc: "Documentation for the azure.apimanagement.getApiVersionSet function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -102,13 +102,13 @@ export const apiManagementApiVersionSetId = example.then(example => example.id);
 {{% /examples %}}
 
 
-## Using GetApiVersionSet {#using}
+## Using getApiVersionSet {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApiVersionSet<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#GetApiVersionSetArgs">GetApiVersionSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#GetApiVersionSetResult">GetApiVersionSetResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getApiVersionSet<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetApiVersionSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetApiVersionSetResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -118,7 +118,7 @@ export const apiManagementApiVersionSetId = example.then(example => example.id);
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApiVersionSet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#LookupApiVersionSetArgs">LookupApiVersionSetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#LookupApiVersionSetResult">LookupApiVersionSetResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupApiVersionSet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupApiVersionSetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupApiVersionSetResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupApiVersionSet` in the Go SDK.
 
@@ -127,7 +127,7 @@ export const apiManagementApiVersionSetId = example.then(example => example.id);
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetApiVersionSet </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.GetApiVersionSetResult.html">GetApiVersionSetResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.GetApiVersionSetArgs.html">GetApiVersionSetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetApiVersionSetResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetApiVersionSetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -283,7 +283,7 @@ The following arguments are supported:
 
 
 
-## GetApiVersionSet Result {#result}
+## getApiVersionSet Result {#result}
 
 The following output properties are available:
 

@@ -31,24 +31,6 @@ Explore the resources and functions of the Core module in the Azure DevOps packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).</dd>
 	<dt>Version</dt>
-	<dd>1.1.1</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureDevOps/Pulumi.AzureDevOps.Core.html" title="Pulumi.AzureDevOps.Core">Pulumi.AzureDevOps.Core</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/core?tab=doc#" title="azuredevops/core">azuredevops/core</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azuredevops/Core/#" title="@pulumi/azuredevops/core">@pulumi/azuredevops/core</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azuredevops/core" title="pulumi_azuredevops/core">pulumi_azuredevops/core</a></dd>
-
+	<dd>1.2.1</dd>
 </dl>
 

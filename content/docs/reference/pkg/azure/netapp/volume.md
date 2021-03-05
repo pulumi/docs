@@ -60,6 +60,12 @@ const exampleVolume = new azure.netapp.Volume("exampleVolume", {
     subnetId: exampleSubnet.id,
     protocols: ["NFSv4.1"],
     storageQuotaInGb: 100,
+    dataProtectionReplication: {
+        endpointType: "dst",
+        remoteVolumeLocation: azurerm_resource_group.example_primary.location,
+        remoteVolumeResourceId: azurerm_netapp_volume.example_primary.id,
+        replicationFrequency: "_10minutely",
+    },
 });
 ```
 ```python
@@ -103,7 +109,13 @@ example_volume = azure.netapp.Volume("exampleVolume",
     service_level="Premium",
     subnet_id=example_subnet.id,
     protocols=["NFSv4.1"],
-    storage_quota_in_gb=100)
+    storage_quota_in_gb=100,
+    data_protection_replication=azure.netapp.VolumeDataProtectionReplicationArgs(
+        endpoint_type="dst",
+        remote_volume_location=azurerm_resource_group["example_primary"]["location"],
+        remote_volume_resource_id=azurerm_netapp_volume["example_primary"]["id"],
+        replication_frequency="_10minutely",
+    ))
 ```
 ```csharp
 using Pulumi;
@@ -178,6 +190,13 @@ class MyStack : Stack
                 "NFSv4.1",
             },
             StorageQuotaInGb = 100,
+            DataProtectionReplication = new Azure.NetApp.Inputs.VolumeDataProtectionReplicationArgs
+            {
+                EndpointType = "dst",
+                RemoteVolumeLocation = azurerm_resource_group.Example_primary.Location,
+                RemoteVolumeResourceId = azurerm_netapp_volume.Example_primary.Id,
+                ReplicationFrequency = "_10minutely",
+            },
         });
     }
 
@@ -262,6 +281,12 @@ func main() {
 				pulumi.String("NFSv4.1"),
 			},
 			StorageQuotaInGb: pulumi.Int(100),
+			DataProtectionReplication: &netapp.VolumeDataProtectionReplicationArgs{
+				EndpointType:           pulumi.String("dst"),
+				RemoteVolumeLocation:   pulumi.Any(azurerm_resource_group.Example_primary.Location),
+				RemoteVolumeResourceId: pulumi.Any(azurerm_netapp_volume.Example_primary.Id),
+				ReplicationFrequency:   pulumi.String("_10minutely"),
+			},
 		})
 		if err != nil {
 			return err
@@ -278,19 +303,19 @@ func main() {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/netapp/#Volume">Volume</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/netapp/#VolumeArgs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/netapp/#pulumi_azure.netapp.Volume">Volume</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">export_policy_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VolumeExportPolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_quota_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_protection_replication</span><span class="p">:</span> <span class="nx">Optional[VolumeDataProtectionReplicationArgs]</span> = None<span class="p">, </span><span class="nx">export_policy_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VolumeExportPolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_quota_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/netapp?tab=doc#Volume">NewVolume</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/netapp?tab=doc#VolumeArgs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/netapp?tab=doc#Volume">Volume</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVolume</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.NetApp.Volume.html">Volume</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.NetApp.VolumeArgs.html">VolumeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Volume</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VolumeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -311,7 +336,7 @@ func main() {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/azure/netapp/#VolumeArgs">VolumeArgs</a></span>
+        <span class="property-type"><a href="#inputs">VolumeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -380,7 +405,7 @@ func main() {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/netapp?tab=doc#VolumeArgs">VolumeArgs</a></span>
+        <span class="property-type"><a href="#inputs">VolumeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -419,7 +444,7 @@ func main() {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.NetApp.VolumeArgs.html">VolumeArgs</a></span>
+        <span class="property-type"><a href="#inputs">VolumeArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -442,11 +467,11 @@ func main() {
 
 ## Volume Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Volume resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Volume resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -523,6 +548,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}A unique file path for the volume. Used when creating mount targets. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dataprotectionreplication_csharp">
+<a href="#dataprotectionreplication_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Protection<wbr>Replication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="exportpolicyrules_csharp">
@@ -651,6 +685,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="dataprotectionreplication_go">
+<a href="#dataprotectionreplication_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Protection<wbr>Replication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="exportpolicyrules_go">
 <a href="#exportpolicyrules_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Policy<wbr>Rules</a>
 </span>
@@ -777,6 +820,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="dataprotectionreplication_nodejs">
+<a href="#dataprotectionreplication_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Protection<wbr>Replication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="exportpolicyrules_nodejs">
 <a href="#exportpolicyrules_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Policy<wbr>Rules</a>
 </span>
@@ -901,6 +953,15 @@ The Volume resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}A unique file path for the volume. Used when creating mount targets. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="data_protection_replication_python">
+<a href="#data_protection_replication_python" style="color: inherit; text-decoration: inherit;">data_<wbr>protection_<wbr>replication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="export_policy_rules_python">
@@ -1069,20 +1130,20 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/netapp/#VolumeState">VolumeState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/netapp/#Volume">Volume</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VolumeState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Volume</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">export_policy_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VolumeExportPolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mount_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_quota_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Volume</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">data_protection_replication</span><span class="p">:</span> <span class="nx">Optional[VolumeDataProtectionReplicationArgs]</span> = None<span class="p">, </span><span class="nx">export_policy_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VolumeExportPolicyRuleArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mount_ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocols</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_quota_in_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">volume_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Volume</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVolume<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/netapp?tab=doc#VolumeState">VolumeState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/netapp?tab=doc#Volume">Volume</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVolume<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VolumeState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Volume</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.NetApp.Volume.html">Volume</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.NetApp.VolumeState.html">VolumeState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Volume</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VolumeState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1197,6 +1258,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the NetApp account in which the NetApp Pool should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_dataprotectionreplication_csharp">
+<a href="#state_dataprotectionreplication_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Protection<wbr>Replication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_exportpolicyrules_csharp">
@@ -1335,6 +1405,15 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_dataprotectionreplication_go">
+<a href="#state_dataprotectionreplication_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Protection<wbr>Replication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_exportpolicyrules_go">
 <a href="#state_exportpolicyrules_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Policy<wbr>Rules</a>
 </span>
@@ -1469,6 +1548,15 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the NetApp account in which the NetApp Pool should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_dataprotectionreplication_nodejs">
+<a href="#state_dataprotectionreplication_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Protection<wbr>Replication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_exportpolicyrules_nodejs">
@@ -1607,6 +1695,15 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_data_protection_replication_python">
+<a href="#state_data_protection_replication_python" style="color: inherit; text-decoration: inherit;">data_<wbr>protection_<wbr>replication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_export_policy_rules_python">
 <a href="#state_export_policy_rules_python" style="color: inherit; text-decoration: inherit;">export_<wbr>policy_<wbr>rules</a>
 </span>
@@ -1737,19 +1834,193 @@ The following state arguments are supported:
 
 
 
-<h4 id="volumeexportpolicyrule">Volume<wbr>Export<wbr>Policy<wbr>Rule</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VolumeExportPolicyRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VolumeExportPolicyRule">output</a> API doc for this type.
+<h4 id="volumedataprotectionreplication">Volume<wbr>Data<wbr>Protection<wbr>Replication</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remotevolumelocation_csharp">
+<a href="#remotevolumelocation_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Volume<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Primary volume's location.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="remotevolumeresourceid_csharp">
+<a href="#remotevolumeresourceid_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Volume<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Primary volume's resource id.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="replicationfrequency_csharp">
+<a href="#replicationfrequency_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Replication frequency, supported values are '10minutes', 'hourly', 'daily', values are case sensitive.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpointtype_csharp">
+<a href="#endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint type, default value is `dst` for destination.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/netapp?tab=doc#VolumeExportPolicyRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/netapp?tab=doc#VolumeExportPolicyRuleOutput">output</a> API doc for this type.
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remotevolumelocation_go">
+<a href="#remotevolumelocation_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Volume<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Primary volume's location.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="remotevolumeresourceid_go">
+<a href="#remotevolumeresourceid_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Volume<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Primary volume's resource id.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="replicationfrequency_go">
+<a href="#replicationfrequency_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Replication frequency, supported values are '10minutes', 'hourly', 'daily', values are case sensitive.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpointtype_go">
+<a href="#endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint type, default value is `dst` for destination.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.NetApp.Inputs.VolumeExportPolicyRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.NetApp.Outputs.VolumeExportPolicyRule.html">output</a> API doc for this type.
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remotevolumelocation_nodejs">
+<a href="#remotevolumelocation_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Volume<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Primary volume's location.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="remotevolumeresourceid_nodejs">
+<a href="#remotevolumeresourceid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Volume<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Primary volume's resource id.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="replicationfrequency_nodejs">
+<a href="#replicationfrequency_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Replication frequency, supported values are '10minutes', 'hourly', 'daily', values are case sensitive.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpointtype_nodejs">
+<a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint type, default value is `dst` for destination.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="remote_volume_location_python">
+<a href="#remote_volume_location_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>volume_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Primary volume's location.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="remote_volume_resource_id_python">
+<a href="#remote_volume_resource_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>volume_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Primary volume's resource id.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="replication_frequency_python">
+<a href="#replication_frequency_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Replication frequency, supported values are '10minutes', 'hourly', 'daily', values are case sensitive.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpoint_type_python">
+<a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The endpoint type, default value is `dst` for destination.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="volumeexportpolicyrule">Volume<wbr>Export<wbr>Policy<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

@@ -1,6 +1,6 @@
 ---
 title: "Venafi"
-title_tag: "Module Venafi | Package Venafi"
+title_tag: "venafi.Venafi"
 meta_desc: "A Pulumi package for creating and managing venafi cloud resources."
 menu:
     reference:
@@ -27,24 +27,6 @@ A Pulumi package for creating and managing venafi cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`venafi` Terraform Provider](https://github.com/Venafi/terraform-provider-venafi).</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Venafi/Pulumi.Venafi.html" title="Pulumi.Venafi">Pulumi.Venafi</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-venafi/sdk/go/venafi/?tab=doc#" title="venafi">venafi</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/venafi/#" title="@pulumi/venafi">@pulumi/venafi</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_venafi" title="pulumi_venafi">pulumi_venafi</a></dd>
-
+	<dd>0.3.2</dd>
 </dl>
 

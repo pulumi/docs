@@ -1,8 +1,8 @@
 
 ---
-title: "GetServicePrincipal"
-title_tag: "Function GetServicePrincipal | Package Azure AD"
-meta_desc: "Explore the GetServicePrincipal function of the Azure AD package, including examples, input properties, output properties, and supporting types. Gets information about an existing Service Principal associated with an Application within Azure Active Directory."
+title: "getServicePrincipal"
+title_tag: "azuread.getServicePrincipal"
+meta_desc: "Documentation for the azuread.getServicePrincipal function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -229,13 +229,13 @@ const example = pulumi.output(azuread.getServicePrincipal({
 {{% /examples %}}
 
 
-## Using GetServicePrincipal {#using}
+## Using getServicePrincipal {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServicePrincipal<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#GetServicePrincipalArgs">GetServicePrincipalArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#GetServicePrincipalResult">GetServicePrincipalResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServicePrincipal<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServicePrincipalArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServicePrincipalResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -245,7 +245,7 @@ const example = pulumi.output(azuread.getServicePrincipal({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServicePrincipal<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#LookupServicePrincipalArgs">LookupServicePrincipalArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#LookupServicePrincipalResult">LookupServicePrincipalResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServicePrincipal<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServicePrincipalArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServicePrincipalResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupServicePrincipal` in the Go SDK.
 
@@ -254,7 +254,7 @@ const example = pulumi.output(azuread.getServicePrincipal({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetServicePrincipal </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.GetServicePrincipalResult.html">GetServicePrincipalResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.GetServicePrincipalArgs.html">GetServicePrincipalArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetServicePrincipalResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServicePrincipalArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -450,7 +450,7 @@ The following arguments are supported:
 
 
 
-## GetServicePrincipal Result {#result}
+## getServicePrincipal Result {#result}
 
 The following output properties are available:
 
@@ -711,16 +711,6 @@ The following output properties are available:
 
 
 <h4 id="getserviceprincipalapprole">Get<wbr>Service<wbr>Principal<wbr>App<wbr>Role</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetServicePrincipalAppRole">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#GetServicePrincipalAppRole">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Outputs.GetServicePrincipalAppRole.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -765,7 +755,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission`
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -775,7 +765,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines if the app role is enabled.
+    <dd>{{% md %}}Is this permission enabled?
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -785,7 +775,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
+    <dd>{{% md %}}The name of this permission
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -831,7 +821,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission`
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -841,7 +831,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines if the app role is enabled.
+    <dd>{{% md %}}Is this permission enabled?
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -851,7 +841,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
+    <dd>{{% md %}}The name of this permission
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -897,7 +887,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission`
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -907,7 +897,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Determines if the app role is enabled.
+    <dd>{{% md %}}Is this permission enabled?
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -917,7 +907,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
+    <dd>{{% md %}}The name of this permission
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -963,7 +953,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission`
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -973,7 +963,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines if the app role is enabled.
+    <dd>{{% md %}}Is this permission enabled?
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -983,22 +973,12 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
+    <dd>{{% md %}}The name of this permission
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="getserviceprincipaloauth2permission">Get<wbr>Service<wbr>Principal<wbr>Oauth2Permission</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#GetServicePrincipalOauth2Permission">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetServicePrincipalOauth2Permission">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#GetServicePrincipalOauth2PermissionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#GetServicePrincipalOauth2Permission">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Inputs.GetServicePrincipalOauth2PermissionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Outputs.GetServicePrincipalOauth2Permission.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1033,7 +1013,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission`
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1043,7 +1023,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines if the app role is enabled.
+    <dd>{{% md %}}Is this permission enabled?
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1083,7 +1063,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
+    <dd>{{% md %}}The name of this permission
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1119,7 +1099,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission`
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1129,7 +1109,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines if the app role is enabled.
+    <dd>{{% md %}}Is this permission enabled?
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1169,7 +1149,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
+    <dd>{{% md %}}The name of this permission
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1205,7 +1185,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission`
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1215,7 +1195,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Determines if the app role is enabled.
+    <dd>{{% md %}}Is this permission enabled?
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1255,7 +1235,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
+    <dd>{{% md %}}The name of this permission
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1291,7 +1271,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique identifier of the `app_role`.
+    <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission`
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1301,7 +1281,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines if the app role is enabled.
+    <dd>{{% md %}}Is this permission enabled?
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1341,7 +1321,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
+    <dd>{{% md %}}The name of this permission
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

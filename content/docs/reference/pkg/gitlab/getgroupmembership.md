@@ -1,8 +1,8 @@
 
 ---
-title: "GetGroupMembership"
-title_tag: "Function GetGroupMembership | Package GitLab"
-meta_desc: "Explore the GetGroupMembership function of the GitLab package, including examples, input properties, output properties, and supporting types. ## # gitlab\_group\_membership"
+title: "getGroupMembership"
+title_tag: "gitlab.getGroupMembership"
+meta_desc: "Documentation for the gitlab.getGroupMembership function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -46,7 +46,6 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab"
-	"github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -92,13 +91,13 @@ const example = pulumi.output(gitlab.getGroupMembership({
 {{% /examples %}}
 
 
-## Using GetGroupMembership {#using}
+## Using getGroupMembership {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGroupMembership<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#GetGroupMembershipArgs">GetGroupMembershipArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#GetGroupMembershipResult">GetGroupMembershipResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getGroupMembership<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetGroupMembershipArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetGroupMembershipResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -108,7 +107,7 @@ const example = pulumi.output(gitlab.getGroupMembership({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupGroupMembership<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#LookupGroupMembershipArgs">LookupGroupMembershipArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#LookupGroupMembershipResult">LookupGroupMembershipResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupGroupMembership<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupGroupMembershipArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupGroupMembershipResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupGroupMembership` in the Go SDK.
 
@@ -117,7 +116,7 @@ const example = pulumi.output(gitlab.getGroupMembership({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetGroupMembership </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.GetGroupMembershipResult.html">GetGroupMembershipResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.GetGroupMembershipArgs.html">GetGroupMembershipArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetGroupMembershipResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetGroupMembershipArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -273,7 +272,7 @@ The following arguments are supported:
 
 
 
-## GetGroupMembership Result {#result}
+## getGroupMembership Result {#result}
 
 The following output properties are available:
 
@@ -502,16 +501,6 @@ The following output properties are available:
 
 
 <h4 id="getgroupmembershipmember">Get<wbr>Group<wbr>Membership<wbr>Member</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gitlab/types/output/#GetGroupMembershipMember">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#GetGroupMembershipMember">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.Outputs.GetGroupMembershipMember.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

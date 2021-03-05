@@ -1,8 +1,8 @@
 
 ---
-title: "GetAlertRuleTemplate"
-title_tag: "Function GetAlertRuleTemplate | Module sentinel | Package Azure"
-meta_desc: "Explore the GetAlertRuleTemplate function of the sentinel module, including examples, input properties, output properties, and supporting types. Use this data source to access information about an existing Sentinel Alert Rule Template."
+title: "getAlertRuleTemplate"
+title_tag: "azure.sentinel.getAlertRuleTemplate"
+meta_desc: "Documentation for the azure.sentinel.getAlertRuleTemplate function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -99,13 +99,13 @@ export const id = example.then(example => example.id);
 {{% /examples %}}
 
 
-## Using GetAlertRuleTemplate {#using}
+## Using getAlertRuleTemplate {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAlertRuleTemplate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/sentinel/#GetAlertRuleTemplateArgs">GetAlertRuleTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/sentinel/#GetAlertRuleTemplateResult">GetAlertRuleTemplateResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAlertRuleTemplate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAlertRuleTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAlertRuleTemplateResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -115,14 +115,16 @@ export const id = example.then(example => example.id);
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertRuleTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sentinel?tab=doc#GetAlertRuleTemplateArgs">GetAlertRuleTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sentinel?tab=doc#GetAlertRuleTemplateResult">GetAlertRuleTemplateResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertRuleTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAlertRuleTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAlertRuleTemplateResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAlertRuleTemplate` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAlertRuleTemplate </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Sentinel.GetAlertRuleTemplateResult.html">GetAlertRuleTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Sentinel.GetAlertRuleTemplateArgs.html">GetAlertRuleTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAlertRuleTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAlertRuleTemplateArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -278,7 +280,7 @@ The following arguments are supported:
 
 
 
-## GetAlertRuleTemplate Result {#result}
+## getAlertRuleTemplate Result {#result}
 
 The following output properties are available:
 
@@ -543,16 +545,6 @@ The following output properties are available:
 
 
 <h4 id="getalertruletemplatescheduledtemplate">Get<wbr>Alert<wbr>Rule<wbr>Template<wbr>Scheduled<wbr>Template</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAlertRuleTemplateScheduledTemplate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sentinel?tab=doc#GetAlertRuleTemplateScheduledTemplate">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Sentinel.Outputs.GetAlertRuleTemplateScheduledTemplate.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -901,16 +893,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getalertruletemplatesecurityincidenttemplate">Get<wbr>Alert<wbr>Rule<wbr>Template<wbr>Security<wbr>Incident<wbr>Template</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAlertRuleTemplateSecurityIncidentTemplate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/sentinel?tab=doc#GetAlertRuleTemplateSecurityIncidentTemplate">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Sentinel.Outputs.GetAlertRuleTemplateSecurityIncidentTemplate.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

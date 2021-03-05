@@ -1,8 +1,8 @@
 
 ---
-title: "GetServiceQuota"
-title_tag: "Function GetServiceQuota | Module servicequotas | Package AWS"
-meta_desc: "Explore the GetServiceQuota function of the servicequotas module, including examples, input properties, output properties, and supporting types. Retrieve information about a Service Quota."
+title: "getServiceQuota"
+title_tag: "aws.servicequotas.getServiceQuota"
+meta_desc: "Documentation for the aws.servicequotas.getServiceQuota function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -112,13 +112,13 @@ const byQuotaName = pulumi.output(aws.servicequotas.getServiceQuota({
 {{% /examples %}}
 
 
-## Using GetServiceQuota {#using}
+## Using getServiceQuota {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServiceQuota<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/servicequotas/#GetServiceQuotaArgs">GetServiceQuotaArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/servicequotas/#GetServiceQuotaResult">GetServiceQuotaResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServiceQuota<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServiceQuotaArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServiceQuotaResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -128,7 +128,7 @@ const byQuotaName = pulumi.output(aws.servicequotas.getServiceQuota({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServiceQuota<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/servicequotas?tab=doc#LookupServiceQuotaArgs">LookupServiceQuotaArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/servicequotas?tab=doc#LookupServiceQuotaResult">LookupServiceQuotaResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServiceQuota<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupServiceQuotaArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupServiceQuotaResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupServiceQuota` in the Go SDK.
 
@@ -137,7 +137,7 @@ const byQuotaName = pulumi.output(aws.servicequotas.getServiceQuota({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetServiceQuota </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Servicequotas.GetServiceQuotaResult.html">GetServiceQuotaResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ServiceQuotas.GetServiceQuotaArgs.html">GetServiceQuotaArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetServiceQuotaResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServiceQuotaArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -293,7 +293,7 @@ The following arguments are supported:
 
 
 
-## GetServiceQuota Result {#result}
+## getServiceQuota Result {#result}
 
 The following output properties are available:
 

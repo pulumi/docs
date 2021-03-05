@@ -1,8 +1,8 @@
 
 ---
-title: "GetContainerGroups"
-title_tag: "Function GetContainerGroups | Module eci | Package AliCloud"
-meta_desc: "Explore the GetContainerGroups function of the eci module, including examples, input properties, output properties, and supporting types. This data source provides the Eci Container Groups of the current Alibaba Cloud user."
+title: "getContainerGroups"
+title_tag: "alicloud.eci.getContainerGroups"
+meta_desc: "Documentation for the alicloud.eci.getContainerGroups function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -101,13 +101,13 @@ export const firstEciContainerGroupId = example.then(example => example.groups[0
 {{% /examples %}}
 
 
-## Using GetContainerGroups {#using}
+## Using getContainerGroups {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getContainerGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/eci/#GetContainerGroupsArgs">GetContainerGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/eci/#GetContainerGroupsResult">GetContainerGroupsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getContainerGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetContainerGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetContainerGroupsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -117,14 +117,16 @@ export const firstEciContainerGroupId = example.then(example => example.groups[0
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainerGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetContainerGroupsArgs">GetContainerGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetContainerGroupsResult">GetContainerGroupsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainerGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetContainerGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetContainerGroupsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetContainerGroups` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetContainerGroups </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.GetContainerGroupsResult.html">GetContainerGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.GetContainerGroupsArgs.html">GetContainerGroupsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetContainerGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetContainerGroupsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -632,7 +634,7 @@ The following arguments are supported:
 
 
 
-## GetContainerGroups Result {#result}
+## getContainerGroups Result {#result}
 
 The following output properties are available:
 
@@ -1213,16 +1215,6 @@ The following output properties are available:
 
 
 <h4 id="getcontainergroupsgroup">Get<wbr>Container<wbr>Groups<wbr>Group</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetContainerGroupsGroup">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetContainerGroupsGroup">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.GetContainerGroupsGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2447,16 +2439,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupcontainer">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetContainerGroupsGroupContainer">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetContainerGroupsGroupContainer">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.GetContainerGroupsGroupContainer.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3045,16 +3027,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupcontainerenvironmentvar">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Environment<wbr>Var</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetContainerGroupsGroupContainerEnvironmentVar">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetContainerGroupsGroupContainerEnvironmentVar">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.GetContainerGroupsGroupContainerEnvironmentVar.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3163,16 +3135,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupcontainerport">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Port</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetContainerGroupsGroupContainerPort">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetContainerGroupsGroupContainerPort">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.GetContainerGroupsGroupContainerPort.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3281,16 +3243,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupcontainervolumemount">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Container<wbr>Volume<wbr>Mount</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetContainerGroupsGroupContainerVolumeMount">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetContainerGroupsGroupContainerVolumeMount">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.GetContainerGroupsGroupContainerVolumeMount.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3439,16 +3391,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupdnsconfig">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Dns<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetContainerGroupsGroupDnsConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetContainerGroupsGroupDnsConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.GetContainerGroupsGroupDnsConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3597,16 +3539,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupdnsconfigoption">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Dns<wbr>Config<wbr>Option</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetContainerGroupsGroupDnsConfigOption">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetContainerGroupsGroupDnsConfigOption">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.GetContainerGroupsGroupDnsConfigOption.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3715,16 +3647,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupecisecuritycontext">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Eci<wbr>Security<wbr>Context</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetContainerGroupsGroupEciSecurityContext">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetContainerGroupsGroupEciSecurityContext">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.GetContainerGroupsGroupEciSecurityContext.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3793,16 +3715,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupecisecuritycontextsysctl">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Eci<wbr>Security<wbr>Context<wbr>Sysctl</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetContainerGroupsGroupEciSecurityContextSysctl">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetContainerGroupsGroupEciSecurityContextSysctl">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.GetContainerGroupsGroupEciSecurityContextSysctl.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3911,16 +3823,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupevent">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Event</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetContainerGroupsGroupEvent">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetContainerGroupsGroupEvent">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.GetContainerGroupsGroupEvent.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4229,16 +4131,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgrouphostalias">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Host<wbr>Alias</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetContainerGroupsGroupHostAlias">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetContainerGroupsGroupHostAlias">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.GetContainerGroupsGroupHostAlias.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4347,16 +4239,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupinitcontainer">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetContainerGroupsGroupInitContainer">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetContainerGroupsGroupInitContainer">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.GetContainerGroupsGroupInitContainer.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -4945,16 +4827,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupinitcontainerenvironmentvar">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Environment<wbr>Var</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetContainerGroupsGroupInitContainerEnvironmentVar">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetContainerGroupsGroupInitContainerEnvironmentVar">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.GetContainerGroupsGroupInitContainerEnvironmentVar.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5063,16 +4935,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupinitcontainerport">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Port</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetContainerGroupsGroupInitContainerPort">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetContainerGroupsGroupInitContainerPort">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.GetContainerGroupsGroupInitContainerPort.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5181,16 +5043,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupinitcontainervolumemount">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Init<wbr>Container<wbr>Volume<wbr>Mount</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetContainerGroupsGroupInitContainerVolumeMount">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetContainerGroupsGroupInitContainerVolumeMount">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.GetContainerGroupsGroupInitContainerVolumeMount.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5339,16 +5191,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupvolume">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Volume</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetContainerGroupsGroupVolume">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetContainerGroupsGroupVolume">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.GetContainerGroupsGroupVolume.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -5817,16 +5659,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcontainergroupsgroupvolumeconfigfilevolumeconfigfiletopath">Get<wbr>Container<wbr>Groups<wbr>Group<wbr>Volume<wbr>Config<wbr>File<wbr>Volume<wbr>Config<wbr>File<wbr>To<wbr>Path</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetContainerGroupsGroupVolumeConfigFileVolumeConfigFileToPath">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/eci?tab=doc#GetContainerGroupsGroupVolumeConfigFileVolumeConfigFileToPath">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Eci.Outputs.GetContainerGroupsGroupVolumeConfigFileVolumeConfigFileToPath.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

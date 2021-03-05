@@ -1,8 +1,8 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Package eks"
-meta_desc: "Explore the Cluster resource of the eks package, including examples, input properties, output properties, lookup functions, and supporting types. Cluster is a component that wraps the AWS and Kubernetes resources necessary to run an EKS cluster, its worker nodes, its optional StorageClasses, and an optional deployment of the Kubernetes Dashboard."
+title_tag: "eks.Cluster"
+meta_desc: "Documentation for the eks.Cluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -20,19 +20,19 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx">ClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_security_group</span><span class="p">:</span> <span class="nx">Optional[_ec2_securitygroup.SecurityGroup]</span> = None<span class="p">, </span><span class="nx">cluster_security_group_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">cluster_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">create_oidc_provider</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">creation_role_provider</span><span class="p">:</span> <span class="nx">Optional[CreationRoleProviderArgs]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enabled_cluster_log_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">encrypt_root_block_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption_config_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_private_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fargate</span><span class="p">:</span> <span class="nx">Optional[Union[bool, FargateProfileArgs]]</span> = None<span class="p">, </span><span class="nx">gpu</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_role</span><span class="p">:</span> <span class="nx">Optional[_iam_role.Role]</span> = None<span class="p">, </span><span class="nx">instance_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[_iam_role.Role]]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kubernetes_service_ip_address_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">node_group_options</span><span class="p">:</span> <span class="nx">Optional[ClusterNodeGroupOptionsArgs]</span> = None<span class="p">, </span><span class="nx">node_public_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">node_security_group_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">node_subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">node_user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">provider_credential_opts</span><span class="p">:</span> <span class="nx">Optional[KubeconfigOptionsArgs]</span> = None<span class="p">, </span><span class="nx">proxy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_access_cidrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">public_subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">role_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[RoleMappingArgs]]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[_iam_role.Role]</span> = None<span class="p">, </span><span class="nx">skip_default_node_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_classes</span><span class="p">:</span> <span class="nx">Optional[Union[str, StorageClassArgs]]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">use_default_vpc_cni</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserMappingArgs]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_cni_options</span><span class="p">:</span> <span class="nx">Optional[VpcCniOptionsArgs]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_security_group</span><span class="p">:</span> <span class="nx">Optional[pulumi_aws.ec2.SecurityGroup]</span> = None<span class="p">, </span><span class="nx">cluster_security_group_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">cluster_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">create_oidc_provider</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">creation_role_provider</span><span class="p">:</span> <span class="nx">Optional[CreationRoleProviderArgs]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enabled_cluster_log_types</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">encrypt_root_block_device</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption_config_key_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_private_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">endpoint_public_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">fargate</span><span class="p">:</span> <span class="nx">Optional[Union[bool, FargateProfileArgs]]</span> = None<span class="p">, </span><span class="nx">gpu</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_profile_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_role</span><span class="p">:</span> <span class="nx">Optional[pulumi_aws.iam.Role]</span> = None<span class="p">, </span><span class="nx">instance_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[pulumi_aws.iam.Role]]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kubernetes_service_ip_address_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_ami_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">node_group_options</span><span class="p">:</span> <span class="nx">Optional[ClusterNodeGroupOptionsArgs]</span> = None<span class="p">, </span><span class="nx">node_public_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_root_volume_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">node_security_group_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">node_subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">node_user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">provider_credential_opts</span><span class="p">:</span> <span class="nx">Optional[KubeconfigOptionsArgs]</span> = None<span class="p">, </span><span class="nx">proxy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_access_cidrs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">public_subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">role_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[RoleMappingArgs]]</span> = None<span class="p">, </span><span class="nx">service_role</span><span class="p">:</span> <span class="nx">Optional[pulumi_aws.iam.Role]</span> = None<span class="p">, </span><span class="nx">skip_default_node_group</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">storage_classes</span><span class="p">:</span> <span class="nx">Optional[Union[str, StorageClassArgs]]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">use_default_vpc_cni</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserMappingArgs]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_cni_options</span><span class="p">:</span> <span class="nx">Optional[VpcCniOptionsArgs]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">ClusterArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewCluster</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Cluster</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx">ClusterArgs</span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ClusterArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -53,7 +53,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ClusterArgs</span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -122,7 +122,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ClusterArgs</span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -161,7 +161,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ClusterArgs</span>
+        <span class="property-type"><a href="#inputs">ClusterArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -184,11 +184,11 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
 
 ## Cluster Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Cluster resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Cluster resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1243,7 +1243,7 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
 <a href="#clustersecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ec2security<wbr>Group<wbr>Security<wbr>Group</span>
+        <span class="property-type">awsec2Security<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The security group to use for the cluster API endpoint. If not provided, a new security group will be created with full internet egress and ingress from node groups.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1389,7 +1389,7 @@ See for more details:
 <a href="#instancerole_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">iamrole<wbr>Role</span>
+        <span class="property-type">awsiam<wbr>Role</span>
     </dt>
     <dd>{{% md %}}This enables the simple case of only registering a *single* IAM instance role with the cluster, that is required to be shared by *all* node groups in their instance profiles.
 
@@ -1400,7 +1400,7 @@ Note: options `instanceRole` and `instanceRoles` are mutually exclusive.{{% /md 
 <a href="#instanceroles_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">iamrole<wbr>Role[]</span>
+        <span class="property-type">awsiam<wbr>Role[]</span>
     </dt>
     <dd>{{% md %}}This enables the advanced case of registering *many* IAM instance roles with the cluster for per node group IAM, instead of the simpler, shared case of `instanceRole`.
 
@@ -1658,7 +1658,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/network_r
 <a href="#servicerole_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">iamrole<wbr>Role</span>
+        <span class="property-type">awsiam<wbr>Role</span>
     </dt>
     <dd>{{% md %}}IAM Service Role for EKS to use to manage the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2466,7 +2466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#awsprovider_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Aws</span>
+        <span class="property-type">aws<wbr>Provider</span>
     </dt>
     <dd>{{% md %}}The AWS resource provider.{{% /md %}}</dd>
     <dt class="property-"
@@ -2484,7 +2484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ekscluster_nodejs" style="color: inherit; text-decoration: inherit;">eks<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ekscluster<wbr>Cluster</span>
+        <span class="property-type">awseks<wbr>Cluster</span>
     </dt>
     <dd>{{% md %}}The EKS cluster.{{% /md %}}</dd>
     <dt class="property-"
@@ -2493,7 +2493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#eksclusteringressrule_nodejs" style="color: inherit; text-decoration: inherit;">eks<wbr>Cluster<wbr>Ingress<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ec2security<wbr>Group<wbr>Rule<wbr>Security<wbr>Group<wbr>Rule</span>
+        <span class="property-type">awsec2Security<wbr>Group<wbr>Rule</span>
     </dt>
     <dd>{{% md %}}The ingress rule that gives node group access to cluster API server.{{% /md %}}</dd>
     <dt class="property-"
@@ -2520,7 +2520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#nodesecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ec2security<wbr>Group<wbr>Security<wbr>Group</span>
+        <span class="property-type">awsec2Security<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The security group for the cluster's nodes.{{% /md %}}</dd>
     <dt class="property-"
@@ -2529,7 +2529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Kubernetes</span>
+        <span class="property-type">kubernetes<wbr>Provider</span>
     </dt>
     <dd>{{% md %}}A Kubernetes resource provider that can be used to deploy into this cluster.{{% /md %}}</dd>
     <dt class="property-"
@@ -3253,7 +3253,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
 <a href="#clusteringressrule_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ingress<wbr>Rule</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ec2security<wbr>Group<wbr>Rule<wbr>Security<wbr>Group<wbr>Rule</span>
+        <span class="property-type">awsec2Security<wbr>Group<wbr>Rule</span>
     </dt>
     <dd>{{% md %}}The ingress rule that gives node group access.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3280,7 +3280,7 @@ Note: Given the inheritance of auto-generated CF tags and `cloudFormationTags`, 
 <a href="#extranodesecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Node<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ec2security<wbr>Group<wbr>Security<wbr>Group[]</span>
+        <span class="property-type">awsec2Security<wbr>Group[]</span>
     </dt>
     <dd>{{% md %}}Extra security groups to attach on all nodes in this worker node group.
 
@@ -3308,7 +3308,7 @@ See for more details:
 <a href="#instanceprofile_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">iaminstance<wbr>Profile<wbr>Instance<wbr>Profile</span>
+        <span class="property-type">awsiam<wbr>Instance<wbr>Profile</span>
     </dt>
     <dd>{{% md %}}The ingress rule that gives node group access.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3400,7 +3400,7 @@ If not provided, no SSH access is enabled on VMs.{{% /md %}}</dd>
 <a href="#nodesecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ec2security<wbr>Group<wbr>Security<wbr>Group</span>
+        <span class="property-type">awsec2Security<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The security group for the worker node group to communicate with the cluster.
 
@@ -4112,7 +4112,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 <a href="#cluster_nodejs" style="color: inherit; text-decoration: inherit;">cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ekscluster<wbr>Cluster</span>
+        <span class="property-type">awseks<wbr>Cluster</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -4121,7 +4121,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 <a href="#clustersecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ec2security<wbr>Group<wbr>Security<wbr>Group</span>
+        <span class="property-type">awsec2Security<wbr>Group</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -4139,7 +4139,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 <a href="#instanceroles_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Roles</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">iamrole<wbr>Role[]</span>
+        <span class="property-type">awsiam<wbr>Role[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -4157,7 +4157,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Kubernetes</span>
+        <span class="property-type">kubernetes<wbr>Provider</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -4184,7 +4184,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 <a href="#awsprovider_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Aws</span>
+        <span class="property-type">aws<wbr>Provider</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4193,7 +4193,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 <a href="#eksnodeaccess_nodejs" style="color: inherit; text-decoration: inherit;">eks<wbr>Node<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">corev1Config<wbr>Map</span>
+        <span class="property-type">kubernetescorev1Config<wbr>Map</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4202,7 +4202,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 <a href="#fargateprofile_nodejs" style="color: inherit; text-decoration: inherit;">fargate<wbr>Profile</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">eksfargate<wbr>Profile<wbr>Fargate<wbr>Profile</span>
+        <span class="property-type">awseks<wbr>Fargate<wbr>Profile</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4229,7 +4229,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 <a href="#oidcprovider_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">iamopen<wbr>Id<wbr>Connect<wbr>Provider<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider</span>
+        <span class="property-type">awsiam<wbr>Open<wbr>Id<wbr>Connect<wbr>Provider</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4256,7 +4256,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 <a href="#storageclasses_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Classes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: storagek8siov1Storage<wbr>Class}</span>
+        <span class="property-type">{[key: string]: kubernetesstoragev1Storage<wbr>Class}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4516,7 +4516,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 <a href="#provider_nodejs" style="color: inherit; text-decoration: inherit;">provider</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Aws</span>
+        <span class="property-type">aws<wbr>Provider</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -4525,7 +4525,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">iamrole<wbr>Role</span>
+        <span class="property-type">awsiam<wbr>Role</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -4641,7 +4641,7 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 <a href="#selectors_nodejs" style="color: inherit; text-decoration: inherit;">selectors</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#fargateprofileselector">eks<wbr>Fargate<wbr>Profile<wbr>Selector<wbr>Fargate<wbr>Profile<wbr>Selector[]</a></span>
+        <span class="property-type"><a href="#fargateprofileselector">awstypesinputeks<wbr>Fargate<wbr>Profile<wbr>Selector[]</a></span>
     </dt>
     <dd>{{% md %}}Specify the namespace and label selectors to use for launching pods into Fargate.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4907,7 +4907,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
 <a href="#cfnstack_nodejs" style="color: inherit; text-decoration: inherit;">cfn<wbr>Stack</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">cloudformationstack<wbr>Stack</span>
+        <span class="property-type">awscloudformation<wbr>Stack</span>
     </dt>
     <dd>{{% md %}}The CloudFormation Stack which defines the Node AutoScalingGroup.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4916,7 +4916,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
 <a href="#extranodesecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Node<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ec2security<wbr>Group<wbr>Security<wbr>Group[]</span>
+        <span class="property-type">awsec2Security<wbr>Group[]</span>
     </dt>
     <dd>{{% md %}}The additional security groups for the node group that captures user-specific rules.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4925,7 +4925,7 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
 <a href="#nodesecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Security<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">ec2security<wbr>Group<wbr>Security<wbr>Group</span>
+        <span class="property-type">awsec2Security<wbr>Group</span>
     </dt>
     <dd>{{% md %}}The security group for the node group to communicate with the cluster.{{% /md %}}</dd>
 </dl>
@@ -5394,7 +5394,7 @@ Please note that at most one storage class can be marked as default. If two or m
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">metav1Object<wbr>Meta</a></span>
+        <span class="property-type"><a href="#objectmeta">kubernetestypesinputmetav1Object<wbr>Meta</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata{{% /md %}}</dd>
     <dt class="property-optional"

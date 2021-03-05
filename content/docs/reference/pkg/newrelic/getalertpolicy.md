@@ -1,8 +1,8 @@
 
 ---
-title: "GetAlertPolicy"
-title_tag: "Function GetAlertPolicy | Package New Relic"
-meta_desc: "Explore the GetAlertPolicy function of the New Relic package, including examples, input properties, output properties, and supporting types. Use this data source to get information about a specific alert policy in New Relic that already exists."
+title: "getAlertPolicy"
+title_tag: "newrelic.getAlertPolicy"
+meta_desc: "Documentation for the newrelic.getAlertPolicy function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -53,13 +53,13 @@ const fooAlertPolicyChannel = new newrelic.AlertPolicyChannel("fooAlertPolicyCha
 {{% /examples %}}
 
 
-## Using GetAlertPolicy {#using}
+## Using getAlertPolicy {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAlertPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#GetAlertPolicyArgs">GetAlertPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/newrelic/#GetAlertPolicyResult">GetAlertPolicyResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAlertPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAlertPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAlertPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -69,7 +69,7 @@ const fooAlertPolicyChannel = new newrelic.AlertPolicyChannel("fooAlertPolicyCha
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAlertPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#LookupAlertPolicyArgs">LookupAlertPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic/?tab=doc#LookupAlertPolicyResult">LookupAlertPolicyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAlertPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAlertPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAlertPolicyResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupAlertPolicy` in the Go SDK.
 
@@ -78,7 +78,7 @@ const fooAlertPolicyChannel = new newrelic.AlertPolicyChannel("fooAlertPolicyCha
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAlertPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.GetAlertPolicyResult.html">GetAlertPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.GetAlertPolicyArgs.html">GetAlertPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAlertPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAlertPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -230,7 +230,7 @@ The following arguments are supported:
 
 
 
-## GetAlertPolicy Result {#result}
+## getAlertPolicy Result {#result}
 
 The following output properties are available:
 

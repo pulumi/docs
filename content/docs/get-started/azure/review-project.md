@@ -15,7 +15,7 @@ aliases: ["/docs/quickstart/azure/review-project/"]
 Let's review some of the generated project files:
 
 - `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project" >}}).
-- `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) we initialized.
+- `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) you initialized.
 
 {{% choosable language csharp %}}
 
@@ -23,50 +23,33 @@ Let's review some of the generated project files:
 
 {{% /choosable %}}
 
-- {{< langfile >}} is the Pulumi program that defines our stack resources. Let's examine it.
+- {{< langfile >}} is the Pulumi program that defines your stack resources. Let's examine it.
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+{{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% choosable language javascript %}}
-
-```javascript
-"use strict";
-const pulumi = require("@pulumi/pulumi");
-const azure = require("@pulumi/azure");
-
-// Create an Azure Resource Group
-const resourceGroup = new azure.core.ResourceGroup("resourceGroup");
-
-// Create an Azure resource (Storage Account)
-const account = new azure.storage.Account("storage", {
-    resourceGroupName: resourceGroup.name,
-    accountTier: "Standard",
-    accountReplicationType: "LRS",
-});
-
-// Export the connection string for the storage account
-exports.connectionString = account.primaryConnectionString;
-```
-
-{{% /choosable %}}
 {{% choosable language typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
+import * as resources from "@pulumi/azure-native/resources";
+import * as storage from "@pulumi/azure-native/storage";
 
 // Create an Azure Resource Group
-const resourceGroup = new azure.core.ResourceGroup("resourceGroup");
+const resourceGroup = new resources.ResourceGroup("resourceGroup");
 
 // Create an Azure resource (Storage Account)
-const account = new azure.storage.Account("storage", {
+const storageAccount = new storage.StorageAccount("sa", {
     resourceGroupName: resourceGroup.name,
-    accountTier: "Standard",
-    accountReplicationType: "LRS",
+    sku: {
+        name: storage.SkuName.Standard_LRS,
+    },
+    kind: storage.Kind.StorageV2,
 });
 
-// Export the connection string for the storage account
-export const connectionString = account.primaryConnectionString;
+// Export the primary key of the Storage Account
+const storageAccountKeys = pulumi.all([resourceGroup.name, storageAccount.name]).apply(([resourceGroupName, accountName]) =>
+    storage.listStorageAccountKeys({ resourceGroupName, accountName }));
+export const primaryStorageKey = storageAccountKeys.keys[0].value;
 ```
 
 {{% /choosable %}}
@@ -74,19 +57,28 @@ export const connectionString = account.primaryConnectionString;
 
 ```python
 import pulumi
-from pulumi_azure import core, storage
+from pulumi_azure_native import storage
+from pulumi_azure_native import resources
 
 # Create an Azure Resource Group
-resource_group = core.ResourceGroup("resource_group")
+resource_group = resources.ResourceGroup("resource_group")
 
 # Create an Azure resource (Storage Account)
-account = storage.Account("storage",
+account = storage.StorageAccount('sa',
     resource_group_name=resource_group.name,
-    account_tier='Standard',
-    account_replication_type='LRS')
+    sku=storage.SkuArgs(
+        name=storage.SkuName.STANDARD_LRS,
+    ),
+    kind=storage.Kind.STORAGE_V2)
 
-# Export the connection string for the storage account
-pulumi.export('connection_string', account.primary_connection_string)
+# Export the primary key of the Storage Account
+primary_key = pulumi.Output.all(resource_group.name, account.name) \
+    .apply(lambda args: storage.list_storage_account_keys(
+        resource_group_name=args[0],
+        account_name=args[1]
+    )).apply(lambda accountKeys: accountKeys.keys[0].value)
+
+pulumi.export("primary_storage_key", primary_key)
 ```
 
 {{% /choosable %}}
@@ -96,33 +88,49 @@ pulumi.export('connection_string', account.primary_connection_string)
 package main
 
 import (
-    "github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-    "github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
+    "github.com/pulumi/pulumi-azure-native/sdk/go/azure/resources"
+	"github.com/pulumi/pulumi-azure-native/sdk/go/azure/storage"
     "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
         // Create an Azure Resource Group
-        resourceGroup, err := core.NewResourceGroup(ctx, "resourceGroup", &core.ResourceGroupArgs{
-            Location: pulumi.String("WestUS"),
-        })
+        resourceGroup, err := resources.NewResourceGroup(ctx, "resourceGroup", nil)
         if err != nil {
             return err
         }
 
         // Create an Azure resource (Storage Account)
-        account, err := storage.NewAccount(ctx, "storage", &storage.AccountArgs{
-            ResourceGroupName:      resourceGroup.Name,
-            AccountTier:            pulumi.String("Standard"),
-            AccountReplicationType: pulumi.String("LRS"),
+        account, err := storage.NewStorageAccount(ctx, "sa", &storage.StorageAccountArgs{
+			ResourceGroupName: resourceGroup.Name,
+			AccessTier:        storage.AccessTierHot,
+			Sku: &storage.SkuArgs{
+				Name: storage.SkuName_Standard_LRS,
+			},
+			Kind: storage.KindStorageV2,
         })
         if err != nil {
             return err
         }
 
-        // Export the connection string for the storage account
-        ctx.Export("connectionString", account.PrimaryConnectionString)
+        // Export the primary key of the Storage Account
+		ctx.Export("primaryStorageKey", pulumi.All(resourceGroup.Name, account.Name).ApplyT(
+			func(args []interface{}) (string, error) {
+				resourceGroupName := args[0].(string)
+				accountName := args[1].(string)
+				accountKeys, err := storage.ListStorageAccountKeys(ctx, &storage.ListStorageAccountKeysArgs{
+					ResourceGroupName: resourceGroupName,
+					AccountName:       accountName,
+				})
+				if err != nil {
+					return "", err
+				}
+
+				return accountKeys.Keys[0].Value, nil
+			},
+		))
+
         return nil
     })
 }
@@ -132,9 +140,11 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Threading.Tasks;
 using Pulumi;
-using Pulumi.Azure.Core;
-using Pulumi.Azure.Storage;
+using Pulumi.AzureNative.Resources;
+using Pulumi.AzureNative.Storage;
+using Pulumi.AzureNative.Storage.Inputs;
 
 class MyStack : Stack
 {
@@ -143,29 +153,43 @@ class MyStack : Stack
         // Create an Azure Resource Group
         var resourceGroup = new ResourceGroup("resourceGroup");
 
-        // Create an Azure Storage Account
-        var storageAccount = new Account("storage", new AccountArgs
+        // Create an Azure resource (Storage Account)
+        var storageAccount = new StorageAccount("sa", new StorageAccountArgs
         {
             ResourceGroupName = resourceGroup.Name,
-            AccountReplicationType = "LRS",
-            AccountTier = "Standard"
+            Sku = new SkuArgs
+            {
+                Name = SkuName.Standard_LRS
+            },
+            Kind = Kind.StorageV2
         });
 
-        // Export the connection string for the storage account
-        this.ConnectionString = storageAccount.PrimaryConnectionString;
+        // Export the primary key of the Storage Account
+        this.PrimaryStorageKey = Output.Tuple(resourceGroup.Name, storageAccount.Name).Apply(names =>
+            Output.CreateSecret(GetStorageAccountPrimaryKey(names.Item1, names.Item2)));
     }
 
     [Output]
-    public Output<string> ConnectionString { get; set; }
+    public Output<string> PrimaryStorageKey { get; set; }
+
+    private static async Task<string> GetStorageAccountPrimaryKey(string resourceGroupName, string accountName)
+    {
+        var accountKeys = await ListStorageAccountKeys.InvokeAsync(new ListStorageAccountKeysArgs
+        {
+            ResourceGroupName = resourceGroupName,
+            AccountName = accountName
+        });
+        return accountKeys.Keys[0].Value;
+    }
 }
 ```
 
 {{% /choosable %}}
 
-This Pulumi program creates an Azure resource group and storage account and exports the storage account's connection string.
+This Pulumi program creates an Azure resource group and storage account and then exports the storage account's primary key.
 
-**Note**: In this program, the location of the resource group is set in the configuration setting `azure:location` (check the `Pulumi.dev.yaml` file). This is an easy way to set a global location for your program so you don't have to specify the location for each resource manually. The location for the storage account is automatically derived from the location of the resource group. To override the location for a resource, simply set the location property to one of Azure's [supported locations](https://azure.microsoft.com/en-us/global-infrastructure/locations/).
+**Note**: In this program, the location of the resource group is set in the configuration setting `azure-native:location` (check the `Pulumi.dev.yaml` file). This is an easy way to set a global location for your program so you don't have to specify the location for each resource manually. The location for the storage account is automatically derived from the location of the resource group. To override the location for a resource, simply set the location property to one of Azure's [supported locations](https://azure.microsoft.com/en-us/global-infrastructure/locations/).
 
-Next, we'll deploy the stack.
+Next, you'll deploy your stack, which will provision a resource group and your storage account.
 
 {{< get-started-stepper >}}

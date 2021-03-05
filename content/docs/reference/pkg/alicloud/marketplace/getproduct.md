@@ -1,8 +1,8 @@
 
 ---
-title: "GetProduct"
-title_tag: "Function GetProduct | Module marketplace | Package AliCloud"
-meta_desc: "Explore the GetProduct function of the marketplace module, including examples, input properties, output properties, and supporting types. This data source provides the Market product item details of Alibaba Cloud."
+title: "getProduct"
+title_tag: "alicloud.marketplace.getProduct"
+meta_desc: "Documentation for the alicloud.marketplace.getProduct function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -109,13 +109,13 @@ export const firstProductPackageVersion = defaultProduct.products[0].skuses[0].p
 {{% /examples %}}
 
 
-## Using GetProduct {#using}
+## Using getProduct {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProduct<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/marketplace/#GetProductArgs">GetProductArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/marketplace/#GetProductResult">GetProductResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getProduct<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetProductArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetProductResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -125,14 +125,16 @@ export const firstProductPackageVersion = defaultProduct.products[0].skuses[0].p
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProduct<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/marketplace?tab=doc#GetProductArgs">GetProductArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/marketplace?tab=doc#GetProductResult">GetProductResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProduct<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetProductArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetProductResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetProduct` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetProduct </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Marketplace.GetProductResult.html">GetProductResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.MarketPlace.GetProductArgs.html">GetProductArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetProductResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetProductArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -248,7 +250,7 @@ The following arguments are supported:
 
 
 
-## GetProduct Result {#result}
+## getProduct Result {#result}
 
 The following output properties are available:
 
@@ -437,16 +439,6 @@ The following output properties are available:
 
 
 <h4 id="getproductproduct">Get<wbr>Product<wbr>Product</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetProductProduct">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/marketplace?tab=doc#GetProductProduct">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.MarketPlace.Outputs.GetProductProduct.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -635,16 +627,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getproductproductskus">Get<wbr>Product<wbr>Product<wbr>Skus</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetProductProductSkus">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/marketplace?tab=doc#GetProductProductSkus">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.MarketPlace.Outputs.GetProductProductSkus.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -833,16 +815,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getproductproductskusimage">Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Image</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetProductProductSkusImage">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/marketplace?tab=doc#GetProductProductSkusImage">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.MarketPlace.Outputs.GetProductProductSkusImage.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -991,16 +963,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getproductproductskuspackageversion">Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Package<wbr>Version</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetProductProductSkusPackageVersion">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/marketplace?tab=doc#GetProductProductSkusPackageVersion">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.MarketPlace.Outputs.GetProductProductSkusPackageVersion.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Aiven"
-title_tag: "Module Aiven | Package Aiven"
+title_tag: "aiven.Aiven"
 meta_desc: "A Pulumi package for creating and managing Aiven cloud resources."
 menu:
     reference:
@@ -102,24 +102,6 @@ A Pulumi package for creating and managing Aiven cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).</dd>
 	<dt>Version</dt>
-	<dd>3.4.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.html" title="Pulumi.Aiven">Pulumi.Aiven</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#" title="aiven">aiven</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#" title="@pulumi/aiven">@pulumi/aiven</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_aiven" title="pulumi_aiven">pulumi_aiven</a></dd>
-
+	<dd>3.4.4</dd>
 </dl>
 

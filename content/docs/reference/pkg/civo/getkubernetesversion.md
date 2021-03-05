@@ -208,7 +208,7 @@ const minorVersion = pulumi.output(civo.getKubernetesVersion({
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKubernetesVersion<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/civo/#GetKubernetesVersionArgs">GetKubernetesVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/civo/#GetKubernetesVersionResult">GetKubernetesVersionResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKubernetesVersion<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetKubernetesVersionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetKubernetesVersionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -218,14 +218,14 @@ const minorVersion = pulumi.output(civo.getKubernetesVersion({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKubernetesVersion<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#GetKubernetesVersionArgs">GetKubernetesVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#GetKubernetesVersionResult">GetKubernetesVersionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKubernetesVersion<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetKubernetesVersionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetKubernetesVersionResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKubernetesVersion </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.GetKubernetesVersionResult.html">GetKubernetesVersionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.GetKubernetesVersionArgs.html">GetKubernetesVersionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetKubernetesVersionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetKubernetesVersionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -534,16 +534,6 @@ The following output properties are available:
 
 
 <h4 id="getkubernetesversionfilter">Get<wbr>Kubernetes<wbr>Version<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/civo/types/input/#GetKubernetesVersionFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/civo/types/output/#GetKubernetesVersionFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#GetKubernetesVersionFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#GetKubernetesVersionFilter">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.Inputs.GetKubernetesVersionFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.Outputs.GetKubernetesVersionFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -660,16 +650,6 @@ one of the values provided here.
 {{% /choosable %}}
 
 <h4 id="getkubernetesversionsort">Get<wbr>Kubernetes<wbr>Version<wbr>Sort</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/civo/types/input/#GetKubernetesVersionSort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/civo/types/output/#GetKubernetesVersionSort">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#GetKubernetesVersionSortArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#GetKubernetesVersionSort">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.Inputs.GetKubernetesVersionSortArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.Outputs.GetKubernetesVersionSort.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -778,16 +758,6 @@ one of the values provided here.
 {{% /choosable %}}
 
 <h4 id="getkubernetesversionversion">Get<wbr>Kubernetes<wbr>Version<wbr>Version</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/civo/types/output/#GetKubernetesVersionVersion">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-civo/sdk/go/civo/?tab=doc#GetKubernetesVersionVersion">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Civo/Pulumi.Civo.Outputs.GetKubernetesVersionVersion.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

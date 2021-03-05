@@ -1,8 +1,8 @@
 
 ---
-title: "GetSaml"
-title_tag: "Function GetSaml | Module app | Package Okta"
-meta_desc: "Explore the GetSaml function of the app module, including examples, input properties, output properties, and supporting types. Use this data source to retrieve the collaborators for a given repository."
+title: "getSaml"
+title_tag: "okta.app.getSaml"
+meta_desc: "Documentation for the okta.app.getSaml function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,13 +89,13 @@ const example = pulumi.output(okta.app.getSaml({
 {{% /examples %}}
 
 
-## Using GetSaml {#using}
+## Using getSaml {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSaml<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/app/#GetSamlArgs">GetSamlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/app/#GetSamlResult">GetSamlResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSaml<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSamlArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSamlResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -105,7 +105,7 @@ const example = pulumi.output(okta.app.getSaml({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSaml<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#LookupSamlArgs">LookupSamlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#LookupSamlResult">LookupSamlResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSaml<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSamlArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSamlResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSaml` in the Go SDK.
 
@@ -114,7 +114,7 @@ const example = pulumi.output(okta.app.getSaml({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSaml </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.App.GetSamlResult.html">GetSamlResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.App.GetSamlArgs.html">GetSamlArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSamlResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSamlArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -154,7 +154,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable self service.
+    <dd>{{% md %}}Enable self-service.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -204,7 +204,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsamlattributestatement">List&lt;Get<wbr>Saml<wbr>Attribute<wbr>Statement<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) List of SAML Attribute statements.
+    <dd>{{% md %}}List of SAML Attribute statements.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -254,7 +254,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside of the SAML assertion.
+    <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside the SAML assertion.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -404,7 +404,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Single Sign on Url.
+    <dd>{{% md %}}Single Sign-on Url.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -490,7 +490,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable self service.
+    <dd>{{% md %}}Enable self-service.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -540,7 +540,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsamlattributestatement">[]Get<wbr>Saml<wbr>Attribute<wbr>Statement</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) List of SAML Attribute statements.
+    <dd>{{% md %}}List of SAML Attribute statements.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -590,7 +590,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside of the SAML assertion.
+    <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside the SAML assertion.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -740,7 +740,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Single Sign on Url.
+    <dd>{{% md %}}Single Sign-on Url.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -826,7 +826,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable self service.
+    <dd>{{% md %}}Enable self-service.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -876,7 +876,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsamlattributestatement">Get<wbr>Saml<wbr>Attribute<wbr>Statement[]</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) List of SAML Attribute statements.
+    <dd>{{% md %}}List of SAML Attribute statements.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -926,7 +926,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside of the SAML assertion.
+    <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside the SAML assertion.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1076,7 +1076,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Single Sign on Url.
+    <dd>{{% md %}}Single Sign-on Url.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1162,7 +1162,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable self service.
+    <dd>{{% md %}}Enable self-service.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1212,7 +1212,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsamlattributestatement">Sequence[Get<wbr>Saml<wbr>Attribute<wbr>Statement<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) List of SAML Attribute statements.
+    <dd>{{% md %}}List of SAML Attribute statements.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1262,7 +1262,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside of the SAML assertion.
+    <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside the SAML assertion.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1412,7 +1412,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Single Sign on Url.
+    <dd>{{% md %}}Single Sign-on Url.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1470,7 +1470,7 @@ The following arguments are supported:
 
 
 
-## GetSaml Result {#result}
+## getSaml Result {#result}
 
 The following output properties are available:
 
@@ -1479,16 +1479,6 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span id="description_csharp">
-<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}description of application.
-{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="keyid_csharp">
@@ -1507,7 +1497,37 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Required) The name of the attribute statement.
+    <dd>{{% md %}}The name of the attribute statement.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="singlelogoutcertificate_csharp">
+<a href="#singlelogoutcertificate_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}x509 encoded certificate that the Service Provider uses to sign Single Logout requests.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="singlelogoutissuer_csharp">
+<a href="#singlelogoutissuer_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Issuer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The issuer of the Service Provider that generates the Single Logout request.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="singlelogouturl_csharp">
+<a href="#singlelogouturl_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location where the logout response is sent.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1547,7 +1567,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable self service.
+    <dd>{{% md %}}Enable self-service.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1596,7 +1616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsamlattributestatement">List&lt;Get<wbr>Saml<wbr>Attribute<wbr>Statement&gt;</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) List of SAML Attribute statements.
+    <dd>{{% md %}}List of SAML Attribute statements.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1646,7 +1666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside of the SAML assertion.
+    <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside the SAML assertion.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1795,7 +1815,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Single Sign on Url.
+    <dd>{{% md %}}Single Sign-on Url.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1855,16 +1875,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="description_go">
-<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}description of application.
-{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="keyid_go">
 <a href="#keyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
 </span>
@@ -1881,7 +1891,37 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Required) The name of the attribute statement.
+    <dd>{{% md %}}The name of the attribute statement.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="singlelogoutcertificate_go">
+<a href="#singlelogoutcertificate_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}x509 encoded certificate that the Service Provider uses to sign Single Logout requests.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="singlelogoutissuer_go">
+<a href="#singlelogoutissuer_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Issuer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The issuer of the Service Provider that generates the Single Logout request.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="singlelogouturl_go">
+<a href="#singlelogouturl_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location where the logout response is sent.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1921,7 +1961,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable self service.
+    <dd>{{% md %}}Enable self-service.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1970,7 +2010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsamlattributestatement">[]Get<wbr>Saml<wbr>Attribute<wbr>Statement</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) List of SAML Attribute statements.
+    <dd>{{% md %}}List of SAML Attribute statements.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -2020,7 +2060,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside of the SAML assertion.
+    <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside the SAML assertion.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -2169,7 +2209,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Single Sign on Url.
+    <dd>{{% md %}}Single Sign-on Url.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -2229,16 +2269,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="description_nodejs">
-<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}description of application.
-{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="keyid_nodejs">
 <a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
 </span>
@@ -2255,7 +2285,37 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Required) The name of the attribute statement.
+    <dd>{{% md %}}The name of the attribute statement.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="singlelogoutcertificate_nodejs">
+<a href="#singlelogoutcertificate_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Logout<wbr>Certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}x509 encoded certificate that the Service Provider uses to sign Single Logout requests.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="singlelogoutissuer_nodejs">
+<a href="#singlelogoutissuer_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Logout<wbr>Issuer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The issuer of the Service Provider that generates the Single Logout request.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="singlelogouturl_nodejs">
+<a href="#singlelogouturl_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Logout<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location where the logout response is sent.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -2295,7 +2355,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable self service.
+    <dd>{{% md %}}Enable self-service.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -2344,7 +2404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsamlattributestatement">Get<wbr>Saml<wbr>Attribute<wbr>Statement[]</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) List of SAML Attribute statements.
+    <dd>{{% md %}}List of SAML Attribute statements.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -2394,7 +2454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside of the SAML assertion.
+    <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside the SAML assertion.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -2543,7 +2603,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Single Sign on Url.
+    <dd>{{% md %}}Single Sign-on Url.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -2603,16 +2663,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span id="description_python">
-<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}description of application.
-{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="key_id_python">
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span>
@@ -2629,7 +2679,37 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Required) The name of the attribute statement.
+    <dd>{{% md %}}The name of the attribute statement.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="single_logout_certificate_python">
+<a href="#single_logout_certificate_python" style="color: inherit; text-decoration: inherit;">single_<wbr>logout_<wbr>certificate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}x509 encoded certificate that the Service Provider uses to sign Single Logout requests.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="single_logout_issuer_python">
+<a href="#single_logout_issuer_python" style="color: inherit; text-decoration: inherit;">single_<wbr>logout_<wbr>issuer</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The issuer of the Service Provider that generates the Single Logout request.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="single_logout_url_python">
+<a href="#single_logout_url_python" style="color: inherit; text-decoration: inherit;">single_<wbr>logout_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location where the logout response is sent.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -2669,7 +2749,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable self service.
+    <dd>{{% md %}}Enable self-service.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -2718,7 +2798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsamlattributestatement">Sequence[Get<wbr>Saml<wbr>Attribute<wbr>Statement]</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) List of SAML Attribute statements.
+    <dd>{{% md %}}List of SAML Attribute statements.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -2768,7 +2848,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside of the SAML assertion.
+    <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside the SAML assertion.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -2917,7 +2997,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Single Sign on Url.
+    <dd>{{% md %}}Single Sign-on Url.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -2979,22 +3059,32 @@ The following output properties are available:
 
 
 <h4 id="getsamlattributestatement">Get<wbr>Saml<wbr>Attribute<wbr>Statement</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#GetSamlAttributeStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#GetSamlAttributeStatement">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#GetSamlAttributeStatementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#GetSamlAttributeStatement">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.App.Inputs.GetSamlAttributeStatementArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.App.Outputs.GetSamlAttributeStatement.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="filtertype_csharp">
+<a href="#filtertype_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of group attribute filter.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="filtervalue_csharp">
+<a href="#filtervalue_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Filter value to use.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -3003,57 +3093,37 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Required) The name of the attribute statement.
+    <dd>{{% md %}}The name of the attribute statement.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="filtertype_csharp">
-<a href="#filtertype_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}(Optional) Type of group attribute filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="filtervalue_csharp">
-<a href="#filtervalue_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Value</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}(Optional) Filter value to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) The attribute namespace. It can be set to `"urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"`, `"urn:oasis:names:tc:SAML:2.0:attrname-format:uri"`, or `"urn:oasis:names:tc:SAML:2.0:attrname-format:basic"`.
+    <dd>{{% md %}}The attribute namespace.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) The type of attribute statement value. Can be `"EXPRESSION"` or `"GROUP"`.
+    <dd>{{% md %}}The type of attribute statement value.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}(Optional) Array of values to use.
+    <dd>{{% md %}}Array of values to use.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3063,63 +3133,63 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}(Required) The name of the attribute statement.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="filtertype_go">
 <a href="#filtertype_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) Type of group attribute filter.
+    <dd>{{% md %}}Type of group attribute filter.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="filtervalue_go">
 <a href="#filtervalue_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) Filter value to use.
+    <dd>{{% md %}}Filter value to use.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the attribute statement.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) The attribute namespace. It can be set to `"urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"`, `"urn:oasis:names:tc:SAML:2.0:attrname-format:uri"`, or `"urn:oasis:names:tc:SAML:2.0:attrname-format:basic"`.
+    <dd>{{% md %}}The attribute namespace.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) The type of attribute statement value. Can be `"EXPRESSION"` or `"GROUP"`.
+    <dd>{{% md %}}The type of attribute statement value.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}(Optional) Array of values to use.
+    <dd>{{% md %}}Array of values to use.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3129,63 +3199,63 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}(Required) The name of the attribute statement.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="filtertype_nodejs">
 <a href="#filtertype_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) Type of group attribute filter.
+    <dd>{{% md %}}Type of group attribute filter.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="filtervalue_nodejs">
 <a href="#filtervalue_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Value</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) Filter value to use.
+    <dd>{{% md %}}Filter value to use.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the attribute statement.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) The attribute namespace. It can be set to `"urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"`, `"urn:oasis:names:tc:SAML:2.0:attrname-format:uri"`, or `"urn:oasis:names:tc:SAML:2.0:attrname-format:basic"`.
+    <dd>{{% md %}}The attribute namespace.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Optional) The type of attribute statement value. Can be `"EXPRESSION"` or `"GROUP"`.
+    <dd>{{% md %}}The type of attribute statement value.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}(Optional) Array of values to use.
+    <dd>{{% md %}}Array of values to use.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3195,63 +3265,63 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}(Required) The name of the attribute statement.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="filter_type_python">
 <a href="#filter_type_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Optional) Type of group attribute filter.
+    <dd>{{% md %}}Type of group attribute filter.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="filter_value_python">
 <a href="#filter_value_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>value</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Optional) Filter value to use.
+    <dd>{{% md %}}Filter value to use.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the attribute statement.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Optional) The attribute namespace. It can be set to `"urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"`, `"urn:oasis:names:tc:SAML:2.0:attrname-format:uri"`, or `"urn:oasis:names:tc:SAML:2.0:attrname-format:basic"`.
+    <dd>{{% md %}}The attribute namespace.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Optional) The type of attribute statement value. Can be `"EXPRESSION"` or `"GROUP"`.
+    <dd>{{% md %}}The type of attribute statement value.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}(Optional) Array of values to use.
+    <dd>{{% md %}}Array of values to use.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

@@ -1,8 +1,8 @@
 
 ---
-title: "GetFileCrc64Checksum"
-title_tag: "Function GetFileCrc64Checksum | Package AliCloud"
-meta_desc: "Explore the GetFileCrc64Checksum function of the AliCloud package, including examples, input properties, output properties, and supporting types. This data source compute file crc64 checksum."
+title: "getFileCrc64Checksum"
+title_tag: "alicloud.getFileCrc64Checksum"
+meta_desc: "Documentation for the alicloud.getFileCrc64Checksum function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -97,13 +97,13 @@ export const fileCrc64Checksum = alicloud_file_crc64_checksum_defualt.checksum;
 {{% /examples %}}
 
 
-## Using GetFileCrc64Checksum {#using}
+## Using getFileCrc64Checksum {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFileCrc64Checksum<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/#GetFileCrc64ChecksumArgs">GetFileCrc64ChecksumArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/#GetFileCrc64ChecksumResult">GetFileCrc64ChecksumResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFileCrc64Checksum<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFileCrc64ChecksumArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFileCrc64ChecksumResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -113,14 +113,16 @@ export const fileCrc64Checksum = alicloud_file_crc64_checksum_defualt.checksum;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFileCrc64Checksum<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/?tab=doc#GetFileCrc64ChecksumArgs">GetFileCrc64ChecksumArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/?tab=doc#GetFileCrc64ChecksumResult">GetFileCrc64ChecksumResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFileCrc64Checksum<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetFileCrc64ChecksumArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetFileCrc64ChecksumResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetFileCrc64Checksum` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFileCrc64Checksum </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.GetFileCrc64ChecksumResult.html">GetFileCrc64ChecksumResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.GetFileCrc64ChecksumArgs.html">GetFileCrc64ChecksumArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetFileCrc64ChecksumResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFileCrc64ChecksumArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -232,7 +234,7 @@ The following arguments are supported:
 
 
 
-## GetFileCrc64Checksum Result {#result}
+## getFileCrc64Checksum Result {#result}
 
 The following output properties are available:
 

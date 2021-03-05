@@ -95,7 +95,7 @@ the `src` folder. There's nothing specific to Pulumi here: it's just an
 instead.
 
 *Note: You can find the full code of the application, infrastructure
-definition, and deployment pipeline in [Pulumi Examples repository](https://github.com/pulumi/examples/tree/master/azure-ts-appservice-devops/).*
+definition, and deployment pipeline in [Pulumi Examples repository](https://github.com/pulumi/examples/tree/master/classic-azure-ts-appservice-devops/).*
 
 ## Bootstrapping a Pulumi Program
 
@@ -419,7 +419,7 @@ a simple task like this:
 
 Alternatively, if you can't install third-party tasks from Azure
 Marketplace, you can call the Pulumi CLI from a custom shell script, see
-[this pipeline definition](https://github.com/pulumi/examples/tree/master/azure-ts-appservice-devops/alternative-pipeline/).
+[this pipeline definition](https://github.com/pulumi/examples/tree/master/classic-azure-ts-appservice-devops/alternative-pipeline/).
 
 When everything is wired correctly, I see this screen in Azure DevOps:
 
@@ -439,7 +439,7 @@ The telemetry is flowing into Application Insights:
 
 You can find the full code of the application, infrastructure
 definition, and deployment pipeline in
-[Pulumi Examples repository](https://github.com/pulumi/examples/tree/master/azure-ts-appservice-devops/).
+[Pulumi Examples repository](https://github.com/pulumi/examples/tree/master/classic-azure-ts-appservice-devops/).
 
 ## Pulumi ❤️ Azure PaaS
 

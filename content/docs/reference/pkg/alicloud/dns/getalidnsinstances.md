@@ -1,8 +1,8 @@
 
 ---
-title: "GetAlidnsInstances"
-title_tag: "Function GetAlidnsInstances | Module dns | Package AliCloud"
-meta_desc: "Explore the GetAlidnsInstances function of the dns module, including examples, input properties, output properties, and supporting types. This data source provides a list of Alidns instances in an Alibaba Cloud account according to the specified filters."
+title: "getAlidnsInstances"
+title_tag: "alicloud.dns.getAlidnsInstances"
+meta_desc: "Documentation for the alicloud.dns.getAlidnsInstances function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -102,13 +102,13 @@ export const firstInstanceId = example.instances[0].id;
 {{% /examples %}}
 
 
-## Using GetAlidnsInstances {#using}
+## Using getAlidnsInstances {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAlidnsInstances<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/dns/#GetAlidnsInstancesArgs">GetAlidnsInstancesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/dns/#GetAlidnsInstancesResult">GetAlidnsInstancesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAlidnsInstances<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAlidnsInstancesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAlidnsInstancesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -118,14 +118,16 @@ export const firstInstanceId = example.instances[0].id;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlidnsInstances<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/dns?tab=doc#GetAlidnsInstancesArgs">GetAlidnsInstancesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/dns?tab=doc#GetAlidnsInstancesResult">GetAlidnsInstancesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlidnsInstances<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetAlidnsInstancesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetAlidnsInstancesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetAlidnsInstances` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAlidnsInstances </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Dns.GetAlidnsInstancesResult.html">GetAlidnsInstancesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Dns.GetAlidnsInstancesArgs.html">GetAlidnsInstancesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAlidnsInstancesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAlidnsInstancesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -317,7 +319,7 @@ The following arguments are supported:
 
 
 
-## GetAlidnsInstances Result {#result}
+## getAlidnsInstances Result {#result}
 
 The following output properties are available:
 
@@ -582,16 +584,6 @@ The following output properties are available:
 
 
 <h4 id="getalidnsinstancesinstance">Get<wbr>Alidns<wbr>Instances<wbr>Instance</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAlidnsInstancesInstance">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/dns?tab=doc#GetAlidnsInstancesInstance">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Dns.Outputs.GetAlidnsInstancesInstance.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

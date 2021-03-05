@@ -1,8 +1,8 @@
 
 ---
-title: "GetRegistryEnterpriseInstances"
-title_tag: "Function GetRegistryEnterpriseInstances | Module cs | Package AliCloud"
-meta_desc: "Explore the GetRegistryEnterpriseInstances function of the cs module, including examples, input properties, output properties, and supporting types. This data source provides a list Container Registry Enterprise Edition instances on Alibaba Cloud."
+title: "getRegistryEnterpriseInstances"
+title_tag: "alicloud.cs.getRegistryEnterpriseInstances"
+meta_desc: "Documentation for the alicloud.cs.getRegistryEnterpriseInstances function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -104,13 +104,13 @@ export const output = myInstances.instances;
 {{% /examples %}}
 
 
-## Using GetRegistryEnterpriseInstances {#using}
+## Using getRegistryEnterpriseInstances {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRegistryEnterpriseInstances<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#GetRegistryEnterpriseInstancesArgs">GetRegistryEnterpriseInstancesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#GetRegistryEnterpriseInstancesResult">GetRegistryEnterpriseInstancesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getRegistryEnterpriseInstances<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetRegistryEnterpriseInstancesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetRegistryEnterpriseInstancesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -120,14 +120,16 @@ export const output = myInstances.instances;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegistryEnterpriseInstances<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#GetRegistryEnterpriseInstancesArgs">GetRegistryEnterpriseInstancesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#GetRegistryEnterpriseInstancesResult">GetRegistryEnterpriseInstancesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegistryEnterpriseInstances<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetRegistryEnterpriseInstancesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetRegistryEnterpriseInstancesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetRegistryEnterpriseInstances` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRegistryEnterpriseInstances </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cs.GetRegistryEnterpriseInstancesResult.html">GetRegistryEnterpriseInstancesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.GetRegistryEnterpriseInstancesArgs.html">GetRegistryEnterpriseInstancesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetRegistryEnterpriseInstancesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetRegistryEnterpriseInstancesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -279,7 +281,7 @@ The following arguments are supported:
 
 
 
-## GetRegistryEnterpriseInstances Result {#result}
+## getRegistryEnterpriseInstances Result {#result}
 
 The following output properties are available:
 
@@ -548,16 +550,6 @@ The following output properties are available:
 
 
 <h4 id="getregistryenterpriseinstancesinstance">Get<wbr>Registry<wbr>Enterprise<wbr>Instances<wbr>Instance</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRegistryEnterpriseInstancesInstance">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs?tab=doc#GetRegistryEnterpriseInstancesInstance">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.CS.Outputs.GetRegistryEnterpriseInstancesInstance.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

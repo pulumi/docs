@@ -1,8 +1,8 @@
 
 ---
-title: "GetManagedPrefixList"
-title_tag: "Function GetManagedPrefixList | Module ec2 | Package AWS"
-meta_desc: "Explore the GetManagedPrefixList function of the ec2 module, including examples, input properties, output properties, and supporting types. `aws.ec2.ManagedPrefixList` provides details about a specific AWS prefix list or"
+title: "getManagedPrefixList"
+title_tag: "aws.ec2.getManagedPrefixList"
+meta_desc: "Documentation for the aws.ec2.getManagedPrefixList function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -191,13 +191,13 @@ const example = pulumi.output(aws.ec2.getManagedPrefixList({
 {{% /examples %}}
 
 
-## Using GetManagedPrefixList {#using}
+## Using getManagedPrefixList {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getManagedPrefixList<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#GetManagedPrefixListArgs">GetManagedPrefixListArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#GetManagedPrefixListResult">GetManagedPrefixListResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getManagedPrefixList<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetManagedPrefixListArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetManagedPrefixListResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -207,7 +207,7 @@ const example = pulumi.output(aws.ec2.getManagedPrefixList({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupManagedPrefixList<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupManagedPrefixListArgs">LookupManagedPrefixListArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LookupManagedPrefixListResult">LookupManagedPrefixListResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupManagedPrefixList<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupManagedPrefixListArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupManagedPrefixListResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupManagedPrefixList` in the Go SDK.
 
@@ -216,7 +216,7 @@ const example = pulumi.output(aws.ec2.getManagedPrefixList({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetManagedPrefixList </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetManagedPrefixListResult.html">GetManagedPrefixListResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.GetManagedPrefixListArgs.html">GetManagedPrefixListArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetManagedPrefixListResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetManagedPrefixListArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -412,7 +412,7 @@ The following arguments are supported:
 
 
 
-## GetManagedPrefixList Result {#result}
+## getManagedPrefixList Result {#result}
 
 The following output properties are available:
 
@@ -841,16 +841,6 @@ The following output properties are available:
 
 
 <h4 id="getmanagedprefixlistentry">Get<wbr>Managed<wbr>Prefix<wbr>List<wbr>Entry</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetManagedPrefixListEntry">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetManagedPrefixListEntry">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetManagedPrefixListEntry.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -951,16 +941,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getmanagedprefixlistfilter">Get<wbr>Managed<wbr>Prefix<wbr>List<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetManagedPrefixListFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetManagedPrefixListFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetManagedPrefixListFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetManagedPrefixListFilter">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.GetManagedPrefixListFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetManagedPrefixListFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

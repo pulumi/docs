@@ -771,19 +771,19 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#GlobalForwardingRule">GlobalForwardingRule</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#GlobalForwardingRuleArgs">GlobalForwardingRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.GlobalForwardingRule">GlobalForwardingRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalForwardingRuleMetadataFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[GlobalForwardingRuleMetadataFilterArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port_range</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GlobalForwardingRule">NewGlobalForwardingRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GlobalForwardingRuleArgs">GlobalForwardingRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GlobalForwardingRule">GlobalForwardingRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewGlobalForwardingRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalForwardingRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GlobalForwardingRule.html">GlobalForwardingRule</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GlobalForwardingRuleArgs.html">GlobalForwardingRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">GlobalForwardingRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">GlobalForwardingRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -804,7 +804,7 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#GlobalForwardingRuleArgs">GlobalForwardingRuleArgs</a></span>
+        <span class="property-type"><a href="#inputs">GlobalForwardingRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -873,7 +873,7 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GlobalForwardingRuleArgs">GlobalForwardingRuleArgs</a></span>
+        <span class="property-type"><a href="#inputs">GlobalForwardingRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -912,7 +912,7 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GlobalForwardingRuleArgs.html">GlobalForwardingRuleArgs</a></span>
+        <span class="property-type"><a href="#inputs">GlobalForwardingRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -935,11 +935,11 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
 
 ## GlobalForwardingRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The GlobalForwardingRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The GlobalForwardingRule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -954,10 +954,10 @@ The GlobalForwardingRule resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the target resource to receive the matched traffic.
-The forwarded traffic must be of a type appropriate to the target object.
-For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets
-are valid.
+    <dd>{{% md %}}The URL of the target resource to receive the matched traffic. The forwarded traffic must be of a type appropriate to
+the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
+([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
+purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1008,7 +1008,9 @@ or unnecessary diffs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
-INTERNAL_SELF_MANAGED, only TCP is valid.
+INTERNAL_SELF_MANAGED, only TCP is valid. This field must not be set if the
+global address is configured as a purpose of PRIVATE_SERVICE_CONNECT
+and addressType of INTERNAL
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1040,15 +1042,12 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for.
-The value of INTERNAL_SELF_MANAGED means that this will be used for
-Internal Global HTTP(S) LB. The value of EXTERNAL means that this
-will be used for External Global Load Balancing (HTTP(S) LB,
-External TCP/UDP LB, SSL Proxy)
-NOTE: Currently global forwarding rules cannot be used for INTERNAL
-load balancing.
-Default value is `EXTERNAL`.
-Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
+    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for. The value of INTERNAL_SELF_MANAGED means that this will
+be used for Internal Global HTTP(S) LB. The value of EXTERNAL means that this will be used for External Global Load
+Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
+([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
+if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
+"EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1149,10 +1148,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the target resource to receive the matched traffic.
-The forwarded traffic must be of a type appropriate to the target object.
-For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets
-are valid.
+    <dd>{{% md %}}The URL of the target resource to receive the matched traffic. The forwarded traffic must be of a type appropriate to
+the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
+([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
+purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1203,7 +1202,9 @@ or unnecessary diffs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
-INTERNAL_SELF_MANAGED, only TCP is valid.
+INTERNAL_SELF_MANAGED, only TCP is valid. This field must not be set if the
+global address is configured as a purpose of PRIVATE_SERVICE_CONNECT
+and addressType of INTERNAL
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1235,15 +1236,12 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for.
-The value of INTERNAL_SELF_MANAGED means that this will be used for
-Internal Global HTTP(S) LB. The value of EXTERNAL means that this
-will be used for External Global Load Balancing (HTTP(S) LB,
-External TCP/UDP LB, SSL Proxy)
-NOTE: Currently global forwarding rules cannot be used for INTERNAL
-load balancing.
-Default value is `EXTERNAL`.
-Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
+    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for. The value of INTERNAL_SELF_MANAGED means that this will
+be used for Internal Global HTTP(S) LB. The value of EXTERNAL means that this will be used for External Global Load
+Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
+([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
+if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
+"EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1344,10 +1342,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the target resource to receive the matched traffic.
-The forwarded traffic must be of a type appropriate to the target object.
-For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets
-are valid.
+    <dd>{{% md %}}The URL of the target resource to receive the matched traffic. The forwarded traffic must be of a type appropriate to
+the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
+([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
+purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1398,7 +1396,9 @@ or unnecessary diffs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
-INTERNAL_SELF_MANAGED, only TCP is valid.
+INTERNAL_SELF_MANAGED, only TCP is valid. This field must not be set if the
+global address is configured as a purpose of PRIVATE_SERVICE_CONNECT
+and addressType of INTERNAL
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1430,15 +1430,12 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for.
-The value of INTERNAL_SELF_MANAGED means that this will be used for
-Internal Global HTTP(S) LB. The value of EXTERNAL means that this
-will be used for External Global Load Balancing (HTTP(S) LB,
-External TCP/UDP LB, SSL Proxy)
-NOTE: Currently global forwarding rules cannot be used for INTERNAL
-load balancing.
-Default value is `EXTERNAL`.
-Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
+    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for. The value of INTERNAL_SELF_MANAGED means that this will
+be used for Internal Global HTTP(S) LB. The value of EXTERNAL means that this will be used for External Global Load
+Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
+([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
+if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
+"EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1539,10 +1536,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL of the target resource to receive the matched traffic.
-The forwarded traffic must be of a type appropriate to the target object.
-For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets
-are valid.
+    <dd>{{% md %}}The URL of the target resource to receive the matched traffic. The forwarded traffic must be of a type appropriate to
+the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
+([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
+purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1593,7 +1590,9 @@ or unnecessary diffs.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
-INTERNAL_SELF_MANAGED, only TCP is valid.
+INTERNAL_SELF_MANAGED, only TCP is valid. This field must not be set if the
+global address is configured as a purpose of PRIVATE_SERVICE_CONNECT
+and addressType of INTERNAL
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1625,15 +1624,12 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for.
-The value of INTERNAL_SELF_MANAGED means that this will be used for
-Internal Global HTTP(S) LB. The value of EXTERNAL means that this
-will be used for External Global Load Balancing (HTTP(S) LB,
-External TCP/UDP LB, SSL Proxy)
-NOTE: Currently global forwarding rules cannot be used for INTERNAL
-load balancing.
-Default value is `EXTERNAL`.
-Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
+    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for. The value of INTERNAL_SELF_MANAGED means that this will
+be used for Internal Global HTTP(S) LB. The value of EXTERNAL means that this will be used for External Global Load
+Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
+([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
+if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
+"EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1878,7 +1874,7 @@ Get an existing GlobalForwardingRule resource's state with the given name, ID, a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#GlobalForwardingRuleState">GlobalForwardingRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#GlobalForwardingRule">GlobalForwardingRule</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">GlobalForwardingRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">GlobalForwardingRule</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1887,11 +1883,11 @@ Get an existing GlobalForwardingRule resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalForwardingRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GlobalForwardingRuleState">GlobalForwardingRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GlobalForwardingRule">GlobalForwardingRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalForwardingRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">GlobalForwardingRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">GlobalForwardingRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GlobalForwardingRule.html">GlobalForwardingRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GlobalForwardingRuleState.html">GlobalForwardingRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">GlobalForwardingRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">GlobalForwardingRuleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2045,7 +2041,9 @@ or unnecessary diffs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
-INTERNAL_SELF_MANAGED, only TCP is valid.
+INTERNAL_SELF_MANAGED, only TCP is valid. This field must not be set if the
+global address is configured as a purpose of PRIVATE_SERVICE_CONNECT
+and addressType of INTERNAL
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -2087,15 +2085,12 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for.
-The value of INTERNAL_SELF_MANAGED means that this will be used for
-Internal Global HTTP(S) LB. The value of EXTERNAL means that this
-will be used for External Global Load Balancing (HTTP(S) LB,
-External TCP/UDP LB, SSL Proxy)
-NOTE: Currently global forwarding rules cannot be used for INTERNAL
-load balancing.
-Default value is `EXTERNAL`.
-Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
+    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for. The value of INTERNAL_SELF_MANAGED means that this will
+be used for Internal Global HTTP(S) LB. The value of EXTERNAL means that this will be used for External Global Load
+Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
+([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
+if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
+"EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2200,10 +2195,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the target resource to receive the matched traffic.
-The forwarded traffic must be of a type appropriate to the target object.
-For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets
-are valid.
+    <dd>{{% md %}}The URL of the target resource to receive the matched traffic. The forwarded traffic must be of a type appropriate to
+the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
+([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
+purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2260,7 +2255,9 @@ or unnecessary diffs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
-INTERNAL_SELF_MANAGED, only TCP is valid.
+INTERNAL_SELF_MANAGED, only TCP is valid. This field must not be set if the
+global address is configured as a purpose of PRIVATE_SERVICE_CONNECT
+and addressType of INTERNAL
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -2302,15 +2299,12 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for.
-The value of INTERNAL_SELF_MANAGED means that this will be used for
-Internal Global HTTP(S) LB. The value of EXTERNAL means that this
-will be used for External Global Load Balancing (HTTP(S) LB,
-External TCP/UDP LB, SSL Proxy)
-NOTE: Currently global forwarding rules cannot be used for INTERNAL
-load balancing.
-Default value is `EXTERNAL`.
-Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
+    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for. The value of INTERNAL_SELF_MANAGED means that this will
+be used for Internal Global HTTP(S) LB. The value of EXTERNAL means that this will be used for External Global Load
+Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
+([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
+if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
+"EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2415,10 +2409,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the target resource to receive the matched traffic.
-The forwarded traffic must be of a type appropriate to the target object.
-For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets
-are valid.
+    <dd>{{% md %}}The URL of the target resource to receive the matched traffic. The forwarded traffic must be of a type appropriate to
+the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
+([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
+purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2475,7 +2469,9 @@ or unnecessary diffs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
-INTERNAL_SELF_MANAGED, only TCP is valid.
+INTERNAL_SELF_MANAGED, only TCP is valid. This field must not be set if the
+global address is configured as a purpose of PRIVATE_SERVICE_CONNECT
+and addressType of INTERNAL
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -2517,15 +2513,12 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for.
-The value of INTERNAL_SELF_MANAGED means that this will be used for
-Internal Global HTTP(S) LB. The value of EXTERNAL means that this
-will be used for External Global Load Balancing (HTTP(S) LB,
-External TCP/UDP LB, SSL Proxy)
-NOTE: Currently global forwarding rules cannot be used for INTERNAL
-load balancing.
-Default value is `EXTERNAL`.
-Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
+    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for. The value of INTERNAL_SELF_MANAGED means that this will
+be used for Internal Global HTTP(S) LB. The value of EXTERNAL means that this will be used for External Global Load
+Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
+([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
+if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
+"EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2630,10 +2623,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the target resource to receive the matched traffic.
-The forwarded traffic must be of a type appropriate to the target object.
-For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets
-are valid.
+    <dd>{{% md %}}The URL of the target resource to receive the matched traffic. The forwarded traffic must be of a type appropriate to
+the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
+([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
+purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2690,7 +2683,9 @@ or unnecessary diffs.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP protocol to which this rule applies. When the load balancing scheme is
-INTERNAL_SELF_MANAGED, only TCP is valid.
+INTERNAL_SELF_MANAGED, only TCP is valid. This field must not be set if the
+global address is configured as a purpose of PRIVATE_SERVICE_CONNECT
+and addressType of INTERNAL
 Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -2732,15 +2727,12 @@ Possible values are `IPV4` and `IPV6`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for.
-The value of INTERNAL_SELF_MANAGED means that this will be used for
-Internal Global HTTP(S) LB. The value of EXTERNAL means that this
-will be used for External Global Load Balancing (HTTP(S) LB,
-External TCP/UDP LB, SSL Proxy)
-NOTE: Currently global forwarding rules cannot be used for INTERNAL
-load balancing.
-Default value is `EXTERNAL`.
-Possible values are `EXTERNAL` and `INTERNAL_SELF_MANAGED`.
+    <dd>{{% md %}}This signifies what the GlobalForwardingRule will be used for. The value of INTERNAL_SELF_MANAGED means that this will
+be used for Internal Global HTTP(S) LB. The value of EXTERNAL means that this will be used for External Global Load
+Balancing (HTTP(S) LB, External TCP/UDP LB, SSL Proxy)
+([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) Note: This field must be set ""
+if the global address is configured as a purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL. Default value:
+"EXTERNAL" Possible values: ["EXTERNAL", "INTERNAL_SELF_MANAGED"]
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2845,10 +2837,10 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL of the target resource to receive the matched traffic.
-The forwarded traffic must be of a type appropriate to the target object.
-For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets
-are valid.
+    <dd>{{% md %}}The URL of the target resource to receive the matched traffic. The forwarded traffic must be of a type appropriate to
+the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS targets are valid.
+([Beta](https://terraform.io/docs/providers/google/guides/provider_versions.html) only) For global address with a
+purpose of PRIVATE_SERVICE_CONNECT and addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2863,18 +2855,6 @@ are valid.
 
 
 <h4 id="globalforwardingrulemetadatafilter">Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GlobalForwardingRuleMetadataFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GlobalForwardingRuleMetadataFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GlobalForwardingRuleMetadataFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GlobalForwardingRuleMetadataFilterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.GlobalForwardingRuleMetadataFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GlobalForwardingRuleMetadataFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3017,18 +2997,6 @@ Possible values are `MATCH_ANY` and `MATCH_ALL`.
 {{% /choosable %}}
 
 <h4 id="globalforwardingrulemetadatafilterfilterlabel">Global<wbr>Forwarding<wbr>Rule<wbr>Metadata<wbr>Filter<wbr>Filter<wbr>Label</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GlobalForwardingRuleMetadataFilterFilterLabel">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GlobalForwardingRuleMetadataFilterFilterLabel">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GlobalForwardingRuleMetadataFilterFilterLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GlobalForwardingRuleMetadataFilterFilterLabelOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.GlobalForwardingRuleMetadataFilterFilterLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GlobalForwardingRuleMetadataFilterFilterLabel.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

@@ -24,24 +24,6 @@ Explore the resources and functions of the Policy module in the Azure DevOps pac
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).</dd>
 	<dt>Version</dt>
-	<dd>1.1.1</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureDevOps/Pulumi.AzureDevOps.Policy.html" title="Pulumi.AzureDevOps.Policy">Pulumi.AzureDevOps.Policy</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/policy?tab=doc#" title="azuredevops/policy">azuredevops/policy</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azuredevops/Policy/#" title="@pulumi/azuredevops/policy">@pulumi/azuredevops/policy</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azuredevops/policy" title="pulumi_azuredevops/policy">pulumi_azuredevops/policy</a></dd>
-
+	<dd>1.2.1</dd>
 </dl>
 

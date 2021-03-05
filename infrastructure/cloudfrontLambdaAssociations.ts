@@ -138,6 +138,13 @@ function getRedirect(uri: string): string | undefined {
 // getSDKRedirect conditionally redirects based on whether the request URL points
 // to an SDK doc that we no longer host.
 function getSDKRedirect(uri: string): string | undefined {
+
+    // Redirect docs requests for azure-nextgen to azure-native, matching with or without
+    // a trailing slash.
+    if (uri.match(/\/docs\/reference\/pkg\/azure-nextgen$|azure-nextgen\//)) {
+        return uri.replace("azure-nextgen", "azure-native");
+    }
+
     // Return early if the request doesn't match the prefixes we care about.
     if (!uri.match(/\/docs\/reference\/pkg\/nodejs|python|dotnet\//)) {
         return undefined;
@@ -159,7 +166,7 @@ function nodeSDKRedirect(uri: string): string | undefined {
     ];
 
     if (match && match.provider && !exceptions.includes(match.provider)) {
-        if (match.service) {
+        if (match.service && !match.service.match(/types|config/)) {
             return `/docs/reference/pkg/${match.provider}/${match.service}/?language=nodejs`;
         }
         return `/docs/reference/pkg/${match.provider}/?language=nodejs`;
@@ -188,11 +195,13 @@ function pythonSDKRedirect(uri: string): string | undefined {
 }
 
 function dotnetSDKRedirect(uri: string): string | undefined {
-    const pattern = new URLPattern("/docs/reference/pkg/dotnet/Pulumi.(:provider)/Pulumi.(:providerAgain)(.(:service)).html");
+    const pattern = new URLPattern(
+        "/docs/reference/pkg/dotnet/Pulumi.:provider/Pulumi.:providerRepeated(.:service)(.*).html"
+    );
     const match = pattern.match(uri);
 
     if (match && match.provider) {
-        if (match.service) {
+        if (match.service && !match.service.match(/Types|Config/)) {
             // tslint:disable-next-line:max-line-length
             return `/docs/reference/pkg/${match.provider.toLowerCase()}/${match.service.toLowerCase()}/?language=csharp`;
         }
@@ -200,7 +209,7 @@ function dotnetSDKRedirect(uri: string): string | undefined {
 
     // If the URI matches /dotnet/anything-else, we'll just direct you to the GitHub repo.
     } else if (uri.startsWith("/docs/reference/pkg/dotnet/")) {
-        return "https://github.com/pulumi/pulumi/tree/master/sdk/dotnet";
+        return "/docs/reference/pkg";
     }
 
     return undefined;

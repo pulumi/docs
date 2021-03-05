@@ -24,12 +24,80 @@ The following tutorials highlight the Azure platform using complete end-to-end s
     <div class="w-1/2 border-solid border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4">
             <i class="fas fa-boxes pr-2"></i>
-            <a href="{{< relref "container-webserver" >}}" style="color: #4387c7">
+            <a href="{{< relref "azure-cs-appservice-docker" >}}" style="color: #4387c7">
+                Azure App Service
+            </a>
+        </h3>
+        <p>
+            Build and deploy a containerized application
+            using Azure Container Registry and Azure App Service.
+        </p>
+        <p>
+            <a href="{{< relref "azure-cs-appservice-docker" >}}" style="color: #4387c7">
+                C#
+            </a>&bull;
+            <a href="{{< relref "azure-ts-appservice-docker" >}}" style="color: #4387c7">
+                TypeScript
+            </a>&bull;
+            <a href="{{< relref "azure-py-appservice-docker" >}}" style="color: #4387c7">
+                Python
+            </a>&bull;
+            <a href="{{< relref "azure-go-appservice-docker" >}}" style="color: #4387c7">
+                Go
+            </a>
+        </p>
+    </div>
+    <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4">
+            <i class="fas fa-globe pr-2"></i>
+            <a href="{{< relref "azure-cs-aks" >}}" style="color: #4387c7">
+                Azure Kubernetes Service
+            </a>
+        </h3>
+        <p>
+            Deploy an AKS cluster and set credentials to manage access to the cluster.
+        </p>
+        <p>
+            <a href="{{< relref "azure-cs-aks" >}}" style="color: #4387c7">
+                C#
+            </a>&bull;
+            <a href="{{< relref "azure-ts-aks" >}}" style="color: #4387c7">
+                TypeScript
+            </a>&bull;
+            <a href="{{< relref "azure-py-aks" >}}" style="color: #4387c7">
+                Python
+            </a>&bull;
+            <a href="{{< relref "azure-go-aks" >}}" style="color: #4387c7">
+                Go
+            </a>
+        </p>
+    </div>
+</div>
+
+<div class="md:flex flex-row mt-6 mb-6">
+    <div class="w-1/2 border-solid border-t-2 border-gray-200">
+        <h3 class="no-anchor pt-4">
+            <i class="fas fa-boxes pr-2"></i>
+            <a href="{{< relref "azure-cs-aci" >}}" style="color: #4387c7">
                 Azure Container Instances
             </a>
         </h3>
         <p>
             Deploy a containerized web server using Azure Container Instances.
+        </p>
+        <p>
+            <a href="{{< relref "azure-cs-aci" >}}" style="color: #4387c7">
+                C#
+            </a>&bull;
+            <a href="{{< relref "azure-ts-aci" >}}" style="color: #4387c7">
+                TypeScript
+            </a>&bull;
+            <a href="{{< relref "azure-py-aci" >}}" style="color: #4387c7">
+                Python
+            </a>&bull;
+            <a href="{{< relref "azure-go-aci" >}}" style="color: #4387c7">
+                Go
+            </a>
         </p>
     </div>
     <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
@@ -42,32 +110,13 @@ The following tutorials highlight the Azure platform using complete end-to-end s
         <p>
             Provision a Linux web server VM with a public IP address.
         </p>
-    </div>
-</div>
-
-<div class="md:flex flex-row mt-6 mb-6">
-    <div class="w-1/2 border-solid border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4">
-            <i class="fas fa-globe pr-2"></i>
-            <a href="{{< relref "azure-ts-serverless-url-shortener-global" >}}" style="color: #4387c7">
-                CosmosDB and Functions
-            </a>
-        </h3>
         <p>
-            Create a globally distributed serverless application using
-            CosmosDB for storage and Azure Functions for compute.
-        </p>
-    </div>
-    <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
-        <h3 class="no-anchor pt-4">
-            <i class="fas fa-boxes pr-2"></i>
-            <a href="{{< relref "azure-ts-appservice-springboot" >}}" style="color: #4387c7">
-                Azure App Service
+            <a href="{{< relref "azure-ts-webserver" >}}" style="color: #4387c7">
+                TypeScript
+            </a>&bull;
+            <a href="{{< relref "azure-py-webserver" >}}" style="color: #4387c7">
+                Python
             </a>
-        </h3>
-        <p>
-            Build and deploy a containerized Java Spring Boot application
-            using Azure Container Registry and Azure App Service.
         </p>
     </div>
 </div>

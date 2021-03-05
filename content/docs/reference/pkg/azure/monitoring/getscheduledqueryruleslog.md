@@ -1,8 +1,8 @@
 
 ---
-title: "GetScheduledQueryRulesLog"
-title_tag: "Function GetScheduledQueryRulesLog | Module monitoring | Package Azure"
-meta_desc: "Explore the GetScheduledQueryRulesLog function of the monitoring module, including examples, input properties, output properties, and supporting types. Use this data source to access the properties of a LogToMetricAction scheduled query rule."
+title: "getScheduledQueryRulesLog"
+title_tag: "azure.monitoring.getScheduledQueryRulesLog"
+meta_desc: "Documentation for the azure.monitoring.getScheduledQueryRulesLog function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -99,13 +99,13 @@ export const queryRuleId = example.id;
 {{% /examples %}}
 
 
-## Using GetScheduledQueryRulesLog {#using}
+## Using getScheduledQueryRulesLog {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getScheduledQueryRulesLog<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/monitoring/#GetScheduledQueryRulesLogArgs">GetScheduledQueryRulesLogArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/monitoring/#GetScheduledQueryRulesLogResult">GetScheduledQueryRulesLogResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getScheduledQueryRulesLog<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetScheduledQueryRulesLogArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetScheduledQueryRulesLogResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -115,7 +115,7 @@ export const queryRuleId = example.id;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupScheduledQueryRulesLog<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#LookupScheduledQueryRulesLogArgs">LookupScheduledQueryRulesLogArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#LookupScheduledQueryRulesLogResult">LookupScheduledQueryRulesLogResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupScheduledQueryRulesLog<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupScheduledQueryRulesLogArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupScheduledQueryRulesLogResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupScheduledQueryRulesLog` in the Go SDK.
 
@@ -124,7 +124,7 @@ export const queryRuleId = example.id;
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetScheduledQueryRulesLog </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.GetScheduledQueryRulesLogResult.html">GetScheduledQueryRulesLogResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.GetScheduledQueryRulesLogArgs.html">GetScheduledQueryRulesLogArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetScheduledQueryRulesLogResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetScheduledQueryRulesLogArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -240,7 +240,7 @@ The following arguments are supported:
 
 
 
-## GetScheduledQueryRulesLog Result {#result}
+## getScheduledQueryRulesLog Result {#result}
 
 The following output properties are available:
 
@@ -661,16 +661,6 @@ The following output properties are available:
 
 
 <h4 id="getscheduledqueryruleslogcriteria">Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetScheduledQueryRulesLogCriteria">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#GetScheduledQueryRulesLogCriteria">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Outputs.GetScheduledQueryRulesLogCriteria.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -779,16 +769,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getscheduledqueryruleslogcriteriadimension">Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria<wbr>Dimension</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetScheduledQueryRulesLogCriteriaDimension">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#GetScheduledQueryRulesLogCriteriaDimension">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Outputs.GetScheduledQueryRulesLogCriteriaDimension.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

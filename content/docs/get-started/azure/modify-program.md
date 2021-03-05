@@ -12,120 +12,98 @@ menu:
 aliases: ["/docs/quickstart/azure/modify-program/"]
 ---
 
-Now that we have an instance of our Pulumi program deployed, let's add a tag to our storage account.
+Now that your storage account is provisioned, let's add a file to it. First, create a new directory called `site`.
 
-Replace the entire contents of {{< langfile >}} with the following:
+```bash
+mkdir site
+```
 
-{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+Next, create a new `index.html` file with some content in it.
 
-{{% choosable language javascript %}}
+{{< chooser os "macos,linux,windows" / >}}
 
-```javascript
-"use strict";
-const pulumi = require("@pulumi/pulumi");
-const azure = require("@pulumi/azure");
+{{% choosable os macos %}}
 
-// Create an Azure Resource Group
-const resourceGroup = new azure.core.ResourceGroup("resourceGroup");
-
-// Create an Azure resource (Storage Account)
-const account = new azure.storage.Account("storage", {
-    resourceGroupName: resourceGroup.name,
-    accountTier: "Standard",
-    accountReplicationType: "LRS",
-    tags: {
-        "Environment": "Dev",
-    },
-});
-
-// Export the connection string for the storage account
-exports.connectionString = account.primaryConnectionString;
+```bash
+cat <<EOT > site/index.html
+<html>
+    <body>
+        <h1>Hello, Pulumi!</h1>
+    </body>
+</html>
+EOT
 ```
 
 {{% /choosable %}}
+
+{{% choosable os linux %}}
+
+```bash
+cat <<EOT > site/index.html
+<html>
+    <body>
+        <h1>Hello, Pulumi!</h1>
+    </body>
+</html>
+EOT
+```
+
+{{% /choosable %}}
+
+{{% choosable os windows %}}
+
+```powershell
+@"
+<html>
+  <body>
+    <h1>Hello, Pulumi!</h1>
+  </body>
+</html>
+"@ | Out-File -FilePath site\index.html
+```
+
+{{% /choosable %}}
+
+Now that you have your new `index.html` with some content, you can enable static website support, upload `index.html` to a storage container, and retrieve a public URL through the use of resource properties. These properties can be used to define dependencies between related resources or to retrieve property values for further processing.
+
+To see how this all works, open the program file in your IDE or text editor and add the following the lines right after the storage account creation.
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
 {{% choosable language typescript %}}
 
 ```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-// Create an Azure Resource Group
-const resourceGroup = new azure.core.ResourceGroup("resourceGroup");
-
-// Create an Azure resource (Storage Account)
-const account = new azure.storage.Account("storage", {
+// Enable static website support
+const staticWebsite = new storage.StorageAccountStaticWebsite("staticWebsite", {
+    accountName: storageAccount.name,
     resourceGroupName: resourceGroup.name,
-    accountTier: "Standard",
-    accountReplicationType: "LRS",
-    tags: {
-        "Environment": "Dev",
-    },
+    indexDocument: "index.html",
 });
-
-// Export the connection string for the storage account
-export const connectionString = account.primaryConnectionString;
 ```
 
 {{% /choosable %}}
 {{% choosable language python %}}
 
 ```python
-import pulumi
-from pulumi_azure import core, storage
-
-# Create an Azure Resource Group
-resource_group = core.ResourceGroup("resource_group")
-
-# Create an Azure resource (Storage Account)
-account = storage.Account("storage",
+# Enable static website support
+static_website = storage.StorageAccountStaticWebsite("staticWebsite",
+    account_name=account.name,
     resource_group_name=resource_group.name,
-    account_tier='Standard',
-    account_replication_type='LRS',
-    tags={"Environment": "Dev"})
-
-# Export the connection string for the storage account
-pulumi.export('connection_string', account.primary_connection_string)
+    index_document="index.html")
 ```
 
 {{% /choosable %}}
 {{% choosable language go %}}
 
 ```go
-package main
-
-import (
-    "github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
-    "github.com/pulumi/pulumi-azure/sdk/v3/go/azure/storage"
-    "github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-    pulumi.Run(func(ctx *pulumi.Context) error {
-        // Create an Azure Resource Group
-        resourceGroup, err := core.NewResourceGroup(ctx, "resourceGroup", &core.ResourceGroupArgs{
-            Location: pulumi.String("WestUS"),
-        })
-        if err != nil {
-            return err
-        }
-
-        // Create an Azure resource (Storage Account)
-        account, err := storage.NewAccount(ctx, "storage", &storage.AccountArgs{
-            ResourceGroupName:      resourceGroup.Name,
-            AccountTier:            pulumi.String("Standard"),
-            AccountReplicationType: pulumi.String("LRS"),
-            Tags: pulumi.StringMap{
-                "Environment": pulumi.String("Dev"),
-            },
-        })
-        if err != nil {
-            return err
-        }
-
-        // Export the connection string for the storage account
-        ctx.Export("connectionString", account.PrimaryConnectionString)
-        return nil
-    })
+// Enable static website support
+staticWebsite, err := storage.NewStorageAccountStaticWebsite(ctx, "staticWebsite", &storage.StorageAccountStaticWebsiteArgs{
+    AccountName:       account.Name,
+    ResourceGroupName: resourceGroup.Name,
+    IndexDocument:     pulumi.String("index.html"),
+})
+if err != nil {
+    return err
 }
 ```
 
@@ -133,40 +111,126 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
-using Pulumi;
-using Pulumi.Azure.Core;
-using Pulumi.Azure.Storage;
-
-class MyStack : Stack
+// Enable static website support
+var staticWebsite = new StorageAccountStaticWebsite("staticWebsite", new StorageAccountStaticWebsiteArgs
 {
-    public MyStack()
-    {
-        // Create an Azure Resource Group
-        var resourceGroup = new ResourceGroup("resourceGroup");
-
-        // Create an Azure Storage Account
-        var storageAccount = new Account("storage", new AccountArgs
-        {
-            ResourceGroupName = resourceGroup.Name,
-            AccountReplicationType = "LRS",
-            AccountTier = "Standard",
-            Tags =
-            {
-                { "Environment", "Dev" }
-            }
-        });
-
-        // Export the connection string for the storage account
-        this.ConnectionString = storageAccount.PrimaryConnectionString;
-    }
-
-    [Output]
-    public Output<string> ConnectionString { get; set; }
-}
+    AccountName = storageAccount.Name,
+    ResourceGroupName = resourceGroup.Name,
+    IndexDocument = "index.html",
+});
 ```
 
 {{% /choosable %}}
 
-Next, we'll deploy the changes.
+The static website resource leverages the storage account and resource group names defined previously in your program.
+
+Now use all of these cloud resources, and a local `FileAsset` resource, to upload `index.html` into your storage container.
+
+{{% choosable language typescript %}}
+
+```typescript
+// Upload the file
+const indexHtml = new storage.Blob("index.html", {
+    resourceGroupName: resourceGroup.name,
+    accountName: storageAccount.name,
+    containerName: staticWebsite.containerName,
+    source: new pulumi.asset.FileAsset("./site/index.html"),
+    contentType: "text/html",
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+# Upload the file
+index_html = storage.Blob("index.html",
+    resource_group_name=resource_group.name,
+    account_name=account.name,
+    container_name=static_website.container_name,
+    source=pulumi.FileAsset("./site/index.html"),
+    content_type="text/html")
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+// Upload the file
+_, err = storage.NewBlob(ctx, "index.html", &storage.BlobArgs{
+    ResourceGroupName: resourceGroup.Name,
+    AccountName:       account.Name,
+    ContainerName:     staticWebsite.ContainerName,
+    Source:            pulumi.NewFileAsset("./site/index.html"),
+    ContentType:       pulumi.String("text/html"),
+})
+if err != nil {
+    return err
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+// Upload the file
+var index_html = new Blob("index.html", new BlobArgs
+{
+    ResourceGroupName = resourceGroup.Name,
+    AccountName = storageAccount.Name,
+    ContainerName = staticWebsite.ContainerName,
+    Source = new FileAsset("./site/index.html"),
+    ContentType = "text/html",
+});
+```
+
+{{% /choosable %}}
+
+Finally, at the end of the program file, export the resulting storage container's endpoint URL to stdout for easy access:
+
+{{% choosable language typescript %}}
+
+```typescript
+// Web endpoint to the website
+export const staticEndpoint = storageAccount.primaryEndpoints.web;
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+# Web endpoint to the website
+pulumi.export("staticEndpoint", account.primary_endpoints.web)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+// Web endpoint to the website
+ctx.Export("staticEndpoint", account.PrimaryEndpoints.Web())
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+// Web endpoint to the website
+this.StaticEndpoint = storageAccount.PrimaryEndpoints.Apply(
+        primaryEndpoints => primaryEndpoints.Web);
+```
+
+```csharp
+[Output]
+public Output<string> StaticEndpoint { get; set; }
+```
+
+{{% /choosable %}}
+
+Now that you have declared how you want your resources to be provisioned, it is time to deploy these remaining changes.
 
 {{< get-started-stepper >}}

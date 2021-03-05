@@ -1,8 +1,8 @@
 
 ---
-title: "GetMetadataSaml"
-title_tag: "Function GetMetadataSaml | Module app | Package Okta"
-meta_desc: "Explore the GetMetadataSaml function of the app module, including examples, input properties, output properties, and supporting types. Use this data source to retrieve the collaborators for a given repository."
+title: "getMetadataSaml"
+title_tag: "okta.app.getMetadataSaml"
+meta_desc: "Documentation for the okta.app.getMetadataSaml function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -50,9 +50,10 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "<cert key id>"
 		_, err := app.GetMetadataSaml(ctx, &app.GetMetadataSamlArgs{
 			AppId: "<app id>",
-			KeyId: "<cert key id>",
+			KeyId: &opt0,
 		}, nil)
 		if err != nil {
 			return err
@@ -92,13 +93,13 @@ const example = pulumi.output(okta.app.getMetadataSaml({
 {{% /examples %}}
 
 
-## Using GetMetadataSaml {#using}
+## Using getMetadataSaml {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMetadataSaml<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/app/#GetMetadataSamlArgs">GetMetadataSamlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/app/#GetMetadataSamlResult">GetMetadataSamlResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMetadataSaml<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMetadataSamlArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMetadataSamlResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -108,14 +109,16 @@ const example = pulumi.output(okta.app.getMetadataSaml({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMetadataSaml<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#GetMetadataSamlArgs">GetMetadataSamlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/app?tab=doc#GetMetadataSamlResult">GetMetadataSamlResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMetadataSaml<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetMetadataSamlArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetMetadataSamlResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetMetadataSaml` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetMetadataSaml </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.App.GetMetadataSamlResult.html">GetMetadataSamlResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.App.GetMetadataSamlArgs.html">GetMetadataSamlArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetMetadataSamlResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMetadataSamlArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -137,8 +140,8 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The application ID.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="keyid_csharp">
 <a href="#keyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
 </span>
@@ -163,8 +166,8 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The application ID.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="keyid_go">
 <a href="#keyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
 </span>
@@ -189,8 +192,8 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The application ID.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="keyid_nodejs">
 <a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
 </span>
@@ -215,8 +218,8 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The application ID.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="key_id_python">
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
 </span>
@@ -231,7 +234,7 @@ The following arguments are supported:
 
 
 
-## GetMetadataSaml Result {#result}
+## getMetadataSaml Result {#result}
 
 The following output properties are available:
 
@@ -301,15 +304,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="keyid_csharp">
-<a href="#keyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
@@ -328,6 +322,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether authn requests are signed.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="keyid_csharp">
+<a href="#keyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -395,15 +398,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="keyid_go">
-<a href="#keyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
 </span>
@@ -422,6 +416,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether authn requests are signed.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="keyid_go">
+<a href="#keyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -489,15 +492,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="keyid_nodejs">
-<a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
@@ -516,6 +510,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether authn requests are signed.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="keyid_nodejs">
+<a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -583,15 +586,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="key_id_python">
-<a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
 </span>
@@ -610,6 +604,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Whether authn requests are signed.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="key_id_python">
+<a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

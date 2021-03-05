@@ -1,6 +1,6 @@
 ---
 title: "discovery"
-title_tag: "Package discovery"
+title_tag: "discovery Package"
 meta_desc: ""
 ---
 
@@ -21,21 +21,6 @@ meta_desc: ""
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.8.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/discovery?tab=doc#" title="kubernetes/discovery">kubernetes/discovery</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/discovery/#" title="@pulumi/kubernetes/discovery">@pulumi/kubernetes/discovery</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/discovery" title="pulumi_kubernetes/discovery">pulumi_kubernetes/discovery</a></dd>
-
+	<dd>2.8.2</dd>
 </dl>
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetAlertConfiguration"
-title_tag: "Function GetAlertConfiguration | Package MongoDB Atlas"
-meta_desc: "Explore the GetAlertConfiguration function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.AlertConfiguration` describes an Alert Configuration."
+title: "getAlertConfiguration"
+title_tag: "mongodbatlas.getAlertConfiguration"
+meta_desc: "Documentation for the mongodbatlas.getAlertConfiguration function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -73,13 +73,13 @@ const testAlertConfiguration = pulumi.all([testMongodbatlasAlertConfiguration.al
 {{% /examples %}}
 
 
-## Using GetAlertConfiguration {#using}
+## Using getAlertConfiguration {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAlertConfiguration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetAlertConfigurationArgs">GetAlertConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetAlertConfigurationResult">GetAlertConfigurationResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAlertConfiguration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetAlertConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetAlertConfigurationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -89,7 +89,7 @@ const testAlertConfiguration = pulumi.all([testMongodbatlasAlertConfiguration.al
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAlertConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#LookupAlertConfigurationArgs">LookupAlertConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#LookupAlertConfigurationResult">LookupAlertConfigurationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAlertConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupAlertConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupAlertConfigurationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupAlertConfiguration` in the Go SDK.
 
@@ -98,7 +98,7 @@ const testAlertConfiguration = pulumi.all([testMongodbatlasAlertConfiguration.al
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAlertConfiguration </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetAlertConfigurationResult.html">GetAlertConfigurationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetAlertConfigurationArgs.html">GetAlertConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetAlertConfigurationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetAlertConfigurationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -214,7 +214,7 @@ The following arguments are supported:
 
 
 
-## GetAlertConfiguration Result {#result}
+## getAlertConfiguration Result {#result}
 
 The following output properties are available:
 
@@ -671,16 +671,6 @@ The following output properties are available:
 
 
 <h4 id="getalertconfigurationmatcher">Get<wbr>Alert<wbr>Configuration<wbr>Matcher</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#GetAlertConfigurationMatcher">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetAlertConfigurationMatcher">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GetAlertConfigurationMatcher.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -861,16 +851,6 @@ Accepted values are:
 {{% /choosable %}}
 
 <h4 id="getalertconfigurationmetricthreshold">Get<wbr>Alert<wbr>Configuration<wbr>Metric<wbr>Threshold</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#GetAlertConfigurationMetricThreshold">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetAlertConfigurationMetricThreshold">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GetAlertConfigurationMetricThreshold.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1179,16 +1159,6 @@ Accepted values are:
 {{% /choosable %}}
 
 <h4 id="getalertconfigurationnotification">Get<wbr>Alert<wbr>Configuration<wbr>Notification</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#GetAlertConfigurationNotification">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetAlertConfigurationNotification">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GetAlertConfigurationNotification.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2149,16 +2119,6 @@ Accepted values are:
 {{% /choosable %}}
 
 <h4 id="getalertconfigurationthreshold">Get<wbr>Alert<wbr>Configuration<wbr>Threshold</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#GetAlertConfigurationThreshold">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetAlertConfigurationThreshold">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GetAlertConfigurationThreshold.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetSigningJob"
-title_tag: "Function GetSigningJob | Module signer | Package AWS"
-meta_desc: "Explore the GetSigningJob function of the signer module, including examples, input properties, output properties, and supporting types. Provides information about a Signer Signing Job."
+title: "getSigningJob"
+title_tag: "aws.signer.getSigningJob"
+meta_desc: "Documentation for the aws.signer.getSigningJob function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -88,13 +88,13 @@ const buildSigningJob = pulumi.output(aws.signer.getSigningJob({
 {{% /examples %}}
 
 
-## Using GetSigningJob {#using}
+## Using getSigningJob {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSigningJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/signer/#GetSigningJobArgs">GetSigningJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/signer/#GetSigningJobResult">GetSigningJobResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSigningJob<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSigningJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSigningJobResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -104,7 +104,7 @@ const buildSigningJob = pulumi.output(aws.signer.getSigningJob({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSigningJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/signer?tab=doc#LookupSigningJobArgs">LookupSigningJobArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/signer?tab=doc#LookupSigningJobResult">LookupSigningJobResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSigningJob<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSigningJobArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSigningJobResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSigningJob` in the Go SDK.
 
@@ -113,7 +113,7 @@ const buildSigningJob = pulumi.output(aws.signer.getSigningJob({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSigningJob </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Signer.GetSigningJobResult.html">GetSigningJobResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Signer.GetSigningJobArgs.html">GetSigningJobArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSigningJobResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSigningJobArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetSigningJob Result {#result}
+## getSigningJob Result {#result}
 
 The following output properties are available:
 
@@ -902,16 +902,6 @@ The following output properties are available:
 
 
 <h4 id="getsigningjobrevocationrecord">Get<wbr>Signing<wbr>Job<wbr>Revocation<wbr>Record</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSigningJobRevocationRecord">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/signer?tab=doc#GetSigningJobRevocationRecord">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Signer.Outputs.GetSigningJobRevocationRecord.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1048,16 +1038,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getsigningjobsignedobject">Get<wbr>Signing<wbr>Job<wbr>Signed<wbr>Object</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSigningJobSignedObject">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/signer?tab=doc#GetSigningJobSignedObject">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Signer.Outputs.GetSigningJobSignedObject.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1122,16 +1102,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getsigningjobsignedobjects3">Get<wbr>Signing<wbr>Job<wbr>Signed<wbr>Object<wbr>S3</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSigningJobSignedObjectS3">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/signer?tab=doc#GetSigningJobSignedObjectS3">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Signer.Outputs.GetSigningJobSignedObjectS3.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1232,16 +1202,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getsigningjobsource">Get<wbr>Signing<wbr>Job<wbr>Source</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSigningJobSource">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/signer?tab=doc#GetSigningJobSource">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Signer.Outputs.GetSigningJobSource.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1306,16 +1266,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getsigningjobsources3">Get<wbr>Signing<wbr>Job<wbr>Source<wbr>S3</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSigningJobSourceS3">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/signer?tab=doc#GetSigningJobSourceS3">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Signer.Outputs.GetSigningJobSourceS3.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

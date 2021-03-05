@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package Kubernetes"
-meta_desc: "Explore the Provider resource of the Kubernetes package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the kubernetes package."
+title_tag: "kubernetes.Provider"
+meta_desc: "Documentation for the kubernetes.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -20,19 +20,19 @@ The provider type for the kubernetes package.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/#Provider">Provider</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Provider">Provider</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">Provider</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_kubernetes/#pulumi_kubernetes.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">context</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kubeconfig</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">render_yaml_to_directory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suppress_deprecation_warnings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">context</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_dry_run</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kubeconfig</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">render_yaml_to_directory</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suppress_deprecation_warnings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/?tab=doc#Provider">NewProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Provider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Provider.html">Provider</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.ProviderArgs.html">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -53,7 +53,7 @@ The provider type for the kubernetes package.
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Provider">Provider</a></span>
+        <span class="property-type"><a href="#inputs">Provider</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -122,7 +122,7 @@ The provider type for the kubernetes package.
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/?tab=doc#ProviderArgs">ProviderArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -161,7 +161,7 @@ The provider type for the kubernetes package.
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.ProviderArgs.html">ProviderArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -184,11 +184,11 @@ The provider type for the kubernetes package.
 
 ## Provider Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Provider resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Provider resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -222,11 +222,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}BETA FEATURE - If present and set to true, enable server-side diff calculations.
-This feature is in developer preview, and is disabled by default.
-
-This config can be specified in the following ways, using this precedence:
-1. This `enableDryRun` parameter.
-2. The `PULUMI_K8S_ENABLE_DRY_RUN` environment variable.{{% /md %}}</dd>
+This feature is in developer preview, and is disabled by default. It can also be sourced from the following environment variable: `PULUMI_K8S_ENABLE_DRY_RUN`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_csharp">
@@ -235,7 +231,7 @@ This config can be specified in the following ways, using this precedence:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.{{% /md %}}</dd>
+    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. It can also be sourced from the following environment variable: `KUBECONFIG`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
@@ -274,11 +270,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI.
-
-This config can be specified in the following ways, using this precedence:
-1. This `suppressDeprecationWarnings` parameter.
-2. The `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS` environment variable.{{% /md %}}</dd>
+    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -312,11 +304,7 @@ This config can be specified in the following ways, using this precedence:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}BETA FEATURE - If present and set to true, enable server-side diff calculations.
-This feature is in developer preview, and is disabled by default.
-
-This config can be specified in the following ways, using this precedence:
-1. This `enableDryRun` parameter.
-2. The `PULUMI_K8S_ENABLE_DRY_RUN` environment variable.{{% /md %}}</dd>
+This feature is in developer preview, and is disabled by default. It can also be sourced from the following environment variable: `PULUMI_K8S_ENABLE_DRY_RUN`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_go">
@@ -325,7 +313,7 @@ This config can be specified in the following ways, using this precedence:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.{{% /md %}}</dd>
+    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. It can also be sourced from the following environment variable: `KUBECONFIG`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
@@ -364,11 +352,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI.
-
-This config can be specified in the following ways, using this precedence:
-1. This `suppressDeprecationWarnings` parameter.
-2. The `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS` environment variable.{{% /md %}}</dd>
+    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -402,11 +386,7 @@ This config can be specified in the following ways, using this precedence:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}BETA FEATURE - If present and set to true, enable server-side diff calculations.
-This feature is in developer preview, and is disabled by default.
-
-This config can be specified in the following ways, using this precedence:
-1. This `enableDryRun` parameter.
-2. The `PULUMI_K8S_ENABLE_DRY_RUN` environment variable.{{% /md %}}</dd>
+This feature is in developer preview, and is disabled by default. It can also be sourced from the following environment variable: `PULUMI_K8S_ENABLE_DRY_RUN`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_nodejs">
@@ -415,7 +395,7 @@ This config can be specified in the following ways, using this precedence:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.{{% /md %}}</dd>
+    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. It can also be sourced from the following environment variable: `KUBECONFIG`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
@@ -454,11 +434,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI.
-
-This config can be specified in the following ways, using this precedence:
-1. This `suppressDeprecationWarnings` parameter.
-2. The `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS` environment variable.{{% /md %}}</dd>
+    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -492,11 +468,7 @@ This config can be specified in the following ways, using this precedence:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}BETA FEATURE - If present and set to true, enable server-side diff calculations.
-This feature is in developer preview, and is disabled by default.
-
-This config can be specified in the following ways, using this precedence:
-1. This `enableDryRun` parameter.
-2. The `PULUMI_K8S_ENABLE_DRY_RUN` environment variable.{{% /md %}}</dd>
+This feature is in developer preview, and is disabled by default. It can also be sourced from the following environment variable: `PULUMI_K8S_ENABLE_DRY_RUN`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_python">
@@ -505,7 +477,7 @@ This config can be specified in the following ways, using this precedence:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.{{% /md %}}</dd>
+    <dd>{{% md %}}The contents of a kubeconfig file or the path to a kubeconfig file. It can also be sourced from the following environment variable: `KUBECONFIG`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
@@ -544,11 +516,7 @@ used in these resources will be rendered in plaintext to the resulting YAML.{{% 
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI.
-
-This config can be specified in the following ways, using this precedence:
-1. This `suppressDeprecationWarnings` parameter.
-2. The `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS` environment variable.{{% /md %}}</dd>
+    <dd>{{% md %}}If present and set to true, suppress apiVersion deprecation warnings from the CLI. It can also be sourced from the following environment variable: `PULUMI_K8S_SUPPRESS_DEPRECATION_WARNINGS`{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

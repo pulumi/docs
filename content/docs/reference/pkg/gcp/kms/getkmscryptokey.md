@@ -1,8 +1,8 @@
 
 ---
-title: "GetKMSCryptoKey"
-title_tag: "Function GetKMSCryptoKey | Module kms | Package GCP"
-meta_desc: "Explore the GetKMSCryptoKey function of the kms module, including examples, input properties, output properties, and supporting types. Provides access to a Google Cloud Platform KMS CryptoKey. For more information see"
+title: "getKMSCryptoKey"
+title_tag: "gcp.kms.getKMSCryptoKey"
+meta_desc: "Documentation for the gcp.kms.getKMSCryptoKey function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -116,13 +116,13 @@ const myCryptoKey = myKeyRing.then(myKeyRing => gcp.kms.getKMSCryptoKey({
 {{% /examples %}}
 
 
-## Using GetKMSCryptoKey {#using}
+## Using getKMSCryptoKey {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKMSCryptoKey<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#GetKMSCryptoKeyArgs">GetKMSCryptoKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/kms/#GetKMSCryptoKeyResult">GetKMSCryptoKeyResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKMSCryptoKey<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetKMSCryptoKeyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetKMSCryptoKeyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -132,14 +132,16 @@ const myCryptoKey = myKeyRing.then(myKeyRing => gcp.kms.getKMSCryptoKey({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKMSCryptoKey<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms?tab=doc#GetKMSCryptoKeyArgs">GetKMSCryptoKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms?tab=doc#GetKMSCryptoKeyResult">GetKMSCryptoKeyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetKMSCryptoKey<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetKMSCryptoKeyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetKMSCryptoKeyResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetKMSCryptoKey` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKMSCryptoKey </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.GetKMSCryptoKeyResult.html">GetKMSCryptoKeyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.GetKMSCryptoKeyArgs.html">GetKMSCryptoKeyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetKMSCryptoKeyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetKMSCryptoKeyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -259,7 +261,7 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
 
 
 
-## GetKMSCryptoKey Result {#result}
+## getKMSCryptoKey Result {#result}
 
 The following output properties are available:
 
@@ -644,16 +646,6 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
 
 <h4 id="getkmscryptokeyversiontemplate">Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Template</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetKMSCryptoKeyVersionTemplate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms?tab=doc#GetKMSCryptoKeyVersionTemplate">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Kms.Outputs.GetKMSCryptoKeyVersionTemplate.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

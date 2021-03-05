@@ -64,10 +64,11 @@ module.exports = {
             whitelist: [
                 "supported-cicd-platforms", ":not", ":target", "md:max-w-lg", "blink", "typing",
                 "char", "resource-deprecated", "btn-scroll-top", "lg:btn-purple-transparent", "section-docs",
+                "supporting-types"
             ],
 
             // Whitelist custom parent selectors and their children.
-            whitelistPatterns: [/^fa-/, /^hs-/, /^highlight$/, /^pagination$/, /^code-/, /^copy-/, /^carousel/, /^bg-/, /BambooHR-/],
+            whitelistPatterns: [/^fa-/, /^hs-/, /^highlight$/, /^pagination$/, /^code-/, /^copy-/, /^carousel/, /^bg-/, /^st-/],
             whitelistPatternsChildren: [
                 /^hs-/,
                 /^highlight$/,
@@ -75,6 +76,7 @@ module.exports = {
                 /^code-/,
                 /^copy-/,
                 /^carousel/,
+                /^st-/,
 
                 // Whitelist our web components along with any of their descendent selectors.
                 /^pulumi-chooser/,

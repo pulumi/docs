@@ -1,8 +1,8 @@
 
 ---
-title: "GetServiceEndpointConnections"
-title_tag: "Function GetServiceEndpointConnections | Module privatelink | Package Azure"
-meta_desc: "Explore the GetServiceEndpointConnections function of the privatelink module, including examples, input properties, output properties, and supporting types. Use this data source to access endpoint connection information about an existing Private Link Service."
+title: "getServiceEndpointConnections"
+title_tag: "azure.privatelink.getServiceEndpointConnections"
+meta_desc: "Documentation for the azure.privatelink.getServiceEndpointConnections function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -98,13 +98,13 @@ export const privateEndpointStatus = example.then(example => example.privateEndp
 {{% /examples %}}
 
 
-## Using GetServiceEndpointConnections {#using}
+## Using getServiceEndpointConnections {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServiceEndpointConnections<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/privatelink/#GetServiceEndpointConnectionsArgs">GetServiceEndpointConnectionsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/privatelink/#GetServiceEndpointConnectionsResult">GetServiceEndpointConnectionsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getServiceEndpointConnections<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetServiceEndpointConnectionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetServiceEndpointConnectionsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -114,14 +114,16 @@ export const privateEndpointStatus = example.then(example => example.privateEndp
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceEndpointConnections<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/privatelink?tab=doc#GetServiceEndpointConnectionsArgs">GetServiceEndpointConnectionsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/privatelink?tab=doc#GetServiceEndpointConnectionsResult">GetServiceEndpointConnectionsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceEndpointConnections<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetServiceEndpointConnectionsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetServiceEndpointConnectionsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetServiceEndpointConnections` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetServiceEndpointConnections </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Privatelink.GetServiceEndpointConnectionsResult.html">GetServiceEndpointConnectionsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.PrivateLink.GetServiceEndpointConnectionsArgs.html">GetServiceEndpointConnectionsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetServiceEndpointConnectionsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetServiceEndpointConnectionsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -237,7 +239,7 @@ The following arguments are supported:
 
 
 
-## GetServiceEndpointConnections Result {#result}
+## getServiceEndpointConnections Result {#result}
 
 The following output properties are available:
 
@@ -498,16 +500,6 @@ The following output properties are available:
 
 
 <h4 id="getserviceendpointconnectionsprivateendpointconnection">Get<wbr>Service<wbr>Endpoint<wbr>Connections<wbr>Private<wbr>Endpoint<wbr>Connection</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceEndpointConnectionsPrivateEndpointConnection">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/privatelink?tab=doc#GetServiceEndpointConnectionsPrivateEndpointConnection">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.PrivateLink.Outputs.GetServiceEndpointConnectionsPrivateEndpointConnection.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

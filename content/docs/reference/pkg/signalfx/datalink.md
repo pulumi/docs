@@ -1,8 +1,8 @@
 
 ---
 title: "DataLink"
-title_tag: "Resource DataLink | Package SignalFx"
-meta_desc: "Explore the DataLink resource of the SignalFx package, including examples, input properties, output properties, lookup functions, and supporting types. Manage SignalFx [Data Links](https://docs.signalfx.com/en/latest/managing/data-links.html)."
+title_tag: "signalfx.DataLink"
+meta_desc: "Documentation for the signalfx.DataLink resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -53,7 +53,6 @@ class MyStack : Stack
             {
                 new SignalFx.Inputs.DataLinkTargetExternalUrlArgs
                 {
-                    IsDefault = false,
                     Name = "ex_url",
                     TimeFormat = "ISO8601",
                     Url = "https://www.example.com",
@@ -77,7 +76,6 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx"
-	"github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -104,7 +102,6 @@ func main() {
 			PropertyValue:      pulumi.String("pvalue"),
 			TargetExternalUrls: signalfx.DataLinkTargetExternalUrlArray{
 				&signalfx.DataLinkTargetExternalUrlArgs{
-					IsDefault:  pulumi.Bool(false),
 					Name:       pulumi.String("ex_url"),
 					TimeFormat: pulumi.String("ISO8601"),
 					Url:        pulumi.String("https://www.example.com"),
@@ -145,7 +142,6 @@ my_data_link_dash = signalfx.DataLink("myDataLinkDash",
     property_name="pname2",
     property_value="pvalue",
     target_external_urls=[signalfx.DataLinkTargetExternalUrlArgs(
-        is_default=False,
         name="ex_url",
         time_format="ISO8601",
         url="https://www.example.com",
@@ -180,7 +176,6 @@ const myDataLinkDash = new signalfx.DataLink("myDataLinkDash", {
     propertyName: "pname2",
     propertyValue: "pvalue",
     targetExternalUrls: [{
-        isDefault: false,
         name: "ex_url",
         timeFormat: "ISO8601",
         url: "https://www.example.com",
@@ -201,19 +196,19 @@ const myDataLinkDash = new signalfx.DataLink("myDataLinkDash", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#DataLink">DataLink</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#DataLinkArgs">DataLinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">DataLink</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">DataLinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/#pulumi_signalfx.DataLink">DataLink</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">context_dashboard_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">property_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">property_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_external_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataLinkTargetExternalUrlArgs]]</span> = None<span class="p">, </span><span class="nx">target_signalfx_dashboards</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataLinkTargetSignalfxDashboardArgs]]</span> = None<span class="p">, </span><span class="nx">target_splunks</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataLinkTargetSplunkArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DataLink</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">context_dashboard_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">property_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">property_value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_external_urls</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataLinkTargetExternalUrlArgs]]</span> = None<span class="p">, </span><span class="nx">target_signalfx_dashboards</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataLinkTargetSignalfxDashboardArgs]]</span> = None<span class="p">, </span><span class="nx">target_splunks</span><span class="p">:</span> <span class="nx">Optional[Sequence[DataLinkTargetSplunkArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#DataLink">NewDataLink</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#DataLinkArgs">DataLinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#DataLink">DataLink</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDataLink</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">DataLinkArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataLink</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.DataLink.html">DataLink</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.DataLinkArgs.html">DataLinkArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">DataLink</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DataLinkArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -234,7 +229,7 @@ const myDataLinkDash = new signalfx.DataLink("myDataLinkDash", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#DataLinkArgs">DataLinkArgs</a></span>
+        <span class="property-type"><a href="#inputs">DataLinkArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -303,7 +298,7 @@ const myDataLinkDash = new signalfx.DataLink("myDataLinkDash", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#DataLinkArgs">DataLinkArgs</a></span>
+        <span class="property-type"><a href="#inputs">DataLinkArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -342,7 +337,7 @@ const myDataLinkDash = new signalfx.DataLink("myDataLinkDash", {
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.DataLinkArgs.html">DataLinkArgs</a></span>
+        <span class="property-type"><a href="#inputs">DataLinkArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -365,11 +360,11 @@ const myDataLinkDash = new signalfx.DataLink("myDataLinkDash", {
 
 ## DataLink Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The DataLink resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DataLink resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -712,7 +707,7 @@ Get an existing DataLink resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#DataLinkState">DataLinkState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#DataLink">DataLink</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DataLinkState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">DataLink</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -721,11 +716,11 @@ Get an existing DataLink resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDataLink<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#DataLinkState">DataLinkState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#DataLink">DataLink</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDataLink<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DataLinkState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">DataLink</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.DataLink.html">DataLink</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx..DataLinkState.html">DataLinkState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">DataLink</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DataLinkState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1101,18 +1096,6 @@ The following state arguments are supported:
 
 
 <h4 id="datalinktargetexternalurl">Data<wbr>Link<wbr>Target<wbr>External<wbr>Url</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DataLinkTargetExternalUrl">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DataLinkTargetExternalUrl">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#DataLinkTargetExternalUrlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#DataLinkTargetExternalUrlOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.DataLinkTargetExternalUrlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.DataLinkTargetExternalUrl.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1136,16 +1119,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL string for a Splunk instance or external system data link target. [See the supported template variables](https://developers.signalfx.com/administration/data_links_overview.html#_external_link_targets).
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="isdefault_csharp">
-<a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1205,16 +1178,6 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="isdefault_go">
-<a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="minimumtimewindow_go">
 <a href="#minimumtimewindow_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Time<wbr>Window</a>
 </span>
@@ -1268,16 +1231,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL string for a Splunk instance or external system data link target. [See the supported template variables](https://developers.signalfx.com/administration/data_links_overview.html#_external_link_targets).
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="isdefault_nodejs">
-<a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1337,16 +1290,6 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="is_default_python">
-<a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="minimum_time_window_python">
 <a href="#minimum_time_window_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>time_<wbr>window</a>
 </span>
@@ -1379,18 +1322,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="datalinktargetsignalfxdashboard">Data<wbr>Link<wbr>Target<wbr>Signalfx<wbr>Dashboard</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DataLinkTargetSignalfxDashboard">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DataLinkTargetSignalfxDashboard">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#DataLinkTargetSignalfxDashboardArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#DataLinkTargetSignalfxDashboardOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.DataLinkTargetSignalfxDashboardArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.DataLinkTargetSignalfxDashboard.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1577,18 +1508,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="datalinktargetsplunk">Data<wbr>Link<wbr>Target<wbr>Splunk</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DataLinkTargetSplunk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DataLinkTargetSplunk">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#DataLinkTargetSplunkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#DataLinkTargetSplunkOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.DataLinkTargetSplunkArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.DataLinkTargetSplunk.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1602,16 +1521,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-assigned target name. Use this value to differentiate between the link targets for a data link object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="isdefault_csharp">
-<a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1641,16 +1550,6 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="isdefault_go">
-<a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="propertykeymapping_go">
 <a href="#propertykeymapping_go" style="color: inherit; text-decoration: inherit;">Property<wbr>Key<wbr>Mapping</a>
 </span>
@@ -1677,16 +1576,6 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="isdefault_nodejs">
-<a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="propertykeymapping_nodejs">
 <a href="#propertykeymapping_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Key<wbr>Mapping</a>
 </span>
@@ -1710,16 +1599,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-assigned target name. Use this value to differentiate between the link targets for a data link object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="is_default_python">
-<a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Flag that designates a target as the default for a data link object. `true` by default
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

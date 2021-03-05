@@ -1,8 +1,8 @@
 
 ---
-title: "GetFastlyIpRanges"
-title_tag: "Function GetFastlyIpRanges | Package Fastly"
-meta_desc: "Explore the GetFastlyIpRanges function of the Fastly package, including examples, input properties, output properties, and supporting types. Use this data source to get the [IP ranges](https://docs.fastly.com/guides/securing-communications/accessing-fastlys-ip-ranges) of Fastly edge nodes."
+title: "getFastlyIpRanges"
+title_tag: "fastly.getFastlyIpRanges"
+meta_desc: "Documentation for the fastly.getFastlyIpRanges function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -56,7 +56,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/"
+	"github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -134,13 +134,13 @@ const fromFastly = new aws.ec2.SecurityGroup("fromFastly", {ingress: [{
 {{% /examples %}}
 
 
-## Using GetFastlyIpRanges {#using}
+## Using getFastlyIpRanges {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFastlyIpRanges<span class="p">(</span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/fastly/#GetFastlyIpRangesResult">GetFastlyIpRangesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFastlyIpRanges<span class="p">(</span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFastlyIpRangesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -150,21 +150,23 @@ const fromFastly = new aws.ec2.SecurityGroup("fromFastly", {ingress: [{
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFastlyIpRanges<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#GetFastlyIpRangesResult">GetFastlyIpRangesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFastlyIpRanges<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetFastlyIpRangesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetFastlyIpRanges` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFastlyIpRanges </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.GetFastlyIpRangesResult.html">GetFastlyIpRangesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetFastlyIpRangesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
 
 
 
-## GetFastlyIpRanges Result {#result}
+## getFastlyIpRanges Result {#result}
 
 The following output properties are available:
 

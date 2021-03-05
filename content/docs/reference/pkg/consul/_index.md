@@ -1,6 +1,6 @@
 ---
 title: "Consul"
-title_tag: "Module Consul | Package Consul"
+title_tag: "consul.Consul"
 meta_desc: "A Pulumi package for creating and managing consul resources."
 menu:
     reference:
@@ -69,24 +69,6 @@ A Pulumi package for creating and managing consul resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).</dd>
 	<dt>Version</dt>
-	<dd>2.8.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.html" title="Pulumi.Consul">Pulumi.Consul</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/v2/go/consul/?tab=doc#" title="consul">consul</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/consul/#" title="@pulumi/consul">@pulumi/consul</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_consul" title="pulumi_consul">pulumi_consul</a></dd>
-
+	<dd>2.8.2</dd>
 </dl>
 

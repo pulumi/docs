@@ -34,24 +34,6 @@ Explore the resources and functions of the trafficmanagement module in the Akama
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/akamai/terraform-provider-akamai).</dd>
 	<dt>Version</dt>
-	<dd>1.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Akamai/Pulumi.Akamai.trafficmanagement.html" title="Pulumi.Akamai.trafficmanagement">Pulumi.Akamai.trafficmanagement</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-akamai/sdk/go/akamai/trafficmanagement?tab=doc#" title="akamai/trafficmanagement">akamai/trafficmanagement</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/akamai/trafficmanagement/#" title="@pulumi/akamai/trafficmanagement">@pulumi/akamai/trafficmanagement</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_akamai/trafficmanagement" title="pulumi_akamai/trafficmanagement">pulumi_akamai/trafficmanagement</a></dd>
-
+	<dd>1.1.1</dd>
 </dl>
 

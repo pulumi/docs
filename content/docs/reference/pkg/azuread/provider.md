@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package Azure AD"
-meta_desc: "Explore the Provider resource of the Azure AD package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the azuread package. By default, resources use package-wide configuration"
+title_tag: "azuread.Provider"
+meta_desc: "Documentation for the azuread.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -23,19 +23,19 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#Provider">Provider</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azuread/#pulumi_azuread.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">client_certificate_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_certificate_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_terraform_partner_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">msi_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_msi</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">client_certificate_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_certificate_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disable_terraform_partner_id</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">msi_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">partner_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_msi</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#Provider">NewProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Provider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.AzureAD.Provider.html">Provider</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.Pulumi.AzureadArgs.html">ProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -56,7 +56,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/azuread/#ProviderArgs">ProviderArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -125,7 +125,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v3/go/azuread/?tab=doc#ProviderArgs">ProviderArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -164,7 +164,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.AzureAD/Pulumi.Pulumi.AzureadArgs.html">ProviderArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -187,11 +187,11 @@ construction to achieve fine-grained programmatic control over provider settings
 
 ## Provider Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Provider resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Provider resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -269,7 +269,7 @@ Certificate
     </dt>
     <dd>{{% md %}}The Cloud Environment which should be used. Possible values are `public`, `usgovernment`, `german`, and `china`.
 Defaults to `public`.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_ENVIRONMENT`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="msiendpoint_csharp">
@@ -280,7 +280,7 @@ Defaults to `public`.
     </dt>
     <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected
 automatically.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_MSI_ENDPOINT`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="partnerid_csharp">
@@ -310,7 +310,7 @@ automatically.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow Managed Service Identity to be used for Authentication.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_USE_MSI`{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -388,7 +388,7 @@ Certificate
     </dt>
     <dd>{{% md %}}The Cloud Environment which should be used. Possible values are `public`, `usgovernment`, `german`, and `china`.
 Defaults to `public`.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_ENVIRONMENT`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="msiendpoint_go">
@@ -399,7 +399,7 @@ Defaults to `public`.
     </dt>
     <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected
 automatically.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_MSI_ENDPOINT`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="partnerid_go">
@@ -429,7 +429,7 @@ automatically.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow Managed Service Identity to be used for Authentication.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_USE_MSI`{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -507,7 +507,7 @@ Certificate
     </dt>
     <dd>{{% md %}}The Cloud Environment which should be used. Possible values are `public`, `usgovernment`, `german`, and `china`.
 Defaults to `public`.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_ENVIRONMENT`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="msiendpoint_nodejs">
@@ -518,7 +518,7 @@ Defaults to `public`.
     </dt>
     <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected
 automatically.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_MSI_ENDPOINT`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="partnerid_nodejs">
@@ -548,7 +548,7 @@ automatically.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow Managed Service Identity to be used for Authentication.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_USE_MSI`{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -626,7 +626,7 @@ Certificate
     </dt>
     <dd>{{% md %}}The Cloud Environment which should be used. Possible values are `public`, `usgovernment`, `german`, and `china`.
 Defaults to `public`.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_ENVIRONMENT`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="msi_endpoint_python">
@@ -637,7 +637,7 @@ Defaults to `public`.
     </dt>
     <dd>{{% md %}}The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected
 automatically.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_MSI_ENDPOINT`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="partner_id_python">
@@ -667,7 +667,7 @@ automatically.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow Managed Service Identity to be used for Authentication.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `ARM_USE_MSI`{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

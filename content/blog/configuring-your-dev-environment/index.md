@@ -61,7 +61,7 @@ Make sure that [`Get-ExecutionPolicy`](https://docs.microsoft.com/en-us/powershe
 
 If the command returns `Restricted`, we can use `Bypass` to install Chocolatey with the following command:
 
-```cmd
+```
 > Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
 
@@ -675,7 +675,7 @@ $ pulumi new https://github.com/pulumi/examples/tree/master/aws-py-webserver
 This command will download the project from Github, create a virtual environment and activate it, and download all the python package dependencies. You're ready to go and deploy with `pulumi up`. Want more? How about deploying Kubernetes on Azure with python?
 
 ```bash
-$ pulumi new https://github.com/pulumi/examples/tree/master/azure-nextgen-py-aks
+$ pulumi new https://github.com/pulumi/examples/tree/master/azure-py-aks
 ```
 
 You can use the examples as a starting point for building your cloud infrastructure and add resources documented on Pulumi's [API reference]({{< relref "/docs/reference/pkg" >}}) and [Guides]({{< relref "/docs/guides" >}}).

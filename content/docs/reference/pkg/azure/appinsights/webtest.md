@@ -12,6 +12,190 @@ meta_desc: "Documentation for the azure.appinsights.WebTest resource with exampl
 
 Manages an Application Insights WebTest.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleInsights = new Azure.AppInsights.Insights("exampleInsights", new Azure.AppInsights.InsightsArgs
+        {
+            Location = "West Europe",
+            ResourceGroupName = exampleResourceGroup.Name,
+            ApplicationType = "web",
+        });
+        var exampleWebTest = new Azure.AppInsights.WebTest("exampleWebTest", new Azure.AppInsights.WebTestArgs
+        {
+            Location = exampleInsights.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            ApplicationInsightsId = exampleInsights.Id,
+            Kind = "ping",
+            Frequency = 300,
+            Timeout = 60,
+            Enabled = true,
+            GeoLocations = 
+            {
+                "us-tx-sn1-azr",
+                "us-il-ch1-azr",
+            },
+            Configuration = @"<WebTest Name=""WebTest1"" Id=""ABD48585-0831-40CB-9069-682EA6BB3583"" Enabled=""True"" CssProjectStructure="""" CssIteration="""" Timeout=""0"" WorkItemIds="""" xmlns=""http://microsoft.com/schemas/VisualStudio/TeamTest/2010"" Description="""" CredentialUserName="""" CredentialPassword="""" PreAuthenticate=""True"" Proxy=""default"" StopOnError=""False"" RecordedResultFile="""" ResultsLocale="""">
+  <Items>
+    <Request Method=""GET"" Guid=""a5f10126-e4cd-570d-961c-cea43999a200"" Version=""1.1"" Url=""http://microsoft.com"" ThinkTime=""0"" Timeout=""300"" ParseDependentRequests=""True"" FollowRedirects=""True"" RecordResult=""True"" Cache=""False"" ResponseTimeGoal=""0"" Encoding=""utf-8"" ExpectedHttpStatusCode=""200"" ExpectedResponseUrl="""" ReportingName="""" IgnoreHttpStatusCode=""False"" />
+  </Items>
+</WebTest>
+",
+        });
+        this.WebtestId = exampleWebTest.Id;
+        this.WebtestsSyntheticId = exampleWebTest.SyntheticMonitorId;
+    }
+
+    [Output("webtestId")]
+    public Output<string> WebtestId { get; set; }
+    [Output("webtestsSyntheticId")]
+    public Output<string> WebtestsSyntheticId { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appinsights"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleInsights, err := appinsights.NewInsights(ctx, "exampleInsights", &appinsights.InsightsArgs{
+			Location:          pulumi.String("West Europe"),
+			ResourceGroupName: exampleResourceGroup.Name,
+			ApplicationType:   pulumi.String("web"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleWebTest, err := appinsights.NewWebTest(ctx, "exampleWebTest", &appinsights.WebTestArgs{
+			Location:              exampleInsights.Location,
+			ResourceGroupName:     exampleResourceGroup.Name,
+			ApplicationInsightsId: exampleInsights.ID(),
+			Kind:                  pulumi.String("ping"),
+			Frequency:             pulumi.Int(300),
+			Timeout:               pulumi.Int(60),
+			Enabled:               pulumi.Bool(true),
+			GeoLocations: pulumi.StringArray{
+				pulumi.String("us-tx-sn1-azr"),
+				pulumi.String("us-il-ch1-azr"),
+			},
+			Configuration: pulumi.String(fmt.Sprintf("%v%v%v%v%v", "<WebTest Name=\"WebTest1\" Id=\"ABD48585-0831-40CB-9069-682EA6BB3583\" Enabled=\"True\" CssProjectStructure=\"\" CssIteration=\"\" Timeout=\"0\" WorkItemIds=\"\" xmlns=\"http://microsoft.com/schemas/VisualStudio/TeamTest/2010\" Description=\"\" CredentialUserName=\"\" CredentialPassword=\"\" PreAuthenticate=\"True\" Proxy=\"default\" StopOnError=\"False\" RecordedResultFile=\"\" ResultsLocale=\"\">\n", "  <Items>\n", "    <Request Method=\"GET\" Guid=\"a5f10126-e4cd-570d-961c-cea43999a200\" Version=\"1.1\" Url=\"http://microsoft.com\" ThinkTime=\"0\" Timeout=\"300\" ParseDependentRequests=\"True\" FollowRedirects=\"True\" RecordResult=\"True\" Cache=\"False\" ResponseTimeGoal=\"0\" Encoding=\"utf-8\" ExpectedHttpStatusCode=\"200\" ExpectedResponseUrl=\"\" ReportingName=\"\" IgnoreHttpStatusCode=\"False\" />\n", "  </Items>\n", "</WebTest>\n")),
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("webtestId", exampleWebTest.ID())
+		ctx.Export("webtestsSyntheticId", exampleWebTest.SyntheticMonitorId)
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_insights = azure.appinsights.Insights("exampleInsights",
+    location="West Europe",
+    resource_group_name=example_resource_group.name,
+    application_type="web")
+example_web_test = azure.appinsights.WebTest("exampleWebTest",
+    location=example_insights.location,
+    resource_group_name=example_resource_group.name,
+    application_insights_id=example_insights.id,
+    kind="ping",
+    frequency=300,
+    timeout=60,
+    enabled=True,
+    geo_locations=[
+        "us-tx-sn1-azr",
+        "us-il-ch1-azr",
+    ],
+    configuration="""<WebTest Name="WebTest1" Id="ABD48585-0831-40CB-9069-682EA6BB3583" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="a5f10126-e4cd-570d-961c-cea43999a200" Version="1.1" Url="http://microsoft.com" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="200" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+  </Items>
+</WebTest>
+""")
+pulumi.export("webtestId", example_web_test.id)
+pulumi.export("webtestsSyntheticId", example_web_test.synthetic_monitor_id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleInsights = new azure.appinsights.Insights("exampleInsights", {
+    location: "West Europe",
+    resourceGroupName: exampleResourceGroup.name,
+    applicationType: "web",
+});
+const exampleWebTest = new azure.appinsights.WebTest("exampleWebTest", {
+    location: exampleInsights.location,
+    resourceGroupName: exampleResourceGroup.name,
+    applicationInsightsId: exampleInsights.id,
+    kind: "ping",
+    frequency: 300,
+    timeout: 60,
+    enabled: true,
+    geoLocations: [
+        "us-tx-sn1-azr",
+        "us-il-ch1-azr",
+    ],
+    configuration: `<WebTest Name="WebTest1" Id="ABD48585-0831-40CB-9069-682EA6BB3583" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="a5f10126-e4cd-570d-961c-cea43999a200" Version="1.1" Url="http://microsoft.com" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="200" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+  </Items>
+</WebTest>
+`,
+});
+export const webtestId = exampleWebTest.id;
+export const webtestsSyntheticId = exampleWebTest.syntheticMonitorId;
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a WebTest Resource {#create}
@@ -19,19 +203,19 @@ Manages an Application Insights WebTest.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appinsights/#WebTest">WebTest</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appinsights/#WebTestArgs">WebTestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">WebTest</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">WebTestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/appinsights/#pulumi_azure.appinsights.WebTest">WebTest</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_insights_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">geo_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">WebTest</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_insights_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">frequency</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">geo_locations</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retry_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">timeout</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appinsights?tab=doc#WebTest">NewWebTest</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appinsights?tab=doc#WebTestArgs">WebTestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appinsights?tab=doc#WebTest">WebTest</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewWebTest</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">WebTestArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebTest</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppInsights.WebTest.html">WebTest</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppInsights.WebTestArgs.html">WebTestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">WebTest</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">WebTestArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -52,7 +236,7 @@ Manages an Application Insights WebTest.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appinsights/#WebTestArgs">WebTestArgs</a></span>
+        <span class="property-type"><a href="#inputs">WebTestArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -121,7 +305,7 @@ Manages an Application Insights WebTest.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appinsights?tab=doc#WebTestArgs">WebTestArgs</a></span>
+        <span class="property-type"><a href="#inputs">WebTestArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -160,7 +344,7 @@ Manages an Application Insights WebTest.
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppInsights.WebTestArgs.html">WebTestArgs</a></span>
+        <span class="property-type"><a href="#inputs">WebTestArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -183,11 +367,11 @@ Manages an Application Insights WebTest.
 
 ## WebTest Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The WebTest resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The WebTest resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -212,7 +396,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An XML configuration specification for a WebTest.
+    <dd>{{% md %}}An XML configuration specification for a WebTest ([see here for more information](https://docs.microsoft.com/en-us/rest/api/application-insights/webtests/createorupdate/)).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -232,7 +416,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`.
+    <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -242,7 +426,8 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group in which to create the Application Insights WebTest. Changing this forces a new resource
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -271,7 +456,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Default is `300`.
+    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Valid options are `300`, `600` and `900`. Defaults to `300`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -281,7 +466,7 @@ The WebTest resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource group.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. It needs to correlate with location of parent resource (azurerm_application_insights).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -312,7 +497,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -348,7 +533,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An XML configuration specification for a WebTest.
+    <dd>{{% md %}}An XML configuration specification for a WebTest ([see here for more information](https://docs.microsoft.com/en-us/rest/api/application-insights/webtests/createorupdate/)).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -368,7 +553,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`.
+    <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -378,7 +563,8 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group in which to create the Application Insights WebTest. Changing this forces a new resource
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -407,7 +593,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Default is `300`.
+    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Valid options are `300`, `600` and `900`. Defaults to `300`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -417,7 +603,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource group.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. It needs to correlate with location of parent resource (azurerm_application_insights).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -448,7 +634,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -484,7 +670,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An XML configuration specification for a WebTest.
+    <dd>{{% md %}}An XML configuration specification for a WebTest ([see here for more information](https://docs.microsoft.com/en-us/rest/api/application-insights/webtests/createorupdate/)).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -504,7 +690,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`.
+    <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -514,7 +700,8 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group in which to create the Application Insights WebTest. Changing this forces a new resource
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -543,7 +730,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Default is `300`.
+    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Valid options are `300`, `600` and `900`. Defaults to `300`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -553,7 +740,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource group.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. It needs to correlate with location of parent resource (azurerm_application_insights).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -584,7 +771,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -620,7 +807,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An XML configuration specification for a WebTest.
+    <dd>{{% md %}}An XML configuration specification for a WebTest ([see here for more information](https://docs.microsoft.com/en-us/rest/api/application-insights/webtests/createorupdate/)).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -640,7 +827,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`.
+    <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -650,7 +837,8 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group in which to create the Application Insights WebTest. Changing this forces a new resource
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -679,7 +867,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Default is `300`.
+    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Valid options are `300`, `600` and `900`. Defaults to `300`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -689,7 +877,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the resource group.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. It needs to correlate with location of parent resource (azurerm_application_insights).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -720,7 +908,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -846,7 +1034,7 @@ Get an existing WebTest resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appinsights/#WebTestState">WebTestState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/appinsights/#WebTest">WebTest</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">WebTestState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">WebTest</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -855,11 +1043,11 @@ Get an existing WebTest resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWebTest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appinsights?tab=doc#WebTestState">WebTestState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appinsights?tab=doc#WebTest">WebTest</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetWebTest<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">WebTestState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">WebTest</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppInsights.WebTest.html">WebTest</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.AppInsights.WebTestState.html">WebTestState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">WebTest</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">WebTestState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -982,7 +1170,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An XML configuration specification for a WebTest.
+    <dd>{{% md %}}An XML configuration specification for a WebTest ([see here for more information](https://docs.microsoft.com/en-us/rest/api/application-insights/webtests/createorupdate/)).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1012,7 +1200,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Default is `300`.
+    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Valid options are `300`, `600` and `900`. Defaults to `300`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1032,7 +1220,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`.
+    <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1042,7 +1230,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource group.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. It needs to correlate with location of parent resource (azurerm_application_insights).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1063,7 +1251,8 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group in which to create the Application Insights WebTest. Changing this forces a new resource
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_retryenabled_csharp">
@@ -1091,7 +1280,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1127,7 +1316,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An XML configuration specification for a WebTest.
+    <dd>{{% md %}}An XML configuration specification for a WebTest ([see here for more information](https://docs.microsoft.com/en-us/rest/api/application-insights/webtests/createorupdate/)).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1157,7 +1346,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Default is `300`.
+    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Valid options are `300`, `600` and `900`. Defaults to `300`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1177,7 +1366,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`.
+    <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1187,7 +1376,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource group.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. It needs to correlate with location of parent resource (azurerm_application_insights).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1208,7 +1397,8 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group in which to create the Application Insights WebTest. Changing this forces a new resource
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_retryenabled_go">
@@ -1236,7 +1426,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1272,7 +1462,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An XML configuration specification for a WebTest.
+    <dd>{{% md %}}An XML configuration specification for a WebTest ([see here for more information](https://docs.microsoft.com/en-us/rest/api/application-insights/webtests/createorupdate/)).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1302,7 +1492,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Default is `300`.
+    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Valid options are `300`, `600` and `900`. Defaults to `300`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1322,7 +1512,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`.
+    <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1332,7 +1522,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource group.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. It needs to correlate with location of parent resource (azurerm_application_insights).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1353,7 +1543,8 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group in which to create the Application Insights WebTest. Changing this forces a new resource
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_retryenabled_nodejs">
@@ -1381,7 +1572,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1417,7 +1608,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An XML configuration specification for a WebTest.
+    <dd>{{% md %}}An XML configuration specification for a WebTest ([see here for more information](https://docs.microsoft.com/en-us/rest/api/application-insights/webtests/createorupdate/)).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1447,7 +1638,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Default is `300`.
+    <dd>{{% md %}}Interval in seconds between test runs for this WebTest. Valid options are `300`, `600` and `900`. Defaults to `300`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1467,7 +1658,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`.
+    <dd>{{% md %}}= (Required) The kind of web test that this web test watches. Choices are `ping` and `multistep`. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1477,7 +1668,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the resource group.
+    <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created. It needs to correlate with location of parent resource (azurerm_application_insights).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1498,7 +1689,8 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the resource group in which to create the Application Insights WebTest. Changing this forces a new resource
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_retry_enabled_python">
@@ -1526,7 +1718,7 @@ new resource to be created.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

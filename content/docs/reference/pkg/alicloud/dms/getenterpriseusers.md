@@ -1,8 +1,8 @@
 
 ---
-title: "GetEnterpriseUsers"
-title_tag: "Function GetEnterpriseUsers | Module dms | Package AliCloud"
-meta_desc: "Explore the GetEnterpriseUsers function of the dms module, including examples, input properties, output properties, and supporting types. This data source provides a list of DMS Enterprise Users in an Alibaba Cloud account according to the specified filters."
+title: "getEnterpriseUsers"
+title_tag: "alicloud.dms.getEnterpriseUsers"
+meta_desc: "Documentation for the alicloud.dms.getEnterpriseUsers function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -113,13 +113,13 @@ export const firstUserId = dmsEnterpriseUsersDs.users[0].id;
 {{% /examples %}}
 
 
-## Using GetEnterpriseUsers {#using}
+## Using getEnterpriseUsers {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEnterpriseUsers<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/dms/#GetEnterpriseUsersArgs">GetEnterpriseUsersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/dms/#GetEnterpriseUsersResult">GetEnterpriseUsersResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getEnterpriseUsers<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetEnterpriseUsersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetEnterpriseUsersResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -129,14 +129,16 @@ export const firstUserId = dmsEnterpriseUsersDs.users[0].id;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEnterpriseUsers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/dms?tab=doc#GetEnterpriseUsersArgs">GetEnterpriseUsersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/dms?tab=doc#GetEnterpriseUsersResult">GetEnterpriseUsersResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEnterpriseUsers<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetEnterpriseUsersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetEnterpriseUsersResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetEnterpriseUsers` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetEnterpriseUsers </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Dms.GetEnterpriseUsersResult.html">GetEnterpriseUsersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Dms.GetEnterpriseUsersArgs.html">GetEnterpriseUsersArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetEnterpriseUsersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetEnterpriseUsersArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -448,7 +450,7 @@ The following arguments are supported:
 
 
 
-## GetEnterpriseUsers Result {#result}
+## getEnterpriseUsers Result {#result}
 
 The following output properties are available:
 
@@ -865,16 +867,6 @@ The following output properties are available:
 
 
 <h4 id="getenterpriseusersuser">Get<wbr>Enterprise<wbr>Users<wbr>User</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetEnterpriseUsersUser">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/dms?tab=doc#GetEnterpriseUsersUser">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Dms.Outputs.GetEnterpriseUsersUser.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

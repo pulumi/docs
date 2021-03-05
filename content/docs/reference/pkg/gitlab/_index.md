@@ -1,6 +1,6 @@
 ---
 title: "GitLab"
-title_tag: "Module GitLab | Package GitLab"
+title_tag: "gitlab.GitLab"
 meta_desc: "A Pulumi package for creating and managing GitLab resources."
 menu:
     reference:
@@ -34,6 +34,7 @@ A Pulumi package for creating and managing GitLab resources.
     <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
     <li><a href="projectapprovalrule" title="ProjectApprovalRule"><span class="symbol resource"></span>ProjectApprovalRule</a></li>
     <li><a href="projectcluster" title="ProjectCluster"><span class="symbol resource"></span>ProjectCluster</a></li>
+    <li><a href="projectfreezeperiod" title="ProjectFreezePeriod"><span class="symbol resource"></span>ProjectFreezePeriod</a></li>
     <li><a href="projecthook" title="ProjectHook"><span class="symbol resource"></span>ProjectHook</a></li>
     <li><a href="projectlevelmrapprovals" title="ProjectLevelMrApprovals"><span class="symbol resource"></span>ProjectLevelMrApprovals</a></li>
     <li><a href="projectmembership" title="ProjectMembership"><span class="symbol resource"></span>ProjectMembership</a></li>
@@ -68,24 +69,6 @@ A Pulumi package for creating and managing GitLab resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`gitlab` Terraform Provider](https://github.com/gitlabhq/terraform-provider-gitlab).</dd>
 	<dt>Version</dt>
-	<dd>3.6.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.html" title="Pulumi.GitLab">Pulumi.GitLab</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v3/go/gitlab/?tab=doc#" title="gitlab">gitlab</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#" title="@pulumi/gitlab">@pulumi/gitlab</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_gitlab" title="pulumi_gitlab">pulumi_gitlab</a></dd>
-
+	<dd>3.7.0</dd>
 </dl>
 

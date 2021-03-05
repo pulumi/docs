@@ -52,7 +52,7 @@ After cloning this repo, from this working directory, run these commands:
 
 1. Create a new Pulumi stack, which is an isolated deployment target for this example:
 
-    This will initialize the Pulumi program in TypeScript.
+    This will initialize the Pulumi program in Golang.
 
     ```bash
     $ pulumi stack init
@@ -119,7 +119,7 @@ After cloning this repo, from this working directory, run these commands:
     stack output in the CLI, as Pulumi facilitates exporting these objects for us.
 
     ```bash
-    $ pulumi stack output kubeconfig > kubeconfig
+    $ pulumi stack output kubeconfig --show-secrets > kubeconfig
     $ export KUBECONFIG=$PWD/kubeconfig
 
     $ kubectl version

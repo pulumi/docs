@@ -1,8 +1,8 @@
 
 ---
-title: "GetThirdPartyIntegrations"
-title_tag: "Function GetThirdPartyIntegrations | Package MongoDB Atlas"
-meta_desc: "Explore the GetThirdPartyIntegrations function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.getThirdPartyIntegrations` describe all Third-Party Integration Settings. This represents two Third-Party services `PAGER_DUTY` and `FLOWDOCK`"
+title: "getThirdPartyIntegrations"
+title_tag: "mongodbatlas.getThirdPartyIntegrations"
+meta_desc: "Documentation for the mongodbatlas.getThirdPartyIntegrations function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -18,13 +18,13 @@ applied across the project.
 
 
 
-## Using GetThirdPartyIntegrations {#using}
+## Using getThirdPartyIntegrations {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getThirdPartyIntegrations<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetThirdPartyIntegrationsArgs">GetThirdPartyIntegrationsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetThirdPartyIntegrationsResult">GetThirdPartyIntegrationsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getThirdPartyIntegrations<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetThirdPartyIntegrationsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetThirdPartyIntegrationsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -34,14 +34,16 @@ applied across the project.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetThirdPartyIntegrations<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetThirdPartyIntegrationsArgs">GetThirdPartyIntegrationsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetThirdPartyIntegrationsResult">GetThirdPartyIntegrationsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetThirdPartyIntegrations<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetThirdPartyIntegrationsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetThirdPartyIntegrationsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetThirdPartyIntegrations` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetThirdPartyIntegrations </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetThirdPartyIntegrationsResult.html">GetThirdPartyIntegrationsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetThirdPartyIntegrationsArgs.html">GetThirdPartyIntegrationsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetThirdPartyIntegrationsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetThirdPartyIntegrationsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -117,7 +119,7 @@ The following arguments are supported:
 
 
 
-## GetThirdPartyIntegrations Result {#result}
+## getThirdPartyIntegrations Result {#result}
 
 The following output properties are available:
 
@@ -274,16 +276,6 @@ The following output properties are available:
 
 
 <h4 id="getthirdpartyintegrationsresult">Get<wbr>Third<wbr>Party<wbr>Integrations<wbr>Result</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#GetThirdPartyIntegrationsResult">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetThirdPartyIntegrationsResultType">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GetThirdPartyIntegrationsResult.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

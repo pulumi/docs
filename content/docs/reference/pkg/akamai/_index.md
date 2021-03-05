@@ -82,24 +82,6 @@ A Pulumi package for creating and managing akamai cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/akamai/terraform-provider-akamai).</dd>
 	<dt>Version</dt>
-	<dd>1.1.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Akamai/Pulumi.Akamai.html" title="Pulumi.Akamai">Pulumi.Akamai</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-akamai/sdk/go/akamai/?tab=doc#" title="akamai">akamai</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/akamai/#" title="@pulumi/akamai">@pulumi/akamai</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_akamai" title="pulumi_akamai">pulumi_akamai</a></dd>
-
+	<dd>1.1.1</dd>
 </dl>
 

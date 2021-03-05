@@ -195,6 +195,211 @@ const exampleRole = new aws.iam.Role("exampleRole", {
 
 {{% /example %}}
 
+### Using Custom Images
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var testImage = new Aws.Sagemaker.Image("testImage", new Aws.Sagemaker.ImageArgs
+        {
+            ImageName = "example",
+            RoleArn = aws_iam_role.Test.Arn,
+        });
+        var testAppImageConfig = new Aws.Sagemaker.AppImageConfig("testAppImageConfig", new Aws.Sagemaker.AppImageConfigArgs
+        {
+            AppImageConfigName = "example",
+            KernelGatewayImageConfig = new Aws.Sagemaker.Inputs.AppImageConfigKernelGatewayImageConfigArgs
+            {
+                KernelSpec = new Aws.Sagemaker.Inputs.AppImageConfigKernelGatewayImageConfigKernelSpecArgs
+                {
+                    Name = "example",
+                },
+            },
+        });
+        var testImageVersion = new Aws.Sagemaker.ImageVersion("testImageVersion", new Aws.Sagemaker.ImageVersionArgs
+        {
+            ImageName = testImage.Id,
+            BaseImage = "base-image",
+        });
+        var testDomain = new Aws.Sagemaker.Domain("testDomain", new Aws.Sagemaker.DomainArgs
+        {
+            DomainName = "example",
+            AuthMode = "IAM",
+            VpcId = aws_vpc.Test.Id,
+            SubnetIds = 
+            {
+                aws_subnet.Test.Id,
+            },
+            DefaultUserSettings = new Aws.Sagemaker.Inputs.DomainDefaultUserSettingsArgs
+            {
+                ExecutionRole = aws_iam_role.Test.Arn,
+                KernelGatewayAppSettings = new Aws.Sagemaker.Inputs.DomainDefaultUserSettingsKernelGatewayAppSettingsArgs
+                {
+                    CustomImages = 
+                    {
+                        new Aws.Sagemaker.Inputs.DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArgs
+                        {
+                            AppImageConfigName = testAppImageConfig.AppImageConfigName,
+                            ImageName = testImageVersion.ImageName,
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		testImage, err := sagemaker.NewImage(ctx, "testImage", &sagemaker.ImageArgs{
+			ImageName: pulumi.String("example"),
+			RoleArn:   pulumi.Any(aws_iam_role.Test.Arn),
+		})
+		if err != nil {
+			return err
+		}
+		testAppImageConfig, err := sagemaker.NewAppImageConfig(ctx, "testAppImageConfig", &sagemaker.AppImageConfigArgs{
+			AppImageConfigName: pulumi.String("example"),
+			KernelGatewayImageConfig: &sagemaker.AppImageConfigKernelGatewayImageConfigArgs{
+				KernelSpec: &sagemaker.AppImageConfigKernelGatewayImageConfigKernelSpecArgs{
+					Name: pulumi.String("example"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		testImageVersion, err := sagemaker.NewImageVersion(ctx, "testImageVersion", &sagemaker.ImageVersionArgs{
+			ImageName: testImage.ID(),
+			BaseImage: pulumi.String("base-image"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = sagemaker.NewDomain(ctx, "testDomain", &sagemaker.DomainArgs{
+			DomainName: pulumi.String("example"),
+			AuthMode:   pulumi.String("IAM"),
+			VpcId:      pulumi.Any(aws_vpc.Test.Id),
+			SubnetIds: pulumi.StringArray{
+				pulumi.Any(aws_subnet.Test.Id),
+			},
+			DefaultUserSettings: &sagemaker.DomainDefaultUserSettingsArgs{
+				ExecutionRole: pulumi.Any(aws_iam_role.Test.Arn),
+				KernelGatewayAppSettings: &sagemaker.DomainDefaultUserSettingsKernelGatewayAppSettingsArgs{
+					CustomImages: sagemaker.DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArray{
+						&sagemaker.DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArgs{
+							AppImageConfigName: testAppImageConfig.AppImageConfigName,
+							ImageName:          testImageVersion.ImageName,
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+test_image = aws.sagemaker.Image("testImage",
+    image_name="example",
+    role_arn=aws_iam_role["test"]["arn"])
+test_app_image_config = aws.sagemaker.AppImageConfig("testAppImageConfig",
+    app_image_config_name="example",
+    kernel_gateway_image_config=aws.sagemaker.AppImageConfigKernelGatewayImageConfigArgs(
+        kernel_spec=aws.sagemaker.AppImageConfigKernelGatewayImageConfigKernelSpecArgs(
+            name="example",
+        ),
+    ))
+test_image_version = aws.sagemaker.ImageVersion("testImageVersion",
+    image_name=test_image.id,
+    base_image="base-image")
+test_domain = aws.sagemaker.Domain("testDomain",
+    domain_name="example",
+    auth_mode="IAM",
+    vpc_id=aws_vpc["test"]["id"],
+    subnet_ids=[aws_subnet["test"]["id"]],
+    default_user_settings=aws.sagemaker.DomainDefaultUserSettingsArgs(
+        execution_role=aws_iam_role["test"]["arn"],
+        kernel_gateway_app_settings=aws.sagemaker.DomainDefaultUserSettingsKernelGatewayAppSettingsArgs(
+            custom_images=[aws.sagemaker.DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArgs(
+                app_image_config_name=test_app_image_config.app_image_config_name,
+                image_name=test_image_version.image_name,
+            )],
+        ),
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const testImage = new aws.sagemaker.Image("testImage", {
+    imageName: "example",
+    roleArn: aws_iam_role.test.arn,
+});
+const testAppImageConfig = new aws.sagemaker.AppImageConfig("testAppImageConfig", {
+    appImageConfigName: "example",
+    kernelGatewayImageConfig: {
+        kernelSpec: {
+            name: "example",
+        },
+    },
+});
+const testImageVersion = new aws.sagemaker.ImageVersion("testImageVersion", {
+    imageName: testImage.id,
+    baseImage: "base-image",
+});
+const testDomain = new aws.sagemaker.Domain("testDomain", {
+    domainName: "example",
+    authMode: "IAM",
+    vpcId: aws_vpc.test.id,
+    subnetIds: [aws_subnet.test.id],
+    defaultUserSettings: {
+        executionRole: aws_iam_role.test.arn,
+        kernelGatewayAppSettings: {
+            customImages: [{
+                appImageConfigName: testAppImageConfig.appImageConfigName,
+                imageName: testImageVersion.imageName,
+            }],
+        },
+    },
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -203,19 +408,19 @@ const exampleRole = new aws.iam.Role("exampleRole", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sagemaker/#Domain">Domain</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sagemaker/#DomainArgs">DomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/sagemaker/#pulumi_aws.sagemaker.Domain">Domain</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_network_access_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_user_settings</span><span class="p">:</span> <span class="nx">Optional[DomainDefaultUserSettingsArgs]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">app_network_access_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_user_settings</span><span class="p">:</span> <span class="nx">Optional[DomainDefaultUserSettingsArgs]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#Domain">NewDomain</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#DomainArgs">DomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#Domain">Domain</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewDomain</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Domain.html">Domain</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.DomainArgs.html">DomainArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Domain</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">DomainArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -236,7 +441,7 @@ const exampleRole = new aws.iam.Role("exampleRole", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sagemaker/#DomainArgs">DomainArgs</a></span>
+        <span class="property-type"><a href="#inputs">DomainArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -305,7 +510,7 @@ const exampleRole = new aws.iam.Role("exampleRole", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#DomainArgs">DomainArgs</a></span>
+        <span class="property-type"><a href="#inputs">DomainArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -344,7 +549,7 @@ const exampleRole = new aws.iam.Role("exampleRole", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.DomainArgs.html">DomainArgs</a></span>
+        <span class="property-type"><a href="#inputs">DomainArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -367,11 +572,11 @@ const exampleRole = new aws.iam.Role("exampleRole", {
 
 ## Domain Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Domain resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Domain resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -954,7 +1159,7 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sagemaker/#DomainState">DomainState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sagemaker/#Domain">Domain</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">DomainState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Domain</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -963,11 +1168,11 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomain<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#DomainState">DomainState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#Domain">Domain</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDomain<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">DomainState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Domain</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Domain.html">Domain</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.DomainState.html">DomainState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Domain</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">DomainState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1583,18 +1788,6 @@ The following state arguments are supported:
 
 
 <h4 id="domaindefaultusersettings">Domain<wbr>Default<wbr>User<wbr>Settings</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainDefaultUserSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainDefaultUserSettings">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#DomainDefaultUserSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#DomainDefaultUserSettingsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Inputs.DomainDefaultUserSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Outputs.DomainDefaultUserSettings.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1861,24 +2054,12 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="domaindefaultusersettingsjupyterserverappsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainDefaultUserSettingsJupyterServerAppSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainDefaultUserSettingsJupyterServerAppSettings">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#DomainDefaultUserSettingsJupyterServerAppSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#DomainDefaultUserSettingsJupyterServerAppSettingsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Inputs.DomainDefaultUserSettingsJupyterServerAppSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Outputs.DomainDefaultUserSettingsJupyterServerAppSettings.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultresourcespec_csharp">
 <a href="#defaultresourcespec_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
 </span>
@@ -1893,8 +2074,8 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultresourcespec_go">
 <a href="#defaultresourcespec_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
 </span>
@@ -1909,8 +2090,8 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultresourcespec_nodejs">
 <a href="#defaultresourcespec_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Resource<wbr>Spec</a>
 </span>
@@ -1925,8 +2106,8 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="default_resource_spec_python">
 <a href="#default_resource_spec_python" style="color: inherit; text-decoration: inherit;">default_<wbr>resource_<wbr>spec</a>
 </span>
@@ -1939,18 +2120,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="domaindefaultusersettingsjupyterserverappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Jupyter<wbr>Server<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpec">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Inputs.DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Outputs.DomainDefaultUserSettingsJupyterServerAppSettingsDefaultResourceSpec.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1963,7 +2132,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1973,7 +2142,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1989,7 +2158,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1999,7 +2168,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2015,7 +2184,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2025,7 +2194,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2041,7 +2210,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2051,38 +2220,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="domaindefaultusersettingskernelgatewayappsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainDefaultUserSettingsKernelGatewayAppSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainDefaultUserSettingsKernelGatewayAppSettings">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#DomainDefaultUserSettingsKernelGatewayAppSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#DomainDefaultUserSettingsKernelGatewayAppSettingsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Inputs.DomainDefaultUserSettingsKernelGatewayAppSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Outputs.DomainDefaultUserSettingsKernelGatewayAppSettings.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="defaultresourcespec_csharp">
-<a href="#defaultresourcespec_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
-{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="customimages_csharp">
@@ -2093,22 +2240,22 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultresourcespec_csharp">
+<a href="#defaultresourcespec_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="defaultresourcespec_go">
-<a href="#defaultresourcespec_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
-{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="customimages_go">
@@ -2119,22 +2266,22 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
 {{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="defaultresourcespec_nodejs">
-<a href="#defaultresourcespec_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Resource<wbr>Spec</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultresourcespec_go">
+<a href="#defaultresourcespec_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
 {{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
     <dt class="property-optional"
             title="Optional">
         <span id="customimages_nodejs">
@@ -2145,22 +2292,22 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultresourcespec_nodejs">
+<a href="#defaultresourcespec_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Resource<wbr>Spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</a></span>
+    </dt>
+    <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="default_resource_spec_python">
-<a href="#default_resource_spec_python" style="color: inherit; text-decoration: inherit;">default_<wbr>resource_<wbr>spec</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
-{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="custom_images_python">
@@ -2171,22 +2318,20 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_resource_spec_python">
+<a href="#default_resource_spec_python" style="color: inherit; text-decoration: inherit;">default_<wbr>resource_<wbr>spec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="domaindefaultusersettingskernelgatewayappsettingscustomimage">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Custom<wbr>Image</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Inputs.DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Outputs.DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2333,18 +2478,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="domaindefaultusersettingskernelgatewayappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Kernel<wbr>Gateway<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Inputs.DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Outputs.DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2357,7 +2490,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2367,7 +2500,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2383,7 +2516,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2393,7 +2526,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2409,7 +2542,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2419,7 +2552,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2435,7 +2568,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2445,24 +2578,12 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 <h4 id="domaindefaultusersettingssharingsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Sharing<wbr>Settings</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainDefaultUserSettingsSharingSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainDefaultUserSettingsSharingSettings">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#DomainDefaultUserSettingsSharingSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#DomainDefaultUserSettingsSharingSettingsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Inputs.DomainDefaultUserSettingsSharingSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Outputs.DomainDefaultUserSettingsSharingSettings.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2609,24 +2730,12 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="domaindefaultusersettingstensorboardappsettings">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainDefaultUserSettingsTensorBoardAppSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainDefaultUserSettingsTensorBoardAppSettings">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#DomainDefaultUserSettingsTensorBoardAppSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#DomainDefaultUserSettingsTensorBoardAppSettingsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Inputs.DomainDefaultUserSettingsTensorBoardAppSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Outputs.DomainDefaultUserSettingsTensorBoardAppSettings.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultresourcespec_csharp">
 <a href="#defaultresourcespec_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
 </span>
@@ -2641,8 +2750,8 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultresourcespec_go">
 <a href="#defaultresourcespec_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Resource<wbr>Spec</a>
 </span>
@@ -2657,8 +2766,8 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="defaultresourcespec_nodejs">
 <a href="#defaultresourcespec_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Resource<wbr>Spec</a>
 </span>
@@ -2673,8 +2782,8 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="default_resource_spec_python">
 <a href="#default_resource_spec_python" style="color: inherit; text-decoration: inherit;">default_<wbr>resource_<wbr>spec</a>
 </span>
@@ -2687,18 +2796,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="domaindefaultusersettingstensorboardappsettingsdefaultresourcespec">Domain<wbr>Default<wbr>User<wbr>Settings<wbr>Tensor<wbr>Board<wbr>App<wbr>Settings<wbr>Default<wbr>Resource<wbr>Spec</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpec">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sagemaker?tab=doc#DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Inputs.DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpecArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sagemaker.Outputs.DomainDefaultUserSettingsTensorBoardAppSettingsDefaultResourceSpec.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2711,7 +2808,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2721,7 +2818,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2737,7 +2834,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2747,7 +2844,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2763,7 +2860,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2773,7 +2870,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2789,7 +2886,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The instance type.
+    <dd>{{% md %}}The instance type that the image version runs on.. For valid values see [Sagemaker Instance Types](https://docs.aws.amazon.com/sagemaker/latest/dg/notebooks-available-instance-types.html).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2799,7 +2896,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the SageMaker image created on the instance.
+    <dd>{{% md %}}The ARN of the SageMaker image that the image version belongs to.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

@@ -27,30 +27,30 @@ pulumi preview [flags]
 ### Options
 
 ```
-  -c, --config stringArray           Config to use during the preview
-      --config-file string           Use the configuration values in the specified file rather than detecting the file name
-      --config-path                  Config keys contain a path to a property in a map or list to set
-  -d, --debug                        Print detailed debugging output during resource operations
-      --diff                         Display operation as a rich diff showing the overall change
-      --expect-no-changes            Return an error if any changes are proposed by this preview
-  -h, --help                         help for preview
-  -j, --json                         Serialize the preview diffs, operations, and overall output as JSON
-  -m, --message string               Optional message to associate with the preview operation
-  -p, --parallel int                 Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647)
-      --policy-pack strings          Run one or more policy packs as part of this update
-      --policy-pack-config strings   Path to JSON file containing the config for the policy pack of the corresponding "--policy-pack" flag
-  -r, --refresh                      Refresh the state of the stack's resources before this update
-      --replace stringArray          Specify resources to replace. Multiple resources can be specified using --replace urn1 --replace urn2
-      --show-config                  Show configuration keys and variables
-      --show-reads                   Show resources that are being read in, alongside those being managed directly in the stack
-      --show-replacement-steps       Show detailed resource replacement creates and deletes instead of a single step
-      --show-sames                   Show resources that needn't be updated because they haven't changed, alongside those that do
-  -s, --stack string                 The name of the stack to operate on. Defaults to the current stack
-      --suppress-outputs             Suppress display of stack outputs (in case they contain sensitive values)
-      --suppress-permalink           Suppress display of the state permalink
-  -t, --target stringArray           Specify a single resource URN to update. Other resources will not be updated. Multiple resources can be specified using --target urn1 --target urn2
-      --target-dependents            Allows updating of dependent targets discovered but not specified in --target list
-      --target-replace stringArray   Specify a single resource URN to replace. Other resources will not be updated. Shorthand for --target urn --replace urn.
+  -c, --config stringArray                    Config to use during the preview
+      --config-file string                    Use the configuration values in the specified file rather than detecting the file name
+      --config-path                           Config keys contain a path to a property in a map or list to set
+  -d, --debug                                 Print detailed debugging output during resource operations
+      --diff                                  Display operation as a rich diff showing the overall change
+      --expect-no-changes                     Return an error if any changes are proposed by this preview
+  -h, --help                                  help for preview
+  -j, --json                                  Serialize the preview diffs, operations, and overall output as JSON
+  -m, --message string                        Optional message to associate with the preview operation
+  -p, --parallel int                          Allow P resource operations to run in parallel at once (1 for no parallelism). Defaults to unbounded. (default 2147483647)
+      --policy-pack strings                   Run one or more policy packs as part of this update
+      --policy-pack-config strings            Path to JSON file containing the config for the policy pack of the corresponding "--policy-pack" flag
+  -r, --refresh                               Refresh the state of the stack's resources before this update
+      --replace stringArray                   Specify resources to replace. Multiple resources can be specified using --replace urn1 --replace urn2
+      --show-config                           Show configuration keys and variables
+      --show-reads                            Show resources that are being read in, alongside those being managed directly in the stack
+      --show-replacement-steps                Show detailed resource replacement creates and deletes instead of a single step
+      --show-sames                            Show resources that needn't be updated because they haven't changed, alongside those that do
+  -s, --stack string                          The name of the stack to operate on. Defaults to the current stack
+      --suppress-outputs                      Suppress display of stack outputs (in case they contain sensitive values)
+      --suppress-permalink string[="false"]   Suppress display of the state permalink
+  -t, --target stringArray                    Specify a single resource URN to update. Other resources will not be updated. Multiple resources can be specified using --target urn1 --target urn2
+      --target-dependents                     Allows updating of dependent targets discovered but not specified in --target list
+      --target-replace stringArray            Specify a single resource URN to replace. Other resources will not be updated. Shorthand for --target urn --replace urn.
 ```
 
 ### Options inherited from parent commands
@@ -72,4 +72,4 @@ pulumi preview [flags]
 
 * [pulumi](/docs/reference/cli/pulumi/)	 - Pulumi command line
 
-###### Auto generated by spf13/cobra on 3-Feb-2021
+###### Auto generated by spf13/cobra on 3-Mar-2021

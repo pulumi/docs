@@ -55,24 +55,6 @@ A Pulumi package for creating and managing opsgenie cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`opsgenie` Terraform Provider](https://github.com/opsgenie/terraform-provider-opsgenie).</dd>
 	<dt>Version</dt>
-	<dd>0.1.1</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Opsgenie/Pulumi.Opsgenie.html" title="Pulumi.Opsgenie">Pulumi.Opsgenie</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-opsgenie/sdk/go/opsgenie/?tab=doc#" title="opsgenie">opsgenie</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/opsgenie/#" title="@pulumi/opsgenie">@pulumi/opsgenie</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_opsgenie" title="pulumi_opsgenie">pulumi_opsgenie</a></dd>
-
+	<dd>0.1.3</dd>
 </dl>
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetZones"
-title_tag: "Function GetZones | Module hbase | Package AliCloud"
-meta_desc: "Explore the GetZones function of the hbase module, including examples, input properties, output properties, and supporting types. This data source provides availability zones for HBase that can be accessed by an Alibaba Cloud account within the region configured in the provider."
+title: "getZones"
+title_tag: "alicloud.hbase.getZones"
+meta_desc: "Documentation for the alicloud.hbase.getZones function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -30,7 +30,6 @@ class MyStack : Stack
     public MyStack()
     {
         var zonesIds = Output.Create(AliCloud.Hbase.GetZones.InvokeAsync());
-        // Create an HBase instance with the first matched zone
         var hbase = new AliCloud.Hbase.Instance("hbase", new AliCloud.Hbase.InstanceArgs
         {
             ZoneId = zonesIds.Apply(zonesIds => zonesIds.Zones[0].Id),
@@ -77,7 +76,6 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 zones_ids = alicloud.hbase.get_zones()
-# Create an HBase instance with the first matched zone
 hbase = alicloud.hbase.Instance("hbase", zone_id=zones_ids.zones[0].id)
 # Other properties...
 ```
@@ -91,7 +89,6 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const zonesIds = alicloud.hbase.getZones({});
-// Create an HBase instance with the first matched zone
 const hbase = new alicloud.hbase.Instance("hbase", {zoneId: zonesIds.then(zonesIds => zonesIds.zones[0].id)});
 // Other properties...
 ```
@@ -101,13 +98,13 @@ const hbase = new alicloud.hbase.Instance("hbase", {zoneId: zonesIds.then(zonesI
 {{% /examples %}}
 
 
-## Using GetZones {#using}
+## Using getZones {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getZones<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/hbase/#GetZonesArgs">GetZonesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/hbase/#GetZonesResult">GetZonesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getZones<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetZonesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetZonesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -117,14 +114,16 @@ const hbase = new alicloud.hbase.Instance("hbase", {zoneId: zonesIds.then(zonesI
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetZones<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/hbase?tab=doc#GetZonesArgs">GetZonesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/hbase?tab=doc#GetZonesResult">GetZonesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetZones<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetZonesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetZonesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetZones` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetZones </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Hbase.GetZonesResult.html">GetZonesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Hbase.GetZonesArgs.html">GetZonesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetZonesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetZonesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -196,7 +195,7 @@ The following arguments are supported:
 
 
 
-## GetZones Result {#result}
+## getZones Result {#result}
 
 The following output properties are available:
 
@@ -389,16 +388,6 @@ The following output properties are available:
 
 
 <h4 id="getzoneszone">Get<wbr>Zones<wbr>Zone</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetZonesZone">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/hbase?tab=doc#GetZonesZone">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Hbase.Outputs.GetZonesZone.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

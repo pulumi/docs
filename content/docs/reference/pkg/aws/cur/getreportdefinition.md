@@ -1,8 +1,8 @@
 
 ---
-title: "GetReportDefinition"
-title_tag: "Function GetReportDefinition | Module cur | Package AWS"
-meta_desc: "Explore the GetReportDefinition function of the cur module, including examples, input properties, output properties, and supporting types. Use this data source to get information on an AWS Cost and Usage Report Definition."
+title: "getReportDefinition"
+title_tag: "aws.cur.getReportDefinition"
+meta_desc: "Documentation for the aws.cur.getReportDefinition function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -92,13 +92,13 @@ const reportDefinition = pulumi.output(aws.cur.getReportDefinition({
 {{% /examples %}}
 
 
-## Using GetReportDefinition {#using}
+## Using getReportDefinition {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getReportDefinition<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cur/#GetReportDefinitionArgs">GetReportDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cur/#GetReportDefinitionResult">GetReportDefinitionResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getReportDefinition<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetReportDefinitionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetReportDefinitionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -108,7 +108,7 @@ const reportDefinition = pulumi.output(aws.cur.getReportDefinition({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupReportDefinition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cur?tab=doc#LookupReportDefinitionArgs">LookupReportDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cur?tab=doc#LookupReportDefinitionResult">LookupReportDefinitionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupReportDefinition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupReportDefinitionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupReportDefinitionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupReportDefinition` in the Go SDK.
 
@@ -117,7 +117,7 @@ const reportDefinition = pulumi.output(aws.cur.getReportDefinition({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetReportDefinition </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cur.GetReportDefinitionResult.html">GetReportDefinitionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cur.GetReportDefinitionArgs.html">GetReportDefinitionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetReportDefinitionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetReportDefinitionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -193,7 +193,7 @@ The following arguments are supported:
 
 
 
-## GetReportDefinition Result {#result}
+## getReportDefinition Result {#result}
 
 The following output properties are available:
 

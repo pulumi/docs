@@ -1,8 +1,8 @@
 
 ---
-title: "GetSaml"
-title_tag: "Function GetSaml | Module idp | Package Okta"
-meta_desc: "Explore the GetSaml function of the idp module, including examples, input properties, output properties, and supporting types. Use this data source to retrieve a SAML IdP from Okta."
+title: "getSaml"
+title_tag: "okta.idp.getSaml"
+meta_desc: "Documentation for the okta.idp.getSaml function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -29,7 +29,7 @@ class MyStack : Stack
     {
         var example = Output.Create(Okta.Idp.GetSaml.InvokeAsync(new Okta.Idp.GetSamlArgs
         {
-            Label = "Example App",
+            Name = "Example App",
         }));
     }
 
@@ -49,8 +49,9 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "Example App"
 		_, err := idp.LookupSaml(ctx, &idp.LookupSamlArgs{
-			Label: "Example App",
+			Name: &opt0,
 		}, nil)
 		if err != nil {
 			return err
@@ -67,7 +68,7 @@ func main() {
 import pulumi
 import pulumi_okta as okta
 
-example = okta.idp.get_saml(label="Example App")
+example = okta.idp.get_saml(name="Example App")
 ```
 
 {{% /example %}}
@@ -79,7 +80,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
 const example = pulumi.output(okta.idp.getSaml({
-    label: "Example App",
+    name: "Example App",
 }, { async: true }));
 ```
 
@@ -88,13 +89,13 @@ const example = pulumi.output(okta.idp.getSaml({
 {{% /examples %}}
 
 
-## Using GetSaml {#using}
+## Using getSaml {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSaml<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/idp/#GetSamlArgs">GetSamlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/idp/#GetSamlResult">GetSamlResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSaml<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSamlArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSamlResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -104,7 +105,7 @@ const example = pulumi.output(okta.idp.getSaml({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSaml<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/idp?tab=doc#LookupSamlArgs">LookupSamlArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/idp?tab=doc#LookupSamlResult">LookupSamlResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSaml<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSamlArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSamlResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSaml` in the Go SDK.
 
@@ -113,7 +114,7 @@ const example = pulumi.output(okta.idp.getSaml({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSaml </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Idp.GetSamlResult.html">GetSamlResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Idp.GetSamlArgs.html">GetSamlArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSamlResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSamlArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -229,7 +230,7 @@ The following arguments are supported:
 
 
 
-## GetSaml Result {#result}
+## getSaml Result {#result}
 
 The following output properties are available:
 
@@ -246,7 +247,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}HTTP binding used to receive a SAMLResponse message from the IdP.
+    <dd>{{% md %}}HTTP binding used to receive a SAMLResponse message from the IdP (always equals to `"HTTP-POST"`).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -306,7 +307,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}single sign on binding.
+    <dd>{{% md %}}single sign-on binding.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -326,7 +327,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}single sign on url.
+    <dd>{{% md %}}single sign-on url.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -392,7 +393,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}HTTP binding used to receive a SAMLResponse message from the IdP.
+    <dd>{{% md %}}HTTP binding used to receive a SAMLResponse message from the IdP (always equals to `"HTTP-POST"`).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -452,7 +453,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}single sign on binding.
+    <dd>{{% md %}}single sign-on binding.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -472,7 +473,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}single sign on url.
+    <dd>{{% md %}}single sign-on url.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -538,7 +539,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}HTTP binding used to receive a SAMLResponse message from the IdP.
+    <dd>{{% md %}}HTTP binding used to receive a SAMLResponse message from the IdP (always equals to `"HTTP-POST"`).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -598,7 +599,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}single sign on binding.
+    <dd>{{% md %}}single sign-on binding.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -618,7 +619,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}single sign on url.
+    <dd>{{% md %}}single sign-on url.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -684,7 +685,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}HTTP binding used to receive a SAMLResponse message from the IdP.
+    <dd>{{% md %}}HTTP binding used to receive a SAMLResponse message from the IdP (always equals to `"HTTP-POST"`).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -744,7 +745,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}single sign on binding.
+    <dd>{{% md %}}single sign-on binding.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -764,7 +765,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}single sign on url.
+    <dd>{{% md %}}single sign-on url.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">

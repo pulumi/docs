@@ -1,8 +1,8 @@
 
 ---
-title: "GetZoneDnssec"
-title_tag: "Function GetZoneDnssec | Package Cloudflare"
-meta_desc: "Explore the GetZoneDnssec function of the Cloudflare package, including examples, input properties, output properties, and supporting types. Use this data source to look up [Zone][1] DNSSEC settings."
+title: "getZoneDnssec"
+title_tag: "cloudflare.getZoneDnssec"
+meta_desc: "Documentation for the cloudflare.getZoneDnssec function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -44,7 +44,6 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare"
-	"github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -89,13 +88,13 @@ const example = pulumi.output(cloudflare.getZoneDnssec({
 {{% /examples %}}
 
 
-## Using GetZoneDnssec {#using}
+## Using getZoneDnssec {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getZoneDnssec<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#GetZoneDnssecArgs">GetZoneDnssecArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#GetZoneDnssecResult">GetZoneDnssecResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getZoneDnssec<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetZoneDnssecArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetZoneDnssecResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -105,7 +104,7 @@ const example = pulumi.output(cloudflare.getZoneDnssec({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupZoneDnssec<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#LookupZoneDnssecArgs">LookupZoneDnssecArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/v2/go/cloudflare/?tab=doc#LookupZoneDnssecResult">LookupZoneDnssecResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupZoneDnssec<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupZoneDnssecArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupZoneDnssecResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupZoneDnssec` in the Go SDK.
 
@@ -114,7 +113,7 @@ const example = pulumi.output(cloudflare.getZoneDnssec({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetZoneDnssec </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.GetZoneDnssecResult.html">GetZoneDnssecResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.GetZoneDnssecArgs.html">GetZoneDnssecArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetZoneDnssecResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetZoneDnssecArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -190,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetZoneDnssec Result {#result}
+## getZoneDnssec Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetPatchBaseline"
-title_tag: "Function GetPatchBaseline | Module ssm | Package AWS"
-meta_desc: "Explore the GetPatchBaseline function of the ssm module, including examples, input properties, output properties, and supporting types. Provides an SSM Patch Baseline data source. Useful if you wish to reuse the default baselines provided."
+title: "getPatchBaseline"
+title_tag: "aws.ssm.getPatchBaseline"
+meta_desc: "Documentation for the aws.ssm.getPatchBaseline function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -98,13 +98,13 @@ const centos = pulumi.output(aws.ssm.getPatchBaseline({
 {{% /examples %}}
 
 
-## Using GetPatchBaseline {#using}
+## Using getPatchBaseline {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPatchBaseline<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#GetPatchBaselineArgs">GetPatchBaselineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#GetPatchBaselineResult">GetPatchBaselineResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPatchBaseline<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPatchBaselineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPatchBaselineResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -114,7 +114,7 @@ const centos = pulumi.output(aws.ssm.getPatchBaseline({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPatchBaseline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#LookupPatchBaselineArgs">LookupPatchBaselineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ssm?tab=doc#LookupPatchBaselineResult">LookupPatchBaselineResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPatchBaseline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupPatchBaselineArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupPatchBaselineResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupPatchBaseline` in the Go SDK.
 
@@ -123,7 +123,7 @@ const centos = pulumi.output(aws.ssm.getPatchBaseline({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPatchBaseline </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.GetPatchBaselineResult.html">GetPatchBaselineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ssm.GetPatchBaselineArgs.html">GetPatchBaselineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPatchBaselineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPatchBaselineArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -319,7 +319,7 @@ The following arguments are supported:
 
 
 
-## GetPatchBaseline Result {#result}
+## getPatchBaseline Result {#result}
 
 The following output properties are available:
 

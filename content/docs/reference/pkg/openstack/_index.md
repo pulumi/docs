@@ -1,6 +1,6 @@
 ---
 title: "Open Stack"
-title_tag: "Package Open Stack"
+title_tag: "Open Stack Package"
 meta_desc: "A Pulumi package for creating and managing OpenStack cloud resources."
 menu:
     reference:
@@ -45,24 +45,6 @@ A Pulumi package for creating and managing OpenStack cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 	<dt>Version</dt>
-	<dd>2.12.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.html" title="Pulumi.OpenStack">Pulumi.OpenStack</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/?tab=doc#" title="openstack">openstack</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/openstack/#" title="@pulumi/openstack">@pulumi/openstack</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_openstack" title="pulumi_openstack">pulumi_openstack</a></dd>
-
+	<dd>2.15.0</dd>
 </dl>
 

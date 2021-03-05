@@ -1,8 +1,8 @@
 
 ---
-title: "GetFolders"
-title_tag: "Function GetFolders | Module resourcemanager | Package AliCloud"
-meta_desc: "Explore the GetFolders function of the resourcemanager module, including examples, input properties, output properties, and supporting types. This data source provides the resource manager folders of the current Alibaba Cloud user."
+title: "getFolders"
+title_tag: "alicloud.resourcemanager.getFolders"
+meta_desc: "Documentation for the alicloud.resourcemanager.getFolders function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -100,30 +100,32 @@ export const firstFolderId = example.folders[0].id;
 {{% /examples %}}
 
 
-## Using GetFolders {#using}
+## Using getFolders {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFolders<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/resourcemanager/#GetFoldersArgs">GetFoldersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/resourcemanager/#GetFoldersResult">GetFoldersResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFolders<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFoldersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFoldersResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_folders(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFoldersResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_folders(</span><span class="nx">enable_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parent_folder_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">query_keyword</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetFoldersResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFolders<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/resourcemanager?tab=doc#GetFoldersArgs">GetFoldersArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/resourcemanager?tab=doc#GetFoldersResult">GetFoldersResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetFolders<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetFoldersArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetFoldersResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetFolders` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFolders </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Resourcemanager.GetFoldersResult.html">GetFoldersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ResourceManager.GetFoldersArgs.html">GetFoldersArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetFoldersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFoldersArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -135,6 +137,16 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabledetails_csharp">
+<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}-(Optional, Available in v1.114.0+) Default to `false`. Set it to true can output more details.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ids_csharp">
@@ -174,12 +186,32 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The ID of the parent folder.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="querykeyword_csharp">
+<a href="#querykeyword_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Keyword</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The query keyword.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabledetails_go">
+<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}-(Optional, Available in v1.114.0+) Default to `false`. Set it to true can output more details.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ids_go">
@@ -219,12 +251,32 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The ID of the parent folder.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="querykeyword_go">
+<a href="#querykeyword_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Keyword</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The query keyword.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabledetails_nodejs">
+<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}-(Optional, Available in v1.114.0+) Default to `false`. Set it to true can output more details.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ids_nodejs">
@@ -264,12 +316,32 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The ID of the parent folder.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="querykeyword_nodejs">
+<a href="#querykeyword_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Keyword</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The query keyword.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_details_python">
+<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}-(Optional, Available in v1.114.0+) Default to `false`. Set it to true can output more details.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ids_python">
@@ -309,13 +381,23 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The ID of the parent folder.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="query_keyword_python">
+<a href="#query_keyword_python" style="color: inherit; text-decoration: inherit;">query_<wbr>keyword</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The query keyword.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 
 
 
-## GetFolders Result {#result}
+## getFolders Result {#result}
 
 The following output properties are available:
 
@@ -366,6 +448,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="enabledetails_csharp">
+<a href="#enabledetails_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="nameregex_csharp">
 <a href="#nameregex_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span>
@@ -386,6 +477,15 @@ The following output properties are available:
             title="">
         <span id="parentfolderid_csharp">
 <a href="#parentfolderid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Folder<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="querykeyword_csharp">
+<a href="#querykeyword_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Keyword</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -439,6 +539,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="enabledetails_go">
+<a href="#enabledetails_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="nameregex_go">
 <a href="#nameregex_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Regex</a>
 </span>
@@ -459,6 +568,15 @@ The following output properties are available:
             title="">
         <span id="parentfolderid_go">
 <a href="#parentfolderid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Folder<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="querykeyword_go">
+<a href="#querykeyword_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Keyword</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -512,6 +630,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="enabledetails_nodejs">
+<a href="#enabledetails_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="nameregex_nodejs">
 <a href="#nameregex_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Regex</a>
 </span>
@@ -532,6 +659,15 @@ The following output properties are available:
             title="">
         <span id="parentfolderid_nodejs">
 <a href="#parentfolderid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Folder<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="querykeyword_nodejs">
+<a href="#querykeyword_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Keyword</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -585,6 +721,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="enable_details_python">
+<a href="#enable_details_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_regex_python">
 <a href="#name_regex_python" style="color: inherit; text-decoration: inherit;">name_<wbr>regex</a>
 </span>
@@ -610,6 +755,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="query_keyword_python">
+<a href="#query_keyword_python" style="color: inherit; text-decoration: inherit;">query_<wbr>keyword</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -620,16 +774,6 @@ The following output properties are available:
 
 
 <h4 id="getfoldersfolder">Get<wbr>Folders<wbr>Folder</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetFoldersFolder">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/resourcemanager?tab=doc#GetFoldersFolder">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ResourceManager.Outputs.GetFoldersFolder.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -665,6 +809,17 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the folder.
 * `folder_id`- The ID of the folder.
 * `folder_name`- The name of the folder.
+* `parent_folder_id`- (Available in v1.114.0+)The ID of the parent folder.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="parentfolderid_csharp">
+<a href="#parentfolderid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Folder<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the parent folder.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -701,6 +856,17 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the folder.
 * `folder_id`- The ID of the folder.
 * `folder_name`- The name of the folder.
+* `parent_folder_id`- (Available in v1.114.0+)The ID of the parent folder.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="parentfolderid_go">
+<a href="#parentfolderid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Folder<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the parent folder.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -737,6 +903,17 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the folder.
 * `folder_id`- The ID of the folder.
 * `folder_name`- The name of the folder.
+* `parent_folder_id`- (Available in v1.114.0+)The ID of the parent folder.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="parentfolderid_nodejs">
+<a href="#parentfolderid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Folder<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the parent folder.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -773,6 +950,17 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the folder.
 * `folder_id`- The ID of the folder.
 * `folder_name`- The name of the folder.
+* `parent_folder_id`- (Available in v1.114.0+)The ID of the parent folder.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="parent_folder_id_python">
+<a href="#parent_folder_id_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>folder_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the parent folder.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

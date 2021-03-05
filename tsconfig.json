@@ -19,6 +19,7 @@
         "assets/js/code-tabbed.js",
         "assets/js/resources.js",
         "node_modules/clipboard-polyfill/build/clipboard-polyfill.promise.js",
+        "assets/js/search.js",
     ],
     "exclude": [
         "node_modules"

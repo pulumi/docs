@@ -556,19 +556,19 @@ const example = new aws.glue.Trigger("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#Trigger">Trigger</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#TriggerArgs">TriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.Trigger">Trigger</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[TriggerActionArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">predicate</span><span class="p">:</span> <span class="nx">Optional[TriggerPredicateArgs]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workflow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[TriggerActionArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">predicate</span><span class="p">:</span> <span class="nx">Optional[TriggerPredicateArgs]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workflow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#Trigger">NewTrigger</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerArgs">TriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#Trigger">Trigger</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewTrigger</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trigger</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Trigger.html">Trigger</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.TriggerArgs.html">TriggerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">TriggerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -589,7 +589,7 @@ const example = new aws.glue.Trigger("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#TriggerArgs">TriggerArgs</a></span>
+        <span class="property-type"><a href="#inputs">TriggerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -658,7 +658,7 @@ const example = new aws.glue.Trigger("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerArgs">TriggerArgs</a></span>
+        <span class="property-type"><a href="#inputs">TriggerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -697,7 +697,7 @@ const example = new aws.glue.Trigger("example", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.TriggerArgs.html">TriggerArgs</a></span>
+        <span class="property-type"><a href="#inputs">TriggerArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -720,11 +720,11 @@ const example = new aws.glue.Trigger("example", {
 
 ## Trigger Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Trigger resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Trigger resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -739,7 +739,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggeraction">List&lt;Trigger<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of actions initiated by this trigger when it fires. Defined below.
+    <dd>{{% md %}}List of actions initiated by this trigger when it fires. See Actions Below.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -769,7 +769,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type.
+    <dd>{{% md %}}Start the trigger. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -789,7 +789,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
+    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. See Predicate Below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -835,7 +835,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggeraction">[]Trigger<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}List of actions initiated by this trigger when it fires. Defined below.
+    <dd>{{% md %}}List of actions initiated by this trigger when it fires. See Actions Below.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -865,7 +865,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type.
+    <dd>{{% md %}}Start the trigger. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -885,7 +885,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate</a></span>
     </dt>
-    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
+    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. See Predicate Below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -931,7 +931,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggeraction">Trigger<wbr>Action[]</a></span>
     </dt>
-    <dd>{{% md %}}List of actions initiated by this trigger when it fires. Defined below.
+    <dd>{{% md %}}List of actions initiated by this trigger when it fires. See Actions Below.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -961,7 +961,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type.
+    <dd>{{% md %}}Start the trigger. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -981,7 +981,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate</a></span>
     </dt>
-    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
+    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. See Predicate Below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1027,7 +1027,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggeraction">Sequence[Trigger<wbr>Action<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of actions initiated by this trigger when it fires. Defined below.
+    <dd>{{% md %}}List of actions initiated by this trigger when it fires. See Actions Below.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1057,7 +1057,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type.
+    <dd>{{% md %}}Start the trigger. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1077,7 +1077,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
+    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. See Predicate Below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1141,6 +1141,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1166,6 +1176,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1191,6 +1211,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1216,6 +1246,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1227,20 +1267,20 @@ Get an existing Trigger resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#TriggerState">TriggerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#Trigger">Trigger</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">TriggerState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">Trigger</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[TriggerActionArgs]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">predicate</span><span class="p">:</span> <span class="nx">Optional[TriggerPredicateArgs]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workflow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Trigger</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">actions</span><span class="p">:</span> <span class="nx">Optional[Sequence[TriggerActionArgs]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">predicate</span><span class="p">:</span> <span class="nx">Optional[TriggerPredicateArgs]</span> = None<span class="p">, </span><span class="nx">schedule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workflow_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Trigger</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrigger<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerState">TriggerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#Trigger">Trigger</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTrigger<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">TriggerState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Trigger</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Trigger.html">Trigger</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.TriggerState.html">TriggerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">Trigger</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">TriggerState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1353,7 +1393,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggeraction">List&lt;Trigger<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of actions initiated by this trigger when it fires. Defined below.
+    <dd>{{% md %}}List of actions initiated by this trigger when it fires. See Actions Below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1383,7 +1423,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type.
+    <dd>{{% md %}}Start the trigger. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1403,7 +1443,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
+    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. See Predicate Below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1414,6 +1454,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_state_csharp">
+<a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1459,7 +1509,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggeraction">[]Trigger<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}List of actions initiated by this trigger when it fires. Defined below.
+    <dd>{{% md %}}List of actions initiated by this trigger when it fires. See Actions Below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1489,7 +1539,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type.
+    <dd>{{% md %}}Start the trigger. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1509,7 +1559,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate</a></span>
     </dt>
-    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
+    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. See Predicate Below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1520,6 +1570,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_state_go">
+<a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1565,7 +1625,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggeraction">Trigger<wbr>Action[]</a></span>
     </dt>
-    <dd>{{% md %}}List of actions initiated by this trigger when it fires. Defined below.
+    <dd>{{% md %}}List of actions initiated by this trigger when it fires. See Actions Below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1595,7 +1655,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type.
+    <dd>{{% md %}}Start the trigger. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1615,7 +1675,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate</a></span>
     </dt>
-    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
+    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. See Predicate Below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1626,6 +1686,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_state_nodejs">
+<a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1671,7 +1741,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggeraction">Sequence[Trigger<wbr>Action<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of actions initiated by this trigger when it fires. Defined below.
+    <dd>{{% md %}}List of actions initiated by this trigger when it fires. See Actions Below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1701,7 +1771,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type.
+    <dd>{{% md %}}Start the trigger. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1721,7 +1791,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
+    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. See Predicate Below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1732,6 +1802,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_state_python">
+<a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1776,18 +1856,6 @@ The following state arguments are supported:
 
 
 <h4 id="triggeraction">Trigger<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TriggerAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TriggerAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerActionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.TriggerActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.TriggerAction.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1810,7 +1878,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the crawler to be executed. Conflicts with `job_name`.
+    <dd>{{% md %}}The name of the crawler to watch. If this is specified, `crawl_state` must also be specified. Conflicts with `job_name`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1820,7 +1888,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of a job to be executed. Conflicts with `crawler_name`.
+    <dd>{{% md %}}The name of the job to watch. If this is specified, `state` must also be specified. Conflicts with `crawler_name`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1830,7 +1898,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggeractionnotificationproperty">Trigger<wbr>Action<wbr>Notification<wbr>Property<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies configuration properties of a job run notification. see Notification Property details below.
+    <dd>{{% md %}}Specifies configuration properties of a job run notification. See Notification Property details below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1876,7 +1944,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the crawler to be executed. Conflicts with `job_name`.
+    <dd>{{% md %}}The name of the crawler to watch. If this is specified, `crawl_state` must also be specified. Conflicts with `job_name`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1886,7 +1954,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of a job to be executed. Conflicts with `crawler_name`.
+    <dd>{{% md %}}The name of the job to watch. If this is specified, `state` must also be specified. Conflicts with `crawler_name`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1896,7 +1964,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggeractionnotificationproperty">Trigger<wbr>Action<wbr>Notification<wbr>Property</a></span>
     </dt>
-    <dd>{{% md %}}Specifies configuration properties of a job run notification. see Notification Property details below.
+    <dd>{{% md %}}Specifies configuration properties of a job run notification. See Notification Property details below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1942,7 +2010,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the crawler to be executed. Conflicts with `job_name`.
+    <dd>{{% md %}}The name of the crawler to watch. If this is specified, `crawl_state` must also be specified. Conflicts with `job_name`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1952,7 +2020,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of a job to be executed. Conflicts with `crawler_name`.
+    <dd>{{% md %}}The name of the job to watch. If this is specified, `state` must also be specified. Conflicts with `crawler_name`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1962,7 +2030,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggeractionnotificationproperty">Trigger<wbr>Action<wbr>Notification<wbr>Property</a></span>
     </dt>
-    <dd>{{% md %}}Specifies configuration properties of a job run notification. see Notification Property details below.
+    <dd>{{% md %}}Specifies configuration properties of a job run notification. See Notification Property details below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2008,7 +2076,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the crawler to be executed. Conflicts with `job_name`.
+    <dd>{{% md %}}The name of the crawler to watch. If this is specified, `crawl_state` must also be specified. Conflicts with `job_name`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2018,7 +2086,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of a job to be executed. Conflicts with `crawler_name`.
+    <dd>{{% md %}}The name of the job to watch. If this is specified, `state` must also be specified. Conflicts with `crawler_name`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2028,7 +2096,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggeractionnotificationproperty">Trigger<wbr>Action<wbr>Notification<wbr>Property<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies configuration properties of a job run notification. see Notification Property details below.
+    <dd>{{% md %}}Specifies configuration properties of a job run notification. See Notification Property details below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2054,18 +2122,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="triggeractionnotificationproperty">Trigger<wbr>Action<wbr>Notification<wbr>Property</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TriggerActionNotificationProperty">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TriggerActionNotificationProperty">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerActionNotificationPropertyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerActionNotificationPropertyOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.TriggerActionNotificationPropertyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.TriggerActionNotificationProperty.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2132,18 +2188,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="triggerpredicate">Trigger<wbr>Predicate</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TriggerPredicate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TriggerPredicate">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerPredicateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerPredicateOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.TriggerPredicateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.TriggerPredicate.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2156,7 +2200,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpredicatecondition">List&lt;Trigger<wbr>Predicate<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of the conditions that determine when the trigger will fire. Defined below.
+    <dd>{{% md %}}A list of the conditions that determine when the trigger will fire. See Conditions.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2182,7 +2226,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpredicatecondition">[]Trigger<wbr>Predicate<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}A list of the conditions that determine when the trigger will fire. Defined below.
+    <dd>{{% md %}}A list of the conditions that determine when the trigger will fire. See Conditions.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2208,7 +2252,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpredicatecondition">Trigger<wbr>Predicate<wbr>Condition[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of the conditions that determine when the trigger will fire. Defined below.
+    <dd>{{% md %}}A list of the conditions that determine when the trigger will fire. See Conditions.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2234,7 +2278,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#triggerpredicatecondition">Sequence[Trigger<wbr>Predicate<wbr>Condition<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of the conditions that determine when the trigger will fire. Defined below.
+    <dd>{{% md %}}A list of the conditions that determine when the trigger will fire. See Conditions.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2250,18 +2294,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="triggerpredicatecondition">Trigger<wbr>Predicate<wbr>Condition</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TriggerPredicateCondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TriggerPredicateCondition">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerPredicateConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#TriggerPredicateConditionOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.TriggerPredicateConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.TriggerPredicateCondition.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

@@ -15,7 +15,7 @@ aliases: ["/docs/reference/clouds/"]
 ## Core Providers
 
 * [AWS]({{< relref "./aws" >}})
-* [Azure]({{< relref "./azure" >}})
+* [Azure-Native]({{< relref "./azure" >}})
 * [AzureAD]({{< relref "./azuread" >}})
 * [Google Cloud]({{< relref "./gcp" >}})
 * [Kubernetes]({{< relref "./kubernetes" >}})
@@ -30,7 +30,7 @@ aliases: ["/docs/reference/clouds/"]
 * [Hetzner Cloud]({{< relref "./hcloud" >}})
 * [Linode]({{< relref "./linode" >}})
 * [OpenStack]({{< relref "./openstack" >}})
-* [Packet.net]({{< relref "./packet" >}})
+* [Equinix Metal]({{< relref "./equinix-metal" >}})
 * [vSphere]({{< relref "./vsphere" >}})
 
 ## Infrastructure Providers
@@ -44,6 +44,7 @@ aliases: ["/docs/reference/clouds/"]
 * [Mailgun]({{< relref "./mailgun" >}})
 * [MongoDB Atlas]({{< relref "./mongodbatlas" >}})
 * [Okta]({{< relref "./okta" >}})
+* [Opsgenie]({{< relref "./opsgenie" >}})
 * [PagerDuty]({{< relref "./pagerduty" >}})
 * [RabbitMQ]({{< relref "./rabbitmq" >}})
 * [Rancher2]({{< relref "./rancher2" >}})
@@ -82,6 +83,10 @@ aliases: ["/docs/reference/clouds/"]
 * [Random]({{< relref "./random" >}})
 * [TLS]({{< relref "./tls" >}})
 * [cloud-init]({{< relref "./cloudinit" >}})
+
+## Classic Providers
+
+* [Azure Classic]({{< relref "./azure-classic" >}})
 
 If your provider isn't listed, check out the [Pulumi GitHub](https://github.com/pulumi) and
 [Pulumi Examples](https://github.com/pulumi/examples) repositories. If you can't find what you're looking for,

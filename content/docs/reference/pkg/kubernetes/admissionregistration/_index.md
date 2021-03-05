@@ -1,6 +1,6 @@
 ---
 title: "admissionregistration"
-title_tag: "Package admissionregistration"
+title_tag: "admissionregistration Package"
 meta_desc: ""
 ---
 
@@ -22,21 +22,6 @@ meta_desc: ""
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.8.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/admissionregistration?tab=doc#" title="kubernetes/admissionregistration">kubernetes/admissionregistration</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/admissionregistration/#" title="@pulumi/kubernetes/admissionregistration">@pulumi/kubernetes/admissionregistration</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_kubernetes/admissionregistration" title="pulumi_kubernetes/admissionregistration">pulumi_kubernetes/admissionregistration</a></dd>
-
+	<dd>2.8.2</dd>
 </dl>
 

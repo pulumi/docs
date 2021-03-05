@@ -30,7 +30,7 @@ These stack permissions allow users to perform the following actions:
 | Read stack resources | | ✅ | ✅ | ✅ |
 | Preview stack changes | | ✅ | ✅ | ✅ |
 | Update stack | | | ✅ | ✅ |
-| Destroy stack (`pulumi destroy`) | |   | | ✅ |
+| Destroy stack (`pulumi destroy`) | |   | ✅ | ✅ |
 | Export stack checkpoint | | ✅ | ✅ | ✅ |
 | Import stack checkpoint |  | | ✅ | ✅ |
 | Delete stack (`pulumi stack rm`) | | | | ✅ |

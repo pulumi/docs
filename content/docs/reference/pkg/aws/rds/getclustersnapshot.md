@@ -1,8 +1,8 @@
 
 ---
-title: "GetClusterSnapshot"
-title_tag: "Function GetClusterSnapshot | Module rds | Package AWS"
-meta_desc: "Explore the GetClusterSnapshot function of the rds module, including examples, input properties, output properties, and supporting types. Use this data source to get information about a DB Cluster Snapshot for use when provisioning DB clusters."
+title: "getClusterSnapshot"
+title_tag: "aws.rds.getClusterSnapshot"
+meta_desc: "Documentation for the aws.rds.getClusterSnapshot function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -149,13 +149,13 @@ const auroraClusterInstance = new aws.rds.ClusterInstance("auroraClusterInstance
 {{% /examples %}}
 
 
-## Using GetClusterSnapshot {#using}
+## Using getClusterSnapshot {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getClusterSnapshot<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#GetClusterSnapshotArgs">GetClusterSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#GetClusterSnapshotResult">GetClusterSnapshotResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getClusterSnapshot<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetClusterSnapshotArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetClusterSnapshotResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -165,7 +165,7 @@ const auroraClusterInstance = new aws.rds.ClusterInstance("auroraClusterInstance
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupClusterSnapshot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#LookupClusterSnapshotArgs">LookupClusterSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/rds?tab=doc#LookupClusterSnapshotResult">LookupClusterSnapshotResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupClusterSnapshot<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupClusterSnapshotArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupClusterSnapshotResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupClusterSnapshot` in the Go SDK.
 
@@ -174,7 +174,7 @@ const auroraClusterInstance = new aws.rds.ClusterInstance("auroraClusterInstance
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetClusterSnapshot </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.GetClusterSnapshotResult.html">GetClusterSnapshotResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Rds.GetClusterSnapshotArgs.html">GetClusterSnapshotArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetClusterSnapshotResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetClusterSnapshotArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -510,7 +510,7 @@ included in the returned results by default. Possible values are, `automated`, `
 
 
 
-## GetClusterSnapshot Result {#result}
+## getClusterSnapshot Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetMonitor"
-title_tag: "Function GetMonitor | Package Datadog"
-meta_desc: "Explore the GetMonitor function of the Datadog package, including examples, input properties, output properties, and supporting types. Use this data source to retrieve information about an existing monitor for use in other resources."
+title: "getMonitor"
+title_tag: "datadog.getMonitor"
+meta_desc: "Documentation for the datadog.getMonitor function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -100,7 +100,6 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
-	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -151,13 +150,13 @@ const test = pulumi.output(datadog.getMonitor({
 {{% /examples %}}
 
 
-## Using GetMonitor {#using}
+## Using getMonitor {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMonitor<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/datadog/#GetMonitorArgs">GetMonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/datadog/#GetMonitorResult">GetMonitorResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMonitor<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMonitorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMonitorResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -167,7 +166,7 @@ const test = pulumi.output(datadog.getMonitor({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMonitor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LookupMonitorArgs">LookupMonitorArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LookupMonitorResult">LookupMonitorResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMonitor<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupMonitorArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupMonitorResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupMonitor` in the Go SDK.
 
@@ -176,7 +175,7 @@ const test = pulumi.output(datadog.getMonitor({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetMonitor </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.GetMonitorResult.html">GetMonitorResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.GetMonitorArgs.html">GetMonitorArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetMonitorResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMonitorArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -320,7 +319,7 @@ The following arguments are supported:
 
 
 
-## GetMonitor Result {#result}
+## getMonitor Result {#result}
 
 The following output properties are available:
 
@@ -1261,16 +1260,6 @@ The following output properties are available:
 
 
 <h4 id="getmonitormonitorthresholdwindows">Get<wbr>Monitor<wbr>Monitor<wbr>Threshold<wbr>Windows</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#GetMonitorMonitorThresholdWindows">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#GetMonitorMonitorThresholdWindows">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.GetMonitorMonitorThresholdWindows.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1371,16 +1360,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getmonitormonitorthresholds">Get<wbr>Monitor<wbr>Monitor<wbr>Thresholds</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#GetMonitorMonitorThresholds">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#GetMonitorMonitorThresholds">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.GetMonitorMonitorThresholds.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1625,16 +1604,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getmonitorthresholdwindows">Get<wbr>Monitor<wbr>Threshold<wbr>Windows</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#GetMonitorThresholdWindows">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#GetMonitorThresholdWindows">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.GetMonitorThresholdWindows.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1735,16 +1704,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getmonitorthresholds">Get<wbr>Monitor<wbr>Thresholds</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#GetMonitorThresholds">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#GetMonitorThresholds">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.GetMonitorThresholds.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

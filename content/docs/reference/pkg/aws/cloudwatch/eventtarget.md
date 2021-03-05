@@ -894,19 +894,19 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#EventTarget">EventTarget</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#EventTargetArgs">EventTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">EventTarget</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">EventTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cloudwatch/#pulumi_aws.cloudwatch.EventTarget">EventTarget</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">batch_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetBatchTargetArgs]</span> = None<span class="p">, </span><span class="nx">ecs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetEcsTargetArgs]</span> = None<span class="p">, </span><span class="nx">event_bus_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_transformer</span><span class="p">:</span> <span class="nx">Optional[EventTargetInputTransformerArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetKinesisTargetArgs]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_command_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[EventTargetRunCommandTargetArgs]]</span> = None<span class="p">, </span><span class="nx">sqs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetSqsTargetArgs]</span> = None<span class="p">, </span><span class="nx">target_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">EventTarget</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">batch_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetBatchTargetArgs]</span> = None<span class="p">, </span><span class="nx">dead_letter_config</span><span class="p">:</span> <span class="nx">Optional[EventTargetDeadLetterConfigArgs]</span> = None<span class="p">, </span><span class="nx">ecs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetEcsTargetArgs]</span> = None<span class="p">, </span><span class="nx">event_bus_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_transformer</span><span class="p">:</span> <span class="nx">Optional[EventTargetInputTransformerArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetKinesisTargetArgs]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[EventTargetRetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_command_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[EventTargetRunCommandTargetArgs]]</span> = None<span class="p">, </span><span class="nx">sqs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetSqsTargetArgs]</span> = None<span class="p">, </span><span class="nx">target_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventTarget">NewEventTarget</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventTargetArgs">EventTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventTarget">EventTarget</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewEventTarget</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">EventTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventTarget</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.EventTarget.html">EventTarget</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.EventTargetArgs.html">EventTargetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">EventTarget</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">EventTargetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -927,7 +927,7 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#EventTargetArgs">EventTargetArgs</a></span>
+        <span class="property-type"><a href="#inputs">EventTargetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -996,7 +996,7 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventTargetArgs">EventTargetArgs</a></span>
+        <span class="property-type"><a href="#inputs">EventTargetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1035,7 +1035,7 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.EventTargetArgs.html">EventTargetArgs</a></span>
+        <span class="property-type"><a href="#inputs">EventTargetArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1058,11 +1058,11 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
 
 ## EventTarget Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The EventTarget resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The EventTarget resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1098,6 +1098,16 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Batch Job. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deadletterconfig_csharp">
+<a href="#deadletterconfig_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1158,6 +1168,16 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_csharp">
+<a href="#retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1237,6 +1257,16 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="deadletterconfig_go">
+<a href="#deadletterconfig_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ecstarget_go">
 <a href="#ecstarget_go" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Target</a>
 </span>
@@ -1294,6 +1324,16 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_go">
+<a href="#retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1373,6 +1413,16 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="deadletterconfig_nodejs">
+<a href="#deadletterconfig_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ecstarget_nodejs">
 <a href="#ecstarget_nodejs" style="color: inherit; text-decoration: inherit;">ecs<wbr>Target</a>
 </span>
@@ -1430,6 +1480,16 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrypolicy_nodejs">
+<a href="#retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1509,6 +1569,16 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="dead_letter_config_python">
+<a href="#dead_letter_config_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ecs_target_python">
 <a href="#ecs_target_python" style="color: inherit; text-decoration: inherit;">ecs_<wbr>target</a>
 </span>
@@ -1566,6 +1636,16 @@ The EventTarget resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retry_policy_python">
+<a href="#retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1685,20 +1765,20 @@ Get an existing EventTarget resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#EventTargetState">EventTargetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#EventTarget">EventTarget</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">EventTargetState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">EventTarget</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">batch_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetBatchTargetArgs]</span> = None<span class="p">, </span><span class="nx">ecs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetEcsTargetArgs]</span> = None<span class="p">, </span><span class="nx">event_bus_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_transformer</span><span class="p">:</span> <span class="nx">Optional[EventTargetInputTransformerArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetKinesisTargetArgs]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_command_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[EventTargetRunCommandTargetArgs]]</span> = None<span class="p">, </span><span class="nx">sqs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetSqsTargetArgs]</span> = None<span class="p">, </span><span class="nx">target_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EventTarget</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">batch_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetBatchTargetArgs]</span> = None<span class="p">, </span><span class="nx">dead_letter_config</span><span class="p">:</span> <span class="nx">Optional[EventTargetDeadLetterConfigArgs]</span> = None<span class="p">, </span><span class="nx">ecs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetEcsTargetArgs]</span> = None<span class="p">, </span><span class="nx">event_bus_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">input_transformer</span><span class="p">:</span> <span class="nx">Optional[EventTargetInputTransformerArgs]</span> = None<span class="p">, </span><span class="nx">kinesis_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetKinesisTargetArgs]</span> = None<span class="p">, </span><span class="nx">retry_policy</span><span class="p">:</span> <span class="nx">Optional[EventTargetRetryPolicyArgs]</span> = None<span class="p">, </span><span class="nx">role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rule</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">run_command_targets</span><span class="p">:</span> <span class="nx">Optional[Sequence[EventTargetRunCommandTargetArgs]]</span> = None<span class="p">, </span><span class="nx">sqs_target</span><span class="p">:</span> <span class="nx">Optional[EventTargetSqsTargetArgs]</span> = None<span class="p">, </span><span class="nx">target_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> EventTarget</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventTarget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventTargetState">EventTargetState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventTarget">EventTarget</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEventTarget<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">EventTargetState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">EventTarget</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.EventTarget.html">EventTarget</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.EventTargetState.html">EventTargetState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">EventTarget</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">EventTargetState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1825,6 +1905,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_deadletterconfig_csharp">
+<a href="#state_deadletterconfig_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_ecstarget_csharp">
 <a href="#state_ecstarget_csharp" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Target</a>
 </span>
@@ -1882,6 +1972,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_retrypolicy_csharp">
+<a href="#state_retrypolicy_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1961,6 +2061,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_deadletterconfig_go">
+<a href="#state_deadletterconfig_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_ecstarget_go">
 <a href="#state_ecstarget_go" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Target</a>
 </span>
@@ -2018,6 +2128,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_retrypolicy_go">
+<a href="#state_retrypolicy_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2097,6 +2217,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_deadletterconfig_nodejs">
+<a href="#state_deadletterconfig_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_ecstarget_nodejs">
 <a href="#state_ecstarget_nodejs" style="color: inherit; text-decoration: inherit;">ecs<wbr>Target</a>
 </span>
@@ -2154,6 +2284,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_retrypolicy_nodejs">
+<a href="#state_retrypolicy_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2233,6 +2373,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_dead_letter_config_python">
+<a href="#state_dead_letter_config_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are providing a dead letter conifg. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_ecs_target_python">
 <a href="#state_ecs_target_python" style="color: inherit; text-decoration: inherit;">ecs_<wbr>target</a>
 </span>
@@ -2290,6 +2440,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Parameters used when you are using the rule to invoke an Amazon Kinesis Stream. Documented below. A maximum of 1 are allowed.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_retry_policy_python">
+<a href="#state_retry_policy_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2354,18 +2514,6 @@ The following state arguments are supported:
 
 
 <h4 id="eventtargetbatchtarget">Event<wbr>Target<wbr>Batch<wbr>Target</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetBatchTarget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetBatchTarget">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventTargetBatchTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventTargetBatchTargetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Inputs.EventTargetBatchTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Outputs.EventTargetBatchTarget.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2551,19 +2699,73 @@ The following state arguments are supported:
 </dl>
 {{% /choosable %}}
 
-<h4 id="eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetEcsTarget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetEcsTarget">output</a> API doc for this type.
+<h4 id="eventtargetdeadletterconfig">Event<wbr>Target<wbr>Dead<wbr>Letter<wbr>Config</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- ARN of the SQS queue specified as the target for the dead-letter queue.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventTargetEcsTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventTargetEcsTargetOutput">output</a> API doc for this type.
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- ARN of the SQS queue specified as the target for the dead-letter queue.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Inputs.EventTargetEcsTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Outputs.EventTargetEcsTarget.html">output</a> API doc for this type.
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- ARN of the SQS queue specified as the target for the dead-letter queue.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}- ARN of the SQS queue specified as the target for the dead-letter queue.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="eventtargetecstarget">Event<wbr>Target<wbr>Ecs<wbr>Target</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2830,18 +3032,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="eventtargetecstargetnetworkconfiguration">Event<wbr>Target<wbr>Ecs<wbr>Target<wbr>Network<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetEcsTargetNetworkConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetEcsTargetNetworkConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventTargetEcsTargetNetworkConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventTargetEcsTargetNetworkConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Inputs.EventTargetEcsTargetNetworkConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Outputs.EventTargetEcsTargetNetworkConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2988,18 +3178,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="eventtargetinputtransformer">Event<wbr>Target<wbr>Input<wbr>Transformer</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetInputTransformer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetInputTransformer">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventTargetInputTransformerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventTargetInputTransformerOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Inputs.EventTargetInputTransformerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Outputs.EventTargetInputTransformer.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3114,18 +3292,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="eventtargetkinesistarget">Event<wbr>Target<wbr>Kinesis<wbr>Target</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetKinesisTarget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetKinesisTarget">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventTargetKinesisTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventTargetKinesisTargetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Inputs.EventTargetKinesisTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Outputs.EventTargetKinesisTarget.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3191,19 +3357,113 @@ The following state arguments are supported:
 </dl>
 {{% /choosable %}}
 
-<h4 id="eventtargetruncommandtarget">Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetRunCommandTarget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetRunCommandTarget">output</a> API doc for this type.
+<h4 id="eventtargetretrypolicy">Event<wbr>Target<wbr>Retry<wbr>Policy</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maximumeventageinseconds_csharp">
+<a href="#maximumeventageinseconds_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in seconds to continue to make retry attempts.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maximumretryattempts_csharp">
+<a href="#maximumretryattempts_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Retry<wbr>Attempts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}maximum number of retry attempts to make before the request fails
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventTargetRunCommandTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventTargetRunCommandTargetOutput">output</a> API doc for this type.
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maximumeventageinseconds_go">
+<a href="#maximumeventageinseconds_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in seconds to continue to make retry attempts.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maximumretryattempts_go">
+<a href="#maximumretryattempts_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Retry<wbr>Attempts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}maximum number of retry attempts to make before the request fails
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Inputs.EventTargetRunCommandTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Outputs.EventTargetRunCommandTarget.html">output</a> API doc for this type.
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maximumeventageinseconds_nodejs">
+<a href="#maximumeventageinseconds_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The age in seconds to continue to make retry attempts.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maximumretryattempts_nodejs">
+<a href="#maximumretryattempts_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Retry<wbr>Attempts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}maximum number of retry attempts to make before the request fails
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maximum_event_age_in_seconds_python">
+<a href="#maximum_event_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>event_<wbr>age_<wbr>in_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The age in seconds to continue to make retry attempts.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maximum_retry_attempts_python">
+<a href="#maximum_retry_attempts_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>retry_<wbr>attempts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}maximum number of retry attempts to make before the request fails
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="eventtargetruncommandtarget">Event<wbr>Target<wbr>Run<wbr>Command<wbr>Target</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3310,18 +3570,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="eventtargetsqstarget">Event<wbr>Target<wbr>Sqs<wbr>Target</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventTargetSqsTarget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventTargetSqsTarget">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventTargetSqsTargetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cloudwatch?tab=doc#EventTargetSqsTargetOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Inputs.EventTargetSqsTargetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Outputs.EventTargetSqsTarget.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

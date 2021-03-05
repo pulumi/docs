@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package Open Stack"
-meta_desc: "Explore the Provider resource of the Open Stack package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the openstack package. By default, resources use package-wide configuration"
+title_tag: "openstack.Provider"
+meta_desc: "Documentation for the openstack.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -23,19 +23,19 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/#Provider">Provider</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/#pulumi_openstack.Provider">Provider</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_reauth</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">application_credential_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_credential_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_credential_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cacert_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delayed_auth</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">disable_no_cache_header</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">domain_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_overrides</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">insecure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_domain_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">swauth</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_octavia</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_domain_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_reauth</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">application_credential_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_credential_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_credential_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cacert_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cert</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloud</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delayed_auth</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">disable_no_cache_header</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">domain_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_overrides</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">insecure</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_retries</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_domain_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">swauth</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tenant_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tenant_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_octavia</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">user_domain_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/?tab=doc#Provider">NewProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewProvider</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">Provider</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Provider.html">Provider</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.Pulumi.OpenstackArgs.html">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">Provider</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -56,7 +56,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/#ProviderArgs">ProviderArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -125,7 +125,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/?tab=doc#ProviderArgs">ProviderArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -164,7 +164,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.Pulumi.OpenstackArgs.html">ProviderArgs</a></span>
+        <span class="property-type"><a href="#inputs">ProviderArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -187,11 +187,11 @@ construction to achieve fine-grained programmatic control over provider settings
 
 ## Provider Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The Provider resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Provider resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -208,7 +208,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}If set to `false`, OpenStack authorization won't be perfomed automatically, if the initial auth token get expired.
 Defaults to `true`
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_ALLOW_REAUTH`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialid_csharp">
@@ -278,7 +278,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An entry in a `clouds.yaml` file to use.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_CLOUD`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="defaultdomain_csharp">
@@ -299,7 +299,7 @@ Defaults to `true`
     </dt>
     <dd>{{% md %}}If set to `false`, OpenStack authorization will be perfomed, every time the service provider client is called. Defaults
 to `true`.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_DELAYED_AUTH`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disablenocacheheader_csharp">
@@ -348,7 +348,7 @@ to `true`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}} It can also be sourced from the following environment variable: `OS_ENDPOINT_TYPE`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="insecure_csharp">
@@ -358,7 +358,7 @@ to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Trust self-signed certificates.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_INSECURE`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
@@ -418,7 +418,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OpenStack region to connect to.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_REGION_NAME`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="swauth_csharp">
@@ -428,7 +428,7 @@ to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use Swift's authentication system instead of Keystone. Only used for interaction with Swift.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_SWAUTH`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
@@ -468,7 +468,7 @@ to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, API requests will go the Load Balancer service (Octavia) instead of the Networking service (Neutron).
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_USE_OCTAVIA`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="userdomainid_csharp">
@@ -525,7 +525,7 @@ to `true`.
     </dt>
     <dd>{{% md %}}If set to `false`, OpenStack authorization won't be perfomed automatically, if the initial auth token get expired.
 Defaults to `true`
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_ALLOW_REAUTH`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialid_go">
@@ -595,7 +595,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An entry in a `clouds.yaml` file to use.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_CLOUD`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="defaultdomain_go">
@@ -616,7 +616,7 @@ Defaults to `true`
     </dt>
     <dd>{{% md %}}If set to `false`, OpenStack authorization will be perfomed, every time the service provider client is called. Defaults
 to `true`.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_DELAYED_AUTH`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disablenocacheheader_go">
@@ -665,7 +665,7 @@ to `true`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}} It can also be sourced from the following environment variable: `OS_ENDPOINT_TYPE`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="insecure_go">
@@ -675,7 +675,7 @@ to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Trust self-signed certificates.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_INSECURE`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="key_go">
@@ -735,7 +735,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OpenStack region to connect to.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_REGION_NAME`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="swauth_go">
@@ -745,7 +745,7 @@ to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use Swift's authentication system instead of Keystone. Only used for interaction with Swift.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_SWAUTH`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
@@ -785,7 +785,7 @@ to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, API requests will go the Load Balancer service (Octavia) instead of the Networking service (Neutron).
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_USE_OCTAVIA`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="userdomainid_go">
@@ -842,7 +842,7 @@ to `true`.
     </dt>
     <dd>{{% md %}}If set to `false`, OpenStack authorization won't be perfomed automatically, if the initial auth token get expired.
 Defaults to `true`
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_ALLOW_REAUTH`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="applicationcredentialid_nodejs">
@@ -912,7 +912,7 @@ Defaults to `true`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An entry in a `clouds.yaml` file to use.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_CLOUD`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="defaultdomain_nodejs">
@@ -933,7 +933,7 @@ Defaults to `true`
     </dt>
     <dd>{{% md %}}If set to `false`, OpenStack authorization will be perfomed, every time the service provider client is called. Defaults
 to `true`.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_DELAYED_AUTH`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disablenocacheheader_nodejs">
@@ -982,7 +982,7 @@ to `true`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}} It can also be sourced from the following environment variable: `OS_ENDPOINT_TYPE`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="insecure_nodejs">
@@ -992,7 +992,7 @@ to `true`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Trust self-signed certificates.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_INSECURE`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
@@ -1052,7 +1052,7 @@ to `true`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OpenStack region to connect to.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_REGION_NAME`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="swauth_nodejs">
@@ -1062,7 +1062,7 @@ to `true`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use Swift's authentication system instead of Keystone. Only used for interaction with Swift.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_SWAUTH`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
@@ -1102,7 +1102,7 @@ to `true`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, API requests will go the Load Balancer service (Octavia) instead of the Networking service (Neutron).
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_USE_OCTAVIA`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="userdomainid_nodejs">
@@ -1159,7 +1159,7 @@ to `true`.
     </dt>
     <dd>{{% md %}}If set to `false`, OpenStack authorization won't be perfomed automatically, if the initial auth token get expired.
 Defaults to `true`
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_ALLOW_REAUTH`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="application_credential_id_python">
@@ -1229,7 +1229,7 @@ Defaults to `true`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An entry in a `clouds.yaml` file to use.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_CLOUD`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="default_domain_python">
@@ -1250,7 +1250,7 @@ Defaults to `true`
     </dt>
     <dd>{{% md %}}If set to `false`, OpenStack authorization will be perfomed, every time the service provider client is called. Defaults
 to `true`.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_DELAYED_AUTH`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disable_no_cache_header_python">
@@ -1299,7 +1299,7 @@ to `true`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}} It can also be sourced from the following environment variable: `OS_ENDPOINT_TYPE`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="insecure_python">
@@ -1309,7 +1309,7 @@ to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Trust self-signed certificates.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_INSECURE`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="key_python">
@@ -1369,7 +1369,7 @@ to `true`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OpenStack region to connect to.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_REGION_NAME`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="swauth_python">
@@ -1379,7 +1379,7 @@ to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use Swift's authentication system instead of Keystone. Only used for interaction with Swift.
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_SWAUTH`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
@@ -1419,7 +1419,7 @@ to `true`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, API requests will go the Load Balancer service (Octavia) instead of the Networking service (Neutron).
-{{% /md %}}</dd>
+ It can also be sourced from the following environment variable: `OS_USE_OCTAVIA`{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="user_domain_id_python">

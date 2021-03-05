@@ -1,6 +1,6 @@
 ---
 title: "Fastly"
-title_tag: "Module Fastly | Package Fastly"
+title_tag: "fastly.Fastly"
 meta_desc: "A Pulumi package for creating and managing fastly cloud resources."
 menu:
     reference:
@@ -39,24 +39,6 @@ A Pulumi package for creating and managing fastly cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/fastly/terraform-provider-fastly).</dd>
 	<dt>Version</dt>
-	<dd>2.13.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.html" title="Pulumi.Fastly">Pulumi.Fastly</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-fastly/sdk/v2/go/fastly/?tab=doc#" title="fastly">fastly</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/fastly/#" title="@pulumi/fastly">@pulumi/fastly</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_fastly" title="pulumi_fastly">pulumi_fastly</a></dd>
-
+	<dd>2.13.1</dd>
 </dl>
 

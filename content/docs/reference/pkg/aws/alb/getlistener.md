@@ -1,8 +1,8 @@
 
 ---
-title: "GetListener"
-title_tag: "Function GetListener | Module alb | Package AWS"
-meta_desc: "Explore the GetListener function of the alb module, including examples, input properties, output properties, and supporting types. &gt; **Note:** `aws.alb.Listener` is known as `aws.lb.Listener`. The functionality is identical."
+title: "getListener"
+title_tag: "aws.alb.getListener"
+meta_desc: "Documentation for the aws.alb.getListener function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -139,13 +139,13 @@ const selected443 = selected.then(selected => aws.lb.getListener({
 {{% /examples %}}
 
 
-## Using GetListener {#using}
+## Using getListener {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getListener<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/alb/#GetListenerArgs">GetListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/alb/#GetListenerResult">GetListenerResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getListener<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetListenerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetListenerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -155,7 +155,7 @@ const selected443 = selected.then(selected => aws.lb.getListener({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupListener<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/alb?tab=doc#LookupListenerArgs">LookupListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/alb?tab=doc#LookupListenerResult">LookupListenerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupListener<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupListenerArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupListenerResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupListener` in the Go SDK.
 
@@ -164,7 +164,7 @@ const selected443 = selected.then(selected => aws.lb.getListener({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetListener </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.GetListenerResult.html">GetListenerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.GetListenerArgs.html">GetListenerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetListenerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetListenerArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -320,7 +320,7 @@ The following arguments are supported:
 
 
 
-## GetListener Result {#result}
+## getListener Result {#result}
 
 The following output properties are available:
 
@@ -649,16 +649,6 @@ The following output properties are available:
 
 
 <h4 id="getlistenerdefaultaction">Get<wbr>Listener<wbr>Default<wbr>Action</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultAction">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/alb?tab=doc#GetListenerDefaultAction">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Outputs.GetListenerDefaultAction.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -975,16 +965,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getlistenerdefaultactionauthenticatecognito">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionAuthenticateCognito">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/alb?tab=doc#GetListenerDefaultActionAuthenticateCognito">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Outputs.GetListenerDefaultActionAuthenticateCognito.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1301,16 +1281,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getlistenerdefaultactionauthenticateoidc">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionAuthenticateOidc">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/alb?tab=doc#GetListenerDefaultActionAuthenticateOidc">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Outputs.GetListenerDefaultActionAuthenticateOidc.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1735,16 +1705,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getlistenerdefaultactionfixedresponse">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionFixedResponse">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/alb?tab=doc#GetListenerDefaultActionFixedResponse">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Outputs.GetListenerDefaultActionFixedResponse.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1881,16 +1841,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getlistenerdefaultactionforward">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionForward">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/alb?tab=doc#GetListenerDefaultActionForward">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Outputs.GetListenerDefaultActionForward.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1991,16 +1941,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getlistenerdefaultactionforwardstickiness">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Stickiness</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionForwardStickiness">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/alb?tab=doc#GetListenerDefaultActionForwardStickiness">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Outputs.GetListenerDefaultActionForwardStickiness.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2101,16 +2041,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getlistenerdefaultactionforwardtargetgroup">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Forward<wbr>Target<wbr>Group</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionForwardTargetGroup">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/alb?tab=doc#GetListenerDefaultActionForwardTargetGroup">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Outputs.GetListenerDefaultActionForwardTargetGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2215,16 +2145,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getlistenerdefaultactionredirect">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionRedirect">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/alb?tab=doc#GetListenerDefaultActionRedirect">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Alb.Outputs.GetListenerDefaultActionRedirect.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetInstanceClasses"
-title_tag: "Function GetInstanceClasses | Module rds | Package AliCloud"
-meta_desc: "Explore the GetInstanceClasses function of the rds module, including examples, input properties, output properties, and supporting types. This data source provides the RDS instance classes resource available info of Alibaba Cloud."
+title: "getInstanceClasses"
+title_tag: "alicloud.rds.getInstanceClasses"
+meta_desc: "Documentation for the alicloud.rds.getInstanceClasses function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -113,13 +113,13 @@ export const firstDbInstanceClass = resources.instanceClasses[0].instanceClass;
 {{% /examples %}}
 
 
-## Using GetInstanceClasses {#using}
+## Using getInstanceClasses {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstanceClasses<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/rds/#GetInstanceClassesArgs">GetInstanceClassesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/rds/#GetInstanceClassesResult">GetInstanceClassesResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstanceClasses<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetInstanceClassesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetInstanceClassesResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -129,14 +129,16 @@ export const firstDbInstanceClass = resources.instanceClasses[0].instanceClass;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceClasses<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds?tab=doc#GetInstanceClassesArgs">GetInstanceClassesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds?tab=doc#GetInstanceClassesResult">GetInstanceClassesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstanceClasses<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetInstanceClassesArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetInstanceClassesResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetInstanceClasses` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInstanceClasses </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Rds.GetInstanceClassesResult.html">GetInstanceClassesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Rds.GetInstanceClassesArgs.html">GetInstanceClassesArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetInstanceClassesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetInstanceClassesArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -564,7 +566,7 @@ The following arguments are supported:
 
 
 
-## GetInstanceClasses Result {#result}
+## getInstanceClasses Result {#result}
 
 The following output properties are available:
 
@@ -1081,16 +1083,6 @@ The following output properties are available:
 
 
 <h4 id="getinstanceclassesinstanceclass">Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstanceClassesInstanceClass">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds?tab=doc#GetInstanceClassesInstanceClass">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Rds.Outputs.GetInstanceClassesInstanceClass.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1275,16 +1267,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getinstanceclassesinstanceclassstoragerange">Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class<wbr>Storage<wbr>Range</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstanceClassesInstanceClassStorageRange">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds?tab=doc#GetInstanceClassesInstanceClassStorageRange">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Rds.Outputs.GetInstanceClassesInstanceClassStorageRange.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1433,16 +1415,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getinstanceclassesinstanceclasszoneid">Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class<wbr>Zone<wbr>Id</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstanceClassesInstanceClassZoneId">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/rds?tab=doc#GetInstanceClassesInstanceClassZoneId">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Rds.Outputs.GetInstanceClassesInstanceClassZoneId.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

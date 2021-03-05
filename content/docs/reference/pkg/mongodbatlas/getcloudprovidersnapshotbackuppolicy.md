@@ -1,8 +1,8 @@
 
 ---
-title: "GetCloudProviderSnapshotBackupPolicy"
-title_tag: "Function GetCloudProviderSnapshotBackupPolicy | Package MongoDB Atlas"
-meta_desc: "Explore the GetCloudProviderSnapshotBackupPolicy function of the MongoDB Atlas package, including examples, input properties, output properties, and supporting types. `mongodbatlas.CloudProviderSnapshotBackupPolicy` provides a Cloud Backup Snapshot Backup Policy datasource. An Atlas Cloud Backup Snapshot Policy provides the current snapshot schedule and retention settings for the cluster. "
+title: "getCloudProviderSnapshotBackupPolicy"
+title_tag: "mongodbatlas.getCloudProviderSnapshotBackupPolicy"
+meta_desc: "Documentation for the mongodbatlas.getCloudProviderSnapshotBackupPolicy function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -17,13 +17,13 @@ meta_desc: "Explore the GetCloudProviderSnapshotBackupPolicy function of the Mon
 
 
 
-## Using GetCloudProviderSnapshotBackupPolicy {#using}
+## Using getCloudProviderSnapshotBackupPolicy {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCloudProviderSnapshotBackupPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetCloudProviderSnapshotBackupPolicyArgs">GetCloudProviderSnapshotBackupPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/#GetCloudProviderSnapshotBackupPolicyResult">GetCloudProviderSnapshotBackupPolicyResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCloudProviderSnapshotBackupPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCloudProviderSnapshotBackupPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCloudProviderSnapshotBackupPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -33,7 +33,7 @@ meta_desc: "Explore the GetCloudProviderSnapshotBackupPolicy function of the Mon
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCloudProviderSnapshotBackupPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#LookupCloudProviderSnapshotBackupPolicyArgs">LookupCloudProviderSnapshotBackupPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#LookupCloudProviderSnapshotBackupPolicyResult">LookupCloudProviderSnapshotBackupPolicyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCloudProviderSnapshotBackupPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCloudProviderSnapshotBackupPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCloudProviderSnapshotBackupPolicyResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCloudProviderSnapshotBackupPolicy` in the Go SDK.
 
@@ -42,7 +42,7 @@ meta_desc: "Explore the GetCloudProviderSnapshotBackupPolicy function of the Mon
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCloudProviderSnapshotBackupPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetCloudProviderSnapshotBackupPolicyResult.html">GetCloudProviderSnapshotBackupPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.GetCloudProviderSnapshotBackupPolicyArgs.html">GetCloudProviderSnapshotBackupPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCloudProviderSnapshotBackupPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCloudProviderSnapshotBackupPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -158,7 +158,7 @@ The following arguments are supported:
 
 
 
-## GetCloudProviderSnapshotBackupPolicy Result {#result}
+## getCloudProviderSnapshotBackupPolicy Result {#result}
 
 The following output properties are available:
 
@@ -587,16 +587,6 @@ The following output properties are available:
 
 
 <h4 id="getcloudprovidersnapshotbackuppolicypolicy">Get<wbr>Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#GetCloudProviderSnapshotBackupPolicyPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetCloudProviderSnapshotBackupPolicyPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GetCloudProviderSnapshotBackupPolicyPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -697,16 +687,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcloudprovidersnapshotbackuppolicypolicypolicyitem">Get<wbr>Cloud<wbr>Provider<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/mongodbatlas/types/output/#GetCloudProviderSnapshotBackupPolicyPolicyPolicyItem">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-mongodbatlas/sdk/go/mongodbatlas/?tab=doc#GetCloudProviderSnapshotBackupPolicyPolicyPolicyItem">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Mongodbatlas/Pulumi.Mongodbatlas.Outputs.GetCloudProviderSnapshotBackupPolicyPolicyPolicyItem.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

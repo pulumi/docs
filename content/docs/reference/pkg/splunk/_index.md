@@ -47,24 +47,6 @@ A Pulumi package for creating and managing splunk cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`splunk` Terraform Provider](https://github.com/splunk/terraform-provider-splunk).</dd>
 	<dt>Version</dt>
-	<dd>0.2.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Splunk/Pulumi.Splunk.html" title="Pulumi.Splunk">Pulumi.Splunk</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-splunk/sdk/go/splunk/?tab=doc#" title="splunk">splunk</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/splunk/#" title="@pulumi/splunk">@pulumi/splunk</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_splunk" title="pulumi_splunk">pulumi_splunk</a></dd>
-
+	<dd>0.2.1</dd>
 </dl>
 

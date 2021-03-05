@@ -61,24 +61,6 @@ A Pulumi package for creating and managing hcloud cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
 	<dt>Version</dt>
-	<dd>0.6.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.HCloud/Pulumi.HCloud.html" title="Pulumi.HCloud">Pulumi.HCloud</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-hcloud/sdk/go/hcloud/?tab=doc#" title="hcloud">hcloud</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/hcloud/#" title="@pulumi/hcloud">@pulumi/hcloud</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_hcloud" title="pulumi_hcloud">pulumi_hcloud</a></dd>
-
+	<dd>0.6.2</dd>
 </dl>
 

@@ -1,8 +1,8 @@
 
 ---
-title: "GetCache"
-title_tag: "Function GetCache | Module redis | Package Azure"
-meta_desc: "Explore the GetCache function of the redis module, including examples, input properties, output properties, and supporting types. Use this data source to access information about an existing Redis Cache"
+title: "getCache"
+title_tag: "azure.redis.getCache"
+meta_desc: "Documentation for the azure.redis.getCache function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -104,13 +104,13 @@ export const hostname = example.then(example => example.hostname);
 {{% /examples %}}
 
 
-## Using GetCache {#using}
+## Using getCache {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCache<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/redis/#GetCacheArgs">GetCacheArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/redis/#GetCacheResult">GetCacheResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCache<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetCacheArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetCacheResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -120,7 +120,7 @@ export const hostname = example.then(example => example.hostname);
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCache<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/redis?tab=doc#LookupCacheArgs">LookupCacheArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/redis?tab=doc#LookupCacheResult">LookupCacheResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCache<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupCacheArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupCacheResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupCache` in the Go SDK.
 
@@ -129,7 +129,7 @@ export const hostname = example.then(example => example.hostname);
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCache </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Redis.GetCacheResult.html">GetCacheResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Redis.GetCacheArgs.html">GetCacheArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetCacheResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetCacheArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -281,7 +281,7 @@ The following arguments are supported:
 
 
 
-## GetCache Result {#result}
+## getCache Result {#result}
 
 The following output properties are available:
 
@@ -377,7 +377,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcachepatchschedule">List&lt;Get<wbr>Cache<wbr>Patch<wbr>Schedule&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below - only available for Premium SKU's.
+    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -606,7 +606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcachepatchschedule">[]Get<wbr>Cache<wbr>Patch<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below - only available for Premium SKU's.
+    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -835,7 +835,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcachepatchschedule">Get<wbr>Cache<wbr>Patch<wbr>Schedule[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below - only available for Premium SKU's.
+    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1064,7 +1064,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getcachepatchschedule">Sequence[Get<wbr>Cache<wbr>Patch<wbr>Schedule]</a></span>
     </dt>
-    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below - only available for Premium SKU's.
+    <dd>{{% md %}}A list of `patch_schedule` blocks as defined below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1210,16 +1210,6 @@ The following output properties are available:
 
 
 <h4 id="getcachepatchschedule">Get<wbr>Cache<wbr>Patch<wbr>Schedule</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCachePatchSchedule">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/redis?tab=doc#GetCachePatchSchedule">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Redis.Outputs.GetCachePatchSchedule.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1328,16 +1318,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getcacheredisconfiguration">Get<wbr>Cache<wbr>Redis<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCacheRedisConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/redis?tab=doc#GetCacheRedisConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Redis.Outputs.GetCacheRedisConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

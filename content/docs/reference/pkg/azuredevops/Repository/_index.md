@@ -28,24 +28,6 @@ Explore the resources and functions of the Repository module in the Azure DevOps
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).</dd>
 	<dt>Version</dt>
-	<dd>1.1.1</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AzureDevOps/Pulumi.AzureDevOps.Repository.html" title="Pulumi.AzureDevOps.Repository">Pulumi.AzureDevOps.Repository</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/repository?tab=doc#" title="azuredevops/repository">azuredevops/repository</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azuredevops/Repository/#" title="@pulumi/azuredevops/repository">@pulumi/azuredevops/repository</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azuredevops/repository" title="pulumi_azuredevops/repository">pulumi_azuredevops/repository</a></dd>
-
+	<dd>1.2.1</dd>
 </dl>
 

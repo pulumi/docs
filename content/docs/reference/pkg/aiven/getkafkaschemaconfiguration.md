@@ -1,8 +1,8 @@
 
 ---
-title: "GetKafkaSchemaConfiguration"
-title_tag: "Function GetKafkaSchemaConfiguration | Package Aiven"
-meta_desc: "Explore the GetKafkaSchemaConfiguration function of the Aiven package, including examples, input properties, output properties, and supporting types. ## # Kafka Schema Configuration Data Source"
+title: "getKafkaSchemaConfiguration"
+title_tag: "aiven.getKafkaSchemaConfiguration"
+meta_desc: "Documentation for the aiven.getKafkaSchemaConfiguration function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -48,7 +48,6 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven"
-	"github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -96,13 +95,13 @@ const config = aiven.getKafkaSchemaConfiguration({
 {{% /examples %}}
 
 
-## Using GetKafkaSchemaConfiguration {#using}
+## Using getKafkaSchemaConfiguration {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKafkaSchemaConfiguration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#GetKafkaSchemaConfigurationArgs">GetKafkaSchemaConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#GetKafkaSchemaConfigurationResult">GetKafkaSchemaConfigurationResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getKafkaSchemaConfiguration<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetKafkaSchemaConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetKafkaSchemaConfigurationResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -112,7 +111,7 @@ const config = aiven.getKafkaSchemaConfiguration({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKafkaSchemaConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupKafkaSchemaConfigurationArgs">LookupKafkaSchemaConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#LookupKafkaSchemaConfigurationResult">LookupKafkaSchemaConfigurationResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKafkaSchemaConfiguration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupKafkaSchemaConfigurationArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupKafkaSchemaConfigurationResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupKafkaSchemaConfiguration` in the Go SDK.
 
@@ -121,7 +120,7 @@ const config = aiven.getKafkaSchemaConfiguration({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKafkaSchemaConfiguration </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.GetKafkaSchemaConfigurationResult.html">GetKafkaSchemaConfigurationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.GetKafkaSchemaConfigurationArgs.html">GetKafkaSchemaConfigurationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetKafkaSchemaConfigurationResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetKafkaSchemaConfigurationArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -405,7 +404,7 @@ it takes a global value. Allowed values: `BACKWARD`, `BACKWARD_TRANSITIVE`, `FOR
 
 
 
-## GetKafkaSchemaConfiguration Result {#result}
+## getKafkaSchemaConfiguration Result {#result}
 
 The following output properties are available:
 

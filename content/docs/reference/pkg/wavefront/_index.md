@@ -31,6 +31,7 @@ A Pulumi package for creating and managing wavefront cloud resources.
     <li><a href="dashboardjson" title="DashboardJson"><span class="symbol resource"></span>DashboardJson</a></li>
     <li><a href="derivedmetric" title="DerivedMetric"><span class="symbol resource"></span>DerivedMetric</a></li>
     <li><a href="externallink" title="ExternalLink"><span class="symbol resource"></span>ExternalLink</a></li>
+    <li><a href="ingestionpolicy" title="IngestionPolicy"><span class="symbol resource"></span>IngestionPolicy</a></li>
     <li><a href="maintenancewindow" title="MaintenanceWindow"><span class="symbol resource"></span>MaintenanceWindow</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
@@ -53,24 +54,6 @@ A Pulumi package for creating and managing wavefront cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`wavefront` Terraform Provider](https://github.com/vmware/terraform-provider-wavefront).</dd>
 	<dt>Version</dt>
-	<dd>0.6.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.html" title="Pulumi.Wavefront">Pulumi.Wavefront</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#" title="wavefront">wavefront</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/wavefront/#" title="@pulumi/wavefront">@pulumi/wavefront</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_wavefront" title="pulumi_wavefront">pulumi_wavefront</a></dd>
-
+	<dd>0.7.1</dd>
 </dl>
 

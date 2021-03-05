@@ -1,8 +1,8 @@
 
 ---
-title: "GetOrganizationPolicy"
-title_tag: "Function GetOrganizationPolicy | Module folder | Package GCP"
-meta_desc: "Explore the GetOrganizationPolicy function of the folder module, including examples, input properties, output properties, and supporting types. Allows management of Organization policies for a Google Folder. For more information see"
+title: "getOrganizationPolicy"
+title_tag: "gcp.folder.getOrganizationPolicy"
+meta_desc: "Documentation for the gcp.folder.getOrganizationPolicy function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -100,13 +100,13 @@ export const version = policy.then(policy => policy.version);
 {{% /examples %}}
 
 
-## Using GetOrganizationPolicy {#using}
+## Using getOrganizationPolicy {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getOrganizationPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/folder/#GetOrganizationPolicyArgs">GetOrganizationPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/folder/#GetOrganizationPolicyResult">GetOrganizationPolicyResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getOrganizationPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetOrganizationPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetOrganizationPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -116,7 +116,7 @@ export const version = policy.then(policy => policy.version);
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupOrganizationPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/folder?tab=doc#LookupOrganizationPolicyArgs">LookupOrganizationPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/folder?tab=doc#LookupOrganizationPolicyResult">LookupOrganizationPolicyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupOrganizationPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupOrganizationPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupOrganizationPolicyResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupOrganizationPolicy` in the Go SDK.
 
@@ -125,7 +125,7 @@ export const version = policy.then(policy => policy.version);
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetOrganizationPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.GetOrganizationPolicyResult.html">GetOrganizationPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.GetOrganizationPolicyArgs.html">GetOrganizationPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetOrganizationPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetOrganizationPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -241,7 +241,7 @@ The following arguments are supported:
 
 
 
-## GetOrganizationPolicy Result {#result}
+## getOrganizationPolicy Result {#result}
 
 The following output properties are available:
 
@@ -606,16 +606,6 @@ The following output properties are available:
 
 
 <h4 id="getorganizationpolicybooleanpolicy">Get<wbr>Organization<wbr>Policy<wbr>Boolean<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetOrganizationPolicyBooleanPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/folder?tab=doc#GetOrganizationPolicyBooleanPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.Outputs.GetOrganizationPolicyBooleanPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -680,16 +670,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getorganizationpolicylistpolicy">Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetOrganizationPolicyListPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/folder?tab=doc#GetOrganizationPolicyListPolicy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.Outputs.GetOrganizationPolicyListPolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -862,16 +842,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getorganizationpolicylistpolicyallow">Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetOrganizationPolicyListPolicyAllow">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/folder?tab=doc#GetOrganizationPolicyListPolicyAllow">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.Outputs.GetOrganizationPolicyListPolicyAllow.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -972,16 +942,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getorganizationpolicylistpolicydeny">Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetOrganizationPolicyListPolicyDeny">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/folder?tab=doc#GetOrganizationPolicyListPolicyDeny">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.Outputs.GetOrganizationPolicyListPolicyDeny.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1082,16 +1042,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getorganizationpolicyrestorepolicy">Get<wbr>Organization<wbr>Policy<wbr>Restore<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetOrganizationPolicyRestorePolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/folder?tab=doc#GetOrganizationPolicyRestorePolicy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Folder.Outputs.GetOrganizationPolicyRestorePolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

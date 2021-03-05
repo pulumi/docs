@@ -1,8 +1,8 @@
 
 ---
-title: "GetInstanceTemplate"
-title_tag: "Function GetInstanceTemplate | Module compute | Package GCP"
-meta_desc: "Explore the GetInstanceTemplate function of the compute module, including examples, input properties, output properties, and supporting types. Get information about a VM instance template resource within GCE. For more information see"
+title: "getInstanceTemplate"
+title_tag: "gcp.compute.getInstanceTemplate"
+meta_desc: "Documentation for the gcp.compute.getInstanceTemplate function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -55,13 +55,13 @@ const generic_regex = pulumi.output(gcp.compute.getInstanceTemplate({
 {{% /examples %}}
 
 
-## Using GetInstanceTemplate {#using}
+## Using getInstanceTemplate {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstanceTemplate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#GetInstanceTemplateArgs">GetInstanceTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#GetInstanceTemplateResult">GetInstanceTemplateResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getInstanceTemplate<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetInstanceTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetInstanceTemplateResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -71,7 +71,7 @@ const generic_regex = pulumi.output(gcp.compute.getInstanceTemplate({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstanceTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#LookupInstanceTemplateArgs">LookupInstanceTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#LookupInstanceTemplateResult">LookupInstanceTemplateResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstanceTemplate<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupInstanceTemplateArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupInstanceTemplateResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupInstanceTemplate` in the Go SDK.
 
@@ -80,7 +80,7 @@ const generic_regex = pulumi.output(gcp.compute.getInstanceTemplate({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInstanceTemplate </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GetInstanceTemplateResult.html">GetInstanceTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.GetInstanceTemplateArgs.html">GetInstanceTemplateArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetInstanceTemplateResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetInstanceTemplateArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -111,7 +111,7 @@ If `project` is not provideded, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A filter to retrieve the instance templates. 
+    <dd>{{% md %}}A filter to retrieve the instance templates.
 See [gcloud topic filters](https://cloud.google.com/sdk/gcloud/reference/topic/filters) for reference.
 If multiple instance templates match, either adjust the filter or specify `most_recent`. One of `name` or `filter` must be provided.
 {{% /md %}}</dd>
@@ -160,7 +160,7 @@ If `project` is not provideded, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A filter to retrieve the instance templates. 
+    <dd>{{% md %}}A filter to retrieve the instance templates.
 See [gcloud topic filters](https://cloud.google.com/sdk/gcloud/reference/topic/filters) for reference.
 If multiple instance templates match, either adjust the filter or specify `most_recent`. One of `name` or `filter` must be provided.
 {{% /md %}}</dd>
@@ -209,7 +209,7 @@ If `project` is not provideded, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A filter to retrieve the instance templates. 
+    <dd>{{% md %}}A filter to retrieve the instance templates.
 See [gcloud topic filters](https://cloud.google.com/sdk/gcloud/reference/topic/filters) for reference.
 If multiple instance templates match, either adjust the filter or specify `most_recent`. One of `name` or `filter` must be provided.
 {{% /md %}}</dd>
@@ -258,7 +258,7 @@ If `project` is not provideded, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A filter to retrieve the instance templates. 
+    <dd>{{% md %}}A filter to retrieve the instance templates.
 See [gcloud topic filters](https://cloud.google.com/sdk/gcloud/reference/topic/filters) for reference.
 If multiple instance templates match, either adjust the filter or specify `most_recent`. One of `name` or `filter` must be provided.
 {{% /md %}}</dd>
@@ -288,7 +288,7 @@ If multiple instance templates match, either adjust the filter or specify `most_
 
 
 
-## GetInstanceTemplate Result {#result}
+## getInstanceTemplate Result {#result}
 
 The following output properties are available:
 
@@ -1481,16 +1481,6 @@ this configuration option are detailed below.
 
 
 <h4 id="getinstancetemplateconfidentialinstanceconfig">Get<wbr>Instance<wbr>Template<wbr>Confidential<wbr>Instance<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceTemplateConfidentialInstanceConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetInstanceTemplateConfidentialInstanceConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceTemplateConfidentialInstanceConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1555,16 +1545,6 @@ this configuration option are detailed below.
 {{% /choosable %}}
 
 <h4 id="getinstancetemplatedisk">Get<wbr>Instance<wbr>Template<wbr>Disk</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceTemplateDisk">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetInstanceTemplateDisk">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceTemplateDisk.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1656,7 +1636,7 @@ the size must be exactly 375GB.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, 
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk,
 which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
 and the request will fail if you attempt to attach a persistent disk in any other format
 than SCSI. Local SSDs can use either NVME or SCSI.
@@ -1684,6 +1664,15 @@ created from this template,
 or READ_ONLY. If you are attaching or creating a boot disk, this must
 read-write mode.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcepolicies_csharp">
+<a href="#resourcepolicies_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="source_csharp">
@@ -1813,7 +1802,7 @@ the size must be exactly 375GB.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, 
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk,
 which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
 and the request will fail if you attempt to attach a persistent disk in any other format
 than SCSI. Local SSDs can use either NVME or SCSI.
@@ -1841,6 +1830,15 @@ created from this template,
 or READ_ONLY. If you are attaching or creating a boot disk, this must
 read-write mode.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcepolicies_go">
+<a href="#resourcepolicies_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="source_go">
@@ -1970,7 +1968,7 @@ the size must be exactly 375GB.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, 
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk,
 which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
 and the request will fail if you attempt to attach a persistent disk in any other format
 than SCSI. Local SSDs can use either NVME or SCSI.
@@ -1998,6 +1996,15 @@ created from this template,
 or READ_ONLY. If you are attaching or creating a boot disk, this must
 read-write mode.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="resourcepolicies_nodejs">
+<a href="#resourcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="source_nodejs">
@@ -2127,7 +2134,7 @@ the size must be exactly 375GB.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, 
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk,
 which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
 and the request will fail if you attempt to attach a persistent disk in any other format
 than SCSI. Local SSDs can use either NVME or SCSI.
@@ -2155,6 +2162,15 @@ created from this template,
 or READ_ONLY. If you are attaching or creating a boot disk, this must
 read-write mode.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_policies_python">
+<a href="#resource_policies_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="source_python">
@@ -2197,16 +2213,6 @@ initialize this disk. This can be one of: the image's `self_link`,
 {{% /choosable %}}
 
 <h4 id="getinstancetemplatediskdiskencryptionkey">Get<wbr>Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceTemplateDiskDiskEncryptionKey">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetInstanceTemplateDiskDiskEncryptionKey">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceTemplateDiskDiskEncryptionKey.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2275,16 +2281,6 @@ initialize this disk. This can be one of: the image's `self_link`,
 {{% /choosable %}}
 
 <h4 id="getinstancetemplateguestaccelerator">Get<wbr>Instance<wbr>Template<wbr>Guest<wbr>Accelerator</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceTemplateGuestAccelerator">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetInstanceTemplateGuestAccelerator">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceTemplateGuestAccelerator.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2393,16 +2389,6 @@ initialize this disk. This can be one of: the image's `self_link`,
 {{% /choosable %}}
 
 <h4 id="getinstancetemplatenetworkinterface">Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceTemplateNetworkInterface">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetInstanceTemplateNetworkInterface">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceTemplateNetworkInterface.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2463,6 +2449,15 @@ Use `network` attribute for Legacy or Auto subnetted networks and
     <dd>{{% md %}}The private IP address to assign to the instance. If
 empty, the address will be automatically assigned.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="nictype_csharp">
+<a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="subnetwork_csharp">
@@ -2548,6 +2543,15 @@ empty, the address will be automatically assigned.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="nictype_go">
+<a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="subnetwork_go">
 <a href="#subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
 </span>
@@ -2629,6 +2633,15 @@ Use `network` attribute for Legacy or Auto subnetted networks and
     <dd>{{% md %}}The private IP address to assign to the instance. If
 empty, the address will be automatically assigned.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="nictype_nodejs">
+<a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="subnetwork_nodejs">
@@ -2714,6 +2727,15 @@ empty, the address will be automatically assigned.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="nic_type_python">
+<a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="subnetwork_python">
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
 </span>
@@ -2739,16 +2761,6 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 <h4 id="getinstancetemplatenetworkinterfaceaccessconfig">Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceTemplateNetworkInterfaceAccessConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetInstanceTemplateNetworkInterfaceAccessConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceTemplateNetworkInterfaceAccessConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -2905,16 +2917,6 @@ STANDARD. If this field is not specified, it is assumed to be PREMIUM.
 {{% /choosable %}}
 
 <h4 id="getinstancetemplatenetworkinterfacealiasiprange">Get<wbr>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceTemplateNetworkInterfaceAliasIpRange">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetInstanceTemplateNetworkInterfaceAliasIpRange">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceTemplateNetworkInterfaceAliasIpRange.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3047,16 +3049,6 @@ range. If left unspecified, the primary range of the subnetwork will be used.
 {{% /choosable %}}
 
 <h4 id="getinstancetemplatescheduling">Get<wbr>Instance<wbr>Template<wbr>Scheduling</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceTemplateScheduling">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetInstanceTemplateScheduling">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceTemplateScheduling.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3317,16 +3309,6 @@ false. Read more on this
 {{% /choosable %}}
 
 <h4 id="getinstancetemplateschedulingnodeaffinity">Get<wbr>Instance<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceTemplateSchedulingNodeAffinity">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetInstanceTemplateSchedulingNodeAffinity">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceTemplateSchedulingNodeAffinity.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3475,16 +3457,6 @@ or `NOT_IN` for anti-affinities.
 {{% /choosable %}}
 
 <h4 id="getinstancetemplateserviceaccount">Get<wbr>Instance<wbr>Template<wbr>Service<wbr>Account</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceTemplateServiceAccount">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetInstanceTemplateServiceAccount">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceTemplateServiceAccount.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -3605,16 +3577,6 @@ short names are supported. To allow full access to all Cloud APIs, use the
 {{% /choosable %}}
 
 <h4 id="getinstancetemplateshieldedinstanceconfig">Get<wbr>Instance<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceTemplateShieldedInstanceConfig">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#GetInstanceTemplateShieldedInstanceConfig">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.GetInstanceTemplateShieldedInstanceConfig.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

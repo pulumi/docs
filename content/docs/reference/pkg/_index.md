@@ -20,11 +20,7 @@ explore what's possible, you've come to the right place.
 
 ### Core Providers
 
-{{< resource-providers "aws,azure,gcp,kubernetes" >}}
-
-### Next Generation Providers
-
-{{< resource-providers "azure-nextgen" >}}
+{{< resource-providers "aws,azure-native,gcp,kubernetes" >}}
 
 ### Cloud Providers
 
@@ -53,6 +49,10 @@ explore what's possible, you've come to the right place.
 ### Utilities
 
 {{< resource-providers "random,tls,cloudinit" false >}}
+
+### Classic Providers
+
+{{< resource-providers "azure" >}}
 
 ## Package Documentation
 
@@ -98,9 +98,9 @@ SDK reference documentation, organized by language.
 </dl>
 {{% /choosable %}}
 
-{{% choosable language "javascript,typescript" %}}
 ### Extension Packages
 
+{{% choosable language "javascript,typescript" %}}
 <dl class="tabular">
     <dt>AWS Extensions</dt>
     <dd>
@@ -109,7 +109,7 @@ SDK reference documentation, organized by language.
     </dd>
     <dt>AWS EKS Cluster</dt>
     <dd>
-        <a href="{{< relref "/docs/reference/pkg/nodejs/pulumi/eks" >}}">@pulumi/eks</a>
+        <a href="{{< relref "/docs/reference/pkg/eks" >}}">@pulumi/eks</a>
         <p>Simpler interfaces for working with AWS EKS.</p>
     </dd>
     <dt>Kubernetes Extensions</dt>
@@ -117,6 +117,36 @@ SDK reference documentation, organized by language.
         <a href="{{< relref "/docs/reference/pkg/nodejs/pulumi/kubernetesx" >}}">@pulumi/kubernetesx</a>
         <span class="ml-2 badge badge-preview">Preview</span>
         <p>Simpler interfaces for working with Kubernetes.</p>
+    </dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>AWS EKS Cluster</dt>
+    <dd>
+        <a href="{{< relref "/docs/reference/pkg/eks" >}}">pulumi_eks</a>
+        <p>Simpler interfaces for working with AWS EKS.</p>
+    </dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>AWS EKS Cluster</dt>
+    <dd>
+        <a href="{{< relref "/docs/reference/pkg/eks" >}}">eks</a>
+        <p>Simpler interfaces for working with AWS EKS.</p>
+    </dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>AWS EKS Cluster</dt>
+    <dd>
+        <a href="{{< relref "/docs/reference/pkg/eks" >}}">Pulumi.Eks</a>
+        <p>Simpler interfaces for working with AWS EKS.</p>
     </dd>
 </dl>
 {{% /choosable %}}

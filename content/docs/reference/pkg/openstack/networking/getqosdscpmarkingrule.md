@@ -1,8 +1,8 @@
 
 ---
-title: "GetQosDscpMarkingRule"
-title_tag: "Function GetQosDscpMarkingRule | Module networking | Package Open Stack"
-meta_desc: "Explore the GetQosDscpMarkingRule function of the networking module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available OpenStack QoS DSCP marking rule."
+title: "getQosDscpMarkingRule"
+title_tag: "openstack.networking.getQosDscpMarkingRule"
+meta_desc: "Documentation for the openstack.networking.getQosDscpMarkingRule function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -46,13 +46,13 @@ const qosDscpMarkingRule1 = pulumi.output(openstack.networking.getQosDscpMarking
 {{% /examples %}}
 
 
-## Using GetQosDscpMarkingRule {#using}
+## Using getQosDscpMarkingRule {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getQosDscpMarkingRule<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#GetQosDscpMarkingRuleArgs">GetQosDscpMarkingRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#GetQosDscpMarkingRuleResult">GetQosDscpMarkingRuleResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getQosDscpMarkingRule<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetQosDscpMarkingRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetQosDscpMarkingRuleResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -62,7 +62,7 @@ const qosDscpMarkingRule1 = pulumi.output(openstack.networking.getQosDscpMarking
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupQosDscpMarkingRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#LookupQosDscpMarkingRuleArgs">LookupQosDscpMarkingRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#LookupQosDscpMarkingRuleResult">LookupQosDscpMarkingRuleResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupQosDscpMarkingRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupQosDscpMarkingRuleArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupQosDscpMarkingRuleResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupQosDscpMarkingRule` in the Go SDK.
 
@@ -71,7 +71,7 @@ const qosDscpMarkingRule1 = pulumi.output(openstack.networking.getQosDscpMarking
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetQosDscpMarkingRule </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.GetQosDscpMarkingRuleResult.html">GetQosDscpMarkingRuleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.GetQosDscpMarkingRuleArgs.html">GetQosDscpMarkingRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetQosDscpMarkingRuleResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetQosDscpMarkingRuleArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -235,7 +235,7 @@ A Networking client is needed to create a Neutron QoS DSCP marking rule. If omit
 
 
 
-## GetQosDscpMarkingRule Result {#result}
+## getQosDscpMarkingRule Result {#result}
 
 The following output properties are available:
 

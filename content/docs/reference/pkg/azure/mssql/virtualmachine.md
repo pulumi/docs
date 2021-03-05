@@ -157,19 +157,19 @@ const exampleMssql_virtualMachineVirtualMachine = new azure.mssql.VirtualMachine
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/mssql/#VirtualMachine">VirtualMachine</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/mssql/#VirtualMachineArgs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mssql/#pulumi_azure.mssql.VirtualMachine">VirtualMachine</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_patching</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineAutoPatchingArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_credential</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineKeyVaultCredentialArgs]</span> = None<span class="p">, </span><span class="nx">r_services_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineStorageConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_backup</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineAutoBackupArgs]</span> = None<span class="p">, </span><span class="nx">auto_patching</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineAutoPatchingArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_credential</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineKeyVaultCredentialArgs]</span> = None<span class="p">, </span><span class="nx">r_services_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineStorageConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachine">NewVirtualMachine</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineArgs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachine">VirtualMachine</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewVirtualMachine</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.VirtualMachine.html">VirtualMachine</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.VirtualMachineArgs.html">VirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">VirtualMachine</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">VirtualMachineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -190,7 +190,7 @@ const exampleMssql_virtualMachineVirtualMachine = new azure.mssql.VirtualMachine
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/azure/mssql/#VirtualMachineArgs">VirtualMachineArgs</a></span>
+        <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -259,7 +259,7 @@ const exampleMssql_virtualMachineVirtualMachine = new azure.mssql.VirtualMachine
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineArgs">VirtualMachineArgs</a></span>
+        <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -298,7 +298,7 @@ const exampleMssql_virtualMachineVirtualMachine = new azure.mssql.VirtualMachine
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.VirtualMachineArgs.html">VirtualMachineArgs</a></span>
+        <span class="property-type"><a href="#inputs">VirtualMachineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -321,11 +321,11 @@ const exampleMssql_virtualMachineVirtualMachine = new azure.mssql.VirtualMachine
 
 ## VirtualMachine Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The VirtualMachine resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The VirtualMachine resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -351,6 +351,16 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autobackup_csharp">
+<a href="#autobackup_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -470,6 +480,16 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="autobackup_go">
+<a href="#autobackup_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup</a></span>
+    </dt>
+    <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="autopatching_go">
 <a href="#autopatching_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Patching</a>
 </span>
@@ -586,6 +606,16 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="autobackup_nodejs">
+<a href="#autobackup_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup</a></span>
+    </dt>
+    <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="autopatching_nodejs">
 <a href="#autopatching_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Patching</a>
 </span>
@@ -699,6 +729,16 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="auto_backup_python">
+<a href="#auto_backup_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -868,20 +908,20 @@ Get an existing VirtualMachine resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/mssql/#VirtualMachineState">VirtualMachineState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/mssql/#VirtualMachine">VirtualMachine</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">VirtualMachineState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">VirtualMachine</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_patching</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineAutoPatchingArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_credential</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineKeyVaultCredentialArgs]</span> = None<span class="p">, </span><span class="nx">r_services_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineStorageConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VirtualMachine</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_backup</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineAutoBackupArgs]</span> = None<span class="p">, </span><span class="nx">auto_patching</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineAutoPatchingArgs]</span> = None<span class="p">, </span><span class="nx">key_vault_credential</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineKeyVaultCredentialArgs]</span> = None<span class="p">, </span><span class="nx">r_services_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_connectivity_update_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_configuration</span><span class="p">:</span> <span class="nx">Optional[VirtualMachineStorageConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_machine_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VirtualMachine</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualMachine<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineState">VirtualMachineState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachine">VirtualMachine</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVirtualMachine<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">VirtualMachineState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">VirtualMachine</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.VirtualMachine.html">VirtualMachine</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.VirtualMachineState.html">VirtualMachineState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">VirtualMachine</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">VirtualMachineState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -986,6 +1026,16 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_autobackup_csharp">
+<a href="#state_autobackup_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_autopatching_csharp">
@@ -1104,6 +1154,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_autobackup_go">
+<a href="#state_autobackup_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup</a></span>
+    </dt>
+    <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_autopatching_go">
 <a href="#state_autopatching_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Patching</a>
 </span>
@@ -1220,6 +1280,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_autobackup_nodejs">
+<a href="#state_autobackup_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup</a></span>
+    </dt>
+    <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_autopatching_nodejs">
 <a href="#state_autopatching_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Patching</a>
 </span>
@@ -1334,6 +1404,16 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_auto_backup_python">
+<a href="#state_auto_backup_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>backup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `auto_backup` block as defined below. This block can be added to an existing resource, but removing this block forces a new resource to be created.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_auto_patching_python">
@@ -1456,19 +1536,499 @@ The following state arguments are supported:
 
 
 
-<h4 id="virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineAutoPatching">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineAutoPatching">output</a> API doc for this type.
+<h4 id="virtualmachineautobackup">Virtual<wbr>Machine<wbr>Auto<wbr>Backup</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="retentionperiodindays_csharp">
+<a href="#retentionperiodindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Retention period of backups, in days. Valid values are from `1` to `30`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="storageaccountaccesskey_csharp">
+<a href="#storageaccountaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Access key for the storage account where backups will be kept.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="storageblobendpoint_csharp">
+<a href="#storageblobendpoint_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Blob<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Blob endpoint for the storage account where backups will be kept.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptionenabled_csharp">
+<a href="#encryptionenabled_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable encryption for backups. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptionpassword_csharp">
+<a href="#encryptionpassword_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encryption password to use. Must be specified when encryption is enabled.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="manualschedule_csharp">
+<a href="#manualschedule_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineautobackupmanualschedule">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Manual<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `manual_schedule` block as documented below. When this block is present, the schedule type is set to `Manual`. Without this block, the schedule type is set to `Automated`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="systemdatabasesbackupenabled_csharp">
+<a href="#systemdatabasesbackupenabled_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Databases<wbr>Backup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Include or exclude system databases from auto backup. Defaults to `false`.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineAutoPatchingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineAutoPatchingOutput">output</a> API doc for this type.
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="retentionperiodindays_go">
+<a href="#retentionperiodindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Retention period of backups, in days. Valid values are from `1` to `30`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="storageaccountaccesskey_go">
+<a href="#storageaccountaccesskey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Access key for the storage account where backups will be kept.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="storageblobendpoint_go">
+<a href="#storageblobendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Blob<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Blob endpoint for the storage account where backups will be kept.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptionenabled_go">
+<a href="#encryptionenabled_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable encryption for backups. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptionpassword_go">
+<a href="#encryptionpassword_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encryption password to use. Must be specified when encryption is enabled.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="manualschedule_go">
+<a href="#manualschedule_go" style="color: inherit; text-decoration: inherit;">Manual<wbr>Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineautobackupmanualschedule">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Manual<wbr>Schedule</a></span>
+    </dt>
+    <dd>{{% md %}}A `manual_schedule` block as documented below. When this block is present, the schedule type is set to `Manual`. Without this block, the schedule type is set to `Automated`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="systemdatabasesbackupenabled_go">
+<a href="#systemdatabasesbackupenabled_go" style="color: inherit; text-decoration: inherit;">System<wbr>Databases<wbr>Backup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Include or exclude system databases from auto backup. Defaults to `false`.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="retentionperiodindays_nodejs">
+<a href="#retentionperiodindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period<wbr>In<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Retention period of backups, in days. Valid values are from `1` to `30`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="storageaccountaccesskey_nodejs">
+<a href="#storageaccountaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Access key for the storage account where backups will be kept.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="storageblobendpoint_nodejs">
+<a href="#storageblobendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Blob<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Blob endpoint for the storage account where backups will be kept.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptionenabled_nodejs">
+<a href="#encryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable encryption for backups. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptionpassword_nodejs">
+<a href="#encryptionpassword_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Encryption password to use. Must be specified when encryption is enabled.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="manualschedule_nodejs">
+<a href="#manualschedule_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineautobackupmanualschedule">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Manual<wbr>Schedule</a></span>
+    </dt>
+    <dd>{{% md %}}A `manual_schedule` block as documented below. When this block is present, the schedule type is set to `Manual`. Without this block, the schedule type is set to `Automated`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="systemdatabasesbackupenabled_nodejs">
+<a href="#systemdatabasesbackupenabled_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Databases<wbr>Backup<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Include or exclude system databases from auto backup. Defaults to `false`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="retention_period_in_days_python">
+<a href="#retention_period_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period_<wbr>in_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Retention period of backups, in days. Valid values are from `1` to `30`.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="storage_account_access_key_python">
+<a href="#storage_account_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Access key for the storage account where backups will be kept.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="storage_blob_endpoint_python">
+<a href="#storage_blob_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>blob_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Blob endpoint for the storage account where backups will be kept.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_enabled_python">
+<a href="#encryption_enabled_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable or disable encryption for backups. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_password_python">
+<a href="#encryption_password_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Encryption password to use. Must be specified when encryption is enabled.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="manual_schedule_python">
+<a href="#manual_schedule_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualmachineautobackupmanualschedule">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Manual<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `manual_schedule` block as documented below. When this block is present, the schedule type is set to `Manual`. Without this block, the schedule type is set to `Automated`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="system_databases_backup_enabled_python">
+<a href="#system_databases_backup_enabled_python" style="color: inherit; text-decoration: inherit;">system_<wbr>databases_<wbr>backup_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Include or exclude system databases from auto backup. Defaults to `false`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="virtualmachineautobackupmanualschedule">Virtual<wbr>Machine<wbr>Auto<wbr>Backup<wbr>Manual<wbr>Schedule</h4>
 
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Inputs.VirtualMachineAutoPatchingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Outputs.VirtualMachineAutoPatching.html">output</a> API doc for this type.
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fullbackupfrequency_csharp">
+<a href="#fullbackupfrequency_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Frequency of full backups. Valid values include `Daily` or `Weekly`. Required when `backup_schedule_automated` is false.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="fullbackupstarthour_csharp">
+<a href="#fullbackupstarthour_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Start<wbr>Hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Start hour of a given day during which full backups can take place. Valid values are from `0` to `23`. Required when `backup_schedule_automated` is false.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="fullbackupwindowinhours_csharp">
+<a href="#fullbackupwindowinhours_csharp" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Window<wbr>In<wbr>Hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place, in hours. Valid values are between `1` and `23`. Required when `backup_schedule_automated` is false.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="logbackupfrequencyinminutes_csharp">
+<a href="#logbackupfrequencyinminutes_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Frequency<wbr>In<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Frequency of log backups, in minutes. Valid values are from `5` to `60`. Required when `backup_schedule_automated` is false.
+{{% /md %}}</dd>
+</dl>
 {{% /choosable %}}
 
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fullbackupfrequency_go">
+<a href="#fullbackupfrequency_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Frequency of full backups. Valid values include `Daily` or `Weekly`. Required when `backup_schedule_automated` is false.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="fullbackupstarthour_go">
+<a href="#fullbackupstarthour_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Start<wbr>Hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Start hour of a given day during which full backups can take place. Valid values are from `0` to `23`. Required when `backup_schedule_automated` is false.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="fullbackupwindowinhours_go">
+<a href="#fullbackupwindowinhours_go" style="color: inherit; text-decoration: inherit;">Full<wbr>Backup<wbr>Window<wbr>In<wbr>Hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place, in hours. Valid values are between `1` and `23`. Required when `backup_schedule_automated` is false.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="logbackupfrequencyinminutes_go">
+<a href="#logbackupfrequencyinminutes_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Backup<wbr>Frequency<wbr>In<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Frequency of log backups, in minutes. Valid values are from `5` to `60`. Required when `backup_schedule_automated` is false.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="fullbackupfrequency_nodejs">
+<a href="#fullbackupfrequency_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Frequency of full backups. Valid values include `Daily` or `Weekly`. Required when `backup_schedule_automated` is false.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="fullbackupstarthour_nodejs">
+<a href="#fullbackupstarthour_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Start<wbr>Hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Start hour of a given day during which full backups can take place. Valid values are from `0` to `23`. Required when `backup_schedule_automated` is false.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="fullbackupwindowinhours_nodejs">
+<a href="#fullbackupwindowinhours_nodejs" style="color: inherit; text-decoration: inherit;">full<wbr>Backup<wbr>Window<wbr>In<wbr>Hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place, in hours. Valid values are between `1` and `23`. Required when `backup_schedule_automated` is false.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="logbackupfrequencyinminutes_nodejs">
+<a href="#logbackupfrequencyinminutes_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Backup<wbr>Frequency<wbr>In<wbr>Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Frequency of log backups, in minutes. Valid values are from `5` to `60`. Required when `backup_schedule_automated` is false.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="full_backup_frequency_python">
+<a href="#full_backup_frequency_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Frequency of full backups. Valid values include `Daily` or `Weekly`. Required when `backup_schedule_automated` is false.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="full_backup_start_hour_python">
+<a href="#full_backup_start_hour_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>start_<wbr>hour</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Start hour of a given day during which full backups can take place. Valid values are from `0` to `23`. Required when `backup_schedule_automated` is false.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="full_backup_window_in_hours_python">
+<a href="#full_backup_window_in_hours_python" style="color: inherit; text-decoration: inherit;">full_<wbr>backup_<wbr>window_<wbr>in_<wbr>hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Duration of the time window of a given day during which full backups can take place, in hours. Valid values are between `1` and `23`. Required when `backup_schedule_automated` is false.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="log_backup_frequency_in_minutes_python">
+<a href="#log_backup_frequency_in_minutes_python" style="color: inherit; text-decoration: inherit;">log_<wbr>backup_<wbr>frequency_<wbr>in_<wbr>minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Frequency of log backups, in minutes. Valid values are from `5` to `60`. Required when `backup_schedule_automated` is false.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="virtualmachineautopatching">Virtual<wbr>Machine<wbr>Auto<wbr>Patching</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1615,18 +2175,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualmachinekeyvaultcredential">Virtual<wbr>Machine<wbr>Key<wbr>Vault<wbr>Credential</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineKeyVaultCredential">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineKeyVaultCredential">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineKeyVaultCredentialArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineKeyVaultCredentialOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Inputs.VirtualMachineKeyVaultCredentialArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Outputs.VirtualMachineKeyVaultCredential.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1813,18 +2361,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualmachinestorageconfiguration">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineStorageConfiguration">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineStorageConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineStorageConfigurationOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Inputs.VirtualMachineStorageConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Outputs.VirtualMachineStorageConfiguration.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2051,18 +2587,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualmachinestorageconfigurationdatasettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Data<wbr>Settings</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageConfigurationDataSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineStorageConfigurationDataSettings">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineStorageConfigurationDataSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineStorageConfigurationDataSettingsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Inputs.VirtualMachineStorageConfigurationDataSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Outputs.VirtualMachineStorageConfigurationDataSettings.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2169,18 +2693,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualmachinestorageconfigurationlogsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Log<wbr>Settings</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageConfigurationLogSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineStorageConfigurationLogSettings">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineStorageConfigurationLogSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineStorageConfigurationLogSettingsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Inputs.VirtualMachineStorageConfigurationLogSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Outputs.VirtualMachineStorageConfigurationLogSettings.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2287,18 +2799,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="virtualmachinestorageconfigurationtempdbsettings">Virtual<wbr>Machine<wbr>Storage<wbr>Configuration<wbr>Temp<wbr>Db<wbr>Settings</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageConfigurationTempDbSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineStorageConfigurationTempDbSettings">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineStorageConfigurationTempDbSettingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/mssql?tab=doc#VirtualMachineStorageConfigurationTempDbSettingsOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Inputs.VirtualMachineStorageConfigurationTempDbSettingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.MSSql.Outputs.VirtualMachineStorageConfigurationTempDbSettings.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

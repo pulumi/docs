@@ -1,8 +1,8 @@
 
 ---
-title: "GetPolicyAttachments"
-title_tag: "Function GetPolicyAttachments | Module resourcemanager | Package AliCloud"
-meta_desc: "Explore the GetPolicyAttachments function of the resourcemanager module, including examples, input properties, output properties, and supporting types. This data source provides the Resource Manager Policy Attachments of the current Alibaba Cloud user."
+title: "getPolicyAttachments"
+title_tag: "alicloud.resourcemanager.getPolicyAttachments"
+meta_desc: "Documentation for the alicloud.resourcemanager.getPolicyAttachments function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -90,13 +90,13 @@ export const firstAttachmentId = example.attachments[0].id;
 {{% /examples %}}
 
 
-## Using GetPolicyAttachments {#using}
+## Using getPolicyAttachments {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicyAttachments<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/resourcemanager/#GetPolicyAttachmentsArgs">GetPolicyAttachmentsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/resourcemanager/#GetPolicyAttachmentsResult">GetPolicyAttachmentsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getPolicyAttachments<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetPolicyAttachmentsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetPolicyAttachmentsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -106,14 +106,16 @@ export const firstAttachmentId = example.attachments[0].id;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicyAttachments<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/resourcemanager?tab=doc#GetPolicyAttachmentsArgs">GetPolicyAttachmentsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/resourcemanager?tab=doc#GetPolicyAttachmentsResult">GetPolicyAttachmentsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicyAttachments<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetPolicyAttachmentsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetPolicyAttachmentsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetPolicyAttachments` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPolicyAttachments </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Resourcemanager.GetPolicyAttachmentsResult.html">GetPolicyAttachmentsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ResourceManager.GetPolicyAttachmentsArgs.html">GetPolicyAttachmentsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetPolicyAttachmentsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetPolicyAttachmentsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -425,7 +427,7 @@ The following arguments are supported:
 
 
 
-## GetPolicyAttachments Result {#result}
+## getPolicyAttachments Result {#result}
 
 The following output properties are available:
 
@@ -838,16 +840,6 @@ The following output properties are available:
 
 
 <h4 id="getpolicyattachmentsattachment">Get<wbr>Policy<wbr>Attachments<wbr>Attachment</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetPolicyAttachmentsAttachment">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/resourcemanager?tab=doc#GetPolicyAttachmentsAttachment">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.ResourceManager.Outputs.GetPolicyAttachmentsAttachment.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

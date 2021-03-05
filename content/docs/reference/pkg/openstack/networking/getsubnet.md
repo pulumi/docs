@@ -1,8 +1,8 @@
 
 ---
-title: "GetSubnet"
-title_tag: "Function GetSubnet | Module networking | Package Open Stack"
-meta_desc: "Explore the GetSubnet function of the networking module, including examples, input properties, output properties, and supporting types. Use this data source to get the ID of an available OpenStack subnet."
+title: "getSubnet"
+title_tag: "openstack.networking.getSubnet"
+meta_desc: "Documentation for the openstack.networking.getSubnet function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -89,13 +89,13 @@ const subnet1 = pulumi.output(openstack.networking.getSubnet({
 {{% /examples %}}
 
 
-## Using GetSubnet {#using}
+## Using getSubnet {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSubnet<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#GetSubnetArgs">GetSubnetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#GetSubnetResult">GetSubnetResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getSubnet<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetSubnetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetSubnetResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -105,7 +105,7 @@ const subnet1 = pulumi.output(openstack.networking.getSubnet({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSubnet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#LookupSubnetArgs">LookupSubnetArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#LookupSubnetResult">LookupSubnetResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSubnet<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupSubnetArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupSubnetResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupSubnet` in the Go SDK.
 
@@ -114,7 +114,7 @@ const subnet1 = pulumi.output(openstack.networking.getSubnet({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSubnet </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.GetSubnetResult.html">GetSubnetResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.GetSubnetArgs.html">GetSubnetArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetSubnetResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetSubnetArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -144,18 +144,17 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human-readable description for the subnet.
+    <dd>{{% md %}}Human-readable description of the subnet.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="dhcpdisabled_csharp">
 <a href="#dhcpdisabled_csharp" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Disabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the subnet has DHCP disabled.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use dhcp_enabled instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dhcpenabled_csharp">
@@ -304,18 +303,17 @@ A Neutron client is needed to retrieve subnet ids. If omitted, the
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human-readable description for the subnet.
+    <dd>{{% md %}}Human-readable description of the subnet.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="dhcpdisabled_go">
 <a href="#dhcpdisabled_go" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Disabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the subnet has DHCP disabled.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use dhcp_enabled instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dhcpenabled_go">
@@ -464,18 +462,17 @@ A Neutron client is needed to retrieve subnet ids. If omitted, the
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Human-readable description for the subnet.
+    <dd>{{% md %}}Human-readable description of the subnet.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="dhcpdisabled_nodejs">
 <a href="#dhcpdisabled_nodejs" style="color: inherit; text-decoration: inherit;">dhcp<wbr>Disabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If the subnet has DHCP disabled.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use dhcp_enabled instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dhcpenabled_nodejs">
@@ -624,18 +621,17 @@ A Neutron client is needed to retrieve subnet ids. If omitted, the
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Human-readable description for the subnet.
+    <dd>{{% md %}}Human-readable description of the subnet.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="dhcp_disabled_python">
 <a href="#dhcp_disabled_python" style="color: inherit; text-decoration: inherit;">dhcp_<wbr>disabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If the subnet has DHCP disabled.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use dhcp_enabled instead{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dhcp_enabled_python">
@@ -766,7 +762,7 @@ A Neutron client is needed to retrieve subnet ids. If omitted, the
 
 
 
-## GetSubnet Result {#result}
+## getSubnet Result {#result}
 
 The following output properties are available:
 
@@ -944,15 +940,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="dhcpdisabled_csharp">
 <a href="#dhcpdisabled_csharp" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Disabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use dhcp_enabled instead{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="dhcpenabled_csharp">
@@ -1146,15 +1142,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="dhcpdisabled_go">
 <a href="#dhcpdisabled_go" style="color: inherit; text-decoration: inherit;">Dhcp<wbr>Disabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use dhcp_enabled instead{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="dhcpenabled_go">
@@ -1348,15 +1344,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="dhcpdisabled_nodejs">
 <a href="#dhcpdisabled_nodejs" style="color: inherit; text-decoration: inherit;">dhcp<wbr>Disabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use dhcp_enabled instead{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="dhcpenabled_nodejs">
@@ -1550,15 +1546,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="dhcp_disabled_python">
 <a href="#dhcp_disabled_python" style="color: inherit; text-decoration: inherit;">dhcp_<wbr>disabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use dhcp_enabled instead{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="dhcp_enabled_python">
@@ -1587,16 +1583,6 @@ The following output properties are available:
 
 
 <h4 id="getsubnetallocationpool">Get<wbr>Subnet<wbr>Allocation<wbr>Pool</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetSubnetAllocationPool">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#GetSubnetAllocationPool">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.Outputs.GetSubnetAllocationPool.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1697,16 +1683,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getsubnethostroute">Get<wbr>Subnet<wbr>Host<wbr>Route</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetSubnetHostRoute">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#GetSubnetHostRoute">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Networking.Outputs.GetSubnetHostRoute.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

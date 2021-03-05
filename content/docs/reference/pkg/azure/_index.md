@@ -1,6 +1,6 @@
 ---
 title: "Azure"
-title_tag: "Package Azure"
+title_tag: "Azure Package"
 meta_desc: "A Pulumi package for creating and managing Microsoft Azure cloud resources."
 menu:
     reference:
@@ -37,6 +37,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
     <li><a href="costmanagement/" title="costmanagement"><span class="symbol module"></span>costmanagement</a></li>
     <li><a href="dashboard/" title="dashboard"><span class="symbol module"></span>dashboard</a></li>
     <li><a href="databasemigration/" title="databasemigration"><span class="symbol module"></span>databasemigration</a></li>
+    <li><a href="databoxedge/" title="databoxedge"><span class="symbol module"></span>databoxedge</a></li>
     <li><a href="databricks/" title="databricks"><span class="symbol module"></span>databricks</a></li>
     <li><a href="datafactory/" title="datafactory"><span class="symbol module"></span>datafactory</a></li>
     <li><a href="datalake/" title="datalake"><span class="symbol module"></span>datalake</a></li>
@@ -121,24 +122,6 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.45.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.html" title="Pulumi.Azure">Pulumi.Azure</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/?tab=doc#" title="azure">azure</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/azure/#" title="@pulumi/azure">@pulumi/azure</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_azure" title="pulumi_azure">pulumi_azure</a></dd>
-
+	<dd>3.49.0</dd>
 </dl>
 

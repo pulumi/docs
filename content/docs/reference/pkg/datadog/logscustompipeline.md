@@ -1,8 +1,8 @@
 
 ---
 title: "LogsCustomPipeline"
-title_tag: "Resource LogsCustomPipeline | Package Datadog"
-meta_desc: "Explore the LogsCustomPipeline resource of the Datadog package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog [Logs Pipeline API](https://docs.datadoghq.com/api/v1/logs-pipelines/) resource, which is used to create and manage Datadog logs custom pipelines."
+title_tag: "datadog.LogsCustomPipeline"
+meta_desc: "Documentation for the datadog.LogsCustomPipeline resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -282,7 +282,6 @@ import (
 	"fmt"
 
 	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog"
-	"github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -836,19 +835,19 @@ const samplePipeline = new datadog.LogsCustomPipeline("sample_pipeline", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/datadog/#LogsCustomPipeline">LogsCustomPipeline</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/datadog/#LogsCustomPipelineArgs">LogsCustomPipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">LogsCustomPipeline</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">LogsCustomPipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_datadog/#pulumi_datadog.LogsCustomPipeline">LogsCustomPipeline</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[LogsCustomPipelineFilterArgs]]</span> = None<span class="p">, </span><span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">processors</span><span class="p">:</span> <span class="nx">Optional[Sequence[LogsCustomPipelineProcessorArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">LogsCustomPipeline</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">filters</span><span class="p">:</span> <span class="nx">Optional[Sequence[LogsCustomPipelineFilterArgs]]</span> = None<span class="p">, </span><span class="nx">is_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">processors</span><span class="p">:</span> <span class="nx">Optional[Sequence[LogsCustomPipelineProcessorArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipeline">NewLogsCustomPipeline</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineArgs">LogsCustomPipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipeline">LogsCustomPipeline</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewLogsCustomPipeline</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">LogsCustomPipelineArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LogsCustomPipeline</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.LogsCustomPipeline.html">LogsCustomPipeline</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.LogsCustomPipelineArgs.html">LogsCustomPipelineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">LogsCustomPipeline</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">LogsCustomPipelineArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -869,7 +868,7 @@ const samplePipeline = new datadog.LogsCustomPipeline("sample_pipeline", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/datadog/#LogsCustomPipelineArgs">LogsCustomPipelineArgs</a></span>
+        <span class="property-type"><a href="#inputs">LogsCustomPipelineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -938,7 +937,7 @@ const samplePipeline = new datadog.LogsCustomPipeline("sample_pipeline", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineArgs">LogsCustomPipelineArgs</a></span>
+        <span class="property-type"><a href="#inputs">LogsCustomPipelineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -977,7 +976,7 @@ const samplePipeline = new datadog.LogsCustomPipeline("sample_pipeline", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.LogsCustomPipelineArgs.html">LogsCustomPipelineArgs</a></span>
+        <span class="property-type"><a href="#inputs">LogsCustomPipelineArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -1000,11 +999,11 @@ const samplePipeline = new datadog.LogsCustomPipeline("sample_pipeline", {
 
 ## LogsCustomPipeline Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The LogsCustomPipeline resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The LogsCustomPipeline resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -1251,7 +1250,7 @@ Get an existing LogsCustomPipeline resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/datadog/#LogsCustomPipelineState">LogsCustomPipelineState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/datadog/#LogsCustomPipeline">LogsCustomPipeline</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">LogsCustomPipelineState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">LogsCustomPipeline</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1260,11 +1259,11 @@ Get an existing LogsCustomPipeline resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLogsCustomPipeline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineState">LogsCustomPipelineState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipeline">LogsCustomPipeline</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLogsCustomPipeline<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">LogsCustomPipelineState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">LogsCustomPipeline</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.LogsCustomPipeline.html">LogsCustomPipeline</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog..LogsCustomPipelineState.html">LogsCustomPipelineState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">LogsCustomPipeline</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">LogsCustomPipelineState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1544,18 +1543,6 @@ The following state arguments are supported:
 
 
 <h4 id="logscustompipelinefilter">Logs<wbr>Custom<wbr>Pipeline<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineFilterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1618,18 +1605,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessor">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessor.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2196,18 +2171,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorarithmeticprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Arithmetic<wbr>Processor</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorArithmeticProcessor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorArithmeticProcessor">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorArithmeticProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorArithmeticProcessorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorArithmeticProcessorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorArithmeticProcessor.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2414,18 +2377,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorattributeremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Attribute<wbr>Remapper</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorAttributeRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorAttributeRemapper">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorAttributeRemapperArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorAttributeRemapperOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorAttributeRemapperArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorAttributeRemapper.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2776,18 +2727,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorcategoryprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorCategoryProcessor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorCategoryProcessor">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorCategoryProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorCategoryProcessorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorCategoryProcessorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorCategoryProcessor.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2958,18 +2897,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorcategoryprocessorcategory">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Category</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorCategoryProcessorCategory">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorCategoryProcessorCategory">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorCategoryProcessorCategoryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorCategoryProcessorCategoryOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorCategoryProcessorCategoryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorCategoryProcessorCategory.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3068,18 +2995,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorcategoryprocessorcategoryfilter">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Category<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorCategoryProcessorCategoryFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorCategoryProcessorCategoryFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorCategoryProcessorCategoryFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorCategoryProcessorCategoryFilterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorCategoryProcessorCategoryFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorCategoryProcessorCategoryFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3142,18 +3057,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessordateremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Date<wbr>Remapper</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorDateRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorDateRemapper">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorDateRemapperArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorDateRemapperOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorDateRemapperArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorDateRemapper.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3288,18 +3191,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorgeoipparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Geo<wbr>Ip<wbr>Parser</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorGeoIpParser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorGeoIpParser">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorGeoIpParserArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorGeoIpParserOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorGeoIpParserArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorGeoIpParser.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3470,18 +3361,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorgrokparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Grok<wbr>Parser</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorGrokParser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorGrokParser">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorGrokParserArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorGrokParserOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorGrokParserArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorGrokParser.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3688,18 +3567,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorgrokparsergrok">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Grok<wbr>Parser<wbr>Grok</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorGrokParserGrok">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorGrokParserGrok">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorGrokParserGrokArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorGrokParserGrokOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorGrokParserGrokArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorGrokParserGrok.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3798,18 +3665,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorlookupprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Lookup<wbr>Processor</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorLookupProcessor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorLookupProcessor">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorLookupProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorLookupProcessorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorLookupProcessorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorLookupProcessor.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4052,18 +3907,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessormessageremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Message<wbr>Remapper</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorMessageRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorMessageRemapper">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorMessageRemapperArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorMessageRemapperOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorMessageRemapperArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorMessageRemapper.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4198,18 +4041,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorpipeline">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipeline">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipeline">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorPipelineArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorPipeline.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4380,18 +4211,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorpipelinefilter">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineFilterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorPipelineFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorPipelineFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4454,18 +4273,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorpipelineprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessor">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorPipelineProcessorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorPipelineProcessor.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -4996,18 +4803,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorpipelineprocessorarithmeticprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Arithmetic<wbr>Processor</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorArithmeticProcessor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorArithmeticProcessor">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorArithmeticProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorArithmeticProcessorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorPipelineProcessorArithmeticProcessorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorPipelineProcessorArithmeticProcessor.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5214,18 +5009,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorpipelineprocessorattributeremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Attribute<wbr>Remapper</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorAttributeRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorAttributeRemapper">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorAttributeRemapperArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorAttributeRemapperOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorPipelineProcessorAttributeRemapperArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorPipelineProcessorAttributeRemapper.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5576,18 +5359,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorpipelineprocessorcategoryprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessor">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorPipelineProcessorCategoryProcessor.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5758,18 +5529,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorpipelineprocessorcategoryprocessorcategory">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Category</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategory">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategory">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategoryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategoryOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategoryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategory.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5868,18 +5627,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorpipelineprocessorcategoryprocessorcategoryfilter">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Category<wbr>Processor<wbr>Category<wbr>Filter</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategoryFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategoryFilter">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategoryFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategoryFilterOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategoryFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorPipelineProcessorCategoryProcessorCategoryFilter.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -5942,18 +5689,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorpipelineprocessordateremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Date<wbr>Remapper</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorDateRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorDateRemapper">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorDateRemapperArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorDateRemapperOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorPipelineProcessorDateRemapperArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorPipelineProcessorDateRemapper.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6088,18 +5823,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorpipelineprocessorgeoipparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Geo<wbr>Ip<wbr>Parser</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorGeoIpParser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorGeoIpParser">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorGeoIpParserArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorGeoIpParserOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorPipelineProcessorGeoIpParserArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorPipelineProcessorGeoIpParser.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6270,18 +5993,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorpipelineprocessorgrokparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Grok<wbr>Parser</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorGrokParser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorGrokParser">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorGrokParserArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorGrokParserOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorPipelineProcessorGrokParserArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorPipelineProcessorGrokParser.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6488,18 +6199,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorpipelineprocessorgrokparsergrok">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Grok<wbr>Parser<wbr>Grok</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorGrokParserGrok">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorGrokParserGrok">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorGrokParserGrokArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorGrokParserGrokOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorPipelineProcessorGrokParserGrokArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorPipelineProcessorGrokParserGrok.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6598,18 +6297,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorpipelineprocessorlookupprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Lookup<wbr>Processor</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorLookupProcessor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorLookupProcessor">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorLookupProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorLookupProcessorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorPipelineProcessorLookupProcessorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorPipelineProcessorLookupProcessor.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6852,18 +6539,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorpipelineprocessormessageremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Message<wbr>Remapper</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorMessageRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorMessageRemapper">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorMessageRemapperArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorMessageRemapperOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorPipelineProcessorMessageRemapperArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorPipelineProcessorMessageRemapper.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -6998,18 +6673,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorpipelineprocessorserviceremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Service<wbr>Remapper</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorServiceRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorServiceRemapper">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorServiceRemapperArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorServiceRemapperOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorPipelineProcessorServiceRemapperArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorPipelineProcessorServiceRemapper.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7144,18 +6807,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorpipelineprocessorstatusremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Status<wbr>Remapper</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorStatusRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorStatusRemapper">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorStatusRemapperArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorStatusRemapperOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorPipelineProcessorStatusRemapperArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorPipelineProcessorStatusRemapper.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7290,18 +6941,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorpipelineprocessorstringbuilderprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>String<wbr>Builder<wbr>Processor</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorStringBuilderProcessor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorStringBuilderProcessor">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorStringBuilderProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorStringBuilderProcessorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorPipelineProcessorStringBuilderProcessorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorPipelineProcessorStringBuilderProcessor.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7508,18 +7147,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorpipelineprocessortraceidremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Trace<wbr>Id<wbr>Remapper</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorTraceIdRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorTraceIdRemapper">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorTraceIdRemapperArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorTraceIdRemapperOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorPipelineProcessorTraceIdRemapperArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorPipelineProcessorTraceIdRemapper.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7654,18 +7281,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorpipelineprocessorurlparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>Url<wbr>Parser</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorUrlParser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorUrlParser">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorUrlParserArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorUrlParserOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorPipelineProcessorUrlParserArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorPipelineProcessorUrlParser.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -7872,18 +7487,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorpipelineprocessoruseragentparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Pipeline<wbr>Processor<wbr>User<wbr>Agent<wbr>Parser</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorPipelineProcessorUserAgentParser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorPipelineProcessorUserAgentParser">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorUserAgentParserArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorPipelineProcessorUserAgentParserOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorPipelineProcessorUserAgentParserArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorPipelineProcessorUserAgentParser.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8090,18 +7693,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorserviceremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Service<wbr>Remapper</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorServiceRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorServiceRemapper">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorServiceRemapperArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorServiceRemapperOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorServiceRemapperArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorServiceRemapper.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8236,18 +7827,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorstatusremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Status<wbr>Remapper</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorStatusRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorStatusRemapper">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorStatusRemapperArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorStatusRemapperOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorStatusRemapperArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorStatusRemapper.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8382,18 +7961,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorstringbuilderprocessor">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>String<wbr>Builder<wbr>Processor</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorStringBuilderProcessor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorStringBuilderProcessor">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorStringBuilderProcessorArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorStringBuilderProcessorOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorStringBuilderProcessorArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorStringBuilderProcessor.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8600,18 +8167,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessortraceidremapper">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Trace<wbr>Id<wbr>Remapper</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorTraceIdRemapper">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorTraceIdRemapper">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorTraceIdRemapperArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorTraceIdRemapperOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorTraceIdRemapperArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorTraceIdRemapper.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8746,18 +8301,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessorurlparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>Url<wbr>Parser</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorUrlParser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorUrlParser">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorUrlParserArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorUrlParserOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorUrlParserArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorUrlParser.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -8964,18 +8507,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="logscustompipelineprocessoruseragentparser">Logs<wbr>Custom<wbr>Pipeline<wbr>Processor<wbr>User<wbr>Agent<wbr>Parser</h4>
-{{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/input/#LogsCustomPipelineProcessorUserAgentParser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#LogsCustomPipelineProcessorUserAgentParser">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorUserAgentParserArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#LogsCustomPipelineProcessorUserAgentParserOutput">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Inputs.LogsCustomPipelineProcessorUserAgentParserArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.LogsCustomPipelineProcessorUserAgentParser.html">output</a> API doc for this type.
-{{% /choosable %}}
-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

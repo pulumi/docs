@@ -62,7 +62,7 @@ Here are some use cases:
 
 The Azure resource provider does not support enabling the [static website](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-static-website) feature for a storage account. However, there is a REST API that can be called to enable the feature, so we can easily call the API from within the dynamic provider.
 
-[Here's](https://github.com/pulumi/examples/blob/master/azure-ts-static-website/staticWebsite.ts) the source for this example. The following is an excerpt from the [example](https://github.com/pulumi/examples/blob/master/azure-ts-static-website/index.ts) where the dynamic provider is actually used. Note that the Azure Storage Account is created before using this dynamic provider.
+[Here's](https://github.com/pulumi/examples/blob/5bcf9de17a660f17172ca05d4ca3f061456a99c5/azure-ts-static-website/staticWebsite.ts) the source for this example. The following is an excerpt from the [example](https://github.com/pulumi/examples/blob/e990699e03ff31af95bd62b08f31f8fb99b11ccb/azure-ts-static-website/index.ts) where the dynamic provider is actually used. Note that the Azure Storage Account is created before using this dynamic provider.
 
 ```ts
 ...
@@ -86,7 +86,7 @@ Similar to the previous example, this is another example of a shortcoming of the
 
 Along with adding a custom domain to the CDN endpoint, this dynamic provider also enables HTTPS provided by Azure's one-click [HTTPS enablement](https://docs.microsoft.com/en-us/azure/cdn/cdn-custom-ssl?tabs=option-1-default-enable-https-with-a-cdn-managed-certificate).
 
-As before, details such as the creation of the CDN profile and its endpoint are omitted for clarity. You can check out the full example [here](https://github.com/pulumi/examples/tree/master/azure-ts-dynamicresource).
+As before, details such as the creation of the CDN profile and its endpoint are omitted for clarity. You can check out the full example [here](https://github.com/pulumi/examples/tree/master/classic-azure-ts-dynamicresource).
 
 ```ts
 ...

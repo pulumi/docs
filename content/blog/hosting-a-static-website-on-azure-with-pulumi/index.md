@@ -98,7 +98,7 @@ Resource Manager API, and therefore, it's not available out-of-the-box
 in ARM templates, Terraform, or Pulumi. We can enable this feature with
 Azure CLI, so the solution is to create a dynamic Pulumi resource which
 enables Pulumi experience while delegating the work to the CLI. You can
-find the full source code for the dynamic resource in [this example](https://github.com/pulumi/examples/blob/master/azure-ts-static-website/staticWebsite.ts),
+find the full source code for the dynamic resource in [this example](https://github.com/pulumi/examples/blob/5bcf9de17a660f17172ca05d4ca3f061456a99c5/azure-ts-static-website/staticWebsite.ts),
 but the usage is quite trivial:
 
 ```typescript
@@ -204,7 +204,7 @@ it would fail with a validation error.
 
 The final step is to point our custom domain to the CDN endpoint and
 provision a TLS certificate to enable HTTPS support. Once again, these
-operations are not parts of the ARM API surface, so another [dynamic resource](https://github.com/pulumi/examples/blob/master/azure-ts-dynamicresource/cdnCustomDomain.ts)
+operations are not parts of the ARM API surface, so another [dynamic resource](https://github.com/pulumi/examples/blob/master/classic-azure-ts-dynamicresource/cdnCustomDomain.ts)
 was created to support them.
 
 The usage is quite straightforward, just make sure to use your own

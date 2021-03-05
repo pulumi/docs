@@ -1,8 +1,8 @@
 
 ---
-title: "GetMasterSlaveServerGroups"
-title_tag: "Function GetMasterSlaveServerGroups | Module slb | Package AliCloud"
-meta_desc: "Explore the GetMasterSlaveServerGroups function of the slb module, including examples, input properties, output properties, and supporting types. This data source provides the master slave server groups related to a server load balancer."
+title: "getMasterSlaveServerGroups"
+title_tag: "alicloud.slb.getMasterSlaveServerGroups"
+meta_desc: "Documentation for the alicloud.slb.getMasterSlaveServerGroups function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -394,13 +394,13 @@ export const firstSlbServerGroupId = sampleDs.groups[0].id;
 {{% /examples %}}
 
 
-## Using GetMasterSlaveServerGroups {#using}
+## Using getMasterSlaveServerGroups {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMasterSlaveServerGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/slb/#GetMasterSlaveServerGroupsArgs">GetMasterSlaveServerGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/slb/#GetMasterSlaveServerGroupsResult">GetMasterSlaveServerGroupsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getMasterSlaveServerGroups<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetMasterSlaveServerGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetMasterSlaveServerGroupsResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -410,14 +410,16 @@ export const firstSlbServerGroupId = sampleDs.groups[0].id;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMasterSlaveServerGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#GetMasterSlaveServerGroupsArgs">GetMasterSlaveServerGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#GetMasterSlaveServerGroupsResult">GetMasterSlaveServerGroupsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMasterSlaveServerGroups<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetMasterSlaveServerGroupsArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetMasterSlaveServerGroupsResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetMasterSlaveServerGroups` in the Go SDK.
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetMasterSlaveServerGroups </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.GetMasterSlaveServerGroupsResult.html">GetMasterSlaveServerGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.GetMasterSlaveServerGroupsArgs.html">GetMasterSlaveServerGroupsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetMasterSlaveServerGroupsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetMasterSlaveServerGroupsArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -609,7 +611,7 @@ The following arguments are supported:
 
 
 
-## GetMasterSlaveServerGroups Result {#result}
+## getMasterSlaveServerGroups Result {#result}
 
 The following output properties are available:
 
@@ -914,16 +916,6 @@ The following output properties are available:
 
 
 <h4 id="getmasterslaveservergroupsgroup">Get<wbr>Master<wbr>Slave<wbr>Server<wbr>Groups<wbr>Group</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetMasterSlaveServerGroupsGroup">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#GetMasterSlaveServerGroupsGroup">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.Outputs.GetMasterSlaveServerGroupsGroup.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1072,16 +1064,6 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="getmasterslaveservergroupsgroupserver">Get<wbr>Master<wbr>Slave<wbr>Server<wbr>Groups<wbr>Group<wbr>Server</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetMasterSlaveServerGroupsGroupServer">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#GetMasterSlaveServerGroupsGroupServer">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Slb.Outputs.GetMasterSlaveServerGroupsGroupServer.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

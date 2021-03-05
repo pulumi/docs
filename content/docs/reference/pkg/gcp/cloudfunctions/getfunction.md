@@ -1,8 +1,8 @@
 
 ---
-title: "GetFunction"
-title_tag: "Function GetFunction | Module cloudfunctions | Package GCP"
-meta_desc: "Explore the GetFunction function of the cloudfunctions module, including examples, input properties, output properties, and supporting types. Get information about a Google Cloud Function. For more information see"
+title: "getFunction"
+title_tag: "gcp.cloudfunctions.getFunction"
+meta_desc: "Documentation for the gcp.cloudfunctions.getFunction function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -90,13 +90,13 @@ const my_function = pulumi.output(gcp.cloudfunctions.getFunction({
 {{% /examples %}}
 
 
-## Using GetFunction {#using}
+## Using getFunction {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFunction<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#GetFunctionArgs">GetFunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/cloudfunctions/#GetFunctionResult">GetFunctionResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getFunction<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetFunctionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetFunctionResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -106,7 +106,7 @@ const my_function = pulumi.output(gcp.cloudfunctions.getFunction({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFunction<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudfunctions?tab=doc#LookupFunctionArgs">LookupFunctionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudfunctions?tab=doc#LookupFunctionResult">LookupFunctionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFunction<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupFunctionArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupFunctionResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupFunction` in the Go SDK.
 
@@ -115,7 +115,7 @@ const my_function = pulumi.output(gcp.cloudfunctions.getFunction({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetFunction </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Cloudfunctions.GetFunctionResult.html">GetFunctionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.GetFunctionArgs.html">GetFunctionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetFunctionResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetFunctionArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -279,7 +279,7 @@ is not provided, the provider region is used.
 
 
 
-## GetFunction Result {#result}
+## getFunction Result {#result}
 
 The following output properties are available:
 
@@ -1220,16 +1220,6 @@ The following output properties are available:
 
 
 <h4 id="getfunctioneventtrigger">Get<wbr>Function<wbr>Event<wbr>Trigger</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetFunctionEventTrigger">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudfunctions?tab=doc#GetFunctionEventTrigger">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Outputs.GetFunctionEventTrigger.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1386,16 +1376,6 @@ for a full reference of accepted triggers.
 {{% /choosable %}}
 
 <h4 id="getfunctioneventtriggerfailurepolicy">Get<wbr>Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetFunctionEventTriggerFailurePolicy">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudfunctions?tab=doc#GetFunctionEventTriggerFailurePolicy">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Outputs.GetFunctionEventTriggerFailurePolicy.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 
@@ -1464,16 +1444,6 @@ for a full reference of accepted triggers.
 {{% /choosable %}}
 
 <h4 id="getfunctionsourcerepository">Get<wbr>Function<wbr>Source<wbr>Repository</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetFunctionSourceRepository">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudfunctions?tab=doc#GetFunctionSourceRepository">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.CloudFunctions.Outputs.GetFunctionSourceRepository.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

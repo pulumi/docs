@@ -1,8 +1,8 @@
 
 ---
-title: "GetDatasetBlobStorage"
-title_tag: "Function GetDatasetBlobStorage | Module datashare | Package Azure"
-meta_desc: "Explore the GetDatasetBlobStorage function of the datashare module, including examples, input properties, output properties, and supporting types. Use this data source to access information about an existing Data Share Blob Storage Dataset."
+title: "getDatasetBlobStorage"
+title_tag: "azure.datashare.getDatasetBlobStorage"
+meta_desc: "Documentation for the azure.datashare.getDatasetBlobStorage function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -98,13 +98,13 @@ export const id = example.then(example => example.id);
 {{% /examples %}}
 
 
-## Using GetDatasetBlobStorage {#using}
+## Using getDatasetBlobStorage {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDatasetBlobStorage<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/datashare/#GetDatasetBlobStorageArgs">GetDatasetBlobStorageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/datashare/#GetDatasetBlobStorageResult">GetDatasetBlobStorageResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDatasetBlobStorage<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDatasetBlobStorageArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDatasetBlobStorageResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -114,7 +114,7 @@ export const id = example.then(example => example.id);
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDatasetBlobStorage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datashare?tab=doc#LookupDatasetBlobStorageArgs">LookupDatasetBlobStorageArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datashare?tab=doc#LookupDatasetBlobStorageResult">LookupDatasetBlobStorageResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDatasetBlobStorage<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDatasetBlobStorageArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDatasetBlobStorageResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDatasetBlobStorage` in the Go SDK.
 
@@ -123,7 +123,7 @@ export const id = example.then(example => example.id);
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDatasetBlobStorage </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Datashare.GetDatasetBlobStorageResult.html">GetDatasetBlobStorageResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataShare.GetDatasetBlobStorageArgs.html">GetDatasetBlobStorageArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDatasetBlobStorageResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDatasetBlobStorageArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -239,7 +239,7 @@ The following arguments are supported:
 
 
 
-## GetDatasetBlobStorage Result {#result}
+## getDatasetBlobStorage Result {#result}
 
 The following output properties are available:
 
@@ -592,16 +592,6 @@ The following output properties are available:
 
 
 <h4 id="getdatasetblobstoragestorageaccount">Get<wbr>Dataset<wbr>Blob<wbr>Storage<wbr>Storage<wbr>Account</h4>
-{{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetDatasetBlobStorageStorageAccount">output</a> API doc for this type.
-{{% /choosable %}}
-
-{{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datashare?tab=doc#GetDatasetBlobStorageStorageAccount">output</a> API doc for this type.
-{{% /choosable %}}
-{{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.DataShare.Outputs.GetDatasetBlobStorageStorageAccount.html">output</a> API doc for this type.
-{{% /choosable %}}
 
 
 

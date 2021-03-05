@@ -1,8 +1,8 @@
 
 ---
-title: "GetDpsSharedAccessPolicy"
-title_tag: "Function GetDpsSharedAccessPolicy | Module iot | Package Azure"
-meta_desc: "Explore the GetDpsSharedAccessPolicy function of the iot module, including examples, input properties, output properties, and supporting types. Use this data source to access information about an existing IotHub Device Provisioning Service Shared Access Policy"
+title: "getDpsSharedAccessPolicy"
+title_tag: "azure.iot.getDpsSharedAccessPolicy"
+meta_desc: "Documentation for the azure.iot.getDpsSharedAccessPolicy function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -96,13 +96,13 @@ const example = azure.iot.getDpsSharedAccessPolicy({
 {{% /examples %}}
 
 
-## Using GetDpsSharedAccessPolicy {#using}
+## Using getDpsSharedAccessPolicy {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDpsSharedAccessPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/iot/#GetDpsSharedAccessPolicyArgs">GetDpsSharedAccessPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/iot/#GetDpsSharedAccessPolicyResult">GetDpsSharedAccessPolicyResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getDpsSharedAccessPolicy<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx">GetDpsSharedAccessPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="#result">GetDpsSharedAccessPolicyResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -112,7 +112,7 @@ const example = azure.iot.getDpsSharedAccessPolicy({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDpsSharedAccessPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot?tab=doc#LookupDpsSharedAccessPolicyArgs">LookupDpsSharedAccessPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot?tab=doc#LookupDpsSharedAccessPolicyResult">LookupDpsSharedAccessPolicyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDpsSharedAccessPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">LookupDpsSharedAccessPolicyArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">LookupDpsSharedAccessPolicyResult</a></span>, error)</span></code></pre></div>
 
 > Note: This function is named `LookupDpsSharedAccessPolicy` in the Go SDK.
 
@@ -121,7 +121,7 @@ const example = azure.iot.getDpsSharedAccessPolicy({
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDpsSharedAccessPolicy </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Iot.GetDpsSharedAccessPolicyResult.html">GetDpsSharedAccessPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Iot.GetDpsSharedAccessPolicyArgs.html">GetDpsSharedAccessPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="#result">GetDpsSharedAccessPolicyResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx">GetDpsSharedAccessPolicyArgs</span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -277,7 +277,7 @@ The following arguments are supported:
 
 
 
-## GetDpsSharedAccessPolicy Result {#result}
+## getDpsSharedAccessPolicy Result {#result}
 
 The following output properties are available:
 

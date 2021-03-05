@@ -1,6 +1,6 @@
 ---
 title: "AliCloud"
-title_tag: "Package AliCloud"
+title_tag: "AliCloud Package"
 meta_desc: "A Pulumi package for creating and managing AliCloud resources."
 menu:
     reference:
@@ -47,6 +47,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="ga/" title="ga"><span class="symbol module"></span>ga</a></li>
     <li><a href="gpdb/" title="gpdb"><span class="symbol module"></span>gpdb</a></li>
     <li><a href="hbase/" title="hbase"><span class="symbol module"></span>hbase</a></li>
+    <li><a href="iot/" title="iot"><span class="symbol module"></span>iot</a></li>
     <li><a href="kms/" title="kms"><span class="symbol module"></span>kms</a></li>
     <li><a href="kvstore/" title="kvstore"><span class="symbol module"></span>kvstore</a></li>
     <li><a href="log/" title="log"><span class="symbol module"></span>log</a></li>
@@ -62,6 +63,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="polardb/" title="polardb"><span class="symbol module"></span>polardb</a></li>
     <li><a href="privatelink/" title="privatelink"><span class="symbol module"></span>privatelink</a></li>
     <li><a href="pvtz/" title="pvtz"><span class="symbol module"></span>pvtz</a></li>
+    <li><a href="quotas/" title="quotas"><span class="symbol module"></span>quotas</a></li>
     <li><a href="ram/" title="ram"><span class="symbol module"></span>ram</a></li>
     <li><a href="rds/" title="rds"><span class="symbol module"></span>rds</a></li>
     <li><a href="resourcemanager/" title="resourcemanager"><span class="symbol module"></span>resourcemanager</a></li>
@@ -99,24 +101,6 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.32.0</dd>
-</dl>
-
-
-
-<dl class="tabular">
-
-    <dt>.NET</dt>
-    <dd><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.html" title="Pulumi.AliCloud">Pulumi.AliCloud</a></dd>
-
-    <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/?tab=doc#" title="alicloud">alicloud</a></dd>
-
-    <dt>Node.js</dt>
-    <dd><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/#" title="@pulumi/alicloud">@pulumi/alicloud</a></dd>
-
-    <dt>Python</dt>
-    <dd><a href="/docs/reference/pkg/python/pulumi_alicloud" title="pulumi_alicloud">pulumi_alicloud</a></dd>
-
+	<dd>2.35.1</dd>
 </dl>
 

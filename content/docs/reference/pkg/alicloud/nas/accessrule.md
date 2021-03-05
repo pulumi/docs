@@ -32,12 +32,13 @@ class MyStack : Stack
     {
         var fooAccessGroup = new AliCloud.Nas.AccessGroup("fooAccessGroup", new AliCloud.Nas.AccessGroupArgs
         {
-            Type = "Vpc",
+            AccessGroupName = "tf-NasConfigName",
+            AccessGroupType = "Vpc",
             Description = "tf-testAccNasConfig",
         });
         var fooAccessRule = new AliCloud.Nas.AccessRule("fooAccessRule", new AliCloud.Nas.AccessRuleArgs
         {
-            AccessGroupName = fooAccessGroup.Id,
+            AccessGroupName = fooAccessGroup.AccessGroupName,
             SourceCidrIp = "168.1.1.0/16",
             RwAccessType = "RDWR",
             UserAccessType = "no_squash",
@@ -62,14 +63,15 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		fooAccessGroup, err := nas.NewAccessGroup(ctx, "fooAccessGroup", &nas.AccessGroupArgs{
-			Type:        pulumi.String("Vpc"),
-			Description: pulumi.String("tf-testAccNasConfig"),
+			AccessGroupName: pulumi.String("tf-NasConfigName"),
+			AccessGroupType: pulumi.String("Vpc"),
+			Description:     pulumi.String("tf-testAccNasConfig"),
 		})
 		if err != nil {
 			return err
 		}
 		_, err = nas.NewAccessRule(ctx, "fooAccessRule", &nas.AccessRuleArgs{
-			AccessGroupName: fooAccessGroup.ID(),
+			AccessGroupName: fooAccessGroup.AccessGroupName,
 			SourceCidrIp:    pulumi.String("168.1.1.0/16"),
 			RwAccessType:    pulumi.String("RDWR"),
 			UserAccessType:  pulumi.String("no_squash"),
@@ -91,10 +93,11 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 foo_access_group = alicloud.nas.AccessGroup("fooAccessGroup",
-    type="Vpc",
+    access_group_name="tf-NasConfigName",
+    access_group_type="Vpc",
     description="tf-testAccNasConfig")
 foo_access_rule = alicloud.nas.AccessRule("fooAccessRule",
-    access_group_name=foo_access_group.id,
+    access_group_name=foo_access_group.access_group_name,
     source_cidr_ip="168.1.1.0/16",
     rw_access_type="RDWR",
     user_access_type="no_squash",
@@ -110,11 +113,12 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const fooAccessGroup = new alicloud.nas.AccessGroup("fooAccessGroup", {
-    type: "Vpc",
+    accessGroupName: "tf-NasConfigName",
+    accessGroupType: "Vpc",
     description: "tf-testAccNasConfig",
 });
 const fooAccessRule = new alicloud.nas.AccessRule("fooAccessRule", {
-    accessGroupName: fooAccessGroup.id,
+    accessGroupName: fooAccessGroup.accessGroupName,
     sourceCidrIp: "168.1.1.0/16",
     rwAccessType: "RDWR",
     userAccessType: "no_squash",
@@ -132,19 +136,19 @@ const fooAccessRule = new alicloud.nas.AccessRule("fooAccessRule", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/nas/#AccessRule">AccessRule</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/nas/#AccessRuleArgs">AccessRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx">AccessRule</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="#inputs">AccessRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_alicloud/nas/#pulumi_alicloud.nas.AccessRule">AccessRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rw_access_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_cidr_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_access_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AccessRule</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">access_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">priority</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">rw_access_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_cidr_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_access_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/nas?tab=doc#AccessRule">NewAccessRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/nas?tab=doc#AccessRuleArgs">AccessRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/nas?tab=doc#AccessRule">AccessRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx">NewAccessRule</span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="#inputs">AccessRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Nas.AccessRule.html">AccessRule</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Nas.AccessRuleArgs.html">AccessRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx">AccessRule</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="#inputs">AccessRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -165,7 +169,7 @@ const fooAccessRule = new alicloud.nas.AccessRule("fooAccessRule", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/nas/#AccessRuleArgs">AccessRuleArgs</a></span>
+        <span class="property-type"><a href="#inputs">AccessRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -234,7 +238,7 @@ const fooAccessRule = new alicloud.nas.AccessRule("fooAccessRule", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/nas?tab=doc#AccessRuleArgs">AccessRuleArgs</a></span>
+        <span class="property-type"><a href="#inputs">AccessRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -273,7 +277,7 @@ const fooAccessRule = new alicloud.nas.AccessRule("fooAccessRule", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Nas.AccessRuleArgs.html">AccessRuleArgs</a></span>
+        <span class="property-type"><a href="#inputs">AccessRuleArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -296,11 +300,11 @@ const fooAccessRule = new alicloud.nas.AccessRule("fooAccessRule", {
 
 ## AccessRule Resource Properties {#properties}
 
-To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) in the Programming Model docs.
 
 ### Inputs
 
-The AccessRule resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The AccessRule resource accepts the following [input]({{< relref "/docs/intro/concepts/inputs-outputs" >}}) properties:
 
 
 
@@ -335,7 +339,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
+    <dd>{{% md %}}Priority level. Range: 1-100. Default value: `1`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -345,7 +349,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
+    <dd>{{% md %}}Read-write permission type: `RDWR` (default), `RDONLY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -355,7 +359,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
+    <dd>{{% md %}}User permission type: `no_squash` (default), `root_squash`, `all_squash`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -391,7 +395,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
+    <dd>{{% md %}}Priority level. Range: 1-100. Default value: `1`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -401,7 +405,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
+    <dd>{{% md %}}Read-write permission type: `RDWR` (default), `RDONLY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -411,7 +415,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
+    <dd>{{% md %}}User permission type: `no_squash` (default), `root_squash`, `all_squash`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -447,7 +451,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
+    <dd>{{% md %}}Priority level. Range: 1-100. Default value: `1`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -457,7 +461,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
+    <dd>{{% md %}}Read-write permission type: `RDWR` (default), `RDONLY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -467,7 +471,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
+    <dd>{{% md %}}User permission type: `no_squash` (default), `root_squash`, `all_squash`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -503,7 +507,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
+    <dd>{{% md %}}Priority level. Range: 1-100. Default value: `1`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -513,7 +517,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
+    <dd>{{% md %}}Read-write permission type: `RDWR` (default), `RDONLY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -523,7 +527,7 @@ The AccessRule resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
+    <dd>{{% md %}}User permission type: `no_squash` (default), `root_squash`, `all_squash`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -643,7 +647,7 @@ Get an existing AccessRule resource's state with the given name, ID, and optiona
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/nas/#AccessRuleState">AccessRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/nas/#AccessRule">AccessRule</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx">AccessRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx">AccessRule</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -652,11 +656,11 @@ Get an existing AccessRule resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccessRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/nas?tab=doc#AccessRuleState">AccessRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/nas?tab=doc#AccessRule">AccessRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccessRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx">AccessRuleState</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx">AccessRule</span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Nas.AccessRule.html">AccessRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Nas.AccessRuleState.html">AccessRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx">AccessRule</span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx">AccessRuleState</span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -789,7 +793,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
+    <dd>{{% md %}}Priority level. Range: 1-100. Default value: `1`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -799,7 +803,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
+    <dd>{{% md %}}Read-write permission type: `RDWR` (default), `RDONLY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -819,7 +823,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
+    <dd>{{% md %}}User permission type: `no_squash` (default), `root_squash`, `all_squash`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -855,7 +859,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
+    <dd>{{% md %}}Priority level. Range: 1-100. Default value: `1`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -865,7 +869,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
+    <dd>{{% md %}}Read-write permission type: `RDWR` (default), `RDONLY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -885,7 +889,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
+    <dd>{{% md %}}User permission type: `no_squash` (default), `root_squash`, `all_squash`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -921,7 +925,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
+    <dd>{{% md %}}Priority level. Range: 1-100. Default value: `1`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -931,7 +935,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
+    <dd>{{% md %}}Read-write permission type: `RDWR` (default), `RDONLY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -951,7 +955,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
+    <dd>{{% md %}}User permission type: `no_squash` (default), `root_squash`, `all_squash`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -987,7 +991,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
+    <dd>{{% md %}}Priority level. Range: 1-100. Default value: `1`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -997,7 +1001,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
+    <dd>{{% md %}}Read-write permission type: `RDWR` (default), `RDONLY`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1017,7 +1021,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
+    <dd>{{% md %}}User permission type: `no_squash` (default), `root_squash`, `all_squash`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
