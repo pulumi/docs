@@ -13,6 +13,7 @@ Explore the resources and functions of the aws.route53 module.
 <ul class="api">
     <li><a href="delegationset" title="DelegationSet"><span class="symbol resource"></span>DelegationSet</a></li>
     <li><a href="healthcheck" title="HealthCheck"><span class="symbol resource"></span>HealthCheck</a></li>
+    <li><a href="hostedzonednssec" title="HostedZoneDnsSec"><span class="symbol resource"></span>HostedZoneDnsSec</a></li>
     <li><a href="keysigningkey" title="KeySigningKey"><span class="symbol resource"></span>KeySigningKey</a></li>
     <li><a href="querylog" title="QueryLog"><span class="symbol resource"></span>QueryLog</a></li>
     <li><a href="record" title="Record"><span class="symbol resource"></span>Record</a></li>
@@ -45,6 +46,6 @@ Explore the resources and functions of the aws.route53 module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.31.0</dd>
+	<dd>3.32.0</dd>
 </dl>
 
