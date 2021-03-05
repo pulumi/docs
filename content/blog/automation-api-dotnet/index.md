@@ -73,4 +73,4 @@ var blue = await WorkspaceStack.SelectAsync("blue", workspace);
 await blue.DestroyAsync();
 ```
 
-See full Automation API examples in [C#](https://github.com/pulumi/automation-api-examples/tree/main/dotnet). Let us know if you're using Automation API on [Twitter](https://twitter.com/PulumiCorp) or in [Pulumi Comunity Slack](https://slack.pulumi.com/).
+See full Automation API examples in [C#](https://github.com/pulumi/automation-api-examples/tree/main/dotnet). Let us know if you're using Automation API on [Twitter](https://twitter.com/PulumiCorp) or in our [Community Slack](https://slack.pulumi.com/).
