@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US 2",
+            Location = "West Europe",
         });
         var exampleFirewallPolicy = new Azure.FrontDoor.FirewallPolicy("exampleFirewallPolicy", new Azure.FrontDoor.FirewallPolicyArgs
         {
@@ -193,7 +193,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US 2"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -327,7 +327,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US 2")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_firewall_policy = azure.frontdoor.FirewallPolicy("exampleFirewallPolicy",
     resource_group_name=example_resource_group.name,
     enabled=True,
@@ -435,7 +435,7 @@ example_firewall_policy = azure.frontdoor.FirewallPolicy("exampleFirewallPolicy"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US 2"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleFirewallPolicy = new azure.frontdoor.FirewallPolicy("exampleFirewallPolicy", {
     resourceGroupName: exampleResourceGroup.name,
     enabled: true,

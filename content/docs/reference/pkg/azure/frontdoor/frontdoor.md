@@ -35,7 +35,7 @@ class MyStack : Stack
     {
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "EastUS2",
+            Location = "West Europe",
         });
         var exampleFrontdoor = new Azure.FrontDoor.Frontdoor("exampleFrontdoor", new Azure.FrontDoor.FrontdoorArgs
         {
@@ -130,7 +130,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("EastUS2"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -206,7 +206,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="EastUS2")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_frontdoor = azure.frontdoor.Frontdoor("exampleFrontdoor",
     location="EastUS2",
     resource_group_name=example_resource_group.name,
@@ -256,7 +256,7 @@ example_frontdoor = azure.frontdoor.Frontdoor("exampleFrontdoor",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "EastUS2"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleFrontdoor = new azure.frontdoor.Frontdoor("exampleFrontdoor", {
     location: "EastUS2",
     resourceGroupName: exampleResourceGroup.name,

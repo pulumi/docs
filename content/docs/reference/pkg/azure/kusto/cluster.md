@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
         {
-            Location = "East US",
+            Location = "West Europe",
         });
         var example = new Azure.Kusto.Cluster("example", new Azure.Kusto.ClusterArgs
         {
@@ -64,7 +64,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		rg, err := core.NewResourceGroup(ctx, "rg", &core.ResourceGroupArgs{
-			Location: pulumi.String("East US"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -95,7 +95,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-rg = azure.core.ResourceGroup("rg", location="East US")
+rg = azure.core.ResourceGroup("rg", location="West Europe")
 example = azure.kusto.Cluster("example",
     location=rg.location,
     resource_group_name=rg.name,
@@ -116,7 +116,7 @@ example = azure.kusto.Cluster("example",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const rg = new azure.core.ResourceGroup("rg", {location: "East US"});
+const rg = new azure.core.ResourceGroup("rg", {location: "West Europe"});
 const example = new azure.kusto.Cluster("example", {
     location: rg.location,
     resourceGroupName: rg.name,
@@ -144,7 +144,7 @@ const example = new azure.kusto.Cluster("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enable_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_purge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_streaming_ingest</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ClusterIdentityArgs]</span> = None<span class="p">, </span><span class="nx">language_extensions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimized_auto_scale</span><span class="p">:</span> <span class="nx">Optional[ClusterOptimizedAutoScaleArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ClusterSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_external_tenants</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[ClusterVirtualNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Cluster</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">double_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_purge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_streaming_ingest</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ClusterIdentityArgs]</span> = None<span class="p">, </span><span class="nx">language_extensions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimized_auto_scale</span><span class="p">:</span> <span class="nx">Optional[ClusterOptimizedAutoScaleArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ClusterSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_external_tenants</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[ClusterVirtualNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -337,6 +337,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="doubleencryptionenabled_csharp">
+<a href="#doubleencryptionenabled_csharp" style="color: inherit; text-decoration: inherit;">Double<wbr>Encryption<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the cluster's double encryption enabled? Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablediskencryption_csharp">
 <a href="#enablediskencryption_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Disk<wbr>Encryption</a>
 </span>
@@ -383,7 +393,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A identity block.
+    <dd>{{% md %}}An identity block.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -493,6 +503,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="doubleencryptionenabled_go">
+<a href="#doubleencryptionenabled_go" style="color: inherit; text-decoration: inherit;">Double<wbr>Encryption<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the cluster's double encryption enabled? Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablediskencryption_go">
 <a href="#enablediskencryption_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Disk<wbr>Encryption</a>
 </span>
@@ -539,7 +559,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}A identity block.
+    <dd>{{% md %}}An identity block.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -649,6 +669,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="doubleencryptionenabled_nodejs">
+<a href="#doubleencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">double<wbr>Encryption<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is the cluster's double encryption enabled? Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablediskencryption_nodejs">
 <a href="#enablediskencryption_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Disk<wbr>Encryption</a>
 </span>
@@ -695,7 +725,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}A identity block.
+    <dd>{{% md %}}An identity block.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -805,6 +835,16 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="double_encryption_enabled_python">
+<a href="#double_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">double_<wbr>encryption_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the cluster's double encryption enabled? Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enable_disk_encryption_python">
 <a href="#enable_disk_encryption_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>disk_<wbr>encryption</a>
 </span>
@@ -851,7 +891,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A identity block.
+    <dd>{{% md %}}An identity block.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1096,7 +1136,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_ingestion_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_purge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_streaming_ingest</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ClusterIdentityArgs]</span> = None<span class="p">, </span><span class="nx">language_extensions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimized_auto_scale</span><span class="p">:</span> <span class="nx">Optional[ClusterOptimizedAutoScaleArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ClusterSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_external_tenants</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[ClusterVirtualNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">data_ingestion_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">double_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_disk_encryption</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_purge</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_streaming_ingest</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ClusterIdentityArgs]</span> = None<span class="p">, </span><span class="nx">language_extensions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">optimized_auto_scale</span><span class="p">:</span> <span class="nx">Optional[ClusterOptimizedAutoScaleArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ClusterSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">trusted_external_tenants</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_network_configuration</span><span class="p">:</span> <span class="nx">Optional[ClusterVirtualNetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Cluster</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1221,6 +1261,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_doubleencryptionenabled_csharp">
+<a href="#state_doubleencryptionenabled_csharp" style="color: inherit; text-decoration: inherit;">Double<wbr>Encryption<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the cluster's double encryption enabled? Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_enablediskencryption_csharp">
 <a href="#state_enablediskencryption_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Disk<wbr>Encryption</a>
 </span>
@@ -1267,7 +1317,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A identity block.
+    <dd>{{% md %}}An identity block.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1397,6 +1447,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_doubleencryptionenabled_go">
+<a href="#state_doubleencryptionenabled_go" style="color: inherit; text-decoration: inherit;">Double<wbr>Encryption<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the cluster's double encryption enabled? Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_enablediskencryption_go">
 <a href="#state_enablediskencryption_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Disk<wbr>Encryption</a>
 </span>
@@ -1443,7 +1503,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}A identity block.
+    <dd>{{% md %}}An identity block.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1573,6 +1633,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_doubleencryptionenabled_nodejs">
+<a href="#state_doubleencryptionenabled_nodejs" style="color: inherit; text-decoration: inherit;">double<wbr>Encryption<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is the cluster's double encryption enabled? Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_enablediskencryption_nodejs">
 <a href="#state_enablediskencryption_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Disk<wbr>Encryption</a>
 </span>
@@ -1619,7 +1689,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}A identity block.
+    <dd>{{% md %}}An identity block.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1749,6 +1819,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_double_encryption_enabled_python">
+<a href="#state_double_encryption_enabled_python" style="color: inherit; text-decoration: inherit;">double_<wbr>encryption_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is the cluster's double encryption enabled? Defaults to `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_enable_disk_encryption_python">
 <a href="#state_enable_disk_encryption_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>disk_<wbr>encryption</a>
 </span>
@@ -1795,7 +1875,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteridentity">Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A identity block.
+    <dd>{{% md %}}An identity block.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1932,7 +2012,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of Managed Service Identity that is configured on this Kusto Cluster. Possible values are: `SystemAssigned` (where Azure will generate a Service Principal for you).
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that is configured on this Kusto Cluster. Possible values are: `SystemAssigned`, `UserAssigned` and `SystemAssigned, UserAssigned`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1942,7 +2022,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with the Kusto cluster.
+    <dd>{{% md %}}A list of IDs for User Assigned Managed Identity resources to be assigned.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1952,7 +2032,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Principal ID of the System Assigned Managed Service Identity that is configured on this Kusto Cluster.
+    <dd>{{% md %}}The Principal ID associated with this System Assigned Managed Service Identity.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1962,7 +2042,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Tenant ID of the System Assigned Managed Service Identity that is configured on this Kusto Cluster.
+    <dd>{{% md %}}The Tenant ID associated with this System Assigned Managed Service Identity.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1978,7 +2058,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of Managed Service Identity that is configured on this Kusto Cluster. Possible values are: `SystemAssigned` (where Azure will generate a Service Principal for you).
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that is configured on this Kusto Cluster. Possible values are: `SystemAssigned`, `UserAssigned` and `SystemAssigned, UserAssigned`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1988,7 +2068,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with the Kusto cluster.
+    <dd>{{% md %}}A list of IDs for User Assigned Managed Identity resources to be assigned.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1998,7 +2078,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Principal ID of the System Assigned Managed Service Identity that is configured on this Kusto Cluster.
+    <dd>{{% md %}}The Principal ID associated with this System Assigned Managed Service Identity.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2008,7 +2088,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Tenant ID of the System Assigned Managed Service Identity that is configured on this Kusto Cluster.
+    <dd>{{% md %}}The Tenant ID associated with this System Assigned Managed Service Identity.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2024,7 +2104,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of Managed Service Identity that is configured on this Kusto Cluster. Possible values are: `SystemAssigned` (where Azure will generate a Service Principal for you).
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that is configured on this Kusto Cluster. Possible values are: `SystemAssigned`, `UserAssigned` and `SystemAssigned, UserAssigned`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2034,7 +2114,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with the Kusto cluster.
+    <dd>{{% md %}}A list of IDs for User Assigned Managed Identity resources to be assigned.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2044,7 +2124,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Principal ID of the System Assigned Managed Service Identity that is configured on this Kusto Cluster.
+    <dd>{{% md %}}The Principal ID associated with this System Assigned Managed Service Identity.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2054,7 +2134,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Tenant ID of the System Assigned Managed Service Identity that is configured on this Kusto Cluster.
+    <dd>{{% md %}}The Tenant ID associated with this System Assigned Managed Service Identity.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2070,7 +2150,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of Managed Service Identity that is configured on this Kusto Cluster. Possible values are: `SystemAssigned` (where Azure will generate a Service Principal for you).
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that is configured on this Kusto Cluster. Possible values are: `SystemAssigned`, `UserAssigned` and `SystemAssigned, UserAssigned`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2080,7 +2160,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with the Kusto cluster.
+    <dd>{{% md %}}A list of IDs for User Assigned Managed Identity resources to be assigned.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2090,7 +2170,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the Principal ID of the System Assigned Managed Service Identity that is configured on this Kusto Cluster.
+    <dd>{{% md %}}The Principal ID associated with this System Assigned Managed Service Identity.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2100,7 +2180,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the Tenant ID of the System Assigned Managed Service Identity that is configured on this Kusto Cluster.
+    <dd>{{% md %}}The Tenant ID associated with this System Assigned Managed Service Identity.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2224,7 +2304,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU. Valid values are: `Dev(No SLA)_Standard_D11_v2`, `Dev(No SLA)_Standard_E2a_v4`, `Standard_D11_v2`, `Standard_D12_v2`, `Standard_D13_v2`, `Standard_D14_v2`, `Standard_DS13_v2+1TB_PS`, `Standard_DS13_v2+2TB_PS`, `Standard_DS14_v2+3TB_PS`, `Standard_DS14_v2+4TB_PS`, `Standard_E16as_v4+3TB_PS`, `Standard_E16as_v4+4TB_PS`, `Standard_E16a_v4`, `Standard_E2a_v4`, `Standard_E4a_v4`, `Standard_E8as_v4+1TB_PS`, `Standard_E8as_v4+2TB_PS`, `Standard_E8a_v4`, `Standard_L16s`, `Standard_L4s` and `Standard_L8s`
+    <dd>{{% md %}}The name of the SKU. Valid values are: `Dev(No SLA)_Standard_D11_v2`, `Dev(No SLA)_Standard_E2a_v4`, `Standard_D11_v2`, `Standard_D12_v2`, `Standard_D13_v2`, `Standard_D14_v2`, `Standard_DS13_v2+1TB_PS`, `Standard_DS13_v2+2TB_PS`, `Standard_DS14_v2+3TB_PS`, `Standard_DS14_v2+4TB_PS`, `Standard_E16as_v4+3TB_PS`, `Standard_E16as_v4+4TB_PS`, `Standard_E16a_v4`, `Standard_E2a_v4`, `Standard_E4a_v4`, `Standard_E64i_v3`, `Standard_E8as_v4+1TB_PS`, `Standard_E8as_v4+2TB_PS`, `Standard_E8a_v4`, `Standard_L16s`, `Standard_L4s` and `Standard_L8s`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2250,7 +2330,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU. Valid values are: `Dev(No SLA)_Standard_D11_v2`, `Dev(No SLA)_Standard_E2a_v4`, `Standard_D11_v2`, `Standard_D12_v2`, `Standard_D13_v2`, `Standard_D14_v2`, `Standard_DS13_v2+1TB_PS`, `Standard_DS13_v2+2TB_PS`, `Standard_DS14_v2+3TB_PS`, `Standard_DS14_v2+4TB_PS`, `Standard_E16as_v4+3TB_PS`, `Standard_E16as_v4+4TB_PS`, `Standard_E16a_v4`, `Standard_E2a_v4`, `Standard_E4a_v4`, `Standard_E8as_v4+1TB_PS`, `Standard_E8as_v4+2TB_PS`, `Standard_E8a_v4`, `Standard_L16s`, `Standard_L4s` and `Standard_L8s`
+    <dd>{{% md %}}The name of the SKU. Valid values are: `Dev(No SLA)_Standard_D11_v2`, `Dev(No SLA)_Standard_E2a_v4`, `Standard_D11_v2`, `Standard_D12_v2`, `Standard_D13_v2`, `Standard_D14_v2`, `Standard_DS13_v2+1TB_PS`, `Standard_DS13_v2+2TB_PS`, `Standard_DS14_v2+3TB_PS`, `Standard_DS14_v2+4TB_PS`, `Standard_E16as_v4+3TB_PS`, `Standard_E16as_v4+4TB_PS`, `Standard_E16a_v4`, `Standard_E2a_v4`, `Standard_E4a_v4`, `Standard_E64i_v3`, `Standard_E8as_v4+1TB_PS`, `Standard_E8as_v4+2TB_PS`, `Standard_E8a_v4`, `Standard_L16s`, `Standard_L4s` and `Standard_L8s`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2276,7 +2356,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU. Valid values are: `Dev(No SLA)_Standard_D11_v2`, `Dev(No SLA)_Standard_E2a_v4`, `Standard_D11_v2`, `Standard_D12_v2`, `Standard_D13_v2`, `Standard_D14_v2`, `Standard_DS13_v2+1TB_PS`, `Standard_DS13_v2+2TB_PS`, `Standard_DS14_v2+3TB_PS`, `Standard_DS14_v2+4TB_PS`, `Standard_E16as_v4+3TB_PS`, `Standard_E16as_v4+4TB_PS`, `Standard_E16a_v4`, `Standard_E2a_v4`, `Standard_E4a_v4`, `Standard_E8as_v4+1TB_PS`, `Standard_E8as_v4+2TB_PS`, `Standard_E8a_v4`, `Standard_L16s`, `Standard_L4s` and `Standard_L8s`
+    <dd>{{% md %}}The name of the SKU. Valid values are: `Dev(No SLA)_Standard_D11_v2`, `Dev(No SLA)_Standard_E2a_v4`, `Standard_D11_v2`, `Standard_D12_v2`, `Standard_D13_v2`, `Standard_D14_v2`, `Standard_DS13_v2+1TB_PS`, `Standard_DS13_v2+2TB_PS`, `Standard_DS14_v2+3TB_PS`, `Standard_DS14_v2+4TB_PS`, `Standard_E16as_v4+3TB_PS`, `Standard_E16as_v4+4TB_PS`, `Standard_E16a_v4`, `Standard_E2a_v4`, `Standard_E4a_v4`, `Standard_E64i_v3`, `Standard_E8as_v4+1TB_PS`, `Standard_E8as_v4+2TB_PS`, `Standard_E8a_v4`, `Standard_L16s`, `Standard_L4s` and `Standard_L8s`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2302,7 +2382,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the SKU. Valid values are: `Dev(No SLA)_Standard_D11_v2`, `Dev(No SLA)_Standard_E2a_v4`, `Standard_D11_v2`, `Standard_D12_v2`, `Standard_D13_v2`, `Standard_D14_v2`, `Standard_DS13_v2+1TB_PS`, `Standard_DS13_v2+2TB_PS`, `Standard_DS14_v2+3TB_PS`, `Standard_DS14_v2+4TB_PS`, `Standard_E16as_v4+3TB_PS`, `Standard_E16as_v4+4TB_PS`, `Standard_E16a_v4`, `Standard_E2a_v4`, `Standard_E4a_v4`, `Standard_E8as_v4+1TB_PS`, `Standard_E8as_v4+2TB_PS`, `Standard_E8a_v4`, `Standard_L16s`, `Standard_L4s` and `Standard_L8s`
+    <dd>{{% md %}}The name of the SKU. Valid values are: `Dev(No SLA)_Standard_D11_v2`, `Dev(No SLA)_Standard_E2a_v4`, `Standard_D11_v2`, `Standard_D12_v2`, `Standard_D13_v2`, `Standard_D14_v2`, `Standard_DS13_v2+1TB_PS`, `Standard_DS13_v2+2TB_PS`, `Standard_DS14_v2+3TB_PS`, `Standard_DS14_v2+4TB_PS`, `Standard_E16as_v4+3TB_PS`, `Standard_E16as_v4+4TB_PS`, `Standard_E16a_v4`, `Standard_E2a_v4`, `Standard_E4a_v4`, `Standard_E64i_v3`, `Standard_E8as_v4+1TB_PS`, `Standard_E8as_v4+2TB_PS`, `Standard_E8a_v4`, `Standard_L16s`, `Standard_L4s` and `Standard_L8s`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

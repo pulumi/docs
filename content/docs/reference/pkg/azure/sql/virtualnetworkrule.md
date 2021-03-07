@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var example = new Azure.Core.ResourceGroup("example", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US",
+            Location = "West Europe",
         });
         var vnet = new Azure.Network.VirtualNetwork("vnet", new Azure.Network.VirtualNetworkArgs
         {
@@ -87,7 +87,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		example, err := core.NewResourceGroup(ctx, "example", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -145,7 +145,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example = azure.core.ResourceGroup("example", location="West US")
+example = azure.core.ResourceGroup("example", location="West Europe")
 vnet = azure.network.VirtualNetwork("vnet",
     address_spaces=["10.7.29.0/29"],
     location=example.location,
@@ -175,7 +175,7 @@ sqlvnetrule = azure.sql.VirtualNetworkRule("sqlvnetrule",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = new azure.core.ResourceGroup("example", {location: "West US"});
+const example = new azure.core.ResourceGroup("example", {location: "West Europe"});
 const vnet = new azure.network.VirtualNetwork("vnet", {
     addressSpaces: ["10.7.29.0/29"],
     location: example.location,

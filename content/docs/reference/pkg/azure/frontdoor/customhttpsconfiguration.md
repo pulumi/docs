@@ -22,7 +22,7 @@ Manages the Custom Https Configuration for an Azure Front Door Frontend Endpoint
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "EastUS2"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const vault = azure.keyvault.getKeyVault({
     name: "example-vault",
     resourceGroupName: "example-vault-rg",
@@ -90,7 +90,7 @@ const exampleCustomHttps1 = new azure.frontdoor.CustomHttpsConfiguration("exampl
 import pulumi
 import pulumi_azure as azure
 
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="EastUS2")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 vault = azure.keyvault.get_key_vault(name="example-vault",
     resource_group_name="example-vault-rg")
 example_frontdoor = azure.frontdoor.Frontdoor("exampleFrontdoor",
@@ -159,7 +159,7 @@ class MyStack : Stack
     {
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "EastUS2",
+            Location = "West Europe",
         });
         var vault = Output.Create(Azure.KeyVault.GetKeyVault.InvokeAsync(new Azure.KeyVault.GetKeyVaultArgs
         {
@@ -276,7 +276,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("EastUS2"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err

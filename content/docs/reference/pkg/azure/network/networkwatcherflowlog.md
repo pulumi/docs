@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var testResourceGroup = new Azure.Core.ResourceGroup("testResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "eastus",
+            Location = "West Europe",
         });
         var testNetworkSecurityGroup = new Azure.Network.NetworkSecurityGroup("testNetworkSecurityGroup", new Azure.Network.NetworkSecurityGroupArgs
         {
@@ -98,7 +98,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		testResourceGroup, err := core.NewResourceGroup(ctx, "testResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("eastus"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -169,7 +169,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-test_resource_group = azure.core.ResourceGroup("testResourceGroup", location="eastus")
+test_resource_group = azure.core.ResourceGroup("testResourceGroup", location="West Europe")
 test_network_security_group = azure.network.NetworkSecurityGroup("testNetworkSecurityGroup",
     location=test_resource_group.location,
     resource_group_name=test_resource_group.name)
@@ -214,7 +214,7 @@ test_network_watcher_flow_log = azure.network.NetworkWatcherFlowLog("testNetwork
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const testResourceGroup = new azure.core.ResourceGroup("testResourceGroup", {location: "eastus"});
+const testResourceGroup = new azure.core.ResourceGroup("testResourceGroup", {location: "West Europe"});
 const testNetworkSecurityGroup = new azure.network.NetworkSecurityGroup("testNetworkSecurityGroup", {
     location: testResourceGroup.location,
     resourceGroupName: testResourceGroup.name,

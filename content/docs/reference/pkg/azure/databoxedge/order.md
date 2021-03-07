@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "East US",
+            Location = "West Europe",
         });
         var exampleDevice = new Azure.DataboxEdge.Device("exampleDevice", new Azure.DataboxEdge.DeviceArgs
         {
@@ -82,7 +82,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("East US"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -131,7 +131,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="East US")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_device = azure.databoxedge.Device("exampleDevice",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
@@ -162,7 +162,7 @@ example_order = azure.databoxedge.Order("exampleOrder",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "East US"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleDevice = new azure.databoxedge.Device("exampleDevice", {
     resourceGroupName: exampleResourceGroup.name,
     location: exampleResourceGroup.location,

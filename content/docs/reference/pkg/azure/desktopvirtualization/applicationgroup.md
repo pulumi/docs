@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var example = new Azure.Core.ResourceGroup("example", new Azure.Core.ResourceGroupArgs
         {
-            Location = "eastus",
+            Location = "West Europe",
         });
         var pooledbreadthfirst = new Azure.DesktopVirtualization.HostPool("pooledbreadthfirst", new Azure.DesktopVirtualization.HostPoolArgs
         {
@@ -82,7 +82,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		example, err := core.NewResourceGroup(ctx, "example", &core.ResourceGroupArgs{
-			Location: pulumi.String("eastus"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -139,7 +139,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example = azure.core.ResourceGroup("example", location="eastus")
+example = azure.core.ResourceGroup("example", location="West Europe")
 pooledbreadthfirst = azure.desktopvirtualization.HostPool("pooledbreadthfirst",
     location=example.location,
     resource_group_name=example.name,
@@ -174,7 +174,7 @@ desktopapp = azure.desktopvirtualization.ApplicationGroup("desktopapp",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = new azure.core.ResourceGroup("example", {location: "eastus"});
+const example = new azure.core.ResourceGroup("example", {location: "West Europe"});
 const pooledbreadthfirst = new azure.desktopvirtualization.HostPool("pooledbreadthfirst", {
     location: example.location,
     resourceGroupName: example.name,

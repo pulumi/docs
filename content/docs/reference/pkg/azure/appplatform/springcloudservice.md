@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "Southeast Asia",
+            Location = "West Europe",
         });
         var exampleInsights = new Azure.AppInsights.Insights("exampleInsights", new Azure.AppInsights.InsightsArgs
         {
@@ -81,7 +81,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("Southeast Asia"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -128,7 +128,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="Southeast Asia")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_insights = azure.appinsights.Insights("exampleInsights",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
@@ -161,7 +161,7 @@ example_spring_cloud_service = azure.appplatform.SpringCloudService("exampleSpri
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "Southeast Asia"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleInsights = new azure.appinsights.Insights("exampleInsights", {
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,

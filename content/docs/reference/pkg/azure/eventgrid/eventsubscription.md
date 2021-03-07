@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var defaultResourceGroup = new Azure.Core.ResourceGroup("defaultResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US 2",
+            Location = "West Europe",
         });
         var defaultAccount = new Azure.Storage.Account("defaultAccount", new Azure.Storage.AccountArgs
         {
@@ -75,7 +75,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		defaultResourceGroup, err := core.NewResourceGroup(ctx, "defaultResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US 2"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -120,7 +120,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-default_resource_group = azure.core.ResourceGroup("defaultResourceGroup", location="West US 2")
+default_resource_group = azure.core.ResourceGroup("defaultResourceGroup", location="West Europe")
 default_account = azure.storage.Account("defaultAccount",
     resource_group_name=default_resource_group.name,
     location=default_resource_group.location,
@@ -146,7 +146,7 @@ default_event_subscription = azure.eventgrid.EventSubscription("defaultEventSubs
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const defaultResourceGroup = new azure.core.ResourceGroup("defaultResourceGroup", {location: "West US 2"});
+const defaultResourceGroup = new azure.core.ResourceGroup("defaultResourceGroup", {location: "West Europe"});
 const defaultAccount = new azure.storage.Account("defaultAccount", {
     resourceGroupName: defaultResourceGroup.name,
     location: defaultResourceGroup.location,

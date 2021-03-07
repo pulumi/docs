@@ -32,7 +32,7 @@ class MyStack : Stack
     {
         var example = new Azure.Core.ResourceGroup("example", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US",
+            Location = "West Europe",
         });
         var example_1VirtualNetwork = new Azure.Network.VirtualNetwork("example-1VirtualNetwork", new Azure.Network.VirtualNetworkArgs
         {
@@ -84,7 +84,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		example, err := core.NewResourceGroup(ctx, "example", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -137,7 +137,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example = azure.core.ResourceGroup("example", location="West US")
+example = azure.core.ResourceGroup("example", location="West Europe")
 example_1_virtual_network = azure.network.VirtualNetwork("example-1VirtualNetwork",
     resource_group_name=example.name,
     address_spaces=["10.0.1.0/24"],
@@ -164,7 +164,7 @@ example_2_virtual_network_peering = azure.network.VirtualNetworkPeering("example
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = new azure.core.ResourceGroup("example", {location: "West US"});
+const example = new azure.core.ResourceGroup("example", {location: "West Europe"});
 const example_1VirtualNetwork = new azure.network.VirtualNetwork("example-1VirtualNetwork", {
     resourceGroupName: example.name,
     addressSpaces: ["10.0.1.0/24"],

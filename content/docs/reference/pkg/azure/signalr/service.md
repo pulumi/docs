@@ -57,6 +57,26 @@ class MyStack : Stack
                     Value = "Default",
                 },
             },
+            UpstreamEndpoints = 
+            {
+                new Azure.SignalR.Inputs.ServiceUpstreamEndpointArgs
+                {
+                    CategoryPatterns = 
+                    {
+                        "connections",
+                        "messages",
+                    },
+                    EventPatterns = 
+                    {
+                        "*",
+                    },
+                    HubPatterns = 
+                    {
+                        "hub1",
+                    },
+                    UrlTemplate = "http://foo.com",
+                },
+            },
         });
     }
 
@@ -103,6 +123,21 @@ func main() {
 					Value: pulumi.String("Default"),
 				},
 			},
+			UpstreamEndpoints: signalr.ServiceUpstreamEndpointArray{
+				&signalr.ServiceUpstreamEndpointArgs{
+					CategoryPatterns: pulumi.StringArray{
+						pulumi.String("connections"),
+						pulumi.String("messages"),
+					},
+					EventPatterns: pulumi.StringArray{
+						pulumi.String("*"),
+					},
+					HubPatterns: pulumi.StringArray{
+						pulumi.String("hub1"),
+					},
+					UrlTemplate: pulumi.String("http://foo.com"),
+				},
+			},
 		})
 		if err != nil {
 			return err
@@ -133,6 +168,15 @@ example_service = azure.signalr.Service("exampleService",
     features=[azure.signalr.ServiceFeatureArgs(
         flag="ServiceMode",
         value="Default",
+    )],
+    upstream_endpoints=[azure.signalr.ServiceUpstreamEndpointArgs(
+        category_patterns=[
+            "connections",
+            "messages",
+        ],
+        event_patterns=["*"],
+        hub_patterns=["hub1"],
+        url_template="http://foo.com",
     )])
 ```
 
@@ -159,6 +203,15 @@ const exampleService = new azure.signalr.Service("exampleService", {
         flag: "ServiceMode",
         value: "Default",
     }],
+    upstreamEndpoints: [{
+        categoryPatterns: [
+            "connections",
+            "messages",
+        ],
+        eventPatterns: ["*"],
+        hubPatterns: ["hub1"],
+        urlTemplate: "http://foo.com",
+    }],
 });
 ```
 
@@ -176,7 +229,7 @@ const exampleService = new azure.signalr.Service("exampleService", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCorArgs]]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceFeatureArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ServiceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Service</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCorArgs]]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceFeatureArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ServiceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">upstream_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceUpstreamEndpointArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -417,6 +470,16 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="upstreamendpoints_csharp">
+<a href="#upstreamendpoints_csharp" style="color: inherit; text-decoration: inherit;">Upstream<wbr>Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceupstreamendpoint">List&lt;Service<wbr>Upstream<wbr>Endpoint<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An `upstream_endpoint` block as documented below. Using this block requires the SignalR service to be Serverless. When creating multiple blocks they will be processed in the order they are defined in.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -492,6 +555,16 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="upstreamendpoints_go">
+<a href="#upstreamendpoints_go" style="color: inherit; text-decoration: inherit;">Upstream<wbr>Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceupstreamendpoint">[]Service<wbr>Upstream<wbr>Endpoint</a></span>
+    </dt>
+    <dd>{{% md %}}An `upstream_endpoint` block as documented below. Using this block requires the SignalR service to be Serverless. When creating multiple blocks they will be processed in the order they are defined in.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -569,6 +642,16 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="upstreamendpoints_nodejs">
+<a href="#upstreamendpoints_nodejs" style="color: inherit; text-decoration: inherit;">upstream<wbr>Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceupstreamendpoint">Service<wbr>Upstream<wbr>Endpoint[]</a></span>
+    </dt>
+    <dd>{{% md %}}An `upstream_endpoint` block as documented below. Using this block requires the SignalR service to be Serverless. When creating multiple blocks they will be processed in the order they are defined in.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -644,6 +727,16 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="upstream_endpoints_python">
+<a href="#upstream_endpoints_python" style="color: inherit; text-decoration: inherit;">upstream_<wbr>endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceupstreamendpoint">Sequence[Service<wbr>Upstream<wbr>Endpoint<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}An `upstream_endpoint` block as documented below. Using this block requires the SignalR service to be Serverless. When creating multiple blocks they will be processed in the order they are defined in.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1048,7 +1141,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCorArgs]]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceFeatureArgs]]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ServiceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cors</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceCorArgs]]</span> = None<span class="p">, </span><span class="nx">features</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceFeatureArgs]]</span> = None<span class="p">, </span><span class="nx">hostname</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_access_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">secondary_connection_string</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ServiceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">upstream_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[ServiceUpstreamEndpointArgs]]</span> = None<span class="p">) -&gt;</span> Service</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1311,6 +1404,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_upstreamendpoints_csharp">
+<a href="#state_upstreamendpoints_csharp" style="color: inherit; text-decoration: inherit;">Upstream<wbr>Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceupstreamendpoint">List&lt;Service<wbr>Upstream<wbr>Endpoint<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An `upstream_endpoint` block as documented below. Using this block requires the SignalR service to be Serverless. When creating multiple blocks they will be processed in the order they are defined in.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1466,6 +1569,16 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_upstreamendpoints_go">
+<a href="#state_upstreamendpoints_go" style="color: inherit; text-decoration: inherit;">Upstream<wbr>Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceupstreamendpoint">[]Service<wbr>Upstream<wbr>Endpoint</a></span>
+    </dt>
+    <dd>{{% md %}}An `upstream_endpoint` block as documented below. Using this block requires the SignalR service to be Serverless. When creating multiple blocks they will be processed in the order they are defined in.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1623,6 +1736,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_upstreamendpoints_nodejs">
+<a href="#state_upstreamendpoints_nodejs" style="color: inherit; text-decoration: inherit;">upstream<wbr>Endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceupstreamendpoint">Service<wbr>Upstream<wbr>Endpoint[]</a></span>
+    </dt>
+    <dd>{{% md %}}An `upstream_endpoint` block as documented below. Using this block requires the SignalR service to be Serverless. When creating multiple blocks they will be processed in the order they are defined in.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1778,6 +1901,16 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_upstream_endpoints_python">
+<a href="#state_upstream_endpoints_python" style="color: inherit; text-decoration: inherit;">upstream_<wbr>endpoints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceupstreamendpoint">Sequence[Service<wbr>Upstream<wbr>Endpoint<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}An `upstream_endpoint` block as documented below. Using this block requires the SignalR service to be Serverless. When creating multiple blocks they will be processed in the order they are defined in.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2065,6 +2198,192 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies which tier to use. Valid values are `Free_F1` and `Standard_S1`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="serviceupstreamendpoint">Service<wbr>Upstream<wbr>Endpoint</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="categorypatterns_csharp">
+<a href="#categorypatterns_csharp" style="color: inherit; text-decoration: inherit;">Category<wbr>Patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The categories to match on, or `*` for all.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="eventpatterns_csharp">
+<a href="#eventpatterns_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The events to match on, or `*` for all.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="hubpatterns_csharp">
+<a href="#hubpatterns_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>Patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The hubs to match on, or `*` for all.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="urltemplate_csharp">
+<a href="#urltemplate_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The upstream URL Template. This can be a url or a template such as `http://host.com/{hub}/api/{category}/{event}`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="categorypatterns_go">
+<a href="#categorypatterns_go" style="color: inherit; text-decoration: inherit;">Category<wbr>Patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The categories to match on, or `*` for all.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="eventpatterns_go">
+<a href="#eventpatterns_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The events to match on, or `*` for all.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="hubpatterns_go">
+<a href="#hubpatterns_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>Patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The hubs to match on, or `*` for all.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="urltemplate_go">
+<a href="#urltemplate_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The upstream URL Template. This can be a url or a template such as `http://host.com/{hub}/api/{category}/{event}`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="categorypatterns_nodejs">
+<a href="#categorypatterns_nodejs" style="color: inherit; text-decoration: inherit;">category<wbr>Patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The categories to match on, or `*` for all.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="eventpatterns_nodejs">
+<a href="#eventpatterns_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The events to match on, or `*` for all.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="hubpatterns_nodejs">
+<a href="#hubpatterns_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The hubs to match on, or `*` for all.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="urltemplate_nodejs">
+<a href="#urltemplate_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The upstream URL Template. This can be a url or a template such as `http://host.com/{hub}/api/{category}/{event}`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="category_patterns_python">
+<a href="#category_patterns_python" style="color: inherit; text-decoration: inherit;">category_<wbr>patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The categories to match on, or `*` for all.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="event_patterns_python">
+<a href="#event_patterns_python" style="color: inherit; text-decoration: inherit;">event_<wbr>patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The events to match on, or `*` for all.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="hub_patterns_python">
+<a href="#hub_patterns_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>patterns</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The hubs to match on, or `*` for all.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="url_template_python">
+<a href="#url_template_python" style="color: inherit; text-decoration: inherit;">url_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The upstream URL Template. This can be a url or a template such as `http://host.com/{hub}/api/{category}/{event}`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

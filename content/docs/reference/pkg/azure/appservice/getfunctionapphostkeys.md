@@ -254,6 +254,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="eventgridextensionconfigkey_csharp">
+<a href="#eventgridextensionconfigkey_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Grid<wbr>Extension<wbr>Config<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Function App resource's Event Grid Extension Config system key.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -314,6 +324,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Function App resource's default function key.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="eventgridextensionconfigkey_go">
+<a href="#eventgridextensionconfigkey_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Grid<wbr>Extension<wbr>Config<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Function App resource's Event Grid Extension Config system key.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -380,6 +400,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="eventgridextensionconfigkey_nodejs">
+<a href="#eventgridextensionconfigkey_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Grid<wbr>Extension<wbr>Config<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Function App resource's Event Grid Extension Config system key.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -440,6 +470,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Function App resource's default function key.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="event_grid_extension_config_key_python">
+<a href="#event_grid_extension_config_key_python" style="color: inherit; text-decoration: inherit;">event_<wbr>grid_<wbr>extension_<wbr>config_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Function App resource's Event Grid Extension Config system key.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">

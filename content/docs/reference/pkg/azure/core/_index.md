@@ -15,6 +15,7 @@ Explore the resources and functions of the azure.core module.
     <li><a href="resourcegroup" title="ResourceGroup"><span class="symbol resource"></span>ResourceGroup</a></li>
     <li><a href="resourcegrouptemplatedeployment" title="ResourceGroupTemplateDeployment"><span class="symbol resource"></span>ResourceGroupTemplateDeployment</a></li>
     <li><a href="resourceproviderregistration" title="ResourceProviderRegistration"><span class="symbol resource"></span>ResourceProviderRegistration</a></li>
+    <li><a href="subscription" title="Subscription"><span class="symbol resource"></span>Subscription</a></li>
     <li><a href="subscriptiontemplatedeployment" title="SubscriptionTemplateDeployment"><span class="symbol resource"></span>SubscriptionTemplateDeployment</a></li>
     <li><a href="templatedeployment" title="TemplateDeployment"><span class="symbol resource"></span>TemplateDeployment</a></li>
 </ul>
@@ -38,6 +39,6 @@ Explore the resources and functions of the azure.core module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.49.0</dd>
+	<dd>3.50.0</dd>
 </dl>
 

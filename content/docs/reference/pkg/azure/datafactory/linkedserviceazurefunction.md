@@ -30,7 +30,7 @@ class MyStack : Stack
     {
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "northeurope",
+            Location = "West Europe",
         });
         var exampleFunctionApp = exampleResourceGroup.Name.Apply(name => Azure.AppService.GetFunctionApp.InvokeAsync(new Azure.AppService.GetFunctionAppArgs
         {
@@ -72,7 +72,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("northeurope"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -107,7 +107,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_function_app = example_resource_group.name.apply(lambda name: azure.appservice.get_function_app(name="test-azure-functions",
     resource_group_name=name))
 example_factory = azure.datafactory.Factory("exampleFactory",
@@ -128,7 +128,7 @@ example_linked_service_azure_function = azure.datafactory.LinkedServiceAzureFunc
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleFunctionApp = exampleResourceGroup.name.apply(name => azure.appservice.getFunctionApp({
     name: "test-azure-functions",
     resourceGroupName: name,

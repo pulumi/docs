@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US",
+            Location = "West Europe",
         });
         var acr = new Azure.ContainerService.Registry("acr", new Azure.ContainerService.RegistryArgs
         {
@@ -74,7 +74,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		rg, err := core.NewResourceGroup(ctx, "rg", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -117,7 +117,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-rg = azure.core.ResourceGroup("rg", location="West US")
+rg = azure.core.ResourceGroup("rg", location="West Europe")
 acr = azure.containerservice.Registry("acr",
     resource_group_name=rg.name,
     location=rg.location,
@@ -144,7 +144,7 @@ webhook = azure.containerservice.RegistryWebhook("webhook",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const rg = new azure.core.ResourceGroup("rg", {location: "West US"});
+const rg = new azure.core.ResourceGroup("rg", {location: "West Europe"});
 const acr = new azure.containerservice.Registry("acr", {
     resourceGroupName: rg.name,
     location: rg.location,

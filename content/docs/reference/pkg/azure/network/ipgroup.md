@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "westus",
+            Location = "West Europe",
         });
         var exampleIPGroup = new Azure.Network.IPGroup("exampleIPGroup", new Azure.Network.IPGroupArgs
         {
@@ -65,7 +65,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("westus"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -97,7 +97,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="westus")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_ip_group = azure.network.IPGroup("exampleIPGroup",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
@@ -119,7 +119,7 @@ example_ip_group = azure.network.IPGroup("exampleIPGroup",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "westus"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleIPGroup = new azure.network.IPGroup("exampleIPGroup", {
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,

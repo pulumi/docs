@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US",
+            Location = "West Europe",
         });
         var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
         {
@@ -77,7 +77,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -122,7 +122,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_account = azure.storage.Account("exampleAccount",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
@@ -153,7 +153,7 @@ example_sql_server = azure.sql.SqlServer("exampleSqlServer",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleAccount = new azure.storage.Account("exampleAccount", {
     resourceGroupName: exampleResourceGroup.name,
     location: exampleResourceGroup.location,
@@ -1492,25 +1492,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="storageaccountaccesskey_csharp">
-<a href="#storageaccountaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logmonitoringenabled_csharp">
+<a href="#logmonitoringenabled_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Monitoring<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}(Required)  Specifies the access key to use for the auditing storage account.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="storageendpoint_csharp">
-<a href="#storageendpoint_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}(Required) Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
+    <dd>{{% md %}}(Optional) Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its master database audit events to Azure Monitor.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1524,6 +1514,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="storageaccountaccesskey_csharp">
+<a href="#storageaccountaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional)  Specifies the access key to use for the auditing storage account.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="storageaccountaccesskeyissecondary_csharp">
 <a href="#storageaccountaccesskeyissecondary_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
 </span>
@@ -1532,31 +1532,31 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Optional) Specifies whether `storage_account_access_key` value is the storage's secondary key.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageendpoint_csharp">
+<a href="#storageendpoint_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="storageaccountaccesskey_go">
-<a href="#storageaccountaccesskey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logmonitoringenabled_go">
+<a href="#logmonitoringenabled_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Monitoring<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}(Required)  Specifies the access key to use for the auditing storage account.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="storageendpoint_go">
-<a href="#storageendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}(Required) Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
+    <dd>{{% md %}}(Optional) Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its master database audit events to Azure Monitor.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1570,6 +1570,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="storageaccountaccesskey_go">
+<a href="#storageaccountaccesskey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional)  Specifies the access key to use for the auditing storage account.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="storageaccountaccesskeyissecondary_go">
 <a href="#storageaccountaccesskeyissecondary_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
 </span>
@@ -1578,31 +1588,31 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Optional) Specifies whether `storage_account_access_key` value is the storage's secondary key.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageendpoint_go">
+<a href="#storageendpoint_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="storageaccountaccesskey_nodejs">
-<a href="#storageaccountaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logmonitoringenabled_nodejs">
+<a href="#logmonitoringenabled_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Monitoring<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}(Required)  Specifies the access key to use for the auditing storage account.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="storageendpoint_nodejs">
-<a href="#storageendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}(Required) Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
+    <dd>{{% md %}}(Optional) Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its master database audit events to Azure Monitor.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1616,6 +1626,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="storageaccountaccesskey_nodejs">
+<a href="#storageaccountaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional)  Specifies the access key to use for the auditing storage account.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="storageaccountaccesskeyissecondary_nodejs">
 <a href="#storageaccountaccesskeyissecondary_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Access<wbr>Key<wbr>Is<wbr>Secondary</a>
 </span>
@@ -1624,31 +1644,31 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Optional) Specifies whether `storage_account_access_key` value is the storage's secondary key.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageendpoint_nodejs">
+<a href="#storageendpoint_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="storage_account_access_key_python">
-<a href="#storage_account_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_monitoring_enabled_python">
+<a href="#log_monitoring_enabled_python" style="color: inherit; text-decoration: inherit;">log_<wbr>monitoring_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}(Required)  Specifies the access key to use for the auditing storage account.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="storage_endpoint_python">
-<a href="#storage_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>endpoint</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}(Required) Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
+    <dd>{{% md %}}(Optional) Enable audit events to Azure Monitor? To enable server audit events to Azure Monitor, please enable its master database audit events to Azure Monitor.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1662,6 +1682,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="storage_account_access_key_python">
+<a href="#storage_account_access_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Optional)  Specifies the access key to use for the auditing storage account.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="storage_account_access_key_is_secondary_python">
 <a href="#storage_account_access_key_is_secondary_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>access_<wbr>key_<wbr>is_<wbr>secondary</a>
 </span>
@@ -1669,6 +1699,16 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}(Optional) Specifies whether `storage_account_access_key` value is the storage's secondary key.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storage_endpoint_python">
+<a href="#storage_endpoint_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

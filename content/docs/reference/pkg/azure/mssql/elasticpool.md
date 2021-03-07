@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "westeurope",
+            Location = "West Europe",
         });
         var exampleSqlServer = new Azure.Sql.SqlServer("exampleSqlServer", new Azure.Sql.SqlServerArgs
         {
@@ -79,7 +79,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("westeurope"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -126,7 +126,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="westeurope")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_sql_server = azure.sql.SqlServer("exampleSqlServer",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
@@ -159,7 +159,7 @@ example_elastic_pool = azure.mssql.ElasticPool("exampleElasticPool",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "westeurope"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleSqlServer = new azure.sql.SqlServer("exampleSqlServer", {
     resourceGroupName: exampleResourceGroup.name,
     location: exampleResourceGroup.location,

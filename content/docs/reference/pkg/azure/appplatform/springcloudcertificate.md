@@ -29,7 +29,7 @@ class MyStack : Stack
     {
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "Southeast Asia",
+            Location = "West Europe",
         });
         var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
         var exampleServicePrincipal = Output.Create(AzureAD.GetServicePrincipal.InvokeAsync(new AzureAD.GetServicePrincipalArgs
@@ -160,7 +160,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("Southeast Asia"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -282,7 +282,7 @@ import pulumi
 import pulumi_azure as azure
 import pulumi_azuread as azuread
 
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="Southeast Asia")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 current = azure.core.get_client_config()
 example_service_principal = azuread.get_service_principal(display_name="Azure Spring Cloud Domain-Management")
 example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
@@ -369,7 +369,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 import * as azuread from "@pulumi/azuread";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "Southeast Asia"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const current = azure.core.getClientConfig({});
 const exampleServicePrincipal = azuread.getServicePrincipal({
     displayName: "Azure Spring Cloud Domain-Management",

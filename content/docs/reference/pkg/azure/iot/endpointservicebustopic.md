@@ -30,7 +30,7 @@ class MyStack : Stack
     {
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "East US",
+            Location = "West Europe",
         });
         var exampleNamespace = new Azure.ServiceBus.Namespace("exampleNamespace", new Azure.ServiceBus.NamespaceArgs
         {
@@ -94,7 +94,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("East US"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -160,7 +160,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="East US")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_namespace = azure.servicebus.Namespace("exampleNamespace",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
@@ -200,7 +200,7 @@ example_endpoint_servicebus_topic = azure.iot.EndpointServicebusTopic("exampleEn
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "East US"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleNamespace = new azure.servicebus.Namespace("exampleNamespace", {
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,

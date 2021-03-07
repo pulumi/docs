@@ -50,7 +50,7 @@ class MyStack : Stack
         });
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "westeurope",
+            Location = "West Europe",
             Tags = 
             {
                 { "Environment", "example" },
@@ -137,7 +137,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		exampleSubscription, err := core.GetSubscription(ctx, nil, nil)
+		exampleSubscription, err := core.LookupSubscription(ctx, nil, nil)
 		if err != nil {
 			return err
 		}
@@ -157,7 +157,7 @@ func main() {
 			return err
 		}
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("westeurope"),
+			Location: pulumi.String("West Europe"),
 			Tags: pulumi.StringMap{
 				"Environment": pulumi.String("example"),
 			},
@@ -231,7 +231,7 @@ example_published_version = azure.blueprint.get_published_version(scope_id=examp
     blueprint_name=example_definition.name,
     version="v1.0.0")
 example_resource_group = azure.core.ResourceGroup("exampleResourceGroup",
-    location="westeurope",
+    location="West Europe",
     tags={
         "Environment": "example",
     })
@@ -294,7 +294,7 @@ const examplePublishedVersion = Promise.all([exampleDefinition, exampleDefinitio
     version: "v1.0.0",
 }));
 const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {
-    location: "westeurope",
+    location: "West Europe",
     tags: {
         Environment: "example",
     },

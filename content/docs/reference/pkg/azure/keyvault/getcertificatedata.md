@@ -42,7 +42,7 @@ class MyStack : Stack
             Name = "secret-sauce",
             KeyVaultId = exampleKeyVault.Id,
         })));
-        this.ExamplePem = data.Azurerm_key_vault_certificate.Example.Pem;
+        this.ExamplePem = exampleCertificateData.Apply(exampleCertificateData => exampleCertificateData.Pem);
     }
 
     [Output("examplePem")]
@@ -70,14 +70,14 @@ func main() {
 		if err != nil {
 			return err
 		}
-		_, err = keyvault.GetCertificateData(ctx, &keyvault.GetCertificateDataArgs{
+		exampleCertificateData, err := keyvault.GetCertificateData(ctx, &keyvault.GetCertificateDataArgs{
 			Name:       "secret-sauce",
 			KeyVaultId: exampleKeyVault.Id,
 		}, nil)
 		if err != nil {
 			return err
 		}
-		ctx.Export("examplePem", data.Azurerm_key_vault_certificate.Example.Pem)
+		ctx.Export("examplePem", exampleCertificateData.Pem)
 		return nil
 	})
 }
@@ -94,7 +94,7 @@ example_key_vault = azure.keyvault.get_key_vault(name="examplekv",
     resource_group_name="some-resource-group")
 example_certificate_data = azure.keyvault.get_certificate_data(name="secret-sauce",
     key_vault_id=example_key_vault.id)
-pulumi.export("examplePem", data["azurerm_key_vault_certificate"]["example"]["pem"])
+pulumi.export("examplePem", example_certificate_data.pem)
 ```
 
 {{% /example %}}
@@ -113,7 +113,7 @@ const exampleCertificateData = exampleKeyVault.then(exampleKeyVault => azure.key
     name: "secret-sauce",
     keyVaultId: exampleKeyVault.id,
 }));
-export const examplePem = data.azurerm_key_vault_certificate.example.pem;
+export const examplePem = exampleCertificateData.then(exampleCertificateData => exampleCertificateData.pem);
 ```
 
 {{% /example %}}
