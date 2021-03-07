@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US",
+            Location = "West Europe",
         });
         var vault = new Azure.RecoveryServices.Vault("vault", new Azure.RecoveryServices.VaultArgs
         {
@@ -97,7 +97,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		rg, err := core.NewResourceGroup(ctx, "rg", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -169,7 +169,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-rg = azure.core.ResourceGroup("rg", location="West US")
+rg = azure.core.ResourceGroup("rg", location="West Europe")
 vault = azure.recoveryservices.Vault("vault",
     location=rg.location,
     resource_group_name=rg.name,
@@ -210,7 +210,7 @@ share1 = azure.backup.ProtectedFileShare("share1",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const rg = new azure.core.ResourceGroup("rg", {location: "West US"});
+const rg = new azure.core.ResourceGroup("rg", {location: "West Europe"});
 const vault = new azure.recoveryservices.Vault("vault", {
     location: rg.location,
     resourceGroupName: rg.name,

@@ -35,7 +35,7 @@ Coming soon!
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const storage = new azure.storage.Account("storage", {
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,

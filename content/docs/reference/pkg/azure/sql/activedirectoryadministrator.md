@@ -29,7 +29,7 @@ class MyStack : Stack
         var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US",
+            Location = "West Europe",
         });
         var exampleSqlServer = new Azure.Sql.SqlServer("exampleSqlServer", new Azure.Sql.SqlServerArgs
         {
@@ -71,7 +71,7 @@ func main() {
 			return err
 		}
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -109,7 +109,7 @@ import pulumi
 import pulumi_azure as azure
 
 current = azure.core.get_client_config()
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_sql_server = azure.sql.SqlServer("exampleSqlServer",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
@@ -133,7 +133,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
 const current = azure.core.getClientConfig({});
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleSqlServer = new azure.sql.SqlServer("exampleSqlServer", {
     resourceGroupName: exampleResourceGroup.name,
     location: exampleResourceGroup.location,

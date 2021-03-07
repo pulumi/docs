@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var example = new Azure.Core.ResourceGroup("example", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US",
+            Location = "West Europe",
         });
         var testZone = new Azure.PrivateDns.Zone("testZone", new Azure.PrivateDns.ZoneArgs
         {
@@ -67,7 +67,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := core.NewResourceGroup(ctx, "example", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -103,7 +103,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example = azure.core.ResourceGroup("example", location="West US")
+example = azure.core.ResourceGroup("example", location="West Europe")
 test_zone = azure.privatedns.Zone("testZone", resource_group_name=azurerm_resource_group["test"]["name"])
 test_txt_record = azure.privatedns.TxtRecord("testTxtRecord",
     resource_group_name=azurerm_resource_group["test"]["name"],
@@ -122,7 +122,7 @@ test_txt_record = azure.privatedns.TxtRecord("testTxtRecord",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = new azure.core.ResourceGroup("example", {location: "West US"});
+const example = new azure.core.ResourceGroup("example", {location: "West Europe"});
 const testZone = new azure.privatedns.Zone("testZone", {resourceGroupName: azurerm_resource_group.test.name});
 const testTxtRecord = new azure.privatedns.TxtRecord("testTxtRecord", {
     resourceGroupName: azurerm_resource_group.test.name,

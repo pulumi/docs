@@ -36,7 +36,7 @@ class MyStack : Stack
         var prefix = config.Get("prefix") ?? "tfvmex";
         var mainResourceGroup = new Azure.Core.ResourceGroup("mainResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US 2",
+            Location = "West Europe",
         });
         var mainVirtualNetwork = new Azure.Network.VirtualNetwork("mainVirtualNetwork", new Azure.Network.VirtualNetworkArgs
         {
@@ -135,7 +135,7 @@ func main() {
 			prefix = param
 		}
 		mainResourceGroup, err := core.NewResourceGroup(ctx, "mainResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US 2"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -224,7 +224,7 @@ config = pulumi.Config()
 prefix = config.get("prefix")
 if prefix is None:
     prefix = "tfvmex"
-main_resource_group = azure.core.ResourceGroup("mainResourceGroup", location="West US 2")
+main_resource_group = azure.core.ResourceGroup("mainResourceGroup", location="West Europe")
 main_virtual_network = azure.network.VirtualNetwork("mainVirtualNetwork",
     address_spaces=["10.0.0.0/16"],
     location=main_resource_group.location,
@@ -281,7 +281,7 @@ import * as azure from "@pulumi/azure";
 
 const config = new pulumi.Config();
 const prefix = config.get("prefix") || "tfvmex";
-const mainResourceGroup = new azure.core.ResourceGroup("mainResourceGroup", {location: "West US 2"});
+const mainResourceGroup = new azure.core.ResourceGroup("mainResourceGroup", {location: "West Europe"});
 const mainVirtualNetwork = new azure.network.VirtualNetwork("mainVirtualNetwork", {
     addressSpaces: ["10.0.0.0/16"],
     location: mainResourceGroup.location,

@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var example = new Azure.Core.ResourceGroup("example", new Azure.Core.ResourceGroupArgs
         {
-            Location = "eastus",
+            Location = "West Europe",
         });
         var workspace = new Azure.DesktopVirtualization.Workspace("workspace", new Azure.DesktopVirtualization.WorkspaceArgs
         {
@@ -57,7 +57,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		example, err := core.NewResourceGroup(ctx, "example", &core.ResourceGroupArgs{
-			Location: pulumi.String("eastus"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -83,7 +83,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example = azure.core.ResourceGroup("example", location="eastus")
+example = azure.core.ResourceGroup("example", location="West Europe")
 workspace = azure.desktopvirtualization.Workspace("workspace",
     location=example.location,
     resource_group_name=example.name,
@@ -99,7 +99,7 @@ workspace = azure.desktopvirtualization.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = new azure.core.ResourceGroup("example", {location: "eastus"});
+const example = new azure.core.ResourceGroup("example", {location: "West Europe"});
 const workspace = new azure.desktopvirtualization.Workspace("workspace", {
     location: example.location,
     resourceGroupName: example.name,

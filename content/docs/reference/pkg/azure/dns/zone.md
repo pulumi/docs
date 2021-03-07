@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var example = new Azure.Core.ResourceGroup("example", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US",
+            Location = "West Europe",
         });
         var example_public = new Azure.Dns.Zone("example-public", new Azure.Dns.ZoneArgs
         {
@@ -59,7 +59,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		example, err := core.NewResourceGroup(ctx, "example", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -88,7 +88,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example = azure.core.ResourceGroup("example", location="West US")
+example = azure.core.ResourceGroup("example", location="West Europe")
 example_public = azure.dns.Zone("example-public", resource_group_name=example.name)
 example_private = azure.privatedns.Zone("example-private", resource_group_name=example.name)
 ```
@@ -101,7 +101,7 @@ example_private = azure.privatedns.Zone("example-private", resource_group_name=e
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = new azure.core.ResourceGroup("example", {location: "West US"});
+const example = new azure.core.ResourceGroup("example", {location: "West Europe"});
 const example_public = new azure.dns.Zone("example-public", {resourceGroupName: example.name});
 const example_private = new azure.privatedns.Zone("example-private", {resourceGroupName: example.name});
 ```
@@ -1138,8 +1138,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified domain name of the Record Set.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimumttl_csharp">
@@ -1244,8 +1243,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified domain name of the Record Set.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimumttl_go">
@@ -1350,8 +1348,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The fully qualified domain name of the Record Set.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimumttl_nodejs">
@@ -1456,8 +1453,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The fully qualified domain name of the Record Set.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_ttl_python">

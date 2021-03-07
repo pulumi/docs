@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "westeurope",
+            Location = "West Europe",
         });
         var exampleServer = new Azure.MariaDB.Server("exampleServer", new Azure.MariaDB.ServerArgs
         {
@@ -70,7 +70,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("westeurope"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -111,7 +111,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="westeurope")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_server = azure.mariadb.Server("exampleServer",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
@@ -138,7 +138,7 @@ example_database = azure.mariadb.Database("exampleDatabase",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "westeurope"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleServer = new azure.mariadb.Server("exampleServer", {
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,

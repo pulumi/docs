@@ -30,7 +30,7 @@ class MyStack : Stack
     {
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US",
+            Location = "West Europe",
         });
         var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
         {
@@ -141,7 +141,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -223,7 +223,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
@@ -291,7 +291,7 @@ M/s/1JRtO3bDSzD9TazRVzn2oBqzSa8VgIo5C1nOnoAKJTlsClJKvIhnRlaLQqk=
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,
@@ -612,7 +612,8 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A block of `bgp_settings`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="customroute_csharp">
@@ -800,7 +801,8 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A block of `bgp_settings`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="customroute_go">
@@ -988,7 +990,8 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A block of `bgp_settings`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="customroute_nodejs">
@@ -1176,7 +1179,8 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A block of `bgp_settings`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="custom_route_python">
@@ -1503,7 +1507,8 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A block of `bgp_settings`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_customroute_csharp">
@@ -1691,7 +1696,8 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A block of `bgp_settings`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_customroute_go">
@@ -1879,7 +1885,8 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A block of `bgp_settings`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_customroute_nodejs">
@@ -2067,7 +2074,8 @@ Defaults to `false`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkgatewaybgpsettings">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A block of `bgp_settings`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_custom_route_python">
@@ -2266,18 +2274,24 @@ options are `RouteBased` or `PolicyBased`. Defaults to `RouteBased`.
     <dd>{{% md %}}The weight added to routes which have been learned
 through BGP peering. Valid values can be between `0` and `100`.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="peeringaddress_csharp">
 <a href="#peeringaddress_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BGP peer IP address of the virtual network
-gateway. This address is needed to configure the created gateway as a BGP Peer
-on the on-premises VPN devices. The IP address must be part of the subnet of
-the Virtual Network Gateway. Changing this forces a new resource to be created.
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `bgp_settings.0.peering_addresses.0.default_addresses.0`{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peeringaddresses_csharp">
+<a href="#peeringaddresses_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettingspeeringaddress">List&lt;Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Peering<wbr>Address<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `peering_addresses` as defined below. Only one `peering_addresses` block can be specified except when `active_active` of this Virtual Network Gateway is `true`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2306,18 +2320,24 @@ the Virtual Network Gateway. Changing this forces a new resource to be created.
     <dd>{{% md %}}The weight added to routes which have been learned
 through BGP peering. Valid values can be between `0` and `100`.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="peeringaddress_go">
 <a href="#peeringaddress_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BGP peer IP address of the virtual network
-gateway. This address is needed to configure the created gateway as a BGP Peer
-on the on-premises VPN devices. The IP address must be part of the subnet of
-the Virtual Network Gateway. Changing this forces a new resource to be created.
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `bgp_settings.0.peering_addresses.0.default_addresses.0`{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peeringaddresses_go">
+<a href="#peeringaddresses_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettingspeeringaddress">[]Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Peering<wbr>Address</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `peering_addresses` as defined below. Only one `peering_addresses` block can be specified except when `active_active` of this Virtual Network Gateway is `true`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2346,18 +2366,24 @@ the Virtual Network Gateway. Changing this forces a new resource to be created.
     <dd>{{% md %}}The weight added to routes which have been learned
 through BGP peering. Valid values can be between `0` and `100`.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="peeringaddress_nodejs">
 <a href="#peeringaddress_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Address</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The BGP peer IP address of the virtual network
-gateway. This address is needed to configure the created gateway as a BGP Peer
-on the on-premises VPN devices. The IP address must be part of the subnet of
-the Virtual Network Gateway. Changing this forces a new resource to be created.
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `bgp_settings.0.peering_addresses.0.default_addresses.0`{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peeringaddresses_nodejs">
+<a href="#peeringaddresses_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettingspeeringaddress">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Peering<wbr>Address[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `peering_addresses` as defined below. Only one `peering_addresses` block can be specified except when `active_active` of this Virtual Network Gateway is `true`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2386,18 +2412,210 @@ the Virtual Network Gateway. Changing this forces a new resource to be created.
     <dd>{{% md %}}The weight added to routes which have been learned
 through BGP peering. Valid values can be between `0` and `100`.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="peering_address_python">
 <a href="#peering_address_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The BGP peer IP address of the virtual network
-gateway. This address is needed to configure the created gateway as a BGP Peer
-on the on-premises VPN devices. The IP address must be part of the subnet of
-the Virtual Network Gateway. Changing this forces a new resource to be created.
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `bgp_settings.0.peering_addresses.0.default_addresses.0`{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="peering_addresses_python">
+<a href="#peering_addresses_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkgatewaybgpsettingspeeringaddress">Sequence[Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Peering<wbr>Address<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of `peering_addresses` as defined below. Only one `peering_addresses` block can be specified except when `active_active` of this Virtual Network Gateway is `true`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="virtualnetworkgatewaybgpsettingspeeringaddress">Virtual<wbr>Network<wbr>Gateway<wbr>Bgp<wbr>Settings<wbr>Peering<wbr>Address</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="apipaaddresses_csharp">
+<a href="#apipaaddresses_csharp" style="color: inherit; text-decoration: inherit;">Apipa<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of Azure custom APIPA addresses assigned to the BGP peer of the Virtual Network Gateway.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultaddresses_csharp">
+<a href="#defaultaddresses_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of peering address assigned to the BGP peer of the Virtual Network Gateway.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurationname_csharp">
+<a href="#ipconfigurationname_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the IP configuration of this Virtual Network Gateway. In case there are multiple `ip_configuration` blocks defined, this property is **required** to specify.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnelipaddresses_csharp">
+<a href="#tunnelipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of tunnel IP addresses assigned to the BGP peer of the Virtual Network Gateway.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="apipaaddresses_go">
+<a href="#apipaaddresses_go" style="color: inherit; text-decoration: inherit;">Apipa<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of Azure custom APIPA addresses assigned to the BGP peer of the Virtual Network Gateway.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultaddresses_go">
+<a href="#defaultaddresses_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of peering address assigned to the BGP peer of the Virtual Network Gateway.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurationname_go">
+<a href="#ipconfigurationname_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the IP configuration of this Virtual Network Gateway. In case there are multiple `ip_configuration` blocks defined, this property is **required** to specify.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnelipaddresses_go">
+<a href="#tunnelipaddresses_go" style="color: inherit; text-decoration: inherit;">Tunnel<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of tunnel IP addresses assigned to the BGP peer of the Virtual Network Gateway.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="apipaaddresses_nodejs">
+<a href="#apipaaddresses_nodejs" style="color: inherit; text-decoration: inherit;">apipa<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of Azure custom APIPA addresses assigned to the BGP peer of the Virtual Network Gateway.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultaddresses_nodejs">
+<a href="#defaultaddresses_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of peering address assigned to the BGP peer of the Virtual Network Gateway.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurationname_nodejs">
+<a href="#ipconfigurationname_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the IP configuration of this Virtual Network Gateway. In case there are multiple `ip_configuration` blocks defined, this property is **required** to specify.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnelipaddresses_nodejs">
+<a href="#tunnelipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">tunnel<wbr>Ip<wbr>Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of tunnel IP addresses assigned to the BGP peer of the Virtual Network Gateway.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="apipa_addresses_python">
+<a href="#apipa_addresses_python" style="color: inherit; text-decoration: inherit;">apipa_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of Azure custom APIPA addresses assigned to the BGP peer of the Virtual Network Gateway.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_addresses_python">
+<a href="#default_addresses_python" style="color: inherit; text-decoration: inherit;">default_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of peering address assigned to the BGP peer of the Virtual Network Gateway.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_configuration_name_python">
+<a href="#ip_configuration_name_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the IP configuration of this Virtual Network Gateway. In case there are multiple `ip_configuration` blocks defined, this property is **required** to specify.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tunnel_ip_addresses_python">
+<a href="#tunnel_ip_addresses_python" style="color: inherit; text-decoration: inherit;">tunnel_<wbr>ip_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of tunnel IP addresses assigned to the BGP peer of the Virtual Network Gateway.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

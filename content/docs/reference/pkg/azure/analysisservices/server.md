@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
         {
-            Location = "northeurope",
+            Location = "West Europe",
         });
         var server = new Azure.AnalysisServices.Server("server", new Azure.AnalysisServices.ServerArgs
         {
@@ -74,7 +74,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		rg, err := core.NewResourceGroup(ctx, "rg", &core.ResourceGroupArgs{
-			Location: pulumi.String("northeurope"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -113,7 +113,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-rg = azure.core.ResourceGroup("rg", location="northeurope")
+rg = azure.core.ResourceGroup("rg", location="West Europe")
 server = azure.analysisservices.Server("server",
     location="northeurope",
     resource_group_name=rg.name,
@@ -138,7 +138,7 @@ server = azure.analysisservices.Server("server",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const rg = new azure.core.ResourceGroup("rg", {location: "northeurope"});
+const rg = new azure.core.ResourceGroup("rg", {location: "West Europe"});
 const server = new azure.analysisservices.Server("server", {
     location: "northeurope",
     resourceGroupName: rg.name,

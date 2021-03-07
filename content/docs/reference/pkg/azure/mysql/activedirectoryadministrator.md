@@ -29,7 +29,7 @@ class MyStack : Stack
         var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US",
+            Location = "West Europe",
         });
         var exampleServer = new Azure.MySql.Server("exampleServer", new Azure.MySql.ServerArgs
         {
@@ -73,7 +73,7 @@ func main() {
 			return err
 		}
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -113,7 +113,7 @@ import pulumi
 import pulumi_azure as azure
 
 current = azure.core.get_client_config()
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_server = azure.mysql.Server("exampleServer",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
@@ -139,7 +139,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
 const current = azure.core.getClientConfig({});
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleServer = new azure.mysql.Server("exampleServer", {
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,

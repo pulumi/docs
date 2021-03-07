@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var example = new Azure.Core.ResourceGroup("example", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US 2",
+            Location = "West Europe",
         });
         var test = new Azure.EventHub.Cluster("test", new Azure.EventHub.ClusterArgs
         {
@@ -56,7 +56,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := core.NewResourceGroup(ctx, "example", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US 2"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -81,7 +81,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example = azure.core.ResourceGroup("example", location="West US 2")
+example = azure.core.ResourceGroup("example", location="West Europe")
 test = azure.eventhub.Cluster("test",
     resource_group_name=azurerm_resource_group["test"]["name"],
     location=azurerm_resource_group["test"]["location"],
@@ -96,7 +96,7 @@ test = azure.eventhub.Cluster("test",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = new azure.core.ResourceGroup("example", {location: "West US 2"});
+const example = new azure.core.ResourceGroup("example", {location: "West Europe"});
 const test = new azure.eventhub.Cluster("test", {
     resourceGroupName: azurerm_resource_group.test.name,
     location: azurerm_resource_group.test.location,

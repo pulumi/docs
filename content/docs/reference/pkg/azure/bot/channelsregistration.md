@@ -29,7 +29,7 @@ class MyStack : Stack
         var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "northeurope",
+            Location = "West Europe",
         });
         var exampleChannelsRegistration = new Azure.Bot.ChannelsRegistration("exampleChannelsRegistration", new Azure.Bot.ChannelsRegistrationArgs
         {
@@ -62,7 +62,7 @@ func main() {
 			return err
 		}
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("northeurope"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -89,7 +89,7 @@ import pulumi
 import pulumi_azure as azure
 
 current = azure.core.get_client_config()
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_channels_registration = azure.bot.ChannelsRegistration("exampleChannelsRegistration",
     location="global",
     resource_group_name=example_resource_group.name,
@@ -106,7 +106,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
 const current = azure.core.getClientConfig({});
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleChannelsRegistration = new azure.bot.ChannelsRegistration("exampleChannelsRegistration", {
     location: "global",
     resourceGroupName: exampleResourceGroup.name,

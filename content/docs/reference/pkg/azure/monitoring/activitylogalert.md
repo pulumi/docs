@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var mainResourceGroup = new Azure.Core.ResourceGroup("mainResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US",
+            Location = "West Europe",
         });
         var mainActionGroup = new Azure.Monitoring.ActionGroup("mainActionGroup", new Azure.Monitoring.ActionGroupArgs
         {
@@ -97,7 +97,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		mainResourceGroup, err := core.NewResourceGroup(ctx, "mainResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -159,7 +159,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-main_resource_group = azure.core.ResourceGroup("mainResourceGroup", location="West US")
+main_resource_group = azure.core.ResourceGroup("mainResourceGroup", location="West Europe")
 main_action_group = azure.monitoring.ActionGroup("mainActionGroup",
     resource_group_name=main_resource_group.name,
     short_name="p0action",
@@ -197,7 +197,7 @@ main_activity_log_alert = azure.monitoring.ActivityLogAlert("mainActivityLogAler
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const mainResourceGroup = new azure.core.ResourceGroup("mainResourceGroup", {location: "West US"});
+const mainResourceGroup = new azure.core.ResourceGroup("mainResourceGroup", {location: "West Europe"});
 const mainActionGroup = new azure.monitoring.ActionGroup("mainActionGroup", {
     resourceGroupName: mainResourceGroup.name,
     shortName: "p0action",

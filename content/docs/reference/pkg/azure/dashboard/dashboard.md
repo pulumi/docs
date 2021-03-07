@@ -32,7 +32,7 @@ class MyStack : Stack
         var current = Output.Create(Azure.Core.GetSubscription.InvokeAsync());
         var my_group = new Azure.Core.ResourceGroup("my-group", new Azure.Core.ResourceGroupArgs
         {
-            Location = "uksouth",
+            Location = "West Europe",
         });
         var my_board = new Azure.Dashboard.Dashboard("my-board", new Azure.Dashboard.DashboardArgs
         {
@@ -183,12 +183,12 @@ func main() {
 		if param := cfg.Get("videoLink"); param != "" {
 			videoLink = param
 		}
-		current, err := core.GetSubscription(ctx, nil, nil)
+		current, err := core.LookupSubscription(ctx, nil, nil)
 		if err != nil {
 			return err
 		}
 		_, err = core.NewResourceGroup(ctx, "my_group", &core.ResourceGroupArgs{
-			Location: pulumi.String("uksouth"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -224,7 +224,7 @@ video_link = config.get("videoLink")
 if video_link is None:
     video_link = "https://www.youtube.com/watch?v=......"
 current = azure.core.get_subscription()
-my_group = azure.core.ResourceGroup("my-group", location="uksouth")
+my_group = azure.core.ResourceGroup("my-group", location="West Europe")
 my_board = azure.dashboard.Dashboard("my-board",
     resource_group_name=my_group.name,
     location=my_group.location,
@@ -354,7 +354,7 @@ const config = new pulumi.Config();
 const mdContent = config.get("mdContent") || "# Hello all :)";
 const videoLink = config.get("videoLink") || "https://www.youtube.com/watch?v=......";
 const current = azure.core.getSubscription({});
-const my_group = new azure.core.ResourceGroup("my-group", {location: "uksouth"});
+const my_group = new azure.core.ResourceGroup("my-group", {location: "West Europe"});
 const my_board = new azure.dashboard.Dashboard("my-board", {
     resourceGroupName: my_group.name,
     location: my_group.location,

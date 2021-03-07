@@ -30,7 +30,7 @@ class MyStack : Stack
     {
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "northeurope",
+            Location = "West Europe",
         });
         var exampleAccount = exampleResourceGroup.Name.Apply(name => Azure.Storage.GetAccount.InvokeAsync(new Azure.Storage.GetAccountArgs
         {
@@ -69,7 +69,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("northeurope"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -103,7 +103,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="northeurope")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_account = example_resource_group.name.apply(lambda name: azure.storage.get_account(name="storageaccountname",
     resource_group_name=name))
 example_factory = azure.datafactory.Factory("exampleFactory",
@@ -123,7 +123,7 @@ example_linked_service_azure_blob_storage = azure.datafactory.LinkedServiceAzure
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "northeurope"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleAccount = exampleResourceGroup.name.apply(name => azure.storage.getAccount({
     name: "storageaccountname",
     resourceGroupName: name,

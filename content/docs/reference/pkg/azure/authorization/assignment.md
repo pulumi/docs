@@ -53,7 +53,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		primary, err := core.GetSubscription(ctx, nil, nil)
+		primary, err := core.LookupSubscription(ctx, nil, nil)
 		if err != nil {
 			return err
 		}
@@ -166,7 +166,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		primary, err := core.GetSubscription(ctx, nil, nil)
+		primary, err := core.LookupSubscription(ctx, nil, nil)
 		if err != nil {
 			return err
 		}
@@ -317,7 +317,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		primary, err := core.GetSubscription(ctx, nil, nil)
+		primary, err := core.LookupSubscription(ctx, nil, nil)
 		if err != nil {
 			return err
 		}
@@ -470,7 +470,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		primary, err := core.GetSubscription(ctx, nil, nil)
+		primary, err := core.LookupSubscription(ctx, nil, nil)
 		if err != nil {
 			return err
 		}

@@ -29,7 +29,7 @@ class MyStack : Stack
     {
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "westeurope",
+            Location = "West Europe",
         });
         var workspace = new Random.RandomId("workspace", new Random.RandomIdArgs
         {
@@ -79,7 +79,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("westeurope"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -128,7 +128,7 @@ import pulumi
 import pulumi_azure as azure
 import pulumi_random as random
 
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="westeurope")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 workspace = random.RandomId("workspace",
     keepers={
         "group_name": example_resource_group.name,
@@ -159,7 +159,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 import * as random from "@pulumi/random";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "westeurope"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const workspace = new random.RandomId("workspace", {
     keepers: {
         group_name: exampleResourceGroup.name,

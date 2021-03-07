@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US 2",
+            Location = "West Europe",
         });
         var examplePolicy = new Azure.Waf.Policy("examplePolicy", new Azure.Waf.PolicyArgs
         {
@@ -174,7 +174,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US 2"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -290,7 +290,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US 2")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_policy = azure.waf.Policy("examplePolicy",
     resource_group_name=example_resource_group.name,
     location=example_resource_group.location,
@@ -380,7 +380,7 @@ example_policy = azure.waf.Policy("examplePolicy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US 2"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const examplePolicy = new azure.waf.Policy("examplePolicy", {
     resourceGroupName: exampleResourceGroup.name,
     location: exampleResourceGroup.location,
@@ -2527,7 +2527,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes if the policy is in enabled state or disabled state. Defaults to `Enabled`.
+    <dd>{{% md %}}Describes if the policy is in enabled state or disabled state. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2537,7 +2537,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The File Upload Limit in MB. Accepted values are in the range `1` to `750`. Defaults to `100`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxrequestbodysizeinkb_csharp">
@@ -2582,7 +2583,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes if the policy is in enabled state or disabled state. Defaults to `Enabled`.
+    <dd>{{% md %}}Describes if the policy is in enabled state or disabled state. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2592,7 +2593,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The File Upload Limit in MB. Accepted values are in the range `1` to `750`. Defaults to `100`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxrequestbodysizeinkb_go">
@@ -2637,7 +2639,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Describes if the policy is in enabled state or disabled state. Defaults to `Enabled`.
+    <dd>{{% md %}}Describes if the policy is in enabled state or disabled state. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2647,7 +2649,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The File Upload Limit in MB. Accepted values are in the range `1` to `750`. Defaults to `100`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxrequestbodysizeinkb_nodejs">
@@ -2692,7 +2695,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Describes if the policy is in enabled state or disabled state. Defaults to `Enabled`.
+    <dd>{{% md %}}Describes if the policy is in enabled state or disabled state. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2702,7 +2705,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The File Upload Limit in MB. Accepted values are in the range `1` to `750`. Defaults to `100`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="max_request_body_size_in_kb_python">

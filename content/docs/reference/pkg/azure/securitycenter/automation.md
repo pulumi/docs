@@ -29,7 +29,7 @@ class MyStack : Stack
         var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "westeurope",
+            Location = "West Europe",
         });
         var exampleEventHubNamespace = new Azure.EventHub.EventHubNamespace("exampleEventHubNamespace", new Azure.EventHub.EventHubNamespaceArgs
         {
@@ -122,7 +122,7 @@ func main() {
 			return err
 		}
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("westeurope"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -203,7 +203,7 @@ import pulumi
 import pulumi_azure as azure
 
 current = azure.core.get_client_config()
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="westeurope")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_event_hub_namespace = azure.eventhub.EventHubNamespace("exampleEventHubNamespace",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
@@ -252,7 +252,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
 const current = azure.core.getClientConfig({});
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "westeurope"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleEventHubNamespace = new azure.eventhub.EventHubNamespace("exampleEventHubNamespace", {
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,

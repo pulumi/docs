@@ -1084,6 +1084,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="loganalyticsworkspace_csharp">
+<a href="#loganalyticsworkspace_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturesloganalyticsworkspace">Provider<wbr>Features<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
 </span>
@@ -1131,6 +1140,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeatureskeyvault">Provider<wbr>Features<wbr>Key<wbr>Vault</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loganalyticsworkspace_go">
+<a href="#loganalyticsworkspace_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturesloganalyticsworkspace">Provider<wbr>Features<wbr>Log<wbr>Analytics<wbr>Workspace</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1186,6 +1204,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="loganalyticsworkspace_nodejs">
+<a href="#loganalyticsworkspace_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturesloganalyticsworkspace">Provider<wbr>Features<wbr>Log<wbr>Analytics<wbr>Workspace</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
 </span>
@@ -1233,6 +1260,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerfeatureskeyvault">Provider<wbr>Features<wbr>Key<wbr>Vault<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_analytics_workspace_python">
+<a href="#log_analytics_workspace_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#providerfeaturesloganalyticsworkspace">Provider<wbr>Features<wbr>Log<wbr>Analytics<wbr>Workspace<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1364,6 +1400,68 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="recover_soft_deleted_key_vaults_python">
 <a href="#recover_soft_deleted_key_vaults_python" style="color: inherit; text-decoration: inherit;">recover_<wbr>soft_<wbr>deleted_<wbr>key_<wbr>vaults</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="providerfeaturesloganalyticsworkspace">Provider<wbr>Features<wbr>Log<wbr>Analytics<wbr>Workspace</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="permanentlydeleteondestroy_csharp">
+<a href="#permanentlydeleteondestroy_csharp" style="color: inherit; text-decoration: inherit;">Permanently<wbr>Delete<wbr>On<wbr>Destroy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="permanentlydeleteondestroy_go">
+<a href="#permanentlydeleteondestroy_go" style="color: inherit; text-decoration: inherit;">Permanently<wbr>Delete<wbr>On<wbr>Destroy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="permanentlydeleteondestroy_nodejs">
+<a href="#permanentlydeleteondestroy_nodejs" style="color: inherit; text-decoration: inherit;">permanently<wbr>Delete<wbr>On<wbr>Destroy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="permanently_delete_on_destroy_python">
+<a href="#permanently_delete_on_destroy_python" style="color: inherit; text-decoration: inherit;">permanently_<wbr>delete_<wbr>on_<wbr>destroy</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>

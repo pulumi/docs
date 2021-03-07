@@ -37,7 +37,7 @@ class MyStack : Stack
         });
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US",
+            Location = "West Europe",
         });
         var exampleTrafficManagerProfile = new Azure.Network.TrafficManagerProfile("exampleTrafficManagerProfile", new Azure.Network.TrafficManagerProfileArgs
         {
@@ -92,7 +92,7 @@ func main() {
 			return err
 		}
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -137,7 +137,7 @@ server = random.RandomId("server",
         "azi_id": 1,
     },
     byte_length=8)
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_traffic_manager_profile = azure.network.TrafficManagerProfile("exampleTrafficManagerProfile",
     resource_group_name=example_resource_group.name,
     traffic_routing_method="Weighted",
@@ -173,7 +173,7 @@ const server = new random.RandomId("server", {
     },
     byteLength: 8,
 });
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleTrafficManagerProfile = new azure.network.TrafficManagerProfile("exampleTrafficManagerProfile", {
     resourceGroupName: exampleResourceGroup.name,
     trafficRoutingMethod: "Weighted",

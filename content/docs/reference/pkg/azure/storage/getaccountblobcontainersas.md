@@ -31,7 +31,7 @@ class MyStack : Stack
     {
         var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
         {
-            Location = "westus",
+            Location = "West Europe",
         });
         var storage = new Azure.Storage.Account("storage", new Azure.Storage.AccountArgs
         {
@@ -96,7 +96,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		rg, err := core.NewResourceGroup(ctx, "rg", &core.ResourceGroupArgs{
-			Location: pulumi.String("westus"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -132,7 +132,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-rg = azure.core.ResourceGroup("rg", location="westus")
+rg = azure.core.ResourceGroup("rg", location="West Europe")
 storage = azure.storage.Account("storage",
     resource_group_name=rg.name,
     location=rg.location,
@@ -171,7 +171,7 @@ pulumi.export("sasUrlQueryString", example.sas)
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const rg = new azure.core.ResourceGroup("rg", {location: "westus"});
+const rg = new azure.core.ResourceGroup("rg", {location: "West Europe"});
 const storage = new azure.storage.Account("storage", {
     resourceGroupName: rg.name,
     location: rg.location,

@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US",
+            Location = "West Europe",
         });
         var examplePlacementGroup = new Azure.Proximity.PlacementGroup("examplePlacementGroup", new Azure.Proximity.PlacementGroupArgs
         {
@@ -59,7 +59,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -86,7 +86,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_placement_group = azure.proximity.PlacementGroup("examplePlacementGroup",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
@@ -103,7 +103,7 @@ example_placement_group = azure.proximity.PlacementGroup("examplePlacementGroup"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const examplePlacementGroup = new azure.proximity.PlacementGroup("examplePlacementGroup", {
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,

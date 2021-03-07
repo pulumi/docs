@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "North Europe",
+            Location = "West Europe",
         });
         var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
         {
@@ -122,7 +122,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("North Europe"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -211,7 +211,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="North Europe")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
     address_spaces=["10.0.0.0/16"],
     location=example_resource_group.location,
@@ -260,7 +260,7 @@ example_firewall_nat_rule_collection = azure.network.FirewallNatRuleCollection("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "North Europe"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
     addressSpaces: ["10.0.0.0/16"],
     location: exampleResourceGroup.location,

@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US 2",
+            Location = "West Europe",
         });
         var exampleManagedDisk = new Azure.Compute.ManagedDisk("exampleManagedDisk", new Azure.Compute.ManagedDiskArgs
         {
@@ -62,7 +62,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US 2"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -92,7 +92,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US 2")
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_managed_disk = azure.compute.ManagedDisk("exampleManagedDisk",
     location="West US 2",
     resource_group_name=example_resource_group.name,
@@ -112,7 +112,7 @@ example_managed_disk = azure.compute.ManagedDisk("exampleManagedDisk",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US 2"});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleManagedDisk = new azure.compute.ManagedDisk("exampleManagedDisk", {
     location: "West US 2",
     resourceGroupName: exampleResourceGroup.name,
@@ -139,7 +139,7 @@ class MyStack : Stack
     {
         var example = new Azure.Core.ResourceGroup("example", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US 2",
+            Location = "West Europe",
         });
         var source = new Azure.Compute.ManagedDisk("source", new Azure.Compute.ManagedDiskArgs
         {
@@ -186,7 +186,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		example, err := core.NewResourceGroup(ctx, "example", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US 2"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -230,7 +230,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example = azure.core.ResourceGroup("example", location="West US 2")
+example = azure.core.ResourceGroup("example", location="West Europe")
 source = azure.compute.ManagedDisk("source",
     location="West US 2",
     resource_group_name=example.name,
@@ -260,7 +260,7 @@ copy = azure.compute.ManagedDisk("copy",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = new azure.core.ResourceGroup("example", {location: "West US 2"});
+const example = new azure.core.ResourceGroup("example", {location: "West Europe"});
 const source = new azure.compute.ManagedDisk("source", {
     location: "West US 2",
     resourceGroupName: example.name,

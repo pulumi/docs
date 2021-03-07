@@ -721,6 +721,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The current version of the Key Vault Secret.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="versionlessid_csharp">
+<a href="#versionlessid_csharp" style="color: inherit; text-decoration: inherit;">Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base ID of the Key Vault Secret.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -745,6 +755,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the Key Vault Secret.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="versionlessid_go">
+<a href="#versionlessid_go" style="color: inherit; text-decoration: inherit;">Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base ID of the Key Vault Secret.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -771,6 +791,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The current version of the Key Vault Secret.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="versionlessid_nodejs">
+<a href="#versionlessid_nodejs" style="color: inherit; text-decoration: inherit;">versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base ID of the Key Vault Secret.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -796,6 +826,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The current version of the Key Vault Secret.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="versionless_id_python">
+<a href="#versionless_id_python" style="color: inherit; text-decoration: inherit;">versionless_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Base ID of the Key Vault Secret.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -812,7 +852,7 @@ Get an existing Secret resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">not_before_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Secret</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">content_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">expiration_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_vault_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">not_before_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">value</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">versionless_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Secret</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1005,6 +1045,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The current version of the Key Vault Secret.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_versionlessid_csharp">
+<a href="#state_versionlessid_csharp" style="color: inherit; text-decoration: inherit;">Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base ID of the Key Vault Secret.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1090,6 +1140,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current version of the Key Vault Secret.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_versionlessid_go">
+<a href="#state_versionlessid_go" style="color: inherit; text-decoration: inherit;">Versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base ID of the Key Vault Secret.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1177,6 +1237,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The current version of the Key Vault Secret.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_versionlessid_nodejs">
+<a href="#state_versionlessid_nodejs" style="color: inherit; text-decoration: inherit;">versionless<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Base ID of the Key Vault Secret.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1262,6 +1332,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current version of the Key Vault Secret.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_versionless_id_python">
+<a href="#state_versionless_id_python" style="color: inherit; text-decoration: inherit;">versionless_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Base ID of the Key Vault Secret.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

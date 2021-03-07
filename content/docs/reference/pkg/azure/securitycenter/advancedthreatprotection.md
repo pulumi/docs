@@ -28,7 +28,7 @@ class MyStack : Stack
     {
         var rg = new Azure.Core.ResourceGroup("rg", new Azure.Core.ResourceGroupArgs
         {
-            Location = "northeurope",
+            Location = "West Europe",
         });
         var exampleAccount = new Azure.Storage.Account("exampleAccount", new Azure.Storage.AccountArgs
         {
@@ -67,7 +67,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := core.NewResourceGroup(ctx, "rg", &core.ResourceGroupArgs{
-			Location: pulumi.String("northeurope"),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
@@ -103,7 +103,7 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-rg = azure.core.ResourceGroup("rg", location="northeurope")
+rg = azure.core.ResourceGroup("rg", location="West Europe")
 example_account = azure.storage.Account("exampleAccount",
     resource_group_name=azurerm_resource_group["example"]["name"],
     location=azurerm_resource_group["example"]["location"],
@@ -125,7 +125,7 @@ example_advanced_threat_protection = azure.securitycenter.AdvancedThreatProtecti
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const rg = new azure.core.ResourceGroup("rg", {location: "northeurope"});
+const rg = new azure.core.ResourceGroup("rg", {location: "West Europe"});
 const exampleAccount = new azure.storage.Account("exampleAccount", {
     resourceGroupName: azurerm_resource_group.example.name,
     location: azurerm_resource_group.example.location,
