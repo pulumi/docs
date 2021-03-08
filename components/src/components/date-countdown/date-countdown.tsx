@@ -27,18 +27,14 @@ export class DateCountdown {
 
     componentWillLoad() {
         const countdownEndDate = new Date(this.dateString).getTime();
-        this.countdownData = this.generateCountdownData(countdownEndDate)
-
-        const self = this;
-        setInterval(() => {
-            self.countdownData = this.generateCountdownData(countdownEndDate);
-        }, 1000);
+        this.generateCountdownData(countdownEndDate)
+        setInterval(() => this.generateCountdownData(countdownEndDate), 1000);
     }
 
-    private generateCountdownData(end: number): CountdownData {
-        const now = new Date().getTime();
+    private generateCountdownData(end: number) {
+        const now = Date.now();
         const distance = end - now;
-        return {
+        this.countdownData = {
             days: Math.floor(distance / (1000 * 60 * 60 * 24)),
             hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
             minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
@@ -53,20 +49,17 @@ export class DateCountdown {
     private renderCountdown() {
         const { days, hours, minutes, seconds } = this.countdownData;
         return <p class={this.textClass}>
-            { days }{this.renderValueLabel("days")} { hours }{this.renderValueLabel("hours")} { minutes }{this.renderValueLabel("minutes")} { seconds }{this.renderValueLabel("seconds")}
-        </p>;
-    }
-
-    private renderLoading() {
-        return <p class={this.textClass}>
-            <i class="fa fa-spinner fa-spin"></i>
+            <span>{ days }{this.renderValueLabel("days")} </span>
+            <span>{ hours }{this.renderValueLabel("hours")} </span>
+            <span>{ minutes }{this.renderValueLabel("minutes")} </span>
+            <span>{ seconds }{this.renderValueLabel("seconds")}</span>
         </p>;
     }
 
     render() {
         return (
             <Host>
-                { this.countdownData ? this.renderCountdown() : this.renderLoading() }
+                { this.countdownData && this.renderCountdown() }
             </Host>
         );
     }

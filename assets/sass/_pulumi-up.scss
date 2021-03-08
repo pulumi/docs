@@ -1,100 +1,72 @@
+$blue400: theme("colors.blue.400");
+$blue700: theme("colors.blue.700");
+$blue900: theme("colors.blue.900");
+
+$green400: theme("colors.green.400");
+$green700: theme("colors.green.700");
+$green900: theme("colors.green.900");
+
+$orange400: theme("colors.orange.400");
+$orange700: theme("colors.orange.700");
+$orange900: theme("colors.orange.900");
+
 // Neon Animation found on Codepen
 // https://codepen.io/Trinca/pen/NAvpWa
-$pageBackgroundColor: #11151c;
-
 .neon-container {
-  text-align: center;
-  vertical-align: middle;
+    @apply text-center align-middle;
 }
 
 @mixin neon-sign-defaults($fontSize: 4rem) {
-  font-family: "Vibur";
-  font-size: $fontSize;
+    font-family: "Vibur";
+    font-size: $fontSize;
 }
 
 @mixin neon-sign-animation($light, $medium, $dark, $pulseTime, $name) {
-    animation: $name $pulseTime linear infinite;
-    -moz-animation: $name $pulseTime linear infinite;
-    -webkit-animation: $name $pulseTime linear infinite;
-    -o-animation: $name $pulseTime linear infinite;
+    animation: unquote($name) $pulseTime linear infinite;
 
     @keyframes #{$name} {
-      0%,
-      100% {
-        text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $medium, 0 0 0.5em $medium, 0 0 0.1em $medium, 0 10px 3px #000;
-        color: $light;
-      }
-      50% {
-        text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $dark, 0 0 0.5em $dark, 0 0 0.1em $dark, 0 10px 3px #000;
-        color: $medium;
-      }
+        0%, 100% {
+            text-shadow: 0 0 30px, 0 0 2px, 0 0 1em $medium, 0 0 0.5em $medium, 0 0 0.1em $medium, 0 10px 3px #000;
+            color: $light;
+        }
+        50% {
+            text-shadow: 0 0 20px, 0 0 2px, 0 0 1em $dark, 0 0 0.5em $dark, 0 0 0.1em $dark, 0 10px 3px #000;
+            color: $medium;
+        }
     }
 }
 
-@mixin neon-sign-purple($fontSize, $name: "neon-sign-purple-pulse", $animate: true) {
-  @include neon-sign-defaults($fontSize);
-  @if $animate {
-    @include neon-sign-animation(theme('colors.purple.300'), theme('colors.purple.600'), theme('colors.purple.800'), 4s, $name);
-  }
+@mixin neon-sign($light, $medium, $dark, $fontSize, $name, $animate: true, $pulseTime: 3s) {
+    @include neon-sign-defaults($fontSize);
+    @if $animate {
+        @include neon-sign-animation($light, $medium, $dark, $pulseTime, $name);
+    }
 
-  color: theme('colors.purple.400');
-  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em theme('colors.purple.700'), 0 0 0.5em theme('colors.purple.700'), 0 0 0.1em theme('colors.purple.700'), 0 10px 3px #000;
-}
-
-@mixin neon-sign-green($fontSize, $name: "neon-sign-green-pulse", $animate: true) {
-  @include neon-sign-defaults($fontSize);
-  @if $animate {
-    @include neon-sign-animation(theme('colors.green.400'), theme('colors.green.700'), theme('colors.green.900'), 3s, $name);
-  }
-
-  color: theme('colors.blue.400');
-  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em theme('colors.green.700'), 0 0 0.5em theme('colors.green.700'), 0 0 0.1em theme('colors.green.700'), 0 10px 3px #000;
-}
-
-@mixin neon-sign-blue($fontSize, $name: "neon-sign-blue-pulse", $animate: true) {
-  @include neon-sign-defaults($fontSize);
-  @if $animate {
-    @include neon-sign-animation(theme('colors.blue.400'), theme('colors.blue.700'), theme('colors.blue.900'), 4s, $name);
-  }
-
-  color: theme('colors.blue.400');
-  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em theme('colors.blue.700'), 0 0 0.5em theme('colors.blue.700'), 0 0 0.1em theme('colors.blue.700'), 0 10px 3px #000;
-}
-
-@mixin neon-sign-orange($fontSize, $name: "neon-sign-orange-pulse", $animate: true) {
-  @include neon-sign-defaults($fontSize);
-  @if $animate {
-    @include neon-sign-animation(theme('colors.orange.400'), theme('colors.orange.700'), theme('colors.orange.900'), 4s, $name);
-  }
-
-  color: theme('colors.orange.400');
-  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em theme('colors.orange.700'), 0 0 0.5em theme('colors.orange.700'), 0 0 0.1em theme('colors.orange.700'), 0 10px 3px #000;
+    color: $light;
+    text-shadow: 0 0 15px, 0 0 2px, 0 0 1em $medium, 0 0 0.5em $medium, 0 0 0.1em $medium, 0 10px 3px #000;
 }
 
 .blue-neon-sign-xl {
-  @include neon-sign-blue(6rem);
+    @include neon-sign($blue400, $blue700, $blue900, 6rem, "blue-neon-sign-xl-pulse");
 
-  @screen lg {
-    @include neon-sign-blue(8rem);
-  }
+    @screen lg {
+        @include neon-sign($blue400, $blue700, $blue900, 8rem, "blue-neon-sign-xl-pulse");
+    }
 }
 
 .green-neon-sign-xl {
-  @include neon-sign-green(6rem);
+    @include neon-sign($green400, $green700, $green900, 6rem, "green-neon-sign-xl-pulse", true, 4s);
 
-  @screen lg {
-    @include neon-sign-green(8rem);
-  }
-}
-
-.speaker-neon-label {
-  @include neon-sign-purple(2rem, "speaker-label", false);
+    @screen lg {
+        @include neon-sign($green400, $green700, $green900, 8rem, "green-neon-sign-xl-pulse", true, 4s);
+    }
 }
 
 .date-countdown {
-  @include neon-sign-orange(2.25rem, "date-countdown", false);
+    @apply w-full text-center text-5xl;
+    @include neon-sign($orange400, $orange700, $orange900, 2.25rem, "date-countdown", false);
 }
 
 .pulumi-up-body {
-    background-color: $pageBackgroundColor;
+    @apply bg-gray-900;
 }
