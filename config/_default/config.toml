@@ -1,6 +1,8 @@
 languageCode = "en-us"
 title = "Pulumi - Modern Infrastructure as Code"
 
+theme = "pulumi"
+
 disableKinds = ["category", "taxonomyTerm"]
 sectionPagesMenu = "main"
 pygmentsCodeFences = true
