@@ -122,7 +122,7 @@ jobs:
       - name: Install pulumi
         uses: pulumi/action-install-pulumi-cli@v1.0.1
       - run: npm install
-      - uses: actions/pulumi@v2
+      - uses: pulumi/actions@v2
         env:
           PULUMI_CONFIG_PASSPHRASE: not-a-secret
         with:
