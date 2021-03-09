@@ -15,6 +15,7 @@ Explore the resources and functions of the keycloak.saml module.
     <li><a href="clientdefaultscope" title="ClientDefaultScope"><span class="symbol resource"></span>ClientDefaultScope</a></li>
     <li><a href="clientscope" title="ClientScope"><span class="symbol resource"></span>ClientScope</a></li>
     <li><a href="identityprovider" title="IdentityProvider"><span class="symbol resource"></span>IdentityProvider</a></li>
+    <li><a href="scriptprotocolmapper" title="ScriptProtocolMapper"><span class="symbol resource"></span>ScriptProtocolMapper</a></li>
     <li><a href="userattributeprotocolmapper" title="UserAttributeProtocolMapper"><span class="symbol resource"></span>UserAttributeProtocolMapper</a></li>
     <li><a href="userpropertyprotocolmapper" title="UserPropertyProtocolMapper"><span class="symbol resource"></span>UserPropertyProtocolMapper</a></li>
 </ul>
@@ -34,6 +35,6 @@ Explore the resources and functions of the keycloak.saml module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
 	<dt>Version</dt>
-	<dd>3.4.1</dd>
+	<dd>3.5.0</dd>
 </dl>
 
