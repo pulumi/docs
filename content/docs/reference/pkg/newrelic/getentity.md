@@ -26,7 +26,7 @@ Use this data source to get information about a specific entity in New Relic One
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_entity(</span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag</span><span class="p">:</span> <span class="nx">Optional[GetEntityTagArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEntityResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_entity(</span><span class="nx">domain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ignore_case</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag</span><span class="p">:</span> <span class="nx">Optional[GetEntityTagArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetEntityResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -71,6 +71,16 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entity's domain. Valid values are APM, BROWSER, INFRA, MOBILE, SYNTH, and VIZ. If not specified, all domains are searched.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignorecase_csharp">
+<a href="#ignorecase_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Case</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore case of the `name` when searching for the entity. Defaults to false.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -119,6 +129,16 @@ The following arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ignorecase_go">
+<a href="#ignorecase_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Case</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore case of the `name` when searching for the entity. Defaults to false.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tag_go">
 <a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
 </span>
@@ -164,6 +184,16 @@ The following arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ignorecase_nodejs">
+<a href="#ignorecase_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Case</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Ignore case of the `name` when searching for the entity. Defaults to false.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tag_nodejs">
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
@@ -206,6 +236,16 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The entity's domain. Valid values are APM, BROWSER, INFRA, MOBILE, SYNTH, and VIZ. If not specified, all domains are searched.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignore_case_python">
+<a href="#ignore_case_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>case</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Ignore case of the `name` when searching for the entity. Defaults to false.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -319,6 +359,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="ignorecase_csharp">
+<a href="#ignorecase_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Case</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tag_csharp">
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
 </span>
@@ -406,6 +455,15 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="ignorecase_go">
+<a href="#ignorecase_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Case</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -501,6 +559,15 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="ignorecase_nodejs">
+<a href="#ignorecase_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Case</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tag_nodejs">
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
 </span>
@@ -588,6 +655,15 @@ The following output properties are available:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="ignore_case_python">
+<a href="#ignore_case_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>case</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"

@@ -16,7 +16,7 @@ Use this resource to create and manage New Relic alert channels.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-
+### Email
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -30,7 +30,7 @@ class MyStack : Stack
         {
             Config = new NewRelic.Inputs.AlertChannelConfigArgs
             {
-                IncludeJsonAttachment = "1",
+                IncludeJsonAttachment = "true",
                 Recipients = "foo@example.com",
             },
             Type = "email",
@@ -55,7 +55,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := newrelic.NewAlertChannel(ctx, "foo", &newrelic.AlertChannelArgs{
 			Config: &newrelic.AlertChannelConfigArgs{
-				IncludeJsonAttachment: pulumi.String("1"),
+				IncludeJsonAttachment: pulumi.String("true"),
 				Recipients:            pulumi.String("foo@example.com"),
 			},
 			Type: pulumi.String("email"),
@@ -77,7 +77,7 @@ import pulumi_newrelic as newrelic
 
 foo = newrelic.AlertChannel("foo",
     config=newrelic.AlertChannelConfigArgs(
-        include_json_attachment="1",
+        include_json_attachment="true",
         recipients="foo@example.com",
     ),
     type="email")
@@ -92,10 +92,552 @@ import * as newrelic from "@pulumi/newrelic";
 
 const foo = new newrelic.AlertChannel("foo", {
     config: {
-        includeJsonAttachment: "1",
+        includeJsonAttachment: "true",
         recipients: "foo@example.com",
     },
     type: "email",
+});
+```
+
+{{% /example %}}
+
+### Slack
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new NewRelic.AlertChannel("foo", new NewRelic.AlertChannelArgs
+        {
+            Config = new NewRelic.Inputs.AlertChannelConfigArgs
+            {
+                Channel = "example-alerts-channel",
+                Url = "https://hooks.slack.com/services/XXXXXXX/XXXXXXX/XXXXXXXXXX",
+            },
+            Type = "slack",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := newrelic.NewAlertChannel(ctx, "foo", &newrelic.AlertChannelArgs{
+			Config: &newrelic.AlertChannelConfigArgs{
+				Channel: pulumi.String("example-alerts-channel"),
+				Url:     pulumi.String("https://hooks.slack.com/services/XXXXXXX/XXXXXXX/XXXXXXXXXX"),
+			},
+			Type: pulumi.String("slack"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo = newrelic.AlertChannel("foo",
+    config=newrelic.AlertChannelConfigArgs(
+        channel="example-alerts-channel",
+        url="https://hooks.slack.com/services/XXXXXXX/XXXXXXX/XXXXXXXXXX",
+    ),
+    type="slack")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const foo = new newrelic.AlertChannel("foo", {
+    config: {
+        channel: "example-alerts-channel",
+        url: "https://hooks.slack.com/services/XXXXXXX/XXXXXXX/XXXXXXXXXX",
+    },
+    type: "slack",
+});
+```
+
+{{% /example %}}
+
+### OpsGenie
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new NewRelic.AlertChannel("foo", new NewRelic.AlertChannelArgs
+        {
+            Config = new NewRelic.Inputs.AlertChannelConfigArgs
+            {
+                ApiKey = "abc123",
+                Recipients = "user1@domain.com, user2@domain.com",
+                Tags = "tag1, tag2",
+                Teams = "team1, team2",
+            },
+            Type = "opsgenie",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := newrelic.NewAlertChannel(ctx, "foo", &newrelic.AlertChannelArgs{
+			Config: &newrelic.AlertChannelConfigArgs{
+				ApiKey:     pulumi.String("abc123"),
+				Recipients: pulumi.String("user1@domain.com, user2@domain.com"),
+				Tags:       pulumi.String("tag1, tag2"),
+				Teams:      pulumi.String("team1, team2"),
+			},
+			Type: pulumi.String("opsgenie"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo = newrelic.AlertChannel("foo",
+    config=newrelic.AlertChannelConfigArgs(
+        api_key="abc123",
+        recipients="user1@domain.com, user2@domain.com",
+        tags="tag1, tag2",
+        teams="team1, team2",
+    ),
+    type="opsgenie")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const foo = new newrelic.AlertChannel("foo", {
+    config: {
+        apiKey: "abc123",
+        recipients: "user1@domain.com, user2@domain.com",
+        tags: "tag1, tag2",
+        teams: "team1, team2",
+    },
+    type: "opsgenie",
+});
+```
+
+{{% /example %}}
+
+### PagerDuty
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new NewRelic.AlertChannel("foo", new NewRelic.AlertChannelArgs
+        {
+            Config = new NewRelic.Inputs.AlertChannelConfigArgs
+            {
+                ServiceKey = "abc123",
+            },
+            Type = "pagerduty",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := newrelic.NewAlertChannel(ctx, "foo", &newrelic.AlertChannelArgs{
+			Config: &newrelic.AlertChannelConfigArgs{
+				ServiceKey: pulumi.String("abc123"),
+			},
+			Type: pulumi.String("pagerduty"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo = newrelic.AlertChannel("foo",
+    config=newrelic.AlertChannelConfigArgs(
+        service_key="abc123",
+    ),
+    type="pagerduty")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const foo = new newrelic.AlertChannel("foo", {
+    config: {
+        serviceKey: "abc123",
+    },
+    type: "pagerduty",
+});
+```
+
+{{% /example %}}
+
+### VictorOps
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new NewRelic.AlertChannel("foo", new NewRelic.AlertChannelArgs
+        {
+            Config = new NewRelic.Inputs.AlertChannelConfigArgs
+            {
+                Key = "abc123",
+                RouteKey = "/example",
+            },
+            Type = "victorops",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := newrelic.NewAlertChannel(ctx, "foo", &newrelic.AlertChannelArgs{
+			Config: &newrelic.AlertChannelConfigArgs{
+				Key:      pulumi.String("abc123"),
+				RouteKey: pulumi.String("/example"),
+			},
+			Type: pulumi.String("victorops"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo = newrelic.AlertChannel("foo",
+    config=newrelic.AlertChannelConfigArgs(
+        key="abc123",
+        route_key="/example",
+    ),
+    type="victorops")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const foo = new newrelic.AlertChannel("foo", {
+    config: {
+        key: "abc123",
+        routeKey: "/example",
+    },
+    type: "victorops",
+});
+```
+
+{{% /example %}}
+
+### Webhook
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new NewRelic.AlertChannel("foo", new NewRelic.AlertChannelArgs
+        {
+            Type = "webhook",
+            Config = new NewRelic.Inputs.AlertChannelConfigArgs
+            {
+                BaseUrl = "http://www.test.com",
+                PayloadType = "application/json",
+                Payload = 
+                {
+                    { "condition_name", "$CONDITION_NAME" },
+                    { "policy_name", "$POLICY_NAME" },
+                },
+                Headers = 
+                {
+                    { "header1", value1 },
+                    { "header2", value2 },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo = newrelic.AlertChannel("foo",
+    type="webhook",
+    config=newrelic.AlertChannelConfigArgs(
+        base_url="http://www.test.com",
+        payload_type="application/json",
+        payload={
+            "condition_name": "$CONDITION_NAME",
+            "policy_name": "$POLICY_NAME",
+        },
+        headers={
+            "header1": value1,
+            "header2": value2,
+        },
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const foo = new newrelic.AlertChannel("foo", {
+    type: "webhook",
+    config: {
+        baseUrl: "http://www.test.com",
+        payloadType: "application/json",
+        payload: {
+            condition_name: `$CONDITION_NAME`,
+            policy_name: `$POLICY_NAME`,
+        },
+        headers: {
+            header1: value1,
+            header2: value2,
+        },
+    },
+});
+```
+
+{{% /example %}}
+
+### Webhook with complex payload
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using NewRelic = Pulumi.NewRelic;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var foo = new NewRelic.AlertChannel("foo", new NewRelic.AlertChannelArgs
+        {
+            Config = new NewRelic.Inputs.AlertChannelConfigArgs
+            {
+                BaseUrl = "http://www.test.com",
+                PayloadString = @"{
+  ""my_custom_values"": {
+    ""condition_name"": ""$CONDITION_NAME"",
+    ""policy_name"": ""$POLICY_NAME""
+  }
+}
+
+",
+                PayloadType = "application/json",
+            },
+            Type = "webhook",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-newrelic/sdk/v3/go/newrelic"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := newrelic.NewAlertChannel(ctx, "foo", &newrelic.AlertChannelArgs{
+			Config: &newrelic.AlertChannelConfigArgs{
+				BaseUrl:       pulumi.String("http://www.test.com"),
+				PayloadString: pulumi.String(fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"my_custom_values\": {\n", "    \"condition_name\": \"", "$", "CONDITION_NAME\",\n", "    \"policy_name\": \"", "$", "POLICY_NAME\"\n", "  }\n", "}\n", "\n")),
+				PayloadType:   pulumi.String("application/json"),
+			},
+			Type: pulumi.String("webhook"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_newrelic as newrelic
+
+foo = newrelic.AlertChannel("foo",
+    config=newrelic.AlertChannelConfigArgs(
+        base_url="http://www.test.com",
+        payload_string="""{
+  "my_custom_values": {
+    "condition_name": "$CONDITION_NAME",
+    "policy_name": "$POLICY_NAME"
+  }
+}
+
+""",
+        payload_type="application/json",
+    ),
+    type="webhook")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const foo = new newrelic.AlertChannel("foo", {
+    config: {
+        baseUrl: "http://www.test.com",
+        payloadString: `{
+  "my_custom_values": {
+    "condition_name": "$CONDITION_NAME",
+    "policy_name": "$POLICY_NAME"
+  }
+}
+`,
+        payloadType: "application/json",
+    },
+    type: "webhook",
 });
 ```
 
@@ -292,7 +834,7 @@ The AlertChannel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of channel.  Accepted values are 'email', 'slack', 'opsgenie', 'pagerduty', 'victorops', or 'webhook'.
+    <dd>{{% md %}}The type of channel.  One of: `email`, `slack`, `opsgenie`, `pagerduty`, `victorops`, or `webhook`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -328,7 +870,7 @@ The AlertChannel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of channel.  Accepted values are 'email', 'slack', 'opsgenie', 'pagerduty', 'victorops', or 'webhook'.
+    <dd>{{% md %}}The type of channel.  One of: `email`, `slack`, `opsgenie`, `pagerduty`, `victorops`, or `webhook`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -364,7 +906,7 @@ The AlertChannel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of channel.  Accepted values are 'email', 'slack', 'opsgenie', 'pagerduty', 'victorops', or 'webhook'.
+    <dd>{{% md %}}The type of channel.  One of: `email`, `slack`, `opsgenie`, `pagerduty`, `victorops`, or `webhook`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -400,7 +942,7 @@ The AlertChannel resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of channel.  Accepted values are 'email', 'slack', 'opsgenie', 'pagerduty', 'victorops', or 'webhook'.
+    <dd>{{% md %}}The type of channel.  One of: `email`, `slack`, `opsgenie`, `pagerduty`, `victorops`, or `webhook`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -646,7 +1188,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of channel.  Accepted values are 'email', 'slack', 'opsgenie', 'pagerduty', 'victorops', or 'webhook'.
+    <dd>{{% md %}}The type of channel.  One of: `email`, `slack`, `opsgenie`, `pagerduty`, `victorops`, or `webhook`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -682,7 +1224,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of channel.  Accepted values are 'email', 'slack', 'opsgenie', 'pagerduty', 'victorops', or 'webhook'.
+    <dd>{{% md %}}The type of channel.  One of: `email`, `slack`, `opsgenie`, `pagerduty`, `victorops`, or `webhook`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -718,7 +1260,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of channel.  Accepted values are 'email', 'slack', 'opsgenie', 'pagerduty', 'victorops', or 'webhook'.
+    <dd>{{% md %}}The type of channel.  One of: `email`, `slack`, `opsgenie`, `pagerduty`, `victorops`, or `webhook`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -754,7 +1296,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of channel.  Accepted values are 'email', 'slack', 'opsgenie', 'pagerduty', 'victorops', or 'webhook'.
+    <dd>{{% md %}}The type of channel.  One of: `email`, `slack`, `opsgenie`, `pagerduty`, `victorops`, or `webhook`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -862,7 +1404,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}`0` or `1`. Flag for whether or not to attach a JSON document containing information about the associated alert to the email that is sent to recipients.
+    <dd>{{% md %}}`true` or `false`. Flag for whether or not to attach a JSON document containing information about the associated alert to the email that is sent to recipients.
 * `webhook`
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1082,7 +1624,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}`0` or `1`. Flag for whether or not to attach a JSON document containing information about the associated alert to the email that is sent to recipients.
+    <dd>{{% md %}}`true` or `false`. Flag for whether or not to attach a JSON document containing information about the associated alert to the email that is sent to recipients.
 * `webhook`
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1302,7 +1844,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}`0` or `1`. Flag for whether or not to attach a JSON document containing information about the associated alert to the email that is sent to recipients.
+    <dd>{{% md %}}`true` or `false`. Flag for whether or not to attach a JSON document containing information about the associated alert to the email that is sent to recipients.
 * `webhook`
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1522,7 +2064,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}`0` or `1`. Flag for whether or not to attach a JSON document containing information about the associated alert to the email that is sent to recipients.
+    <dd>{{% md %}}`true` or `false`. Flag for whether or not to attach a JSON document containing information about the associated alert to the email that is sent to recipients.
 * `webhook`
 {{% /md %}}</dd>
     <dt class="property-optional"
