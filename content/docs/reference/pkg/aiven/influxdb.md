@@ -2696,6 +2696,16 @@ deletion is done.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_csharp">
+<a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#influxdbinfluxdbuserconfigprivatelinkaccess">Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projecttoforkfrom_csharp">
 <a href="#projecttoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
@@ -2781,6 +2791,16 @@ only when a new service is being created.
         <span class="property-type"><a href="#influxdbinfluxdbuserconfigprivateaccess">Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_go">
+<a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#influxdbinfluxdbuserconfigprivatelinkaccess">Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2872,6 +2892,16 @@ only when a new service is being created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_nodejs">
+<a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#influxdbinfluxdbuserconfigprivatelinkaccess">Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projecttoforkfrom_nodejs">
 <a href="#projecttoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
@@ -2957,6 +2987,16 @@ only when a new service is being created.
         <span class="property-type"><a href="#influxdbinfluxdbuserconfigprivateaccess">Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelink_access_python">
+<a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#influxdbinfluxdbuserconfigprivatelinkaccess">Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3254,6 +3294,72 @@ Setting this to 0 (the default) will never kill slow queries.
 {{% /choosable %}}
 
 <h4 id="influxdbinfluxdbuserconfigprivateaccess">Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="influxdb_csharp">
+<a href="#influxdb_csharp" style="color: inherit; text-decoration: inherit;">Influxdb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}influxdb.conf configuration values
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="influxdb_go">
+<a href="#influxdb_go" style="color: inherit; text-decoration: inherit;">Influxdb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}influxdb.conf configuration values
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="influxdb_nodejs">
+<a href="#influxdb_nodejs" style="color: inherit; text-decoration: inherit;">influxdb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}influxdb.conf configuration values
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="influxdb_python">
+<a href="#influxdb_python" style="color: inherit; text-decoration: inherit;">influxdb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}influxdb.conf configuration values
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="influxdbinfluxdbuserconfigprivatelinkaccess">Influx<wbr>Db<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

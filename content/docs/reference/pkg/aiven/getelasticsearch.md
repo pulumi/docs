@@ -2398,6 +2398,16 @@ service nodes that are in a project VPC or another type of private network.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_csharp">
+<a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigprivatelinkaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projecttoforkfrom_csharp">
 <a href="#projecttoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
@@ -2549,6 +2559,16 @@ service nodes that are in a project VPC or another type of private network.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigprivateaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_go">
+<a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigprivatelinkaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2706,6 +2726,16 @@ service nodes that are in a project VPC or another type of private network.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_nodejs">
+<a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigprivatelinkaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projecttoforkfrom_nodejs">
 <a href="#projecttoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
@@ -2857,6 +2887,16 @@ service nodes that are in a project VPC or another type of private network.
         <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigprivateaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelink_access_python">
+<a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigprivatelinkaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4103,6 +4143,16 @@ is automatically lowered if set to higher than maximum value.
     <dd>{{% md %}}Must consist of alpha-numeric characters, dashes, underscores, 
 dots and glob characters (* and ?)
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sortingalgorithm_csharp">
+<a href="#sortingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Sorting<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Deletion sorting algorithm
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4129,6 +4179,16 @@ dots and glob characters (* and ?)
     </dt>
     <dd>{{% md %}}Must consist of alpha-numeric characters, dashes, underscores, 
 dots and glob characters (* and ?)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sortingalgorithm_go">
+<a href="#sortingalgorithm_go" style="color: inherit; text-decoration: inherit;">Sorting<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Deletion sorting algorithm
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4157,6 +4217,16 @@ dots and glob characters (* and ?)
     <dd>{{% md %}}Must consist of alpha-numeric characters, dashes, underscores, 
 dots and glob characters (* and ?)
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sortingalgorithm_nodejs">
+<a href="#sortingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">sorting<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Deletion sorting algorithm
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4183,6 +4253,16 @@ dots and glob characters (* and ?)
     </dt>
     <dd>{{% md %}}Must consist of alpha-numeric characters, dashes, underscores, 
 dots and glob characters (* and ?)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sorting_algorithm_python">
+<a href="#sorting_algorithm_python" style="color: inherit; text-decoration: inherit;">sorting_<wbr>algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Deletion sorting algorithm
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4655,6 +4735,118 @@ service nodes that are in a project VPC or another type of private network.
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public 
 internet for service nodes that are in a project VPC or another type of private network.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getelasticsearchelasticsearchuserconfigprivatelinkaccess">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="elasticsearch_csharp">
+<a href="#elasticsearch_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Elasticsearch specific server provided values.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kibana_csharp">
+<a href="#kibana_csharp" style="color: inherit; text-decoration: inherit;">Kibana</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
+service nodes that are in a project VPC or another type of private network.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="elasticsearch_go">
+<a href="#elasticsearch_go" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Elasticsearch specific server provided values.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kibana_go">
+<a href="#kibana_go" style="color: inherit; text-decoration: inherit;">Kibana</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
+service nodes that are in a project VPC or another type of private network.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="elasticsearch_nodejs">
+<a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Elasticsearch specific server provided values.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kibana_nodejs">
+<a href="#kibana_nodejs" style="color: inherit; text-decoration: inherit;">kibana</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
+service nodes that are in a project VPC or another type of private network.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="elasticsearch_python">
+<a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Elasticsearch specific server provided values.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kibana_python">
+<a href="#kibana_python" style="color: inherit; text-decoration: inherit;">kibana</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to kibana from the public internet for 
+service nodes that are in a project VPC or another type of private network.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

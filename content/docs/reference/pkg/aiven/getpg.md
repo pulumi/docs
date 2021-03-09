@@ -3608,6 +3608,17 @@ total RAM (up to 32MB).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ignoredbs_csharp">
+<a href="#ignoredbs_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Dbs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Comma-separated list of databases, which should be ignored during
+migration (supported by MySQL only at the moment)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
@@ -3671,6 +3682,17 @@ total RAM (up to 32MB).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL master node host IP or name
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoredbs_go">
+<a href="#ignoredbs_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Dbs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Comma-separated list of databases, which should be ignored during
+migration (supported by MySQL only at the moment)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3740,6 +3762,17 @@ total RAM (up to 32MB).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ignoredbs_nodejs">
+<a href="#ignoredbs_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Dbs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Comma-separated list of databases, which should be ignored during
+migration (supported by MySQL only at the moment)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
@@ -3803,6 +3836,17 @@ total RAM (up to 32MB).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PostgreSQL master node host IP or name
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignore_dbs_python">
+<a href="#ignore_dbs_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>dbs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Comma-separated list of databases, which should be ignored during
+migration (supported by MySQL only at the moment)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

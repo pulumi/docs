@@ -2648,6 +2648,16 @@ deletion is done.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_csharp">
+<a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#redisredisuserconfigprivatelinkaccess">Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projecttoforkfrom_csharp">
 <a href="#projecttoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
@@ -2794,6 +2804,16 @@ when a new service is being created.
         <span class="property-type"><a href="#redisredisuserconfigprivateaccess">Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_go">
+<a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#redisredisuserconfigprivatelinkaccess">Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2946,6 +2966,16 @@ when a new service is being created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_nodejs">
+<a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#redisredisuserconfigprivatelinkaccess">Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projecttoforkfrom_nodejs">
 <a href="#projecttoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
@@ -3095,6 +3125,16 @@ when a new service is being created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelink_access_python">
+<a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#redisredisuserconfigprivatelinkaccess">Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="project_to_fork_from_python">
 <a href="#project_to_fork_from_python" style="color: inherit; text-decoration: inherit;">project_<wbr>to_<wbr>fork_<wbr>from</a>
 </span>
@@ -3236,6 +3276,17 @@ when a new service is being created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ignoredbs_csharp">
+<a href="#ignoredbs_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Dbs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Comma-separated list of databases, which should be ignored during 
+migration (supported by MySQL only at the moment)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
@@ -3299,6 +3350,17 @@ when a new service is being created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoredbs_go">
+<a href="#ignoredbs_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Dbs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Comma-separated list of databases, which should be ignored during 
+migration (supported by MySQL only at the moment)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3368,6 +3430,17 @@ when a new service is being created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ignoredbs_nodejs">
+<a href="#ignoredbs_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Dbs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Comma-separated list of databases, which should be ignored during 
+migration (supported by MySQL only at the moment)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
@@ -3431,6 +3504,17 @@ when a new service is being created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignore_dbs_python">
+<a href="#ignore_dbs_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>dbs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Comma-separated list of databases, which should be ignored during 
+migration (supported by MySQL only at the moment)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3575,6 +3659,76 @@ nodes that are in a project VPC or another type of private network
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redis_python">
+<a href="#redis_python" style="color: inherit; text-decoration: inherit;">redis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to redis from the public internet for service 
+nodes that are in a project VPC or another type of private network
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="redisredisuserconfigprivatelinkaccess">Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redis_csharp">
+<a href="#redis_csharp" style="color: inherit; text-decoration: inherit;">Redis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to redis from the public internet for service 
+nodes that are in a project VPC or another type of private network
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redis_go">
+<a href="#redis_go" style="color: inherit; text-decoration: inherit;">Redis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to redis from the public internet for service 
+nodes that are in a project VPC or another type of private network
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redis_nodejs">
+<a href="#redis_nodejs" style="color: inherit; text-decoration: inherit;">redis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to redis from the public internet for service 
+nodes that are in a project VPC or another type of private network
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
     <dt class="property-optional"
             title="Optional">
         <span id="redis_python">
