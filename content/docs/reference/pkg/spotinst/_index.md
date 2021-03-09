@@ -38,6 +38,6 @@ A Pulumi package for creating and managing spotinst cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`spotinst` Terraform Provider](https://github.com/spotinst/terraform-provider-spotinst).</dd>
 	<dt>Version</dt>
-	<dd>2.17.1</dd>
+	<dd>2.18.0</dd>
 </dl>
 
