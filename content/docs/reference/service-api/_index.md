@@ -13,7 +13,7 @@ While the Pulumi Service API is used by the Pulumi CLI and Pulumi Console, Pulum
 
 All requests must be authenticated using a token via the `Authorization` HTTP header. If the token is missing or invalid, the Pulumi Service API will return a 4xx status code.
 
-The `Authorization` header must be in the form below with the literal string `token`, then a space, then your access token value. 
+The `Authorization` header must be in the form below with the literal string `token`, then a space, then your access token value.
 
 ```
 Authorization: token {token}
@@ -38,7 +38,55 @@ Content-Type: application/json
 
 <!-- ###################################################################### -->
 
-### List Stacks
+### List Stacks for the authenticated user
+
+```
+GET https://api.pulumi.com/api/user/stacks
+```
+
+#### Parameters
+
+| Parameter | Type | In | Description |
+| --------- | ---------- | ---------- | ---------- |
+| `organization` | string | query | organization name to filter stacks by |
+| `project` | string | query | organization name to filter stacks by |
+
+#### Example
+
+```bash
+curl \
+  -H 'Accept: application/vnd.pulumi+3' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: token pul-abcdefghijklmnopqrstuvwxyz' \
+  https://api.pulumi.com/api/user/stacks
+```
+
+#### Default response
+
+```
+Status: 200 OK
+```
+
+```
+{
+  "stacks": [
+    {
+      "orgName": "org1",
+      "projectName": "project1",
+      "stackName": "dev",
+      "lastUpdate": 1612481387,
+      "resourceCount": 0
+    },
+    {
+      "orgName": "org2",
+      "projectName": "project2",
+      "stackName": "prod",
+      "lastUpdate": 1605474464,
+      "resourceCount": 0
+    }
+  ]
+}
+```
 
 ### Get Stack
 
@@ -60,47 +108,34 @@ Users are not just-in-time provisioned. They must sign in to the Pulumi console 
 
 TODO: Add note about SAML.
 
-#### HTTP Request
-
 ```
 POST https://api.pulumi.com/api/orgs/{organization}/members/{username}
 ```
 
-#### Path Parameters
+#### Parameters
 
-| Parameter | Type | Description |
-| --------- | ---------- | ---------- |
-| `organization` | string | organization name |
-| `username` | string | user name |
+| Parameter | Type | In | Description |
+| --------- | ---------- | ---------- | ---------- |
+| `organization` | string | path | organization name |
+| `username` | string | path | user name |
+| `role` | string | body | **Required.** The role to assign - possible values are `admin` or `member` |
 
-#### Query Parameters
-
-| Parameter | Type | Description |
-| --------- | ---------- | ---------- |
-| `none` | string (optional) | none description |
-
-#### Request Body
-
-| Parameter | Type | Description |
-| --------- | ---------- | ---------- |
-| `role` | string | role to assign - possible values are `admin` or `member` |
-
-#### Sample Payload
-
-```
-{ "role": "{role}" }
-```
-
-#### Curl Example
+#### Example
 
 ```bash
 curl \
+  --request POST \
   -H 'Accept: application/vnd.pulumi+3' \
   -H 'Content-Type: application/json' \
   -H 'Authorization: token pul-abcdefghijklmnopqrstuvwxyz' \
-  --request POST \
-  --data @payload.json \
-  https://api.pulumi.com/api/orgs/{organization}/members/{username}
+  https://api.pulumi.com/api/orgs/{organization}/members/{username} \
+  --data '{ "role": "{role}" }'
+```
+
+#### Default response
+
+```
+Status: 200 OK
 ```
 
 ### Remove User from Organization
