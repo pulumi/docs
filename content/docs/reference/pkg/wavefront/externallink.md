@@ -1,8 +1,8 @@
 
 ---
 title: "ExternalLink"
-title_tag: "Resource ExternalLink | Package Wavefront"
-meta_desc: "Explore the ExternalLink resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront External Link Resource. This allows external links to be created, updated, and deleted."
+title_tag: "wavefront.ExternalLink"
+meta_desc: "Documentation for the wavefront.ExternalLink resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

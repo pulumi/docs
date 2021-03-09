@@ -1,8 +1,8 @@
 
 ---
 title: "IngestionPolicy"
-title_tag: "Resource IngestionPolicy | Package Wavefront"
-meta_desc: "Explore the IngestionPolicy resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Ingestion Policy Resource. This allows ingestion policies to be created, updated, and deleted."
+title_tag: "wavefront.IngestionPolicy"
+meta_desc: "Documentation for the wavefront.IngestionPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

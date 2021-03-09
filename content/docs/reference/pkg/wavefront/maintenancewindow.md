@@ -1,8 +1,8 @@
 
 ---
 title: "MaintenanceWindow"
-title_tag: "Resource MaintenanceWindow | Package Wavefront"
-meta_desc: "Explore the MaintenanceWindow resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Maintenance Window Resource. This allows maintenance windows to be created, updated, and deleted."
+title_tag: "wavefront.MaintenanceWindow"
+meta_desc: "Documentation for the wavefront.MaintenanceWindow resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

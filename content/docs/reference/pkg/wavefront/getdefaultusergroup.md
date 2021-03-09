@@ -1,8 +1,8 @@
 
 ---
-title: "GetDefaultUserGroup"
-title_tag: "Function GetDefaultUserGroup | Package Wavefront"
-meta_desc: "Explore the GetDefaultUserGroup function of the Wavefront package, including examples, input properties, output properties, and supporting types. Use this data source to get the Group ID of the `Everyone` group in Wavefront. "
+title: "getDefaultUserGroup"
+title_tag: "wavefront.getDefaultUserGroup"
+meta_desc: "Documentation for the wavefront.getDefaultUserGroup function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -82,7 +82,7 @@ const everyoneGroup = pulumi.output(wavefront.getDefaultUserGroup({ async: true 
 {{% /examples %}}
 
 
-## Using GetDefaultUserGroup {#using}
+## Using getDefaultUserGroup {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -100,6 +100,8 @@ const everyoneGroup = pulumi.output(wavefront.getDefaultUserGroup({ async: true 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDefaultUserGroup<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDefaultUserGroupResult</a></span>, error)</span></code></pre></div>
 
+> Note: This function is named `GetDefaultUserGroup` in the Go SDK.
+
 {{% /choosable %}}
 
 
@@ -112,7 +114,7 @@ const everyoneGroup = pulumi.output(wavefront.getDefaultUserGroup({ async: true 
 
 
 
-## GetDefaultUserGroup Result {#result}
+## getDefaultUserGroup Result {#result}
 
 The following output properties are available:
 

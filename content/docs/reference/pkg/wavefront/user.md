@@ -1,8 +1,8 @@
 
 ---
 title: "User"
-title_tag: "Resource User | Package Wavefront"
-meta_desc: "Explore the User resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront User Resource. This allows users to be created, updated, and deleted."
+title_tag: "wavefront.User"
+meta_desc: "Documentation for the wavefront.User resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,8 +1,8 @@
 
 ---
 title: "CloudIntegrationGcpBilling"
-title_tag: "Resource CloudIntegrationGcpBilling | Package Wavefront"
-meta_desc: "Explore the CloudIntegrationGcpBilling resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Cloud Integration for GCP Billing. This allows GCP Billing cloud integrations to be created,"
+title_tag: "wavefront.CloudIntegrationGcpBilling"
+meta_desc: "Documentation for the wavefront.CloudIntegrationGcpBilling resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

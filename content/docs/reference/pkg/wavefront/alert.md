@@ -1,8 +1,8 @@
 
 ---
 title: "Alert"
-title_tag: "Resource Alert | Package Wavefront"
-meta_desc: "Explore the Alert resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Alert resource.  This allows alerts to be created, updated, and deleted."
+title_tag: "wavefront.Alert"
+meta_desc: "Documentation for the wavefront.Alert resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
