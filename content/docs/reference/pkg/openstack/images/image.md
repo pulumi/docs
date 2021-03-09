@@ -30,7 +30,7 @@ Images can be imported using the `id`, e.g.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_cache_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_source_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_source_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_source_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_file_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_disk_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_ram_mb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">protected</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">verify_checksum</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_download</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Image</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hidden</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">image_cache_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_source_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_source_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_source_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_file_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">min_disk_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_ram_mb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">protected</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">verify_checksum</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_download</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -222,6 +222,17 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}The disk format. Must be one of
 "ami", "ari", "aki", "vhd", "vmdk", "raw", "qcow2", "vdi", "iso".
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hidden_csharp">
+<a href="#hidden_csharp" style="color: inherit; text-decoration: inherit;">Hidden</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, image will be hidden from public list.
+Defaults to false.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -433,6 +444,17 @@ Conflicts with `local_file_path`. Defaults to false.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="hidden_go">
+<a href="#hidden_go" style="color: inherit; text-decoration: inherit;">Hidden</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, image will be hidden from public list.
+Defaults to false.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="imagecachepath_go">
 <a href="#imagecachepath_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Cache<wbr>Path</a>
 </span>
@@ -641,6 +663,17 @@ Conflicts with `local_file_path`. Defaults to false.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="hidden_nodejs">
+<a href="#hidden_nodejs" style="color: inherit; text-decoration: inherit;">hidden</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, image will be hidden from public list.
+Defaults to false.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="imagecachepath_nodejs">
 <a href="#imagecachepath_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Cache<wbr>Path</a>
 </span>
@@ -846,6 +879,17 @@ Conflicts with `local_file_path`. Defaults to false.
     </dt>
     <dd>{{% md %}}The disk format. Must be one of
 "ami", "ari", "aki", "vhd", "vmdk", "raw", "qcow2", "vdi", "iso".
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hidden_python">
+<a href="#hidden_python" style="color: inherit; text-decoration: inherit;">hidden</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, image will be hidden from public list.
+Defaults to false.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1534,7 +1578,7 @@ Get an existing Image resource's state with the given name, ID, and optional ext
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">checksum</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_cache_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_source_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_source_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_source_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_file_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">min_disk_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_ram_mb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">protected</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">update_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">verify_checksum</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_download</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Image</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">checksum</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">container_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_format</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hidden</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">image_cache_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_source_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_source_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_source_username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">local_file_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">min_disk_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_ram_mb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">protected</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size_bytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">update_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">updated_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">verify_checksum</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">web_download</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Image</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1700,6 +1744,17 @@ The following state arguments are supported:
     <dd>{{% md %}}the trailing path after the glance
 endpoint that represent the location of the image
 or the path to retrieve it.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_hidden_csharp">
+<a href="#state_hidden_csharp" style="color: inherit; text-decoration: inherit;">Hidden</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, image will be hidden from public list.
+Defaults to false.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2017,6 +2072,17 @@ or the path to retrieve it.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_hidden_go">
+<a href="#state_hidden_go" style="color: inherit; text-decoration: inherit;">Hidden</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, image will be hidden from public list.
+Defaults to false.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_imagecachepath_go">
 <a href="#state_imagecachepath_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Cache<wbr>Path</a>
 </span>
@@ -2331,6 +2397,17 @@ or the path to retrieve it.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_hidden_nodejs">
+<a href="#state_hidden_nodejs" style="color: inherit; text-decoration: inherit;">hidden</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, image will be hidden from public list.
+Defaults to false.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_imagecachepath_nodejs">
 <a href="#state_imagecachepath_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Cache<wbr>Path</a>
 </span>
@@ -2642,6 +2719,17 @@ Conflicts with `local_file_path`. Defaults to false.
     <dd>{{% md %}}the trailing path after the glance
 endpoint that represent the location of the image
 or the path to retrieve it.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_hidden_python">
+<a href="#state_hidden_python" style="color: inherit; text-decoration: inherit;">hidden</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, image will be hidden from public list.
+Defaults to false.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

@@ -18,7 +18,7 @@ Manages a V2 block storage quotaset resource within OpenStack.
     in case of delete call.
 
 > **Note:** This resource has all-in creation so all optional quota arguments that were not specified are
-    created with zero value.
+    created with zero value. This excludes volume type quota.
 
 {{% examples %}}
 ## Example Usage
@@ -47,6 +47,12 @@ class MyStack : Stack
             Backups = 4,
             BackupGigabytes = 10,
             Groups = 100,
+            VolumeTypeQuota = 
+            {
+                { "volumes_ssd", 30 },
+                { "gigabytes_ssd", 500 },
+                { "snapshots_ssd", 10 },
+            },
         });
     }
 
@@ -80,6 +86,11 @@ func main() {
 			Backups:            pulumi.Int(4),
 			BackupGigabytes:    pulumi.Int(10),
 			Groups:             pulumi.Int(100),
+			VolumeTypeQuota: pulumi.Float64Map{
+				"volumes_ssd":   pulumi.Float64(30),
+				"gigabytes_ssd": pulumi.Float64(500),
+				"snapshots_ssd": pulumi.Float64(10),
+			},
 		})
 		if err != nil {
 			return err
@@ -105,7 +116,12 @@ quotaset1 = openstack.blockstorage.QuoteSetV2("quotaset1",
     per_volume_gigabytes=10,
     backups=4,
     backup_gigabytes=10,
-    groups=100)
+    groups=100,
+    volume_type_quota={
+        "volumes_ssd": 30,
+        "gigabytes_ssd": 500,
+        "snapshots_ssd": 10,
+    })
 ```
 
 {{% /example %}}
@@ -126,6 +142,11 @@ const quotaset1 = new openstack.blockstorage.QuoteSetV2("quotaset1", {
     backups: 4,
     backupGigabytes: 10,
     groups: 100,
+    volumeTypeQuota: {
+        volumes_ssd: 30,
+        gigabytes_ssd: 500,
+        snapshots_ssd: 10,
+    },
 });
 ```
 
@@ -143,7 +164,7 @@ const quotaset1 = new openstack.blockstorage.QuoteSetV2("quotaset1", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">QuoteSetV2</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup_gigabytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backups</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">gigabytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">per_volume_gigabytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshots</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">QuoteSetV2</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup_gigabytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backups</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">gigabytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">per_volume_gigabytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshots</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">volume_type_quota</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -405,6 +426,18 @@ existing quotaset.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="volumetypequota_csharp">
+<a href="#volumetypequota_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type<wbr>Quota</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Key/Value pairs for setting quota for
+volumes types. Possible keys are `snapshots_<volume_type_name>`,
+`volumes_<volume_type_name>` and `gigabytes_<volume_type_name>`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="volumes_csharp">
 <a href="#volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
 </span>
@@ -508,6 +541,18 @@ creates a new quotaset.
     </dt>
     <dd>{{% md %}}Quota value for snapshots. Changing this updates the
 existing quotaset.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumetypequota_go">
+<a href="#volumetypequota_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type<wbr>Quota</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Key/Value pairs for setting quota for
+volumes types. Possible keys are `snapshots_<volume_type_name>`,
+`volumes_<volume_type_name>` and `gigabytes_<volume_type_name>`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -617,6 +662,18 @@ existing quotaset.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="volumetypequota_nodejs">
+<a href="#volumetypequota_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type<wbr>Quota</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Key/Value pairs for setting quota for
+volumes types. Possible keys are `snapshots_<volume_type_name>`,
+`volumes_<volume_type_name>` and `gigabytes_<volume_type_name>`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="volumes_nodejs">
 <a href="#volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
@@ -723,6 +780,18 @@ existing quotaset.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="volume_type_quota_python">
+<a href="#volume_type_quota_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type_<wbr>quota</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Key/Value pairs for setting quota for
+volumes types. Possible keys are `snapshots_<volume_type_name>`,
+`volumes_<volume_type_name>` and `gigabytes_<volume_type_name>`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="volumes_python">
 <a href="#volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
@@ -815,7 +884,7 @@ Get an existing QuoteSetV2 resource's state with the given name, ID, and optiona
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup_gigabytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backups</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">gigabytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">per_volume_gigabytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshots</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> QuoteSetV2</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">backup_gigabytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backups</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">gigabytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">groups</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">per_volume_gigabytes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshots</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">volume_type_quota</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">volumes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> QuoteSetV2</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1019,6 +1088,18 @@ existing quotaset.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_volumetypequota_csharp">
+<a href="#state_volumetypequota_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type<wbr>Quota</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Key/Value pairs for setting quota for
+volumes types. Possible keys are `snapshots_<volume_type_name>`,
+`volumes_<volume_type_name>` and `gigabytes_<volume_type_name>`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_volumes_csharp">
 <a href="#state_volumes_csharp" style="color: inherit; text-decoration: inherit;">Volumes</a>
 </span>
@@ -1122,6 +1203,18 @@ creates a new quotaset.
     </dt>
     <dd>{{% md %}}Quota value for snapshots. Changing this updates the
 existing quotaset.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_volumetypequota_go">
+<a href="#state_volumetypequota_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type<wbr>Quota</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Key/Value pairs for setting quota for
+volumes types. Possible keys are `snapshots_<volume_type_name>`,
+`volumes_<volume_type_name>` and `gigabytes_<volume_type_name>`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1231,6 +1324,18 @@ existing quotaset.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_volumetypequota_nodejs">
+<a href="#state_volumetypequota_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type<wbr>Quota</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Key/Value pairs for setting quota for
+volumes types. Possible keys are `snapshots_<volume_type_name>`,
+`volumes_<volume_type_name>` and `gigabytes_<volume_type_name>`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_volumes_nodejs">
 <a href="#state_volumes_nodejs" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
@@ -1337,6 +1442,18 @@ existing quotaset.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_volume_type_quota_python">
+<a href="#state_volume_type_quota_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type_<wbr>quota</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Key/Value pairs for setting quota for
+volumes types. Possible keys are `snapshots_<volume_type_name>`,
+`volumes_<volume_type_name>` and `gigabytes_<volume_type_name>`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_volumes_python">
 <a href="#state_volumes_python" style="color: inherit; text-decoration: inherit;">volumes</a>
 </span>
@@ -1356,10 +1473,10 @@ existing quotaset.
 ## Import
 
 
-Quotasets can be imported using the `project_id`, e.g.
+Quotasets can be imported using the `project_id/region`, e.g.
 
 ```sh
- $ pulumi import openstack:blockstorage/quoteSetV2:QuoteSetV2 quotaset_1 2a0f2240-c5e6-41de-896d-e80d97428d6b
+ $ pulumi import openstack:blockstorage/quoteSetV2:QuoteSetV2 quotaset_1 2a0f2240-c5e6-41de-896d-e80d97428d6b/region_1
 ```
 
 

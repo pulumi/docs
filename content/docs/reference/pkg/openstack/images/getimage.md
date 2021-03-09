@@ -118,7 +118,7 @@ const ubuntu = pulumi.output(openstack.images.getImage({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_image(</span><span class="nx">member_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">most_recent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size_max</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">size_min</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sort_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sort_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetImageResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_image(</span><span class="nx">hidden</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">member_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">most_recent</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">size_max</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">size_min</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sort_direction</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sort_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">visibility</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetImageResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -144,6 +144,16 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hidden_csharp">
+<a href="#hidden_csharp" style="color: inherit; text-decoration: inherit;">Hidden</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the image is hidden from public list.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="memberstatus_csharp">
@@ -282,6 +292,16 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="hidden_go">
+<a href="#hidden_go" style="color: inherit; text-decoration: inherit;">Hidden</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the image is hidden from public list.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="memberstatus_go">
 <a href="#memberstatus_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Status</a>
 </span>
@@ -418,6 +438,16 @@ is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="hidden_nodejs">
+<a href="#hidden_nodejs" style="color: inherit; text-decoration: inherit;">hidden</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the image is hidden from public list.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="memberstatus_nodejs">
 <a href="#memberstatus_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Status</a>
 </span>
@@ -552,6 +582,16 @@ is used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hidden_python">
+<a href="#hidden_python" style="color: inherit; text-decoration: inherit;">hidden</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the image is hidden from public list.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="member_status_python">
@@ -852,6 +892,15 @@ the image or image
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="hidden_csharp">
+<a href="#hidden_csharp" style="color: inherit; text-decoration: inherit;">Hidden</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="memberstatus_csharp">
 <a href="#memberstatus_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Status</a>
 </span>
@@ -1109,6 +1158,15 @@ the image or image
     </dt>
     <dd>{{% md %}}The date the image was last updated.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="hidden_go">
+<a href="#hidden_go" style="color: inherit; text-decoration: inherit;">Hidden</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="memberstatus_go">
@@ -1370,6 +1428,15 @@ the image or image
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="hidden_nodejs">
+<a href="#hidden_nodejs" style="color: inherit; text-decoration: inherit;">hidden</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="memberstatus_nodejs">
 <a href="#memberstatus_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Status</a>
 </span>
@@ -1627,6 +1694,15 @@ the image or image
     </dt>
     <dd>{{% md %}}The date the image was last updated.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="hidden_python">
+<a href="#hidden_python" style="color: inherit; text-decoration: inherit;">hidden</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="member_status_python">
