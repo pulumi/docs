@@ -1,6 +1,6 @@
 ---
 title: "Wavefront"
-title_tag: "Module Wavefront | Package Wavefront"
+title_tag: "wavefront.Wavefront"
 meta_desc: "A Pulumi package for creating and managing wavefront cloud resources."
 menu:
     reference:
@@ -54,6 +54,6 @@ A Pulumi package for creating and managing wavefront cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`wavefront` Terraform Provider](https://github.com/vmware/terraform-provider-wavefront).</dd>
 	<dt>Version</dt>
-	<dd>0.7.1</dd>
+	<dd>0.7.2</dd>
 </dl>
 

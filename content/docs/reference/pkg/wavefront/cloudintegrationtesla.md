@@ -1,8 +1,8 @@
 
 ---
 title: "CloudIntegrationTesla"
-title_tag: "Resource CloudIntegrationTesla | Package Wavefront"
-meta_desc: "Explore the CloudIntegrationTesla resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Cloud Integration for Tesla. This allows NewRelic cloud integrations to be created,"
+title_tag: "wavefront.CloudIntegrationTesla"
+meta_desc: "Documentation for the wavefront.CloudIntegrationTesla resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

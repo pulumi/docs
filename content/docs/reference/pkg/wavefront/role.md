@@ -1,8 +1,8 @@
 
 ---
 title: "Role"
-title_tag: "Resource Role | Package Wavefront"
-meta_desc: "Explore the Role resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Role Resource. This allows user groups to be created, updated, and deleted."
+title_tag: "wavefront.Role"
+meta_desc: "Documentation for the wavefront.Role resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

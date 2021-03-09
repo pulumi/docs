@@ -1,8 +1,8 @@
 
 ---
 title: "Dashboard"
-title_tag: "Resource Dashboard | Package Wavefront"
-meta_desc: "Explore the Dashboard resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Dashboard resource.  This allows dashboards to be created, updated, and deleted."
+title_tag: "wavefront.Dashboard"
+meta_desc: "Documentation for the wavefront.Dashboard resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

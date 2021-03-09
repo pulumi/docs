@@ -1,8 +1,8 @@
 
 ---
 title: "DerivedMetric"
-title_tag: "Resource DerivedMetric | Package Wavefront"
-meta_desc: "Explore the DerivedMetric resource of the Wavefront package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Wavefront Derived Metric Resource. This allows derived metrics to be created,"
+title_tag: "wavefront.DerivedMetric"
+meta_desc: "Documentation for the wavefront.DerivedMetric resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
