@@ -111,6 +111,18 @@
                 @apply outline-none;
             }
         }
+
+        &.newsletter-wide input {
+            @apply w-full;
+
+            @screen lg {
+                width: 24rem;
+            }
+
+            &[type="submit"] {
+                @apply w-auto;
+            }
+        }
     }
 
     .hs-recaptcha {

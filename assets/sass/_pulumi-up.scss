@@ -1,0 +1,72 @@
+$blue400: theme("colors.blue.400");
+$blue700: theme("colors.blue.700");
+$blue900: theme("colors.blue.900");
+
+$green400: theme("colors.green.400");
+$green700: theme("colors.green.700");
+$green900: theme("colors.green.900");
+
+$orange400: theme("colors.orange.400");
+$orange700: theme("colors.orange.700");
+$orange900: theme("colors.orange.900");
+
+// Neon Animation found on Codepen
+// https://codepen.io/Trinca/pen/NAvpWa
+.neon-container {
+    @apply text-center align-middle;
+}
+
+@mixin neon-sign-defaults($fontSize: 4rem) {
+    font-family: "Vibur";
+    font-size: $fontSize;
+}
+
+@mixin neon-sign-animation($light, $medium, $dark, $pulseTime, $name) {
+    animation: unquote($name) $pulseTime linear infinite;
+
+    @keyframes #{$name} {
+        0%, 100% {
+            text-shadow: 0 0 30px, 0 0 2px, 0 0 1em $medium, 0 0 0.5em $medium, 0 0 0.1em $medium, 0 10px 3px #000;
+            color: $light;
+        }
+        50% {
+            text-shadow: 0 0 20px, 0 0 2px, 0 0 1em $dark, 0 0 0.5em $dark, 0 0 0.1em $dark, 0 10px 3px #000;
+            color: $medium;
+        }
+    }
+}
+
+@mixin neon-sign($light, $medium, $dark, $fontSize, $name, $animate: true, $pulseTime: 3s) {
+    @include neon-sign-defaults($fontSize);
+    @if $animate {
+        @include neon-sign-animation($light, $medium, $dark, $pulseTime, $name);
+    }
+
+    color: $light;
+    text-shadow: 0 0 15px, 0 0 2px, 0 0 1em $medium, 0 0 0.5em $medium, 0 0 0.1em $medium, 0 10px 3px #000;
+}
+
+.blue-neon-sign-xl {
+    @include neon-sign($blue400, $blue700, $blue900, 6rem, "blue-neon-sign-xl-pulse");
+
+    @screen lg {
+        @include neon-sign($blue400, $blue700, $blue900, 8rem, "blue-neon-sign-xl-pulse");
+    }
+}
+
+.green-neon-sign-xl {
+    @include neon-sign($green400, $green700, $green900, 6rem, "green-neon-sign-xl-pulse", true, 4s);
+
+    @screen lg {
+        @include neon-sign($green400, $green700, $green900, 8rem, "green-neon-sign-xl-pulse", true, 4s);
+    }
+}
+
+.date-countdown {
+    @apply w-full text-center text-5xl;
+    @include neon-sign($orange400, $orange700, $orange900, 2.25rem, "date-countdown", false);
+}
+
+.pulumi-up-body {
+    @apply bg-gray-900;
+}
