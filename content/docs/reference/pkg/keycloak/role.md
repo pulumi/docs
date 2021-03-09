@@ -37,6 +37,10 @@ class MyStack : Stack
         {
             RealmId = realm.Id,
             Description = "My Realm Role",
+            Attributes = 
+            {
+                { "key", "value" },
+            },
         });
     }
 
@@ -66,6 +70,9 @@ func main() {
 		_, err = keycloak.NewRole(ctx, "realmRole", &keycloak.RoleArgs{
 			RealmId:     realm.ID(),
 			Description: pulumi.String("My Realm Role"),
+			Attributes: pulumi.StringMap{
+				"key": pulumi.String("value"),
+			},
 		})
 		if err != nil {
 			return err
@@ -87,7 +94,10 @@ realm = keycloak.Realm("realm",
     enabled=True)
 realm_role = keycloak.Role("realmRole",
     realm_id=realm.id,
-    description="My Realm Role")
+    description="My Realm Role",
+    attributes={
+        "key": "value",
+    })
 ```
 
 {{% /example %}}
@@ -105,6 +115,9 @@ const realm = new keycloak.Realm("realm", {
 const realmRole = new keycloak.Role("realmRole", {
     realmId: realm.id,
     description: "My Realm Role",
+    attributes: {
+        key: "value",
+    },
 });
 ```
 
@@ -141,6 +154,10 @@ class MyStack : Stack
             RealmId = realm.Id,
             ClientId = keycloak_client.Openid_client.Id,
             Description = "My Client Role",
+            Attributes = 
+            {
+                { "key", "value" },
+            },
         });
     }
 
@@ -184,6 +201,9 @@ func main() {
 			RealmId:     realm.ID(),
 			ClientId:    pulumi.Any(keycloak_client.Openid_client.Id),
 			Description: pulumi.String("My Client Role"),
+			Attributes: pulumi.StringMap{
+				"key": pulumi.String("value"),
+			},
 		})
 		if err != nil {
 			return err
@@ -212,7 +232,10 @@ openid_client = keycloak.openid.Client("openidClient",
 client_role = keycloak.Role("clientRole",
     realm_id=realm.id,
     client_id=keycloak_client["openid_client"]["id"],
-    description="My Client Role")
+    description="My Client Role",
+    attributes={
+        "key": "value",
+    })
 ```
 
 {{% /example %}}
@@ -238,6 +261,9 @@ const clientRole = new keycloak.Role("clientRole", {
     realmId: realm.id,
     clientId: keycloak_client.openid_client.id,
     description: "My Client Role",
+    attributes: {
+        key: "value",
+    },
 });
 ```
 
@@ -262,18 +288,34 @@ class MyStack : Stack
         var createRole = new Keycloak.Role("createRole", new Keycloak.RoleArgs
         {
             RealmId = realm.Id,
+            Attributes = 
+            {
+                { "key", "value" },
+            },
         });
         var readRole = new Keycloak.Role("readRole", new Keycloak.RoleArgs
         {
             RealmId = realm.Id,
+            Attributes = 
+            {
+                { "key", "value" },
+            },
         });
         var updateRole = new Keycloak.Role("updateRole", new Keycloak.RoleArgs
         {
             RealmId = realm.Id,
+            Attributes = 
+            {
+                { "key", "value" },
+            },
         });
         var deleteRole = new Keycloak.Role("deleteRole", new Keycloak.RoleArgs
         {
             RealmId = realm.Id,
+            Attributes = 
+            {
+                { "key", "value" },
+            },
         });
         // client role
         var openidClient = new Keycloak.OpenId.Client("openidClient", new Keycloak.OpenId.ClientArgs
@@ -292,6 +334,10 @@ class MyStack : Stack
             RealmId = realm.Id,
             ClientId = keycloak_client.Openid_client.Id,
             Description = "My Client Role",
+            Attributes = 
+            {
+                { "key", "value" },
+            },
         });
         var adminRole = new Keycloak.Role("adminRole", new Keycloak.RoleArgs
         {
@@ -303,6 +349,10 @@ class MyStack : Stack
                 updateRole.Id,
                 deleteRole.Id,
                 clientRole.Id,
+            },
+            Attributes = 
+            {
+                { "key", "value" },
             },
         });
     }
@@ -333,24 +383,36 @@ func main() {
 		}
 		createRole, err := keycloak.NewRole(ctx, "createRole", &keycloak.RoleArgs{
 			RealmId: realm.ID(),
+			Attributes: pulumi.StringMap{
+				"key": pulumi.String("value"),
+			},
 		})
 		if err != nil {
 			return err
 		}
 		readRole, err := keycloak.NewRole(ctx, "readRole", &keycloak.RoleArgs{
 			RealmId: realm.ID(),
+			Attributes: pulumi.StringMap{
+				"key": pulumi.String("value"),
+			},
 		})
 		if err != nil {
 			return err
 		}
 		updateRole, err := keycloak.NewRole(ctx, "updateRole", &keycloak.RoleArgs{
 			RealmId: realm.ID(),
+			Attributes: pulumi.StringMap{
+				"key": pulumi.String("value"),
+			},
 		})
 		if err != nil {
 			return err
 		}
 		deleteRole, err := keycloak.NewRole(ctx, "deleteRole", &keycloak.RoleArgs{
 			RealmId: realm.ID(),
+			Attributes: pulumi.StringMap{
+				"key": pulumi.String("value"),
+			},
 		})
 		if err != nil {
 			return err
@@ -371,6 +433,9 @@ func main() {
 			RealmId:     realm.ID(),
 			ClientId:    pulumi.Any(keycloak_client.Openid_client.Id),
 			Description: pulumi.String("My Client Role"),
+			Attributes: pulumi.StringMap{
+				"key": pulumi.String("value"),
+			},
 		})
 		if err != nil {
 			return err
@@ -383,6 +448,9 @@ func main() {
 				updateRole.ID(),
 				deleteRole.ID(),
 				clientRole.ID(),
+			},
+			Attributes: pulumi.StringMap{
+				"key": pulumi.String("value"),
 			},
 		})
 		if err != nil {
@@ -404,10 +472,26 @@ realm = keycloak.Realm("realm",
     realm="my-realm",
     enabled=True)
 # realm roles
-create_role = keycloak.Role("createRole", realm_id=realm.id)
-read_role = keycloak.Role("readRole", realm_id=realm.id)
-update_role = keycloak.Role("updateRole", realm_id=realm.id)
-delete_role = keycloak.Role("deleteRole", realm_id=realm.id)
+create_role = keycloak.Role("createRole",
+    realm_id=realm.id,
+    attributes={
+        "key": "value",
+    })
+read_role = keycloak.Role("readRole",
+    realm_id=realm.id,
+    attributes={
+        "key": "value",
+    })
+update_role = keycloak.Role("updateRole",
+    realm_id=realm.id,
+    attributes={
+        "key": "value",
+    })
+delete_role = keycloak.Role("deleteRole",
+    realm_id=realm.id,
+    attributes={
+        "key": "value",
+    })
 # client role
 openid_client = keycloak.openid.Client("openidClient",
     realm_id=realm.id,
@@ -418,7 +502,10 @@ openid_client = keycloak.openid.Client("openidClient",
 client_role = keycloak.Role("clientRole",
     realm_id=realm.id,
     client_id=keycloak_client["openid_client"]["id"],
-    description="My Client Role")
+    description="My Client Role",
+    attributes={
+        "key": "value",
+    })
 admin_role = keycloak.Role("adminRole",
     realm_id=realm.id,
     composite_roles=[
@@ -427,7 +514,10 @@ admin_role = keycloak.Role("adminRole",
         update_role.id,
         delete_role.id,
         client_role.id,
-    ])
+    ],
+    attributes={
+        "key": "value",
+    })
 ```
 
 {{% /example %}}
@@ -443,10 +533,30 @@ const realm = new keycloak.Realm("realm", {
     enabled: true,
 });
 // realm roles
-const createRole = new keycloak.Role("createRole", {realmId: realm.id});
-const readRole = new keycloak.Role("readRole", {realmId: realm.id});
-const updateRole = new keycloak.Role("updateRole", {realmId: realm.id});
-const deleteRole = new keycloak.Role("deleteRole", {realmId: realm.id});
+const createRole = new keycloak.Role("createRole", {
+    realmId: realm.id,
+    attributes: {
+        key: "value",
+    },
+});
+const readRole = new keycloak.Role("readRole", {
+    realmId: realm.id,
+    attributes: {
+        key: "value",
+    },
+});
+const updateRole = new keycloak.Role("updateRole", {
+    realmId: realm.id,
+    attributes: {
+        key: "value",
+    },
+});
+const deleteRole = new keycloak.Role("deleteRole", {
+    realmId: realm.id,
+    attributes: {
+        key: "value",
+    },
+});
 // client role
 const openidClient = new keycloak.openid.Client("openidClient", {
     realmId: realm.id,
@@ -459,6 +569,9 @@ const clientRole = new keycloak.Role("clientRole", {
     realmId: realm.id,
     clientId: keycloak_client.openid_client.id,
     description: "My Client Role",
+    attributes: {
+        key: "value",
+    },
 });
 const adminRole = new keycloak.Role("adminRole", {
     realmId: realm.id,
@@ -469,6 +582,9 @@ const adminRole = new keycloak.Role("adminRole", {
         deleteRole.id,
         clientRole.id,
     ],
+    attributes: {
+        key: "value",
+    },
 });
 ```
 
@@ -486,7 +602,7 @@ const adminRole = new keycloak.Role("adminRole", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Role</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">composite_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Role</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">composite_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -669,6 +785,16 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="attributes_csharp">
+<a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Attribute key/value pairs
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
 </span>
@@ -722,6 +848,16 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this role exists within.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="attributes_go">
+<a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Attribute key/value pairs
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -781,6 +917,16 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="attributes_nodejs">
+<a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Attribute key/value pairs
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
@@ -834,6 +980,16 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The realm this role exists within.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="attributes_python">
+<a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Attribute key/value pairs
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -958,7 +1114,7 @@ Get an existing Role resource's state with the given name, ID, and optional extr
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">composite_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Role</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">attributes</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">composite_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">realm_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Role</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1073,6 +1229,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_attributes_csharp">
+<a href="#state_attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Attribute key/value pairs
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_clientid_csharp">
 <a href="#state_clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
 </span>
@@ -1127,6 +1293,16 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_attributes_go">
+<a href="#state_attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Attribute key/value pairs
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_clientid_go">
@@ -1185,6 +1361,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_attributes_nodejs">
+<a href="#state_attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Attribute key/value pairs
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_clientid_nodejs">
 <a href="#state_clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
 </span>
@@ -1239,6 +1425,16 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_attributes_python">
+<a href="#state_attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Attribute key/value pairs
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_client_id_python">
