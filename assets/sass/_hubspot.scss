@@ -112,11 +112,11 @@
             }
         }
 
-        &.newsletter-long input {
+        &.newsletter-wide input {
             @apply w-full;
 
             @screen lg {
-                width: 24rem;
+                @apply w-96;
             }
 
             &[type="submit"] {
