@@ -26,7 +26,7 @@ jobs:
 
       - uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.55.4'
+          hugo-version: '0.81.0'
           extended: true
 
       - name: Install assume-role
