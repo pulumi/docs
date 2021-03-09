@@ -116,7 +116,7 @@
             @apply w-full;
 
             @screen lg {
-                @apply w-96;
+                width: 24rem;
             }
 
             &[type="submit"] {
