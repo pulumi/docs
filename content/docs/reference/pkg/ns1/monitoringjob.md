@@ -1,8 +1,8 @@
 
 ---
 title: "MonitoringJob"
-title_tag: "Resource MonitoringJob | Package NS1"
-meta_desc: "Explore the MonitoringJob resource of the NS1 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a NS1 Monitoring Job resource. This can be used to create, modify, and delete monitoring jobs."
+title_tag: "ns1.MonitoringJob"
+meta_desc: "Documentation for the ns1.MonitoringJob resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: "NS1"
-title_tag: "Module NS1 | Package NS1"
+title_tag: "ns1.NS1"
 meta_desc: "A Pulumi package for creating and managing ns1 cloud resources."
 menu:
     reference:
@@ -42,6 +42,6 @@ A Pulumi package for creating and managing ns1 cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`ns1` Terraform Provider](https://github.com/ns1-terraform/terraform-provider-ns1).</dd>
 	<dt>Version</dt>
-	<dd>1.4.1</dd>
+	<dd>1.4.2</dd>
 </dl>
 

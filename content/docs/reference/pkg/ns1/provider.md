@@ -1,8 +1,8 @@
 
 ---
 title: "Provider"
-title_tag: "Resource Provider | Package NS1"
-meta_desc: "Explore the Provider resource of the NS1 package, including examples, input properties, output properties, lookup functions, and supporting types. The provider type for the ns1 package. By default, resources use package-wide configuration"
+title_tag: "ns1.Provider"
+meta_desc: "Documentation for the ns1.Provider resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

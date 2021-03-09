@@ -1,8 +1,8 @@
 
 ---
-title: "GetZone"
-title_tag: "Function GetZone | Package NS1"
-meta_desc: "Explore the GetZone function of the NS1 package, including examples, input properties, output properties, and supporting types. Provides details about a NS1 Zone. Use this if you would simply like to read"
+title: "getZone"
+title_tag: "ns1.getZone"
+meta_desc: "Documentation for the ns1.getZone function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -91,7 +91,7 @@ const example = pulumi.output(ns1.getZone({
 {{% /examples %}}
 
 
-## Using GetZone {#using}
+## Using getZone {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -236,7 +236,7 @@ zone.
 
 
 
-## GetZone Result {#result}
+## getZone Result {#result}
 
 The following output properties are available:
 

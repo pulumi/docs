@@ -1,8 +1,8 @@
 
 ---
 title: "NotifyList"
-title_tag: "Resource NotifyList | Package NS1"
-meta_desc: "Explore the NotifyList resource of the NS1 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a NS1 Notify List resource. This can be used to create, modify, and delete notify lists."
+title_tag: "ns1.NotifyList"
+meta_desc: "Documentation for the ns1.NotifyList resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
