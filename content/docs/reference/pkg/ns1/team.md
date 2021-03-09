@@ -1,8 +1,8 @@
 
 ---
 title: "Team"
-title_tag: "Resource Team | Package NS1"
-meta_desc: "Explore the Team resource of the NS1 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a NS1 Team resource. This can be used to create, modify, and delete"
+title_tag: "ns1.Team"
+meta_desc: "Documentation for the ns1.Team resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -224,7 +224,7 @@ const example2 = new ns1.Team("example2", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Team</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_manage_account_settings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_apikeys</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_payment_methods</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_plan</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_teams</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_view_activity_log</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_view_invoices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_manage_datafeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_manage_datasources</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_push_to_datafeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dhcp_manage_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dhcp_view_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_manage_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_view_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_zones_allow_by_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_zones_allows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_zones_denies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ip_whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[TeamIpWhitelistArgs]]</span> = None<span class="p">, </span><span class="nx">ipam_manage_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ipam_view_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_manage_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_manage_lists</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_view_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_manage_active_directory</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_manage_global2fa</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Team</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_manage_account_settings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_apikeys</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_ip_whitelist</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_payment_methods</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_plan</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_teams</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_view_activity_log</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_view_invoices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_manage_datafeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_manage_datasources</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_push_to_datafeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dhcp_manage_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dhcp_view_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_manage_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_view_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_zones_allow_by_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_zones_allows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_zones_denies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ip_whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[TeamIpWhitelistArgs]]</span> = None<span class="p">, </span><span class="nx">ipam_manage_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ipam_view_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_manage_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_manage_lists</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_view_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_manage_active_directory</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_manage_global2fa</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -414,6 +414,16 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account apikeys.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountmanageipwhitelist_csharp">
+<a href="#accountmanageipwhitelist_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Ip<wbr>Whitelist</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the team can manage ip whitelist.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -698,6 +708,16 @@ Only relevant for the DDI product.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="accountmanageipwhitelist_go">
+<a href="#accountmanageipwhitelist_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Ip<wbr>Whitelist</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the team can manage ip whitelist.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="accountmanagepaymentmethods_go">
 <a href="#accountmanagepaymentmethods_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Payment<wbr>Methods</a>
 </span>
@@ -979,6 +999,16 @@ Only relevant for the DDI product.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="accountmanageipwhitelist_nodejs">
+<a href="#accountmanageipwhitelist_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Ip<wbr>Whitelist</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the team can manage ip whitelist.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="accountmanagepaymentmethods_nodejs">
 <a href="#accountmanagepaymentmethods_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Payment<wbr>Methods</a>
 </span>
@@ -1257,6 +1287,16 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account apikeys.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="account_manage_ip_whitelist_python">
+<a href="#account_manage_ip_whitelist_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>ip_<wbr>whitelist</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the team can manage ip whitelist.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1596,7 +1636,7 @@ Get an existing Team resource's state with the given name, ID, and optional extr
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_manage_account_settings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_apikeys</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_payment_methods</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_plan</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_teams</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_view_activity_log</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_view_invoices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_manage_datafeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_manage_datasources</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_push_to_datafeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dhcp_manage_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dhcp_view_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_manage_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_view_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_zones_allow_by_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_zones_allows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_zones_denies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ip_whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[TeamIpWhitelistArgs]]</span> = None<span class="p">, </span><span class="nx">ipam_manage_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ipam_view_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_manage_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_manage_lists</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_view_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_manage_active_directory</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_manage_global2fa</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Team</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_manage_account_settings</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_apikeys</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_ip_whitelist</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_payment_methods</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_plan</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_teams</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_manage_users</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_view_activity_log</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">account_view_invoices</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_manage_datafeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_manage_datasources</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">data_push_to_datafeeds</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dhcp_manage_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dhcp_view_dhcp</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_manage_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_view_zones</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_zones_allow_by_default</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">dns_zones_allows</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">dns_zones_denies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ip_whitelists</span><span class="p">:</span> <span class="nx">Optional[Sequence[TeamIpWhitelistArgs]]</span> = None<span class="p">, </span><span class="nx">ipam_manage_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ipam_view_ipam</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_manage_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_manage_lists</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">monitoring_view_jobs</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_manage_active_directory</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">security_manage_global2fa</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Team</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1728,6 +1768,16 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account apikeys.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_accountmanageipwhitelist_csharp">
+<a href="#state_accountmanageipwhitelist_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Ip<wbr>Whitelist</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the team can manage ip whitelist.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2012,6 +2062,16 @@ Only relevant for the DDI product.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_accountmanageipwhitelist_go">
+<a href="#state_accountmanageipwhitelist_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Ip<wbr>Whitelist</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the team can manage ip whitelist.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_accountmanagepaymentmethods_go">
 <a href="#state_accountmanagepaymentmethods_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Manage<wbr>Payment<wbr>Methods</a>
 </span>
@@ -2293,6 +2353,16 @@ Only relevant for the DDI product.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_accountmanageipwhitelist_nodejs">
+<a href="#state_accountmanageipwhitelist_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Ip<wbr>Whitelist</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the team can manage ip whitelist.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_accountmanagepaymentmethods_nodejs">
 <a href="#state_accountmanagepaymentmethods_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Manage<wbr>Payment<wbr>Methods</a>
 </span>
@@ -2571,6 +2641,16 @@ Only relevant for the DDI product.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the team can modify account apikeys.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_account_manage_ip_whitelist_python">
+<a href="#state_account_manage_ip_whitelist_python" style="color: inherit; text-decoration: inherit;">account_<wbr>manage_<wbr>ip_<wbr>whitelist</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the team can manage ip whitelist.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

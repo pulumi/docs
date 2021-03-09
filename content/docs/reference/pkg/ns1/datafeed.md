@@ -1,8 +1,8 @@
 
 ---
 title: "DataFeed"
-title_tag: "Resource DataFeed | Package NS1"
-meta_desc: "Explore the DataFeed resource of the NS1 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a NS1 Data Feed resource. This can be used to create, modify, and delete data feeds."
+title_tag: "ns1.DataFeed"
+meta_desc: "Documentation for the ns1.DataFeed resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 

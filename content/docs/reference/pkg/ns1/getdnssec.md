@@ -1,8 +1,8 @@
 
 ---
-title: "GetDNSSec"
-title_tag: "Function GetDNSSec | Package NS1"
-meta_desc: "Explore the GetDNSSec function of the NS1 package, including examples, input properties, output properties, and supporting types. Provides DNSSEC details about a NS1 Zone."
+title: "getDNSSec"
+title_tag: "ns1.getDNSSec"
+meta_desc: "Documentation for the ns1.getDNSSec function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -104,7 +104,7 @@ const exampleDNSSec = exampleZone.zone.apply(zone => ns1.getDNSSec({
 {{% /examples %}}
 
 
-## Using GetDNSSec {#using}
+## Using getDNSSec {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -121,6 +121,8 @@ const exampleDNSSec = exampleZone.zone.apply(zone => ns1.getDNSSec({
 
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDNSSec<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx">GetDNSSecArgs</span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetDNSSecResult</a></span>, error)</span></code></pre></div>
+
+> Note: This function is named `GetDNSSec` in the Go SDK.
 
 {{% /choosable %}}
 
@@ -203,7 +205,7 @@ The following arguments are supported:
 
 
 
-## GetDNSSec Result {#result}
+## getDNSSec Result {#result}
 
 The following output properties are available:
 

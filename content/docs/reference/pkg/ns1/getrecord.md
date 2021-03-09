@@ -1,8 +1,8 @@
 
 ---
-title: "GetRecord"
-title_tag: "Function GetRecord | Package NS1"
-meta_desc: "Explore the GetRecord function of the NS1 package, including examples, input properties, output properties, and supporting types. Provides details about a NS1 Record. Use this if you would simply like to read"
+title: "getRecord"
+title_tag: "ns1.getRecord"
+meta_desc: "Documentation for the ns1.getRecord function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -99,7 +99,7 @@ const example = pulumi.output(ns1.getRecord({
 {{% /examples %}}
 
 
-## Using GetRecord {#using}
+## Using getRecord {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -280,7 +280,7 @@ The following arguments are supported:
 
 
 
-## GetRecord Result {#result}
+## getRecord Result {#result}
 
 The following output properties are available:
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Record"
-title_tag: "Resource Record | Package NS1"
-meta_desc: "Explore the Record resource of the NS1 package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a NS1 Record resource. This can be used to create, modify, and delete records."
+title_tag: "ns1.Record"
+meta_desc: "Documentation for the ns1.Record resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
