@@ -16,6 +16,105 @@ The `github.BranchProtection` resource has moved to the GraphQL API, while this 
 
 This resource allows you to configure branch protection for repositories in your organization. When applied, the branch will be protected from forced pushes and deletion. Additional constraints, such as required status checks or restrictions on users, teams, and apps, can also be configured.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Github = Pulumi.Github;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        // Protect the main branch of the foo repository. Only allow a specific user to merge to the branch.
+        var example = new Github.BranchProtectionV3("example", new Github.BranchProtectionV3Args
+        {
+            Branch = "main",
+            Repository = github_repository.Example.Name,
+            Restrictions = new Github.Inputs.BranchProtectionV3RestrictionsArgs
+            {
+                Users = 
+                {
+                    "foo-user",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-github/sdk/v3/go/github"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := github.NewBranchProtectionV3(ctx, "example", &github.BranchProtectionV3Args{
+			Branch:     pulumi.String("main"),
+			Repository: pulumi.Any(github_repository.Example.Name),
+			Restrictions: &github.BranchProtectionV3RestrictionsArgs{
+				Users: pulumi.StringArray{
+					pulumi.String("foo-user"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_github as github
+
+# Protect the main branch of the foo repository. Only allow a specific user to merge to the branch.
+example = github.BranchProtectionV3("example",
+    branch="main",
+    repository=github_repository["example"]["name"],
+    restrictions=github.BranchProtectionV3RestrictionsArgs(
+        users=["foo-user"],
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as github from "@pulumi/github";
+
+// Protect the main branch of the foo repository. Only allow a specific user to merge to the branch.
+const example = new github.BranchProtectionV3("example", {
+    branch: "main",
+    repository: github_repository_example.name,
+    restrictions: {
+        users: ["foo-user"],
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BranchProtectionV3 Resource {#create}
