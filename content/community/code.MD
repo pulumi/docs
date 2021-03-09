@@ -8,6 +8,8 @@ Here is a curated list of community created repositories, libraries, components,
 
 [m3o/platform](https://github.com/m3o/platform) - Infrastructure automation for the Micro platform
 
+[statey](https://github.com/cfeenstra67/statey) - Infrastructure-as-code framework written in Python
+
 
 ## Pipelines/Deployments
 [pulumi-react-app](https://github.com/nebulis-io/pulumi-react-app) - Deploy react apps
