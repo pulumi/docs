@@ -460,7 +460,8 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Instance types allowed in the Ocean cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -564,7 +565,8 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Instance types allowed in the Ocean cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -668,7 +670,8 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Instance types allowed in the Ocean cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -772,7 +775,8 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Instance types allowed in the Ocean cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1111,7 +1115,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Instance types allowed in the Ocean cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1224,7 +1229,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Instance types allowed in the Ocean cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1337,7 +1343,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Instance types allowed in the Ocean cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1450,7 +1457,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Instance types allowed in the Ocean cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

@@ -425,7 +425,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspeclabel">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Cluster's labels.
+    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -435,7 +435,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean. When set to “True”, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
+    <dd>{{% md %}}Boolean. When set to `true`, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -445,7 +445,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspectaint">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Taint<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Cluster's taints.
+    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -501,7 +501,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspeclabel">[]Ocean<wbr>Launch<wbr>Spec<wbr>Label</a></span>
     </dt>
-    <dd>{{% md %}}Cluster's labels.
+    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -511,7 +511,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean. When set to “True”, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
+    <dd>{{% md %}}Boolean. When set to `true`, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -521,7 +521,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspectaint">[]Ocean<wbr>Launch<wbr>Spec<wbr>Taint</a></span>
     </dt>
-    <dd>{{% md %}}Cluster's taints.
+    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -577,7 +577,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspeclabel">Ocean<wbr>Launch<wbr>Spec<wbr>Label[]</a></span>
     </dt>
-    <dd>{{% md %}}Cluster's labels.
+    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -587,7 +587,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Boolean. When set to “True”, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
+    <dd>{{% md %}}Boolean. When set to `true`, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -597,7 +597,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspectaint">Ocean<wbr>Launch<wbr>Spec<wbr>Taint[]</a></span>
     </dt>
-    <dd>{{% md %}}Cluster's taints.
+    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -653,7 +653,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspeclabel">Sequence[Ocean<wbr>Launch<wbr>Spec<wbr>Label<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Cluster's labels.
+    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -663,7 +663,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean. When set to “True”, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
+    <dd>{{% md %}}Boolean. When set to `true`, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -673,7 +673,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspectaint">Sequence[Ocean<wbr>Launch<wbr>Spec<wbr>Taint<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Cluster's taints.
+    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -889,7 +889,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspeclabel">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Cluster's labels.
+    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -919,7 +919,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean. When set to “True”, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
+    <dd>{{% md %}}Boolean. When set to `true`, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -939,7 +939,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspectaint">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Taint<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Cluster's taints.
+    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -965,7 +965,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspeclabel">[]Ocean<wbr>Launch<wbr>Spec<wbr>Label</a></span>
     </dt>
-    <dd>{{% md %}}Cluster's labels.
+    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -995,7 +995,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean. When set to “True”, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
+    <dd>{{% md %}}Boolean. When set to `true`, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1015,7 +1015,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspectaint">[]Ocean<wbr>Launch<wbr>Spec<wbr>Taint</a></span>
     </dt>
-    <dd>{{% md %}}Cluster's taints.
+    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1041,7 +1041,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspeclabel">Ocean<wbr>Launch<wbr>Spec<wbr>Label[]</a></span>
     </dt>
-    <dd>{{% md %}}Cluster's labels.
+    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1071,7 +1071,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Boolean. When set to “True”, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
+    <dd>{{% md %}}Boolean. When set to `true`, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1091,7 +1091,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspectaint">Ocean<wbr>Launch<wbr>Spec<wbr>Taint[]</a></span>
     </dt>
-    <dd>{{% md %}}Cluster's taints.
+    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1117,7 +1117,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspeclabel">Sequence[Ocean<wbr>Launch<wbr>Spec<wbr>Label<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Cluster's labels.
+    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1147,7 +1147,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean. When set to “True”, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
+    <dd>{{% md %}}Boolean. When set to `true`, VNG nodes will be treated as if all pods running have the restrict-scale-down label. Therefore, Ocean will not scale nodes down unless empty.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1167,7 +1167,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspectaint">Sequence[Ocean<wbr>Launch<wbr>Spec<wbr>Taint<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Cluster's taints.
+    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1224,7 +1224,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Optionally configure the amount of memory (MB) to allocate for each headroom unit.
+    <dd>{{% md %}}Optionally configure the amount of memory (MiB) to allocate for each headroom unit.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1270,7 +1270,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Optionally configure the amount of memory (MB) to allocate for each headroom unit.
+    <dd>{{% md %}}Optionally configure the amount of memory (MiB) to allocate for each headroom unit.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1316,7 +1316,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Optionally configure the amount of memory (MB) to allocate for each headroom unit.
+    <dd>{{% md %}}Optionally configure the amount of memory (MiB) to allocate for each headroom unit.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1362,7 +1362,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Optionally configure the amount of memory (MB) to allocate for each headroom unit.
+    <dd>{{% md %}}Optionally configure the amount of memory (MiB) to allocate for each headroom unit.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1380,7 +1380,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label key.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
@@ -1389,7 +1390,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1404,7 +1406,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label key.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_go">
@@ -1413,7 +1416,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1428,7 +1432,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label key.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
@@ -1437,7 +1442,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1452,7 +1458,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label key.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_python">
@@ -1461,7 +1468,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1478,7 +1486,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label key.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
@@ -1487,7 +1496,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1502,7 +1512,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label key.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_go">
@@ -1511,7 +1522,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1526,7 +1538,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label key.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
@@ -1535,7 +1548,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1550,7 +1564,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label key.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_python">
@@ -1559,7 +1574,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1576,7 +1592,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The effect of the taint. Valid values: `"NoSchedule"`, `"PreferNoSchedule"`, `"NoExecute"`.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="key_csharp">
@@ -1585,7 +1602,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label key.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
@@ -1594,7 +1612,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1609,7 +1628,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The effect of the taint. Valid values: `"NoSchedule"`, `"PreferNoSchedule"`, `"NoExecute"`.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="key_go">
@@ -1618,7 +1638,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label key.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_go">
@@ -1627,7 +1648,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1642,7 +1664,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The effect of the taint. Valid values: `"NoSchedule"`, `"PreferNoSchedule"`, `"NoExecute"`.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="key_nodejs">
@@ -1651,7 +1674,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label key.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
@@ -1660,7 +1684,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1675,7 +1700,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The effect of the taint. Valid values: `"NoSchedule"`, `"PreferNoSchedule"`, `"NoExecute"`.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="key_python">
@@ -1684,7 +1710,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label key.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_python">
@@ -1693,7 +1720,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

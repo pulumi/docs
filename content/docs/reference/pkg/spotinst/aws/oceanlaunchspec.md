@@ -762,8 +762,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecstrategy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Strategy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}(Optional)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="subnetids_csharp">
@@ -957,8 +956,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecstrategy">[]Ocean<wbr>Launch<wbr>Spec<wbr>Strategy</a></span>
     </dt>
-    <dd>{{% md %}}(Optional)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="subnetids_go">
@@ -1152,8 +1150,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecstrategy">Ocean<wbr>Launch<wbr>Spec<wbr>Strategy[]</a></span>
     </dt>
-    <dd>{{% md %}}(Optional)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="subnetids_nodejs">
@@ -1347,8 +1344,7 @@ The OceanLaunchSpec resource accepts the following [input]({{< relref "/docs/int
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecstrategy">Sequence[Ocean<wbr>Launch<wbr>Spec<wbr>Strategy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}(Optional)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="subnet_ids_python">
@@ -1732,8 +1728,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecstrategy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Strategy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}(Optional)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_subnetids_csharp">
@@ -1927,8 +1922,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecstrategy">[]Ocean<wbr>Launch<wbr>Spec<wbr>Strategy</a></span>
     </dt>
-    <dd>{{% md %}}(Optional)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_subnetids_go">
@@ -2122,8 +2116,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecstrategy">Ocean<wbr>Launch<wbr>Spec<wbr>Strategy[]</a></span>
     </dt>
-    <dd>{{% md %}}(Optional)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_subnetids_nodejs">
@@ -2317,8 +2310,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanlaunchspecstrategy">Sequence[Ocean<wbr>Launch<wbr>Spec<wbr>Strategy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}(Optional)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_subnet_ids_python">
@@ -3456,7 +3448,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag key.
+    <dd>{{% md %}}The taint key.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3466,7 +3458,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag value.
+    <dd>{{% md %}}The taint value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3482,7 +3474,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag key.
+    <dd>{{% md %}}The taint key.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3492,7 +3484,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag value.
+    <dd>{{% md %}}The taint value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3508,7 +3500,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag key.
+    <dd>{{% md %}}The taint key.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3518,7 +3510,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag value.
+    <dd>{{% md %}}The taint value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3534,7 +3526,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tag key.
+    <dd>{{% md %}}The taint key.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3544,7 +3536,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tag value.
+    <dd>{{% md %}}The taint value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3628,7 +3620,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}(Optional; if not using `spot_percentege` under `ocean strategy`) When set, Ocean will proactively try to maintain as close as possible to the percentage of Spot instances out of all the Launch Spec instances.
+    <dd>{{% md %}}When set, Ocean will proactively try to maintain as close as possible to the percentage of Spot instances out of all the Launch Spec instances.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3644,7 +3636,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}(Optional; if not using `spot_percentege` under `ocean strategy`) When set, Ocean will proactively try to maintain as close as possible to the percentage of Spot instances out of all the Launch Spec instances.
+    <dd>{{% md %}}When set, Ocean will proactively try to maintain as close as possible to the percentage of Spot instances out of all the Launch Spec instances.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3660,7 +3652,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}(Optional; if not using `spot_percentege` under `ocean strategy`) When set, Ocean will proactively try to maintain as close as possible to the percentage of Spot instances out of all the Launch Spec instances.
+    <dd>{{% md %}}When set, Ocean will proactively try to maintain as close as possible to the percentage of Spot instances out of all the Launch Spec instances.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3676,7 +3668,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}(Optional; if not using `spot_percentege` under `ocean strategy`) When set, Ocean will proactively try to maintain as close as possible to the percentage of Spot instances out of all the Launch Spec instances.
+    <dd>{{% md %}}When set, Ocean will proactively try to maintain as close as possible to the percentage of Spot instances out of all the Launch Spec instances.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3694,7 +3686,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag key.
+    <dd>{{% md %}}The taint key.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3704,7 +3696,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag value.
+    <dd>{{% md %}}The taint value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3720,7 +3712,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag key.
+    <dd>{{% md %}}The taint key.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3730,7 +3722,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag value.
+    <dd>{{% md %}}The taint value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3746,7 +3738,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag key.
+    <dd>{{% md %}}The taint key.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3756,7 +3748,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag value.
+    <dd>{{% md %}}The taint value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3772,7 +3764,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tag key.
+    <dd>{{% md %}}The taint key.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3782,7 +3774,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tag value.
+    <dd>{{% md %}}The taint value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3810,7 +3802,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag key.
+    <dd>{{% md %}}The taint key.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3820,7 +3812,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag value.
+    <dd>{{% md %}}The taint value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3846,7 +3838,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag key.
+    <dd>{{% md %}}The taint key.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3856,7 +3848,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag value.
+    <dd>{{% md %}}The taint value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3882,7 +3874,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag key.
+    <dd>{{% md %}}The taint key.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3892,7 +3884,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag value.
+    <dd>{{% md %}}The taint value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3918,7 +3910,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tag key.
+    <dd>{{% md %}}The taint key.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3928,7 +3920,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tag value.
+    <dd>{{% md %}}The taint value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
