@@ -2728,6 +2728,17 @@ cross-site requests, effectively disabling direct linking from other sites to Gr
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="dashboardsminrefreshinterval_csharp">
+<a href="#dashboardsminrefreshinterval_csharp" style="color: inherit; text-decoration: inherit;">Dashboards<wbr>Min<wbr>Refresh<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Signed sequence of decimal numbers, followed 
+by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="dashboardsversionstokeep_csharp">
 <a href="#dashboardsversionstokeep_csharp" style="color: inherit; text-decoration: inherit;">Dashboards<wbr>Versions<wbr>To<wbr>Keep</a>
 </span>
@@ -2826,6 +2837,16 @@ cross-site requests, effectively disabling direct linking from other sites to Gr
         <span class="property-type"><a href="#grafanagrafanauserconfigprivateaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_csharp">
+<a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigprivatelinkaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="projecttoforkfrom_csharp">
@@ -3031,6 +3052,17 @@ cross-site requests, effectively disabling direct linking from other sites to Gr
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="dashboardsminrefreshinterval_go">
+<a href="#dashboardsminrefreshinterval_go" style="color: inherit; text-decoration: inherit;">Dashboards<wbr>Min<wbr>Refresh<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Signed sequence of decimal numbers, followed 
+by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="dashboardsversionstokeep_go">
 <a href="#dashboardsversionstokeep_go" style="color: inherit; text-decoration: inherit;">Dashboards<wbr>Versions<wbr>To<wbr>Keep</a>
 </span>
@@ -3129,6 +3161,16 @@ cross-site requests, effectively disabling direct linking from other sites to Gr
         <span class="property-type"><a href="#grafanagrafanauserconfigprivateaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_go">
+<a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigprivatelinkaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="projecttoforkfrom_go">
@@ -3334,6 +3376,17 @@ cross-site requests, effectively disabling direct linking from other sites to Gr
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="dashboardsminrefreshinterval_nodejs">
+<a href="#dashboardsminrefreshinterval_nodejs" style="color: inherit; text-decoration: inherit;">dashboards<wbr>Min<wbr>Refresh<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Signed sequence of decimal numbers, followed 
+by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="dashboardsversionstokeep_nodejs">
 <a href="#dashboardsversionstokeep_nodejs" style="color: inherit; text-decoration: inherit;">dashboards<wbr>Versions<wbr>To<wbr>Keep</a>
 </span>
@@ -3432,6 +3485,16 @@ cross-site requests, effectively disabling direct linking from other sites to Gr
         <span class="property-type"><a href="#grafanagrafanauserconfigprivateaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_nodejs">
+<a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigprivatelinkaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="projecttoforkfrom_nodejs">
@@ -3637,6 +3700,17 @@ cross-site requests, effectively disabling direct linking from other sites to Gr
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="dashboards_min_refresh_interval_python">
+<a href="#dashboards_min_refresh_interval_python" style="color: inherit; text-decoration: inherit;">dashboards_<wbr>min_<wbr>refresh_<wbr>interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Signed sequence of decimal numbers, followed 
+by a unit suffix (ms, s, m, h, d), e.g. 30s, 1h.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="dashboards_versions_to_keep_python">
 <a href="#dashboards_versions_to_keep_python" style="color: inherit; text-decoration: inherit;">dashboards_<wbr>versions_<wbr>to_<wbr>keep</a>
 </span>
@@ -3735,6 +3809,16 @@ cross-site requests, effectively disabling direct linking from other sites to Gr
         <span class="property-type"><a href="#grafanagrafanauserconfigprivateaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelink_access_python">
+<a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#grafanagrafanauserconfigprivatelinkaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="project_to_fork_from_python">
@@ -5156,6 +5240,76 @@ s3:PutObject and s3:PutObjectAcl actions
 {{% /choosable %}}
 
 <h4 id="grafanagrafanauserconfigprivateaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grafana_csharp">
+<a href="#grafana_csharp" style="color: inherit; text-decoration: inherit;">Grafana</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
+are in a project VPC or another type of private network.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grafana_go">
+<a href="#grafana_go" style="color: inherit; text-decoration: inherit;">Grafana</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
+are in a project VPC or another type of private network.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grafana_nodejs">
+<a href="#grafana_nodejs" style="color: inherit; text-decoration: inherit;">grafana</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
+are in a project VPC or another type of private network.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grafana_python">
+<a href="#grafana_python" style="color: inherit; text-decoration: inherit;">grafana</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Allow clients to connect to grafana from the public internet for service nodes that 
+are in a project VPC or another type of private network.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="grafanagrafanauserconfigprivatelinkaccess">Grafana<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">

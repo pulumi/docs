@@ -351,7 +351,7 @@ intended service usage rather than current attributes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cassandracassandra">Cassandra<wbr>Cassandra<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cassandra specific server provided values.
+    <dd>{{% md %}}Cassandra configuration values
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -496,7 +496,7 @@ intended service usage rather than current attributes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cassandracassandra">Cassandra<wbr>Cassandra</a></span>
     </dt>
-    <dd>{{% md %}}Cassandra specific server provided values.
+    <dd>{{% md %}}Cassandra configuration values
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -641,7 +641,7 @@ intended service usage rather than current attributes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cassandracassandra">Cassandra<wbr>Cassandra</a></span>
     </dt>
-    <dd>{{% md %}}Cassandra specific server provided values.
+    <dd>{{% md %}}Cassandra configuration values
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -786,7 +786,7 @@ intended service usage rather than current attributes.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cassandracassandra">Cassandra<wbr>Cassandra<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cassandra specific server provided values.
+    <dd>{{% md %}}Cassandra configuration values
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1417,7 +1417,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cassandracassandra">Cassandra<wbr>Cassandra<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cassandra specific server provided values.
+    <dd>{{% md %}}Cassandra configuration values
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1642,7 +1642,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cassandracassandra">Cassandra<wbr>Cassandra</a></span>
     </dt>
-    <dd>{{% md %}}Cassandra specific server provided values.
+    <dd>{{% md %}}Cassandra configuration values
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1867,7 +1867,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cassandracassandra">Cassandra<wbr>Cassandra</a></span>
     </dt>
-    <dd>{{% md %}}Cassandra specific server provided values.
+    <dd>{{% md %}}Cassandra configuration values
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2092,7 +2092,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#cassandracassandra">Cassandra<wbr>Cassandra<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cassandra specific server provided values.
+    <dd>{{% md %}}Cassandra configuration values
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2322,6 +2322,16 @@ deletion is done.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="cassandra_csharp">
+<a href="#cassandra_csharp" style="color: inherit; text-decoration: inherit;">Cassandra</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cassandracassandrauserconfigcassandra">Cassandra<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Cassandra configuration values
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ipfilters_csharp">
 <a href="#ipfilters_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
 </span>
@@ -2387,6 +2397,16 @@ when a new service is being created.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cassandra_go">
+<a href="#cassandra_go" style="color: inherit; text-decoration: inherit;">Cassandra</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cassandracassandrauserconfigcassandra">Cassandra<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra</a></span>
+    </dt>
+    <dd>{{% md %}}Cassandra configuration values
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ipfilters_go">
@@ -2456,6 +2476,16 @@ when a new service is being created.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="cassandra_nodejs">
+<a href="#cassandra_nodejs" style="color: inherit; text-decoration: inherit;">cassandra</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cassandracassandrauserconfigcassandra">Cassandra<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra</a></span>
+    </dt>
+    <dd>{{% md %}}Cassandra configuration values
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ipfilters_nodejs">
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
 </span>
@@ -2523,6 +2553,16 @@ when a new service is being created.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="cassandra_python">
+<a href="#cassandra_python" style="color: inherit; text-decoration: inherit;">cassandra</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cassandracassandrauserconfigcassandra">Cassandra<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Cassandra configuration values
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ip_filters_python">
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span>
@@ -2581,6 +2621,124 @@ utility to be used to upload Cassandra data files. Available only on service cre
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only 
 when a new service is being created.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="cassandracassandrauserconfigcassandra">Cassandra<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="batchsizefailthresholdinkb_csharp">
+<a href="#batchsizefailthresholdinkb_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Fail<wbr>Threshold<wbr>In<wbr>Kb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fail any multiple-partition batch exceeding this value. 
+50kb (10x warn threshold) by default.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="batchsizewarnthresholdinkb_csharp">
+<a href="#batchsizewarnthresholdinkb_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Warn<wbr>Threshold<wbr>In<wbr>Kb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Log a warning message on any multiple-partition 
+batch size exceeding this value.5kb per batch by default.Caution should be taken on increasing
+the size of this thresholdas it can lead to node instability.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="batchsizefailthresholdinkb_go">
+<a href="#batchsizefailthresholdinkb_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Fail<wbr>Threshold<wbr>In<wbr>Kb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fail any multiple-partition batch exceeding this value. 
+50kb (10x warn threshold) by default.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="batchsizewarnthresholdinkb_go">
+<a href="#batchsizewarnthresholdinkb_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Warn<wbr>Threshold<wbr>In<wbr>Kb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Log a warning message on any multiple-partition 
+batch size exceeding this value.5kb per batch by default.Caution should be taken on increasing
+the size of this thresholdas it can lead to node instability.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="batchsizefailthresholdinkb_nodejs">
+<a href="#batchsizefailthresholdinkb_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size<wbr>Fail<wbr>Threshold<wbr>In<wbr>Kb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fail any multiple-partition batch exceeding this value. 
+50kb (10x warn threshold) by default.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="batchsizewarnthresholdinkb_nodejs">
+<a href="#batchsizewarnthresholdinkb_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size<wbr>Warn<wbr>Threshold<wbr>In<wbr>Kb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Log a warning message on any multiple-partition 
+batch size exceeding this value.5kb per batch by default.Caution should be taken on increasing
+the size of this thresholdas it can lead to node instability.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="batch_size_fail_threshold_in_kb_python">
+<a href="#batch_size_fail_threshold_in_kb_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size_<wbr>fail_<wbr>threshold_<wbr>in_<wbr>kb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Fail any multiple-partition batch exceeding this value. 
+50kb (10x warn threshold) by default.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="batch_size_warn_threshold_in_kb_python">
+<a href="#batch_size_warn_threshold_in_kb_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size_<wbr>warn_<wbr>threshold_<wbr>in_<wbr>kb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Log a warning message on any multiple-partition 
+batch size exceeding this value.5kb per batch by default.Caution should be taken on increasing
+the size of this thresholdas it can lead to node instability.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

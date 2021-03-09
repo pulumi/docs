@@ -1959,7 +1959,8 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="kafkaauthenticationmethod_csharp">
@@ -1977,7 +1978,8 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port number of the server where to migrate data from
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="route_csharp">
@@ -1995,7 +1997,8 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The server where to migrate data from is secured with SSL
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="usage_csharp">
@@ -2028,7 +2031,8 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="kafkaauthenticationmethod_go">
@@ -2046,7 +2050,8 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port number of the server where to migrate data from
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="route_go">
@@ -2064,7 +2069,8 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The server where to migrate data from is secured with SSL
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="usage_go">
@@ -2097,7 +2103,8 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="kafkaauthenticationmethod_nodejs">
@@ -2115,7 +2122,8 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port number of the server where to migrate data from
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="route_nodejs">
@@ -2133,7 +2141,8 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The server where to migrate data from is secured with SSL
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="usage_nodejs">
@@ -2166,7 +2175,8 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="kafka_authentication_method_python">
@@ -2184,7 +2194,8 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Port number of the server where to migrate data from
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="route_python">
@@ -2202,7 +2213,8 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The server where to migrate data from is secured with SSL
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="usage_python">
@@ -2278,6 +2290,16 @@ New backup is only started if previous backup has already completed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="migration_csharp">
+<a href="#migration_csharp" style="color: inherit; text-decoration: inherit;">Migration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmysqlmysqluserconfigmigration">Get<wbr>My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Migrate data from existing server
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mysql_csharp">
 <a href="#mysql_csharp" style="color: inherit; text-decoration: inherit;">Mysql</a>
 </span>
@@ -2305,6 +2327,16 @@ New backup is only started if previous backup has already completed.
         <span class="property-type"><a href="#getmysqlmysqluserconfigprivateaccess">Get<wbr>My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_csharp">
+<a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmysqlmysqluserconfigprivatelinkaccess">Get<wbr>My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2411,6 +2443,16 @@ New backup is only started if previous backup has already completed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="migration_go">
+<a href="#migration_go" style="color: inherit; text-decoration: inherit;">Migration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmysqlmysqluserconfigmigration">Get<wbr>My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration</a></span>
+    </dt>
+    <dd>{{% md %}}Migrate data from existing server
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mysql_go">
 <a href="#mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
 </span>
@@ -2438,6 +2480,16 @@ New backup is only started if previous backup has already completed.
         <span class="property-type"><a href="#getmysqlmysqluserconfigprivateaccess">Get<wbr>My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_go">
+<a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmysqlmysqluserconfigprivatelinkaccess">Get<wbr>My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2544,6 +2596,16 @@ New backup is only started if previous backup has already completed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="migration_nodejs">
+<a href="#migration_nodejs" style="color: inherit; text-decoration: inherit;">migration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmysqlmysqluserconfigmigration">Get<wbr>My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration</a></span>
+    </dt>
+    <dd>{{% md %}}Migrate data from existing server
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mysql_nodejs">
 <a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
@@ -2571,6 +2633,16 @@ New backup is only started if previous backup has already completed.
         <span class="property-type"><a href="#getmysqlmysqluserconfigprivateaccess">Get<wbr>My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_nodejs">
+<a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmysqlmysqluserconfigprivatelinkaccess">Get<wbr>My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2677,6 +2749,16 @@ New backup is only started if previous backup has already completed.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="migration_python">
+<a href="#migration_python" style="color: inherit; text-decoration: inherit;">migration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmysqlmysqluserconfigmigration">Get<wbr>My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Migrate data from existing server
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mysql_python">
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
@@ -2704,6 +2786,16 @@ New backup is only started if previous backup has already completed.
         <span class="property-type"><a href="#getmysqlmysqluserconfigprivateaccess">Get<wbr>My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelink_access_python">
+<a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmysqlmysqluserconfigprivatelinkaccess">Get<wbr>My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Allow access to selected service components through Privatelink
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2747,6 +2839,318 @@ only when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another service to fork from. This has effect only when 
 a new service is being created.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getmysqlmysqluserconfigmigration">Get<wbr>My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dbname_csharp">
+<a href="#dbname_csharp" style="color: inherit; text-decoration: inherit;">Dbname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Database name for bootstrapping the initial connection
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_csharp">
+<a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoredbs_csharp">
+<a href="#ignoredbs_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Dbs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Comma-separated list of databases, which should be ignored
+during migration (supported by MySQL only at the moment)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password for authentication with the server where to migrate data from
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Port number of the server where to migrate data from
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssl_csharp">
+<a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The server where to migrate data from is secured with SSL
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User name for authentication with the server where to migrate data from
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dbname_go">
+<a href="#dbname_go" style="color: inherit; text-decoration: inherit;">Dbname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Database name for bootstrapping the initial connection
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_go">
+<a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoredbs_go">
+<a href="#ignoredbs_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Dbs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Comma-separated list of databases, which should be ignored
+during migration (supported by MySQL only at the moment)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password for authentication with the server where to migrate data from
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Port number of the server where to migrate data from
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssl_go">
+<a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The server where to migrate data from is secured with SSL
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User name for authentication with the server where to migrate data from
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dbname_nodejs">
+<a href="#dbname_nodejs" style="color: inherit; text-decoration: inherit;">dbname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Database name for bootstrapping the initial connection
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_nodejs">
+<a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoredbs_nodejs">
+<a href="#ignoredbs_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Dbs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Comma-separated list of databases, which should be ignored
+during migration (supported by MySQL only at the moment)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password for authentication with the server where to migrate data from
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Port number of the server where to migrate data from
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssl_nodejs">
+<a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The server where to migrate data from is secured with SSL
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User name for authentication with the server where to migrate data from
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dbname_python">
+<a href="#dbname_python" style="color: inherit; text-decoration: inherit;">dbname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Database name for bootstrapping the initial connection
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_python">
+<a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Hostname or IP address of the server where to migrate data from
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignore_dbs_python">
+<a href="#ignore_dbs_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>dbs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Comma-separated list of databases, which should be ignored
+during migration (supported by MySQL only at the moment)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Password for authentication with the server where to migrate data from
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Port number of the server where to migrate data from
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssl_python">
+<a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The server where to migrate data from is secured with SSL
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}User name for authentication with the server where to migrate data from
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2892,6 +3296,17 @@ activity on an interactive connection before closing it.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="longquerytime_csharp">
+<a href="#longquerytime_csharp" style="color: inherit; text-decoration: inherit;">Long<wbr>Query<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The slow_query_logs work as SQL statements that take
+more than long_query_time seconds to execute. Default is 10s
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxallowedpacket_csharp">
 <a href="#maxallowedpacket_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Allowed<wbr>Packet</a>
 </span>
@@ -2933,6 +3348,17 @@ a connection before aborting the read.
     </dt>
     <dd>{{% md %}}The number of seconds to wait for a block to be 
 written to a connection before aborting the write.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="slowquerylog_csharp">
+<a href="#slowquerylog_csharp" style="color: inherit; text-decoration: inherit;">Slow<wbr>Query<wbr>Log</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Slow query log enables capturing of slow queries.
+Setting slow_query_log to false also truncates the mysql.slow_log table. Default is off
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3132,6 +3558,17 @@ activity on an interactive connection before closing it.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="longquerytime_go">
+<a href="#longquerytime_go" style="color: inherit; text-decoration: inherit;">Long<wbr>Query<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The slow_query_logs work as SQL statements that take
+more than long_query_time seconds to execute. Default is 10s
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxallowedpacket_go">
 <a href="#maxallowedpacket_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Allowed<wbr>Packet</a>
 </span>
@@ -3173,6 +3610,17 @@ a connection before aborting the read.
     </dt>
     <dd>{{% md %}}The number of seconds to wait for a block to be 
 written to a connection before aborting the write.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="slowquerylog_go">
+<a href="#slowquerylog_go" style="color: inherit; text-decoration: inherit;">Slow<wbr>Query<wbr>Log</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Slow query log enables capturing of slow queries.
+Setting slow_query_log to false also truncates the mysql.slow_log table. Default is off
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3372,6 +3820,17 @@ activity on an interactive connection before closing it.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="longquerytime_nodejs">
+<a href="#longquerytime_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Query<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The slow_query_logs work as SQL statements that take
+more than long_query_time seconds to execute. Default is 10s
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxallowedpacket_nodejs">
 <a href="#maxallowedpacket_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Allowed<wbr>Packet</a>
 </span>
@@ -3413,6 +3872,17 @@ a connection before aborting the read.
     </dt>
     <dd>{{% md %}}The number of seconds to wait for a block to be 
 written to a connection before aborting the write.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="slowquerylog_nodejs">
+<a href="#slowquerylog_nodejs" style="color: inherit; text-decoration: inherit;">slow<wbr>Query<wbr>Log</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Slow query log enables capturing of slow queries.
+Setting slow_query_log to false also truncates the mysql.slow_log table. Default is off
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3612,6 +4082,17 @@ activity on an interactive connection before closing it.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="long_query_time_python">
+<a href="#long_query_time_python" style="color: inherit; text-decoration: inherit;">long_<wbr>query_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The slow_query_logs work as SQL statements that take
+more than long_query_time seconds to execute. Default is 10s
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="max_allowed_packet_python">
 <a href="#max_allowed_packet_python" style="color: inherit; text-decoration: inherit;">max_<wbr>allowed_<wbr>packet</a>
 </span>
@@ -3653,6 +4134,17 @@ a connection before aborting the read.
     </dt>
     <dd>{{% md %}}The number of seconds to wait for a block to be 
 written to a connection before aborting the write.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="slow_query_log_python">
+<a href="#slow_query_log_python" style="color: inherit; text-decoration: inherit;">slow_<wbr>query_<wbr>log</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Slow query log enables capturing of slow queries.
+Setting slow_query_log to false also truncates the mysql.slow_log table. Default is off
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3823,6 +4315,74 @@ for service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getmysqlmysqluserconfigprivatelinkaccess">Get<wbr>My<wbr>Sql<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mysql_csharp">
+<a href="#mysql_csharp" style="color: inherit; text-decoration: inherit;">Mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}MySQL specific server provided values.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mysql_go">
+<a href="#mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}MySQL specific server provided values.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mysql_nodejs">
+<a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}MySQL specific server provided values.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mysql_python">
+<a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}MySQL specific server provided values.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

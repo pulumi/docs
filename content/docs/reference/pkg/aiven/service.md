@@ -3404,6 +3404,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="cassandra_csharp">
+<a href="#cassandra_csharp" style="color: inherit; text-decoration: inherit;">Cassandra</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicecassandrauserconfigcassandra">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ipfilters_csharp">
 <a href="#ipfilters_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
 </span>
@@ -3462,6 +3471,15 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cassandra_go">
+<a href="#cassandra_go" style="color: inherit; text-decoration: inherit;">Cassandra</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicecassandrauserconfigcassandra">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ipfilters_go">
@@ -3524,6 +3542,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="cassandra_nodejs">
+<a href="#cassandra_nodejs" style="color: inherit; text-decoration: inherit;">cassandra</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicecassandrauserconfigcassandra">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ipfilters_nodejs">
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
 </span>
@@ -3584,6 +3611,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="cassandra_python">
+<a href="#cassandra_python" style="color: inherit; text-decoration: inherit;">cassandra</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicecassandrauserconfigcassandra">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ip_filters_python">
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
 </span>
@@ -3631,6 +3667,104 @@ The following state arguments are supported:
             title="Optional">
         <span id="service_to_fork_from_python">
 <a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="servicecassandrauserconfigcassandra">Service<wbr>Cassandra<wbr>User<wbr>Config<wbr>Cassandra</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="batchsizefailthresholdinkb_csharp">
+<a href="#batchsizefailthresholdinkb_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Fail<wbr>Threshold<wbr>In<wbr>Kb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="batchsizewarnthresholdinkb_csharp">
+<a href="#batchsizewarnthresholdinkb_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Warn<wbr>Threshold<wbr>In<wbr>Kb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="batchsizefailthresholdinkb_go">
+<a href="#batchsizefailthresholdinkb_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Fail<wbr>Threshold<wbr>In<wbr>Kb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="batchsizewarnthresholdinkb_go">
+<a href="#batchsizewarnthresholdinkb_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size<wbr>Warn<wbr>Threshold<wbr>In<wbr>Kb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="batchsizefailthresholdinkb_nodejs">
+<a href="#batchsizefailthresholdinkb_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size<wbr>Fail<wbr>Threshold<wbr>In<wbr>Kb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="batchsizewarnthresholdinkb_nodejs">
+<a href="#batchsizewarnthresholdinkb_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size<wbr>Warn<wbr>Threshold<wbr>In<wbr>Kb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="batch_size_fail_threshold_in_kb_python">
+<a href="#batch_size_fail_threshold_in_kb_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size_<wbr>fail_<wbr>threshold_<wbr>in_<wbr>kb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="batch_size_warn_threshold_in_kb_python">
+<a href="#batch_size_warn_threshold_in_kb_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size_<wbr>warn_<wbr>threshold_<wbr>in_<wbr>kb</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -4200,6 +4334,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_csharp">
+<a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigprivatelinkaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projecttoforkfrom_csharp">
 <a href="#projecttoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
@@ -4328,6 +4471,15 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceelasticsearchuserconfigprivateaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_go">
+<a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigprivatelinkaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4464,6 +4616,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_nodejs">
+<a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigprivatelinkaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projecttoforkfrom_nodejs">
 <a href="#projecttoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
@@ -4592,6 +4753,15 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceelasticsearchuserconfigprivateaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelink_access_python">
+<a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceelasticsearchuserconfigprivatelinkaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -5582,6 +5752,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sortingalgorithm_csharp">
+<a href="#sortingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Sorting<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5601,6 +5780,15 @@ The following state arguments are supported:
             title="Optional">
         <span id="pattern_go">
 <a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sortingalgorithm_go">
+<a href="#sortingalgorithm_go" style="color: inherit; text-decoration: inherit;">Sorting<wbr>Algorithm</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -5630,6 +5818,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sortingalgorithm_nodejs">
+<a href="#sortingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">sorting<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5649,6 +5846,15 @@ The following state arguments are supported:
             title="Optional">
         <span id="pattern_python">
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sorting_algorithm_python">
+<a href="#sorting_algorithm_python" style="color: inherit; text-decoration: inherit;">sorting_<wbr>algorithm</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -6059,6 +6265,104 @@ The following state arguments are supported:
 </dl>
 {{% /choosable %}}
 
+<h4 id="serviceelasticsearchuserconfigprivatelinkaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="elasticsearch_csharp">
+<a href="#elasticsearch_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kibana_csharp">
+<a href="#kibana_csharp" style="color: inherit; text-decoration: inherit;">Kibana</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="elasticsearch_go">
+<a href="#elasticsearch_go" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kibana_go">
+<a href="#kibana_go" style="color: inherit; text-decoration: inherit;">Kibana</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="elasticsearch_nodejs">
+<a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kibana_nodejs">
+<a href="#kibana_nodejs" style="color: inherit; text-decoration: inherit;">kibana</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="elasticsearch_python">
+<a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kibana_python">
+<a href="#kibana_python" style="color: inherit; text-decoration: inherit;">kibana</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="serviceelasticsearchuserconfigpublicaccess">Service<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Public<wbr>Access</h4>
 
 {{% choosable language csharp %}}
@@ -6299,6 +6603,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="dashboardsminrefreshinterval_csharp">
+<a href="#dashboardsminrefreshinterval_csharp" style="color: inherit; text-decoration: inherit;">Dashboards<wbr>Min<wbr>Refresh<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="dashboardsversionstokeep_csharp">
 <a href="#dashboardsversionstokeep_csharp" style="color: inherit; text-decoration: inherit;">Dashboards<wbr>Versions<wbr>To<wbr>Keep</a>
 </span>
@@ -6385,6 +6698,15 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicegrafanauserconfigprivateaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_csharp">
+<a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigprivatelinkaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6566,6 +6888,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="dashboardsminrefreshinterval_go">
+<a href="#dashboardsminrefreshinterval_go" style="color: inherit; text-decoration: inherit;">Dashboards<wbr>Min<wbr>Refresh<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="dashboardsversionstokeep_go">
 <a href="#dashboardsversionstokeep_go" style="color: inherit; text-decoration: inherit;">Dashboards<wbr>Versions<wbr>To<wbr>Keep</a>
 </span>
@@ -6652,6 +6983,15 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicegrafanauserconfigprivateaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_go">
+<a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigprivatelinkaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -6833,6 +7173,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="dashboardsminrefreshinterval_nodejs">
+<a href="#dashboardsminrefreshinterval_nodejs" style="color: inherit; text-decoration: inherit;">dashboards<wbr>Min<wbr>Refresh<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="dashboardsversionstokeep_nodejs">
 <a href="#dashboardsversionstokeep_nodejs" style="color: inherit; text-decoration: inherit;">dashboards<wbr>Versions<wbr>To<wbr>Keep</a>
 </span>
@@ -6919,6 +7268,15 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicegrafanauserconfigprivateaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_nodejs">
+<a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigprivatelinkaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -7100,6 +7458,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="dashboards_min_refresh_interval_python">
+<a href="#dashboards_min_refresh_interval_python" style="color: inherit; text-decoration: inherit;">dashboards_<wbr>min_<wbr>refresh_<wbr>interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="dashboards_versions_to_keep_python">
 <a href="#dashboards_versions_to_keep_python" style="color: inherit; text-decoration: inherit;">dashboards_<wbr>versions_<wbr>to_<wbr>keep</a>
 </span>
@@ -7186,6 +7553,15 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicegrafanauserconfigprivateaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelink_access_python">
+<a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicegrafanauserconfigprivatelinkaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -8535,6 +8911,68 @@ The following state arguments are supported:
 </dl>
 {{% /choosable %}}
 
+<h4 id="servicegrafanauserconfigprivatelinkaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grafana_csharp">
+<a href="#grafana_csharp" style="color: inherit; text-decoration: inherit;">Grafana</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grafana_go">
+<a href="#grafana_go" style="color: inherit; text-decoration: inherit;">Grafana</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grafana_nodejs">
+<a href="#grafana_nodejs" style="color: inherit; text-decoration: inherit;">grafana</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grafana_python">
+<a href="#grafana_python" style="color: inherit; text-decoration: inherit;">grafana</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="servicegrafanauserconfigpublicaccess">Service<wbr>Grafana<wbr>User<wbr>Config<wbr>Public<wbr>Access</h4>
 
 {{% choosable language csharp %}}
@@ -9016,6 +9454,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_csharp">
+<a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfigprivatelinkaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projecttoforkfrom_csharp">
 <a href="#projecttoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
@@ -9090,6 +9537,15 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceinfluxdbuserconfigprivateaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_go">
+<a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfigprivatelinkaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9172,6 +9628,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_nodejs">
+<a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfigprivatelinkaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projecttoforkfrom_nodejs">
 <a href="#projecttoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
@@ -9246,6 +9711,15 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceinfluxdbuserconfigprivateaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelink_access_python">
+<a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceinfluxdbuserconfigprivatelinkaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9494,6 +9968,68 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 <h4 id="serviceinfluxdbuserconfigprivateaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Private<wbr>Access</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="influxdb_csharp">
+<a href="#influxdb_csharp" style="color: inherit; text-decoration: inherit;">Influxdb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="influxdb_go">
+<a href="#influxdb_go" style="color: inherit; text-decoration: inherit;">Influxdb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="influxdb_nodejs">
+<a href="#influxdb_nodejs" style="color: inherit; text-decoration: inherit;">influxdb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="influxdb_python">
+<a href="#influxdb_python" style="color: inherit; text-decoration: inherit;">influxdb</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="serviceinfluxdbuserconfigprivatelinkaccess">Service<wbr>Influxdb<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -9857,6 +10393,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_csharp">
+<a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfigprivatelinkaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicaccess_csharp">
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
 </span>
@@ -9895,6 +10440,15 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicekafkaconnectuserconfigprivateaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_go">
+<a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfigprivatelinkaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -9941,6 +10495,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_nodejs">
+<a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfigprivatelinkaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicaccess_nodejs">
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
 </span>
@@ -9979,6 +10542,15 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicekafkaconnectuserconfigprivateaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelink_access_python">
+<a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicekafkaconnectuserconfigprivatelinkaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -10505,6 +11077,68 @@ The following state arguments are supported:
             title="Optional">
         <span id="prometheus_python">
 <a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="servicekafkaconnectuserconfigprivatelinkaccess">Service<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkaconnect_csharp">
+<a href="#kafkaconnect_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkaconnect_go">
+<a href="#kafkaconnect_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafkaconnect_nodejs">
+<a href="#kafkaconnect_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kafka_connect_python">
+<a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -11452,6 +12086,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="groupinitialrebalancedelayms_csharp">
+<a href="#groupinitialrebalancedelayms_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Initial<wbr>Rebalance<wbr>Delay<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="groupmaxsessiontimeoutms_csharp">
 <a href="#groupmaxsessiontimeoutms_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Max<wbr>Session<wbr>Timeout<wbr>Ms</a>
 </span>
@@ -11793,6 +12436,15 @@ The following state arguments are supported:
             title="Optional">
         <span id="defaultreplicationfactor_go">
 <a href="#defaultreplicationfactor_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Replication<wbr>Factor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="groupinitialrebalancedelayms_go">
+<a href="#groupinitialrebalancedelayms_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Initial<wbr>Rebalance<wbr>Delay<wbr>Ms</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -12148,6 +12800,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="groupinitialrebalancedelayms_nodejs">
+<a href="#groupinitialrebalancedelayms_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Initial<wbr>Rebalance<wbr>Delay<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="groupmaxsessiontimeoutms_nodejs">
 <a href="#groupmaxsessiontimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Max<wbr>Session<wbr>Timeout<wbr>Ms</a>
 </span>
@@ -12489,6 +13150,15 @@ The following state arguments are supported:
             title="Optional">
         <span id="default_replication_factor_python">
 <a href="#default_replication_factor_python" style="color: inherit; text-decoration: inherit;">default_<wbr>replication_<wbr>factor</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="group_initial_rebalance_delay_ms_python">
+<a href="#group_initial_rebalance_delay_ms_python" style="color: inherit; text-decoration: inherit;">group_<wbr>initial_<wbr>rebalance_<wbr>delay_<wbr>ms</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -14153,6 +14823,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="migration_csharp">
+<a href="#migration_csharp" style="color: inherit; text-decoration: inherit;">Migration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicemysqluserconfigmigration">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mysql_csharp">
 <a href="#mysql_csharp" style="color: inherit; text-decoration: inherit;">Mysql</a>
 </span>
@@ -14176,6 +14855,15 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemysqluserconfigprivateaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_csharp">
+<a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicemysqluserconfigprivatelinkaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14267,6 +14955,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="migration_go">
+<a href="#migration_go" style="color: inherit; text-decoration: inherit;">Migration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicemysqluserconfigmigration">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mysql_go">
 <a href="#mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
 </span>
@@ -14290,6 +14987,15 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemysqluserconfigprivateaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_go">
+<a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicemysqluserconfigprivatelinkaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14381,6 +15087,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="migration_nodejs">
+<a href="#migration_nodejs" style="color: inherit; text-decoration: inherit;">migration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicemysqluserconfigmigration">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mysql_nodejs">
 <a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
@@ -14404,6 +15119,15 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemysqluserconfigprivateaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_nodejs">
+<a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicemysqluserconfigprivatelinkaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14495,6 +15219,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="migration_python">
+<a href="#migration_python" style="color: inherit; text-decoration: inherit;">migration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicemysqluserconfigmigration">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="mysql_python">
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
@@ -14518,6 +15251,15 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#servicemysqluserconfigprivateaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelink_access_python">
+<a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicemysqluserconfigprivatelinkaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -14551,6 +15293,284 @@ The following state arguments are supported:
             title="Optional">
         <span id="service_to_fork_from_python">
 <a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="servicemysqluserconfigmigration">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Migration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dbname_csharp">
+<a href="#dbname_csharp" style="color: inherit; text-decoration: inherit;">Dbname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_csharp">
+<a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoredbs_csharp">
+<a href="#ignoredbs_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Dbs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssl_csharp">
+<a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dbname_go">
+<a href="#dbname_go" style="color: inherit; text-decoration: inherit;">Dbname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_go">
+<a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoredbs_go">
+<a href="#ignoredbs_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Dbs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssl_go">
+<a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dbname_nodejs">
+<a href="#dbname_nodejs" style="color: inherit; text-decoration: inherit;">dbname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_nodejs">
+<a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoredbs_nodejs">
+<a href="#ignoredbs_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Dbs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssl_nodejs">
+<a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dbname_python">
+<a href="#dbname_python" style="color: inherit; text-decoration: inherit;">dbname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_python">
+<a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignore_dbs_python">
+<a href="#ignore_dbs_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>dbs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssl_python">
+<a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="username_python">
+<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -14674,6 +15694,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="longquerytime_csharp">
+<a href="#longquerytime_csharp" style="color: inherit; text-decoration: inherit;">Long<wbr>Query<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxallowedpacket_csharp">
 <a href="#maxallowedpacket_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Allowed<wbr>Packet</a>
 </span>
@@ -14703,6 +15732,15 @@ The following state arguments are supported:
             title="Optional">
         <span id="netwritetimeout_csharp">
 <a href="#netwritetimeout_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Write<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="slowquerylog_csharp">
+<a href="#slowquerylog_csharp" style="color: inherit; text-decoration: inherit;">Slow<wbr>Query<wbr>Log</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -14869,6 +15907,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="longquerytime_go">
+<a href="#longquerytime_go" style="color: inherit; text-decoration: inherit;">Long<wbr>Query<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxallowedpacket_go">
 <a href="#maxallowedpacket_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Allowed<wbr>Packet</a>
 </span>
@@ -14898,6 +15945,15 @@ The following state arguments are supported:
             title="Optional">
         <span id="netwritetimeout_go">
 <a href="#netwritetimeout_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Write<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="slowquerylog_go">
+<a href="#slowquerylog_go" style="color: inherit; text-decoration: inherit;">Slow<wbr>Query<wbr>Log</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -15064,6 +16120,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="longquerytime_nodejs">
+<a href="#longquerytime_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Query<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxallowedpacket_nodejs">
 <a href="#maxallowedpacket_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Allowed<wbr>Packet</a>
 </span>
@@ -15093,6 +16158,15 @@ The following state arguments are supported:
             title="Optional">
         <span id="netwritetimeout_nodejs">
 <a href="#netwritetimeout_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Write<wbr>Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="slowquerylog_nodejs">
+<a href="#slowquerylog_nodejs" style="color: inherit; text-decoration: inherit;">slow<wbr>Query<wbr>Log</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -15259,6 +16333,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="long_query_time_python">
+<a href="#long_query_time_python" style="color: inherit; text-decoration: inherit;">long_<wbr>query_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="max_allowed_packet_python">
 <a href="#max_allowed_packet_python" style="color: inherit; text-decoration: inherit;">max_<wbr>allowed_<wbr>packet</a>
 </span>
@@ -15288,6 +16371,15 @@ The following state arguments are supported:
             title="Optional">
         <span id="net_write_timeout_python">
 <a href="#net_write_timeout_python" style="color: inherit; text-decoration: inherit;">net_<wbr>write_<wbr>timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="slow_query_log_python">
+<a href="#slow_query_log_python" style="color: inherit; text-decoration: inherit;">slow_<wbr>query_<wbr>log</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -15431,6 +16523,68 @@ The following state arguments are supported:
             title="Optional">
         <span id="prometheus_python">
 <a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="servicemysqluserconfigprivatelinkaccess">Service<wbr>Mysql<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mysql_csharp">
+<a href="#mysql_csharp" style="color: inherit; text-decoration: inherit;">Mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mysql_go">
+<a href="#mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mysql_nodejs">
+<a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mysql_python">
+<a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -16730,6 +17884,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ignoredbs_csharp">
+<a href="#ignoredbs_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Dbs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
@@ -16783,6 +17946,15 @@ The following state arguments are supported:
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoredbs_go">
+<a href="#ignoredbs_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Dbs</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -16850,6 +18022,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ignoredbs_nodejs">
+<a href="#ignoredbs_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Dbs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
@@ -16903,6 +18084,15 @@ The following state arguments are supported:
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignore_dbs_python">
+<a href="#ignore_dbs_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>dbs</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -19215,6 +20405,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_csharp">
+<a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceredisuserconfigprivatelinkaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projecttoforkfrom_csharp">
 <a href="#projecttoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
@@ -19343,6 +20542,15 @@ The following state arguments are supported:
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceredisuserconfigprivateaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privatelinkaccess_go">
+<a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceredisuserconfigprivatelinkaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -19479,6 +20687,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelinkaccess_nodejs">
+<a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceredisuserconfigprivatelinkaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projecttoforkfrom_nodejs">
 <a href="#projecttoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>To<wbr>Fork<wbr>From</a>
 </span>
@@ -19611,6 +20828,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privatelink_access_python">
+<a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceredisuserconfigprivatelinkaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="project_to_fork_from_python">
 <a href="#project_to_fork_from_python" style="color: inherit; text-decoration: inherit;">project_<wbr>to_<wbr>fork_<wbr>from</a>
 </span>
@@ -19736,6 +20962,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ignoredbs_csharp">
+<a href="#ignoredbs_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Dbs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
@@ -19789,6 +21024,15 @@ The following state arguments are supported:
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoredbs_go">
+<a href="#ignoredbs_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Dbs</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -19856,6 +21100,15 @@ The following state arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ignoredbs_nodejs">
+<a href="#ignoredbs_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Dbs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
@@ -19909,6 +21162,15 @@ The following state arguments are supported:
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignore_dbs_python">
+<a href="#ignore_dbs_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>dbs</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -20039,6 +21301,68 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redis_python">
+<a href="#redis_python" style="color: inherit; text-decoration: inherit;">redis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="serviceredisuserconfigprivatelinkaccess">Service<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redis_csharp">
+<a href="#redis_csharp" style="color: inherit; text-decoration: inherit;">Redis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redis_go">
+<a href="#redis_go" style="color: inherit; text-decoration: inherit;">Redis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redis_nodejs">
+<a href="#redis_nodejs" style="color: inherit; text-decoration: inherit;">redis</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
     <dt class="property-optional"
             title="Optional">
         <span id="redis_python">
