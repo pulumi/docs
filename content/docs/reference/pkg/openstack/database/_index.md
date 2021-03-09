@@ -26,6 +26,6 @@ Explore the resources and functions of the openstack.database module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
 	<dt>Version</dt>
-	<dd>2.15.0</dd>
+	<dd>2.16.0</dd>
 </dl>
 
