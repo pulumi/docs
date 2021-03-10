@@ -1,13 +1,11 @@
-{{ $text := "Join us during re:Invent! Check out the latest news and workshops." }}
-{{ $url := relref . "/partner/aws" }}
+{{ $text := "We're cooking up something brand new for you. Be the first know what it is." }}
+{{ $url := relref . "/pulumi-up" }}
 {{ $color := "orange"}}
-
-<!-- No news to share right now.
 
 <div class="mx-auto mb-12">
     <div class="inline-block">
         <a href="{{ $url }}" class="block p-2 bg-purple-400 hover:bg-purple-300 transition-all items-center text-purple-100 leading-none rounded-full flex md:inline-flex shadow-xl">
-            <span class="alert-chicklet flex rounded-full bg-{{ $color }}-700 border-4 border-{{ $color }}-600 uppercase text-white px-2 py-1 text-xs font-bold mr-2">Now!</span>
+            <span class="alert-chicklet flex rounded-full bg-{{ $color }}-700 border-4 border-{{ $color }}-600 uppercase text-white px-2 py-1 text-xs font-bold mr-2">New!</span>
             <span class="alert-content text-left flex-auto text-white text-sm md:text-base leading-normal">
                 {{ $text | safeHTML }}
             </span>
@@ -15,5 +13,3 @@
         </a>
     </div>
 </div>
-
--->
