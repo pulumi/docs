@@ -23,6 +23,6 @@ Explore the resources and functions of the okta.network module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
 	<dt>Version</dt>
-	<dd>2.11.0</dd>
+	<dd>2.11.1</dd>
 </dl>
 

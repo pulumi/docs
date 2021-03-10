@@ -123,7 +123,7 @@ const example = new okta.user.Schema("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Schema</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">array_enums</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">array_one_ofs</span><span class="p">:</span> <span class="nx">Optional[Sequence[SchemaArrayOneOfArgs]]</span> = None<span class="p">, </span><span class="nx">array_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enums</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">external_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">index</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">one_ofs</span><span class="p">:</span> <span class="nx">Optional[Sequence[SchemaOneOfArgs]]</span> = None<span class="p">, </span><span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unique</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Schema</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">array_enums</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">array_one_ofs</span><span class="p">:</span> <span class="nx">Optional[Sequence[SchemaArrayOneOfArgs]]</span> = None<span class="p">, </span><span class="nx">array_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enums</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">external_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">index</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_override_priorities</span><span class="p">:</span> <span class="nx">Optional[Sequence[SchemaMasterOverridePriorityArgs]]</span> = None<span class="p">, </span><span class="nx">max_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">one_ofs</span><span class="p">:</span> <span class="nx">Optional[Sequence[SchemaOneOfArgs]]</span> = None<span class="p">, </span><span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unique</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -322,7 +322,7 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
+    <dd>{{% md %}}- Type of profile source.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -402,7 +402,17 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
+    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"`, `"OVERRIDE"` or `"OKTA"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="masteroverridepriorities_csharp">
+<a href="#masteroverridepriorities_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Override<wbr>Priorities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#schemamasteroverridepriority">List&lt;Schema<wbr>Master<wbr>Override<wbr>Priority<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Prioritized list of profile sources (required when `master` is `"OVERRIDE"`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -528,7 +538,7 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
+    <dd>{{% md %}}- Type of profile source.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -608,7 +618,17 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
+    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"`, `"OVERRIDE"` or `"OKTA"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="masteroverridepriorities_go">
+<a href="#masteroverridepriorities_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Override<wbr>Priorities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#schemamasteroverridepriority">[]Schema<wbr>Master<wbr>Override<wbr>Priority</a></span>
+    </dt>
+    <dd>{{% md %}}Prioritized list of profile sources (required when `master` is `"OVERRIDE"`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -734,7 +754,7 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
+    <dd>{{% md %}}- Type of profile source.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -814,7 +834,17 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
+    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"`, `"OVERRIDE"` or `"OKTA"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="masteroverridepriorities_nodejs">
+<a href="#masteroverridepriorities_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Override<wbr>Priorities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#schemamasteroverridepriority">Schema<wbr>Master<wbr>Override<wbr>Priority[]</a></span>
+    </dt>
+    <dd>{{% md %}}Prioritized list of profile sources (required when `master` is `"OVERRIDE"`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -940,7 +970,7 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
+    <dd>{{% md %}}- Type of profile source.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1020,7 +1050,17 @@ The Schema resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
+    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"`, `"OVERRIDE"` or `"OKTA"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="master_override_priorities_python">
+<a href="#master_override_priorities_python" style="color: inherit; text-decoration: inherit;">master_<wbr>override_<wbr>priorities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#schemamasteroverridepriority">Sequence[Schema<wbr>Master<wbr>Override<wbr>Priority<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Prioritized list of profile sources (required when `master` is `"OVERRIDE"`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1195,7 +1235,7 @@ Get an existing Schema resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">array_enums</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">array_one_ofs</span><span class="p">:</span> <span class="nx">Optional[Sequence[SchemaArrayOneOfArgs]]</span> = None<span class="p">, </span><span class="nx">array_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enums</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">external_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">index</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">one_ofs</span><span class="p">:</span> <span class="nx">Optional[Sequence[SchemaOneOfArgs]]</span> = None<span class="p">, </span><span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unique</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Schema</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">array_enums</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">array_one_ofs</span><span class="p">:</span> <span class="nx">Optional[Sequence[SchemaArrayOneOfArgs]]</span> = None<span class="p">, </span><span class="nx">array_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enums</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">external_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_namespace</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">index</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_override_priorities</span><span class="p">:</span> <span class="nx">Optional[Sequence[SchemaMasterOverridePriorityArgs]]</span> = None<span class="p">, </span><span class="nx">max_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_length</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">one_ofs</span><span class="p">:</span> <span class="nx">Optional[Sequence[SchemaOneOfArgs]]</span> = None<span class="p">, </span><span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">permissions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">required</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">scope</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">title</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unique</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Schema</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1396,7 +1436,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
+    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"`, `"OVERRIDE"` or `"OKTA"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_masteroverridepriorities_csharp">
+<a href="#state_masteroverridepriorities_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Override<wbr>Priorities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#schemamasteroverridepriority">List&lt;Schema<wbr>Master<wbr>Override<wbr>Priority<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Prioritized list of profile sources (required when `master` is `"OVERRIDE"`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1486,7 +1536,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
+    <dd>{{% md %}}- Type of profile source.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1602,7 +1652,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
+    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"`, `"OVERRIDE"` or `"OKTA"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_masteroverridepriorities_go">
+<a href="#state_masteroverridepriorities_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Override<wbr>Priorities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#schemamasteroverridepriority">[]Schema<wbr>Master<wbr>Override<wbr>Priority</a></span>
+    </dt>
+    <dd>{{% md %}}Prioritized list of profile sources (required when `master` is `"OVERRIDE"`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1692,7 +1752,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
+    <dd>{{% md %}}- Type of profile source.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1808,7 +1868,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
+    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"`, `"OVERRIDE"` or `"OKTA"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_masteroverridepriorities_nodejs">
+<a href="#state_masteroverridepriorities_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Override<wbr>Priorities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#schemamasteroverridepriority">Schema<wbr>Master<wbr>Override<wbr>Priority[]</a></span>
+    </dt>
+    <dd>{{% md %}}Prioritized list of profile sources (required when `master` is `"OVERRIDE"`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1898,7 +1968,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
+    <dd>{{% md %}}- Type of profile source.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2014,7 +2084,17 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
+    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"`, `"OVERRIDE"` or `"OKTA"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_master_override_priorities_python">
+<a href="#state_master_override_priorities_python" style="color: inherit; text-decoration: inherit;">master_<wbr>override_<wbr>priorities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#schemamasteroverridepriority">Sequence[Schema<wbr>Master<wbr>Override<wbr>Priority<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Prioritized list of profile sources (required when `master` is `"OVERRIDE"`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2104,7 +2184,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
+    <dd>{{% md %}}- Type of profile source.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2240,6 +2320,112 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}display name for the enum value.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="schemamasteroverridepriority">Schema<wbr>Master<wbr>Override<wbr>Priority</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- ID of profile source.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- Type of profile source.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- ID of profile source.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- Type of profile source.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- ID of profile source.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}- Type of profile source.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}- ID of profile source.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}- Type of profile source.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

@@ -104,7 +104,7 @@ const example = new okta.group.Role("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Role</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_group_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Role</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_app_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_group_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -299,6 +299,19 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="targetapplists_csharp">
+<a href="#targetapplists_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>App<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of app names (name represents set of app instances, like 'salesforce' or '
+facebook'), or a combination of app name and app instance ID (like 'facebook.0oapsqQ6dv19pqyEo0g3') you would like as
+the targets of the admin role.
+- Only supported when used with the role type `"APP_ADMIN"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="targetgrouplists_csharp">
 <a href="#targetgrouplists_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Lists</a>
 </span>
@@ -335,6 +348,19 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Admin role assigned to the group. It can be any one of the following values `"SUPER_ADMIN"`
 , `"ORG_ADMIN"`, `"APP_ADMIN"`, `"USER_ADMIN"`, `"HELP_DESK_ADMIN"`, `"READ_ONLY_ADMIN"`
 , `"MOBILE_ADMIN"`, `"API_ACCESS_MANAGEMENT_ADMIN"`, `"REPORT_ADMIN"`, `"GROUP_MEMBERSHIP_ADMIN"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetapplists_go">
+<a href="#targetapplists_go" style="color: inherit; text-decoration: inherit;">Target<wbr>App<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of app names (name represents set of app instances, like 'salesforce' or '
+facebook'), or a combination of app name and app instance ID (like 'facebook.0oapsqQ6dv19pqyEo0g3') you would like as
+the targets of the admin role.
+- Only supported when used with the role type `"APP_ADMIN"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -377,6 +403,19 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="targetapplists_nodejs">
+<a href="#targetapplists_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>App<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of app names (name represents set of app instances, like 'salesforce' or '
+facebook'), or a combination of app name and app instance ID (like 'facebook.0oapsqQ6dv19pqyEo0g3') you would like as
+the targets of the admin role.
+- Only supported when used with the role type `"APP_ADMIN"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="targetgrouplists_nodejs">
 <a href="#targetgrouplists_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Lists</a>
 </span>
@@ -413,6 +452,19 @@ The Role resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}Admin role assigned to the group. It can be any one of the following values `"SUPER_ADMIN"`
 , `"ORG_ADMIN"`, `"APP_ADMIN"`, `"USER_ADMIN"`, `"HELP_DESK_ADMIN"`, `"READ_ONLY_ADMIN"`
 , `"MOBILE_ADMIN"`, `"API_ACCESS_MANAGEMENT_ADMIN"`, `"REPORT_ADMIN"`, `"GROUP_MEMBERSHIP_ADMIN"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_app_lists_python">
+<a href="#target_app_lists_python" style="color: inherit; text-decoration: inherit;">target_<wbr>app_<wbr>lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of app names (name represents set of app instances, like 'salesforce' or '
+facebook'), or a combination of app name and app instance ID (like 'facebook.0oapsqQ6dv19pqyEo0g3') you would like as
+the targets of the admin role.
+- Only supported when used with the role type `"APP_ADMIN"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -508,7 +560,7 @@ Get an existing Role resource's state with the given name, ID, and optional extr
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_group_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Role</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">target_app_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">target_group_lists</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Role</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -645,6 +697,19 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_targetapplists_csharp">
+<a href="#state_targetapplists_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>App<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of app names (name represents set of app instances, like 'salesforce' or '
+facebook'), or a combination of app name and app instance ID (like 'facebook.0oapsqQ6dv19pqyEo0g3') you would like as
+the targets of the admin role.
+- Only supported when used with the role type `"APP_ADMIN"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_targetgrouplists_csharp">
 <a href="#state_targetgrouplists_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Group<wbr>Lists</a>
 </span>
@@ -681,6 +746,19 @@ The following state arguments are supported:
     <dd>{{% md %}}Admin role assigned to the group. It can be any one of the following values `"SUPER_ADMIN"`
 , `"ORG_ADMIN"`, `"APP_ADMIN"`, `"USER_ADMIN"`, `"HELP_DESK_ADMIN"`, `"READ_ONLY_ADMIN"`
 , `"MOBILE_ADMIN"`, `"API_ACCESS_MANAGEMENT_ADMIN"`, `"REPORT_ADMIN"`, `"GROUP_MEMBERSHIP_ADMIN"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_targetapplists_go">
+<a href="#state_targetapplists_go" style="color: inherit; text-decoration: inherit;">Target<wbr>App<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of app names (name represents set of app instances, like 'salesforce' or '
+facebook'), or a combination of app name and app instance ID (like 'facebook.0oapsqQ6dv19pqyEo0g3') you would like as
+the targets of the admin role.
+- Only supported when used with the role type `"APP_ADMIN"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -723,6 +801,19 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_targetapplists_nodejs">
+<a href="#state_targetapplists_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>App<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of app names (name represents set of app instances, like 'salesforce' or '
+facebook'), or a combination of app name and app instance ID (like 'facebook.0oapsqQ6dv19pqyEo0g3') you would like as
+the targets of the admin role.
+- Only supported when used with the role type `"APP_ADMIN"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_targetgrouplists_nodejs">
 <a href="#state_targetgrouplists_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Group<wbr>Lists</a>
 </span>
@@ -759,6 +850,19 @@ The following state arguments are supported:
     <dd>{{% md %}}Admin role assigned to the group. It can be any one of the following values `"SUPER_ADMIN"`
 , `"ORG_ADMIN"`, `"APP_ADMIN"`, `"USER_ADMIN"`, `"HELP_DESK_ADMIN"`, `"READ_ONLY_ADMIN"`
 , `"MOBILE_ADMIN"`, `"API_ACCESS_MANAGEMENT_ADMIN"`, `"REPORT_ADMIN"`, `"GROUP_MEMBERSHIP_ADMIN"`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_target_app_lists_python">
+<a href="#state_target_app_lists_python" style="color: inherit; text-decoration: inherit;">target_<wbr>app_<wbr>lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of app names (name represents set of app instances, like 'salesforce' or '
+facebook'), or a combination of app name and app instance ID (like 'facebook.0oapsqQ6dv19pqyEo0g3') you would like as
+the targets of the admin role.
+- Only supported when used with the role type `"APP_ADMIN"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
