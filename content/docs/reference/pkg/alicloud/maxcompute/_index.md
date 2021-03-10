@@ -14,6 +14,11 @@ Explore the resources and functions of the alicloud.maxcompute module.
     <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
 </ul>
 
+<h2 id="functions">Functions</h2>
+<ul class="api">
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
+</ul>
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
@@ -23,6 +28,6 @@ Explore the resources and functions of the alicloud.maxcompute module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.35.1</dd>
+	<dd>2.36.0</dd>
 </dl>
 

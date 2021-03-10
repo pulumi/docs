@@ -12,12 +12,15 @@ Explore the resources and functions of the alicloud.ecs module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="autoprovisioninggroup" title="AutoProvisioningGroup"><span class="symbol resource"></span>AutoProvisioningGroup</a></li>
+    <li><a href="autosnapshotpolicy" title="AutoSnapshotPolicy"><span class="symbol resource"></span>AutoSnapshotPolicy</a></li>
+    <li><a href="command" title="Command"><span class="symbol resource"></span>Command</a></li>
     <li><a href="copyimage" title="CopyImage"><span class="symbol resource"></span>CopyImage</a></li>
     <li><a href="dedicatedhost" title="DedicatedHost"><span class="symbol resource"></span>DedicatedHost</a></li>
     <li><a href="disk" title="Disk"><span class="symbol resource"></span>Disk</a></li>
     <li><a href="diskattachment" title="DiskAttachment"><span class="symbol resource"></span>DiskAttachment</a></li>
     <li><a href="eip" title="Eip"><span class="symbol resource"></span>Eip</a></li>
     <li><a href="eipassociation" title="EipAssociation"><span class="symbol resource"></span>EipAssociation</a></li>
+    <li><a href="hpccluster" title="HpcCluster"><span class="symbol resource"></span>HpcCluster</a></li>
     <li><a href="image" title="Image"><span class="symbol resource"></span>Image</a></li>
     <li><a href="imagecopy" title="ImageCopy"><span class="symbol resource"></span>ImageCopy</a></li>
     <li><a href="imageexport" title="ImageExport"><span class="symbol resource"></span>ImageExport</a></li>
@@ -36,9 +39,12 @@ Explore the resources and functions of the alicloud.ecs module.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getautosnapshotpolicies" title="GetAutoSnapshotPolicies"><span class="symbol function"></span>GetAutoSnapshotPolicies</a></li>
+    <li><a href="getcommands" title="GetCommands"><span class="symbol function"></span>GetCommands</a></li>
     <li><a href="getdedicatedhosts" title="GetDedicatedHosts"><span class="symbol function"></span>GetDedicatedHosts</a></li>
     <li><a href="getdisks" title="GetDisks"><span class="symbol function"></span>GetDisks</a></li>
     <li><a href="geteips" title="GetEips"><span class="symbol function"></span>GetEips</a></li>
+    <li><a href="gethpcclusters" title="GetHpcClusters"><span class="symbol function"></span>GetHpcClusters</a></li>
     <li><a href="getimages" title="GetImages"><span class="symbol function"></span>GetImages</a></li>
     <li><a href="getinstancetypefamilies" title="GetInstanceTypeFamilies"><span class="symbol function"></span>GetInstanceTypeFamilies</a></li>
     <li><a href="getinstancetypes" title="GetInstanceTypes"><span class="symbol function"></span>GetInstanceTypes</a></li>
@@ -59,6 +65,6 @@ Explore the resources and functions of the alicloud.ecs module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.35.1</dd>
+	<dd>2.36.0</dd>
 </dl>
 

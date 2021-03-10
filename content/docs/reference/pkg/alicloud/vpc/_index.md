@@ -13,6 +13,7 @@ Explore the resources and functions of the alicloud.vpc module.
 <ul class="api">
     <li><a href="commonbandwithpackage" title="CommonBandwithPackage"><span class="symbol resource"></span>CommonBandwithPackage</a></li>
     <li><a href="commonbandwithpackageattachment" title="CommonBandwithPackageAttachment"><span class="symbol resource"></span>CommonBandwithPackageAttachment</a></li>
+    <li><a href="flowlog" title="FlowLog"><span class="symbol resource"></span>FlowLog</a></li>
     <li><a href="forwardentry" title="ForwardEntry"><span class="symbol resource"></span>ForwardEntry</a></li>
     <li><a href="havip" title="HAVip"><span class="symbol resource"></span>HAVip</a></li>
     <li><a href="havipattachment" title="HAVipAttachment"><span class="symbol resource"></span>HAVipAttachment</a></li>
@@ -58,6 +59,6 @@ Explore the resources and functions of the alicloud.vpc module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.35.1</dd>
+	<dd>2.36.0</dd>
 </dl>
 

@@ -117,7 +117,7 @@ export const firstBrainIndustrialPidProjectId = example.then(example => example.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_industrial_pid_projects(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pid_organisation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pid_project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIndustrialPidProjectsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_industrial_pid_projects(</span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pid_organization_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pid_project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetIndustrialPidProjectsResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -174,13 +174,13 @@ The following arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="pidorganisationid_csharp">
-<a href="#pidorganisationid_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organisation<wbr>Id</a>
+        <span id="pidorganizationid_csharp">
+<a href="#pidorganizationid_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Pid Organisation.
+    <dd>{{% md %}}The ID of Pid Organization.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -229,13 +229,13 @@ The following arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="pidorganisationid_go">
-<a href="#pidorganisationid_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organisation<wbr>Id</a>
+        <span id="pidorganizationid_go">
+<a href="#pidorganizationid_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Pid Organisation.
+    <dd>{{% md %}}The ID of Pid Organization.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -284,13 +284,13 @@ The following arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="pidorganisationid_nodejs">
-<a href="#pidorganisationid_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Organisation<wbr>Id</a>
+        <span id="pidorganizationid_nodejs">
+<a href="#pidorganizationid_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Pid Organisation.
+    <dd>{{% md %}}The ID of Pid Organization.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -339,13 +339,13 @@ The following arguments are supported:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="pid_organisation_id_python">
-<a href="#pid_organisation_id_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>organisation_<wbr>id</a>
+        <span id="pid_organization_id_python">
+<a href="#pid_organization_id_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>organization_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of Pid Organisation.
+    <dd>{{% md %}}The ID of Pid Organization.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -429,8 +429,8 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="pidorganisationid_csharp">
-<a href="#pidorganisationid_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organisation<wbr>Id</a>
+        <span id="pidorganizationid_csharp">
+<a href="#pidorganizationid_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -508,8 +508,8 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="pidorganisationid_go">
-<a href="#pidorganisationid_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organisation<wbr>Id</a>
+        <span id="pidorganizationid_go">
+<a href="#pidorganizationid_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -587,8 +587,8 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="pidorganisationid_nodejs">
-<a href="#pidorganisationid_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Organisation<wbr>Id</a>
+        <span id="pidorganizationid_nodejs">
+<a href="#pidorganizationid_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -666,8 +666,8 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="pid_organisation_id_python">
-<a href="#pid_organisation_id_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>organisation_<wbr>id</a>
+        <span id="pid_organization_id_python">
+<a href="#pid_organization_id_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>organization_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -710,13 +710,13 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="pidorganisationid_csharp">
-<a href="#pidorganisationid_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organisation<wbr>Id</a>
+        <span id="pidorganizationid_csharp">
+<a href="#pidorganizationid_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Pid Organisation.
+    <dd>{{% md %}}The ID of Pid Organization.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -766,13 +766,13 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="pidorganisationid_go">
-<a href="#pidorganisationid_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organisation<wbr>Id</a>
+        <span id="pidorganizationid_go">
+<a href="#pidorganizationid_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Pid Organisation.
+    <dd>{{% md %}}The ID of Pid Organization.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -822,13 +822,13 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="pidorganisationid_nodejs">
-<a href="#pidorganisationid_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Organisation<wbr>Id</a>
+        <span id="pidorganizationid_nodejs">
+<a href="#pidorganizationid_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Pid Organisation.
+    <dd>{{% md %}}The ID of Pid Organization.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -878,13 +878,13 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="pid_organisation_id_python">
-<a href="#pid_organisation_id_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>organisation_<wbr>id</a>
+        <span id="pid_organization_id_python">
+<a href="#pid_organization_id_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>organization_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of Pid Organisation.
+    <dd>{{% md %}}The ID of Pid Organization.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">

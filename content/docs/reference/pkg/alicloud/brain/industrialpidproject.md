@@ -30,7 +30,7 @@ class MyStack : Stack
     {
         var example = new AliCloud.Brain.IndustrialPidProject("example", new AliCloud.Brain.IndustrialPidProjectArgs
         {
-            PidOrganisationId = "3e74e684-cbb5-xxxx",
+            PidOrganizationId = "3e74e684-cbb5-xxxx",
             PidProjectName = "tf-testAcc",
         });
     }
@@ -52,7 +52,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := brain.NewIndustrialPidProject(ctx, "example", &brain.IndustrialPidProjectArgs{
-			PidOrganisationId: pulumi.String("3e74e684-cbb5-xxxx"),
+			PidOrganizationId: pulumi.String("3e74e684-cbb5-xxxx"),
 			PidProjectName:    pulumi.String("tf-testAcc"),
 		})
 		if err != nil {
@@ -71,7 +71,7 @@ import pulumi
 import pulumi_alicloud as alicloud
 
 example = alicloud.brain.IndustrialPidProject("example",
-    pid_organisation_id="3e74e684-cbb5-xxxx",
+    pid_organization_id="3e74e684-cbb5-xxxx",
     pid_project_name="tf-testAcc")
 ```
 
@@ -84,7 +84,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 const example = new alicloud.brain.IndustrialPidProject("example", {
-    pidOrganisationId: "3e74e684-cbb5-xxxx",
+    pidOrganizationId: "3e74e684-cbb5-xxxx",
     pidProjectName: "tf-testAcc",
 });
 ```
@@ -103,7 +103,7 @@ const example = new alicloud.brain.IndustrialPidProject("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IndustrialPidProject</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">pid_organisation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pid_project_desc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pid_project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">IndustrialPidProject</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">pid_organization_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pid_project_desc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pid_project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -276,13 +276,13 @@ The IndustrialPidProject resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span id="pidorganisationid_csharp">
-<a href="#pidorganisationid_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organisation<wbr>Id</a>
+        <span id="pidorganizationid_csharp">
+<a href="#pidorganizationid_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Pid Organisation.
+    <dd>{{% md %}}The ID of Pid Organization.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -312,13 +312,13 @@ The IndustrialPidProject resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span id="pidorganisationid_go">
-<a href="#pidorganisationid_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organisation<wbr>Id</a>
+        <span id="pidorganizationid_go">
+<a href="#pidorganizationid_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Pid Organisation.
+    <dd>{{% md %}}The ID of Pid Organization.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -348,13 +348,13 @@ The IndustrialPidProject resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span id="pidorganisationid_nodejs">
-<a href="#pidorganisationid_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Organisation<wbr>Id</a>
+        <span id="pidorganizationid_nodejs">
+<a href="#pidorganizationid_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Pid Organisation.
+    <dd>{{% md %}}The ID of Pid Organization.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -384,13 +384,13 @@ The IndustrialPidProject resource accepts the following [input]({{< relref "/doc
 
     <dt class="property-required"
             title="Required">
-        <span id="pid_organisation_id_python">
-<a href="#pid_organisation_id_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>organisation_<wbr>id</a>
+        <span id="pid_organization_id_python">
+<a href="#pid_organization_id_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>organization_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of Pid Organisation.
+    <dd>{{% md %}}The ID of Pid Organization.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -495,7 +495,7 @@ Get an existing IndustrialPidProject resource's state with the given name, ID, a
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">pid_organisation_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pid_project_desc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pid_project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> IndustrialPidProject</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">pid_organization_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pid_project_desc</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pid_project_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> IndustrialPidProject</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -610,13 +610,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_pidorganisationid_csharp">
-<a href="#state_pidorganisationid_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organisation<wbr>Id</a>
+        <span id="state_pidorganizationid_csharp">
+<a href="#state_pidorganizationid_csharp" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Pid Organisation.
+    <dd>{{% md %}}The ID of Pid Organization.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -646,13 +646,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_pidorganisationid_go">
-<a href="#state_pidorganisationid_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organisation<wbr>Id</a>
+        <span id="state_pidorganizationid_go">
+<a href="#state_pidorganizationid_go" style="color: inherit; text-decoration: inherit;">Pid<wbr>Organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Pid Organisation.
+    <dd>{{% md %}}The ID of Pid Organization.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -682,13 +682,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_pidorganisationid_nodejs">
-<a href="#state_pidorganisationid_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Organisation<wbr>Id</a>
+        <span id="state_pidorganizationid_nodejs">
+<a href="#state_pidorganizationid_nodejs" style="color: inherit; text-decoration: inherit;">pid<wbr>Organization<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of Pid Organisation.
+    <dd>{{% md %}}The ID of Pid Organization.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -718,13 +718,13 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="state_pid_organisation_id_python">
-<a href="#state_pid_organisation_id_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>organisation_<wbr>id</a>
+        <span id="state_pid_organization_id_python">
+<a href="#state_pid_organization_id_python" style="color: inherit; text-decoration: inherit;">pid_<wbr>organization_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of Pid Organisation.
+    <dd>{{% md %}}The ID of Pid Organization.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

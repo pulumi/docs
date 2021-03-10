@@ -19,6 +19,7 @@ Explore the resources and functions of the alicloud.cr module.
 <ul class="api">
     <li><a href="getnamespaces" title="GetNamespaces"><span class="symbol function"></span>GetNamespaces</a></li>
     <li><a href="getrepos" title="GetRepos"><span class="symbol function"></span>GetRepos</a></li>
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -30,6 +31,6 @@ Explore the resources and functions of the alicloud.cr module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.35.1</dd>
+	<dd>2.36.0</dd>
 </dl>
 
