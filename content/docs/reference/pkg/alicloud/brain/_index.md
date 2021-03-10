@@ -11,12 +11,14 @@ Explore the resources and functions of the alicloud.brain module.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="industrialpidloop" title="IndustrialPidLoop"><span class="symbol resource"></span>IndustrialPidLoop</a></li>
     <li><a href="industrialpidorganization" title="IndustrialPidOrganization"><span class="symbol resource"></span>IndustrialPidOrganization</a></li>
     <li><a href="industrialpidproject" title="IndustrialPidProject"><span class="symbol resource"></span>IndustrialPidProject</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getindustrialpidloops" title="GetIndustrialPidLoops"><span class="symbol function"></span>GetIndustrialPidLoops</a></li>
     <li><a href="getindustrialpidorganizations" title="GetIndustrialPidOrganizations"><span class="symbol function"></span>GetIndustrialPidOrganizations</a></li>
     <li><a href="getindustrialpidprojects" title="GetIndustrialPidProjects"><span class="symbol function"></span>GetIndustrialPidProjects</a></li>
     <li><a href="getindustrialserice" title="GetIndustrialSerice"><span class="symbol function"></span>GetIndustrialSerice</a></li>
@@ -31,6 +33,6 @@ Explore the resources and functions of the alicloud.brain module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.35.1</dd>
+	<dd>2.36.0</dd>
 </dl>
 

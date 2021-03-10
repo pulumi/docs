@@ -1720,6 +1720,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="sgw_csharp">
+<a href="#sgw_csharp" style="color: inherit; text-decoration: inherit;">Sgw</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="slb_csharp">
 <a href="#slb_csharp" style="color: inherit; text-decoration: inherit;">Slb</a>
 </span>
@@ -2286,6 +2295,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="ros_go">
 <a href="#ros_go" style="color: inherit; text-decoration: inherit;">Ros</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sgw_go">
+<a href="#sgw_go" style="color: inherit; text-decoration: inherit;">Sgw</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2866,6 +2884,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="sgw_nodejs">
+<a href="#sgw_nodejs" style="color: inherit; text-decoration: inherit;">sgw</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="slb_nodejs">
 <a href="#slb_nodejs" style="color: inherit; text-decoration: inherit;">slb</a>
 </span>
@@ -3432,6 +3459,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="ros_python">
 <a href="#ros_python" style="color: inherit; text-decoration: inherit;">ros</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sgw_python">
+<a href="#sgw_python" style="color: inherit; text-decoration: inherit;">sgw</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

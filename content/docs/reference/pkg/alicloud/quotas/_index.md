@@ -12,11 +12,15 @@ Explore the resources and functions of the alicloud.quotas module.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="applicationinfo" title="ApplicationInfo"><span class="symbol resource"></span>ApplicationInfo</a></li>
+    <li><a href="quotaalarm" title="QuotaAlarm"><span class="symbol resource"></span>QuotaAlarm</a></li>
+    <li><a href="quotaapplication" title="QuotaApplication"><span class="symbol resource"></span>QuotaApplication</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getapplicationinfos" title="GetApplicationInfos"><span class="symbol function"></span>GetApplicationInfos</a></li>
+    <li><a href="getquotaalarms" title="GetQuotaAlarms"><span class="symbol function"></span>GetQuotaAlarms</a></li>
+    <li><a href="getquotaapplications" title="GetQuotaApplications"><span class="symbol function"></span>GetQuotaApplications</a></li>
     <li><a href="getquotas" title="GetQuotas"><span class="symbol function"></span>GetQuotas</a></li>
 </ul>
 
@@ -29,6 +33,6 @@ Explore the resources and functions of the alicloud.quotas module.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.35.1</dd>
+	<dd>2.36.0</dd>
 </dl>
 

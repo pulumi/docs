@@ -25,6 +25,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="cen/" title="cen"><span class="symbol module"></span>cen</a></li>
     <li><a href="cfg/" title="cfg"><span class="symbol module"></span>cfg</a></li>
     <li><a href="cloudconnect/" title="cloudconnect"><span class="symbol module"></span>cloudconnect</a></li>
+    <li><a href="cloudstoragegateway/" title="cloudstoragegateway"><span class="symbol module"></span>cloudstoragegateway</a></li>
     <li><a href="cms/" title="cms"><span class="symbol module"></span>cms</a></li>
     <li><a href="cr/" title="cr"><span class="symbol module"></span>cr</a></li>
     <li><a href="cs/" title="cs"><span class="symbol module"></span>cs</a></li>
@@ -72,6 +73,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="sag/" title="sag"><span class="symbol module"></span>sag</a></li>
     <li><a href="slb/" title="slb"><span class="symbol module"></span>slb</a></li>
     <li><a href="tsdb/" title="tsdb"><span class="symbol module"></span>tsdb</a></li>
+    <li><a href="videosurveillance/" title="videosurveillance"><span class="symbol module"></span>videosurveillance</a></li>
     <li><a href="vpc/" title="vpc"><span class="symbol module"></span>vpc</a></li>
     <li><a href="vpn/" title="vpn"><span class="symbol module"></span>vpn</a></li>
     <li><a href="waf/" title="waf"><span class="symbol module"></span>waf</a></li>
@@ -101,6 +103,6 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.35.1</dd>
+	<dd>2.36.0</dd>
 </dl>
 
