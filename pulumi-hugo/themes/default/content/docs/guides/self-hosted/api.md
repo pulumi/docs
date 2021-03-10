@@ -61,6 +61,8 @@ This container runs an HTTP server which provides the APIs needed by the Console
 
 | Variable Name | Description |
 | ------------- | ----------- |
+| PULUMI_DATABASE_USER_NAME | Name of the database user the Pulumi Service connects as. Leave default unless you are having trouble connecting to your database.
+| PULUMI_DATABASE_USER_PASSWORD | Password of the database user the Pulumi Service connects as. Leave default unless you are having troubles connecting to your database.
 | PULUMI_OBJECTS_BUCKET | S3 bucket name for persisting state for stacks.<br><br>**Note**: Only used if hosted on AWS. |
 | RECAPTCHA_SECRET_KEY | reCAPTCHA secret key for self-service password reset. Create a [site key and a secret key from Google](https://www.google.com/recaptcha/admin). |
 | SAML_CERTIFICATE_PUBLIC_KEY | Public key used by the [IdP]({{< relref "../saml/sso#terminology" >}}) to sign SAML assertions. Learn how to [set SAML_CERTIFICATE_PUBLIC_KEY]({{< relref "saml-sso" >}}). |
