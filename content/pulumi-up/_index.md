@@ -6,6 +6,9 @@ meta_desc: |
     On April 20th Pulumi presents PulumiUP, a 2 hour virtual event that will feature product updates, company news,
     and much more.
 
+aliases:
+    - /pulumiup
+
 countdown_date: 2021-04-20T09:00:00-08:00
 
 form:
