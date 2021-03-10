@@ -201,7 +201,7 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cluster ID that is syncing (string)
+    <dd>{{% md %}}The Cluster ID of the node (string).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -256,7 +256,7 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cluster ID that is syncing (string)
+    <dd>{{% md %}}The Cluster ID of the node (string).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -311,7 +311,7 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cluster ID that is syncing (string)
+    <dd>{{% md %}}The Cluster ID of the node (string).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -366,7 +366,7 @@ The ClusterSync resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The cluster ID that is syncing (string)
+    <dd>{{% md %}}The Cluster ID of the node (string).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -451,6 +451,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="nodes_csharp">
+<a href="#nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustersyncnode">List&lt;Cluster<wbr>Sync<wbr>Node&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) The cluster nodes (list).
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="systemprojectid_csharp">
 <a href="#systemprojectid_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Project<wbr>Id</a>
 </span>
@@ -493,6 +503,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed/Sensitive) Kube Config generated for the cluster sync (string)
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="nodes_go">
+<a href="#nodes_go" style="color: inherit; text-decoration: inherit;">Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustersyncnode">[]Cluster<wbr>Sync<wbr>Node</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) The cluster nodes (list).
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -541,6 +561,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="nodes_nodejs">
+<a href="#nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustersyncnode">Cluster<wbr>Sync<wbr>Node[]</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) The cluster nodes (list).
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="systemprojectid_nodejs">
 <a href="#systemprojectid_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Project<wbr>Id</a>
 </span>
@@ -586,6 +616,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="nodes_python">
+<a href="#nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustersyncnode">Sequence[Cluster<wbr>Sync<wbr>Node]</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) The cluster nodes (list).
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="system_project_id_python">
 <a href="#system_project_id_python" style="color: inherit; text-decoration: inherit;">system_<wbr>project_<wbr>id</a>
 </span>
@@ -610,7 +650,7 @@ Get an existing ClusterSync resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_pool_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">state_confirm</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">synced</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">system_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> ClusterSync</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cluster_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kube_config</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_pool_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">nodes</span><span class="p">:</span> <span class="nx">Optional[Sequence[ClusterSyncNodeArgs]]</span> = None<span class="p">, </span><span class="nx">state_confirm</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">synced</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">system_project_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> ClusterSync</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -731,7 +771,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cluster ID that is syncing (string)
+    <dd>{{% md %}}The Cluster ID of the node (string).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -762,6 +802,16 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The node pool IDs used by the cluster id (list)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_nodes_csharp">
+<a href="#state_nodes_csharp" style="color: inherit; text-decoration: inherit;">Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustersyncnode">List&lt;Cluster<wbr>Sync<wbr>Node<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) The cluster nodes (list).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -816,7 +866,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cluster ID that is syncing (string)
+    <dd>{{% md %}}The Cluster ID of the node (string).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -847,6 +897,16 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The node pool IDs used by the cluster id (list)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_nodes_go">
+<a href="#state_nodes_go" style="color: inherit; text-decoration: inherit;">Nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustersyncnode">[]Cluster<wbr>Sync<wbr>Node</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) The cluster nodes (list).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -901,7 +961,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cluster ID that is syncing (string)
+    <dd>{{% md %}}The Cluster ID of the node (string).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -932,6 +992,16 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The node pool IDs used by the cluster id (list)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_nodes_nodejs">
+<a href="#state_nodes_nodejs" style="color: inherit; text-decoration: inherit;">nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustersyncnode">Cluster<wbr>Sync<wbr>Node[]</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) The cluster nodes (list).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -986,7 +1056,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The cluster ID that is syncing (string)
+    <dd>{{% md %}}The Cluster ID of the node (string).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1017,6 +1087,16 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The node pool IDs used by the cluster id (list)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_nodes_python">
+<a href="#state_nodes_python" style="color: inherit; text-decoration: inherit;">nodes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustersyncnode">Sequence[Cluster<wbr>Sync<wbr>Node<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}(Computed) The cluster nodes (list).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1064,6 +1144,676 @@ The following state arguments are supported:
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="clustersyncnode">Cluster<wbr>Sync<wbr>Node</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Annotations of the node (map).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_csharp">
+<a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The total resources of a node (map).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterid_csharp">
+<a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Cluster ID of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalipaddress_csharp">
+<a href="#externalipaddress_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The external IP address of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostname_csharp">
+<a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hostname of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the node (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipaddress_csharp">
+<a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IP address of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_csharp">
+<a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Labels of the node (map).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodepoolid_csharp">
+<a href="#nodepoolid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Pool<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Node Pool ID of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodetemplateid_csharp">
+<a href="#nodetemplateid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Template<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Node Template ID of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="providerid_csharp">
+<a href="#providerid_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Provider ID of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestedhostname_csharp">
+<a href="#requestedhostname_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>Hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The requested hostname (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="roles_csharp">
+<a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Roles of the node. `controlplane`, `etcd` and `worker`. (list)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sshuser_csharp">
+<a href="#sshuser_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>User</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user to connect to the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="systeminfo_csharp">
+<a href="#systeminfo_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}General information about the node, such as kernel version, kubelet and kube-proxy version, Docker version (if used), and OS name.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Annotations of the node (map).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_go">
+<a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The total resources of a node (map).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterid_go">
+<a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Cluster ID of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalipaddress_go">
+<a href="#externalipaddress_go" style="color: inherit; text-decoration: inherit;">External<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The external IP address of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostname_go">
+<a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hostname of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the node (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipaddress_go">
+<a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IP address of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_go">
+<a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Labels of the node (map).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodepoolid_go">
+<a href="#nodepoolid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Pool<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Node Pool ID of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodetemplateid_go">
+<a href="#nodetemplateid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Template<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Node Template ID of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="providerid_go">
+<a href="#providerid_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Provider ID of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestedhostname_go">
+<a href="#requestedhostname_go" style="color: inherit; text-decoration: inherit;">Requested<wbr>Hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The requested hostname (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="roles_go">
+<a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Roles of the node. `controlplane`, `etcd` and `worker`. (list)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sshuser_go">
+<a href="#sshuser_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>User</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user to connect to the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="systeminfo_go">
+<a href="#systeminfo_go" style="color: inherit; text-decoration: inherit;">System<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}General information about the node, such as kernel version, kubelet and kube-proxy version, Docker version (if used), and OS name.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Annotations of the node (map).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_nodejs">
+<a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The total resources of a node (map).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterid_nodejs">
+<a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Cluster ID of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalipaddress_nodejs">
+<a href="#externalipaddress_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The external IP address of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostname_nodejs">
+<a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hostname of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the node (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipaddress_nodejs">
+<a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IP address of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_nodejs">
+<a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Labels of the node (map).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodepoolid_nodejs">
+<a href="#nodepoolid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Pool<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Node Pool ID of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodetemplateid_nodejs">
+<a href="#nodetemplateid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Template<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Node Template ID of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="providerid_nodejs">
+<a href="#providerid_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Provider ID of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requestedhostname_nodejs">
+<a href="#requestedhostname_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>Hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The requested hostname (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="roles_nodejs">
+<a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Roles of the node. `controlplane`, `etcd` and `worker`. (list)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sshuser_nodejs">
+<a href="#sshuser_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>User</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user to connect to the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="systeminfo_nodejs">
+<a href="#systeminfo_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}General information about the node, such as kernel version, kubelet and kube-proxy version, Docker version (if used), and OS name.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Annotations of the node (map).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_python">
+<a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The total resources of a node (map).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cluster_id_python">
+<a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Cluster ID of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="external_ip_address_python">
+<a href="#external_ip_address_python" style="color: inherit; text-decoration: inherit;">external_<wbr>ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The external IP address of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostname_python">
+<a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The hostname of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the node (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_address_python">
+<a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private IP address of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="labels_python">
+<a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Labels of the node (map).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="node_pool_id_python">
+<a href="#node_pool_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>pool_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Node Pool ID of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="node_template_id_python">
+<a href="#node_template_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>template_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Node Template ID of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provider_id_python">
+<a href="#provider_id_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Provider ID of the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="requested_hostname_python">
+<a href="#requested_hostname_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>hostname</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The requested hostname (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="roles_python">
+<a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Roles of the node. `controlplane`, `etcd` and `worker`. (list)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ssh_user_python">
+<a href="#ssh_user_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>user</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The user to connect to the node (string).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="system_info_python">
+<a href="#system_info_python" style="color: inherit; text-decoration: inherit;">system_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}General information about the node, such as kernel version, kubelet and kube-proxy version, Docker version (if used), and OS name.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 
 <h2 id="package-details">Package Details</h2>

@@ -5201,6 +5201,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="loadbalancersku_csharp">
+<a href="#loadbalancersku_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Load balancer type (basic | standard). Must be standard for auto-scaling
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -5574,6 +5584,16 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Turn on Azure Log Analytics monitoring. Uses the Log Analytics \"Default\" workspace if it exists, else creates one. if using an existing workspace, specifies \"log analytics workspace resource id\". Default `true` (bool)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loadbalancersku_go">
+<a href="#loadbalancersku_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Load balancer type (basic | standard). Must be standard for auto-scaling
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5953,6 +5973,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="loadbalancersku_nodejs">
+<a href="#loadbalancersku_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Load balancer type (basic | standard). Must be standard for auto-scaling
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
@@ -6326,6 +6356,16 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Turn on Azure Log Analytics monitoring. Uses the Log Analytics \"Default\" workspace if it exists, else creates one. if using an existing workspace, specifies \"log analytics workspace resource id\". Default `true` (bool)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="load_balancer_sku_python">
+<a href="#load_balancer_sku_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Load balancer type (basic | standard). Must be standard for auto-scaling
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -7327,7 +7367,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Variable type. `boolean`, `int` and `string` are allowed. Default `string` (string)
+    <dd>{{% md %}}Variable type. `boolean`, `int`, `password`, and `string` are allowed. Default `string` (string)
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -7373,7 +7413,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Variable type. `boolean`, `int` and `string` are allowed. Default `string` (string)
+    <dd>{{% md %}}Variable type. `boolean`, `int`, `password`, and `string` are allowed. Default `string` (string)
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -7419,7 +7459,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Variable type. `boolean`, `int` and `string` are allowed. Default `string` (string)
+    <dd>{{% md %}}Variable type. `boolean`, `int`, `password`, and `string` are allowed. Default `string` (string)
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -7465,7 +7505,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Variable type. `boolean`, `int` and `string` are allowed. Default `string` (string)
+    <dd>{{% md %}}Variable type. `boolean`, `int`, `password`, and `string` are allowed. Default `string` (string)
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -11879,6 +11919,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="custombootvolumesize_csharp">
+<a href="#custombootvolumesize_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Boot<wbr>Volume<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Optional custom boot volume size (GB) for all nodes. If you specify 0, it will apply the default according to the `node_image` specified. Default `0` (int)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -11906,6 +11956,16 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether worker nodes will be deployed into a new, private, subnet. Default `false` (bool)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="flexocpus_csharp">
+<a href="#flexocpus_csharp" style="color: inherit; text-decoration: inherit;">Flex<wbr>Ocpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies number of OCPUs for nodes (requires flexible shape specified with `node_shape`) (int)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -12006,6 +12066,16 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to skip deleting the virtual cloud network (VCN) on destroy. Default `false` (bool)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vcncompartmentid_csharp">
+<a href="#vcncompartmentid_csharp" style="color: inherit; text-decoration: inherit;">Vcn<wbr>Compartment<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The OCID of the compartment (if different from `compartment_id`) in which to find the pre-existing virtual network set with `vcn_name`. (string)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -12125,6 +12195,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="custombootvolumesize_go">
+<a href="#custombootvolumesize_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Boot<wbr>Volume<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Optional custom boot volume size (GB) for all nodes. If you specify 0, it will apply the default according to the `node_image` specified. Default `0` (int)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
@@ -12152,6 +12232,16 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether worker nodes will be deployed into a new, private, subnet. Default `false` (bool)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="flexocpus_go">
+<a href="#flexocpus_go" style="color: inherit; text-decoration: inherit;">Flex<wbr>Ocpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies number of OCPUs for nodes (requires flexible shape specified with `node_shape`) (int)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -12252,6 +12342,16 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to skip deleting the virtual cloud network (VCN) on destroy. Default `false` (bool)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vcncompartmentid_go">
+<a href="#vcncompartmentid_go" style="color: inherit; text-decoration: inherit;">Vcn<wbr>Compartment<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The OCID of the compartment (if different from `compartment_id`) in which to find the pre-existing virtual network set with `vcn_name`. (string)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -12371,6 +12471,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="custombootvolumesize_nodejs">
+<a href="#custombootvolumesize_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Boot<wbr>Volume<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Optional custom boot volume size (GB) for all nodes. If you specify 0, it will apply the default according to the `node_image` specified. Default `0` (int)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -12398,6 +12508,16 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether worker nodes will be deployed into a new, private, subnet. Default `false` (bool)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="flexocpus_nodejs">
+<a href="#flexocpus_nodejs" style="color: inherit; text-decoration: inherit;">flex<wbr>Ocpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Specifies number of OCPUs for nodes (requires flexible shape specified with `node_shape`) (int)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -12498,6 +12618,16 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to skip deleting the virtual cloud network (VCN) on destroy. Default `false` (bool)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vcncompartmentid_nodejs">
+<a href="#vcncompartmentid_nodejs" style="color: inherit; text-decoration: inherit;">vcn<wbr>Compartment<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The OCID of the compartment (if different from `compartment_id`) in which to find the pre-existing virtual network set with `vcn_name`. (string)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -12617,6 +12747,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="custom_boot_volume_size_python">
+<a href="#custom_boot_volume_size_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>boot_<wbr>volume_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Optional custom boot volume size (GB) for all nodes. If you specify 0, it will apply the default according to the `node_image` specified. Default `0` (int)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
@@ -12644,6 +12784,16 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether worker nodes will be deployed into a new, private, subnet. Default `false` (bool)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="flex_ocpus_python">
+<a href="#flex_ocpus_python" style="color: inherit; text-decoration: inherit;">flex_<wbr>ocpus</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Specifies number of OCPUs for nodes (requires flexible shape specified with `node_shape`) (int)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -12744,6 +12894,16 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to skip deleting the virtual cloud network (VCN) on destroy. Default `false` (bool)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vcn_compartment_id_python">
+<a href="#vcn_compartment_id_python" style="color: inherit; text-decoration: inherit;">vcn_<wbr>compartment_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The OCID of the compartment (if different from `compartment_id`) in which to find the pre-existing virtual network set with `vcn_name`. (string)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -12983,6 +13143,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}K3S upgrade strategy (List maxitems: 1)
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="winprefixpath_csharp">
+<a href="#winprefixpath_csharp" style="color: inherit; text-decoration: inherit;">Win<wbr>Prefix<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Prefix to customize Kubernetes path for windows (string)
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -13198,6 +13368,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#clusterrkeconfigupgradestrategy">Cluster<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}K3S upgrade strategy (List maxitems: 1)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="winprefixpath_go">
+<a href="#winprefixpath_go" style="color: inherit; text-decoration: inherit;">Win<wbr>Prefix<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Prefix to customize Kubernetes path for windows (string)
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -13415,6 +13595,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}K3S upgrade strategy (List maxitems: 1)
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="winprefixpath_nodejs">
+<a href="#winprefixpath_nodejs" style="color: inherit; text-decoration: inherit;">win<wbr>Prefix<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Prefix to customize Kubernetes path for windows (string)
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -13630,6 +13820,16 @@ The following state arguments are supported:
         <span class="property-type"><a href="#clusterrkeconfigupgradestrategy">Cluster<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}K3S upgrade strategy (List maxitems: 1)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="win_prefix_path_python">
+<a href="#win_prefix_path_python" style="color: inherit; text-decoration: inherit;">win_<wbr>prefix_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Prefix to customize Kubernetes path for windows (string)
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -15339,7 +15539,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allowed values: `basic` (default) `standard` (string)
+    <dd>{{% md %}}Load balancer type (basic | standard). Must be standard for auto-scaling
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -15635,7 +15835,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allowed values: `basic` (default) `standard` (string)
+    <dd>{{% md %}}Load balancer type (basic | standard). Must be standard for auto-scaling
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -15931,7 +16131,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allowed values: `basic` (default) `standard` (string)
+    <dd>{{% md %}}Load balancer type (basic | standard). Must be standard for auto-scaling
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -16227,7 +16427,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Allowed values: `basic` (default) `standard` (string)
+    <dd>{{% md %}}Load balancer type (basic | standard). Must be standard for auto-scaling
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -22637,6 +22837,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Safe timestamp for etcd backup. Default: `false` (bool)
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_csharp">
+<a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}RKE node drain timeout. Default: `60` (int)
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -22692,6 +22902,16 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Safe timestamp for etcd backup. Default: `false` (bool)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_go">
+<a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}RKE node drain timeout. Default: `60` (int)
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -22749,6 +22969,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Safe timestamp for etcd backup. Default: `false` (bool)
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_nodejs">
+<a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}RKE node drain timeout. Default: `60` (int)
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -22804,6 +23034,16 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Safe timestamp for etcd backup. Default: `false` (bool)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_python">
+<a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}RKE node drain timeout. Default: `60` (int)
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

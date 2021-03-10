@@ -283,7 +283,7 @@ const myHetznerNodeTemplate = new rancher2.NodeTemplate("myHetznerNodeTemplate",
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NodeTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">amazonec2_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAmazonec2ConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">auth_certificate_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAzureConfigArgs]</span> = None<span class="p">, </span><span class="nx">cloud_credential_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">digitalocean_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateDigitaloceanConfigArgs]</span> = None<span class="p">, </span><span class="nx">driver_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_env</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_insecure_registries</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">engine_install_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_label</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_opt</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_registry_mirrors</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">engine_storage_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hetzner_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateHetznerConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">linode_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateLinodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opennebula_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpennebulaConfigArgs]</span> = None<span class="p">, </span><span class="nx">openstack_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpenstackConfigArgs]</span> = None<span class="p">, </span><span class="nx">use_internal_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vsphere_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateVsphereConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">NodeTemplate</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">amazonec2_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAmazonec2ConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">auth_certificate_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAzureConfigArgs]</span> = None<span class="p">, </span><span class="nx">cloud_credential_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">digitalocean_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateDigitaloceanConfigArgs]</span> = None<span class="p">, </span><span class="nx">driver_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_env</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_insecure_registries</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">engine_install_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_label</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_opt</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_registry_mirrors</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">engine_storage_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hetzner_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateHetznerConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">linode_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateLinodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodeTemplateNodeTaintArgs]]</span> = None<span class="p">, </span><span class="nx">opennebula_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpennebulaConfigArgs]</span> = None<span class="p">, </span><span class="nx">openstack_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpenstackConfigArgs]</span> = None<span class="p">, </span><span class="nx">use_internal_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vsphere_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateVsphereConfigArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -656,6 +656,16 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="nodetaints_csharp">
+<a href="#nodetaints_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodetemplatenodetaint">List&lt;Node<wbr>Template<wbr>Node<wbr>Taint<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="opennebulaconfig_csharp">
 <a href="#opennebulaconfig_csharp" style="color: inherit; text-decoration: inherit;">Opennebula<wbr>Config</a>
 </span>
@@ -899,6 +909,16 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodetaints_go">
+<a href="#nodetaints_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodetemplatenodetaint">[]Node<wbr>Template<wbr>Node<wbr>Taint</a></span>
+    </dt>
+    <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1148,6 +1168,16 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="nodetaints_nodejs">
+<a href="#nodetaints_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodetemplatenodetaint">Node<wbr>Template<wbr>Node<wbr>Taint[]</a></span>
+    </dt>
+    <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="opennebulaconfig_nodejs">
 <a href="#opennebulaconfig_nodejs" style="color: inherit; text-decoration: inherit;">opennebula<wbr>Config</a>
 </span>
@@ -1394,6 +1424,16 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="node_taints_python">
+<a href="#node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodetemplatenodetaint">Sequence[Node<wbr>Template<wbr>Node<wbr>Taint<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="opennebula_config_python">
 <a href="#opennebula_config_python" style="color: inherit; text-decoration: inherit;">opennebula_<wbr>config</a>
 </span>
@@ -1555,7 +1595,7 @@ Get an existing NodeTemplate resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">amazonec2_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAmazonec2ConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">auth_certificate_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAzureConfigArgs]</span> = None<span class="p">, </span><span class="nx">cloud_credential_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">digitalocean_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateDigitaloceanConfigArgs]</span> = None<span class="p">, </span><span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">driver_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_env</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_insecure_registries</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">engine_install_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_label</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_opt</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_registry_mirrors</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">engine_storage_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hetzner_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateHetznerConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">linode_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateLinodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opennebula_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpennebulaConfigArgs]</span> = None<span class="p">, </span><span class="nx">openstack_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpenstackConfigArgs]</span> = None<span class="p">, </span><span class="nx">use_internal_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vsphere_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateVsphereConfigArgs]</span> = None<span class="p">) -&gt;</span> NodeTemplate</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">amazonec2_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAmazonec2ConfigArgs]</span> = None<span class="p">, </span><span class="nx">annotations</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">auth_certificate_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auth_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateAzureConfigArgs]</span> = None<span class="p">, </span><span class="nx">cloud_credential_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">digitalocean_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateDigitaloceanConfigArgs]</span> = None<span class="p">, </span><span class="nx">driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">driver_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_env</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_insecure_registries</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">engine_install_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_label</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_opt</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">engine_registry_mirrors</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">engine_storage_driver</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hetzner_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateHetznerConfigArgs]</span> = None<span class="p">, </span><span class="nx">labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, Any]]</span> = None<span class="p">, </span><span class="nx">linode_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateLinodeConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[NodeTemplateNodeTaintArgs]]</span> = None<span class="p">, </span><span class="nx">opennebula_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpennebulaConfigArgs]</span> = None<span class="p">, </span><span class="nx">openstack_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateOpenstackConfigArgs]</span> = None<span class="p">, </span><span class="nx">use_internal_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vsphere_config</span><span class="p">:</span> <span class="nx">Optional[NodeTemplateVsphereConfigArgs]</span> = None<span class="p">) -&gt;</span> NodeTemplate</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1880,6 +1920,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_nodetaints_csharp">
+<a href="#state_nodetaints_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodetemplatenodetaint">List&lt;Node<wbr>Template<wbr>Node<wbr>Taint<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_opennebulaconfig_csharp">
 <a href="#state_opennebulaconfig_csharp" style="color: inherit; text-decoration: inherit;">Opennebula<wbr>Config</a>
 </span>
@@ -2133,6 +2183,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_nodetaints_go">
+<a href="#state_nodetaints_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodetemplatenodetaint">[]Node<wbr>Template<wbr>Node<wbr>Taint</a></span>
+    </dt>
+    <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2392,6 +2452,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_nodetaints_nodejs">
+<a href="#state_nodetaints_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodetemplatenodetaint">Node<wbr>Template<wbr>Node<wbr>Taint[]</a></span>
+    </dt>
+    <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_opennebulaconfig_nodejs">
 <a href="#state_opennebulaconfig_nodejs" style="color: inherit; text-decoration: inherit;">opennebula<wbr>Config</a>
 </span>
@@ -2645,6 +2715,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_node_taints_python">
+<a href="#state_node_taints_python" style="color: inherit; text-decoration: inherit;">node_<wbr>taints</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodetemplatenodetaint">Sequence[Node<wbr>Template<wbr>Node<wbr>Taint<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Node taints. For Rancher v2.3.3 or above (List)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3031,7 +3111,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon EBS volume type. Default `gp2` (string)
+    <dd>{{% md %}}OpenStack volume type. Required when `boot_from_volume` is `true` and openstack cloud does not have a default volume type (string)
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3367,7 +3447,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon EBS volume type. Default `gp2` (string)
+    <dd>{{% md %}}OpenStack volume type. Required when `boot_from_volume` is `true` and openstack cloud does not have a default volume type (string)
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3703,7 +3783,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amazon EBS volume type. Default `gp2` (string)
+    <dd>{{% md %}}OpenStack volume type. Required when `boot_from_volume` is `true` and openstack cloud does not have a default volume type (string)
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4039,7 +4119,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amazon EBS volume type. Default `gp2` (string)
+    <dd>{{% md %}}OpenStack volume type. Required when `boot_from_volume` is `true` and openstack cloud does not have a default volume type (string)
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -6748,6 +6828,192 @@ The following state arguments are supported:
 </dl>
 {{% /choosable %}}
 
+<h4 id="nodetemplatenodetaint">Node<wbr>Template<wbr>Node<wbr>Taint</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Taint key (string)
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Taint value (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="effect_csharp">
+<a href="#effect_csharp" style="color: inherit; text-decoration: inherit;">Effect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Taint effect. Supported values : `"NoExecute" | "NoSchedule" | "PreferNoSchedule"` (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeadded_csharp">
+<a href="#timeadded_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Added</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Taint time added (string)
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Taint key (string)
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Taint value (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="effect_go">
+<a href="#effect_go" style="color: inherit; text-decoration: inherit;">Effect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Taint effect. Supported values : `"NoExecute" | "NoSchedule" | "PreferNoSchedule"` (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeadded_go">
+<a href="#timeadded_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Added</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Taint time added (string)
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Taint key (string)
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Taint value (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="effect_nodejs">
+<a href="#effect_nodejs" style="color: inherit; text-decoration: inherit;">effect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Taint effect. Supported values : `"NoExecute" | "NoSchedule" | "PreferNoSchedule"` (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeadded_nodejs">
+<a href="#timeadded_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Added</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Taint time added (string)
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Taint key (string)
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Taint value (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="effect_python">
+<a href="#effect_python" style="color: inherit; text-decoration: inherit;">effect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Taint effect. Supported values : `"NoExecute" | "NoSchedule" | "PreferNoSchedule"` (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="time_added_python">
+<a href="#time_added_python" style="color: inherit; text-decoration: inherit;">time_<wbr>added</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Taint time added (string)
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="nodetemplateopennebulaconfig">Node<wbr>Template<wbr>Opennebula<wbr>Config</h4>
 
 {{% choosable language csharp %}}
@@ -7611,6 +7877,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="bootfromvolume_csharp">
+<a href="#bootfromvolume_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>From<wbr>Volume</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable booting from volume. Default is `false` (bool)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="cacert_csharp">
 <a href="#cacert_csharp" style="color: inherit; text-decoration: inherit;">Cacert</a>
 </span>
@@ -7859,6 +8135,56 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumedevicepath_csharp">
+<a href="#volumedevicepath_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Device<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OpenStack volume device path (attaching). Applicable only when `boot_from_volume` is `true`. Omit for auto `/dev/vdb`. (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumeid_csharp">
+<a href="#volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OpenStack volume id of existing volume. Applicable only when `boot_from_volume` is `true` (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumename_csharp">
+<a href="#volumename_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OpenStack volume name of existing volume. Applicable only when `boot_from_volume` is `true` (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumesize_csharp">
+<a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OpenStack volume size (GiB). Required when `boot_from_volume` is `true` (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumetype_csharp">
+<a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OpenStack volume type. Required when `boot_from_volume` is `true` and openstack cloud does not have a default volume type (string)
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7934,6 +8260,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack application credential secret (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bootfromvolume_go">
+<a href="#bootfromvolume_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>From<wbr>Volume</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable booting from volume. Default is `false` (bool)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -8185,6 +8521,56 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumedevicepath_go">
+<a href="#volumedevicepath_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Device<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OpenStack volume device path (attaching). Applicable only when `boot_from_volume` is `true`. Omit for auto `/dev/vdb`. (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumeid_go">
+<a href="#volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OpenStack volume id of existing volume. Applicable only when `boot_from_volume` is `true` (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumename_go">
+<a href="#volumename_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OpenStack volume name of existing volume. Applicable only when `boot_from_volume` is `true` (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumesize_go">
+<a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OpenStack volume size (GiB). Required when `boot_from_volume` is `true` (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumetype_go">
+<a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OpenStack volume type. Required when `boot_from_volume` is `true` and openstack cloud does not have a default volume type (string)
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8260,6 +8646,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OpenStack application credential secret (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bootfromvolume_nodejs">
+<a href="#bootfromvolume_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>From<wbr>Volume</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable booting from volume. Default is `false` (bool)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -8511,6 +8907,56 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumedevicepath_nodejs">
+<a href="#volumedevicepath_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Device<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OpenStack volume device path (attaching). Applicable only when `boot_from_volume` is `true`. Omit for auto `/dev/vdb`. (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumeid_nodejs">
+<a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OpenStack volume id of existing volume. Applicable only when `boot_from_volume` is `true` (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumename_nodejs">
+<a href="#volumename_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OpenStack volume name of existing volume. Applicable only when `boot_from_volume` is `true` (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumesize_nodejs">
+<a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OpenStack volume size (GiB). Required when `boot_from_volume` is `true` (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volumetype_nodejs">
+<a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OpenStack volume type. Required when `boot_from_volume` is `true` and openstack cloud does not have a default volume type (string)
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8586,6 +9032,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OpenStack application credential secret (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="boot_from_volume_python">
+<a href="#boot_from_volume_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>from_<wbr>volume</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable booting from volume. Default is `false` (bool)
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -8836,6 +9292,56 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}vSphere username. Mandatory on Rancher v2.0.x and v2.1.x. Use `rancher2.CloudCredential` from Rancher v2.2.x (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volume_device_path_python">
+<a href="#volume_device_path_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>device_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}OpenStack volume device path (attaching). Applicable only when `boot_from_volume` is `true`. Omit for auto `/dev/vdb`. (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volume_id_python">
+<a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}OpenStack volume id of existing volume. Applicable only when `boot_from_volume` is `true` (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volume_name_python">
+<a href="#volume_name_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}OpenStack volume name of existing volume. Applicable only when `boot_from_volume` is `true` (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volume_size_python">
+<a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}OpenStack volume size (GiB). Required when `boot_from_volume` is `true` (string)
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="volume_type_python">
+<a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}OpenStack volume type. Required when `boot_from_volume` is `true` and openstack cloud does not have a default volume type (string)
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
