@@ -13,11 +13,15 @@ meta_desc: "Documentation for the aws.accessanalyzer.Analyzer resource with exam
 Manages an Access Analyzer Analyzer. More information can be found in the [Access Analyzer User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/what-is-access-analyzer.html).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
 ### Account Analyzer
-{{% example csharp %}}
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -35,9 +39,10 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
+{{< /example >}}
 
-{{% example go %}}
+{{< example go >}}
+
 ```go
 package main
 
@@ -59,9 +64,10 @@ func main() {
 }
 ```
 
-{{% /example %}}
+{{< /example >}}
 
-{{% example python %}}
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -69,9 +75,9 @@ import pulumi_aws as aws
 example = aws.accessanalyzer.Analyzer("example", analyzer_name="example")
 ```
 
-{{% /example %}}
+{{< /example >}}
 
-{{% example typescript %}}
+{{< example typescript >}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -82,10 +88,12 @@ const example = new aws.accessanalyzer.Analyzer("example", {
 });
 ```
 
-{{% /example %}}
+{{< /example >}}
 
 ### Organization Analyzer
-{{% example csharp %}}
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -96,7 +104,7 @@ class MyStack : Stack
     {
         var exampleOrganization = new Aws.Organizations.Organization("exampleOrganization", new Aws.Organizations.OrganizationArgs
         {
-            AwsServiceAccessPrincipals = 
+            AwsServiceAccessPrincipals =
             {
                 "access-analyzer.amazonaws.com",
             },
@@ -107,7 +115,7 @@ class MyStack : Stack
             Type = "ORGANIZATION",
         }, new CustomResourceOptions
         {
-            DependsOn = 
+            DependsOn =
             {
                 exampleOrganization,
             },
@@ -117,9 +125,10 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
+{{< /example >}}
 
-{{% example go %}}
+{{< example go >}}
+
 ```go
 package main
 
@@ -153,9 +162,10 @@ func main() {
 }
 ```
 
-{{% /example %}}
+{{< /example >}}
 
-{{% example python %}}
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -167,9 +177,9 @@ example_analyzer = aws.accessanalyzer.Analyzer("exampleAnalyzer",
     opts=pulumi.ResourceOptions(depends_on=[example_organization]))
 ```
 
-{{% /example %}}
+{{< /example >}}
 
-{{% example typescript %}}
+{{< example typescript >}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -184,12 +194,13 @@ const exampleAnalyzer = new aws.accessanalyzer.Analyzer("exampleAnalyzer", {
 });
 ```
 
-{{% /example %}}
+{{< /example >}}
 
 {{% /examples %}}
 
 
 ## Create a Analyzer Resource {#create}
+
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
@@ -212,7 +223,6 @@ const exampleAnalyzer = new aws.accessanalyzer.Analyzer("exampleAnalyzer", {
 {{% choosable language nodejs %}}
 
 <dl class="resources-properties">
-  
     <dt
         class="property-required" title="Required">
         <span>name</span>
@@ -222,7 +232,6 @@ const exampleAnalyzer = new aws.accessanalyzer.Analyzer("exampleAnalyzer", {
     <dd>
       The unique name of the resource.
     </dd>
-  
     <dt
         class="property-required" title="Required">
         <span>args</span>
@@ -232,7 +241,6 @@ const exampleAnalyzer = new aws.accessanalyzer.Analyzer("exampleAnalyzer", {
     <dd>
       The arguments to resource properties.
     </dd>
-  
     <dt
         class="property-optional" title="Optional">
         <span>opts</span>
@@ -242,8 +250,6 @@ const exampleAnalyzer = new aws.accessanalyzer.Analyzer("exampleAnalyzer", {
     <dd>
       Bag of options to control resource&#39;s behavior.
     </dd>
-  
-
 </dl>
 
 {{% /choosable %}}
@@ -271,7 +277,6 @@ const exampleAnalyzer = new aws.accessanalyzer.Analyzer("exampleAnalyzer", {
 {{% choosable language go %}}
 
 <dl class="resources-properties">
-  
     <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
@@ -281,7 +286,6 @@ const exampleAnalyzer = new aws.accessanalyzer.Analyzer("exampleAnalyzer", {
     <dd>
       Context object for the current deployment.
     </dd>
-  
     <dt
         class="property-required" title="Required">
         <span>name</span>
@@ -291,7 +295,6 @@ const exampleAnalyzer = new aws.accessanalyzer.Analyzer("exampleAnalyzer", {
     <dd>
       The unique name of the resource.
     </dd>
-  
     <dt
         class="property-required" title="Required">
         <span>args</span>
@@ -301,7 +304,6 @@ const exampleAnalyzer = new aws.accessanalyzer.Analyzer("exampleAnalyzer", {
     <dd>
       The arguments to resource properties.
     </dd>
-  
     <dt
         class="property-optional" title="Optional">
         <span>opts</span>
@@ -311,8 +313,6 @@ const exampleAnalyzer = new aws.accessanalyzer.Analyzer("exampleAnalyzer", {
     <dd>
       Bag of options to control resource&#39;s behavior.
     </dd>
-  
-
 </dl>
 
 {{% /choosable %}}
@@ -320,7 +320,6 @@ const exampleAnalyzer = new aws.accessanalyzer.Analyzer("exampleAnalyzer", {
 {{% choosable language csharp %}}
 
 <dl class="resources-properties">
-  
     <dt
         class="property-required" title="Required">
         <span>name</span>
@@ -330,7 +329,6 @@ const exampleAnalyzer = new aws.accessanalyzer.Analyzer("exampleAnalyzer", {
     <dd>
       The unique name of the resource.
     </dd>
-  
     <dt
         class="property-required" title="Required">
         <span>args</span>
@@ -340,7 +338,6 @@ const exampleAnalyzer = new aws.accessanalyzer.Analyzer("exampleAnalyzer", {
     <dd>
       The arguments to resource properties.
     </dd>
-  
     <dt
         class="property-optional" title="Optional">
         <span>opts</span>
@@ -350,8 +347,6 @@ const exampleAnalyzer = new aws.accessanalyzer.Analyzer("exampleAnalyzer", {
     <dd>
       Bag of options to control resource&#39;s behavior.
     </dd>
-  
-
 </dl>
 
 {{% /choosable %}}
@@ -368,7 +363,6 @@ The Analyzer resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="analyzername_csharp">
@@ -404,7 +398,6 @@ The Analyzer resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="analyzername_go">
@@ -440,7 +433,6 @@ The Analyzer resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="analyzername_nodejs">
@@ -476,7 +468,6 @@ The Analyzer resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="analyzer_name_python">
@@ -519,7 +510,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_csharp">
@@ -543,7 +533,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_go">
@@ -567,7 +556,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_nodejs">
@@ -591,7 +579,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_python">
@@ -738,7 +725,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_analyzername_csharp">
@@ -783,7 +769,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_analyzername_go">
@@ -828,7 +813,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_analyzername_nodejs">
@@ -873,7 +857,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_analyzer_name_python">
@@ -917,9 +900,6 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 
-
-
-
 ## Import
 
 
@@ -941,4 +921,3 @@ Access Analyzer Analyzers can be imported using the `analyzer_name`, e.g.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
-
