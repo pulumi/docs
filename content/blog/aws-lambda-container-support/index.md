@@ -23,7 +23,7 @@ Today, AWS announced that AWS Lambda now supports packaging serverless functions
 
 <div class="bg-purple-100 text-sm rounded-lg py-1 px-4">
 
-**AWS Lambda Containers QuickStart**
+#### AWS Lambda Containers QuickStart
 
 Ready to get up and running quickly right away?
 

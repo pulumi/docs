@@ -21,7 +21,7 @@ The alternative is to use an infrastructure as code tool to automate building an
 
 <div class="bg-purple-100 text-sm rounded-lg py-1 px-4">
 
-**Azure Synapse Quick Start**
+##### Azure Synapse Quick Start
 
 Ready to get up and running quickly right away?
 
