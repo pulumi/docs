@@ -13,7 +13,7 @@ In this tutorial, we'll show you how to write a Pulumi program that creates a se
 
 ### Step 1: Create a new project from a template
 
-Create a project directory, `ahoy-pulumi`, and change into it. Run [`pulumi new aws-javascript --name myproject`]({{< relref "/docs/reference/cli/pulumi_new" >}}) to create a new project using the AWS template for JavaScript. Replace `myproject` with your desired project name.
+Create a project directory, `ahoy-pulumi`, and change into it. Run [`pulumi new hello-aws-javascript --name myproject`]({{< relref "/docs/reference/cli/pulumi_new" >}}) to create a new project using the AWS template for JavaScript. Replace `myproject` with your desired project name.
 
 ```bash
 $ mkdir ahoy-pulumi && cd ahoy-pulumi
