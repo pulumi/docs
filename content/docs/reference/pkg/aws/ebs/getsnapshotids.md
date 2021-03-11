@@ -20,105 +20,15 @@ criteria.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var ebsVolumes = Output.Create(Aws.Ebs.GetSnapshotIds.InvokeAsync(new Aws.Ebs.GetSnapshotIdsArgs
-        {
-            Filters = 
-            {
-                new Aws.Ebs.Inputs.GetSnapshotIdsFilterArgs
-                {
-                    Name = "volume-size",
-                    Values = 
-                    {
-                        "40",
-                    },
-                },
-                new Aws.Ebs.Inputs.GetSnapshotIdsFilterArgs
-                {
-                    Name = "tag:Name",
-                    Values = 
-                    {
-                        "Example",
-                    },
-                },
-            },
-            Owners = 
-            {
-                "self",
-            },
-        }));
-    }
-
-}
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ebs"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := ebs.GetSnapshotIds(ctx, &ebs.GetSnapshotIdsArgs{
-			Filters: []ebs.GetSnapshotIdsFilter{
-				ebs.GetSnapshotIdsFilter{
-					Name: "volume-size",
-					Values: []string{
-						"40",
-					},
-				},
-				ebs.GetSnapshotIdsFilter{
-					Name: "tag:Name",
-					Values: []string{
-						"Example",
-					},
-				},
-			},
-			Owners: []string{
-				"self",
-			},
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-ebs_volumes = aws.ebs.get_snapshot_ids(filters=[
-        aws.ebs.GetSnapshotIdsFilterArgs(
-            name="volume-size",
-            values=["40"],
-        ),
-        aws.ebs.GetSnapshotIdsFilterArgs(
-            name="tag:Name",
-            values=["Example"],
-        ),
-    ],
-    owners=["self"])
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example typescript %}}

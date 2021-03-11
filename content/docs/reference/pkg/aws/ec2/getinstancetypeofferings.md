@@ -19,106 +19,15 @@ Information about EC2 Instance Type Offerings.
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% example csharp %}}
-```csharp
-using Pulumi;
-using Aws = Pulumi.Aws;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-        var example = Output.Create(Aws.Ec2.GetInstanceTypeOfferings.InvokeAsync(new Aws.Ec2.GetInstanceTypeOfferingsArgs
-        {
-            Filters = 
-            {
-                new Aws.Ec2.Inputs.GetInstanceTypeOfferingsFilterArgs
-                {
-                    Name = "instance-type",
-                    Values = 
-                    {
-                        "t2.micro",
-                        "t3.micro",
-                    },
-                },
-                new Aws.Ec2.Inputs.GetInstanceTypeOfferingsFilterArgs
-                {
-                    Name = "location",
-                    Values = 
-                    {
-                        "usw2-az4",
-                    },
-                },
-            },
-            LocationType = "availability-zone-id",
-        }));
-    }
-
-}
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		opt0 := "availability-zone-id"
-		_, err := ec2.GetInstanceTypeOfferings(ctx, &ec2.GetInstanceTypeOfferingsArgs{
-			Filters: []ec2.GetInstanceTypeOfferingsFilter{
-				ec2.GetInstanceTypeOfferingsFilter{
-					Name: "instance-type",
-					Values: []string{
-						"t2.micro",
-						"t3.micro",
-					},
-				},
-				ec2.GetInstanceTypeOfferingsFilter{
-					Name: "location",
-					Values: []string{
-						"usw2-az4",
-					},
-				},
-			},
-			LocationType: &opt0,
-		}, nil)
-		if err != nil {
-			return err
-		}
-		return nil
-	})
-}
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example python %}}
-```python
-import pulumi
-import pulumi_aws as aws
-
-example = aws.ec2.get_instance_type_offerings(filters=[
-        aws.ec2.GetInstanceTypeOfferingsFilterArgs(
-            name="instance-type",
-            values=[
-                "t2.micro",
-                "t3.micro",
-            ],
-        ),
-        aws.ec2.GetInstanceTypeOfferingsFilterArgs(
-            name="location",
-            values=["usw2-az4"],
-        ),
-    ],
-    location_type="availability-zone-id")
-```
-
+Coming soon!
 {{% /example %}}
 
 {{% example typescript %}}
