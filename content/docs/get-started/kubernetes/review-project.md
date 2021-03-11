@@ -19,7 +19,7 @@ Let's review some of the generated project files:
 
 {{% choosable language csharp %}}
 
-- `Program.cs` with a simple entry point.
+- `Program.cs` with a simple entry point, yo.
 
 {{% /choosable %}}
 
