@@ -35,7 +35,7 @@ contact:
     title: Application Process
     description: |
         Submit the application form on this page. You can expect an initial response within
-        2-5 business days, at which time we may ask you to provide some additional information
+        2 - 5 business days, at which time we may ask you to provide some additional information
         about your company or project.
 
         If your application is accepted, we will work with you to enroll your account into the Free
