@@ -21,7 +21,7 @@ See the [full API documentation]({{< relref "/docs/reference/pkg/random" >}}) fo
 ```javascript
 const random = require("@pulumi/random")
 
-const username = new random.Pet("my-user-name");
+const username = new random.RandomPet("my-user-name");
 ```
 
 {{% /choosable %}}
@@ -30,7 +30,7 @@ const username = new random.Pet("my-user-name");
 ```typescript
 import * as random from "@pulumi/random";
 
-const username = new random.Pet("my-user-name");
+const username = new random.RandomPet("my-user-name");
 ```
 
 {{% /choosable %}}
@@ -39,7 +39,7 @@ const username = new random.Pet("my-user-name");
 ```python
 import pulumi_random as random
 
-username = random.Pet("my-user-name")
+username = random.RandomPet("my-user-name")
 ```
 
 {{% /choosable %}}
@@ -53,7 +53,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		username, err := random.NewPet(ctx, "my-user-name", &random.PetArgs{})
+		username, err := random.NewRandomPet(ctx, "my-user-name", &random.RandomPetArgs{})
 		if err != nil {
 			return err
 		}
@@ -77,7 +77,7 @@ class Program
 {
     static Task Main() =>
         Deployment.Run(() => {
-            var username = new Pet("my-user-name", new PetArgs{});
+            var username = new RandomPet("my-user-name", new RandomPetArgs{});
         });
 }
 ```
