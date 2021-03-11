@@ -53,7 +53,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		username, err := random.NewPet(ctx, "my-user-name", &random.PetArgs{})
+		username, err := random.NewRandomPet(ctx, "my-user-name", &random.RandomPetArgs{})
 		if err != nil {
 			return err
 		}
