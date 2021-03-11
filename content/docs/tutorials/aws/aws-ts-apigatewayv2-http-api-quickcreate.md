@@ -12,14 +12,13 @@ no_edit_this_page: true
     <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/aws-ts-apigatewayv2-http-api-quickcreate" target="_blank">
         <span><i class="fab fa-github pr-2"></i> View Code</span>
     </a>
-
     <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/aws-ts-apigatewayv2-http-api-quickcreate" target="_blank">
         <img src="https://get.pulumi.com/new/button.svg" alt="Deploy">
     </a>
 </p>
 
 
-Set up a simple HTTP API using AWS API Gateway V2 
+Set up a simple HTTP API using AWS API Gateway V2
 
 ## Deploying and running the program
 
@@ -85,4 +84,3 @@ with `***`.
 1.  Run `pulumi destroy` to tear down all resources.
 
 1.  To delete the stack itself, run `pulumi stack rm`. Note that this command deletes all deployment history from the Pulumi Console.
-
