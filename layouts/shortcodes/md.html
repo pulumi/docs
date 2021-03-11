@@ -1,9 +1,0 @@
-{{/*
-    This shortcode is used to render markdown inside HTML tags, which Blackfriday,
-    the markdown processor that Hugo uses, doesn't currently support.
-    We specify version = 1 so that `.Inner` is rendered as markdown consistently,
-    whether it ends up being within HTML tags or not.
-    See https://gohugo.io/content-management/shortcodes/#shortcodes-with-markdown.
-*/}}
-{{- $_hugo_config := `{ "version": 1 }` -}}
-{{- .Inner -}}
