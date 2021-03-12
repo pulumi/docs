@@ -296,7 +296,7 @@ workloads.
 
 {{% choosable cloud aws %}}
 
-{{% choosable k8s-language yaml %}}
+{{< choosable k8s-language yaml >}}
 
 ```yaml
 cat > restrictive-psp.yaml << EOF
@@ -389,9 +389,9 @@ EOF
 $ kubectl apply -f restrictive-psp.yaml
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable k8s-language typescript %}}
+{{< choosable k8s-language typescript >}}
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -482,13 +482,13 @@ const allowRestrictedAppsCRB = new k8s.rbac.v1.ClusterRoleBinding("allow-restric
 });
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
 {{% /choosable %}}
 
 {{% choosable cloud azure %}}
 
-{{% choosable k8s-language yaml %}}
+{{< choosable k8s-language yaml >}}
 
 ```yaml
 cat > restrictive-psp.yaml << EOF
@@ -581,9 +581,9 @@ EOF
 $ kubectl apply -f restrictive-psp.yaml
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable k8s-language typescript %}}
+{{< choosable k8s-language typescript >}}
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -674,13 +674,13 @@ const allowRestrictedAppsCRB = new k8s.rbac.v1.ClusterRoleBinding("allow-restric
 });
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
 {{% /choosable %}}
 
 {{% choosable cloud gcp %}}
 
-{{% choosable k8s-language yaml %}}
+{{< choosable k8s-language yaml >}}
 
 ```yaml
 cat > restrictive-psp.yaml << EOF
@@ -773,9 +773,9 @@ EOF
 $ kubectl apply -f restrictive-psp.yaml
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable k8s-language typescript %}}
+{{< choosable k8s-language typescript >}}
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -869,7 +869,7 @@ const allowRestrictedAppsCRB = pulumi.all([
 });
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
 {{% /choosable %}}
 
@@ -883,7 +883,7 @@ a given Namespace's (`ingress-nginx`) ServiceAccounts.
 
 {{% choosable k8s-language yaml %}}
 
-{{% choosable cloud aws %}}
+{{< choosable cloud aws >}}
 
 ```yaml
 cat > privileged-clusterrolebinding.yaml << EOF
@@ -906,9 +906,9 @@ EOF
 $ kubectl apply -f privileged-rolebinding.yaml
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable cloud azure %}}
+{{< choosable cloud azure >}}
 
 ```yaml
 cat > privileged-clusterrolebinding.yaml << EOF
@@ -931,9 +931,9 @@ EOF
 $ kubectl apply -f privileged-rolebinding.yaml
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable cloud gcp %}}
+{{< choosable cloud gcp >}}
 
 ```yaml
 cat > privileged-clusterrolebinding.yaml << EOF
@@ -956,13 +956,13 @@ EOF
 $ kubectl apply -f privileged-rolebinding.yaml
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
 {{% /choosable %}}
 
 {{% choosable k8s-language typescript %}}
 
-{{% choosable cloud aws %}}
+{{< choosable cloud aws >}}
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -984,9 +984,9 @@ const privilegedCRB = new k8s.rbac.v1.ClusterRoleBinding("privileged", {
 });
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable cloud azure %}}
+{{< choosable cloud azure >}}
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -1008,9 +1008,9 @@ const privilegedCRB = new k8s.rbac.v1.ClusterRoleBinding("privileged", {
 });
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable cloud gcp %}}
+{{< choosable cloud gcp >}}
 
 ```ts
 import * as k8s from "@pulumi/kubernetes";
@@ -1034,6 +1034,6 @@ const privilegedCRB = new k8s.rbac.v1.ClusterRoleBinding("privileged", {
 });
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
 {{% /choosable %}}
