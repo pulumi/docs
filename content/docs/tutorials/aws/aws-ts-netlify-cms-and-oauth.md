@@ -12,7 +12,6 @@ no_edit_this_page: true
     <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/aws-ts-netlify-cms-and-oauth" target="_blank">
         <span><i class="fab fa-github pr-2"></i> View Code</span>
     </a>
-
 </p>
 
 Netlify CMS web apps and all the templates they have given on [Netlify CMS website](https://www.netlifycms.org/docs/start-with-a-template/) deployed on Netlify and lies inside the target repositories user would like to make change. However, in some case, we do not want the implementation detail of the CMS to locate in the target repositories and we want to deploy it on AWS instead of Netlify. This example shows how to do this.
