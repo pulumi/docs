@@ -367,7 +367,7 @@ We can then see Pulumi will generate all of the resource code for us as follows:
 
 {{< chooser language "typescript,python,csharp,go" >}}
 
-{{< choosable language typescript >}}
+{{% choosable language typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -418,8 +418,8 @@ const private_1 = new aws.ec2.Subnet("private-1", {
 });
 ```
 
-{{< /choosable >}}
-{{< choosable language python >}}
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 import pulumi
@@ -464,8 +464,8 @@ private_1 = aws.ec2.Subnet("private-1",
     opts=ResourceOptions(protect=True))
 ```
 
-{{< /choosable >}}
-{{< choosable language go >}}
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 package main
@@ -528,8 +528,8 @@ func main() {
 }
 ```
 
-{{< /choosable >}}
-{{< choosable language csharp >}}
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using Pulumi;
@@ -596,8 +596,8 @@ class MyStack : Stack
 }
 ```
 
-{{< /choosable >}}
-{{< /chooser >}}
+{{% /choosable %}}
+{{% /chooser %}}
 
 Check out the video clip below for a demo.
 
