@@ -30,18 +30,18 @@ In this tutorial, we'll use Python to deploy an instance of Azure Kubernetes Ser
 
     This installs the dependent packages [needed]({{< relref "/docs/intro/concepts/how-pulumi-works" >}}) for our Pulumi program.
 
-	```bash
-	$ pip install pulumi pulumi_azure pulumi_kubernetes
-	```
+    ```bash
+    $ pip install pulumi pulumi_azure pulumi_kubernetes
+    ```
 
 1. Configure the Pulumi settings for the project:
 
-	```bash
+    ```bash
     pulumi config set azure-py-aks:prefix <YOUR_PREFIX>
     pulumi config set --secret azure-py-aks:password <YOUR_NEW_CLUSTER_PRINCIPAL_PASSWORD>
     cat $HOME/.ssh/id_rsa.pub | pulumi config set azure-py-aks:sshkey
     pulumi config set azure-py-aks:location <YOUR_AZURE_LOCATION>
-	```
+    ```
 
 1. Open the existing file `__main__.py`, and replace the contents with the following:
 
