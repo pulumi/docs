@@ -26,7 +26,7 @@ requirements:
     title: Requirements
     description: |
         **Not seeking profit** --- Your project must be part of an open source foundation that does
-        not seek to make a profit through any means. The organization must be a valid `501(c)(3)`
+        not seek to make a profit through any means. The organization must be a valid 501&lpar;c&rpar;
         organization with an Employer Identification Number (EIN).
 
         **OSI-approved open source license** --- Your project must be published under an [OSI-approved](https://opensource.org/licenses) open source license.
