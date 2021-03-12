@@ -3,7 +3,7 @@ title: Deploy Kubernetes Cluster Services
 meta_desc: This page will provide an overview on how to deploy Kubernetes Cluster Services.
 no_on_this_page: true
 menu:
-  userguides
+  userguides:
     parent: crosswalk-kubernetes
     identifier: crosswalk-kubernetes-cluster-svcs
     weight: 7
