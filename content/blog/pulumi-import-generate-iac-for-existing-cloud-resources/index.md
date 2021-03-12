@@ -54,7 +54,7 @@ TypeScript application:
 
 {{< chooser language "typescript,python,csharp,go" >}}
 
-{{< choosable language typescript >}}
+{{% choosable language typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -69,8 +69,8 @@ const demo = new aws.s3.Bucket("infra-logs", {
 });
 ```
 
-{{< /choosable >}}
-{{< choosable language python >}}
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 import pulumi
@@ -83,8 +83,8 @@ demo = aws.s3.Bucket("infra-logs",
     opts=ResourceOptions(protect=True))
 ```
 
-{{< /choosable >}}
-{{< choosable language go >}}
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 package main
@@ -109,8 +109,8 @@ func main() {
 }
 ```
 
-{{< /choosable >}}
-{{< choosable language csharp >}}
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using Pulumi;
@@ -134,8 +134,8 @@ class MyStack : Stack
 }
 ```
 
-{{< /choosable >}}
-{{< /chooser >}}
+{{% /choosable %}}
+{{% /chooser %}}
 
 This is valid Pulumi application code and can be added to your Pulumi application. Notice that the Pulumi resource is
 marked as `protect: true`. This means Pulumi will not delete that resource unless this protection attribute is removed
@@ -189,7 +189,7 @@ We can see the resultant code generation:
 
 {{< chooser language "typescript,python,csharp,go" >}}
 
-{{< choosable language typescript >}}
+{{% choosable language typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -240,8 +240,8 @@ const private_1 = new aws.ec2.Subnet("private-1", {
 });
 ```
 
-{{< /choosable >}}
-{{< choosable language python >}}
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 import pulumi
@@ -286,8 +286,8 @@ private_1 = aws.ec2.Subnet("private-1",
     opts=ResourceOptions(protect=True))
 ```
 
-{{< /choosable >}}
-{{< choosable language go >}}
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 package main
@@ -350,8 +350,8 @@ func main() {
 }
 ```
 
-{{< /choosable >}}
-{{< choosable language csharp >}}
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using Pulumi;
@@ -418,7 +418,7 @@ class MyStack : Stack
 }
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 {{< /chooser >}}
 
 Check out the video clip below for a demo.

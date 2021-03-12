@@ -109,7 +109,7 @@ $ git pull origin master
 {{% choosable language python %}}
 
 ```bash
-$cd hugo
+$ cd hugo
 $ mkdir aws-website
 $ cd aws-website
 
@@ -194,34 +194,34 @@ $ pip3 install -r requirements.txt
 
 1. Run `pulumi up` to preview and deploy changes.  After the preview is displayed, you will be prompted if you want to continue and deploy the website. When all the resources have been created, you will see a listing of the resources similar to this:
 
-```bash
-Updating (website-testing):
-     Type                              Name                                               Status
- +   pulumi:pulumi:Stack               static-website-website-testing                     created
- +   ├─ pulumi:providers:aws           east                                               created
- +   ├─ aws:acm:Certificate            certificate                                        created
- +   ├─ aws:s3:Bucket                  contentBucket                                      created
- +   │  ├─ aws:s3:BucketObject         posts/page/1/index.html                            created
- ...
- +   ├─ aws:s3:Bucket                  requestLogs                                        created
- +   ├─ aws:route53:Record             www.sophiaparafina.com-validation                  created
- +   ├─ aws:acm:CertificateValidation  certificateValidation                              created
- +   ├─ aws:cloudfront:Distribution    cdn                                                created
- +   └─ aws:route53:Record             www.sophiaparafina.com                             created
+    ```bash
+    Updating (website-testing):
+        Type                              Name                                               Status
+    +   pulumi:pulumi:Stack               static-website-website-testing                     created
+    +   ├─ pulumi:providers:aws           east                                               created
+    +   ├─ aws:acm:Certificate            certificate                                        created
+    +   ├─ aws:s3:Bucket                  contentBucket                                      created
+    +   │  ├─ aws:s3:BucketObject         posts/page/1/index.html                            created
+    ...
+    +   ├─ aws:s3:Bucket                  requestLogs                                        created
+    +   ├─ aws:route53:Record             www.sophiaparafina.com-validation                  created
+    +   ├─ aws:acm:CertificateValidation  certificateValidation                              created
+    +   ├─ aws:cloudfront:Distribution    cdn                                                created
+    +   └─ aws:route53:Record             www.sophiaparafina.com                             created
 
-Outputs:
-    cloudfront_domain              : "d1l27ffvw5kc32.cloudfront.net"
-    content_bucket_url             : "s3://www.your_domain.com"
-    content_bucket_website_endpoint: "www.your_domain.com.s3-website-us-west-2.amazonaws.com"
-    target_domain_endpoint         : "https://www.your_domain.com/"
+    Outputs:
+        cloudfront_domain              : "d1l27ffvw5kc32.cloudfront.net"
+        content_bucket_url             : "s3://www.your_domain.com"
+        content_bucket_website_endpoint: "www.your_domain.com.s3-website-us-west-2.amazonaws.com"
+        target_domain_endpoint         : "https://www.your_domain.com/"
 
-Resources:
-    + 27 created
+    Resources:
+        + 27 created
 
-Duration: 4m15s
+    Duration: 4m15s
 
-Permalink: https://app.pulumi.com/spara/static-website/website-testing/updates/12
-```
+    Permalink: https://app.pulumi.com/spara/static-website/website-testing/updates/12
+    ```
 
 The website has been deployed, and you can browse it with your domain URL. Since this is a test deployment, don't forget to shut down and delete the cloud resources by running `pulumi destroy`.
 

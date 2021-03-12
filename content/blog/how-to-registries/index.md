@@ -26,7 +26,7 @@ Let’s examine how to create a registry with the provider of your choice. In th
 Choose your cloud provider to learn how to build a registry.
 
 {{< chooser cloud "aws,azure,gcp" >}}
-{{< choosable cloud aws >}}
+{{% choosable cloud aws %}}
 
 In this example, we create an ECR repository configured to scan an image’s Operating System components. Scanning for vulnerabilities in an application is currently [out of scope](https://aws.amazon.com/blogs/containers/amazon-ecr-native-container-image-scanning/). We also set a policy for the repository that controls the actions allowed and a lifecycle policy that expires an image after a set time.
 
@@ -115,8 +115,8 @@ export const credentials = repoCreds;
 export const repoEndpoint = repo.repositoryUrl;
 ```
 
-{{< /choosable >}}
-{{< choosable cloud azure >}}
+{{% /choosable %}}
+{{% choosable cloud azure %}}
 
 In this example, we create an [Azure Resource Group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal#what-is-a-resource-group) to contain the resources for the registry, such as the [App Service](https://docs.microsoft.com/en-us/azure/app-service/) that hosts the registry.
 
@@ -164,8 +164,8 @@ export const username = repo.adminUsername;
 export const password = repo.adminPassword;
 ```
 
-{{< /choosable >}}
-{{< choosable cloud gcp >}}
+{{% /choosable %}}
+{{% choosable cloud gcp %}}
 
 In this example, we’ll use the configuration and credentials from the gcloud CLI to build an image and push it into the GCP registry. Make sure the GCP project is set and you are logged into GCP and Docker is configured to use the GCR,
 
@@ -197,7 +197,7 @@ const myImage = new docker.Image(imageName, {
 export const repoEndpoint = pulumi.interpolate`gcr.io/${gcp.config.project}`;
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 {{< /chooser >}}
 
 ## Learn more
