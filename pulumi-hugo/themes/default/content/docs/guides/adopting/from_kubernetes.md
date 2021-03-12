@@ -365,7 +365,7 @@ Before using the Helm support, you will need to [install the Helm CLI](https://h
 Next, unless you're deploying a Chart directly from a URL or from your filesystem, you will need to [configure a repo to pull from](https://helm.sh/docs/intro/quickstart/#initialize-a-helm-chart-repository). The `stable` repo is a popular starting point:
 
 ```bash
-$ helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+$ helm repo add stable https://charts.helm.sh/stable
 ```
 
 ### Provisioning a Helm Chart

@@ -658,7 +658,7 @@ const chart = new k8s.helm.v3.Chart("empty", {
     chart: "raw",
     version: "0.1.0",
     fetchOpts: {
-        repo: "https://kubernetes-charts-incubator.storage.googleapis.com/",
+        repo: "https://charts.helm.sh/incubator",
     },
 });
 ```
@@ -667,7 +667,7 @@ Or, we can use a tarball fetched from a web URL:
 
 ```typescript
 const chart = new k8s.helm.v3.Chart("empty1", {
-    chart: "https://kubernetes-charts-incubator.storage.googleapis.com/raw-0.1.0.tgz",
+    chart: "https://charts.helm.sh/incubatorraw-0.1.0.tgz",
 });
 ```
 

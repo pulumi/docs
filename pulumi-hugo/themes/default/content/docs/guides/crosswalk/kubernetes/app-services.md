@@ -413,7 +413,7 @@ const nginx = new k8s.helm.v3.Chart("nginx",
         namespace: config.appSvcsNamespaceName,
         chart: "nginx-ingress",
         version: "1.24.4",
-        fetchOpts: {repo: "https://kubernetes-charts.storage.googleapis.com/"},
+        fetchOpts: {repo: "https://charts.helm.sh/stable/"},
         values: {controller: {publishService: {enabled: true}}},
         transformations: [
             (obj: any) => {

@@ -63,7 +63,7 @@ const nginx = new k8s.helm.v2.Chart("nginx-ingress",
         namespace: namespace.metadata.name,
         chart: "nginx-ingress",
         version: "1.33.5",
-        fetchOpts: { repo: "https://kubernetes-charts.storage.googleapis.com/" },
+        fetchOpts: { repo: "https://charts.helm.sh/stable/" },
         values: {
             controller: {
                 replicaCount: 1,
@@ -126,7 +126,7 @@ chart = helm.Chart(
     chart="nginx-ingress",
     version="1.33.5",
     fetch_opts=k8s.helm.v3.FetchOpts(
-        repo="https://kubernetes-charts.storage.googleapis.com/"
+        repo="https://charts.helm.sh/stable/"
     ),
     values={
         "controller": {
@@ -203,7 +203,7 @@ func main() {
 			Version:   pulumi.String("1.33.5"),
 			Namespace: ns.Metadata.Name().Elem(),
 			FetchArgs: &helm.FetchArgs{
-				Repo: pulumi.String("https://kubernetes-charts.storage.googleapis.com/"),
+				Repo: pulumi.String("https://charts.helm.sh/stable/"),
 			},
 			Values: pulumi.Map{
 				"controller": pulumi.Map{

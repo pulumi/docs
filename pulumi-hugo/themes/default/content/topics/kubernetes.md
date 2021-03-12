@@ -49,7 +49,7 @@ kubernetes_overview:
                     chart: "nginx-ingress",
                     namespace: devNamespace.metadata.name,
                     fetchOpts:{
-                        repo: "https://kubernetes-charts.storage.googleapis.com/",
+                        repo: "https://charts.helm.sh/stable/",
                     },
                 });
             - title: __main__.py
@@ -71,7 +71,7 @@ kubernetes_overview:
                         chart="nginx-ingress",
                         namespace=dev_namespace.metadata["name"],
                         fetch_opts=kubernetes.helm.v3.FetchOpts(
-                            repo="https://kubernetes-charts.storage.googleapis.com/",
+                            repo="https://charts.helm.sh/stable/",
                         ),
                     ),
                 )
@@ -107,7 +107,7 @@ kubernetes_overview:
                                     return *metadata.(*metav1.ObjectMeta).Name
                                 }).(pulumi.StringOutput),
                                 FetchArgs: helm.FetchArgs{
-                                    Repo: pulumi.String("https://kubernetes-charts.storage.googleapis.com/"),
+                                    Repo: pulumi.String("https://charts.helm.sh/stable/"),
                                 },
                             })
                             if err != nil {
@@ -143,7 +143,7 @@ kubernetes_overview:
                             Namespace = devNamespace.Metadata.Apply(x => x.Name),
                             FetchOptions = new Kubernetes.Helm.ChartFetchArgs
                             {
-                                Repo = "https://kubernetes-charts.storage.googleapis.com/"
+                                Repo = "https://charts.helm.sh/stable/"
                             },
                         });
                     }
