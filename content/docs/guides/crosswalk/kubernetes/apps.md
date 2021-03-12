@@ -80,7 +80,7 @@ The full code for this app stack is on [GitHub][gh-aws-deploy-stack].
 
 {{< chooser k8s-language "typescript,typescript-kx" >}}
 
-{{% choosable k8s-language typescript %}}
+{{< choosable k8s-language typescript >}}
 
 ```ts
 import * as awsx from "@pulumi/awsx";
@@ -120,9 +120,9 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
 }, { provider: provider });
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable k8s-language typescript-kx %}}
+{{< choosable k8s-language typescript-kx >}}
 
 ```ts
 import * as awsx from "@pulumi/awsx";
@@ -157,7 +157,7 @@ const appDeploymentKx = new kx.Deployment("app-kx", {
 }, { provider: provider });
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
 {{< /chooser >}}
 
@@ -173,7 +173,7 @@ The full code for this app stack is on [GitHub][gh-azure-deploy-stack].
 
 {{< chooser k8s-language "typescript,typescript-kx" >}}
 
-{{% choosable k8s-language typescript %}}
+{{< choosable k8s-language typescript >}}
 
 ```ts
 import * as azure from "@pulumi/azure";
@@ -232,9 +232,9 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
 }, { provider: provider });
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable k8s-language typescript-kx %}}
+{{< choosable k8s-language typescript-kx >}}
 
 ```ts
 import * as azure from "@pulumi/azure";
@@ -288,7 +288,7 @@ const appDeploymentKx = new kx.Deployment("app-kx", {
 }, { provider: provider });
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
 {{< /chooser >}}
 
@@ -304,7 +304,7 @@ The full code for this app stack is on [GitHub][gh-gcp-deploy-stack].
 
 {{< chooser k8s-language "typescript,typescript-kx" >}}
 
-{{% choosable k8s-language typescript %}}
+{{< choosable k8s-language typescript >}}
 
 ```ts
 import * as docker from "@pulumi/docker";
@@ -351,9 +351,9 @@ const appDeployment = new k8s.apps.v1.Deployment("app", {
 }, { provider: provider });
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable k8s-language typescript-kx %}}
+{{< choosable k8s-language typescript-kx >}}
 
 ```ts
 import * as docker from "@pulumi/docker";
@@ -395,7 +395,7 @@ const appDeploymentKx = new kx.Deployment("app-kx", {
 }, { provider: provider });
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
 {{< /chooser >}}
 
