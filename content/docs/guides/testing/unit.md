@@ -955,22 +955,30 @@ All the tests passed!
 ## Full Example
 
 {{% choosable language "typescript" %}}
+
 The full code for this guide is available in the examples repository: [Unit Tests in TypeScript](https://github.com/pulumi/examples/tree/74db62a03d013c2854d2cf933c074ea0a3bbf69d/testing-unit-ts).
 
 &nbsp;
 {{% /choosable %}}
+
 {{% choosable language "python" %}}
+
 The full code for this guide is available in the examples repository: [Unit Tests in Python](https://github.com/pulumi/examples/tree/74db62a03d013c2854d2cf933c074ea0a3bbf69d/testing-unit-py).
 
 &nbsp;
 {{% /choosable %}}
+
 {{% choosable language "go" %}}
+
 The full code for this guide is available in the examples repository: [Unit Tests in Go](https://github.com/pulumi/examples/tree/74db62a03d013c2854d2cf933c074ea0a3bbf69d/testing-unit-go).
 
 &nbsp;
 {{% /choosable %}}
+
 {{% choosable language "csharp" %}}
+
 The full code for this guide is available in the examples repository: [Unit Tests in C#](https://github.com/pulumi/examples/tree/74db62a03d013c2854d2cf933c074ea0a3bbf69d/testing-unit-cs).
 
 &nbsp;
+
 {{% /choosable %}}
