@@ -17,11 +17,17 @@ for Elasticsearch service.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aiven = Pulumi.Aiven;
@@ -40,9 +46,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -65,9 +74,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aiven as aiven
@@ -76,9 +88,12 @@ es_acls = aiven.get_elastic_search_acl(project=aiven_project["es-project"]["proj
     service_name=aiven_service["es"]["service_name"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -90,9 +105,16 @@ const es-acls = aiven.getElasticSearchAcl({
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getElasticSearchAcl {#using}
@@ -131,7 +153,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_csharp">
@@ -188,7 +209,6 @@ these APIs as long as all operations only target indexes they have been granted 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_go">
@@ -245,7 +265,6 @@ these APIs as long as all operations only target indexes they have been granted 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_nodejs">
@@ -302,7 +321,6 @@ these APIs as long as all operations only target indexes they have been granted 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_python">
@@ -368,7 +386,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -433,7 +450,6 @@ these APIs as long as all operations only target indexes they have been granted 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -498,7 +514,6 @@ these APIs as long as all operations only target indexes they have been granted 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -563,7 +578,6 @@ these APIs as long as all operations only target indexes they have been granted 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -638,7 +652,6 @@ these APIs as long as all operations only target indexes they have been granted 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="rules_csharp">
@@ -662,7 +675,6 @@ these APIs as long as all operations only target indexes they have been granted 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="rules_go">
@@ -686,7 +698,6 @@ these APIs as long as all operations only target indexes they have been granted 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="rules_nodejs">
@@ -710,7 +721,6 @@ these APIs as long as all operations only target indexes they have been granted 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="rules_python">
@@ -738,7 +748,6 @@ these APIs as long as all operations only target indexes they have been granted 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="index_csharp">
@@ -762,7 +771,6 @@ these APIs as long as all operations only target indexes they have been granted 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="index_go">
@@ -786,7 +794,6 @@ these APIs as long as all operations only target indexes they have been granted 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="index_nodejs">
@@ -810,7 +817,6 @@ these APIs as long as all operations only target indexes they have been granted 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="index_python">

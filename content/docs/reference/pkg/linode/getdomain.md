@@ -45,11 +45,17 @@ The Linode Domain resource exports the following attributes:
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Linode = Pulumi.Linode;
@@ -71,9 +77,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -103,9 +112,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_linode as linode
@@ -114,9 +126,12 @@ foo = linode.get_domain(id="1234567")
 bar = linode.get_domain(domain="bar.example.com")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -130,9 +145,16 @@ const bar = pulumi.output(linode.getDomain({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getDomain {#using}
@@ -171,7 +193,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="domain_csharp">
@@ -197,7 +218,6 @@ The following arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="domain_go">
@@ -223,7 +243,6 @@ The following arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="domain_nodejs">
@@ -249,7 +268,6 @@ The following arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="domain_python">
@@ -284,7 +302,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="axfrips_csharp">
@@ -416,7 +433,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="axfrips_go">
@@ -548,7 +564,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="axfrips_nodejs">
@@ -680,7 +695,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="axfr_ips_python">

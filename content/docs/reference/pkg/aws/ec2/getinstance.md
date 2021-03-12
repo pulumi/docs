@@ -15,23 +15,38 @@ resources.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
 
-{{% example typescript %}}
+
+{{< example csharp >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -52,9 +67,16 @@ const foo = pulumi.output(aws.ec2.getInstance({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getInstance {#using}
@@ -93,7 +115,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
@@ -162,7 +183,6 @@ exactly match a pair on the desired Instance.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_go">
@@ -231,7 +251,6 @@ exactly match a pair on the desired Instance.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
@@ -300,7 +319,6 @@ exactly match a pair on the desired Instance.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_python">
@@ -378,7 +396,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="ami_csharp">
@@ -794,7 +811,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="ami_go">
@@ -1210,7 +1226,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="ami_nodejs">
@@ -1626,7 +1641,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="ami_python">
@@ -2052,7 +2066,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cpucredits_csharp">
@@ -2067,7 +2080,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cpucredits_go">
@@ -2082,7 +2094,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cpucredits_nodejs">
@@ -2097,7 +2108,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cpu_credits_python">
@@ -2116,7 +2126,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="deleteontermination_csharp">
@@ -2230,7 +2239,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="deleteontermination_go">
@@ -2344,7 +2352,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="deleteontermination_nodejs">
@@ -2458,7 +2465,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="delete_on_termination_python">
@@ -2576,7 +2582,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
@@ -2592,7 +2597,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_go">
@@ -2608,7 +2612,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
@@ -2624,7 +2627,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_python">
@@ -2644,7 +2646,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
@@ -2680,7 +2681,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_go">
@@ -2716,7 +2716,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
@@ -2752,7 +2751,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="device_name_python">
@@ -2792,7 +2790,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -2816,7 +2813,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -2840,7 +2836,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -2864,7 +2859,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -2892,7 +2886,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="httpendpoint_csharp">
@@ -2928,7 +2921,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="httpendpoint_go">
@@ -2964,7 +2956,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="httpendpoint_nodejs">
@@ -3000,7 +2991,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="http_endpoint_python">
@@ -3040,7 +3030,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="deleteontermination_csharp">
@@ -3144,7 +3133,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="deleteontermination_go">
@@ -3248,7 +3236,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="deleteontermination_nodejs">
@@ -3352,7 +3339,6 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="delete_on_termination_python">

@@ -21,11 +21,17 @@ To get more information about GuestPolicies, see:
     * [Official Documentation](https://cloud.google.com/compute/docs/os-config-management)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Os Config Guest Policies Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -98,9 +104,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -168,9 +177,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -209,9 +221,12 @@ guest_policies = gcp.osconfig.GuestPolicies("guestPolicies",
     opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -257,10 +272,17 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Os Config Guest Policies Packages
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -352,9 +374,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -430,9 +455,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -494,9 +522,12 @@ guest_policies = gcp.osconfig.GuestPolicies("guestPolicies",
     opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -561,10 +592,17 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Os Config Guest Policies Recipes
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -624,9 +662,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -677,9 +718,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -712,9 +756,12 @@ guest_policies = gcp.osconfig.GuestPolicies("guestPolicies",
     opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -750,9 +797,16 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a GuestPolicies Resource {#create}
@@ -777,9 +831,7 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -787,9 +839,7 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -797,9 +847,7 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -807,10 +855,7 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -836,9 +881,7 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -846,9 +889,7 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -856,9 +897,7 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -866,9 +905,7 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -876,18 +913,13 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -895,9 +927,7 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -905,9 +935,7 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -915,10 +943,7 @@ const guestPolicies = new gcp.osconfig.GuestPolicies("guestPolicies", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -934,7 +959,6 @@ The GuestPolicies resource accepts the following [input]({{< relref "/docs/intro
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="assignment_csharp">
@@ -1038,7 +1062,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="assignment_go">
@@ -1142,7 +1165,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="assignment_nodejs">
@@ -1246,7 +1268,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="assignment_python">
@@ -1357,7 +1378,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="createtime_csharp">
@@ -1407,7 +1427,6 @@ could potentially have conflicting assignments.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="createtime_go">
@@ -1457,7 +1476,6 @@ could potentially have conflicting assignments.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="createtime_nodejs">
@@ -1507,7 +1525,6 @@ could potentially have conflicting assignments.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="create_time_python">
@@ -1680,7 +1697,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_assignment_csharp">
@@ -1819,7 +1835,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_assignment_go">
@@ -1958,7 +1973,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_assignment_nodejs">
@@ -2097,7 +2111,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_assignment_python">
@@ -2247,7 +2260,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="grouplabels_csharp">
@@ -2315,7 +2327,6 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="grouplabels_go">
@@ -2383,7 +2394,6 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="grouplabels_nodejs">
@@ -2451,7 +2461,6 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_labels_python">
@@ -2521,7 +2530,6 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="labels_csharp">
@@ -2537,7 +2545,6 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="labels_go">
@@ -2553,7 +2560,6 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="labels_nodejs">
@@ -2569,7 +2575,6 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="labels_python">
@@ -2587,7 +2592,6 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="osarchitecture_csharp">
@@ -2623,7 +2627,6 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="osarchitecture_go">
@@ -2659,7 +2662,6 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="osarchitecture_nodejs">
@@ -2695,7 +2697,6 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="os_architecture_python">
@@ -2733,7 +2734,6 @@ Zonal targeting is uncommon and is supported to facilitate the management of cha
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -2784,7 +2784,6 @@ Possible values are `ANY`, `APT`, `YUM`, `ZYPPER`, and `GOO`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -2835,7 +2834,6 @@ Possible values are `ANY`, `APT`, `YUM`, `ZYPPER`, and `GOO`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -2886,7 +2884,6 @@ Possible values are `ANY`, `APT`, `YUM`, `ZYPPER`, and `GOO`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -2939,7 +2936,6 @@ Possible values are `ANY`, `APT`, `YUM`, `ZYPPER`, and `GOO`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="apt_csharp">
@@ -2989,7 +2985,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="apt_go">
@@ -3039,7 +3034,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="apt_nodejs">
@@ -3089,7 +3083,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="apt_python">
@@ -3141,7 +3134,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="components_csharp">
@@ -3200,7 +3192,6 @@ Possible values are `DEB` and `DEB_SRC`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="components_go">
@@ -3259,7 +3250,6 @@ Possible values are `DEB` and `DEB_SRC`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="components_nodejs">
@@ -3318,7 +3308,6 @@ Possible values are `DEB` and `DEB_SRC`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="components_python">
@@ -3379,7 +3368,6 @@ Possible values are `DEB` and `DEB_SRC`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -3408,7 +3396,6 @@ could potentially have conflicting assignments.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -3437,7 +3424,6 @@ could potentially have conflicting assignments.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -3466,7 +3452,6 @@ could potentially have conflicting assignments.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -3497,7 +3482,6 @@ could potentially have conflicting assignments.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="baseurl_csharp">
@@ -3544,7 +3528,6 @@ Artifacts in a recipe cannot have the same id.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="baseurl_go">
@@ -3591,7 +3574,6 @@ Artifacts in a recipe cannot have the same id.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="baseurl_nodejs">
@@ -3638,7 +3620,6 @@ Artifacts in a recipe cannot have the same id.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="base_url_python">
@@ -3687,7 +3668,6 @@ Artifacts in a recipe cannot have the same id.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="baseurl_csharp">
@@ -3734,7 +3714,6 @@ Artifacts in a recipe cannot have the same id.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="baseurl_go">
@@ -3781,7 +3760,6 @@ Artifacts in a recipe cannot have the same id.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="baseurl_nodejs">
@@ -3828,7 +3806,6 @@ Artifacts in a recipe cannot have the same id.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="base_url_python">
@@ -3877,7 +3854,6 @@ Artifacts in a recipe cannot have the same id.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -3957,7 +3933,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -4037,7 +4012,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -4117,7 +4091,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -4199,7 +4172,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="id_csharp">
@@ -4250,7 +4222,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="id_go">
@@ -4301,7 +4272,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="id_nodejs">
@@ -4352,7 +4322,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="id_python">
@@ -4405,7 +4374,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bucket_csharp">
@@ -4444,7 +4412,6 @@ this value would be foo/bar.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bucket_go">
@@ -4483,7 +4450,6 @@ this value would be foo/bar.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bucket_nodejs">
@@ -4522,7 +4488,6 @@ this value would be foo/bar.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bucket_python">
@@ -4563,7 +4528,6 @@ this value would be foo/bar.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="checksum_csharp">
@@ -4591,7 +4555,6 @@ of the steps.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="checksum_go">
@@ -4619,7 +4582,6 @@ of the steps.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="checksum_nodejs">
@@ -4647,7 +4609,6 @@ of the steps.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="check_sum_python">
@@ -4677,7 +4638,6 @@ of the steps.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="archiveextraction_csharp">
@@ -4760,7 +4720,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="archiveextraction_go">
@@ -4843,7 +4802,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="archiveextraction_nodejs">
@@ -4926,7 +4884,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="archive_extraction_python">
@@ -5011,7 +4968,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_csharp">
@@ -5048,7 +5004,6 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_go">
@@ -5085,7 +5040,6 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_nodejs">
@@ -5122,7 +5076,6 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifact_id_python">
@@ -5161,7 +5114,6 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_csharp">
@@ -5177,7 +5129,6 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_go">
@@ -5193,7 +5144,6 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_nodejs">
@@ -5209,7 +5159,6 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifact_id_python">
@@ -5227,7 +5176,6 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_csharp">
@@ -5279,7 +5227,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_go">
@@ -5331,7 +5278,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_nodejs">
@@ -5383,7 +5329,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifact_id_python">
@@ -5437,7 +5382,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedexitcodes_csharp">
@@ -5483,7 +5427,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedexitcodes_go">
@@ -5529,7 +5472,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedexitcodes_nodejs">
@@ -5575,7 +5517,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowed_exit_codes_python">
@@ -5623,7 +5564,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_csharp">
@@ -5659,7 +5599,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_go">
@@ -5695,7 +5634,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_nodejs">
@@ -5731,7 +5669,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifact_id_python">
@@ -5769,7 +5706,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_csharp">
@@ -5785,7 +5721,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_go">
@@ -5801,7 +5736,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_nodejs">
@@ -5817,7 +5751,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifact_id_python">
@@ -5835,7 +5768,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="script_csharp">
@@ -5873,7 +5805,6 @@ Possible values are `SHELL` and `POWERSHELL`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="script_go">
@@ -5911,7 +5842,6 @@ Possible values are `SHELL` and `POWERSHELL`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="script_nodejs">
@@ -5949,7 +5879,6 @@ Possible values are `SHELL` and `POWERSHELL`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="script_python">
@@ -5989,7 +5918,6 @@ Possible values are `SHELL` and `POWERSHELL`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="archiveextraction_csharp">
@@ -6072,7 +6000,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="archiveextraction_go">
@@ -6155,7 +6082,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="archiveextraction_nodejs">
@@ -6238,7 +6164,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="archive_extraction_python">
@@ -6323,7 +6248,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_csharp">
@@ -6360,7 +6284,6 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_go">
@@ -6397,7 +6320,6 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_nodejs">
@@ -6434,7 +6356,6 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifact_id_python">
@@ -6473,7 +6394,6 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_csharp">
@@ -6489,7 +6409,6 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_go">
@@ -6505,7 +6424,6 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_nodejs">
@@ -6521,7 +6439,6 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifact_id_python">
@@ -6539,7 +6456,6 @@ Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZI
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_csharp">
@@ -6591,7 +6507,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_go">
@@ -6643,7 +6558,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_nodejs">
@@ -6695,7 +6609,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifact_id_python">
@@ -6749,7 +6662,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedexitcodes_csharp">
@@ -6795,7 +6707,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedexitcodes_go">
@@ -6841,7 +6752,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedexitcodes_nodejs">
@@ -6887,7 +6797,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowed_exit_codes_python">
@@ -6935,7 +6844,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_csharp">
@@ -6971,7 +6879,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_go">
@@ -7007,7 +6914,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_nodejs">
@@ -7043,7 +6949,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifact_id_python">
@@ -7081,7 +6986,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_csharp">
@@ -7097,7 +7001,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_go">
@@ -7113,7 +7016,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifactid_nodejs">
@@ -7129,7 +7031,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="artifact_id_python">
@@ -7147,7 +7048,6 @@ read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="script_csharp">
@@ -7185,7 +7085,6 @@ Possible values are `SHELL` and `POWERSHELL`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="script_go">
@@ -7223,7 +7122,6 @@ Possible values are `SHELL` and `POWERSHELL`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="script_nodejs">
@@ -7261,7 +7159,6 @@ Possible values are `SHELL` and `POWERSHELL`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="script_python">

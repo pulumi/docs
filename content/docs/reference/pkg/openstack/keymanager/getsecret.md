@@ -49,7 +49,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="aclonly_csharp">
@@ -165,7 +164,6 @@ detail.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="aclonly_go">
@@ -281,7 +279,6 @@ detail.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="aclonly_nodejs">
@@ -397,7 +394,6 @@ detail.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="acl_only_python">
@@ -522,7 +518,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="acls_csharp">
@@ -759,7 +754,6 @@ explicitly and implicitly added.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="acls_go">
@@ -996,7 +990,6 @@ explicitly and implicitly added.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="acls_nodejs">
@@ -1233,7 +1226,6 @@ explicitly and implicitly added.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="acls_python">
@@ -1480,7 +1472,6 @@ explicitly and implicitly added.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="read_csharp">
@@ -1495,7 +1486,6 @@ explicitly and implicitly added.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="read_go">
@@ -1510,7 +1500,6 @@ explicitly and implicitly added.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="read_nodejs">
@@ -1525,7 +1514,6 @@ explicitly and implicitly added.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="read_python">
@@ -1544,7 +1532,6 @@ explicitly and implicitly added.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="createdat_csharp">
@@ -1591,7 +1578,6 @@ explicitly and implicitly added.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="createdat_go">
@@ -1638,7 +1624,6 @@ explicitly and implicitly added.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="createdat_nodejs">
@@ -1685,7 +1670,6 @@ explicitly and implicitly added.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="created_at_python">

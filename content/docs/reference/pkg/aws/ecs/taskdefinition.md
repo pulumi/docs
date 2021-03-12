@@ -13,11 +13,17 @@ meta_desc: "Documentation for the aws.ecs.TaskDefinition resource with examples,
 Manages a revision of an ECS task definition to be used in `aws.ecs.Service`.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### With AppMesh Proxy
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.IO;
 using Pulumi;
@@ -50,13 +56,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -77,9 +89,12 @@ service = aws.ecs.TaskDefinition("service",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -103,9 +118,16 @@ const service = new aws.ecs.TaskDefinition("service", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a TaskDefinition Resource {#create}
@@ -130,9 +152,7 @@ const service = new aws.ecs.TaskDefinition("service", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -140,9 +160,7 @@ const service = new aws.ecs.TaskDefinition("service", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -150,9 +168,7 @@ const service = new aws.ecs.TaskDefinition("service", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -160,10 +176,7 @@ const service = new aws.ecs.TaskDefinition("service", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -189,9 +202,7 @@ const service = new aws.ecs.TaskDefinition("service", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -199,9 +210,7 @@ const service = new aws.ecs.TaskDefinition("service", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -209,9 +218,7 @@ const service = new aws.ecs.TaskDefinition("service", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -219,9 +226,7 @@ const service = new aws.ecs.TaskDefinition("service", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -229,18 +234,13 @@ const service = new aws.ecs.TaskDefinition("service", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -248,9 +248,7 @@ const service = new aws.ecs.TaskDefinition("service", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -258,9 +256,7 @@ const service = new aws.ecs.TaskDefinition("service", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -268,10 +264,7 @@ const service = new aws.ecs.TaskDefinition("service", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -287,7 +280,6 @@ The TaskDefinition resource accepts the following [input]({{< relref "/docs/intr
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="containerdefinitions_csharp">
@@ -449,7 +441,6 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="containerdefinitions_go">
@@ -611,7 +602,6 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="containerdefinitions_nodejs">
@@ -773,7 +763,6 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="container_definitions_python">
@@ -942,7 +931,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_csharp">
@@ -977,7 +965,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_go">
@@ -1012,7 +999,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_nodejs">
@@ -1047,7 +1033,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_python">
@@ -1205,7 +1190,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
@@ -1387,7 +1371,6 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
@@ -1569,7 +1552,6 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
@@ -1751,7 +1733,6 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
@@ -1944,7 +1925,6 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
@@ -1970,7 +1950,6 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_go">
@@ -1996,7 +1975,6 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
@@ -2022,7 +2000,6 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="device_name_python">
@@ -2050,7 +2027,6 @@ section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonEC
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
@@ -2079,7 +2055,6 @@ Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
@@ -2108,7 +2083,6 @@ Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
@@ -2137,7 +2111,6 @@ Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
@@ -2168,7 +2141,6 @@ Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="containername_csharp">
@@ -2204,7 +2176,6 @@ Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="containername_go">
@@ -2240,7 +2211,6 @@ Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="containername_nodejs">
@@ -2276,7 +2246,6 @@ Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="container_name_python">
@@ -2314,7 +2283,6 @@ Guide](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -2361,7 +2329,6 @@ parameter of container definition in the `mountPoints` section.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -2408,7 +2375,6 @@ parameter of container definition in the `mountPoints` section.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -2455,7 +2421,6 @@ parameter of container definition in the `mountPoints` section.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -2504,7 +2469,6 @@ parameter of container definition in the `mountPoints` section.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoprovision_csharp">
@@ -2560,7 +2524,6 @@ parameter of container definition in the `mountPoints` section.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoprovision_go">
@@ -2616,7 +2579,6 @@ parameter of container definition in the `mountPoints` section.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoprovision_nodejs">
@@ -2672,7 +2634,6 @@ parameter of container definition in the `mountPoints` section.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoprovision_python">
@@ -2730,7 +2691,6 @@ parameter of container definition in the `mountPoints` section.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="filesystemid_csharp">
@@ -2786,7 +2746,6 @@ parameter of container definition in the `mountPoints` section.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="filesystemid_go">
@@ -2842,7 +2801,6 @@ parameter of container definition in the `mountPoints` section.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="filesystemid_nodejs">
@@ -2898,7 +2856,6 @@ parameter of container definition in the `mountPoints` section.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="file_system_id_python">
@@ -2956,7 +2913,6 @@ parameter of container definition in the `mountPoints` section.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesspointid_csharp">
@@ -2982,7 +2938,6 @@ parameter of container definition in the `mountPoints` section.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesspointid_go">
@@ -3008,7 +2963,6 @@ parameter of container definition in the `mountPoints` section.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesspointid_nodejs">
@@ -3034,7 +2988,6 @@ parameter of container definition in the `mountPoints` section.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="access_point_id_python">

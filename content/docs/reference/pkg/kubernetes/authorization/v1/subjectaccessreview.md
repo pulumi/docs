@@ -37,9 +37,7 @@ SubjectAccessReview checks whether or not a user or group can perform an action.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -47,9 +45,7 @@ SubjectAccessReview checks whether or not a user or group can perform an action.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -57,9 +53,7 @@ SubjectAccessReview checks whether or not a user or group can perform an action.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -67,10 +61,7 @@ SubjectAccessReview checks whether or not a user or group can perform an action.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -96,9 +87,7 @@ SubjectAccessReview checks whether or not a user or group can perform an action.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -106,9 +95,7 @@ SubjectAccessReview checks whether or not a user or group can perform an action.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -116,9 +103,7 @@ SubjectAccessReview checks whether or not a user or group can perform an action.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -126,9 +111,7 @@ SubjectAccessReview checks whether or not a user or group can perform an action.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -136,18 +119,13 @@ SubjectAccessReview checks whether or not a user or group can perform an action.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -155,9 +133,7 @@ SubjectAccessReview checks whether or not a user or group can perform an action.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -165,9 +141,7 @@ SubjectAccessReview checks whether or not a user or group can perform an action.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -175,10 +149,7 @@ SubjectAccessReview checks whether or not a user or group can perform an action.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -194,7 +165,6 @@ The SubjectAccessReview resource accepts the following [input]({{< relref "/docs
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="spec_csharp">
@@ -218,7 +188,6 @@ The SubjectAccessReview resource accepts the following [input]({{< relref "/docs
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="spec_go">
@@ -242,7 +211,6 @@ The SubjectAccessReview resource accepts the following [input]({{< relref "/docs
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="spec_nodejs">
@@ -266,7 +234,6 @@ The SubjectAccessReview resource accepts the following [input]({{< relref "/docs
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="spec_python">
@@ -297,7 +264,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -321,7 +287,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -345,7 +310,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -369,7 +333,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -405,7 +368,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="apiversion_csharp">
@@ -465,7 +427,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="apiversion_go">
@@ -525,7 +486,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="apiversion_nodejs">
@@ -585,7 +545,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="api_version_python">
@@ -647,7 +606,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
@@ -671,7 +629,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_go">
@@ -695,7 +652,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
@@ -719,7 +675,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_python">
@@ -745,7 +700,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
@@ -911,7 +865,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
@@ -1077,7 +1030,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
@@ -1243,7 +1195,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
@@ -1411,7 +1362,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="apiversion_csharp">
@@ -1471,7 +1421,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="apiversion_go">
@@ -1531,7 +1480,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="apiversion_nodejs">
@@ -1591,7 +1539,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="api_version_python">
@@ -1653,7 +1600,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_csharp">
@@ -1722,7 +1668,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_go">
@@ -1791,7 +1736,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_nodejs">
@@ -1860,7 +1804,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_python">
@@ -1931,7 +1874,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="extra_csharp">
@@ -1991,7 +1933,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="extra_go">
@@ -2051,7 +1992,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="extra_nodejs">
@@ -2111,7 +2051,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="extra_python">
@@ -2173,7 +2112,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="allowed_csharp">
@@ -2215,7 +2153,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="allowed_go">
@@ -2257,7 +2194,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="allowed_nodejs">
@@ -2299,7 +2235,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="allowed_python">

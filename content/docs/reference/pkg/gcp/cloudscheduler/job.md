@@ -24,11 +24,17 @@ To get more information about Job, see:
     * [Official Documentation](https://cloud.google.com/scheduler/)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Scheduler Job App Engine
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -67,9 +73,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -109,9 +118,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -138,9 +150,12 @@ job = gcp.cloudscheduler.Job("job",
     time_zone="Europe/London")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -169,10 +184,17 @@ const job = new gcp.cloudscheduler.Job("job", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Scheduler Job Oauth
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -203,9 +225,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -242,9 +267,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -264,9 +292,12 @@ job = gcp.cloudscheduler.Job("job",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -288,10 +319,17 @@ const job = new gcp.cloudscheduler.Job("job", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Scheduler Job Oidc
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -322,9 +360,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -361,9 +402,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -383,9 +427,12 @@ job = gcp.cloudscheduler.Job("job",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -407,9 +454,16 @@ const job = new gcp.cloudscheduler.Job("job", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Job Resource {#create}
@@ -434,9 +488,7 @@ const job = new gcp.cloudscheduler.Job("job", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -444,9 +496,7 @@ const job = new gcp.cloudscheduler.Job("job", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -454,9 +504,7 @@ const job = new gcp.cloudscheduler.Job("job", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -464,10 +512,7 @@ const job = new gcp.cloudscheduler.Job("job", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -493,9 +538,7 @@ const job = new gcp.cloudscheduler.Job("job", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -503,9 +546,7 @@ const job = new gcp.cloudscheduler.Job("job", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -513,9 +554,7 @@ const job = new gcp.cloudscheduler.Job("job", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -523,9 +562,7 @@ const job = new gcp.cloudscheduler.Job("job", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -533,18 +570,13 @@ const job = new gcp.cloudscheduler.Job("job", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -552,9 +584,7 @@ const job = new gcp.cloudscheduler.Job("job", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -562,9 +592,7 @@ const job = new gcp.cloudscheduler.Job("job", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -572,10 +600,7 @@ const job = new gcp.cloudscheduler.Job("job", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -591,7 +616,6 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="appenginehttptarget_csharp">
@@ -729,7 +753,6 @@ The value of this field must be a time zone name from the tz database.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="appenginehttptarget_go">
@@ -867,7 +890,6 @@ The value of this field must be a time zone name from the tz database.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="appenginehttptarget_nodejs">
@@ -1005,7 +1027,6 @@ The value of this field must be a time zone name from the tz database.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="app_engine_http_target_python">
@@ -1150,7 +1171,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1165,7 +1185,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -1180,7 +1199,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1195,7 +1213,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -1333,7 +1350,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_appenginehttptarget_csharp">
@@ -1471,7 +1487,6 @@ The value of this field must be a time zone name from the tz database.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_appenginehttptarget_go">
@@ -1609,7 +1624,6 @@ The value of this field must be a time zone name from the tz database.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_appenginehttptarget_nodejs">
@@ -1747,7 +1761,6 @@ The value of this field must be a time zone name from the tz database.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_app_engine_http_target_python">
@@ -1896,7 +1909,6 @@ The value of this field must be a time zone name from the tz database.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="relativeuri_csharp">
@@ -1961,7 +1973,6 @@ Repeated headers are not supported, but a header value can contain commas.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="relativeuri_go">
@@ -2026,7 +2037,6 @@ Repeated headers are not supported, but a header value can contain commas.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="relativeuri_nodejs">
@@ -2091,7 +2101,6 @@ Repeated headers are not supported, but a header value can contain commas.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="relative_uri_python">
@@ -2158,7 +2167,6 @@ Repeated headers are not supported, but a header value can contain commas.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="instance_csharp">
@@ -2197,7 +2205,6 @@ By default, the job is sent to the version which is the default version when the
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="instance_go">
@@ -2236,7 +2243,6 @@ By default, the job is sent to the version which is the default version when the
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="instance_nodejs">
@@ -2275,7 +2281,6 @@ By default, the job is sent to the version which is the default version when the
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="instance_python">
@@ -2316,7 +2321,6 @@ By default, the job is sent to the version which is the default version when the
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="uri_csharp">
@@ -2390,7 +2394,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="uri_go">
@@ -2464,7 +2467,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="uri_nodejs">
@@ -2538,7 +2540,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="uri_python">
@@ -2614,7 +2615,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="serviceaccountemail_csharp">
@@ -2642,7 +2642,6 @@ The service account must be within the same project as the job.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="serviceaccountemail_go">
@@ -2670,7 +2669,6 @@ The service account must be within the same project as the job.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="serviceaccountemail_nodejs">
@@ -2698,7 +2696,6 @@ The service account must be within the same project as the job.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="service_account_email_python">
@@ -2728,7 +2725,6 @@ The service account must be within the same project as the job.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="serviceaccountemail_csharp">
@@ -2756,7 +2752,6 @@ the URI specified in target will be used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="serviceaccountemail_go">
@@ -2784,7 +2779,6 @@ the URI specified in target will be used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="serviceaccountemail_nodejs">
@@ -2812,7 +2806,6 @@ the URI specified in target will be used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="service_account_email_python">
@@ -2842,7 +2835,6 @@ the URI specified in target will be used.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="topicname_csharp">
@@ -2884,7 +2876,6 @@ A base64-encoded string.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="topicname_go">
@@ -2926,7 +2917,6 @@ A base64-encoded string.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="topicname_nodejs">
@@ -2968,7 +2958,6 @@ A base64-encoded string.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="topic_name_python">
@@ -3012,7 +3001,6 @@ A base64-encoded string.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxbackoffduration_csharp">
@@ -3077,7 +3065,6 @@ Values greater than 5 and negative values are not allowed.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxbackoffduration_go">
@@ -3142,7 +3129,6 @@ Values greater than 5 and negative values are not allowed.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxbackoffduration_nodejs">
@@ -3207,7 +3193,6 @@ Values greater than 5 and negative values are not allowed.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_backoff_duration_python">

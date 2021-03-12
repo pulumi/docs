@@ -14,11 +14,17 @@ Provides a DigitalOcean Cloud Firewall resource. This can be used to create,
 modify, and delete Firewalls.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using DigitalOcean = Pulumi.DigitalOcean;
@@ -119,13 +125,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_digitalocean as digitalocean
@@ -196,9 +208,12 @@ web_firewall = digitalocean.Firewall("webFirewall",
     ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -272,9 +287,16 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Firewall Resource {#create}
@@ -299,9 +321,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -309,9 +329,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -319,9 +337,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -329,10 +345,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -358,9 +371,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -368,9 +379,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -378,9 +387,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -388,9 +395,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -398,18 +403,13 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -417,9 +417,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -427,9 +425,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -437,10 +433,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -456,7 +449,6 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dropletids_csharp">
@@ -515,7 +507,6 @@ The `outbound_rule` block is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dropletids_go">
@@ -574,7 +565,6 @@ The `outbound_rule` block is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dropletids_nodejs">
@@ -633,7 +623,6 @@ The `outbound_rule` block is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="droplet_ids_python">
@@ -699,7 +688,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="createdat_csharp">
@@ -749,7 +737,6 @@ This can be "waiting", "succeeded", or "failed".
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="createdat_go">
@@ -799,7 +786,6 @@ This can be "waiting", "succeeded", or "failed".
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="createdat_nodejs">
@@ -849,7 +835,6 @@ This can be "waiting", "succeeded", or "failed".
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="created_at_python">
@@ -1022,7 +1007,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createdat_csharp">
@@ -1116,7 +1100,6 @@ This can be "waiting", "succeeded", or "failed".
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createdat_go">
@@ -1210,7 +1193,6 @@ This can be "waiting", "succeeded", or "failed".
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createdat_nodejs">
@@ -1304,7 +1286,6 @@ This can be "waiting", "succeeded", or "failed".
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_created_at_python">
@@ -1409,7 +1390,6 @@ This can be "waiting", "succeeded", or "failed".
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
@@ -1485,7 +1465,6 @@ will be accepted.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_go">
@@ -1561,7 +1540,6 @@ will be accepted.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
@@ -1637,7 +1615,6 @@ will be accepted.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_python">
@@ -1715,7 +1692,6 @@ will be accepted.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
@@ -1792,7 +1768,6 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_go">
@@ -1869,7 +1844,6 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
@@ -1946,7 +1920,6 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="protocol_python">
@@ -2025,7 +1998,6 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dropletid_csharp">
@@ -2060,7 +2032,6 @@ This can be "waiting", "succeeded", or "failed".
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dropletid_go">
@@ -2095,7 +2066,6 @@ This can be "waiting", "succeeded", or "failed".
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dropletid_nodejs">
@@ -2130,7 +2100,6 @@ This can be "waiting", "succeeded", or "failed".
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="droplet_id_python">

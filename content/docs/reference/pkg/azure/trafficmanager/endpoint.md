@@ -14,11 +14,17 @@ meta_desc: "Documentation for the azure.trafficmanager.Endpoint resource with ex
 Manages a Traffic Manager Endpoint.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -75,9 +81,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -141,9 +150,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -180,9 +192,12 @@ example_traffic_manager_endpoint = azure.network.TrafficManagerEndpoint("example
     weight=100)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -223,9 +238,16 @@ const exampleTrafficManagerEndpoint = new azure.network.TrafficManagerEndpoint("
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Endpoint Resource {#create}
@@ -250,9 +272,7 @@ const exampleTrafficManagerEndpoint = new azure.network.TrafficManagerEndpoint("
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -260,9 +280,7 @@ const exampleTrafficManagerEndpoint = new azure.network.TrafficManagerEndpoint("
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -270,9 +288,7 @@ const exampleTrafficManagerEndpoint = new azure.network.TrafficManagerEndpoint("
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -280,10 +296,7 @@ const exampleTrafficManagerEndpoint = new azure.network.TrafficManagerEndpoint("
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -309,9 +322,7 @@ const exampleTrafficManagerEndpoint = new azure.network.TrafficManagerEndpoint("
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -319,9 +330,7 @@ const exampleTrafficManagerEndpoint = new azure.network.TrafficManagerEndpoint("
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -329,9 +338,7 @@ const exampleTrafficManagerEndpoint = new azure.network.TrafficManagerEndpoint("
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -339,9 +346,7 @@ const exampleTrafficManagerEndpoint = new azure.network.TrafficManagerEndpoint("
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -349,18 +354,13 @@ const exampleTrafficManagerEndpoint = new azure.network.TrafficManagerEndpoint("
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -368,9 +368,7 @@ const exampleTrafficManagerEndpoint = new azure.network.TrafficManagerEndpoint("
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -378,9 +376,7 @@ const exampleTrafficManagerEndpoint = new azure.network.TrafficManagerEndpoint("
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -388,10 +384,7 @@ const exampleTrafficManagerEndpoint = new azure.network.TrafficManagerEndpoint("
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -407,7 +400,6 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="profilename_csharp">
@@ -576,7 +568,6 @@ routing method. Supports values between 1 and 1000.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="profilename_go">
@@ -745,7 +736,6 @@ routing method. Supports values between 1 and 1000.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="profilename_nodejs">
@@ -914,7 +904,6 @@ routing method. Supports values between 1 and 1000.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="profile_name_python">
@@ -1090,7 +1079,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="endpointmonitorstatus_csharp">
@@ -1114,7 +1102,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="endpointmonitorstatus_go">
@@ -1138,7 +1125,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="endpointmonitorstatus_nodejs">
@@ -1162,7 +1148,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="endpoint_monitor_status_python">
@@ -1309,7 +1294,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customheaders_csharp">
@@ -1487,7 +1471,6 @@ routing method. Supports values between 1 and 1000.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customheaders_go">
@@ -1665,7 +1648,6 @@ routing method. Supports values between 1 and 1000.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customheaders_nodejs">
@@ -1843,7 +1825,6 @@ routing method. Supports values between 1 and 1000.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_custom_headers_python">
@@ -2032,7 +2013,6 @@ routing method. Supports values between 1 and 1000.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -2058,7 +2038,6 @@ routing method. Supports values between 1 and 1000.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -2084,7 +2063,6 @@ routing method. Supports values between 1 and 1000.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -2110,7 +2088,6 @@ routing method. Supports values between 1 and 1000.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -2138,7 +2115,6 @@ routing method. Supports values between 1 and 1000.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="first_csharp">
@@ -2174,7 +2150,6 @@ routing method. Supports values between 1 and 1000.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="first_go">
@@ -2210,7 +2185,6 @@ routing method. Supports values between 1 and 1000.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="first_nodejs">
@@ -2246,7 +2220,6 @@ routing method. Supports values between 1 and 1000.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="first_python">

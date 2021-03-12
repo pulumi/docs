@@ -22,11 +22,17 @@ or view the [Cloud Functions IAM resources](https://www.terraform.io/docs/provid
 for Cloud Functions.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Public Function
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -67,9 +73,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -119,9 +128,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -147,9 +159,12 @@ invoker = gcp.cloudfunctions.FunctionIamMember("invoker",
     member="allUsers")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -179,10 +194,17 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Single User
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -232,9 +254,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -291,9 +316,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -326,9 +354,12 @@ invoker = gcp.cloudfunctions.FunctionIamMember("invoker",
     member="user:myFunctionInvoker@example.com")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -365,9 +396,16 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Function Resource {#create}
@@ -392,9 +430,7 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -402,9 +438,7 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -412,9 +446,7 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -422,10 +454,7 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -451,9 +480,7 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -461,9 +488,7 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -471,9 +496,7 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -481,9 +504,7 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -491,18 +512,13 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -510,9 +526,7 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -520,9 +534,7 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -530,10 +542,7 @@ const invoker = new gcp.cloudfunctions.FunctionIamMember("invoker", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -549,7 +558,6 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="runtime_csharp">
@@ -777,7 +785,6 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="runtime_go">
@@ -1005,7 +1012,6 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="runtime_nodejs">
@@ -1233,7 +1239,6 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="runtime_python">
@@ -1468,7 +1473,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1483,7 +1487,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -1498,7 +1501,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1513,7 +1515,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -1651,7 +1652,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_availablememorymb_csharp">
@@ -1879,7 +1879,6 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_availablememorymb_go">
@@ -2107,7 +2106,6 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_availablememorymb_nodejs">
@@ -2335,7 +2333,6 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_available_memory_mb_python">
@@ -2574,7 +2571,6 @@ Cannot be set alongside `source_archive_bucket` or `source_archive_object`. Stru
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="eventtype_csharp">
@@ -2613,7 +2609,6 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="eventtype_go">
@@ -2652,7 +2647,6 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="eventtype_nodejs">
@@ -2691,7 +2685,6 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="event_type_python">
@@ -2732,7 +2725,6 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="retry_csharp">
@@ -2748,7 +2740,6 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="retry_go">
@@ -2764,7 +2755,6 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="retry_nodejs">
@@ -2780,7 +2770,6 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="retry_python">
@@ -2798,7 +2787,6 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="url_csharp">
@@ -2823,7 +2811,6 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="url_go">
@@ -2848,7 +2835,6 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="url_nodejs">
@@ -2873,7 +2859,6 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="url_python">

@@ -13,11 +13,17 @@ meta_desc: "Documentation for the gcp.dataproc.AutoscalingPolicy resource with e
 Describes an autoscaling policy for Dataproc cluster autoscaler.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Dataproc Autoscaling Policy
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -60,9 +66,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -106,9 +115,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -135,9 +147,12 @@ basic = gcp.dataproc.Cluster("basic",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -167,9 +182,16 @@ const basic = new gcp.dataproc.Cluster("basic", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AutoscalingPolicy Resource {#create}
@@ -194,9 +216,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -204,9 +224,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -214,9 +232,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -224,10 +240,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -253,9 +266,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -263,9 +274,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -273,9 +282,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -283,9 +290,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -293,18 +298,13 @@ const basic = new gcp.dataproc.Cluster("basic", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -312,9 +312,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -322,9 +320,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -332,10 +328,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -351,7 +344,6 @@ The AutoscalingPolicy resource accepts the following [input]({{< relref "/docs/i
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="policyid_csharp">
@@ -424,7 +416,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="policyid_go">
@@ -497,7 +488,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="policyid_nodejs">
@@ -570,7 +560,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="policy_id_python">
@@ -650,7 +639,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -675,7 +663,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -700,7 +687,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -725,7 +711,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -873,7 +858,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_basicalgorithm_csharp">
@@ -956,7 +940,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_basicalgorithm_go">
@@ -1039,7 +1022,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_basicalgorithm_nodejs">
@@ -1122,7 +1104,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_basic_algorithm_python">
@@ -1216,7 +1197,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="yarnconfig_csharp">
@@ -1245,7 +1225,6 @@ Bounds: [2m, 1d]. Default: 2m.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="yarnconfig_go">
@@ -1274,7 +1253,6 @@ Bounds: [2m, 1d]. Default: 2m.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="yarnconfig_nodejs">
@@ -1303,7 +1281,6 @@ Bounds: [2m, 1d]. Default: 2m.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="yarn_config_python">
@@ -1334,7 +1311,6 @@ Bounds: [2m, 1d]. Default: 2m.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="gracefuldecommissiontimeout_csharp">
@@ -1411,7 +1387,6 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="gracefuldecommissiontimeout_go">
@@ -1488,7 +1463,6 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="gracefuldecommissiontimeout_nodejs">
@@ -1565,7 +1539,6 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="graceful_decommission_timeout_python">
@@ -1644,7 +1617,6 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxinstances_csharp">
@@ -1693,7 +1665,6 @@ only on primary workers, the cluster will use primary workers only and no second
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxinstances_go">
@@ -1742,7 +1713,6 @@ only on primary workers, the cluster will use primary workers only and no second
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxinstances_nodejs">
@@ -1791,7 +1761,6 @@ only on primary workers, the cluster will use primary workers only and no second
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_instances_python">
@@ -1842,7 +1811,6 @@ only on primary workers, the cluster will use primary workers only and no second
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxinstances_csharp">
@@ -1891,7 +1859,6 @@ only on primary workers, the cluster will use primary workers only and no second
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxinstances_go">
@@ -1940,7 +1907,6 @@ only on primary workers, the cluster will use primary workers only and no second
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxinstances_nodejs">
@@ -1989,7 +1955,6 @@ only on primary workers, the cluster will use primary workers only and no second
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="max_instances_python">

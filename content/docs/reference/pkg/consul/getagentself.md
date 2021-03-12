@@ -60,7 +60,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="acldatacenter_csharp">
@@ -775,7 +774,6 @@ of telemetry configuration.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="acldatacenter_go">
@@ -1490,7 +1488,6 @@ of telemetry configuration.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="acldatacenter_nodejs">
@@ -2205,7 +2202,6 @@ of telemetry configuration.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="acl_datacenter_python">

@@ -14,11 +14,17 @@ Provides details about a specific Amazon API Gateway Version 2 API.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -36,9 +42,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -60,9 +69,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -70,9 +82,12 @@ import pulumi_aws as aws
 example = aws.apigatewayv2.get_api(api_id="aabbccddee")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -83,9 +98,16 @@ const example = pulumi.output(aws.apigatewayv2.getApi({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getApi {#using}
@@ -124,7 +146,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="apiid_csharp">
@@ -150,7 +171,6 @@ The following arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="apiid_go">
@@ -176,7 +196,6 @@ The following arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="apiid_nodejs">
@@ -202,7 +221,6 @@ The following arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="api_id_python">
@@ -237,7 +255,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="apiendpoint_csharp">
@@ -386,7 +403,6 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="apiendpoint_go">
@@ -535,7 +551,6 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="apiendpoint_nodejs">
@@ -684,7 +699,6 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="api_endpoint_python">
@@ -843,7 +857,6 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="allowcredentials_csharp">
@@ -909,7 +922,6 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="allowcredentials_go">
@@ -975,7 +987,6 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="allowcredentials_nodejs">
@@ -1041,7 +1052,6 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="allow_credentials_python">

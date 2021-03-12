@@ -17,11 +17,17 @@ See the `aws.rds.Snapshot` data source for DB Instance snapshots.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -54,9 +60,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -97,9 +106,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -118,9 +130,12 @@ aurora_cluster_instance = aws.rds.ClusterInstance("auroraClusterInstance",
     db_subnet_group_name="my_db_subnet_group")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -144,9 +159,16 @@ const auroraClusterInstance = new aws.rds.ClusterInstance("auroraClusterInstance
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getClusterSnapshot {#using}
@@ -185,7 +207,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dbclusteridentifier_csharp">
@@ -266,7 +287,6 @@ included in the returned results by default. Possible values are, `automated`, `
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dbclusteridentifier_go">
@@ -347,7 +367,6 @@ included in the returned results by default. Possible values are, `automated`, `
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dbclusteridentifier_nodejs">
@@ -428,7 +447,6 @@ included in the returned results by default. Possible values are, `automated`, `
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="db_cluster_identifier_python">
@@ -518,7 +536,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="allocatedstorage_csharp">
@@ -728,7 +745,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="allocatedstorage_go">
@@ -938,7 +954,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="allocatedstorage_nodejs">
@@ -1148,7 +1163,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="allocated_storage_python">

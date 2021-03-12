@@ -37,9 +37,7 @@ RuntimeClass defines a class of container runtime supported in the cluster. The 
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -47,9 +45,7 @@ RuntimeClass defines a class of container runtime supported in the cluster. The 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -57,9 +53,7 @@ RuntimeClass defines a class of container runtime supported in the cluster. The 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -67,10 +61,7 @@ RuntimeClass defines a class of container runtime supported in the cluster. The 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -96,9 +87,7 @@ RuntimeClass defines a class of container runtime supported in the cluster. The 
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -106,9 +95,7 @@ RuntimeClass defines a class of container runtime supported in the cluster. The 
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -116,9 +103,7 @@ RuntimeClass defines a class of container runtime supported in the cluster. The 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -126,9 +111,7 @@ RuntimeClass defines a class of container runtime supported in the cluster. The 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -136,18 +119,13 @@ RuntimeClass defines a class of container runtime supported in the cluster. The 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -155,9 +133,7 @@ RuntimeClass defines a class of container runtime supported in the cluster. The 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -165,9 +141,7 @@ RuntimeClass defines a class of container runtime supported in the cluster. The 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -175,10 +149,7 @@ RuntimeClass defines a class of container runtime supported in the cluster. The 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -194,7 +165,6 @@ The RuntimeClass resource accepts the following [input]({{< relref "/docs/intro/
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="handler_csharp">
@@ -238,7 +208,6 @@ This field is in beta starting v1.18 and is only honored by servers that enable 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="handler_go">
@@ -282,7 +251,6 @@ This field is in beta starting v1.18 and is only honored by servers that enable 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="handler_nodejs">
@@ -326,7 +294,6 @@ This field is in beta starting v1.18 and is only honored by servers that enable 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="handler_python">
@@ -377,7 +344,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -392,7 +358,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -407,7 +372,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -422,7 +386,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -449,7 +412,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="apiversion_csharp">
@@ -509,7 +471,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="apiversion_go">
@@ -569,7 +530,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="apiversion_nodejs">
@@ -629,7 +589,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="api_version_python">
@@ -691,7 +650,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
@@ -857,7 +815,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
@@ -1023,7 +980,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
@@ -1189,7 +1145,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
@@ -1357,7 +1312,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="podfixed_csharp">
@@ -1372,7 +1326,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="podfixed_go">
@@ -1387,7 +1340,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="podfixed_nodejs">
@@ -1402,7 +1354,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="pod_fixed_python">
@@ -1419,7 +1370,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="apiversion_csharp">
@@ -1479,7 +1429,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="apiversion_go">
@@ -1539,7 +1488,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="apiversion_nodejs">
@@ -1599,7 +1547,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="api_version_python">
@@ -1661,7 +1608,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="nodeselector_csharp">
@@ -1685,7 +1631,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="nodeselector_go">
@@ -1709,7 +1654,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="nodeselector_nodejs">
@@ -1733,7 +1677,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="node_selector_python">
@@ -1759,7 +1702,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="effect_csharp">
@@ -1810,7 +1752,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="effect_go">
@@ -1861,7 +1802,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="effect_nodejs">
@@ -1912,7 +1852,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="effect_python">

@@ -20,11 +20,17 @@ To get more information about Job, see:
     * [BigQuery Jobs Intro](https://cloud.google.com/bigquery/docs/jobs-overview)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Bigquery Job Query
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -75,9 +81,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -132,9 +141,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -168,9 +180,12 @@ job = gcp.bigquery.Job("job",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -208,10 +223,17 @@ const job = new gcp.bigquery.Job("job", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Bigquery Job Query Table Reference
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -264,9 +286,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -322,9 +347,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -359,9 +387,12 @@ job = gcp.bigquery.Job("job",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -400,10 +431,17 @@ const job = new gcp.bigquery.Job("job", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Bigquery Job Load
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -459,9 +497,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -520,9 +561,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -558,9 +602,12 @@ job = gcp.bigquery.Job("job",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -600,10 +647,17 @@ const job = new gcp.bigquery.Job("job", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Bigquery Job Extract
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -671,9 +725,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -736,9 +793,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -785,9 +845,12 @@ job = gcp.bigquery.Job("job",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -838,9 +901,16 @@ const job = new gcp.bigquery.Job("job", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Job Resource {#create}
@@ -865,9 +935,7 @@ const job = new gcp.bigquery.Job("job", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -875,9 +943,7 @@ const job = new gcp.bigquery.Job("job", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -885,9 +951,7 @@ const job = new gcp.bigquery.Job("job", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -895,10 +959,7 @@ const job = new gcp.bigquery.Job("job", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -924,9 +985,7 @@ const job = new gcp.bigquery.Job("job", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -934,9 +993,7 @@ const job = new gcp.bigquery.Job("job", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -944,9 +1001,7 @@ const job = new gcp.bigquery.Job("job", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -954,9 +1009,7 @@ const job = new gcp.bigquery.Job("job", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -964,18 +1017,13 @@ const job = new gcp.bigquery.Job("job", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -983,9 +1031,7 @@ const job = new gcp.bigquery.Job("job", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -993,9 +1039,7 @@ const job = new gcp.bigquery.Job("job", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1003,10 +1047,7 @@ const job = new gcp.bigquery.Job("job", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1022,7 +1063,6 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="jobid_csharp">
@@ -1123,7 +1163,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="jobid_go">
@@ -1224,7 +1263,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="jobid_nodejs">
@@ -1325,7 +1363,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="job_id_python">
@@ -1433,7 +1470,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1478,7 +1514,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -1523,7 +1558,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1568,7 +1602,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -1736,7 +1769,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_copy_csharp">
@@ -1867,7 +1899,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_copy_go">
@@ -1998,7 +2029,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_copy_nodejs">
@@ -2129,7 +2159,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_copy_python">
@@ -2271,7 +2300,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sourcetables_csharp">
@@ -2342,7 +2370,6 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sourcetables_go">
@@ -2413,7 +2440,6 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sourcetables_nodejs">
@@ -2484,7 +2510,6 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="source_tables_python">
@@ -2557,7 +2582,6 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyname_csharp">
@@ -2574,7 +2598,6 @@ The BigQuery Service Account associated with your project requires access to thi
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyname_go">
@@ -2591,7 +2614,6 @@ The BigQuery Service Account associated with your project requires access to thi
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyname_nodejs">
@@ -2608,7 +2630,6 @@ The BigQuery Service Account associated with your project requires access to thi
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kms_key_name_python">
@@ -2627,7 +2648,6 @@ The BigQuery Service Account associated with your project requires access to thi
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tableid_csharp">
@@ -2664,7 +2684,6 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tableid_go">
@@ -2701,7 +2720,6 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tableid_nodejs">
@@ -2738,7 +2756,6 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="table_id_python">
@@ -2777,7 +2794,6 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tableid_csharp">
@@ -2814,7 +2830,6 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tableid_go">
@@ -2851,7 +2866,6 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tableid_nodejs">
@@ -2888,7 +2902,6 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="table_id_python">
@@ -2927,7 +2940,6 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="destinationuris_csharp">
@@ -3019,7 +3031,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="destinationuris_go">
@@ -3111,7 +3122,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="destinationuris_nodejs">
@@ -3203,7 +3213,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="destination_uris_python">
@@ -3297,7 +3306,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="datasetid_csharp">
@@ -3333,7 +3341,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="datasetid_go">
@@ -3369,7 +3376,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="datasetid_nodejs">
@@ -3405,7 +3411,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dataset_id_python">
@@ -3443,7 +3448,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tableid_csharp">
@@ -3480,7 +3484,6 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tableid_go">
@@ -3517,7 +3520,6 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tableid_nodejs">
@@ -3554,7 +3556,6 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="table_id_python">
@@ -3593,7 +3594,6 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="destinationtable_csharp">
@@ -3843,7 +3843,6 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="destinationtable_go">
@@ -4093,7 +4092,6 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="destinationtable_nodejs">
@@ -4343,7 +4341,6 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="destination_table_python">
@@ -4595,7 +4592,6 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyname_csharp">
@@ -4612,7 +4608,6 @@ The BigQuery Service Account associated with your project requires access to thi
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyname_go">
@@ -4629,7 +4624,6 @@ The BigQuery Service Account associated with your project requires access to thi
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyname_nodejs">
@@ -4646,7 +4640,6 @@ The BigQuery Service Account associated with your project requires access to thi
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kms_key_name_python">
@@ -4665,7 +4658,6 @@ The BigQuery Service Account associated with your project requires access to thi
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tableid_csharp">
@@ -4702,7 +4694,6 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tableid_go">
@@ -4739,7 +4730,6 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tableid_nodejs">
@@ -4776,7 +4766,6 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="table_id_python">
@@ -4815,7 +4804,6 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
@@ -4854,7 +4842,6 @@ A wrapper is used here because an empty string is an invalid value.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
@@ -4893,7 +4880,6 @@ A wrapper is used here because an empty string is an invalid value.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
@@ -4932,7 +4918,6 @@ A wrapper is used here because an empty string is an invalid value.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
@@ -4973,7 +4958,6 @@ A wrapper is used here because an empty string is an invalid value.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="query_csharp">
@@ -5182,7 +5166,6 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="query_go">
@@ -5391,7 +5374,6 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="query_nodejs">
@@ -5600,7 +5582,6 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="query_python">
@@ -5811,7 +5792,6 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="datasetid_csharp">
@@ -5837,7 +5817,6 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="datasetid_go">
@@ -5863,7 +5842,6 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="datasetid_nodejs">
@@ -5889,7 +5867,6 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dataset_id_python">
@@ -5917,7 +5894,6 @@ Possible values are `WRITE_TRUNCATE`, `WRITE_APPEND`, and `WRITE_EMPTY`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyname_csharp">
@@ -5934,7 +5910,6 @@ The BigQuery Service Account associated with your project requires access to thi
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyname_go">
@@ -5951,7 +5926,6 @@ The BigQuery Service Account associated with your project requires access to thi
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyname_nodejs">
@@ -5968,7 +5942,6 @@ The BigQuery Service Account associated with your project requires access to thi
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kms_key_name_python">
@@ -5987,7 +5960,6 @@ The BigQuery Service Account associated with your project requires access to thi
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tableid_csharp">
@@ -6024,7 +5996,6 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tableid_go">
@@ -6061,7 +6032,6 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tableid_nodejs">
@@ -6098,7 +6068,6 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="table_id_python">
@@ -6137,7 +6106,6 @@ or of the form `projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}}
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="keyresultstatement_csharp">
@@ -6175,7 +6143,6 @@ Possible values are `LAST` and `FIRST_SELECT`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="keyresultstatement_go">
@@ -6213,7 +6180,6 @@ Possible values are `LAST` and `FIRST_SELECT`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="keyresultstatement_nodejs">
@@ -6251,7 +6217,6 @@ Possible values are `LAST` and `FIRST_SELECT`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_result_statement_python">
@@ -6291,7 +6256,6 @@ Possible values are `LAST` and `FIRST_SELECT`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="inlinecode_csharp">
@@ -6318,7 +6282,6 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="inlinecode_go">
@@ -6345,7 +6308,6 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="inlinecode_nodejs">
@@ -6372,7 +6334,6 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="inline_code_python">
@@ -6401,7 +6362,6 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="errorresults_csharp">
@@ -6434,7 +6394,6 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="errorresults_go">
@@ -6467,7 +6426,6 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="errorresults_nodejs">
@@ -6500,7 +6458,6 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="error_results_python">
@@ -6535,7 +6492,6 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
@@ -6569,7 +6525,6 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -6603,7 +6558,6 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
@@ -6637,7 +6591,6 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -6673,7 +6626,6 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
@@ -6707,7 +6659,6 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -6741,7 +6692,6 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
@@ -6775,7 +6725,6 @@ Providing a inline code resource is equivalent to providing a URI for a file con
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">

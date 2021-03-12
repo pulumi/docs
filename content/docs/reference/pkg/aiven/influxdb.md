@@ -16,11 +16,17 @@ The InfluxDB resource allows the creation and management of Aiven InfluxDB servi
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aiven = Pulumi.Aiven;
@@ -50,9 +56,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -84,9 +93,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aiven as aiven
@@ -105,9 +117,12 @@ inf1 = aiven.InfluxDb("inf1",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -128,9 +143,16 @@ const inf1 = new aiven.InfluxDb("inf1", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a InfluxDb Resource {#create}
@@ -155,9 +177,7 @@ const inf1 = new aiven.InfluxDb("inf1", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -165,9 +185,7 @@ const inf1 = new aiven.InfluxDb("inf1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -175,9 +193,7 @@ const inf1 = new aiven.InfluxDb("inf1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -185,10 +201,7 @@ const inf1 = new aiven.InfluxDb("inf1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -214,9 +227,7 @@ const inf1 = new aiven.InfluxDb("inf1", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -224,9 +235,7 @@ const inf1 = new aiven.InfluxDb("inf1", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -234,9 +243,7 @@ const inf1 = new aiven.InfluxDb("inf1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -244,9 +251,7 @@ const inf1 = new aiven.InfluxDb("inf1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -254,18 +259,13 @@ const inf1 = new aiven.InfluxDb("inf1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -273,9 +273,7 @@ const inf1 = new aiven.InfluxDb("inf1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -283,9 +281,7 @@ const inf1 = new aiven.InfluxDb("inf1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -293,10 +289,7 @@ const inf1 = new aiven.InfluxDb("inf1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -312,7 +305,6 @@ The InfluxDb resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_csharp">
@@ -457,7 +449,6 @@ deletion is done.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_go">
@@ -602,7 +593,6 @@ deletion is done.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_nodejs">
@@ -747,7 +737,6 @@ deletion is done.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_python">
@@ -899,7 +888,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="components_csharp">
@@ -994,7 +982,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="components_go">
@@ -1089,7 +1076,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="components_nodejs">
@@ -1184,7 +1170,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="components_python">
@@ -1402,7 +1387,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_csharp">
@@ -1627,7 +1611,6 @@ deletion is done.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_go">
@@ -1852,7 +1835,6 @@ deletion is done.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_nodejs">
@@ -2077,7 +2059,6 @@ deletion is done.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloud_name_python">
@@ -2313,7 +2294,6 @@ deletion is done.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="component_csharp">
@@ -2382,7 +2362,6 @@ deletion is done.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="component_go">
@@ -2451,7 +2430,6 @@ deletion is done.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="component_nodejs">
@@ -2520,7 +2498,6 @@ deletion is done.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="component_python">
@@ -2591,7 +2568,6 @@ deletion is done.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="databasename_csharp">
@@ -2606,7 +2582,6 @@ deletion is done.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="databasename_go">
@@ -2621,7 +2596,6 @@ deletion is done.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="databasename_nodejs">
@@ -2636,7 +2610,6 @@ deletion is done.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="database_name_python">
@@ -2653,7 +2626,6 @@ deletion is done.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="customdomain_csharp">
@@ -2751,7 +2723,6 @@ only when a new service is being created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="customdomain_go">
@@ -2849,7 +2820,6 @@ only when a new service is being created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="customdomain_nodejs">
@@ -2947,7 +2917,6 @@ only when a new service is being created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_domain_python">
@@ -3047,7 +3016,6 @@ only when a new service is being created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="logqueriesafter_csharp">
@@ -3109,7 +3077,6 @@ Setting this to 0 (the default) will never kill slow queries.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="logqueriesafter_go">
@@ -3171,7 +3138,6 @@ Setting this to 0 (the default) will never kill slow queries.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="logqueriesafter_nodejs">
@@ -3233,7 +3199,6 @@ Setting this to 0 (the default) will never kill slow queries.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="log_queries_after_python">
@@ -3297,7 +3262,6 @@ Setting this to 0 (the default) will never kill slow queries.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="influxdb_csharp">
@@ -3313,7 +3277,6 @@ Setting this to 0 (the default) will never kill slow queries.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="influxdb_go">
@@ -3329,7 +3292,6 @@ Setting this to 0 (the default) will never kill slow queries.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="influxdb_nodejs">
@@ -3345,7 +3307,6 @@ Setting this to 0 (the default) will never kill slow queries.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="influxdb_python">
@@ -3363,7 +3324,6 @@ Setting this to 0 (the default) will never kill slow queries.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="influxdb_csharp">
@@ -3379,7 +3339,6 @@ Setting this to 0 (the default) will never kill slow queries.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="influxdb_go">
@@ -3395,7 +3354,6 @@ Setting this to 0 (the default) will never kill slow queries.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="influxdb_nodejs">
@@ -3411,7 +3369,6 @@ Setting this to 0 (the default) will never kill slow queries.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="influxdb_python">
@@ -3429,7 +3386,6 @@ Setting this to 0 (the default) will never kill slow queries.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="influxdb_csharp">
@@ -3445,7 +3401,6 @@ Setting this to 0 (the default) will never kill slow queries.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="influxdb_go">
@@ -3461,7 +3416,6 @@ Setting this to 0 (the default) will never kill slow queries.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="influxdb_nodejs">
@@ -3477,7 +3431,6 @@ Setting this to 0 (the default) will never kill slow queries.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="influxdb_python">
@@ -3495,7 +3448,6 @@ Setting this to 0 (the default) will never kill slow queries.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integrationtype_csharp">
@@ -3519,7 +3471,6 @@ Setting this to 0 (the default) will never kill slow queries.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integrationtype_go">
@@ -3543,7 +3494,6 @@ Setting this to 0 (the default) will never kill slow queries.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integrationtype_nodejs">
@@ -3567,7 +3517,6 @@ Setting this to 0 (the default) will never kill slow queries.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integration_type_python">

@@ -52,7 +52,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="domain_csharp">
@@ -90,7 +89,6 @@ The `sort` block is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="domain_go">
@@ -128,7 +126,6 @@ The `sort` block is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="domain_nodejs">
@@ -166,7 +163,6 @@ The `sort` block is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="domain_python">
@@ -213,7 +209,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="domain_csharp">
@@ -265,7 +260,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="domain_go">
@@ -317,7 +311,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="domain_nodejs">
@@ -369,7 +362,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="domain_python">
@@ -431,7 +423,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_csharp">
@@ -483,7 +474,6 @@ substrings to find within the string field.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_go">
@@ -535,7 +525,6 @@ substrings to find within the string field.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_nodejs">
@@ -587,7 +576,6 @@ substrings to find within the string field.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_python">
@@ -643,7 +631,6 @@ substrings to find within the string field.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="domain_csharp">
@@ -749,7 +736,6 @@ substrings to find within the string field.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="domain_go">
@@ -855,7 +841,6 @@ substrings to find within the string field.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="domain_nodejs">
@@ -961,7 +946,6 @@ substrings to find within the string field.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="domain_python">
@@ -1071,7 +1055,6 @@ substrings to find within the string field.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_csharp">
@@ -1098,7 +1081,6 @@ substrings to find within the string field.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_go">
@@ -1125,7 +1107,6 @@ substrings to find within the string field.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_nodejs">
@@ -1152,7 +1133,6 @@ substrings to find within the string field.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_python">

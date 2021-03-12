@@ -16,11 +16,17 @@ The Grafana data source provides information about the existing Aiven Grafana se
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aiven = Pulumi.Aiven;
@@ -39,9 +45,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -64,9 +73,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aiven as aiven
@@ -75,9 +87,12 @@ gr1 = aiven.get_grafana(project=data["aiven_project"]["ps1"]["project"],
     service_name="my-gr1")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -89,9 +104,16 @@ const gr1 = aiven.getGrafana({
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getGrafana {#using}
@@ -130,7 +152,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_csharp">
@@ -352,7 +373,6 @@ deletion is done.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_go">
@@ -574,7 +594,6 @@ deletion is done.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_nodejs">
@@ -796,7 +815,6 @@ deletion is done.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_python">
@@ -1027,7 +1045,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="components_csharp">
@@ -1253,7 +1270,6 @@ deletion is done.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="components_go">
@@ -1479,7 +1495,6 @@ deletion is done.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="components_nodejs">
@@ -1705,7 +1720,6 @@ deletion is done.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="components_python">
@@ -1941,7 +1955,6 @@ deletion is done.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="component_csharp">
@@ -2012,7 +2025,6 @@ deletion is done.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="component_go">
@@ -2083,7 +2095,6 @@ deletion is done.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="component_nodejs">
@@ -2154,7 +2165,6 @@ deletion is done.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="component_python">
@@ -2229,7 +2239,6 @@ deletion is done.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="alertingenabled_csharp">
@@ -2553,7 +2562,6 @@ Defaults to false.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="alertingenabled_go">
@@ -2877,7 +2885,6 @@ Defaults to false.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="alertingenabled_nodejs">
@@ -3201,7 +3208,6 @@ Defaults to false.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="alerting_enabled_python">
@@ -3529,7 +3535,6 @@ Defaults to false.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowsignup_csharp">
@@ -3635,7 +3640,6 @@ Defaults to false.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowsignup_go">
@@ -3741,7 +3745,6 @@ Defaults to false.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowsignup_nodejs">
@@ -3847,7 +3850,6 @@ Defaults to false.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_sign_up_python">
@@ -3957,7 +3959,6 @@ Defaults to false.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowsignup_csharp">
@@ -4013,7 +4014,6 @@ Defaults to false.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowsignup_go">
@@ -4069,7 +4069,6 @@ Defaults to false.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowsignup_nodejs">
@@ -4125,7 +4124,6 @@ Defaults to false.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_sign_up_python">
@@ -4185,7 +4183,6 @@ Defaults to false.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowsignup_csharp">
@@ -4261,7 +4258,6 @@ Defaults to false.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowsignup_go">
@@ -4337,7 +4333,6 @@ Defaults to false.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowsignup_nodejs">
@@ -4413,7 +4408,6 @@ Defaults to false.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_sign_up_python">
@@ -4493,7 +4487,6 @@ Defaults to false.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowsignup_csharp">
@@ -4539,7 +4532,6 @@ Defaults to false.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowsignup_go">
@@ -4585,7 +4577,6 @@ Defaults to false.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowsignup_nodejs">
@@ -4631,7 +4622,6 @@ Defaults to false.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_sign_up_python">
@@ -4681,7 +4671,6 @@ Defaults to false.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesskey_csharp">
@@ -4728,7 +4717,6 @@ s3:PutObject and s3:PutObjectAcl actions
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesskey_go">
@@ -4775,7 +4763,6 @@ s3:PutObject and s3:PutObjectAcl actions
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesskey_nodejs">
@@ -4822,7 +4809,6 @@ s3:PutObject and s3:PutObjectAcl actions
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="access_key_python">
@@ -4873,7 +4859,6 @@ s3:PutObject and s3:PutObjectAcl actions
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="grafana_csharp">
@@ -4889,7 +4874,6 @@ s3:PutObject and s3:PutObjectAcl actions
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="grafana_go">
@@ -4905,7 +4889,6 @@ s3:PutObject and s3:PutObjectAcl actions
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="grafana_nodejs">
@@ -4921,7 +4904,6 @@ s3:PutObject and s3:PutObjectAcl actions
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="grafana_python">
@@ -4941,7 +4923,6 @@ s3:PutObject and s3:PutObjectAcl actions
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="grafana_csharp">
@@ -4957,7 +4938,6 @@ s3:PutObject and s3:PutObjectAcl actions
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="grafana_go">
@@ -4973,7 +4953,6 @@ s3:PutObject and s3:PutObjectAcl actions
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="grafana_nodejs">
@@ -4989,7 +4968,6 @@ s3:PutObject and s3:PutObjectAcl actions
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="grafana_python">
@@ -5009,7 +4987,6 @@ s3:PutObject and s3:PutObjectAcl actions
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="grafana_csharp">
@@ -5025,7 +5002,6 @@ s3:PutObject and s3:PutObjectAcl actions
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="grafana_go">
@@ -5041,7 +5017,6 @@ s3:PutObject and s3:PutObjectAcl actions
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="grafana_nodejs">
@@ -5057,7 +5032,6 @@ s3:PutObject and s3:PutObjectAcl actions
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="grafana_python">
@@ -5077,7 +5051,6 @@ s3:PutObject and s3:PutObjectAcl actions
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fromaddress_csharp">
@@ -5164,7 +5137,6 @@ Default is OpportunisticStartTLS.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fromaddress_go">
@@ -5251,7 +5223,6 @@ Default is OpportunisticStartTLS.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fromaddress_nodejs">
@@ -5338,7 +5309,6 @@ Default is OpportunisticStartTLS.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="from_address_python">
@@ -5429,7 +5399,6 @@ Default is OpportunisticStartTLS.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integrationtype_csharp">
@@ -5453,7 +5422,6 @@ Default is OpportunisticStartTLS.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integrationtype_go">
@@ -5477,7 +5445,6 @@ Default is OpportunisticStartTLS.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integrationtype_nodejs">
@@ -5501,7 +5468,6 @@ Default is OpportunisticStartTLS.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integration_type_python">

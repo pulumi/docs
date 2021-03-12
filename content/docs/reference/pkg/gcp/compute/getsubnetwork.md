@@ -14,11 +14,17 @@ Get a subnetwork within GCE from its name and region.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -37,9 +43,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -64,9 +73,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -75,9 +87,12 @@ my_subnetwork = gcp.compute.get_subnetwork(name="default-us-east1",
     region="us-east1")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -89,9 +104,16 @@ const my_subnetwork = pulumi.output(gcp.compute.getSubnetwork({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getSubnetwork {#using}
@@ -130,7 +152,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -180,7 +201,6 @@ specified, `name`, `project`, and `region` are ignored.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -230,7 +250,6 @@ specified, `name`, `project`, and `region` are ignored.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -280,7 +299,6 @@ specified, `name`, `project`, and `region` are ignored.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -339,7 +357,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="description_csharp">
@@ -456,7 +473,6 @@ VM instances contained in this subnetwork. Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="description_go">
@@ -573,7 +589,6 @@ VM instances contained in this subnetwork. Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="description_nodejs">
@@ -690,7 +705,6 @@ VM instances contained in this subnetwork. Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="description_python">
@@ -817,7 +831,6 @@ VM instances contained in this subnetwork. Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ipcidrrange_csharp">
@@ -845,7 +858,6 @@ when adding an alias IP range to a VM instance.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ipcidrrange_go">
@@ -873,7 +885,6 @@ when adding an alias IP range to a VM instance.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ipcidrrange_nodejs">
@@ -901,7 +912,6 @@ when adding an alias IP range to a VM instance.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ip_cidr_range_python">

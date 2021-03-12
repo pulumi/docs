@@ -37,9 +37,7 @@ DEPRECATED 1.9 - This group version of NetworkPolicy is deprecated by networking
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -47,9 +45,7 @@ DEPRECATED 1.9 - This group version of NetworkPolicy is deprecated by networking
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -57,9 +53,7 @@ DEPRECATED 1.9 - This group version of NetworkPolicy is deprecated by networking
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -67,10 +61,7 @@ DEPRECATED 1.9 - This group version of NetworkPolicy is deprecated by networking
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -96,9 +87,7 @@ DEPRECATED 1.9 - This group version of NetworkPolicy is deprecated by networking
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -106,9 +95,7 @@ DEPRECATED 1.9 - This group version of NetworkPolicy is deprecated by networking
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -116,9 +103,7 @@ DEPRECATED 1.9 - This group version of NetworkPolicy is deprecated by networking
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -126,9 +111,7 @@ DEPRECATED 1.9 - This group version of NetworkPolicy is deprecated by networking
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -136,18 +119,13 @@ DEPRECATED 1.9 - This group version of NetworkPolicy is deprecated by networking
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -155,9 +133,7 @@ DEPRECATED 1.9 - This group version of NetworkPolicy is deprecated by networking
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -165,9 +141,7 @@ DEPRECATED 1.9 - This group version of NetworkPolicy is deprecated by networking
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -175,10 +149,7 @@ DEPRECATED 1.9 - This group version of NetworkPolicy is deprecated by networking
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -194,7 +165,6 @@ The NetworkPolicy resource accepts the following [input]({{< relref "/docs/intro
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
@@ -218,7 +188,6 @@ The NetworkPolicy resource accepts the following [input]({{< relref "/docs/intro
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
@@ -242,7 +211,6 @@ The NetworkPolicy resource accepts the following [input]({{< relref "/docs/intro
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
@@ -266,7 +234,6 @@ The NetworkPolicy resource accepts the following [input]({{< relref "/docs/intro
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
@@ -297,7 +264,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -312,7 +278,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -327,7 +292,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -342,7 +306,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -369,7 +332,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cidr_csharp">
@@ -393,7 +355,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cidr_go">
@@ -417,7 +378,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cidr_nodejs">
@@ -441,7 +401,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cidr_python">
@@ -467,7 +426,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="matchexpressions_csharp">
@@ -491,7 +449,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="matchexpressions_go">
@@ -515,7 +472,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="matchexpressions_nodejs">
@@ -539,7 +495,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="match_expressions_python">
@@ -565,7 +520,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_csharp">
@@ -598,7 +552,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_go">
@@ -631,7 +584,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_nodejs">
@@ -664,7 +616,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_python">
@@ -699,7 +650,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="apiversion_csharp">
@@ -759,7 +709,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="apiversion_go">
@@ -819,7 +768,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="apiversion_nodejs">
@@ -879,7 +827,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="api_version_python">
@@ -941,7 +888,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ports_csharp">
@@ -965,7 +911,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ports_go">
@@ -989,7 +934,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ports_nodejs">
@@ -1013,7 +957,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ports_python">
@@ -1039,7 +982,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="from_csharp">
@@ -1063,7 +1005,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="from_go">
@@ -1087,7 +1028,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="from_nodejs">
@@ -1111,7 +1051,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="from__python">
@@ -1137,7 +1076,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipblock_csharp">
@@ -1174,7 +1112,6 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipblock_go">
@@ -1211,7 +1148,6 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipblock_nodejs">
@@ -1248,7 +1184,6 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ip_block_python">
@@ -1287,7 +1222,6 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
@@ -1311,7 +1245,6 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_go">
@@ -1335,7 +1268,6 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
@@ -1359,7 +1291,6 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_python">
@@ -1385,7 +1316,6 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="podselector_csharp">
@@ -1427,7 +1357,6 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="podselector_go">
@@ -1469,7 +1398,6 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="podselector_nodejs">
@@ -1511,7 +1439,6 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pod_selector_python">
@@ -1555,7 +1482,6 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
@@ -1721,7 +1647,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
@@ -1887,7 +1812,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
@@ -2053,7 +1977,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
@@ -2221,7 +2144,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="apiversion_csharp">
@@ -2281,7 +2203,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="apiversion_go">
@@ -2341,7 +2262,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="apiversion_nodejs">
@@ -2401,7 +2321,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="api_version_python">

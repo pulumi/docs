@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.kusto.EventGridDataConnection resource w
 Manages a Kusto (also known as Azure Data Explorer) Event Grid Data Connection
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -111,9 +117,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -224,9 +233,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -286,9 +298,12 @@ example_event_grid_data_connection = azure.kusto.EventGridDataConnection("exampl
     opts=pulumi.ResourceOptions(depends_on=[example_event_subscription]))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -358,9 +373,16 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a EventGridDataConnection Resource {#create}
@@ -385,9 +407,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -395,9 +415,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -405,9 +423,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -415,10 +431,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -444,9 +457,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -454,9 +465,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -464,9 +473,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -474,9 +481,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -484,18 +489,13 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -503,9 +503,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -513,9 +511,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -523,10 +519,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -542,7 +535,6 @@ The EventGridDataConnection resource accepts the following [input]({{< relref "/
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
@@ -652,7 +644,6 @@ to `Microsoft.Storage.BlobCreated`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="clustername_go">
@@ -762,7 +753,6 @@ to `Microsoft.Storage.BlobCreated`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
@@ -872,7 +862,6 @@ to `Microsoft.Storage.BlobCreated`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
@@ -989,7 +978,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1004,7 +992,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -1019,7 +1006,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1034,7 +1020,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -1172,7 +1157,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_blobstorageeventtype_csharp">
@@ -1282,7 +1266,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_blobstorageeventtype_go">
@@ -1392,7 +1375,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_blobstorageeventtype_nodejs">
@@ -1502,7 +1484,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_blob_storage_event_type_python">

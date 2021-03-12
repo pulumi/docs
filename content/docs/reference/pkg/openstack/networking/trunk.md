@@ -14,11 +14,17 @@ Manages a networking V2 trunk resource within OpenStack.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using OpenStack = Pulumi.OpenStack;
@@ -94,9 +100,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -174,9 +183,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_openstack as openstack
@@ -211,9 +223,12 @@ instance1 = openstack.compute.Instance("instance1",
     security_groups=["default"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -254,9 +269,16 @@ const instance1 = new openstack.compute.Instance("instance_1", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Trunk Resource {#create}
@@ -281,9 +303,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -291,9 +311,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -301,9 +319,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -311,10 +327,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -340,9 +353,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -350,9 +361,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -360,9 +369,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -370,9 +377,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -380,18 +385,13 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -399,9 +399,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -409,9 +407,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -419,10 +415,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -438,7 +431,6 @@ The Trunk resource accepts the following [input]({{< relref "/docs/intro/concept
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="portid_csharp">
@@ -533,7 +525,6 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="portid_go">
@@ -628,7 +619,6 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="portid_nodejs">
@@ -723,7 +713,6 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="port_id_python">
@@ -825,7 +814,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="alltags_csharp">
@@ -851,7 +839,6 @@ explicitly and implicitly added.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="alltags_go">
@@ -877,7 +864,6 @@ explicitly and implicitly added.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="alltags_nodejs">
@@ -903,7 +889,6 @@ explicitly and implicitly added.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="all_tags_python">
@@ -1052,7 +1037,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_csharp">
@@ -1158,7 +1142,6 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_go">
@@ -1264,7 +1247,6 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_nodejs">
@@ -1370,7 +1352,6 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_admin_state_up_python">
@@ -1487,7 +1468,6 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="portid_csharp">
@@ -1523,7 +1503,6 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="portid_go">
@@ -1559,7 +1538,6 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="portid_nodejs">
@@ -1595,7 +1573,6 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="port_id_python">

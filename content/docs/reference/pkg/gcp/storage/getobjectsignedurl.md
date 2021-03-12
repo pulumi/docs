@@ -75,11 +75,17 @@ class MyStack : Stack
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -101,9 +107,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -131,9 +140,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -143,9 +155,12 @@ artifact = gcp.storage.get_object_signed_url(bucket="install_binaries",
 vm = gcp.compute.Instance("vm")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -158,9 +173,16 @@ const artifact = pulumi.output(gcp.storage.getObjectSignedUrl({
 const vm = new gcp.compute.Instance("vm", {});
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getObjectSignedUrl {#using}
@@ -199,7 +221,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
@@ -290,7 +311,6 @@ Any header starting with `x-goog-` is accepted but see the [Google Docs](https:/
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucket_go">
@@ -381,7 +401,6 @@ Any header starting with `x-goog-` is accepted but see the [Google Docs](https:/
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
@@ -472,7 +491,6 @@ Any header starting with `x-goog-` is accepted but see the [Google Docs](https:/
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucket_python">
@@ -572,7 +590,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="bucket_csharp">
@@ -670,7 +687,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="bucket_go">
@@ -768,7 +784,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="bucket_nodejs">
@@ -866,7 +881,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="bucket_python">

@@ -35,11 +35,17 @@ for more information.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -64,9 +70,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -93,9 +102,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -110,9 +122,12 @@ cheap_worker = aws.ec2.SpotInstanceRequest("cheapWorker",
     })
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -129,9 +144,16 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SpotInstanceRequest Resource {#create}
@@ -156,9 +178,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -166,9 +186,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -176,9 +194,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -186,10 +202,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -215,9 +228,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -225,9 +236,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -235,9 +244,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -245,9 +252,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -255,18 +260,13 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -274,9 +274,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -284,9 +282,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -294,10 +290,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -313,7 +306,6 @@ The SpotInstanceRequest resource accepts the following [input]({{< relref "/docs
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ami_csharp">
@@ -765,7 +757,6 @@ timeout of 10m is reached.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ami_go">
@@ -1217,7 +1208,6 @@ timeout of 10m is reached.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ami_nodejs">
@@ -1669,7 +1659,6 @@ timeout of 10m is reached.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ami_python">
@@ -2128,7 +2117,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_csharp">
@@ -2256,7 +2244,6 @@ the Spot Instance request.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_go">
@@ -2384,7 +2371,6 @@ the Spot Instance request.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_nodejs">
@@ -2512,7 +2498,6 @@ the Spot Instance request.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_python">
@@ -2763,7 +2748,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ami_csharp">
@@ -3328,7 +3312,6 @@ timeout of 10m is reached.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ami_go">
@@ -3893,7 +3876,6 @@ timeout of 10m is reached.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ami_nodejs">
@@ -4458,7 +4440,6 @@ timeout of 10m is reached.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ami_python">
@@ -5034,7 +5015,6 @@ timeout of 10m is reached.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpucredits_csharp">
@@ -5050,7 +5030,6 @@ timeout of 10m is reached.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpucredits_go">
@@ -5066,7 +5045,6 @@ timeout of 10m is reached.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpucredits_nodejs">
@@ -5082,7 +5060,6 @@ timeout of 10m is reached.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cpu_credits_python">
@@ -5100,7 +5077,6 @@ timeout of 10m is reached.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
@@ -5215,7 +5191,6 @@ timeout of 10m is reached.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_go">
@@ -5330,7 +5305,6 @@ timeout of 10m is reached.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
@@ -5445,7 +5419,6 @@ timeout of 10m is reached.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="device_name_python">
@@ -5562,7 +5535,6 @@ timeout of 10m is reached.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
@@ -5578,7 +5550,6 @@ timeout of 10m is reached.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
@@ -5594,7 +5565,6 @@ timeout of 10m is reached.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
@@ -5610,7 +5580,6 @@ timeout of 10m is reached.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
@@ -5628,7 +5597,6 @@ timeout of 10m is reached.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
@@ -5664,7 +5632,6 @@ timeout of 10m is reached.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_go">
@@ -5700,7 +5667,6 @@ timeout of 10m is reached.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
@@ -5736,7 +5702,6 @@ timeout of 10m is reached.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="device_name_python">
@@ -5774,7 +5739,6 @@ timeout of 10m is reached.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="httpendpoint_csharp">
@@ -5810,7 +5774,6 @@ timeout of 10m is reached.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="httpendpoint_go">
@@ -5846,7 +5809,6 @@ timeout of 10m is reached.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="httpendpoint_nodejs">
@@ -5882,7 +5844,6 @@ timeout of 10m is reached.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="http_endpoint_python">
@@ -5920,7 +5881,6 @@ timeout of 10m is reached.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="deviceindex_csharp">
@@ -5956,7 +5916,6 @@ timeout of 10m is reached.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="deviceindex_go">
@@ -5992,7 +5951,6 @@ timeout of 10m is reached.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="deviceindex_nodejs">
@@ -6028,7 +5986,6 @@ timeout of 10m is reached.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="device_index_python">
@@ -6066,7 +6023,6 @@ timeout of 10m is reached.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_csharp">
@@ -6171,7 +6127,6 @@ timeout of 10m is reached.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_go">
@@ -6276,7 +6231,6 @@ timeout of 10m is reached.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_nodejs">
@@ -6381,7 +6335,6 @@ timeout of 10m is reached.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="delete_on_termination_python">

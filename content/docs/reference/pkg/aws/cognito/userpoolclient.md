@@ -13,11 +13,17 @@ meta_desc: "Documentation for the aws.cognito.UserPoolClient resource with examp
 Provides a Cognito User Pool Client resource.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create a basic user pool client
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -38,9 +44,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -66,9 +75,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -77,9 +89,12 @@ pool = aws.cognito.UserPool("pool")
 client = aws.cognito.UserPoolClient("client", user_pool_id=pool.id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -89,10 +104,17 @@ const pool = new aws.cognito.UserPool("pool", {});
 const client = new aws.cognito.UserPoolClient("client", {userPoolId: pool.id});
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create a user pool client with no SRP authentication
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -118,9 +140,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -150,9 +175,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -164,9 +192,12 @@ client = aws.cognito.UserPoolClient("client",
     explicit_auth_flows=["ADMIN_NO_SRP_AUTH"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -180,10 +211,17 @@ const client = new aws.cognito.UserPoolClient("client", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create a user pool client with pinpoint analytics
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -255,9 +293,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -317,9 +358,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -367,9 +411,12 @@ test_user_pool_client = aws.cognito.UserPoolClient("testUserPoolClient",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -420,9 +467,16 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("testUserPoolClient", 
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a UserPoolClient Resource {#create}
@@ -447,9 +501,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("testUserPoolClient", 
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -457,9 +509,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("testUserPoolClient", 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -467,9 +517,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("testUserPoolClient", 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -477,10 +525,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("testUserPoolClient", 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -506,9 +551,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("testUserPoolClient", 
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -516,9 +559,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("testUserPoolClient", 
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -526,9 +567,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("testUserPoolClient", 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -536,9 +575,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("testUserPoolClient", 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -546,18 +583,13 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("testUserPoolClient", 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -565,9 +597,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("testUserPoolClient", 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -575,9 +605,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("testUserPoolClient", 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -585,10 +613,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("testUserPoolClient", 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -604,7 +629,6 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="userpoolid_csharp">
@@ -770,7 +794,6 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="userpoolid_go">
@@ -936,7 +959,6 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="userpoolid_nodejs">
@@ -1102,7 +1124,6 @@ The UserPoolClient resource accepts the following [input]({{< relref "/docs/intr
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="user_pool_id_python">
@@ -1275,7 +1296,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="clientsecret_csharp">
@@ -1300,7 +1320,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="clientsecret_go">
@@ -1325,7 +1344,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="clientsecret_nodejs">
@@ -1350,7 +1368,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="client_secret_python">
@@ -1498,7 +1515,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowedoauthflows_csharp">
@@ -1674,7 +1690,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowedoauthflows_go">
@@ -1850,7 +1865,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowedoauthflows_nodejs">
@@ -2026,7 +2040,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowed_oauth_flows_python">
@@ -2213,7 +2226,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="applicationarn_csharp">
@@ -2269,7 +2281,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="applicationarn_go">
@@ -2325,7 +2336,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="applicationarn_nodejs">
@@ -2381,7 +2391,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="application_arn_python">

@@ -35,9 +35,7 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -45,9 +43,7 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -55,9 +51,7 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -65,10 +59,7 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -94,9 +85,7 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -104,9 +93,7 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -114,9 +101,7 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -124,9 +109,7 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -134,18 +117,13 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +131,7 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +139,7 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +147,7 @@ meta_desc: "Documentation for the vsphere.VirtualMachine resource with examples,
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -192,7 +163,6 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcepoolid_csharp">
@@ -999,7 +969,6 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcepoolid_go">
@@ -1806,7 +1775,6 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcepoolid_nodejs">
@@ -2613,7 +2581,6 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resource_pool_id_python">
@@ -3427,7 +3394,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="changeversion_csharp">
@@ -3564,7 +3530,6 @@ datastore.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="changeversion_go">
@@ -3701,7 +3666,6 @@ datastore.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="changeversion_nodejs">
@@ -3838,7 +3802,6 @@ datastore.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="change_version_python">
@@ -4098,7 +4061,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_alternateguestname_csharp">
@@ -5027,7 +4989,6 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_alternateguestname_go">
@@ -5956,7 +5917,6 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_alternateguestname_nodejs">
@@ -6885,7 +6845,6 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_alternate_guest_name_python">
@@ -7825,7 +7784,6 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clientdevice_csharp">
@@ -7887,7 +7845,6 @@ ISO. Conflicts with `client_device`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clientdevice_go">
@@ -7949,7 +7906,6 @@ ISO. Conflicts with `client_device`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clientdevice_nodejs">
@@ -8011,7 +7967,6 @@ ISO. Conflicts with `client_device`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="client_device_python">
@@ -8075,7 +8030,6 @@ ISO. Conflicts with `client_device`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="templateuuid_csharp">
@@ -8135,7 +8089,6 @@ ISO. Conflicts with `client_device`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="templateuuid_go">
@@ -8195,7 +8148,6 @@ ISO. Conflicts with `client_device`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="templateuuid_nodejs">
@@ -8255,7 +8207,6 @@ ISO. Conflicts with `client_device`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="template_uuid_python">
@@ -8317,7 +8268,6 @@ ISO. Conflicts with `client_device`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dnsserverlists_csharp">
@@ -8407,7 +8357,6 @@ below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dnsserverlists_go">
@@ -8497,7 +8446,6 @@ below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dnsserverlists_nodejs">
@@ -8587,7 +8535,6 @@ below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dns_server_lists_python">
@@ -8679,7 +8626,6 @@ below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="domain_csharp">
@@ -8721,7 +8667,6 @@ below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="domain_go">
@@ -8763,7 +8708,6 @@ below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="domain_nodejs">
@@ -8805,7 +8749,6 @@ below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="domain_python">
@@ -8849,7 +8792,6 @@ below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dnsdomain_csharp">
@@ -8909,7 +8851,6 @@ below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dnsdomain_go">
@@ -8969,7 +8910,6 @@ below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dnsdomain_nodejs">
@@ -9029,7 +8969,6 @@ below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dns_domain_python">
@@ -9091,7 +9030,6 @@ below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="computername_csharp">
@@ -9214,7 +9152,6 @@ below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="computername_go">
@@ -9337,7 +9274,6 @@ below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="computername_nodejs">
@@ -9460,7 +9396,6 @@ below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="computer_name_python">
@@ -9585,7 +9520,6 @@ below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="attach_csharp">
@@ -9854,7 +9788,6 @@ directly to the filesystem immediately instead of being buffered. Default:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="attach_go">
@@ -10123,7 +10056,6 @@ directly to the filesystem immediately instead of being buffered. Default:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="attach_nodejs">
@@ -10392,7 +10324,6 @@ directly to the filesystem immediately instead of being buffered. Default:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="attach_python">
@@ -10663,7 +10594,6 @@ directly to the filesystem immediately instead of being buffered. Default:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="networkid_csharp">
@@ -10795,7 +10725,6 @@ a static MAC address and set accordingly. Setting this to `true` requires
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="networkid_go">
@@ -10927,7 +10856,6 @@ a static MAC address and set accordingly. Setting this to `true` requires
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="networkid_nodejs">
@@ -11059,7 +10987,6 @@ a static MAC address and set accordingly. Setting this to `true` requires
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="network_id_python">
@@ -11193,7 +11120,6 @@ a static MAC address and set accordingly. Setting this to `true` requires
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowunverifiedsslcert_csharp">
@@ -11262,7 +11188,6 @@ a static MAC address and set accordingly. Setting this to `true` requires
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowunverifiedsslcert_go">
@@ -11331,7 +11256,6 @@ a static MAC address and set accordingly. Setting this to `true` requires
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowunverifiedsslcert_nodejs">
@@ -11400,7 +11324,6 @@ a static MAC address and set accordingly. Setting this to `true` requires
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_unverified_ssl_cert_python">
@@ -11471,7 +11394,6 @@ a static MAC address and set accordingly. Setting this to `true` requires
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
@@ -11486,7 +11408,6 @@ a static MAC address and set accordingly. Setting this to `true` requires
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_go">
@@ -11501,7 +11422,6 @@ a static MAC address and set accordingly. Setting this to `true` requires
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
@@ -11516,7 +11436,6 @@ a static MAC address and set accordingly. Setting this to `true` requires
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="properties_python">

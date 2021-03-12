@@ -1,6 +1,6 @@
 ---
-title: "eks"
-title_tag: "eks.eks"
+title: "EKS"
+title_tag: "eks.EKS"
 meta_desc: "Pulumi Amazon Web Services (AWS) EKS Components."
 menu:
     reference:

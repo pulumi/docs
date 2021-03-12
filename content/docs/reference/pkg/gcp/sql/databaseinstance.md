@@ -53,9 +53,7 @@ Database instances can be imported using one of any of these accepted formats
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -63,9 +61,7 @@ Database instances can be imported using one of any of these accepted formats
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -73,9 +69,7 @@ Database instances can be imported using one of any of these accepted formats
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -83,10 +77,7 @@ Database instances can be imported using one of any of these accepted formats
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -112,9 +103,7 @@ Database instances can be imported using one of any of these accepted formats
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -122,9 +111,7 @@ Database instances can be imported using one of any of these accepted formats
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -132,9 +119,7 @@ Database instances can be imported using one of any of these accepted formats
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -142,9 +127,7 @@ Database instances can be imported using one of any of these accepted formats
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -152,18 +135,13 @@ Database instances can be imported using one of any of these accepted formats
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -171,9 +149,7 @@ Database instances can be imported using one of any of these accepted formats
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -181,9 +157,7 @@ Database instances can be imported using one of any of these accepted formats
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -191,10 +165,7 @@ Database instances can be imported using one of any of these accepted formats
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -210,7 +181,6 @@ The DatabaseInstance resource accepts the following [input]({{< relref "/docs/in
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clone_csharp">
@@ -357,7 +327,6 @@ configuration is detailed below. Required if `clone` is not set.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clone_go">
@@ -504,7 +473,6 @@ configuration is detailed below. Required if `clone` is not set.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clone_nodejs">
@@ -651,7 +619,6 @@ configuration is detailed below. Required if `clone` is not set.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clone_python">
@@ -805,7 +772,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="connectionname_csharp">
@@ -900,7 +866,6 @@ instance.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="connectionname_go">
@@ -995,7 +960,6 @@ instance.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="connectionname_nodejs">
@@ -1090,7 +1054,6 @@ instance.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="connection_name_python">
@@ -1308,7 +1271,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clone_csharp">
@@ -1535,7 +1497,6 @@ configuration is detailed below. Required if `clone` is not set.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clone_go">
@@ -1762,7 +1723,6 @@ configuration is detailed below. Required if `clone` is not set.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clone_nodejs">
@@ -1989,7 +1949,6 @@ configuration is detailed below. Required if `clone` is not set.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clone_python">
@@ -2227,7 +2186,6 @@ configuration is detailed below. Required if `clone` is not set.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pointintime_csharp">
@@ -2253,7 +2211,6 @@ configuration is detailed below. Required if `clone` is not set.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pointintime_go">
@@ -2279,7 +2236,6 @@ configuration is detailed below. Required if `clone` is not set.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pointintime_nodejs">
@@ -2305,7 +2261,6 @@ configuration is detailed below. Required if `clone` is not set.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="point_in_time_python">
@@ -2333,7 +2288,6 @@ configuration is detailed below. Required if `clone` is not set.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
@@ -2366,7 +2320,6 @@ configuration is detailed below. Required if `clone` is not set.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
@@ -2399,7 +2352,6 @@ configuration is detailed below. Required if `clone` is not set.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
@@ -2432,7 +2384,6 @@ configuration is detailed below. Required if `clone` is not set.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
@@ -2467,7 +2418,6 @@ configuration is detailed below. Required if `clone` is not set.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cacertificate_csharp">
@@ -2592,7 +2542,6 @@ value is checked during the SSL handshake.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cacertificate_go">
@@ -2717,7 +2666,6 @@ value is checked during the SSL handshake.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cacertificate_nodejs">
@@ -2842,7 +2790,6 @@ value is checked during the SSL handshake.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ca_certificate_python">
@@ -2969,7 +2916,6 @@ value is checked during the SSL handshake.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backuprunid_csharp">
@@ -3006,7 +2952,6 @@ this instance's ID will be used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backuprunid_go">
@@ -3043,7 +2988,6 @@ this instance's ID will be used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backuprunid_nodejs">
@@ -3080,7 +3024,6 @@ this instance's ID will be used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backup_run_id_python">
@@ -3119,7 +3062,6 @@ this instance's ID will be used.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cert_csharp">
@@ -3172,7 +3114,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cert_go">
@@ -3225,7 +3166,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cert_nodejs">
@@ -3278,7 +3218,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cert_python">
@@ -3333,7 +3272,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tier_csharp">
@@ -3528,7 +3466,6 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tier_go">
@@ -3723,7 +3660,6 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tier_nodejs">
@@ -3918,7 +3854,6 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tier_python">
@@ -4115,7 +4050,6 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="binarylogenabled_csharp">
@@ -4174,7 +4108,6 @@ configuration starts.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="binarylogenabled_go">
@@ -4233,7 +4166,6 @@ configuration starts.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="binarylogenabled_nodejs">
@@ -4292,7 +4224,6 @@ configuration starts.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="binary_log_enabled_python">
@@ -4353,7 +4284,6 @@ configuration starts.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -4381,7 +4311,6 @@ the whitelist to become active.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -4409,7 +4338,6 @@ the whitelist to become active.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -4437,7 +4365,6 @@ the whitelist to become active.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -4467,7 +4394,6 @@ the whitelist to become active.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="queryinsightsenabled_csharp">
@@ -4509,7 +4435,6 @@ the whitelist to become active.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="queryinsightsenabled_go">
@@ -4551,7 +4476,6 @@ the whitelist to become active.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="queryinsightsenabled_nodejs">
@@ -4593,7 +4517,6 @@ the whitelist to become active.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_insights_enabled_python">
@@ -4637,7 +4560,6 @@ the whitelist to become active.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="authorizednetworks_csharp">
@@ -4688,7 +4610,6 @@ This setting can be updated, but it cannot be removed after it is set.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="authorizednetworks_go">
@@ -4739,7 +4660,6 @@ This setting can be updated, but it cannot be removed after it is set.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="authorizednetworks_nodejs">
@@ -4790,7 +4710,6 @@ This setting can be updated, but it cannot be removed after it is set.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="authorized_networks_python">
@@ -4843,7 +4762,6 @@ This setting can be updated, but it cannot be removed after it is set.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
@@ -4882,7 +4800,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="value_go">
@@ -4921,7 +4838,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
@@ -4960,7 +4876,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="value_python">
@@ -5001,7 +4916,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="followgaeapplication_csharp">
@@ -5029,7 +4943,6 @@ in. Must be in the same region as this instance.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="followgaeapplication_go">
@@ -5057,7 +4970,6 @@ in. Must be in the same region as this instance.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="followgaeapplication_nodejs">
@@ -5085,7 +4997,6 @@ in. Must be in the same region as this instance.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="follow_gae_application_python">
@@ -5115,7 +5026,6 @@ in. Must be in the same region as this instance.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="day_csharp">
@@ -5152,7 +5062,6 @@ in. Must be in the same region as this instance.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="day_go">
@@ -5189,7 +5098,6 @@ in. Must be in the same region as this instance.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="day_nodejs">
@@ -5226,7 +5134,6 @@ in. Must be in the same region as this instance.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="day_python">

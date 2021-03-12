@@ -55,7 +55,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cidrblock_csharp">
@@ -134,7 +133,6 @@ a pair on the desired VPC.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cidrblock_go">
@@ -213,7 +211,6 @@ a pair on the desired VPC.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cidrblock_nodejs">
@@ -292,7 +289,6 @@ a pair on the desired VPC.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cidr_block_python">
@@ -380,7 +376,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_csharp">
@@ -541,7 +536,6 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_go">
@@ -702,7 +696,6 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_nodejs">
@@ -863,7 +856,6 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_python">
@@ -1034,7 +1026,6 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="associationid_csharp">
@@ -1071,7 +1062,6 @@ Can be either `"pending"` or `"available"`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="associationid_go">
@@ -1108,7 +1098,6 @@ Can be either `"pending"` or `"available"`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="associationid_nodejs">
@@ -1145,7 +1134,6 @@ Can be either `"pending"` or `"available"`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="association_id_python">
@@ -1186,7 +1174,6 @@ Can be either `"pending"` or `"available"`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -1214,7 +1201,6 @@ A VPC will be selected if any one of the given values matches.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -1242,7 +1228,6 @@ A VPC will be selected if any one of the given values matches.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -1270,7 +1255,6 @@ A VPC will be selected if any one of the given values matches.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">

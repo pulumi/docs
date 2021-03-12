@@ -19,11 +19,17 @@ meta_desc: "Documentation for the mongodbatlas.PrivateLinkEndpointService resour
 > **NOTE:** Groups and projects are synonymous terms. You may find group_id in the official documentation.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -65,9 +71,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -115,9 +124,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -140,9 +152,12 @@ test_private_link_endpoint_service = mongodbatlas.PrivateLinkEndpointService("te
     provider_name="AWS")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -169,9 +184,16 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a PrivateLinkEndpointService Resource {#create}
@@ -196,9 +218,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -206,9 +226,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -216,9 +234,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -226,10 +242,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -255,9 +268,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -265,9 +276,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -275,9 +284,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -285,9 +292,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -295,18 +300,13 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -314,9 +314,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -324,9 +322,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -334,10 +330,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -353,7 +346,6 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="endpointserviceid_csharp">
@@ -409,7 +401,6 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="endpointserviceid_go">
@@ -465,7 +456,6 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="endpointserviceid_nodejs">
@@ -521,7 +511,6 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="endpoint_service_id_python">
@@ -584,7 +573,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="awsconnectionstatus_csharp">
@@ -671,7 +659,6 @@ Returns one of the following values:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="awsconnectionstatus_go">
@@ -758,7 +745,6 @@ Returns one of the following values:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="awsconnectionstatus_nodejs">
@@ -845,7 +831,6 @@ Returns one of the following values:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="aws_connection_status_python">
@@ -1055,7 +1040,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_awsconnectionstatus_csharp">
@@ -1183,7 +1167,6 @@ Returns one of the following values:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_awsconnectionstatus_go">
@@ -1311,7 +1294,6 @@ Returns one of the following values:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_awsconnectionstatus_nodejs">
@@ -1439,7 +1421,6 @@ Returns one of the following values:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_aws_connection_status_python">

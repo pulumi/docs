@@ -62,7 +62,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cryptokey_csharp">
@@ -90,7 +89,6 @@ encrypt the provided plaintext. This is represented by the format
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cryptokey_go">
@@ -118,7 +116,6 @@ encrypt the provided plaintext. This is represented by the format
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cryptokey_nodejs">
@@ -146,7 +143,6 @@ encrypt the provided plaintext. This is represented by the format
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="crypto_key_python">
@@ -183,7 +179,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="ciphertext_csharp">
@@ -227,7 +222,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="ciphertext_go">
@@ -271,7 +265,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="ciphertext_nodejs">
@@ -315,7 +308,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="ciphertext_python">

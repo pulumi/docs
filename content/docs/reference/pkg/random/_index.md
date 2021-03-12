@@ -1,6 +1,6 @@
 ---
 title: "Random"
-title_tag: "Module Random | Package Random"
+title_tag: "random.Random"
 meta_desc: "A Pulumi package to safely use randomness in Pulumi programs."
 menu:
     reference:

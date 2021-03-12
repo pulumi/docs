@@ -14,11 +14,17 @@ UrlMaps are used to route requests to a backend service based on rules
 that you define for the host and path of an incoming URL.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Region Url Map Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -116,9 +122,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -211,9 +220,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -265,9 +277,12 @@ regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -324,10 +339,17 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Region Url Map L7 Ilb Path
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -507,9 +529,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -660,9 +685,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -759,9 +787,12 @@ regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -861,10 +892,17 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Region Url Map L7 Ilb Path Partial
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -984,9 +1022,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -1091,9 +1132,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -1158,9 +1202,12 @@ regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1228,10 +1275,17 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Region Url Map L7 Ilb Route
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -1379,9 +1433,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -1508,9 +1565,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -1585,9 +1645,12 @@ regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1665,10 +1728,17 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Region Url Map L7 Ilb Route Partial
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -1771,9 +1841,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -1865,9 +1938,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -1917,9 +1993,12 @@ regionurlmap = gcp.compute.RegionUrlMap("regionurlmap",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1972,9 +2051,16 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a RegionUrlMap Resource {#create}
@@ -1999,9 +2085,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -2009,9 +2093,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -2019,9 +2101,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -2029,10 +2109,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -2058,9 +2135,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -2068,9 +2143,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -2078,9 +2151,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -2088,9 +2159,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -2098,18 +2167,13 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -2117,9 +2181,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -2127,9 +2189,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -2137,10 +2197,7 @@ const regionurlmap = new gcp.compute.RegionUrlMap("regionurlmap", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -2156,7 +2213,6 @@ The RegionUrlMap resource accepts the following [input]({{< relref "/docs/intro/
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultservice_csharp">
@@ -2264,7 +2320,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultservice_go">
@@ -2372,7 +2427,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultservice_nodejs">
@@ -2480,7 +2534,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="default_service_python">
@@ -2595,7 +2648,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="creationtimestamp_csharp">
@@ -2650,7 +2702,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="creationtimestamp_go">
@@ -2705,7 +2756,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="creationtimestamp_nodejs">
@@ -2760,7 +2810,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="creation_timestamp_python">
@@ -2938,7 +2987,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_csharp">
@@ -3086,7 +3134,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_go">
@@ -3234,7 +3281,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_nodejs">
@@ -3382,7 +3428,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creation_timestamp_python">
@@ -3541,7 +3586,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="stripquery_csharp">
@@ -3629,7 +3673,6 @@ the request method will be retained.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="stripquery_go">
@@ -3717,7 +3760,6 @@ the request method will be retained.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="stripquery_nodejs">
@@ -3805,7 +3847,6 @@ the request method will be retained.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="strip_query_python">
@@ -3895,7 +3936,6 @@ the request method will be retained.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="hosts_csharp">
@@ -3935,7 +3975,6 @@ the URL if the hostRule matches the URL's host portion.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="hosts_go">
@@ -3975,7 +4014,6 @@ the URL if the hostRule matches the URL's host portion.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="hosts_nodejs">
@@ -4015,7 +4053,6 @@ the URL if the hostRule matches the URL's host portion.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="hosts_python">
@@ -4057,7 +4094,6 @@ the URL if the hostRule matches the URL's host portion.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -4141,7 +4177,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -4225,7 +4260,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -4309,7 +4343,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -4395,7 +4428,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="stripquery_csharp">
@@ -4483,7 +4515,6 @@ the request method will be retained.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="stripquery_go">
@@ -4571,7 +4602,6 @@ the request method will be retained.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="stripquery_nodejs">
@@ -4659,7 +4689,6 @@ the request method will be retained.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="strip_query_python">
@@ -4749,7 +4778,6 @@ the request method will be retained.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="paths_csharp">
@@ -4807,7 +4835,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="paths_go">
@@ -4865,7 +4892,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="paths_nodejs">
@@ -4923,7 +4949,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="paths_python">
@@ -4983,7 +5008,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="corspolicy_csharp">
@@ -5087,7 +5111,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="corspolicy_go">
@@ -5191,7 +5214,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="corspolicy_nodejs">
@@ -5295,7 +5317,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cors_policy_python">
@@ -5401,7 +5422,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_csharp">
@@ -5493,7 +5513,6 @@ translates to the content for the Access-Control-Max-Age header.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_go">
@@ -5585,7 +5604,6 @@ translates to the content for the Access-Control-Max-Age header.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_nodejs">
@@ -5677,7 +5695,6 @@ translates to the content for the Access-Control-Max-Age header.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_python">
@@ -5771,7 +5788,6 @@ translates to the content for the Access-Control-Max-Age header.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="abort_csharp">
@@ -5801,7 +5817,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="abort_go">
@@ -5831,7 +5846,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="abort_nodejs">
@@ -5861,7 +5875,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="abort_python">
@@ -5893,7 +5906,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="httpstatus_csharp">
@@ -5922,7 +5934,6 @@ be introduced as part of fault injection. The value must be between 0.0 and
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="httpstatus_go">
@@ -5951,7 +5962,6 @@ be introduced as part of fault injection. The value must be between 0.0 and
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="httpstatus_nodejs">
@@ -5980,7 +5990,6 @@ be introduced as part of fault injection. The value must be between 0.0 and
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="http_status_python">
@@ -6011,7 +6020,6 @@ be introduced as part of fault injection. The value must be between 0.0 and
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="fixeddelay_csharp">
@@ -6040,7 +6048,6 @@ be introduced as part of fault injection. The value must be between 0.0 and
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="fixeddelay_go">
@@ -6069,7 +6076,6 @@ be introduced as part of fault injection. The value must be between 0.0 and
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="fixeddelay_nodejs">
@@ -6098,7 +6104,6 @@ be introduced as part of fault injection. The value must be between 0.0 and
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="fixed_delay_python">
@@ -6129,7 +6134,6 @@ be introduced as part of fault injection. The value must be between 0.0 and
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_csharp">
@@ -6158,7 +6162,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_go">
@@ -6187,7 +6190,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_nodejs">
@@ -6216,7 +6218,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_python">
@@ -6247,7 +6248,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backendservice_csharp">
@@ -6265,7 +6265,6 @@ headerActions specified as part of this backendServiceWeight.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backendservice_go">
@@ -6283,7 +6282,6 @@ headerActions specified as part of this backendServiceWeight.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backendservice_nodejs">
@@ -6301,7 +6299,6 @@ headerActions specified as part of this backendServiceWeight.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backend_service_python">
@@ -6321,7 +6318,6 @@ headerActions specified as part of this backendServiceWeight.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="numretries_csharp">
@@ -6378,7 +6374,6 @@ the gRPC status code in the response header is set to unavailable
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="numretries_go">
@@ -6435,7 +6430,6 @@ the gRPC status code in the response header is set to unavailable
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="numretries_nodejs">
@@ -6492,7 +6486,6 @@ the gRPC status code in the response header is set to unavailable
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="num_retries_python">
@@ -6551,7 +6544,6 @@ the gRPC status code in the response header is set to unavailable
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_csharp">
@@ -6580,7 +6572,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_go">
@@ -6609,7 +6600,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_nodejs">
@@ -6638,7 +6628,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_python">
@@ -6669,7 +6658,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_csharp">
@@ -6698,7 +6686,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_go">
@@ -6727,7 +6714,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_nodejs">
@@ -6756,7 +6742,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_python">
@@ -6787,7 +6772,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostrewrite_csharp">
@@ -6817,7 +6801,6 @@ be between 1 and 1024 characters.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostrewrite_go">
@@ -6847,7 +6830,6 @@ be between 1 and 1024 characters.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostrewrite_nodejs">
@@ -6877,7 +6859,6 @@ be between 1 and 1024 characters.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_rewrite_python">
@@ -6909,7 +6890,6 @@ be between 1 and 1024 characters.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backendservice_csharp">
@@ -6955,7 +6935,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backendservice_go">
@@ -7001,7 +6980,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backendservice_nodejs">
@@ -7047,7 +7025,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backend_service_python">
@@ -7095,7 +7072,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_csharp">
@@ -7146,7 +7122,6 @@ prior to sending the response back to the client.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_go">
@@ -7197,7 +7172,6 @@ prior to sending the response back to the client.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_nodejs">
@@ -7248,7 +7222,6 @@ prior to sending the response back to the client.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="request_headers_to_adds_python">
@@ -7301,7 +7274,6 @@ prior to sending the response back to the client.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="headername_csharp">
@@ -7339,7 +7311,6 @@ were set for that header.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="headername_go">
@@ -7377,7 +7348,6 @@ were set for that header.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="headername_nodejs">
@@ -7415,7 +7385,6 @@ were set for that header.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="header_name_python">
@@ -7455,7 +7424,6 @@ were set for that header.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="headername_csharp">
@@ -7493,7 +7461,6 @@ were set for that header.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="headername_go">
@@ -7531,7 +7498,6 @@ were set for that header.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="headername_nodejs">
@@ -7569,7 +7535,6 @@ were set for that header.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="header_name_python">
@@ -7609,7 +7574,6 @@ were set for that header.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="stripquery_csharp">
@@ -7697,7 +7661,6 @@ the request method will be retained.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="stripquery_go">
@@ -7785,7 +7748,6 @@ the request method will be retained.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="stripquery_nodejs">
@@ -7873,7 +7835,6 @@ the request method will be retained.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="strip_query_python">
@@ -7963,7 +7924,6 @@ the request method will be retained.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="priority_csharp">
@@ -8054,7 +8014,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="priority_go">
@@ -8145,7 +8104,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="priority_nodejs">
@@ -8236,7 +8194,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="priority_python">
@@ -8329,7 +8286,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_csharp">
@@ -8380,7 +8336,6 @@ prior to sending the response back to the client.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_go">
@@ -8431,7 +8386,6 @@ prior to sending the response back to the client.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_nodejs">
@@ -8482,7 +8436,6 @@ prior to sending the response back to the client.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="request_headers_to_adds_python">
@@ -8535,7 +8488,6 @@ prior to sending the response back to the client.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="headername_csharp">
@@ -8573,7 +8525,6 @@ were set for that header.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="headername_go">
@@ -8611,7 +8562,6 @@ were set for that header.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="headername_nodejs">
@@ -8649,7 +8599,6 @@ were set for that header.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="header_name_python">
@@ -8689,7 +8638,6 @@ were set for that header.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="headername_csharp">
@@ -8727,7 +8675,6 @@ were set for that header.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="headername_go">
@@ -8765,7 +8712,6 @@ were set for that header.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="headername_nodejs">
@@ -8803,7 +8749,6 @@ were set for that header.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="header_name_python">
@@ -8843,7 +8788,6 @@ were set for that header.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fullpathmatch_csharp">
@@ -8944,7 +8888,6 @@ exactMatch and regexMatch must be set.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fullpathmatch_go">
@@ -9045,7 +8988,6 @@ exactMatch and regexMatch must be set.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fullpathmatch_nodejs">
@@ -9146,7 +9088,6 @@ exactMatch and regexMatch must be set.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="full_path_match_python">
@@ -9249,7 +9190,6 @@ exactMatch and regexMatch must be set.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="headername_csharp">
@@ -9357,7 +9297,6 @@ must be set.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="headername_go">
@@ -9465,7 +9404,6 @@ must be set.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="headername_nodejs">
@@ -9573,7 +9511,6 @@ must be set.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="header_name_python">
@@ -9683,7 +9620,6 @@ must be set.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="rangeend_csharp">
@@ -9709,7 +9645,6 @@ must be set.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="rangeend_go">
@@ -9735,7 +9670,6 @@ must be set.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="rangeend_nodejs">
@@ -9761,7 +9695,6 @@ must be set.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="range_end_python">
@@ -9789,7 +9722,6 @@ must be set.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="filterlabels_csharp">
@@ -9824,7 +9756,6 @@ Possible values are `MATCH_ALL` and `MATCH_ANY`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="filterlabels_go">
@@ -9859,7 +9790,6 @@ Possible values are `MATCH_ALL` and `MATCH_ANY`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="filterlabels_nodejs">
@@ -9894,7 +9824,6 @@ Possible values are `MATCH_ALL` and `MATCH_ANY`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="filter_labels_python">
@@ -9931,7 +9860,6 @@ Possible values are `MATCH_ALL` and `MATCH_ANY`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -9959,7 +9887,6 @@ length of 1024 characters.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -9987,7 +9914,6 @@ length of 1024 characters.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -10015,7 +9941,6 @@ length of 1024 characters.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -10045,7 +9970,6 @@ length of 1024 characters.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -10099,7 +10023,6 @@ exactMatch and regexMatch must be set.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -10153,7 +10076,6 @@ exactMatch and regexMatch must be set.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -10207,7 +10129,6 @@ exactMatch and regexMatch must be set.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -10263,7 +10184,6 @@ exactMatch and regexMatch must be set.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="corspolicy_csharp">
@@ -10367,7 +10287,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="corspolicy_go">
@@ -10471,7 +10390,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="corspolicy_nodejs">
@@ -10575,7 +10493,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cors_policy_python">
@@ -10681,7 +10598,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_csharp">
@@ -10773,7 +10689,6 @@ translates to the content for the Access-Control-Max-Age header.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_go">
@@ -10865,7 +10780,6 @@ translates to the content for the Access-Control-Max-Age header.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_nodejs">
@@ -10957,7 +10871,6 @@ translates to the content for the Access-Control-Max-Age header.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_credentials_python">
@@ -11051,7 +10964,6 @@ translates to the content for the Access-Control-Max-Age header.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="abort_csharp">
@@ -11081,7 +10993,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="abort_go">
@@ -11111,7 +11022,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="abort_nodejs">
@@ -11141,7 +11051,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="abort_python">
@@ -11173,7 +11082,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="httpstatus_csharp">
@@ -11202,7 +11110,6 @@ be introduced as part of fault injection. The value must be between 0.0 and
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="httpstatus_go">
@@ -11231,7 +11138,6 @@ be introduced as part of fault injection. The value must be between 0.0 and
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="httpstatus_nodejs">
@@ -11260,7 +11166,6 @@ be introduced as part of fault injection. The value must be between 0.0 and
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="http_status_python">
@@ -11291,7 +11196,6 @@ be introduced as part of fault injection. The value must be between 0.0 and
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixeddelay_csharp">
@@ -11320,7 +11224,6 @@ be introduced as part of fault injection. The value must be between 0.0 and
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixeddelay_go">
@@ -11349,7 +11252,6 @@ be introduced as part of fault injection. The value must be between 0.0 and
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixeddelay_nodejs">
@@ -11378,7 +11280,6 @@ be introduced as part of fault injection. The value must be between 0.0 and
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_delay_python">
@@ -11409,7 +11310,6 @@ be introduced as part of fault injection. The value must be between 0.0 and
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_csharp">
@@ -11438,7 +11338,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_go">
@@ -11467,7 +11366,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_nodejs">
@@ -11496,7 +11394,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_python">
@@ -11527,7 +11424,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backendservice_csharp">
@@ -11545,7 +11441,6 @@ headerActions specified as part of this backendServiceWeight.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backendservice_go">
@@ -11563,7 +11458,6 @@ headerActions specified as part of this backendServiceWeight.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backendservice_nodejs">
@@ -11581,7 +11475,6 @@ headerActions specified as part of this backendServiceWeight.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backend_service_python">
@@ -11601,7 +11494,6 @@ headerActions specified as part of this backendServiceWeight.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="numretries_csharp">
@@ -11658,7 +11550,6 @@ the gRPC status code in the response header is set to unavailable
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="numretries_go">
@@ -11715,7 +11606,6 @@ the gRPC status code in the response header is set to unavailable
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="numretries_nodejs">
@@ -11772,7 +11662,6 @@ the gRPC status code in the response header is set to unavailable
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="num_retries_python">
@@ -11831,7 +11720,6 @@ the gRPC status code in the response header is set to unavailable
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_csharp">
@@ -11860,7 +11748,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_go">
@@ -11889,7 +11776,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_nodejs">
@@ -11918,7 +11804,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_python">
@@ -11949,7 +11834,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_csharp">
@@ -11978,7 +11862,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_go">
@@ -12007,7 +11890,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_nodejs">
@@ -12036,7 +11918,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_python">
@@ -12067,7 +11948,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostrewrite_csharp">
@@ -12097,7 +11977,6 @@ be between 1 and 1024 characters.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostrewrite_go">
@@ -12127,7 +12006,6 @@ be between 1 and 1024 characters.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostrewrite_nodejs">
@@ -12157,7 +12035,6 @@ be between 1 and 1024 characters.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_rewrite_python">
@@ -12189,7 +12066,6 @@ be between 1 and 1024 characters.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backendservice_csharp">
@@ -12235,7 +12111,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backendservice_go">
@@ -12281,7 +12156,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backendservice_nodejs">
@@ -12327,7 +12201,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backend_service_python">
@@ -12375,7 +12248,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_csharp">
@@ -12426,7 +12298,6 @@ prior to sending the response back to the client.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_go">
@@ -12477,7 +12348,6 @@ prior to sending the response back to the client.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="requestheaderstoadds_nodejs">
@@ -12528,7 +12398,6 @@ prior to sending the response back to the client.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="request_headers_to_adds_python">
@@ -12581,7 +12450,6 @@ prior to sending the response back to the client.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="headername_csharp">
@@ -12619,7 +12487,6 @@ were set for that header.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="headername_go">
@@ -12657,7 +12524,6 @@ were set for that header.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="headername_nodejs">
@@ -12695,7 +12561,6 @@ were set for that header.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="header_name_python">
@@ -12735,7 +12600,6 @@ were set for that header.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="headername_csharp">
@@ -12773,7 +12637,6 @@ were set for that header.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="headername_go">
@@ -12811,7 +12674,6 @@ were set for that header.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="headername_nodejs">
@@ -12849,7 +12711,6 @@ were set for that header.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="header_name_python">
@@ -12889,7 +12750,6 @@ were set for that header.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostredirect_csharp">
@@ -12977,7 +12837,6 @@ This field is required to ensure an empty block is not set. The normal default v
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostredirect_go">
@@ -13065,7 +12924,6 @@ This field is required to ensure an empty block is not set. The normal default v
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="hostredirect_nodejs">
@@ -13153,7 +13011,6 @@ This field is required to ensure an empty block is not set. The normal default v
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="host_redirect_python">
@@ -13243,7 +13100,6 @@ This field is required to ensure an empty block is not set. The normal default v
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="host_csharp">
@@ -13289,7 +13145,6 @@ This field is required to ensure an empty block is not set. The normal default v
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="host_go">
@@ -13335,7 +13190,6 @@ This field is required to ensure an empty block is not set. The normal default v
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="host_nodejs">
@@ -13381,7 +13235,6 @@ This field is required to ensure an empty block is not set. The normal default v
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="host_python">

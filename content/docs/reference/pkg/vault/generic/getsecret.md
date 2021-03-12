@@ -49,7 +49,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="path_csharp">
@@ -78,7 +77,6 @@ to see which endpoints support the `GET` method.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="path_go">
@@ -107,7 +105,6 @@ to see which endpoints support the `GET` method.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="path_nodejs">
@@ -136,7 +133,6 @@ to see which endpoints support the `GET` method.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="path_python">
@@ -174,7 +170,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="data_csharp">
@@ -272,7 +267,6 @@ generated with this data may fail to apply.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="data_go">
@@ -370,7 +364,6 @@ generated with this data may fail to apply.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="data_nodejs">
@@ -468,7 +461,6 @@ generated with this data may fail to apply.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="data_python">

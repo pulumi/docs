@@ -16,11 +16,17 @@ The M3 Aggregator data source provides information about the existing Aiven M3 A
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aiven = Pulumi.Aiven;
@@ -39,9 +45,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -64,9 +73,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aiven as aiven
@@ -75,9 +87,12 @@ m3a = aiven.get_m3_aggregator(project=data["aiven_project"]["foo"]["project"],
     service_name="my-m3a")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -89,9 +104,16 @@ const m3a = aiven.getM3Aggregator({
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getM3Aggregator {#using}
@@ -130,7 +152,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_csharp">
@@ -352,7 +373,6 @@ deletion is done.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_go">
@@ -574,7 +594,6 @@ deletion is done.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_nodejs">
@@ -796,7 +815,6 @@ deletion is done.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_python">
@@ -1027,7 +1045,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="components_csharp">
@@ -1253,7 +1270,6 @@ deletion is done.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="components_go">
@@ -1479,7 +1495,6 @@ deletion is done.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="components_nodejs">
@@ -1705,7 +1720,6 @@ deletion is done.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="components_python">
@@ -1941,7 +1955,6 @@ deletion is done.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="component_csharp">
@@ -2010,7 +2023,6 @@ deletion is done.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="component_go">
@@ -2079,7 +2091,6 @@ deletion is done.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="component_nodejs">
@@ -2148,7 +2159,6 @@ deletion is done.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="component_python">
@@ -2221,7 +2231,6 @@ deletion is done.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="customdomain_csharp">
@@ -2266,7 +2275,6 @@ deletion is done.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="customdomain_go">
@@ -2311,7 +2319,6 @@ deletion is done.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="customdomain_nodejs">
@@ -2356,7 +2363,6 @@ deletion is done.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_domain_python">
@@ -2405,7 +2411,6 @@ deletion is done.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integrationtype_csharp">
@@ -2429,7 +2434,6 @@ deletion is done.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integrationtype_go">
@@ -2453,7 +2457,6 @@ deletion is done.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integrationtype_nodejs">
@@ -2477,7 +2480,6 @@ deletion is done.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integration_type_python">

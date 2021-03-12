@@ -14,11 +14,17 @@ Use this data source to access information about an existing Virtual Network Gat
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -40,9 +46,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -66,9 +75,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -78,9 +90,12 @@ example = azure.network.get_virtual_network_gateway(name="production",
 pulumi.export("virtualNetworkGatewayId", example.id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -93,9 +108,16 @@ const example = azure.network.getVirtualNetworkGateway({
 export const virtualNetworkGatewayId = example.then(example => example.id);
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getVirtualNetworkGateway {#using}
@@ -134,7 +156,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -160,7 +181,6 @@ The following arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -186,7 +206,6 @@ The following arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -212,7 +231,6 @@ The following arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -247,7 +265,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="activeactive_csharp">
@@ -424,7 +441,6 @@ for this Virtual Network Gateway.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="activeactive_go">
@@ -601,7 +617,6 @@ for this Virtual Network Gateway.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="activeactive_nodejs">
@@ -778,7 +793,6 @@ for this Virtual Network Gateway.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="active_active_python">
@@ -965,7 +979,6 @@ for this Virtual Network Gateway.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="asn_csharp">
@@ -1004,7 +1017,6 @@ on the on-premises VPN devices.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="asn_go">
@@ -1043,7 +1055,6 @@ on the on-premises VPN devices.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="asn_nodejs">
@@ -1082,7 +1093,6 @@ on the on-premises VPN devices.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="asn_python">
@@ -1125,7 +1135,6 @@ on the on-premises VPN devices.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="addressprefixes_csharp">
@@ -1141,7 +1150,6 @@ on the on-premises VPN devices.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="addressprefixes_go">
@@ -1157,7 +1165,6 @@ on the on-premises VPN devices.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="addressprefixes_nodejs">
@@ -1173,7 +1180,6 @@ on the on-premises VPN devices.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_prefixes_python">
@@ -1193,7 +1199,6 @@ on the on-premises VPN devices.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -1244,7 +1249,6 @@ network can contain at most a single Virtual Network Gateway.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -1295,7 +1299,6 @@ network can contain at most a single Virtual Network Gateway.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -1346,7 +1349,6 @@ network can contain at most a single Virtual Network Gateway.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -1401,7 +1403,6 @@ network can contain at most a single Virtual Network Gateway.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="aadaudience_csharp">
@@ -1518,7 +1519,6 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="aadaudience_go">
@@ -1635,7 +1635,6 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="aadaudience_nodejs">
@@ -1752,7 +1751,6 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="aad_audience_python">
@@ -1873,7 +1871,6 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -1898,7 +1895,6 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -1923,7 +1919,6 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -1948,7 +1943,6 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -1977,7 +1971,6 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -2003,7 +1996,6 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -2029,7 +2021,6 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -2055,7 +2046,6 @@ The supported values are `SSTP`, `IkeV2` and `OpenVPN`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">

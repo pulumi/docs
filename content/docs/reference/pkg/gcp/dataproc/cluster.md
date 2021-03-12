@@ -18,11 +18,17 @@ Manages a Cloud Dataproc cluster resource within GCP. For more information see
 whole cluster!
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -40,9 +46,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -64,9 +73,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -74,9 +86,12 @@ import pulumi_gcp as gcp
 simplecluster = gcp.dataproc.Cluster("simplecluster", region="us-central1")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -87,10 +102,17 @@ const simplecluster = new gcp.dataproc.Cluster("simplecluster", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Advanced
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -176,9 +198,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -257,9 +282,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -316,9 +344,12 @@ mycluster = gcp.dataproc.Cluster("mycluster",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -378,10 +409,17 @@ const mycluster = new gcp.dataproc.Cluster("mycluster", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Using A GPU Accelerator
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -417,9 +455,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -454,9 +495,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -476,9 +520,12 @@ accelerated_cluster = gcp.dataproc.Cluster("acceleratedCluster",
     region="us-central1")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -500,9 +547,16 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Cluster Resource {#create}
@@ -527,9 +581,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -537,9 +589,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -547,9 +597,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -557,10 +605,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -586,9 +631,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -596,9 +639,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -606,9 +647,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -616,9 +655,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -626,18 +663,13 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -645,9 +677,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -655,9 +685,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -665,10 +693,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -684,7 +709,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clusterconfig_csharp">
@@ -757,7 +781,6 @@ Defaults to `global`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clusterconfig_go">
@@ -830,7 +853,6 @@ Defaults to `global`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clusterconfig_nodejs">
@@ -903,7 +925,6 @@ Defaults to `global`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cluster_config_python">
@@ -983,7 +1004,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -998,7 +1018,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -1013,7 +1032,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1028,7 +1046,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -1166,7 +1183,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clusterconfig_csharp">
@@ -1239,7 +1255,6 @@ Defaults to `global`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clusterconfig_go">
@@ -1312,7 +1327,6 @@ Defaults to `global`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clusterconfig_nodejs">
@@ -1385,7 +1399,6 @@ Defaults to `global`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cluster_config_python">
@@ -1469,7 +1482,6 @@ Defaults to `global`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscalingconfig_csharp">
@@ -1635,7 +1647,6 @@ in a cluster.. Structure defined below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscalingconfig_go">
@@ -1801,7 +1812,6 @@ in a cluster.. Structure defined below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscalingconfig_nodejs">
@@ -1967,7 +1977,6 @@ in a cluster.. Structure defined below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaling_config_python">
@@ -2135,7 +2144,6 @@ in a cluster.. Structure defined below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="policyuri_csharp">
@@ -2151,7 +2159,6 @@ in a cluster.. Structure defined below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="policyuri_go">
@@ -2167,7 +2174,6 @@ in a cluster.. Structure defined below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="policyuri_nodejs">
@@ -2183,7 +2189,6 @@ in a cluster.. Structure defined below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="policy_uri_python">
@@ -2201,7 +2206,6 @@ in a cluster.. Structure defined below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyname_csharp">
@@ -2218,7 +2222,6 @@ all instances in the cluster.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyname_go">
@@ -2235,7 +2238,6 @@ all instances in the cluster.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyname_nodejs">
@@ -2252,7 +2254,6 @@ all instances in the cluster.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kms_key_name_python">
@@ -2271,7 +2272,6 @@ all instances in the cluster.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enablehttpportaccess_csharp">
@@ -2297,7 +2297,6 @@ on the cluster from external sources (aka Component Gateway). Defaults to false.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enablehttpportaccess_go">
@@ -2323,7 +2322,6 @@ on the cluster from external sources (aka Component Gateway). Defaults to false.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enablehttpportaccess_nodejs">
@@ -2349,7 +2347,6 @@ on the cluster from external sources (aka Component Gateway). Defaults to false.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enable_http_port_access_python">
@@ -2377,7 +2374,6 @@ on the cluster from external sources (aka Component Gateway). Defaults to false.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="internaliponly_csharp">
@@ -2483,7 +2479,6 @@ which computing resources are available for use with other configs such as
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="internaliponly_go">
@@ -2589,7 +2584,6 @@ which computing resources are available for use with other configs such as
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="internaliponly_nodejs">
@@ -2695,7 +2689,6 @@ which computing resources are available for use with other configs such as
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="internal_ip_only_python">
@@ -2803,7 +2796,6 @@ which computing resources are available for use with other configs such as
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="script_csharp">
@@ -2832,7 +2824,6 @@ computed value if not set (currently 300).
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="script_go">
@@ -2861,7 +2852,6 @@ computed value if not set (currently 300).
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="script_nodejs">
@@ -2890,7 +2880,6 @@ computed value if not set (currently 300).
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="script_python">
@@ -2921,7 +2910,6 @@ computed value if not set (currently 300).
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autodeletetime_csharp">
@@ -2959,7 +2947,6 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autodeletetime_go">
@@ -2997,7 +2984,6 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autodeletetime_nodejs">
@@ -3035,7 +3021,6 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="auto_delete_time_python">
@@ -3075,7 +3060,6 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accelerators_csharp">
@@ -3157,7 +3141,6 @@ Defaults to 0.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accelerators_go">
@@ -3239,7 +3222,6 @@ Defaults to 0.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accelerators_nodejs">
@@ -3321,7 +3303,6 @@ Defaults to 0.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accelerators_python">
@@ -3405,7 +3386,6 @@ Defaults to 0.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="acceleratorcount_csharp">
@@ -3431,7 +3411,6 @@ Defaults to 0.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="acceleratorcount_go">
@@ -3457,7 +3436,6 @@ Defaults to 0.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="acceleratorcount_nodejs">
@@ -3483,7 +3461,6 @@ Defaults to 0.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accelerator_count_python">
@@ -3511,7 +3488,6 @@ Defaults to 0.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdisksizegb_csharp">
@@ -3552,7 +3528,6 @@ attached to each preemptible worker node. Defaults to 0.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdisksizegb_go">
@@ -3593,7 +3568,6 @@ attached to each preemptible worker node. Defaults to 0.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdisksizegb_nodejs">
@@ -3634,7 +3608,6 @@ attached to each preemptible worker node. Defaults to 0.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="boot_disk_size_gb_python">
@@ -3677,7 +3650,6 @@ attached to each preemptible worker node. Defaults to 0.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="diskconfig_csharp">
@@ -3713,7 +3685,6 @@ Defaults to 0.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="diskconfig_go">
@@ -3749,7 +3720,6 @@ Defaults to 0.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="diskconfig_nodejs">
@@ -3785,7 +3755,6 @@ Defaults to 0.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="disk_config_python">
@@ -3823,7 +3792,6 @@ Defaults to 0.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdisksizegb_csharp">
@@ -3864,7 +3832,6 @@ attached to each preemptible worker node. Defaults to 0.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdisksizegb_go">
@@ -3905,7 +3872,6 @@ attached to each preemptible worker node. Defaults to 0.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdisksizegb_nodejs">
@@ -3946,7 +3912,6 @@ attached to each preemptible worker node. Defaults to 0.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="boot_disk_size_gb_python">
@@ -3989,7 +3954,6 @@ attached to each preemptible worker node. Defaults to 0.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kerberosconfig_csharp">
@@ -4005,7 +3969,6 @@ attached to each preemptible worker node. Defaults to 0.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kerberosconfig_go">
@@ -4021,7 +3984,6 @@ attached to each preemptible worker node. Defaults to 0.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kerberosconfig_nodejs">
@@ -4037,7 +3999,6 @@ attached to each preemptible worker node. Defaults to 0.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kerberos_config_python">
@@ -4055,7 +4016,6 @@ attached to each preemptible worker node. Defaults to 0.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyuri_csharp">
@@ -4227,7 +4187,6 @@ SSL encryption. If not provided, Dataproc will provide a self-signed certificate
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyuri_go">
@@ -4399,7 +4358,6 @@ SSL encryption. If not provided, Dataproc will provide a self-signed certificate
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyuri_nodejs">
@@ -4571,7 +4529,6 @@ SSL encryption. If not provided, Dataproc will provide a self-signed certificate
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kms_key_uri_python">
@@ -4745,7 +4702,6 @@ SSL encryption. If not provided, Dataproc will provide a self-signed certificate
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="imageversion_csharp">
@@ -4809,7 +4765,6 @@ a cluster. For a list of valid properties please see
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="imageversion_go">
@@ -4873,7 +4828,6 @@ a cluster. For a list of valid properties please see
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="imageversion_nodejs">
@@ -4937,7 +4891,6 @@ a cluster. For a list of valid properties please see
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="image_version_python">
@@ -5003,7 +4956,6 @@ a cluster. For a list of valid properties please see
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accelerators_csharp">
@@ -5085,7 +5037,6 @@ Defaults to 0.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accelerators_go">
@@ -5167,7 +5118,6 @@ Defaults to 0.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accelerators_nodejs">
@@ -5249,7 +5199,6 @@ Defaults to 0.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accelerators_python">
@@ -5333,7 +5282,6 @@ Defaults to 0.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="acceleratorcount_csharp">
@@ -5359,7 +5307,6 @@ Defaults to 0.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="acceleratorcount_go">
@@ -5385,7 +5332,6 @@ Defaults to 0.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="acceleratorcount_nodejs">
@@ -5411,7 +5357,6 @@ Defaults to 0.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accelerator_count_python">
@@ -5439,7 +5384,6 @@ Defaults to 0.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdisksizegb_csharp">
@@ -5480,7 +5424,6 @@ attached to each preemptible worker node. Defaults to 0.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdisksizegb_go">
@@ -5521,7 +5464,6 @@ attached to each preemptible worker node. Defaults to 0.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdisksizegb_nodejs">
@@ -5562,7 +5504,6 @@ attached to each preemptible worker node. Defaults to 0.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="boot_disk_size_gb_python">

@@ -21,11 +21,17 @@ Elasticsearch, etc.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aiven = Pulumi.Aiven;
@@ -46,9 +52,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -73,9 +82,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aiven as aiven
@@ -87,9 +99,12 @@ myintegration = aiven.ServiceIntegration("myintegration",
     source_service_name=aiven_kafka["XXX"]["service_name"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -103,9 +118,16 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ServiceIntegration Resource {#create}
@@ -130,9 +152,7 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -140,9 +160,7 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -150,9 +168,7 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -160,10 +176,7 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -189,9 +202,7 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -199,9 +210,7 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -209,9 +218,7 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -219,9 +226,7 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -229,18 +234,13 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -248,9 +248,7 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -258,9 +256,7 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -268,10 +264,7 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -287,7 +280,6 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integrationtype_csharp">
@@ -552,7 +544,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integrationtype_go">
@@ -817,7 +808,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integrationtype_nodejs">
@@ -1082,7 +1072,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integration_type_python">
@@ -1354,7 +1343,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1369,7 +1357,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -1384,7 +1371,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1399,7 +1385,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -1537,7 +1522,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_dashboarduserconfig_csharp">
@@ -1802,7 +1786,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_dashboarduserconfig_go">
@@ -2067,7 +2050,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_dashboarduserconfig_nodejs">
@@ -2332,7 +2314,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_dashboard_user_config_python">
@@ -2608,7 +2589,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludeconsumergroups_csharp">
@@ -2659,7 +2639,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludeconsumergroups_go">
@@ -2710,7 +2689,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludeconsumergroups_nodejs">
@@ -2761,7 +2739,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclude_consumer_groups_python">
@@ -2814,7 +2791,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafkaconnect_csharp">
@@ -2829,7 +2805,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafkaconnect_go">
@@ -2844,7 +2819,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafkaconnect_nodejs">
@@ -2859,7 +2833,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafka_connect_python">
@@ -2876,7 +2849,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="configstoragetopic_csharp">
@@ -2918,7 +2890,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="configstoragetopic_go">
@@ -2960,7 +2931,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="configstoragetopic_nodejs">
@@ -3002,7 +2972,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="config_storage_topic_python">
@@ -3046,7 +3015,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafkatopic_csharp">
@@ -3061,7 +3029,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafkatopic_go">
@@ -3076,7 +3043,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafkatopic_nodejs">
@@ -3091,7 +3057,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafka_topic_python">
@@ -3108,7 +3073,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clusteralias_csharp">
@@ -3123,7 +3087,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clusteralias_go">
@@ -3138,7 +3101,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clusteralias_nodejs">
@@ -3153,7 +3115,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cluster_alias_python">
@@ -3170,7 +3131,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearchindexdaysmax_csharp">
@@ -3194,7 +3154,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearchindexdaysmax_go">
@@ -3218,7 +3177,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearchindexdaysmax_nodejs">
@@ -3242,7 +3200,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_index_days_max_python">
@@ -3268,7 +3225,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="database_csharp">
@@ -3319,7 +3275,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="database_go">
@@ -3370,7 +3325,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="database_nodejs">
@@ -3421,7 +3375,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="database_python">
@@ -3474,7 +3427,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="telegraf_csharp">
@@ -3489,7 +3441,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="telegraf_go">
@@ -3504,7 +3455,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="telegraf_nodejs">
@@ -3519,7 +3469,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="telegraf_python">
@@ -3536,7 +3485,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="gathereventwaits_csharp">
@@ -3668,7 +3616,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="gathereventwaits_go">
@@ -3800,7 +3747,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="gathereventwaits_nodejs">
@@ -3932,7 +3878,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="gather_event_waits_python">
@@ -4066,7 +4011,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mirrormakerwhitelist_csharp">
@@ -4081,7 +4025,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mirrormakerwhitelist_go">
@@ -4096,7 +4039,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mirrormakerwhitelist_nodejs">
@@ -4111,7 +4053,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mirrormaker_whitelist_python">
@@ -4128,7 +4069,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcemysql_csharp">
@@ -4143,7 +4083,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcemysql_go">
@@ -4158,7 +4097,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcemysql_nodejs">
@@ -4173,7 +4111,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_mysql_python">
@@ -4190,7 +4127,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="telegraf_csharp">
@@ -4205,7 +4141,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="telegraf_go">
@@ -4220,7 +4155,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="telegraf_nodejs">
@@ -4235,7 +4169,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="telegraf_python">
@@ -4252,7 +4185,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="gathereventwaits_csharp">
@@ -4384,7 +4316,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="gathereventwaits_go">
@@ -4516,7 +4447,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="gathereventwaits_nodejs">
@@ -4648,7 +4578,6 @@ reference syntax described above to set up the dependency correctly.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="gather_event_waits_python">

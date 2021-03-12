@@ -15,11 +15,17 @@ Allows for creating and managing hardcoded role mappers for Keycloak users feder
 The LDAP hardcoded role mapper will grant a specified Keycloak role to each Keycloak user linked with LDAP.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Realm Role)
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Keycloak = Pulumi.Keycloak;
@@ -65,9 +71,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -123,9 +132,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_keycloak as keycloak
@@ -155,9 +167,12 @@ assign_admin_role_to_all_users = keycloak.ldap.HardcodedRoleMapper("assignAdminR
     role=realm_admin_role.name)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -192,10 +207,17 @@ const assignAdminRoleToAllUsers = new keycloak.ldap.HardcodedRoleMapper("assignA
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Client Role)
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Keycloak = Pulumi.Keycloak;
@@ -257,9 +279,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -315,9 +340,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_keycloak as keycloak
@@ -349,9 +377,12 @@ assign_admin_role_to_all_users = keycloak.ldap.HardcodedRoleMapper("assignAdminR
     role=pulumi.Output.all(realm_management, create_client).apply(lambda realm_management, create_client: f"{realm_management.client_id}.{create_client.name}"))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -391,9 +422,16 @@ const assignAdminRoleToAllUsers = new keycloak.ldap.HardcodedRoleMapper("assignA
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a HardcodedRoleMapper Resource {#create}
@@ -418,9 +456,7 @@ const assignAdminRoleToAllUsers = new keycloak.ldap.HardcodedRoleMapper("assignA
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -428,9 +464,7 @@ const assignAdminRoleToAllUsers = new keycloak.ldap.HardcodedRoleMapper("assignA
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -438,9 +472,7 @@ const assignAdminRoleToAllUsers = new keycloak.ldap.HardcodedRoleMapper("assignA
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -448,10 +480,7 @@ const assignAdminRoleToAllUsers = new keycloak.ldap.HardcodedRoleMapper("assignA
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -477,9 +506,7 @@ const assignAdminRoleToAllUsers = new keycloak.ldap.HardcodedRoleMapper("assignA
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -487,9 +514,7 @@ const assignAdminRoleToAllUsers = new keycloak.ldap.HardcodedRoleMapper("assignA
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -497,9 +522,7 @@ const assignAdminRoleToAllUsers = new keycloak.ldap.HardcodedRoleMapper("assignA
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -507,9 +530,7 @@ const assignAdminRoleToAllUsers = new keycloak.ldap.HardcodedRoleMapper("assignA
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -517,18 +538,13 @@ const assignAdminRoleToAllUsers = new keycloak.ldap.HardcodedRoleMapper("assignA
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -536,9 +552,7 @@ const assignAdminRoleToAllUsers = new keycloak.ldap.HardcodedRoleMapper("assignA
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -546,9 +560,7 @@ const assignAdminRoleToAllUsers = new keycloak.ldap.HardcodedRoleMapper("assignA
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -556,10 +568,7 @@ const assignAdminRoleToAllUsers = new keycloak.ldap.HardcodedRoleMapper("assignA
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -575,7 +584,6 @@ The HardcodedRoleMapper resource accepts the following [input]({{< relref "/docs
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ldapuserfederationid_csharp">
@@ -621,7 +629,6 @@ The HardcodedRoleMapper resource accepts the following [input]({{< relref "/docs
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ldapuserfederationid_go">
@@ -667,7 +674,6 @@ The HardcodedRoleMapper resource accepts the following [input]({{< relref "/docs
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ldapuserfederationid_nodejs">
@@ -713,7 +719,6 @@ The HardcodedRoleMapper resource accepts the following [input]({{< relref "/docs
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ldap_user_federation_id_python">
@@ -766,7 +771,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -781,7 +785,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -796,7 +799,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -811,7 +813,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -949,7 +950,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ldapuserfederationid_csharp">
@@ -995,7 +995,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ldapuserfederationid_go">
@@ -1041,7 +1040,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ldapuserfederationid_nodejs">
@@ -1087,7 +1085,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ldap_user_federation_id_python">

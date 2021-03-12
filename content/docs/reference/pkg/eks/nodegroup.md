@@ -37,9 +37,7 @@ NodeGroup is a component that wraps the AWS EC2 instances that provide compute c
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -47,9 +45,7 @@ NodeGroup is a component that wraps the AWS EC2 instances that provide compute c
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -57,9 +53,7 @@ NodeGroup is a component that wraps the AWS EC2 instances that provide compute c
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -67,10 +61,7 @@ NodeGroup is a component that wraps the AWS EC2 instances that provide compute c
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -96,9 +87,7 @@ NodeGroup is a component that wraps the AWS EC2 instances that provide compute c
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -106,9 +95,7 @@ NodeGroup is a component that wraps the AWS EC2 instances that provide compute c
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -116,9 +103,7 @@ NodeGroup is a component that wraps the AWS EC2 instances that provide compute c
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -126,9 +111,7 @@ NodeGroup is a component that wraps the AWS EC2 instances that provide compute c
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -136,18 +119,13 @@ NodeGroup is a component that wraps the AWS EC2 instances that provide compute c
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -155,9 +133,7 @@ NodeGroup is a component that wraps the AWS EC2 instances that provide compute c
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -165,9 +141,7 @@ NodeGroup is a component that wraps the AWS EC2 instances that provide compute c
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -175,10 +149,7 @@ NodeGroup is a component that wraps the AWS EC2 instances that provide compute c
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -194,7 +165,6 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cluster_csharp">
@@ -479,7 +449,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cluster_go">
@@ -764,7 +733,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cluster_nodejs">
@@ -1049,7 +1017,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cluster_python">
@@ -1341,7 +1308,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="autoscalinggroupname_csharp">
@@ -1374,7 +1340,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="autoscalinggroupname_go">
@@ -1407,7 +1372,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="autoscalinggroupname_nodejs">
@@ -1440,7 +1404,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="auto_scaling_group_name_python">
@@ -1485,7 +1448,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="amiid_csharp">
@@ -1761,7 +1723,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="amiid_go">
@@ -2037,7 +1998,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="amiid_nodejs">
@@ -2313,7 +2273,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ami_id_python">
@@ -2591,7 +2550,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cluster_csharp">
@@ -2768,7 +2726,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cluster_go">
@@ -2945,7 +2902,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cluster_nodejs">
@@ -3122,7 +3078,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cluster_python">
@@ -3301,7 +3256,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="effect_csharp">
@@ -3325,7 +3279,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="effect_go">
@@ -3349,7 +3302,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="effect_nodejs">
@@ -3373,7 +3325,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="effect_python">

@@ -27,11 +27,17 @@ brief downtime as the broker reboots.
 > **Note:** All arguments including the username and password will be stored in the raw state as plain-text.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -69,9 +75,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -109,9 +118,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -132,9 +144,12 @@ example = aws.mq.Broker("example",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -157,9 +172,16 @@ const example = new aws.mq.Broker("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Broker Resource {#create}
@@ -184,9 +206,7 @@ const example = new aws.mq.Broker("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -194,9 +214,7 @@ const example = new aws.mq.Broker("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -204,9 +222,7 @@ const example = new aws.mq.Broker("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -214,10 +230,7 @@ const example = new aws.mq.Broker("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -243,9 +256,7 @@ const example = new aws.mq.Broker("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -253,9 +264,7 @@ const example = new aws.mq.Broker("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -263,9 +272,7 @@ const example = new aws.mq.Broker("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -273,9 +280,7 @@ const example = new aws.mq.Broker("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -283,18 +288,13 @@ const example = new aws.mq.Broker("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -302,9 +302,7 @@ const example = new aws.mq.Broker("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -312,9 +310,7 @@ const example = new aws.mq.Broker("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -322,10 +318,7 @@ const example = new aws.mq.Broker("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -341,7 +334,6 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="brokername_csharp">
@@ -508,7 +500,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="brokername_go">
@@ -675,7 +666,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="brokername_nodejs">
@@ -842,7 +832,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="broker_name_python">
@@ -1016,7 +1005,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_csharp">
@@ -1059,7 +1047,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_go">
@@ -1102,7 +1089,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_nodejs">
@@ -1145,7 +1131,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_python">
@@ -1311,7 +1296,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_applyimmediately_csharp">
@@ -1506,7 +1490,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_applyimmediately_go">
@@ -1701,7 +1684,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_applyimmediately_nodejs">
@@ -1896,7 +1878,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_apply_immediately_python">
@@ -2102,7 +2083,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
@@ -2128,7 +2108,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
@@ -2154,7 +2133,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
@@ -2180,7 +2158,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
@@ -2208,7 +2185,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_csharp">
@@ -2234,7 +2210,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_go">
@@ -2260,7 +2235,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_nodejs">
@@ -2286,7 +2260,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kms_key_id_python">
@@ -2314,7 +2287,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="consoleurl_csharp">
@@ -2347,7 +2319,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="consoleurl_go">
@@ -2380,7 +2351,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="consoleurl_nodejs">
@@ -2413,7 +2383,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="console_url_python">
@@ -2448,7 +2417,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="audit_csharp">
@@ -2474,7 +2442,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="audit_go">
@@ -2500,7 +2467,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="audit_nodejs">
@@ -2526,7 +2492,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="audit_python">
@@ -2554,7 +2519,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dayofweek_csharp">
@@ -2590,7 +2554,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dayofweek_go">
@@ -2626,7 +2589,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dayofweek_nodejs">
@@ -2662,7 +2624,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="day_of_week_python">
@@ -2700,7 +2661,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="password_csharp">
@@ -2746,7 +2706,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="password_go">
@@ -2792,7 +2751,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="password_nodejs">
@@ -2838,7 +2796,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="password_python">

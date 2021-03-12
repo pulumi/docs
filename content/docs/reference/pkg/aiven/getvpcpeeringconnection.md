@@ -17,11 +17,17 @@ VPC Peering Connection.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aiven = Pulumi.Aiven;
@@ -41,9 +47,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -67,9 +76,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aiven as aiven
@@ -79,9 +91,12 @@ mypeeringconnection = aiven.get_vpc_peering_connection(peer_cloud_account="<PEER
     vpc_id=aiven_project_vpc["myvpc"]["id"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -94,9 +109,16 @@ const mypeeringconnection = aiven_project_vpc_myvpc.id.apply(id => aiven.getVpcP
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getVpcPeeringConnection {#using}
@@ -135,7 +157,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="peercloudaccount_csharp">
@@ -245,7 +266,6 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="peercloudaccount_go">
@@ -355,7 +375,6 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="peercloudaccount_nodejs">
@@ -465,7 +484,6 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="peer_cloud_account_python">
@@ -584,7 +602,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -700,7 +717,6 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -816,7 +832,6 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -932,7 +947,6 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">

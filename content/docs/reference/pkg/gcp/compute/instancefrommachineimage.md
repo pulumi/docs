@@ -35,9 +35,7 @@ meta_desc: "Documentation for the gcp.compute.InstanceFromMachineImage resource 
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -45,9 +43,7 @@ meta_desc: "Documentation for the gcp.compute.InstanceFromMachineImage resource 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -55,9 +51,7 @@ meta_desc: "Documentation for the gcp.compute.InstanceFromMachineImage resource 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -65,10 +59,7 @@ meta_desc: "Documentation for the gcp.compute.InstanceFromMachineImage resource 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -94,9 +85,7 @@ meta_desc: "Documentation for the gcp.compute.InstanceFromMachineImage resource 
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -104,9 +93,7 @@ meta_desc: "Documentation for the gcp.compute.InstanceFromMachineImage resource 
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -114,9 +101,7 @@ meta_desc: "Documentation for the gcp.compute.InstanceFromMachineImage resource 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -124,9 +109,7 @@ meta_desc: "Documentation for the gcp.compute.InstanceFromMachineImage resource 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -134,18 +117,13 @@ meta_desc: "Documentation for the gcp.compute.InstanceFromMachineImage resource 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +131,7 @@ meta_desc: "Documentation for the gcp.compute.InstanceFromMachineImage resource 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +139,7 @@ meta_desc: "Documentation for the gcp.compute.InstanceFromMachineImage resource 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +147,7 @@ meta_desc: "Documentation for the gcp.compute.InstanceFromMachineImage resource 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -192,7 +163,6 @@ The InstanceFromMachineImage resource accepts the following [input]({{< relref "
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sourcemachineimage_csharp">
@@ -447,7 +417,6 @@ set, the provider zone is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sourcemachineimage_go">
@@ -702,7 +671,6 @@ set, the provider zone is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sourcemachineimage_nodejs">
@@ -957,7 +925,6 @@ set, the provider zone is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="source_machine_image_python">
@@ -1219,7 +1186,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="attacheddisks_csharp">
@@ -1334,7 +1300,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="attacheddisks_go">
@@ -1449,7 +1414,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="attacheddisks_nodejs">
@@ -1564,7 +1528,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="attached_disks_python">
@@ -1802,7 +1765,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowstoppingforupdate_csharp">
@@ -2157,7 +2119,6 @@ set, the provider zone is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowstoppingforupdate_go">
@@ -2512,7 +2473,6 @@ set, the provider zone is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowstoppingforupdate_nodejs">
@@ -2867,7 +2827,6 @@ set, the provider zone is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allow_stopping_for_update_python">
@@ -3233,7 +3192,6 @@ set, the provider zone is used.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="source_csharp">
@@ -3293,7 +3251,6 @@ set, the provider zone is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="source_go">
@@ -3353,7 +3310,6 @@ set, the provider zone is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="source_nodejs">
@@ -3413,7 +3369,6 @@ set, the provider zone is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="source_python">
@@ -3475,7 +3430,6 @@ set, the provider zone is used.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autodelete_csharp">
@@ -3553,7 +3507,6 @@ set, the provider zone is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autodelete_go">
@@ -3631,7 +3584,6 @@ set, the provider zone is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autodelete_nodejs">
@@ -3709,7 +3661,6 @@ set, the provider zone is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="auto_delete_python">
@@ -3789,7 +3740,6 @@ set, the provider zone is used.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="image_csharp">
@@ -3831,7 +3781,6 @@ set, the provider zone is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="image_go">
@@ -3873,7 +3822,6 @@ set, the provider zone is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="image_nodejs">
@@ -3915,7 +3863,6 @@ set, the provider zone is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="image_python">
@@ -3959,7 +3906,6 @@ set, the provider zone is used.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enableconfidentialcompute_csharp">
@@ -3974,7 +3920,6 @@ set, the provider zone is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enableconfidentialcompute_go">
@@ -3989,7 +3934,6 @@ set, the provider zone is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enableconfidentialcompute_nodejs">
@@ -4004,7 +3948,6 @@ set, the provider zone is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enable_confidential_compute_python">
@@ -4021,7 +3964,6 @@ set, the provider zone is used.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_csharp">
@@ -4045,7 +3987,6 @@ set, the provider zone is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_go">
@@ -4069,7 +4010,6 @@ set, the provider zone is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_nodejs">
@@ -4093,7 +4033,6 @@ set, the provider zone is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_python">
@@ -4119,7 +4058,6 @@ set, the provider zone is used.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accessconfigs_csharp">
@@ -4199,7 +4137,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accessconfigs_go">
@@ -4279,7 +4216,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accessconfigs_nodejs">
@@ -4359,7 +4295,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="access_configs_python">
@@ -4441,7 +4376,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="natip_csharp">
@@ -4474,7 +4408,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="natip_go">
@@ -4507,7 +4440,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="natip_nodejs">
@@ -4540,7 +4472,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="nat_ip_python">
@@ -4575,7 +4506,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ipcidrrange_csharp">
@@ -4599,7 +4529,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ipcidrrange_go">
@@ -4623,7 +4552,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ipcidrrange_nodejs">
@@ -4647,7 +4575,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ip_cidr_range_python">
@@ -4673,7 +4600,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="automaticrestart_csharp">
@@ -4724,7 +4650,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="automaticrestart_go">
@@ -4775,7 +4700,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="automaticrestart_nodejs">
@@ -4826,7 +4750,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="automatic_restart_python">
@@ -4879,7 +4802,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_csharp">
@@ -4912,7 +4834,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_go">
@@ -4945,7 +4866,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_nodejs">
@@ -4978,7 +4898,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_python">
@@ -5013,7 +4932,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="interface_csharp">
@@ -5028,7 +4946,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="interface_go">
@@ -5043,7 +4960,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="interface_nodejs">
@@ -5058,7 +4974,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="interface_python">
@@ -5075,7 +4990,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="scopes_csharp">
@@ -5099,7 +5013,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="scopes_go">
@@ -5123,7 +5036,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="scopes_nodejs">
@@ -5147,7 +5059,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="scopes_python">
@@ -5173,7 +5084,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableintegritymonitoring_csharp">
@@ -5206,7 +5116,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableintegritymonitoring_go">
@@ -5239,7 +5148,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableintegritymonitoring_nodejs">
@@ -5272,7 +5180,6 @@ Changing this forces a new resource to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_integrity_monitoring_python">

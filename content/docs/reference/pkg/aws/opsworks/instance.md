@@ -66,11 +66,17 @@ to block device configuration, resource recreation can be manually triggered by
 using the [`up` command with the --replace argument](https://www.pulumi.com/docs/reference/cli/pulumi_up/).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -95,9 +101,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -125,9 +134,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -140,9 +152,12 @@ my_instance = aws.opsworks.Instance("my-instance",
     state="stopped")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -157,9 +172,16 @@ const my_instance = new aws.opsworks.Instance("my-instance", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Instance Resource {#create}
@@ -184,9 +206,7 @@ const my_instance = new aws.opsworks.Instance("my-instance", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -194,9 +214,7 @@ const my_instance = new aws.opsworks.Instance("my-instance", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -204,9 +222,7 @@ const my_instance = new aws.opsworks.Instance("my-instance", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -214,10 +230,7 @@ const my_instance = new aws.opsworks.Instance("my-instance", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -243,9 +256,7 @@ const my_instance = new aws.opsworks.Instance("my-instance", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -253,9 +264,7 @@ const my_instance = new aws.opsworks.Instance("my-instance", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -263,9 +272,7 @@ const my_instance = new aws.opsworks.Instance("my-instance", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -273,9 +280,7 @@ const my_instance = new aws.opsworks.Instance("my-instance", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -283,18 +288,13 @@ const my_instance = new aws.opsworks.Instance("my-instance", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -302,9 +302,7 @@ const my_instance = new aws.opsworks.Instance("my-instance", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -312,9 +310,7 @@ const my_instance = new aws.opsworks.Instance("my-instance", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -322,10 +318,7 @@ const my_instance = new aws.opsworks.Instance("my-instance", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -341,7 +334,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="layerids_csharp">
@@ -777,7 +769,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="layerids_go">
@@ -1213,7 +1204,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="layerids_nodejs">
@@ -1649,7 +1639,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="layer_ids_python">
@@ -2092,7 +2081,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="ec2instanceid_csharp">
@@ -2117,7 +2105,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="ec2instanceid_go">
@@ -2142,7 +2129,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="ec2instanceid_nodejs">
@@ -2167,7 +2153,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="ec2_instance_id_python">
@@ -2315,7 +2300,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_agentversion_csharp">
@@ -2761,7 +2745,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_agentversion_go">
@@ -3207,7 +3190,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_agentversion_nodejs">
@@ -3653,7 +3635,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_agent_version_python">
@@ -4110,7 +4091,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
@@ -4170,7 +4150,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_go">
@@ -4230,7 +4209,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
@@ -4290,7 +4268,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="device_name_python">
@@ -4352,7 +4329,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
@@ -4376,7 +4352,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_go">
@@ -4400,7 +4375,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
@@ -4424,7 +4398,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="device_name_python">
@@ -4450,7 +4423,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_csharp">
@@ -4492,7 +4464,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_go">
@@ -4534,7 +4505,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="deleteontermination_nodejs">
@@ -4576,7 +4546,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="delete_on_termination_python">

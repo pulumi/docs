@@ -33,11 +33,17 @@ Your account must have the `serviceusage.services.use` permission on the
 `billing_project` you defined.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Access Context Manager Service Perimeter Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -99,9 +105,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -168,9 +177,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -204,9 +216,12 @@ access_level = gcp.accesscontextmanager.AccessLevel("access-level",
     title="chromeos_no_lock")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -244,10 +259,17 @@ const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Access Context Manager Service Perimeter Dry Run
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -286,9 +308,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -333,9 +358,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -355,9 +383,12 @@ service_perimeter = gcp.accesscontextmanager.ServicePerimeter("service-perimeter
     use_explicit_dry_run_spec=True)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -382,9 +413,16 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ServicePerimeter Resource {#create}
@@ -409,9 +447,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -419,9 +455,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -429,9 +463,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -439,10 +471,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -468,9 +497,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -478,9 +505,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -488,9 +513,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -498,9 +521,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -508,18 +529,13 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -527,9 +543,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -537,9 +551,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -547,10 +559,7 @@ const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -566,7 +575,6 @@ The ServicePerimeter resource accepts the following [input]({{< relref "/docs/in
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="parent_csharp">
@@ -686,7 +694,6 @@ bet set to True if any of the fields in the spec are set to non-default values.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="parent_go">
@@ -806,7 +813,6 @@ bet set to True if any of the fields in the spec are set to non-default values.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="parent_nodejs">
@@ -926,7 +932,6 @@ bet set to True if any of the fields in the spec are set to non-default values.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="parent_python">
@@ -1053,7 +1058,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="createtime_csharp">
@@ -1088,7 +1092,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="createtime_go">
@@ -1123,7 +1126,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="createtime_nodejs">
@@ -1158,7 +1160,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="create_time_python">
@@ -1316,7 +1317,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createtime_csharp">
@@ -1456,7 +1456,6 @@ bet set to True if any of the fields in the spec are set to non-default values.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createtime_go">
@@ -1596,7 +1595,6 @@ bet set to True if any of the fields in the spec are set to non-default values.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_createtime_nodejs">
@@ -1736,7 +1734,6 @@ bet set to True if any of the fields in the spec are set to non-default values.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_create_time_python">
@@ -1887,7 +1884,6 @@ bet set to True if any of the fields in the spec are set to non-default values.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesslevels_csharp">
@@ -1949,7 +1945,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesslevels_go">
@@ -2011,7 +2006,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesslevels_nodejs">
@@ -2073,7 +2067,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="access_levels_python">
@@ -2137,7 +2130,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedservices_csharp">
@@ -2165,7 +2157,6 @@ list of APIs specified in 'allowedServices'.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedservices_go">
@@ -2193,7 +2184,6 @@ list of APIs specified in 'allowedServices'.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedservices_nodejs">
@@ -2221,7 +2211,6 @@ list of APIs specified in 'allowedServices'.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowed_services_python">
@@ -2251,7 +2240,6 @@ list of APIs specified in 'allowedServices'.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesslevels_csharp">
@@ -2313,7 +2301,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesslevels_go">
@@ -2375,7 +2362,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesslevels_nodejs">
@@ -2437,7 +2423,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="access_levels_python">
@@ -2501,7 +2486,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedservices_csharp">
@@ -2529,7 +2513,6 @@ list of APIs specified in 'allowedServices'.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedservices_go">
@@ -2557,7 +2540,6 @@ list of APIs specified in 'allowedServices'.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedservices_nodejs">
@@ -2585,7 +2567,6 @@ list of APIs specified in 'allowedServices'.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowed_services_python">

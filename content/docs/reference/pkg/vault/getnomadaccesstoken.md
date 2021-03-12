@@ -49,7 +49,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backend_csharp">
@@ -77,7 +76,6 @@ a token for, with no leading or trailing `/`s.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backend_go">
@@ -105,7 +103,6 @@ a token for, with no leading or trailing `/`s.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backend_nodejs">
@@ -133,7 +130,6 @@ a token for, with no leading or trailing `/`s.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backend_python">
@@ -170,7 +166,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="accessorid_csharp">
@@ -225,7 +220,6 @@ to look up information about a token or to revoke a token.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="accessorid_go">
@@ -280,7 +274,6 @@ to look up information about a token or to revoke a token.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="accessorid_nodejs">
@@ -335,7 +328,6 @@ to look up information about a token or to revoke a token.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="accessor_id_python">

@@ -43,9 +43,7 @@ Auto Scaling Groups can be imported using the `name`, e.g.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ Auto Scaling Groups can be imported using the `name`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ Auto Scaling Groups can be imported using the `name`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ Auto Scaling Groups can be imported using the `name`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ Auto Scaling Groups can be imported using the `name`, e.g.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ Auto Scaling Groups can be imported using the `name`, e.g.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ Auto Scaling Groups can be imported using the `name`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ Auto Scaling Groups can be imported using the `name`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ Auto Scaling Groups can be imported using the `name`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ Auto Scaling Groups can be imported using the `name`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ Auto Scaling Groups can be imported using the `name`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ Auto Scaling Groups can be imported using the `name`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -200,7 +171,6 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxsize_csharp">
@@ -548,7 +518,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxsize_go">
@@ -896,7 +865,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxsize_nodejs">
@@ -1244,7 +1212,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="max_size_python">
@@ -1599,7 +1566,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_csharp">
@@ -1624,7 +1590,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_go">
@@ -1649,7 +1614,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_nodejs">
@@ -1674,7 +1638,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_python">
@@ -1822,7 +1785,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
@@ -2180,7 +2142,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
@@ -2538,7 +2499,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
@@ -2896,7 +2856,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
@@ -3265,7 +3224,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="lifecycletransition_csharp">
@@ -3335,7 +3293,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="lifecycletransition_go">
@@ -3405,7 +3362,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="lifecycletransition_nodejs">
@@ -3475,7 +3431,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="lifecycle_transition_python">
@@ -3547,7 +3502,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="strategy_csharp">
@@ -3583,7 +3537,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="strategy_go">
@@ -3619,7 +3572,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="strategy_nodejs">
@@ -3655,7 +3607,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="strategy_python">
@@ -3693,7 +3644,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancewarmup_csharp">
@@ -3719,7 +3669,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancewarmup_go">
@@ -3745,7 +3694,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancewarmup_nodejs">
@@ -3771,7 +3719,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="instance_warmup_python">
@@ -3799,7 +3746,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
@@ -3835,7 +3781,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
@@ -3871,7 +3816,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
@@ -3907,7 +3851,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
@@ -3945,7 +3888,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="launchtemplate_csharp">
@@ -3971,7 +3913,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="launchtemplate_go">
@@ -3997,7 +3938,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="launchtemplate_nodejs">
@@ -4023,7 +3963,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="launch_template_python">
@@ -4051,7 +3990,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ondemandallocationstrategy_csharp">
@@ -4117,7 +4055,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ondemandallocationstrategy_go">
@@ -4183,7 +4120,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ondemandallocationstrategy_nodejs">
@@ -4249,7 +4185,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="on_demand_allocation_strategy_python">
@@ -4317,7 +4252,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="launchtemplatespecification_csharp">
@@ -4343,7 +4277,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="launchtemplatespecification_go">
@@ -4369,7 +4302,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="launchtemplatespecification_nodejs">
@@ -4395,7 +4327,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="launch_template_specification_python">
@@ -4423,7 +4354,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="launchtemplateid_csharp">
@@ -4459,7 +4389,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="launchtemplateid_go">
@@ -4495,7 +4424,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="launchtemplateid_nodejs">
@@ -4531,7 +4459,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="launch_template_id_python">
@@ -4569,7 +4496,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancetype_csharp">
@@ -4605,7 +4531,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancetype_go">
@@ -4641,7 +4566,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancetype_nodejs">
@@ -4677,7 +4601,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="instance_type_python">
@@ -4715,7 +4638,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="launchtemplateid_csharp">
@@ -4751,7 +4673,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="launchtemplateid_go">
@@ -4787,7 +4708,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="launchtemplateid_nodejs">
@@ -4823,7 +4743,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="launch_template_id_python">
@@ -4861,7 +4780,6 @@ this provider to skip all Capacity Waiting behavior.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_csharp">
@@ -4898,7 +4816,6 @@ Amazon EC2 instances launched via this ASG
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_go">
@@ -4935,7 +4852,6 @@ Amazon EC2 instances launched via this ASG
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_nodejs">
@@ -4972,7 +4888,6 @@ Amazon EC2 instances launched via this ASG
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_python">

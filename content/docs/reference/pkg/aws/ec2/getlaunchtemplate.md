@@ -14,11 +14,17 @@ Provides information about a Launch Template.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -36,9 +42,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -61,9 +70,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -71,9 +83,12 @@ import pulumi_aws as aws
 default = aws.ec2.get_launch_template(name="my-launch-template")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -84,10 +99,17 @@ const defaultLaunchTemplate = pulumi.output(aws.ec2.getLaunchTemplate({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Filter
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -115,9 +137,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -146,9 +171,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -159,9 +187,12 @@ test = aws.ec2.get_launch_template(filters=[aws.ec2.GetLaunchTemplateFilterArgs(
 )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -175,9 +206,16 @@ const test = pulumi.output(aws.ec2.getLaunchTemplate({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getLaunchTemplate {#using}
@@ -216,7 +254,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
@@ -262,7 +299,6 @@ The following arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_go">
@@ -308,7 +344,6 @@ The following arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
@@ -354,7 +389,6 @@ The following arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_python">
@@ -409,7 +443,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_csharp">
@@ -731,7 +764,6 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_go">
@@ -1053,7 +1085,6 @@ Interfaces below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_nodejs">
@@ -1375,7 +1406,6 @@ Interfaces below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_python">
@@ -1707,7 +1737,6 @@ Interfaces below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
@@ -1749,7 +1778,6 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_go">
@@ -1791,7 +1819,6 @@ Interfaces below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
@@ -1833,7 +1860,6 @@ Interfaces below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="device_name_python">
@@ -1879,7 +1905,6 @@ Interfaces below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="deleteontermination_csharp">
@@ -1957,7 +1982,6 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="deleteontermination_go">
@@ -2035,7 +2059,6 @@ Interfaces below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="deleteontermination_nodejs">
@@ -2113,7 +2136,6 @@ Interfaces below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="delete_on_termination_python">
@@ -2195,7 +2217,6 @@ Interfaces below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cpucredits_csharp">
@@ -2210,7 +2231,6 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cpucredits_go">
@@ -2225,7 +2245,6 @@ Interfaces below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cpucredits_nodejs">
@@ -2240,7 +2259,6 @@ Interfaces below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cpu_credits_python">
@@ -2259,7 +2277,6 @@ Interfaces below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
@@ -2274,7 +2291,6 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
@@ -2289,7 +2305,6 @@ Interfaces below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
@@ -2304,7 +2319,6 @@ Interfaces below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
@@ -2323,7 +2337,6 @@ Interfaces below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
@@ -2339,7 +2352,6 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_go">
@@ -2355,7 +2367,6 @@ Interfaces below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
@@ -2371,7 +2382,6 @@ Interfaces below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_python">
@@ -2391,7 +2401,6 @@ Interfaces below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -2417,7 +2426,6 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -2443,7 +2451,6 @@ Interfaces below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -2469,7 +2476,6 @@ Interfaces below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -2499,7 +2505,6 @@ Interfaces below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="configured_csharp">
@@ -2514,7 +2519,6 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="configured_go">
@@ -2529,7 +2533,6 @@ Interfaces below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="configured_nodejs">
@@ -2544,7 +2547,6 @@ Interfaces below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="configured_python">
@@ -2563,7 +2565,6 @@ Interfaces below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="arn_csharp">
@@ -2589,7 +2590,6 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="arn_go">
@@ -2615,7 +2615,6 @@ Interfaces below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="arn_nodejs">
@@ -2641,7 +2640,6 @@ Interfaces below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="arn_python">
@@ -2671,7 +2669,6 @@ Interfaces below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="markettype_csharp">
@@ -2695,7 +2692,6 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="markettype_go">
@@ -2719,7 +2715,6 @@ Interfaces below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="markettype_nodejs">
@@ -2743,7 +2738,6 @@ Interfaces below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="market_type_python">
@@ -2771,7 +2765,6 @@ Interfaces below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="blockdurationminutes_csharp">
@@ -2822,7 +2815,6 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="blockdurationminutes_go">
@@ -2873,7 +2865,6 @@ Interfaces below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="blockdurationminutes_nodejs">
@@ -2924,7 +2915,6 @@ Interfaces below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="block_duration_minutes_python">
@@ -2979,7 +2969,6 @@ Interfaces below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="httpendpoint_csharp">
@@ -3015,7 +3004,6 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="httpendpoint_go">
@@ -3051,7 +3039,6 @@ Interfaces below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="httpendpoint_nodejs">
@@ -3087,7 +3074,6 @@ Interfaces below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="http_endpoint_python">
@@ -3127,7 +3113,6 @@ Interfaces below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
@@ -3143,7 +3128,6 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_go">
@@ -3159,7 +3143,6 @@ Interfaces below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
@@ -3175,7 +3158,6 @@ Interfaces below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_python">
@@ -3195,7 +3177,6 @@ Interfaces below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="associatecarrieripaddress_csharp">
@@ -3319,7 +3300,6 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="associatecarrieripaddress_go">
@@ -3443,7 +3423,6 @@ Interfaces below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="associatecarrieripaddress_nodejs">
@@ -3567,7 +3546,6 @@ Interfaces below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="associate_carrier_ip_address_python">
@@ -3695,7 +3673,6 @@ Interfaces below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="affinity_csharp">
@@ -3764,7 +3741,6 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="affinity_go">
@@ -3833,7 +3809,6 @@ Interfaces below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="affinity_nodejs">
@@ -3902,7 +3877,6 @@ Interfaces below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="affinity_python">
@@ -3975,7 +3949,6 @@ Interfaces below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcetype_csharp">
@@ -4000,7 +3973,6 @@ Interfaces below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcetype_go">
@@ -4025,7 +3997,6 @@ Interfaces below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcetype_nodejs">
@@ -4050,7 +4021,6 @@ Interfaces below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resource_type_python">

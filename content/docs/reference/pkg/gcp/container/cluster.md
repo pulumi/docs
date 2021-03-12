@@ -19,11 +19,17 @@ passwords as well as certificate outputs will be stored in the raw state as
 plaintext. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### With A Separately Managed Node Pool (Recommended)
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -64,9 +70,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -114,9 +123,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -140,9 +152,12 @@ primary_preemptible_nodes = gcp.container.NodePool("primaryPreemptibleNodes",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -170,22 +185,38 @@ const primaryPreemptibleNodes = new gcp.container.NodePool("primaryPreemptibleNo
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### With The Default Node Pool
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
+{{< example csharp >}}
 
-{{% example typescript %}}
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -216,9 +247,16 @@ const primary = new gcp.container.Cluster("primary", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Cluster Resource {#create}
@@ -243,9 +281,7 @@ const primary = new gcp.container.Cluster("primary", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -253,9 +289,7 @@ const primary = new gcp.container.Cluster("primary", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -263,9 +297,7 @@ const primary = new gcp.container.Cluster("primary", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -273,10 +305,7 @@ const primary = new gcp.container.Cluster("primary", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -302,9 +331,7 @@ const primary = new gcp.container.Cluster("primary", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -312,9 +339,7 @@ const primary = new gcp.container.Cluster("primary", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -322,9 +347,7 @@ const primary = new gcp.container.Cluster("primary", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -332,9 +355,7 @@ const primary = new gcp.container.Cluster("primary", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -342,18 +363,13 @@ const primary = new gcp.container.Cluster("primary", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -361,9 +377,7 @@ const primary = new gcp.container.Cluster("primary", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -371,9 +385,7 @@ const primary = new gcp.container.Cluster("primary", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -381,10 +393,7 @@ const primary = new gcp.container.Cluster("primary", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -400,7 +409,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="addonsconfig_csharp">
@@ -963,7 +971,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="addonsconfig_go">
@@ -1526,7 +1533,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="addonsconfig_nodejs">
@@ -2089,7 +2095,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="addons_config_python">
@@ -2659,7 +2664,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="endpoint_csharp">
@@ -2761,7 +2765,6 @@ notation (e.g. `1.2.3.4/29`).
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="endpoint_go">
@@ -2863,7 +2866,6 @@ notation (e.g. `1.2.3.4/29`).
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="endpoint_nodejs">
@@ -2965,7 +2967,6 @@ notation (e.g. `1.2.3.4/29`).
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="endpoint_python">
@@ -3190,7 +3191,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_addonsconfig_csharp">
@@ -3840,7 +3840,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_addonsconfig_go">
@@ -4490,7 +4489,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_addonsconfig_nodejs">
@@ -5140,7 +5138,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_addons_config_python">
@@ -5801,7 +5798,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudrunconfig_csharp">
@@ -5915,7 +5911,6 @@ Defaults to disabled; set `disabled = false` to enable.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudrunconfig_go">
@@ -6029,7 +6024,6 @@ Defaults to disabled; set `disabled = false` to enable.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudrunconfig_nodejs">
@@ -6143,7 +6137,6 @@ Defaults to disabled; set `disabled = false` to enable.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudrun_config_python">
@@ -6259,7 +6252,6 @@ Defaults to disabled; set `disabled = false` to enable.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_csharp">
@@ -6287,7 +6279,6 @@ Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_go">
@@ -6315,7 +6306,6 @@ Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_nodejs">
@@ -6343,7 +6333,6 @@ Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_python">
@@ -6373,7 +6362,6 @@ Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
@@ -6390,7 +6378,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_go">
@@ -6407,7 +6394,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
@@ -6424,7 +6410,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_python">
@@ -6443,7 +6428,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
@@ -6460,7 +6444,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_go">
@@ -6477,7 +6460,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
@@ -6494,7 +6476,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_python">
@@ -6513,7 +6494,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
@@ -6530,7 +6510,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_go">
@@ -6547,7 +6526,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
@@ -6564,7 +6542,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_python">
@@ -6583,7 +6560,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_csharp">
@@ -6600,7 +6576,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_go">
@@ -6617,7 +6592,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_nodejs">
@@ -6634,7 +6608,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_python">
@@ -6653,7 +6626,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_csharp">
@@ -6670,7 +6642,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_go">
@@ -6687,7 +6658,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_nodejs">
@@ -6704,7 +6674,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_python">
@@ -6723,7 +6692,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_csharp">
@@ -6750,7 +6718,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_go">
@@ -6777,7 +6744,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_nodejs">
@@ -6804,7 +6770,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_python">
@@ -6833,7 +6798,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
@@ -6850,7 +6814,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_go">
@@ -6867,7 +6830,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
@@ -6884,7 +6846,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_python">
@@ -6903,7 +6864,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_csharp">
@@ -6920,7 +6880,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_go">
@@ -6937,7 +6896,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_nodejs">
@@ -6954,7 +6912,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_python">
@@ -6973,7 +6930,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="securitygroup_csharp">
@@ -6989,7 +6945,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="securitygroup_go">
@@ -7005,7 +6960,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="securitygroup_nodejs">
@@ -7021,7 +6975,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="security_group_python">
@@ -7039,7 +6992,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
@@ -7093,7 +7045,6 @@ in addition to node auto-provisioning. Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_go">
@@ -7147,7 +7098,6 @@ in addition to node auto-provisioning. Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
@@ -7201,7 +7151,6 @@ in addition to node auto-provisioning. Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_python">
@@ -7257,7 +7206,6 @@ in addition to node auto-provisioning. Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_csharp">
@@ -7300,7 +7248,6 @@ If not specified, the "default" service account is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_go">
@@ -7343,7 +7290,6 @@ If not specified, the "default" service account is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mincpuplatform_nodejs">
@@ -7386,7 +7332,6 @@ If not specified, the "default" service account is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="min_cpu_platform_python">
@@ -7431,7 +7376,6 @@ If not specified, the "default" service account is used.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcetype_csharp">
@@ -7469,7 +7413,6 @@ for a list of types.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcetype_go">
@@ -7507,7 +7450,6 @@ for a list of types.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcetype_nodejs">
@@ -7545,7 +7487,6 @@ for a list of types.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resource_type_python">
@@ -7585,7 +7526,6 @@ for a list of types.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
@@ -7601,7 +7541,6 @@ for a list of types.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
@@ -7617,7 +7556,6 @@ for a list of types.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
@@ -7633,7 +7571,6 @@ for a list of types.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
@@ -7651,7 +7588,6 @@ for a list of types.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
@@ -7668,7 +7604,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_go">
@@ -7685,7 +7620,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
@@ -7702,7 +7636,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_python">
@@ -7721,7 +7654,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="state_csharp">
@@ -7747,7 +7679,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="state_go">
@@ -7773,7 +7704,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="state_nodejs">
@@ -7799,7 +7729,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="state_python">
@@ -7827,7 +7756,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_csharp">
@@ -7844,7 +7772,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_go">
@@ -7861,7 +7788,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_nodejs">
@@ -7878,7 +7804,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="disabled_python">
@@ -7897,7 +7822,6 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clusteripv4cidrblock_csharp">
@@ -7956,7 +7880,6 @@ GKE-managed one.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clusteripv4cidrblock_go">
@@ -8015,7 +7938,6 @@ GKE-managed one.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clusteripv4cidrblock_nodejs">
@@ -8074,7 +7996,6 @@ GKE-managed one.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cluster_ipv4_cidr_block_python">
@@ -8135,7 +8056,6 @@ GKE-managed one.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dailymaintenancewindow_csharp">
@@ -8173,7 +8093,6 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dailymaintenancewindow_go">
@@ -8211,7 +8130,6 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dailymaintenancewindow_nodejs">
@@ -8249,7 +8167,6 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="daily_maintenance_window_python">
@@ -8289,7 +8206,6 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
@@ -8313,7 +8229,6 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="starttime_go">
@@ -8337,7 +8252,6 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
@@ -8361,7 +8275,6 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="start_time_python">
@@ -8387,7 +8300,6 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="endtime_csharp">
@@ -8420,7 +8332,6 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="endtime_go">
@@ -8453,7 +8364,6 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="endtime_nodejs">
@@ -8486,7 +8396,6 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="end_time_python">
@@ -8521,7 +8430,6 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="endtime_csharp">
@@ -8554,7 +8462,6 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="endtime_go">
@@ -8587,7 +8494,6 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="endtime_nodejs">
@@ -8620,7 +8526,6 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="end_time_python">
@@ -8655,7 +8560,6 @@ where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clientcertificate_csharp">
@@ -8720,7 +8624,6 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clientcertificate_go">
@@ -8785,7 +8688,6 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clientcertificate_nodejs">
@@ -8850,7 +8752,6 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="client_certificate_python">
@@ -8917,7 +8818,6 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="issueclientcertificate_csharp">
@@ -8932,7 +8832,6 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="issueclientcertificate_go">
@@ -8947,7 +8846,6 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="issueclientcertificate_nodejs">
@@ -8962,7 +8860,6 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="issue_client_certificate_python">
@@ -8979,7 +8876,6 @@ the Kubernetes master endpoint. If not present basic auth will be disabled. This
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cidrblocks_csharp">
@@ -8996,7 +8892,6 @@ Kubernetes cluster master through HTTPS.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cidrblocks_go">
@@ -9013,7 +8908,6 @@ Kubernetes cluster master through HTTPS.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cidrblocks_nodejs">
@@ -9030,7 +8924,6 @@ Kubernetes cluster master through HTTPS.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cidr_blocks_python">
@@ -9049,7 +8942,6 @@ Kubernetes cluster master through HTTPS.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cidrblock_csharp">
@@ -9076,7 +8968,6 @@ Must be specified in CIDR notation.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cidrblock_go">
@@ -9103,7 +8994,6 @@ Must be specified in CIDR notation.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cidrblock_nodejs">
@@ -9130,7 +9020,6 @@ Must be specified in CIDR notation.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cidr_block_python">
@@ -9159,7 +9048,6 @@ Must be specified in CIDR notation.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
@@ -9186,7 +9074,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_go">
@@ -9213,7 +9100,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
@@ -9240,7 +9126,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_python">
@@ -9269,7 +9154,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdiskkmskey_csharp">
@@ -9509,7 +9393,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdiskkmskey_go">
@@ -9749,7 +9632,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdiskkmskey_nodejs">
@@ -9989,7 +9871,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="boot_disk_kms_key_python">
@@ -10231,7 +10112,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_csharp">
@@ -10257,7 +10137,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_go">
@@ -10283,7 +10162,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_nodejs">
@@ -10309,7 +10187,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_python">
@@ -10337,7 +10214,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cpumanagerpolicy_csharp">
@@ -10379,7 +10255,6 @@ such as `"300ms"`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m",
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cpumanagerpolicy_go">
@@ -10421,7 +10296,6 @@ such as `"300ms"`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m",
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cpumanagerpolicy_nodejs">
@@ -10463,7 +10337,6 @@ such as `"300ms"`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m",
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cpu_manager_policy_python">
@@ -10507,7 +10380,6 @@ such as `"300ms"`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m",
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sysctls_csharp">
@@ -10525,7 +10397,6 @@ and all pods running on the nodes. Specified as a map from the key, such as
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sysctls_go">
@@ -10543,7 +10414,6 @@ and all pods running on the nodes. Specified as a map from the key, such as
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sysctls_nodejs">
@@ -10561,7 +10431,6 @@ and all pods running on the nodes. Specified as a map from the key, such as
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sysctls_python">
@@ -10581,7 +10450,6 @@ and all pods running on the nodes. Specified as a map from the key, such as
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sandboxtype_csharp">
@@ -10598,7 +10466,6 @@ Accepted values are:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sandboxtype_go">
@@ -10615,7 +10482,6 @@ Accepted values are:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sandboxtype_nodejs">
@@ -10632,7 +10498,6 @@ Accepted values are:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sandbox_type_python">
@@ -10651,7 +10516,6 @@ Accepted values are:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableintegritymonitoring_csharp">
@@ -10677,7 +10541,6 @@ Accepted values are:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableintegritymonitoring_go">
@@ -10703,7 +10566,6 @@ Accepted values are:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableintegritymonitoring_nodejs">
@@ -10729,7 +10591,6 @@ Accepted values are:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_integrity_monitoring_python">
@@ -10757,7 +10618,6 @@ Accepted values are:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="effect_csharp">
@@ -10793,7 +10653,6 @@ Accepted values are:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="effect_go">
@@ -10829,7 +10688,6 @@ Accepted values are:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="effect_nodejs">
@@ -10865,7 +10723,6 @@ Accepted values are:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="effect_python">
@@ -10903,7 +10760,6 @@ Accepted values are:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="nodemetadata_csharp">
@@ -10924,7 +10780,6 @@ Accepted values are:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="nodemetadata_go">
@@ -10945,7 +10800,6 @@ Accepted values are:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="nodemetadata_nodejs">
@@ -10966,7 +10820,6 @@ Accepted values are:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="node_metadata_python">
@@ -10989,7 +10842,6 @@ Accepted values are:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaling_csharp">
@@ -11122,7 +10974,6 @@ a zonal cluster, omit the cluster's zone.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaling_go">
@@ -11255,7 +11106,6 @@ a zonal cluster, omit the cluster's zone.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaling_nodejs">
@@ -11388,7 +11238,6 @@ a zonal cluster, omit the cluster's zone.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaling_python">
@@ -11523,7 +11372,6 @@ a zonal cluster, omit the cluster's zone.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxnodecount_csharp">
@@ -11547,7 +11395,6 @@ a zonal cluster, omit the cluster's zone.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxnodecount_go">
@@ -11571,7 +11418,6 @@ a zonal cluster, omit the cluster's zone.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxnodecount_nodejs">
@@ -11595,7 +11441,6 @@ a zonal cluster, omit the cluster's zone.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="max_node_count_python">
@@ -11621,7 +11466,6 @@ a zonal cluster, omit the cluster's zone.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autorepair_csharp">
@@ -11645,7 +11489,6 @@ a zonal cluster, omit the cluster's zone.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autorepair_go">
@@ -11669,7 +11512,6 @@ a zonal cluster, omit the cluster's zone.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autorepair_nodejs">
@@ -11693,7 +11535,6 @@ a zonal cluster, omit the cluster's zone.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="auto_repair_python">
@@ -11719,7 +11560,6 @@ a zonal cluster, omit the cluster's zone.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdiskkmskey_csharp">
@@ -11959,7 +11799,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdiskkmskey_go">
@@ -12199,7 +12038,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdiskkmskey_nodejs">
@@ -12439,7 +12277,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="boot_disk_kms_key_python">
@@ -12681,7 +12518,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_csharp">
@@ -12707,7 +12543,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_go">
@@ -12733,7 +12568,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_nodejs">
@@ -12759,7 +12593,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_python">
@@ -12787,7 +12620,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cpumanagerpolicy_csharp">
@@ -12829,7 +12661,6 @@ such as `"300ms"`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m",
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cpumanagerpolicy_go">
@@ -12871,7 +12702,6 @@ such as `"300ms"`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m",
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cpumanagerpolicy_nodejs">
@@ -12913,7 +12743,6 @@ such as `"300ms"`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m",
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cpu_manager_policy_python">
@@ -12957,7 +12786,6 @@ such as `"300ms"`. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m",
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sysctls_csharp">
@@ -12975,7 +12803,6 @@ and all pods running on the nodes. Specified as a map from the key, such as
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sysctls_go">
@@ -12993,7 +12820,6 @@ and all pods running on the nodes. Specified as a map from the key, such as
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sysctls_nodejs">
@@ -13011,7 +12837,6 @@ and all pods running on the nodes. Specified as a map from the key, such as
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sysctls_python">
@@ -13031,7 +12856,6 @@ and all pods running on the nodes. Specified as a map from the key, such as
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sandboxtype_csharp">
@@ -13048,7 +12872,6 @@ Accepted values are:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sandboxtype_go">
@@ -13065,7 +12888,6 @@ Accepted values are:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sandboxtype_nodejs">
@@ -13082,7 +12904,6 @@ Accepted values are:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sandbox_type_python">
@@ -13101,7 +12922,6 @@ Accepted values are:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableintegritymonitoring_csharp">
@@ -13127,7 +12947,6 @@ Accepted values are:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableintegritymonitoring_go">
@@ -13153,7 +12972,6 @@ Accepted values are:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableintegritymonitoring_nodejs">
@@ -13179,7 +12997,6 @@ Accepted values are:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_integrity_monitoring_python">
@@ -13207,7 +13024,6 @@ Accepted values are:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="effect_csharp">
@@ -13243,7 +13059,6 @@ Accepted values are:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="effect_go">
@@ -13279,7 +13094,6 @@ Accepted values are:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="effect_nodejs">
@@ -13315,7 +13129,6 @@ Accepted values are:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="effect_python">
@@ -13353,7 +13166,6 @@ Accepted values are:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="nodemetadata_csharp">
@@ -13374,7 +13186,6 @@ Accepted values are:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="nodemetadata_go">
@@ -13395,7 +13206,6 @@ Accepted values are:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="nodemetadata_nodejs">
@@ -13416,7 +13226,6 @@ Accepted values are:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="node_metadata_python">
@@ -13439,7 +13248,6 @@ Accepted values are:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxsurge_csharp">
@@ -13463,7 +13271,6 @@ Accepted values are:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxsurge_go">
@@ -13487,7 +13294,6 @@ Accepted values are:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxsurge_nodejs">
@@ -13511,7 +13317,6 @@ Accepted values are:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="max_surge_python">
@@ -13537,7 +13342,6 @@ Accepted values are:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pubsub_csharp">
@@ -13552,7 +13356,6 @@ Accepted values are:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pubsub_go">
@@ -13567,7 +13370,6 @@ Accepted values are:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pubsub_nodejs">
@@ -13582,7 +13384,6 @@ Accepted values are:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pubsub_python">
@@ -13599,7 +13400,6 @@ Accepted values are:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
@@ -13625,7 +13425,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_go">
@@ -13651,7 +13450,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
@@ -13677,7 +13475,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_python">
@@ -13705,7 +13502,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
@@ -13722,7 +13518,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_go">
@@ -13739,7 +13534,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
@@ -13756,7 +13550,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_python">
@@ -13775,7 +13568,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enableprivateendpoint_csharp">
@@ -13862,7 +13654,6 @@ for more details. This field only applies to private clusters, when
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enableprivateendpoint_go">
@@ -13949,7 +13740,6 @@ for more details. This field only applies to private clusters, when
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enableprivateendpoint_nodejs">
@@ -14036,7 +13826,6 @@ for more details. This field only applies to private clusters, when
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enable_private_endpoint_python">
@@ -14125,7 +13914,6 @@ for more details. This field only applies to private clusters, when
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
@@ -14142,7 +13930,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_go">
@@ -14159,7 +13946,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
@@ -14176,7 +13962,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_python">
@@ -14195,7 +13980,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="channel_csharp">
@@ -14216,7 +14000,6 @@ Accepted values are:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="channel_go">
@@ -14237,7 +14020,6 @@ Accepted values are:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="channel_nodejs">
@@ -14258,7 +14040,6 @@ Accepted values are:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="channel_python">
@@ -14281,7 +14062,6 @@ Accepted values are:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bigquerydestination_csharp">
@@ -14322,7 +14102,6 @@ billing export. Defaults to `true`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bigquerydestination_go">
@@ -14363,7 +14142,6 @@ billing export. Defaults to `true`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bigquerydestination_nodejs">
@@ -14404,7 +14182,6 @@ billing export. Defaults to `true`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bigquery_destination_python">
@@ -14447,7 +14224,6 @@ billing export. Defaults to `true`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="datasetid_csharp">
@@ -14462,7 +14238,6 @@ billing export. Defaults to `true`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="datasetid_go">
@@ -14477,7 +14252,6 @@ billing export. Defaults to `true`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="datasetid_nodejs">
@@ -14492,7 +14266,6 @@ billing export. Defaults to `true`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dataset_id_python">
@@ -14509,7 +14282,6 @@ billing export. Defaults to `true`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
@@ -14526,7 +14298,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_go">
@@ -14543,7 +14314,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
@@ -14560,7 +14330,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_python">
@@ -14579,7 +14348,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="identitynamespace_csharp">
@@ -14595,7 +14363,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="identitynamespace_go">
@@ -14611,7 +14378,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="identitynamespace_nodejs">
@@ -14627,7 +14393,6 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="identity_namespace_python">

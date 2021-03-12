@@ -17,11 +17,17 @@ and
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -40,9 +46,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -67,9 +76,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -78,9 +90,12 @@ appserver = gcp.compute.get_instance(name="primary-application-server",
     zone="us-central1-a")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -92,9 +107,16 @@ const appserver = pulumi.output(gcp.compute.getInstance({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getInstance {#using}
@@ -133,7 +155,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -183,7 +204,6 @@ provider zone is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -233,7 +253,6 @@ provider zone is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -283,7 +302,6 @@ provider zone is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -342,7 +360,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="allowstoppingforupdate_csharp">
@@ -677,7 +694,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="allowstoppingforupdate_go">
@@ -1012,7 +1028,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="allowstoppingforupdate_nodejs">
@@ -1347,7 +1362,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="allow_stopping_for_update_python">
@@ -1692,7 +1706,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
@@ -1756,7 +1769,6 @@ under `/dev/disk/by-id/`
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_go">
@@ -1820,7 +1832,6 @@ under `/dev/disk/by-id/`
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
@@ -1884,7 +1895,6 @@ under `/dev/disk/by-id/`
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="device_name_python">
@@ -1952,7 +1962,6 @@ under `/dev/disk/by-id/`
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="autodelete_csharp">
@@ -2037,7 +2046,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="autodelete_go">
@@ -2122,7 +2130,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="autodelete_nodejs">
@@ -2207,7 +2214,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="auto_delete_python">
@@ -2296,7 +2302,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="image_csharp">
@@ -2342,7 +2347,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="image_go">
@@ -2388,7 +2392,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="image_nodejs">
@@ -2434,7 +2437,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="image_python">
@@ -2484,7 +2486,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enableconfidentialcompute_csharp">
@@ -2499,7 +2500,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enableconfidentialcompute_go">
@@ -2514,7 +2514,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enableconfidentialcompute_nodejs">
@@ -2529,7 +2528,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enable_confidential_compute_python">
@@ -2548,7 +2546,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_csharp">
@@ -2574,7 +2571,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_go">
@@ -2600,7 +2596,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_nodejs">
@@ -2626,7 +2621,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_python">
@@ -2656,7 +2650,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accessconfigs_csharp">
@@ -2742,7 +2735,6 @@ instance can be accessed via the Internet. Structure documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accessconfigs_go">
@@ -2828,7 +2820,6 @@ instance can be accessed via the Internet. Structure documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accessconfigs_nodejs">
@@ -2914,7 +2905,6 @@ instance can be accessed via the Internet. Structure documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="access_configs_python">
@@ -3004,7 +2994,6 @@ instance can be accessed via the Internet. Structure documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="natip_csharp">
@@ -3041,7 +3030,6 @@ network ip.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="natip_go">
@@ -3078,7 +3066,6 @@ network ip.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="natip_nodejs">
@@ -3115,7 +3102,6 @@ network ip.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="nat_ip_python">
@@ -3156,7 +3142,6 @@ network ip.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ipcidrrange_csharp">
@@ -3184,7 +3169,6 @@ range.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ipcidrrange_go">
@@ -3212,7 +3196,6 @@ range.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ipcidrrange_nodejs">
@@ -3240,7 +3223,6 @@ range.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ip_cidr_range_python">
@@ -3272,7 +3254,6 @@ range.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="automaticrestart_csharp">
@@ -3329,7 +3310,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="automaticrestart_go">
@@ -3386,7 +3366,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="automaticrestart_nodejs">
@@ -3443,7 +3422,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="automatic_restart_python">
@@ -3504,7 +3482,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_csharp">
@@ -3537,7 +3514,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_go">
@@ -3570,7 +3546,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_nodejs">
@@ -3603,7 +3578,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_python">
@@ -3640,7 +3614,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="interface_csharp">
@@ -3656,7 +3629,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="interface_go">
@@ -3672,7 +3644,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="interface_nodejs">
@@ -3688,7 +3659,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="interface_python">
@@ -3708,7 +3678,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="email_csharp">
@@ -3734,7 +3703,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="email_go">
@@ -3760,7 +3728,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="email_nodejs">
@@ -3786,7 +3753,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="email_python">
@@ -3816,7 +3782,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enableintegritymonitoring_csharp">
@@ -3849,7 +3814,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enableintegritymonitoring_go">
@@ -3882,7 +3846,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enableintegritymonitoring_nodejs">
@@ -3915,7 +3878,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enable_integrity_monitoring_python">

@@ -20,11 +20,17 @@ To get more information about RegionTargetHttpProxy, see:
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/target-proxies)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Region Target Http Proxy Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -96,9 +102,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -170,9 +179,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -207,9 +219,12 @@ default_region_target_http_proxy = gcp.compute.RegionTargetHttpProxy("defaultReg
     url_map=default_region_url_map.id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -249,10 +264,17 @@ const defaultRegionTargetHttpProxy = new gcp.compute.RegionTargetHttpProxy("defa
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Region Target Http Proxy Https Redirect
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -280,9 +302,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -315,9 +340,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -333,9 +361,12 @@ default_region_target_http_proxy = gcp.compute.RegionTargetHttpProxy("defaultReg
     url_map=default_region_url_map.id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -354,9 +385,16 @@ const defaultRegionTargetHttpProxy = new gcp.compute.RegionTargetHttpProxy("defa
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a RegionTargetHttpProxy Resource {#create}
@@ -381,9 +419,7 @@ const defaultRegionTargetHttpProxy = new gcp.compute.RegionTargetHttpProxy("defa
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -391,9 +427,7 @@ const defaultRegionTargetHttpProxy = new gcp.compute.RegionTargetHttpProxy("defa
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -401,9 +435,7 @@ const defaultRegionTargetHttpProxy = new gcp.compute.RegionTargetHttpProxy("defa
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -411,10 +443,7 @@ const defaultRegionTargetHttpProxy = new gcp.compute.RegionTargetHttpProxy("defa
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -440,9 +469,7 @@ const defaultRegionTargetHttpProxy = new gcp.compute.RegionTargetHttpProxy("defa
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -450,9 +477,7 @@ const defaultRegionTargetHttpProxy = new gcp.compute.RegionTargetHttpProxy("defa
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -460,9 +485,7 @@ const defaultRegionTargetHttpProxy = new gcp.compute.RegionTargetHttpProxy("defa
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -470,9 +493,7 @@ const defaultRegionTargetHttpProxy = new gcp.compute.RegionTargetHttpProxy("defa
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -480,18 +501,13 @@ const defaultRegionTargetHttpProxy = new gcp.compute.RegionTargetHttpProxy("defa
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -499,9 +515,7 @@ const defaultRegionTargetHttpProxy = new gcp.compute.RegionTargetHttpProxy("defa
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -509,9 +523,7 @@ const defaultRegionTargetHttpProxy = new gcp.compute.RegionTargetHttpProxy("defa
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -519,10 +531,7 @@ const defaultRegionTargetHttpProxy = new gcp.compute.RegionTargetHttpProxy("defa
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -538,7 +547,6 @@ The RegionTargetHttpProxy resource accepts the following [input]({{< relref "/do
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="urlmap_csharp">
@@ -603,7 +611,6 @@ If it is not provided, the provider region is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="urlmap_go">
@@ -668,7 +675,6 @@ If it is not provided, the provider region is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="urlmap_nodejs">
@@ -733,7 +739,6 @@ If it is not provided, the provider region is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="url_map_python">
@@ -805,7 +810,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="creationtimestamp_csharp">
@@ -850,7 +854,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="creationtimestamp_go">
@@ -895,7 +898,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="creationtimestamp_nodejs">
@@ -940,7 +942,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="creation_timestamp_python">
@@ -1108,7 +1109,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_csharp">
@@ -1203,7 +1203,6 @@ to the BackendService.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_go">
@@ -1298,7 +1297,6 @@ to the BackendService.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_nodejs">
@@ -1393,7 +1391,6 @@ to the BackendService.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creation_timestamp_python">

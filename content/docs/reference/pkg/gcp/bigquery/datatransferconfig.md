@@ -23,11 +23,17 @@ To get more information about Config, see:
 state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Bigquerydatatransfer Config Scheduled Query
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -80,9 +86,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -141,9 +150,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -172,9 +184,12 @@ query_config = gcp.bigquery.DataTransferConfig("queryConfig",
     opts=pulumi.ResourceOptions(depends_on=[permissions]))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -209,9 +224,16 @@ const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a DataTransferConfig Resource {#create}
@@ -236,9 +258,7 @@ const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -246,9 +266,7 @@ const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -256,9 +274,7 @@ const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -266,10 +282,7 @@ const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -295,9 +308,7 @@ const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -305,9 +316,7 @@ const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -315,9 +324,7 @@ const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -325,9 +332,7 @@ const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -335,18 +340,13 @@ const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -354,9 +354,7 @@ const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -364,9 +362,7 @@ const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -374,10 +370,7 @@ const queryConfig = new gcp.bigquery.DataTransferConfig("queryConfig", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -393,7 +386,6 @@ The DataTransferConfig resource accepts the following [input]({{< relref "/docs/
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="datasourceid_csharp">
@@ -564,7 +556,6 @@ requesting user calling this API has permissions to act as this service account.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="datasourceid_go">
@@ -735,7 +726,6 @@ requesting user calling this API has permissions to act as this service account.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="datasourceid_nodejs">
@@ -906,7 +896,6 @@ requesting user calling this API has permissions to act as this service account.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="data_source_id_python">
@@ -1084,7 +1073,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1111,7 +1099,6 @@ required. The name is ignored when creating a transfer config.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -1138,7 +1125,6 @@ required. The name is ignored when creating a transfer config.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1165,7 +1151,6 @@ required. The name is ignored when creating a transfer config.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -1315,7 +1300,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datarefreshwindowdays_csharp">
@@ -1498,7 +1482,6 @@ requesting user calling this API has permissions to act as this service account.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datarefreshwindowdays_go">
@@ -1681,7 +1664,6 @@ requesting user calling this API has permissions to act as this service account.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datarefreshwindowdays_nodejs">
@@ -1864,7 +1846,6 @@ requesting user calling this API has permissions to act as this service account.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_data_refresh_window_days_python">
@@ -2058,7 +2039,6 @@ requesting user calling this API has permissions to act as this service account.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enablefailureemail_csharp">
@@ -2074,7 +2054,6 @@ requesting user calling this API has permissions to act as this service account.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enablefailureemail_go">
@@ -2090,7 +2069,6 @@ requesting user calling this API has permissions to act as this service account.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enablefailureemail_nodejs">
@@ -2106,7 +2084,6 @@ requesting user calling this API has permissions to act as this service account.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enable_failure_email_python">
@@ -2124,7 +2101,6 @@ requesting user calling this API has permissions to act as this service account.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="disableautoscheduling_csharp">
@@ -2171,7 +2147,6 @@ limited by this option.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="disableautoscheduling_go">
@@ -2218,7 +2193,6 @@ limited by this option.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="disableautoscheduling_nodejs">
@@ -2265,7 +2239,6 @@ limited by this option.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="disable_auto_scheduling_python">
@@ -2314,7 +2287,6 @@ limited by this option.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="secretaccesskey_csharp">
@@ -2331,7 +2303,6 @@ limited by this option.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="secretaccesskey_go">
@@ -2348,7 +2319,6 @@ limited by this option.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="secretaccesskey_nodejs">
@@ -2365,7 +2335,6 @@ limited by this option.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="secret_access_key_python">

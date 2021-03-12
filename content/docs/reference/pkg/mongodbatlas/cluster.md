@@ -23,11 +23,17 @@ meta_desc: "Documentation for the mongodbatlas.Cluster resource with examples, i
 <br> &#8226; If your Atlas project contains a custom role that uses actions introduced in a specific MongoDB version, you cannot create a cluster with a MongoDB version less than that version unless you delete the custom role.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Example AWS cluster
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Mongodbatlas = Pulumi.Mongodbatlas;
@@ -72,9 +78,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -119,9 +128,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_mongodbatlas as mongodbatlas
@@ -149,9 +161,12 @@ cluster_test = mongodbatlas.Cluster("cluster-test",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -182,10 +197,17 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Example Azure cluster.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Mongodbatlas = Pulumi.Mongodbatlas;
@@ -227,9 +249,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -271,9 +296,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_mongodbatlas as mongodbatlas
@@ -298,9 +326,12 @@ test = mongodbatlas.Cluster("test",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -328,10 +359,17 @@ const test = new mongodbatlas.Cluster("test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Example GCP cluster
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Mongodbatlas = Pulumi.Mongodbatlas;
@@ -373,9 +411,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -417,9 +458,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_mongodbatlas as mongodbatlas
@@ -444,9 +488,12 @@ test = mongodbatlas.Cluster("test",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -474,10 +521,17 @@ const test = new mongodbatlas.Cluster("test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Example Multi Region cluster
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Mongodbatlas = Pulumi.Mongodbatlas;
@@ -534,9 +588,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -591,9 +648,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_mongodbatlas as mongodbatlas
@@ -633,9 +693,12 @@ cluster_test = mongodbatlas.Cluster("cluster-test",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -678,10 +741,17 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Example Global cluster
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Mongodbatlas = Pulumi.Mongodbatlas;
@@ -740,9 +810,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -798,9 +871,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_mongodbatlas as mongodbatlas
@@ -839,9 +915,12 @@ cluster_test = mongodbatlas.Cluster("cluster-test",
     ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -883,10 +962,17 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Example AWS Shared Tier cluster
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Mongodbatlas = Pulumi.Mongodbatlas;
@@ -911,9 +997,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -942,9 +1031,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_mongodbatlas as mongodbatlas
@@ -960,9 +1052,12 @@ cluster_test = mongodbatlas.Cluster("cluster-test",
     provider_region_name="US_EAST_1")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as mongodbatlas from "@pulumi/mongodbatlas";
@@ -981,9 +1076,16 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Cluster Resource {#create}
@@ -1008,9 +1110,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1018,9 +1118,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1028,9 +1126,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1038,10 +1134,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1067,9 +1160,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -1077,9 +1168,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1087,9 +1176,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1097,9 +1184,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1107,18 +1192,13 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1126,9 +1206,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1136,9 +1214,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1146,10 +1222,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1165,7 +1238,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
@@ -1459,7 +1531,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_go">
@@ -1753,7 +1824,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
@@ -2047,7 +2117,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_id_python">
@@ -2348,7 +2417,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="clusterid_csharp">
@@ -2479,7 +2547,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="clusterid_go">
@@ -2610,7 +2677,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="clusterid_nodejs">
@@ -2741,7 +2807,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="cluster_id_python">
@@ -2995,7 +3060,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_advancedconfiguration_csharp">
@@ -3405,7 +3469,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_advancedconfiguration_go">
@@ -3815,7 +3878,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_advancedconfiguration_nodejs">
@@ -4225,7 +4287,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_advanced_configuration_python">
@@ -4646,7 +4707,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="failindexkeytoolong_csharp">
@@ -4722,7 +4782,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="failindexkeytoolong_go">
@@ -4798,7 +4857,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="failindexkeytoolong_nodejs">
@@ -4874,7 +4932,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fail_index_key_too_long_python">
@@ -4952,7 +5009,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
@@ -4981,7 +5037,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
@@ -5010,7 +5065,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
@@ -5039,7 +5093,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
@@ -5070,7 +5123,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="awsprivatelink_csharp">
@@ -5139,7 +5191,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="awsprivatelink_go">
@@ -5208,7 +5259,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="awsprivatelink_nodejs">
@@ -5277,7 +5327,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="aws_private_link_python">
@@ -5348,7 +5397,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectionstring_csharp">
@@ -5390,7 +5438,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectionstring_go">
@@ -5432,7 +5479,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectionstring_nodejs">
@@ -5474,7 +5520,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="connection_string_python">
@@ -5518,7 +5563,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpointid_csharp">
@@ -5552,7 +5596,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpointid_go">
@@ -5586,7 +5629,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpointid_nodejs">
@@ -5620,7 +5662,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="endpoint_id_python">
@@ -5656,7 +5697,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
@@ -5682,7 +5722,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_go">
@@ -5708,7 +5747,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
@@ -5734,7 +5772,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_python">
@@ -5762,7 +5799,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="numshards_csharp">
@@ -5808,7 +5844,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="numshards_go">
@@ -5854,7 +5889,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="numshards_nodejs">
@@ -5900,7 +5934,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="num_shards_python">
@@ -5948,7 +5981,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="analyticsnodes_csharp">
@@ -6010,7 +6042,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="analyticsnodes_go">
@@ -6072,7 +6103,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="analyticsnodes_nodejs">
@@ -6134,7 +6164,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="analytics_nodes_python">
@@ -6198,7 +6227,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clusterid_csharp">
@@ -6277,7 +6305,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clusterid_go">
@@ -6356,7 +6383,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clusterid_nodejs">
@@ -6435,7 +6461,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cluster_id_python">
@@ -6516,7 +6541,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
@@ -6541,7 +6565,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
@@ -6566,7 +6589,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
@@ -6591,7 +6613,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
@@ -6618,7 +6639,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="frequencyinterval_csharp">
@@ -6670,7 +6690,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="frequencyinterval_go">
@@ -6722,7 +6741,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="frequencyinterval_nodejs">
@@ -6774,7 +6792,6 @@ Do not specify this field when creating a multi-region cluster using the replica
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="frequency_interval_python">

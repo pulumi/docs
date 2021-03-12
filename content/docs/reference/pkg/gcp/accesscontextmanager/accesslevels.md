@@ -21,11 +21,17 @@ To get more information about AccessLevels, see:
     * [Access Policy Quickstart](https://cloud.google.com/access-context-manager/docs/quickstart)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Access Context Manager Access Levels Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -113,9 +119,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -200,9 +209,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -254,9 +266,12 @@ access_levels = gcp.accesscontextmanager.AccessLevels("access-levels",
     parent=access_policy.name.apply(lambda name: f"accessPolicies/{name}"))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -311,9 +326,16 @@ const access_levels = new gcp.accesscontextmanager.AccessLevels("access-levels",
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AccessLevels Resource {#create}
@@ -338,9 +360,7 @@ const access_levels = new gcp.accesscontextmanager.AccessLevels("access-levels",
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -348,9 +368,7 @@ const access_levels = new gcp.accesscontextmanager.AccessLevels("access-levels",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -358,9 +376,7 @@ const access_levels = new gcp.accesscontextmanager.AccessLevels("access-levels",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -368,10 +384,7 @@ const access_levels = new gcp.accesscontextmanager.AccessLevels("access-levels",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -397,9 +410,7 @@ const access_levels = new gcp.accesscontextmanager.AccessLevels("access-levels",
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -407,9 +418,7 @@ const access_levels = new gcp.accesscontextmanager.AccessLevels("access-levels",
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -417,9 +426,7 @@ const access_levels = new gcp.accesscontextmanager.AccessLevels("access-levels",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -427,9 +434,7 @@ const access_levels = new gcp.accesscontextmanager.AccessLevels("access-levels",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -437,18 +442,13 @@ const access_levels = new gcp.accesscontextmanager.AccessLevels("access-levels",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -456,9 +456,7 @@ const access_levels = new gcp.accesscontextmanager.AccessLevels("access-levels",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -466,9 +464,7 @@ const access_levels = new gcp.accesscontextmanager.AccessLevels("access-levels",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -476,10 +472,7 @@ const access_levels = new gcp.accesscontextmanager.AccessLevels("access-levels",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -495,7 +488,6 @@ The AccessLevels resource accepts the following [input]({{< relref "/docs/intro/
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="parent_csharp">
@@ -523,7 +515,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="parent_go">
@@ -551,7 +542,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="parent_nodejs">
@@ -579,7 +569,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="parent_python">
@@ -614,7 +603,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -629,7 +617,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -644,7 +631,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -659,7 +645,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -797,7 +782,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_accessleveldetails_csharp">
@@ -825,7 +809,6 @@ Format: accessPolicies/{policy_id}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_accesslevels_go">
@@ -853,7 +836,6 @@ Format: accessPolicies/{policy_id}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_accesslevels_nodejs">
@@ -881,7 +863,6 @@ Format: accessPolicies/{policy_id}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_access_levels_python">
@@ -920,7 +901,6 @@ Format: accessPolicies/{policy_id}
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -981,7 +961,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -1042,7 +1021,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -1103,7 +1081,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -1166,7 +1143,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="conditions_csharp">
@@ -1199,7 +1175,6 @@ Possible values are `AND` and `OR`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="conditions_go">
@@ -1232,7 +1207,6 @@ Possible values are `AND` and `OR`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="conditions_nodejs">
@@ -1265,7 +1239,6 @@ Possible values are `AND` and `OR`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="conditions_python">
@@ -1300,7 +1273,6 @@ Possible values are `AND` and `OR`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="devicepolicy_csharp">
@@ -1392,7 +1364,6 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="devicepolicy_go">
@@ -1484,7 +1455,6 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="devicepolicy_nodejs">
@@ -1576,7 +1546,6 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="device_policy_python">
@@ -1670,7 +1639,6 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="alloweddevicemanagementlevels_csharp">
@@ -1743,7 +1711,6 @@ to be true. Defaults to false.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="alloweddevicemanagementlevels_go">
@@ -1816,7 +1783,6 @@ to be true. Defaults to false.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="alloweddevicemanagementlevels_nodejs">
@@ -1889,7 +1855,6 @@ to be true. Defaults to false.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowed_device_management_levels_python">
@@ -1964,7 +1929,6 @@ to be true. Defaults to false.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ostype_csharp">
@@ -1993,7 +1957,6 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1".
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ostype_go">
@@ -2022,7 +1985,6 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1".
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ostype_nodejs">
@@ -2051,7 +2013,6 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1".
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="os_type_python">
@@ -2082,7 +2043,6 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1".
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="expr_csharp">
@@ -2101,7 +2061,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="expr_go">
@@ -2120,7 +2079,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="expr_nodejs">
@@ -2139,7 +2097,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="expr_python">
@@ -2160,7 +2117,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="expression_csharp">
@@ -2206,7 +2162,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="expression_go">
@@ -2252,7 +2207,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="expression_nodejs">
@@ -2298,7 +2252,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="expression_python">

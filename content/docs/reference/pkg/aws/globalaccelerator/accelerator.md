@@ -13,11 +13,17 @@ meta_desc: "Documentation for the aws.globalaccelerator.Accelerator resource wit
 Creates a Global Accelerator accelerator.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -42,9 +48,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -72,9 +81,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -89,9 +101,12 @@ example = aws.globalaccelerator.Accelerator("example",
     ip_address_type="IPV4")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -108,9 +123,16 @@ const example = new aws.globalaccelerator.Accelerator("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Accelerator Resource {#create}
@@ -135,9 +157,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -145,9 +165,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -155,9 +173,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -165,10 +181,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -194,9 +207,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -204,9 +215,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -214,9 +223,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -224,9 +231,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -234,18 +239,13 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -253,9 +253,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -263,9 +261,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -273,10 +269,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -292,7 +285,6 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributes_csharp">
@@ -348,7 +340,6 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributes_go">
@@ -404,7 +395,6 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributes_nodejs">
@@ -460,7 +450,6 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributes_python">
@@ -523,7 +512,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="dnsname_csharp">
@@ -570,7 +558,6 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="dnsname_go">
@@ -617,7 +604,6 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="dnsname_nodejs">
@@ -664,7 +650,6 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="dns_name_python">
@@ -834,7 +819,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_attributes_csharp">
@@ -922,7 +906,6 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_attributes_go">
@@ -1010,7 +993,6 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_attributes_nodejs">
@@ -1098,7 +1080,6 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_attributes_python">
@@ -1197,7 +1178,6 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="flowlogsenabled_csharp">
@@ -1233,7 +1213,6 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="flowlogsenabled_go">
@@ -1269,7 +1248,6 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="flowlogsenabled_nodejs">
@@ -1305,7 +1283,6 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="flow_logs_enabled_python">
@@ -1343,7 +1320,6 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_csharp">
@@ -1369,7 +1345,6 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_go">
@@ -1395,7 +1370,6 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_nodejs">
@@ -1421,7 +1395,6 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ip_addresses_python">

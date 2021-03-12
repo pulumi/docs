@@ -20,11 +20,17 @@ Google Cloud KMS KeyRing.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -48,9 +54,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -80,9 +89,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -93,9 +105,12 @@ my_crypto_key = gcp.kms.get_kms_crypto_key(name="my-crypto-key",
     key_ring=my_key_ring.self_link)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -111,9 +126,16 @@ const myCryptoKey = myKeyRing.then(myKeyRing => gcp.kms.getKMSCryptoKey({
 }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getKMSCryptoKey {#using}
@@ -152,7 +174,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="keyring_csharp">
@@ -179,7 +200,6 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="keyring_go">
@@ -206,7 +226,6 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="keyring_nodejs">
@@ -233,7 +252,6 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_ring_python">
@@ -269,7 +287,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -362,7 +379,6 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -455,7 +471,6 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -548,7 +563,6 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -651,7 +665,6 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="algorithm_csharp">
@@ -675,7 +688,6 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="algorithm_go">
@@ -699,7 +711,6 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="algorithm_nodejs">
@@ -723,7 +734,6 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="algorithm_python">

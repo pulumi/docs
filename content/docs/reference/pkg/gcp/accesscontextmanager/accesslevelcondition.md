@@ -55,9 +55,7 @@ Your account must have the `serviceusage.services.use` permission on the
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -65,9 +63,7 @@ Your account must have the `serviceusage.services.use` permission on the
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -75,9 +71,7 @@ Your account must have the `serviceusage.services.use` permission on the
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -85,10 +79,7 @@ Your account must have the `serviceusage.services.use` permission on the
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -114,9 +105,7 @@ Your account must have the `serviceusage.services.use` permission on the
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -124,9 +113,7 @@ Your account must have the `serviceusage.services.use` permission on the
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -134,9 +121,7 @@ Your account must have the `serviceusage.services.use` permission on the
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -144,9 +129,7 @@ Your account must have the `serviceusage.services.use` permission on the
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -154,18 +137,13 @@ Your account must have the `serviceusage.services.use` permission on the
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -173,9 +151,7 @@ Your account must have the `serviceusage.services.use` permission on the
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -183,9 +159,7 @@ Your account must have the `serviceusage.services.use` permission on the
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -193,10 +167,7 @@ Your account must have the `serviceusage.services.use` permission on the
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -212,7 +183,6 @@ The AccessLevelCondition resource accepts the following [input]({{< relref "/doc
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accesslevel_csharp">
@@ -314,7 +284,6 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accesslevel_go">
@@ -416,7 +385,6 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accesslevel_nodejs">
@@ -518,7 +486,6 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="access_level_python">
@@ -627,7 +594,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -642,7 +608,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -657,7 +622,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -672,7 +636,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -810,7 +773,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_accesslevel_csharp">
@@ -912,7 +874,6 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_accesslevel_go">
@@ -1014,7 +975,6 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_accesslevel_nodejs">
@@ -1116,7 +1076,6 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_access_level_python">
@@ -1229,7 +1188,6 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="alloweddevicemanagementlevels_csharp">
@@ -1302,7 +1260,6 @@ to be true. Defaults to false.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="alloweddevicemanagementlevels_go">
@@ -1375,7 +1332,6 @@ to be true. Defaults to false.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="alloweddevicemanagementlevels_nodejs">
@@ -1448,7 +1404,6 @@ to be true. Defaults to false.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowed_device_management_levels_python">
@@ -1523,7 +1478,6 @@ to be true. Defaults to false.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ostype_csharp">
@@ -1552,7 +1506,6 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1".
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ostype_go">
@@ -1581,7 +1534,6 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1".
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ostype_nodejs">
@@ -1610,7 +1562,6 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1".
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="os_type_python">

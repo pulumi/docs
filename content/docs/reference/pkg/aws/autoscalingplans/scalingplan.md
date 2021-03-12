@@ -41,9 +41,7 @@ See the [AWS documentation](https://docs.aws.amazon.com/autoscaling/plans/usergu
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -51,9 +49,7 @@ See the [AWS documentation](https://docs.aws.amazon.com/autoscaling/plans/usergu
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -61,9 +57,7 @@ See the [AWS documentation](https://docs.aws.amazon.com/autoscaling/plans/usergu
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -71,10 +65,7 @@ See the [AWS documentation](https://docs.aws.amazon.com/autoscaling/plans/usergu
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -100,9 +91,7 @@ See the [AWS documentation](https://docs.aws.amazon.com/autoscaling/plans/usergu
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -110,9 +99,7 @@ See the [AWS documentation](https://docs.aws.amazon.com/autoscaling/plans/usergu
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -120,9 +107,7 @@ See the [AWS documentation](https://docs.aws.amazon.com/autoscaling/plans/usergu
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -130,9 +115,7 @@ See the [AWS documentation](https://docs.aws.amazon.com/autoscaling/plans/usergu
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -140,18 +123,13 @@ See the [AWS documentation](https://docs.aws.amazon.com/autoscaling/plans/usergu
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -159,9 +137,7 @@ See the [AWS documentation](https://docs.aws.amazon.com/autoscaling/plans/usergu
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -169,9 +145,7 @@ See the [AWS documentation](https://docs.aws.amazon.com/autoscaling/plans/usergu
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -179,10 +153,7 @@ See the [AWS documentation](https://docs.aws.amazon.com/autoscaling/plans/usergu
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -198,7 +169,6 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="applicationsource_csharp">
@@ -234,7 +204,6 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="applicationsource_go">
@@ -270,7 +239,6 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="applicationsource_nodejs">
@@ -306,7 +274,6 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="application_source_python">
@@ -349,7 +316,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -374,7 +340,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -399,7 +364,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -424,7 +388,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -572,7 +535,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_applicationsource_csharp">
@@ -618,7 +580,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_applicationsource_go">
@@ -664,7 +625,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_applicationsource_nodejs">
@@ -710,7 +670,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_application_source_python">
@@ -767,7 +726,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudformationstackarn_csharp">
@@ -793,7 +751,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudformationstackarn_go">
@@ -819,7 +776,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudformationstackarn_nodejs">
@@ -845,7 +801,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudformation_stack_arn_python">
@@ -873,7 +828,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_csharp">
@@ -899,7 +853,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_go">
@@ -925,7 +878,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_nodejs">
@@ -951,7 +903,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_python">
@@ -979,7 +930,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxcapacity_csharp">
@@ -1129,7 +1079,6 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxcapacity_go">
@@ -1279,7 +1228,6 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxcapacity_nodejs">
@@ -1429,7 +1377,6 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="max_capacity_python">
@@ -1581,7 +1528,6 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="metricname_csharp">
@@ -1637,7 +1583,6 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="metricname_go">
@@ -1693,7 +1638,6 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="metricname_nodejs">
@@ -1749,7 +1693,6 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="metric_name_python">
@@ -1807,7 +1750,6 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="predefinedloadmetrictype_csharp">
@@ -1833,7 +1775,6 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="predefinedloadmetrictype_go">
@@ -1859,7 +1800,6 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="predefinedloadmetrictype_nodejs">
@@ -1885,7 +1825,6 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="predefined_load_metric_type_python">
@@ -1913,7 +1852,6 @@ Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCa
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="targetvalue_csharp">
@@ -1994,7 +1932,6 @@ This value is not used if the scalable resource is an Auto Scaling group.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="targetvalue_go">
@@ -2075,7 +2012,6 @@ This value is not used if the scalable resource is an Auto Scaling group.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="targetvalue_nodejs">
@@ -2156,7 +2092,6 @@ This value is not used if the scalable resource is an Auto Scaling group.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="target_value_python">
@@ -2239,7 +2174,6 @@ This value is not used if the scalable resource is an Auto Scaling group.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="metricname_csharp">
@@ -2295,7 +2229,6 @@ This value is not used if the scalable resource is an Auto Scaling group.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="metricname_go">
@@ -2351,7 +2284,6 @@ This value is not used if the scalable resource is an Auto Scaling group.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="metricname_nodejs">
@@ -2407,7 +2339,6 @@ This value is not used if the scalable resource is an Auto Scaling group.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="metric_name_python">
@@ -2465,7 +2396,6 @@ This value is not used if the scalable resource is an Auto Scaling group.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="predefinedscalingmetrictype_csharp">
@@ -2491,7 +2421,6 @@ This value is not used if the scalable resource is an Auto Scaling group.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="predefinedscalingmetrictype_go">
@@ -2517,7 +2446,6 @@ This value is not used if the scalable resource is an Auto Scaling group.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="predefinedscalingmetrictype_nodejs">
@@ -2543,7 +2471,6 @@ This value is not used if the scalable resource is an Auto Scaling group.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="predefined_scaling_metric_type_python">

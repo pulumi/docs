@@ -22,11 +22,17 @@ To get more information about StandardAppVersion, see:
     * [Official Documentation](https://cloud.google.com/appengine/docs/standard)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### App Engine Standard App Version
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -121,9 +127,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -217,9 +226,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -278,9 +290,12 @@ myapp_v2 = gcp.appengine.StandardAppVersion("myappV2",
     noop_on_destroy=True)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -343,9 +358,16 @@ const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a StandardAppVersion Resource {#create}
@@ -370,9 +392,7 @@ const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -380,9 +400,7 @@ const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -390,9 +408,7 @@ const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -400,10 +416,7 @@ const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -429,9 +442,7 @@ const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -439,9 +450,7 @@ const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -449,9 +458,7 @@ const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -459,9 +466,7 @@ const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -469,18 +474,13 @@ const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -488,9 +488,7 @@ const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -498,9 +496,7 @@ const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -508,10 +504,7 @@ const myappV2 = new gcp.appengine.StandardAppVersion("myappV2", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -527,7 +520,6 @@ The StandardAppVersion resource accepts the following [input]({{< relref "/docs/
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="deployment_csharp">
@@ -738,7 +730,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="deployment_go">
@@ -949,7 +940,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="deployment_nodejs">
@@ -1160,7 +1150,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="deployment_python">
@@ -1378,7 +1367,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1403,7 +1391,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -1428,7 +1415,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1453,7 +1439,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -1601,7 +1586,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_automaticscaling_csharp">
@@ -1822,7 +1806,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_automaticscaling_go">
@@ -2043,7 +2026,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_automaticscaling_nodejs">
@@ -2264,7 +2246,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_automatic_scaling_python">
@@ -2496,7 +2477,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentrequests_csharp">
@@ -2566,7 +2546,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentrequests_go">
@@ -2636,7 +2615,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentrequests_nodejs">
@@ -2706,7 +2684,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_requests_python">
@@ -2778,7 +2755,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxinstances_csharp">
@@ -2824,7 +2800,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxinstances_go">
@@ -2870,7 +2845,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxinstances_nodejs">
@@ -2916,7 +2890,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_instances_python">
@@ -2964,7 +2937,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxinstances_csharp">
@@ -2991,7 +2963,6 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxinstances_go">
@@ -3018,7 +2989,6 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxinstances_nodejs">
@@ -3045,7 +3015,6 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="max_instances_python">
@@ -3074,7 +3043,6 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="files_csharp">
@@ -3103,7 +3071,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="files_go">
@@ -3132,7 +3099,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="files_nodejs">
@@ -3161,7 +3127,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="files_python">
@@ -3192,7 +3157,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -3228,7 +3192,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -3264,7 +3227,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -3300,7 +3262,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -3338,7 +3299,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sourceurl_csharp">
@@ -3364,7 +3324,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sourceurl_go">
@@ -3390,7 +3349,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sourceurl_nodejs">
@@ -3416,7 +3374,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="source_url_python">
@@ -3444,7 +3401,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="shell_csharp">
@@ -3460,7 +3416,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="shell_go">
@@ -3476,7 +3431,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="shell_nodejs">
@@ -3492,7 +3446,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="shell_python">
@@ -3510,7 +3463,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="authfailaction_csharp">
@@ -3594,7 +3546,6 @@ All URLs that begin with this prefix are handled by this handler, using the port
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="authfailaction_go">
@@ -3678,7 +3629,6 @@ All URLs that begin with this prefix are handled by this handler, using the port
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="authfailaction_nodejs">
@@ -3762,7 +3712,6 @@ All URLs that begin with this prefix are handled by this handler, using the port
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="auth_fail_action_python">
@@ -3848,7 +3797,6 @@ All URLs that begin with this prefix are handled by this handler, using the port
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="scriptpath_csharp">
@@ -3864,7 +3812,6 @@ All URLs that begin with this prefix are handled by this handler, using the port
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="scriptpath_go">
@@ -3880,7 +3827,6 @@ All URLs that begin with this prefix are handled by this handler, using the port
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="scriptpath_nodejs">
@@ -3896,7 +3842,6 @@ All URLs that begin with this prefix are handled by this handler, using the port
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="script_path_python">
@@ -3914,7 +3859,6 @@ All URLs that begin with this prefix are handled by this handler, using the port
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="applicationreadable_csharp">
@@ -3995,7 +3939,6 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="applicationreadable_go">
@@ -4076,7 +4019,6 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="applicationreadable_nodejs">
@@ -4157,7 +4099,6 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="application_readable_python">
@@ -4240,7 +4181,6 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -4266,7 +4206,6 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -4292,7 +4231,6 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -4318,7 +4256,6 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -4346,7 +4283,6 @@ Defaults to file-specific MIME types, which are derived from each file's filenam
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="instances_csharp">
@@ -4364,7 +4300,6 @@ Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manua
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="instances_go">
@@ -4382,7 +4317,6 @@ Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manua
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="instances_nodejs">
@@ -4400,7 +4334,6 @@ Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manua
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="instances_python">
@@ -4420,7 +4353,6 @@ Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manua
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -4436,7 +4368,6 @@ Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manua
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -4452,7 +4383,6 @@ Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manua
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -4468,7 +4398,6 @@ Modules API set_num_instances() you must use `lifecycle.ignore_changes = ["manua
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">

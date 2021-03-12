@@ -16,11 +16,17 @@ On-demand snapshots happen immediately, unlike scheduled snapshots which occur a
 > **NOTE:** Groups and projects are synonymous terms. You may find `groupId` in the official documentation.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Mongodbatlas = Pulumi.Mongodbatlas;
@@ -62,9 +68,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -113,9 +122,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_mongodbatlas as mongodbatlas
@@ -143,9 +155,12 @@ test_cloud_provider_snapshot_restore_job = mongodbatlas.CloudProviderSnapshotRes
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -177,9 +192,16 @@ const testCloudProviderSnapshotRestoreJob = new mongodbatlas.CloudProviderSnapsh
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a CloudProviderSnapshot Resource {#create}
@@ -204,9 +226,7 @@ const testCloudProviderSnapshotRestoreJob = new mongodbatlas.CloudProviderSnapsh
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -214,9 +234,7 @@ const testCloudProviderSnapshotRestoreJob = new mongodbatlas.CloudProviderSnapsh
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -224,9 +242,7 @@ const testCloudProviderSnapshotRestoreJob = new mongodbatlas.CloudProviderSnapsh
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -234,10 +250,7 @@ const testCloudProviderSnapshotRestoreJob = new mongodbatlas.CloudProviderSnapsh
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -263,9 +276,7 @@ const testCloudProviderSnapshotRestoreJob = new mongodbatlas.CloudProviderSnapsh
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -273,9 +284,7 @@ const testCloudProviderSnapshotRestoreJob = new mongodbatlas.CloudProviderSnapsh
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -283,9 +292,7 @@ const testCloudProviderSnapshotRestoreJob = new mongodbatlas.CloudProviderSnapsh
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -293,9 +300,7 @@ const testCloudProviderSnapshotRestoreJob = new mongodbatlas.CloudProviderSnapsh
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -303,18 +308,13 @@ const testCloudProviderSnapshotRestoreJob = new mongodbatlas.CloudProviderSnapsh
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -322,9 +322,7 @@ const testCloudProviderSnapshotRestoreJob = new mongodbatlas.CloudProviderSnapsh
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -332,9 +330,7 @@ const testCloudProviderSnapshotRestoreJob = new mongodbatlas.CloudProviderSnapsh
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -342,10 +338,7 @@ const testCloudProviderSnapshotRestoreJob = new mongodbatlas.CloudProviderSnapsh
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -361,7 +354,6 @@ The CloudProviderSnapshot resource accepts the following [input]({{< relref "/do
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
@@ -407,7 +399,6 @@ The CloudProviderSnapshot resource accepts the following [input]({{< relref "/do
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="clustername_go">
@@ -453,7 +444,6 @@ The CloudProviderSnapshot resource accepts the following [input]({{< relref "/do
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
@@ -499,7 +489,6 @@ The CloudProviderSnapshot resource accepts the following [input]({{< relref "/do
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
@@ -552,7 +541,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="createdat_csharp">
@@ -657,7 +645,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="createdat_go">
@@ -762,7 +749,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="createdat_nodejs">
@@ -867,7 +853,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="created_at_python">
@@ -1095,7 +1080,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clustername_csharp">
@@ -1231,7 +1215,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clustername_go">
@@ -1367,7 +1350,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clustername_nodejs">
@@ -1503,7 +1485,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cluster_name_python">

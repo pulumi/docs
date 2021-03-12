@@ -98,11 +98,17 @@ Example:
   ```
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Cloudflare = Pulumi.Cloudflare;
@@ -156,9 +162,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -207,9 +216,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_cloudflare as cloudflare
@@ -234,9 +246,12 @@ test_group_index_access_group_access_group = cloudflare.AccessGroup("testGroupIn
     })
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -264,9 +279,16 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AccessGroup Resource {#create}
@@ -291,9 +313,7 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -301,9 +321,7 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -311,9 +329,7 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -321,10 +337,7 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -350,9 +363,7 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -360,9 +371,7 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -370,9 +379,7 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -380,9 +387,7 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -390,18 +395,13 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -409,9 +409,7 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -419,9 +417,7 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -429,10 +425,7 @@ const testGroupIndex_accessGroupAccessGroup = new cloudflare.AccessGroup("testGr
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -448,7 +441,6 @@ The AccessGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="includes_csharp">
@@ -517,7 +509,6 @@ full list.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="includes_go">
@@ -586,7 +577,6 @@ full list.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="includes_nodejs">
@@ -655,7 +645,6 @@ full list.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="includes_python">
@@ -731,7 +720,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -746,7 +734,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -761,7 +748,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -776,7 +762,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -914,7 +899,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_accountid_csharp">
@@ -983,7 +967,6 @@ full list.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_accountid_go">
@@ -1052,7 +1035,6 @@ full list.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_accountid_nodejs">
@@ -1121,7 +1103,6 @@ full list.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_account_id_python">
@@ -1201,7 +1182,6 @@ full list.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="anyvalidservicetoken_csharp">
@@ -1351,7 +1331,6 @@ full list.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="anyvalidservicetoken_go">
@@ -1501,7 +1480,6 @@ full list.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="anyvalidservicetoken_nodejs">
@@ -1651,7 +1629,6 @@ full list.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="any_valid_service_token_python">
@@ -1803,7 +1780,6 @@ full list.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
@@ -1827,7 +1803,6 @@ full list.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
@@ -1851,7 +1826,6 @@ full list.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
@@ -1875,7 +1849,6 @@ full list.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
@@ -1901,7 +1874,6 @@ full list.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
@@ -1935,7 +1907,6 @@ full list.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
@@ -1969,7 +1940,6 @@ full list.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
@@ -2003,7 +1973,6 @@ full list.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
@@ -2039,7 +2008,6 @@ full list.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="emails_csharp">
@@ -2063,7 +2031,6 @@ full list.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="emails_go">
@@ -2087,7 +2054,6 @@ full list.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="emails_nodejs">
@@ -2111,7 +2077,6 @@ full list.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="emails_python">
@@ -2137,7 +2102,6 @@ full list.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
@@ -2162,7 +2126,6 @@ full list.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
@@ -2187,7 +2150,6 @@ full list.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
@@ -2212,7 +2174,6 @@ full list.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
@@ -2239,7 +2200,6 @@ full list.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributename_csharp">
@@ -2272,7 +2232,6 @@ full list.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributename_go">
@@ -2305,7 +2264,6 @@ full list.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributename_nodejs">
@@ -2338,7 +2296,6 @@ full list.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="attribute_name_python">
@@ -2373,7 +2330,6 @@ full list.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="anyvalidservicetoken_csharp">
@@ -2523,7 +2479,6 @@ full list.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="anyvalidservicetoken_go">
@@ -2673,7 +2628,6 @@ full list.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="anyvalidservicetoken_nodejs">
@@ -2823,7 +2777,6 @@ full list.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="any_valid_service_token_python">
@@ -2975,7 +2928,6 @@ full list.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
@@ -2999,7 +2951,6 @@ full list.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
@@ -3023,7 +2974,6 @@ full list.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
@@ -3047,7 +2997,6 @@ full list.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
@@ -3073,7 +3022,6 @@ full list.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
@@ -3107,7 +3055,6 @@ full list.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
@@ -3141,7 +3088,6 @@ full list.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
@@ -3175,7 +3121,6 @@ full list.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
@@ -3211,7 +3156,6 @@ full list.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="emails_csharp">
@@ -3235,7 +3179,6 @@ full list.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="emails_go">
@@ -3259,7 +3202,6 @@ full list.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="emails_nodejs">
@@ -3283,7 +3225,6 @@ full list.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="emails_python">
@@ -3309,7 +3250,6 @@ full list.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
@@ -3334,7 +3274,6 @@ full list.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
@@ -3359,7 +3298,6 @@ full list.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
@@ -3384,7 +3322,6 @@ full list.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
@@ -3411,7 +3348,6 @@ full list.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributename_csharp">
@@ -3444,7 +3380,6 @@ full list.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributename_go">
@@ -3477,7 +3412,6 @@ full list.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributename_nodejs">
@@ -3510,7 +3444,6 @@ full list.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="attribute_name_python">
@@ -3545,7 +3478,6 @@ full list.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="anyvalidservicetoken_csharp">
@@ -3695,7 +3627,6 @@ full list.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="anyvalidservicetoken_go">
@@ -3845,7 +3776,6 @@ full list.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="anyvalidservicetoken_nodejs">
@@ -3995,7 +3925,6 @@ full list.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="any_valid_service_token_python">
@@ -4147,7 +4076,6 @@ full list.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
@@ -4171,7 +4099,6 @@ full list.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
@@ -4195,7 +4122,6 @@ full list.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
@@ -4219,7 +4145,6 @@ full list.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
@@ -4245,7 +4170,6 @@ full list.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
@@ -4279,7 +4203,6 @@ full list.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
@@ -4313,7 +4236,6 @@ full list.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
@@ -4347,7 +4269,6 @@ full list.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
@@ -4383,7 +4304,6 @@ full list.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="emails_csharp">
@@ -4407,7 +4327,6 @@ full list.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="emails_go">
@@ -4431,7 +4350,6 @@ full list.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="emails_nodejs">
@@ -4455,7 +4373,6 @@ full list.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="emails_python">
@@ -4481,7 +4398,6 @@ full list.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_csharp">
@@ -4506,7 +4422,6 @@ full list.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_go">
@@ -4531,7 +4446,6 @@ full list.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identityproviderid_nodejs">
@@ -4556,7 +4470,6 @@ full list.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="identity_provider_id_python">
@@ -4583,7 +4496,6 @@ full list.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributename_csharp">
@@ -4616,7 +4528,6 @@ full list.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributename_go">
@@ -4649,7 +4560,6 @@ full list.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="attributename_nodejs">
@@ -4682,7 +4592,6 @@ full list.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="attribute_name_python">

@@ -16,11 +16,17 @@ The Kafka Connect resource allows the creation and management of Aiven Kafka Con
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aiven = Pulumi.Aiven;
@@ -54,9 +60,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -91,9 +100,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aiven as aiven
@@ -115,9 +127,12 @@ kc1 = aiven.KafkaConnect("kc1",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -141,9 +156,16 @@ const kc1 = new aiven.KafkaConnect("kc1", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a KafkaConnect Resource {#create}
@@ -168,9 +190,7 @@ const kc1 = new aiven.KafkaConnect("kc1", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -178,9 +198,7 @@ const kc1 = new aiven.KafkaConnect("kc1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -188,9 +206,7 @@ const kc1 = new aiven.KafkaConnect("kc1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -198,10 +214,7 @@ const kc1 = new aiven.KafkaConnect("kc1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -227,9 +240,7 @@ const kc1 = new aiven.KafkaConnect("kc1", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -237,9 +248,7 @@ const kc1 = new aiven.KafkaConnect("kc1", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -247,9 +256,7 @@ const kc1 = new aiven.KafkaConnect("kc1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -257,9 +264,7 @@ const kc1 = new aiven.KafkaConnect("kc1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -267,18 +272,13 @@ const kc1 = new aiven.KafkaConnect("kc1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -286,9 +286,7 @@ const kc1 = new aiven.KafkaConnect("kc1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -296,9 +294,7 @@ const kc1 = new aiven.KafkaConnect("kc1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -306,10 +302,7 @@ const kc1 = new aiven.KafkaConnect("kc1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -325,7 +318,6 @@ The KafkaConnect resource accepts the following [input]({{< relref "/docs/intro/
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_csharp">
@@ -471,7 +463,6 @@ deletion is done.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_go">
@@ -617,7 +608,6 @@ deletion is done.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_nodejs">
@@ -763,7 +753,6 @@ deletion is done.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_python">
@@ -916,7 +905,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="components_csharp">
@@ -1011,7 +999,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="components_go">
@@ -1106,7 +1093,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="components_nodejs">
@@ -1201,7 +1187,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="components_python">
@@ -1419,7 +1404,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_csharp">
@@ -1645,7 +1629,6 @@ deletion is done.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_go">
@@ -1871,7 +1854,6 @@ deletion is done.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloudname_nodejs">
@@ -2097,7 +2079,6 @@ deletion is done.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_cloud_name_python">
@@ -2334,7 +2315,6 @@ deletion is done.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="component_csharp">
@@ -2403,7 +2383,6 @@ deletion is done.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="component_go">
@@ -2472,7 +2451,6 @@ deletion is done.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="component_nodejs">
@@ -2541,7 +2519,6 @@ deletion is done.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="component_python">
@@ -2612,7 +2589,6 @@ deletion is done.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipfilters_csharp">
@@ -2669,7 +2645,6 @@ service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipfilters_go">
@@ -2726,7 +2701,6 @@ service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipfilters_nodejs">
@@ -2783,7 +2757,6 @@ service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ip_filters_python">
@@ -2842,7 +2815,6 @@ service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectorclientconfigoverridepolicy_csharp">
@@ -2972,7 +2944,6 @@ group management facilities (defaults to 10000).
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectorclientconfigoverridepolicy_go">
@@ -3102,7 +3073,6 @@ group management facilities (defaults to 10000).
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectorclientconfigoverridepolicy_nodejs">
@@ -3232,7 +3202,6 @@ group management facilities (defaults to 10000).
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="connector_client_config_override_policy_python">
@@ -3364,7 +3333,6 @@ group management facilities (defaults to 10000).
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafkaconnect_csharp">
@@ -3392,7 +3360,6 @@ nodes that are in a project VPC or another type of private network.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafkaconnect_go">
@@ -3420,7 +3387,6 @@ nodes that are in a project VPC or another type of private network.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafkaconnect_nodejs">
@@ -3448,7 +3414,6 @@ nodes that are in a project VPC or another type of private network.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafka_connect_python">
@@ -3478,7 +3443,6 @@ nodes that are in a project VPC or another type of private network.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafkaconnect_csharp">
@@ -3495,7 +3459,6 @@ service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafkaconnect_go">
@@ -3512,7 +3475,6 @@ service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafkaconnect_nodejs">
@@ -3529,7 +3491,6 @@ service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafka_connect_python">
@@ -3548,7 +3509,6 @@ service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafkaconnect_csharp">
@@ -3576,7 +3536,6 @@ nodes that are in a project VPC or another type of private network.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafkaconnect_go">
@@ -3604,7 +3563,6 @@ nodes that are in a project VPC or another type of private network.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafkaconnect_nodejs">
@@ -3632,7 +3590,6 @@ nodes that are in a project VPC or another type of private network.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafka_connect_python">
@@ -3662,7 +3619,6 @@ nodes that are in a project VPC or another type of private network.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integrationtype_csharp">
@@ -3686,7 +3642,6 @@ nodes that are in a project VPC or another type of private network.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integrationtype_go">
@@ -3710,7 +3665,6 @@ nodes that are in a project VPC or another type of private network.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integrationtype_nodejs">
@@ -3734,7 +3688,6 @@ nodes that are in a project VPC or another type of private network.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integration_type_python">

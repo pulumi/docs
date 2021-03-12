@@ -43,9 +43,7 @@ BigQuery tables can be imported using the `project`, `dataset_id`, and `table_id
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ BigQuery tables can be imported using the `project`, `dataset_id`, and `table_id
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ BigQuery tables can be imported using the `project`, `dataset_id`, and `table_id
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ BigQuery tables can be imported using the `project`, `dataset_id`, and `table_id
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ BigQuery tables can be imported using the `project`, `dataset_id`, and `table_id
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ BigQuery tables can be imported using the `project`, `dataset_id`, and `table_id
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ BigQuery tables can be imported using the `project`, `dataset_id`, and `table_id
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ BigQuery tables can be imported using the `project`, `dataset_id`, and `table_id
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ BigQuery tables can be imported using the `project`, `dataset_id`, and `table_id
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ BigQuery tables can be imported using the `project`, `dataset_id`, and `table_id
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ BigQuery tables can be imported using the `project`, `dataset_id`, and `table_id
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ BigQuery tables can be imported using the `project`, `dataset_id`, and `table_id
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -200,7 +171,6 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="datasetid_csharp">
@@ -394,7 +364,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="datasetid_go">
@@ -588,7 +557,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="datasetid_nodejs">
@@ -782,7 +750,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dataset_id_python">
@@ -983,7 +950,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="creationtime_csharp">
@@ -1089,7 +1055,6 @@ which will generate one partition per day, hour, month, and year, respectively.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="creationtime_go">
@@ -1195,7 +1160,6 @@ which will generate one partition per day, hour, month, and year, respectively.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="creationtime_nodejs">
@@ -1301,7 +1265,6 @@ which will generate one partition per day, hour, month, and year, respectively.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="creation_time_python">
@@ -1530,7 +1493,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clusterings_csharp">
@@ -1815,7 +1777,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clusterings_go">
@@ -2100,7 +2061,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clusterings_nodejs">
@@ -2385,7 +2345,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clusterings_python">
@@ -2681,7 +2640,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyname_csharp">
@@ -2701,7 +2659,6 @@ encrypt/decrypt permissions on this key - you may want to see the
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyname_go">
@@ -2721,7 +2678,6 @@ encrypt/decrypt permissions on this key - you may want to see the
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kmskeyname_nodejs">
@@ -2741,7 +2697,6 @@ encrypt/decrypt permissions on this key - you may want to see the
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kms_key_name_python">
@@ -2763,7 +2718,6 @@ encrypt/decrypt permissions on this key - you may want to see the
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="autodetect_csharp">
@@ -2898,7 +2852,6 @@ datasource, after creation the computed schema will be stored in
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="autodetect_go">
@@ -3033,7 +2986,6 @@ datasource, after creation the computed schema will be stored in
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="autodetect_nodejs">
@@ -3168,7 +3120,6 @@ datasource, after creation the computed schema will be stored in
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="autodetect_python">
@@ -3305,7 +3256,6 @@ datasource, after creation the computed schema will be stored in
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="quote_csharp">
@@ -3383,7 +3333,6 @@ that BigQuery will skip when reading the data. At least one of `range` or
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="quote_go">
@@ -3461,7 +3410,6 @@ that BigQuery will skip when reading the data. At least one of `range` or
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="quote_nodejs">
@@ -3539,7 +3487,6 @@ that BigQuery will skip when reading the data. At least one of `range` or
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="quote_python">
@@ -3619,7 +3566,6 @@ that BigQuery will skip when reading the data. At least one of `range` or
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="range_csharp">
@@ -3648,7 +3594,6 @@ that BigQuery will skip when reading the data. At least one of `range` or
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="range_go">
@@ -3677,7 +3622,6 @@ that BigQuery will skip when reading the data. At least one of `range` or
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="range_nodejs">
@@ -3706,7 +3650,6 @@ that BigQuery will skip when reading the data. At least one of `range` or
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="range_python">
@@ -3737,7 +3680,6 @@ that BigQuery will skip when reading the data. At least one of `range` or
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
@@ -3777,7 +3719,6 @@ Note that when `mode` is set to `CUSTOM`, you must encode the partition key sche
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_go">
@@ -3817,7 +3758,6 @@ Note that when `mode` is set to `CUSTOM`, you must encode the partition key sche
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
@@ -3857,7 +3797,6 @@ Note that when `mode` is set to `CUSTOM`, you must encode the partition key sche
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_python">
@@ -3899,7 +3838,6 @@ Note that when `mode` is set to `CUSTOM`, you must encode the partition key sche
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="query_csharp">
@@ -3937,7 +3875,6 @@ The default value is 1800000
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="query_go">
@@ -3975,7 +3912,6 @@ The default value is 1800000
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="query_nodejs">
@@ -4013,7 +3949,6 @@ The default value is 1800000
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="query_python">
@@ -4053,7 +3988,6 @@ The default value is 1800000
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="field_csharp">
@@ -4081,7 +4015,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="field_go">
@@ -4109,7 +4042,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="field_nodejs">
@@ -4137,7 +4069,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="field_python">
@@ -4167,7 +4098,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="end_csharp">
@@ -4203,7 +4133,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="end_go">
@@ -4239,7 +4168,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="end_nodejs">
@@ -4275,7 +4203,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="end_python">
@@ -4313,7 +4240,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
@@ -4364,7 +4290,6 @@ specified.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
@@ -4415,7 +4340,6 @@ specified.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
@@ -4466,7 +4390,6 @@ specified.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
@@ -4519,7 +4442,6 @@ specified.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="query_csharp">
@@ -4546,7 +4468,6 @@ The default value is true. If set to false, the view will use BigQuery's standar
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="query_go">
@@ -4573,7 +4494,6 @@ The default value is true. If set to false, the view will use BigQuery's standar
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="query_nodejs">
@@ -4600,7 +4520,6 @@ The default value is true. If set to false, the view will use BigQuery's standar
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="query_python">

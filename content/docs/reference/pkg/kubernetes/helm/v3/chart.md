@@ -18,11 +18,17 @@ The Chart can be fetched from any source that is accessible to the `helm` comman
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Local Chart Directory
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.Threading.Tasks;
 using Pulumi;
@@ -42,9 +48,12 @@ class HelmStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -67,9 +76,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 from pulumi_kubernetes.helm.v3 import Chart, LocalChartOpts
 
@@ -81,9 +93,12 @@ nginx_ingress = Chart(
 )
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
@@ -93,10 +108,17 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Remote Chart
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.Threading.Tasks;
 using Pulumi;
@@ -113,7 +135,7 @@ class HelmStack : Stack
             Version = "1.24.4",
             FetchOptions = new ChartFetchArgs
             {
-                Repo = "https://charts.helm.sh/stable/"
+                Repo = "https://charts.helm.sh/stable//"
             }
         });
 
@@ -121,9 +143,12 @@ class HelmStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -138,7 +163,7 @@ func main() {
 			chart:   pulumi.string("nginx-ingress"),
 			version: pulumi.string("1.24.4"),
 			fetchargs: helm.fetchargs{
-				repo: pulumi.string("https://charts.helm.sh/stable/"),
+				repo: pulumi.string("https://charts.helm.sh/stable//"),
 			},
 		})
 		if err != nil {
@@ -150,9 +175,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 from pulumi_kubernetes.helm.v3 import Chart, ChartOpts, FetchOpts
 
@@ -162,15 +190,18 @@ nginx_ingress = Chart(
         chart="nginx-ingress",
         version="1.24.4",
         fetch_opts=FetchOpts(
-            repo="https://charts.helm.sh/stable/",
+            repo="https://charts.helm.sh/stable//",
         ),
     ),
 )
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
@@ -179,15 +210,22 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     chart: "nginx-ingress",
     version: "1.24.4",
     fetchOpts:{
-        repo: "https://charts.helm.sh/stable/",
+        repo: "https://charts.helm.sh/stable//",
     },
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Set Chart Values
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -216,7 +254,7 @@ class HelmStack : Stack
             Version = "1.24.4",
             FetchOptions = new ChartFetchArgs
             {
-                Repo = "https://charts.helm.sh/stable/"
+                Repo = "https://charts.helm.sh/stable//"
             },
             Values = values,
         });
@@ -225,9 +263,12 @@ class HelmStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -242,7 +283,7 @@ func main() {
 			Chart:   pulumi.String("nginx-ingress"),
 			Version: pulumi.String("1.24.4"),
 			FetchArgs: helm.FetchArgs{
-				Repo: pulumi.String("https://charts.helm.sh/stable/"),
+				Repo: pulumi.String("https://charts.helm.sh/stable//"),
 			},
 			Values: pulumi.Map{
 				"controller": pulumi.Map{
@@ -261,9 +302,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 from pulumi_kubernetes.helm.v3 import Chart, ChartOpts, FetchOpts
 
@@ -273,7 +317,7 @@ nginx_ingress = Chart(
         chart="nginx-ingress",
         version="1.24.4",
         fetch_opts=FetchOpts(
-            repo="https://charts.helm.sh/stable/",
+            repo="https://charts.helm.sh/stable//",
         ),
         values={
             "controller": {
@@ -286,9 +330,12 @@ nginx_ingress = Chart(
 )
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
@@ -297,7 +344,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     chart: "nginx-ingress",
     version: "1.24.4",
     fetchOpts:{
-        repo: "https://charts.helm.sh/stable/",
+        repo: "https://charts.helm.sh/stable//",
     },
     values: {
         controller: {
@@ -309,10 +356,17 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Deploy Chart into Namespace
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.Threading.Tasks;
 using Pulumi;
@@ -330,7 +384,7 @@ class HelmStack : Stack
             Namespace = "test-namespace",
             FetchOptions = new ChartFetchArgs
             {
-                Repo = "https://charts.helm.sh/stable/"
+                Repo = "https://charts.helm.sh/stable//"
             },
         });
 
@@ -338,9 +392,12 @@ class HelmStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -356,7 +413,7 @@ func main() {
 			Version:   pulumi.String("1.24.4"),
 			Namespace: pulumi.String("test-namespace"),
 			FetchArgs: helm.FetchArgs{
-				Repo: pulumi.String("https://charts.helm.sh/stable/"),
+				Repo: pulumi.String("https://charts.helm.sh/stable//"),
 			},
 		})
 		if err != nil {
@@ -368,9 +425,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 from pulumi_kubernetes.helm.v3 import Chart, ChartOpts, FetchOpts
 
@@ -381,15 +441,18 @@ nginx_ingress = Chart(
         version="1.24.4",
         namespace="test-namespace",
         fetch_opts=FetchOpts(
-            repo="https://charts.helm.sh/stable/",
+            repo="https://charts.helm.sh/stable//",
         ),
     ),
 )
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
@@ -399,15 +462,22 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     version: "1.24.4",
     namespace: "test-namespace",
     fetchOpts:{
-        repo: "https://charts.helm.sh/stable/",
+        repo: "https://charts.helm.sh/stable//",
     },
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Chart with Transformations
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -426,7 +496,7 @@ class HelmStack : Stack
             Version = "1.24.4",
             FetchOptions = new ChartFetchArgs
             {
-                Repo = "https://charts.helm.sh/stable/"
+                Repo = "https://charts.helm.sh/stable//"
             },
             Transformations =
             {
@@ -483,9 +553,12 @@ class HelmStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -501,7 +574,7 @@ func main() {
 			Chart:   pulumi.String("nginx-ingress"),
 			Version: pulumi.String("1.24.4"),
 			FetchArgs: helm.FetchArgs{
-				Repo: pulumi.String("https://charts.helm.sh/stable/"),
+				Repo: pulumi.String("https://charts.helm.sh/stable//"),
 			},
 			Transformations: []yaml.Transformation{
 				// Make every service private to the cluster, i.e., turn all services into ClusterIP
@@ -545,9 +618,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 from pulumi_kubernetes.helm.v3 import Chart, ChartOpts, FetchOpts
 
@@ -581,16 +657,19 @@ nginx_ingress = Chart(
         chart="nginx-ingress",
         version="1.24.4",
         fetch_opts=FetchOpts(
-            repo="https://charts.helm.sh/stable/",
+            repo="https://charts.helm.sh/stable//",
         ),
         transformations=[make_service_private, alias, omit_resource],
     ),
 )
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
@@ -599,7 +678,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     chart: "nginx-ingress",
     version: "1.24.4",
     fetchOpts:{
-        repo: "https://charts.helm.sh/stable/",
+        repo: "https://charts.helm.sh/stable//",
     },
     transformations: [
         // Make every service private to the cluster, i.e., turn all services into ClusterIP instead of LoadBalancer.
@@ -629,9 +708,16 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Chart Resource {#create}
@@ -656,9 +742,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -666,9 +750,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -676,9 +758,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -686,10 +766,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -715,9 +792,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -725,9 +800,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -735,9 +808,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -745,9 +816,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -755,18 +824,13 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -774,9 +838,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -784,9 +846,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -794,10 +854,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -813,7 +870,6 @@ The Chart resource accepts the following [input]({{< relref "/docs/intro/concept
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="chart_csharp">
@@ -906,7 +962,6 @@ Used only when specifying options for a remote chart.{{% /md %}}</dd>
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="chart_go">
@@ -999,7 +1054,6 @@ Used only when specifying options for a remote chart.{{% /md %}}</dd>
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="chart_nodejs">
@@ -1092,7 +1146,6 @@ Used only when specifying options for a remote chart.{{% /md %}}</dd>
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="chart_python">
@@ -1192,7 +1245,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1225,7 +1277,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -1258,7 +1309,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1291,7 +1341,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -1336,7 +1385,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cafile_csharp">
@@ -1477,7 +1525,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cafile_go">
@@ -1618,7 +1665,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cafile_nodejs">
@@ -1759,7 +1805,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ca_file_python">

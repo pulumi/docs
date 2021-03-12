@@ -43,9 +43,7 @@ Fastly Service can be imported using their service ID, e.g.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ Fastly Service can be imported using their service ID, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ Fastly Service can be imported using their service ID, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ Fastly Service can be imported using their service ID, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ Fastly Service can be imported using their service ID, e.g.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ Fastly Service can be imported using their service ID, e.g.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ Fastly Service can be imported using their service ID, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ Fastly Service can be imported using their service ID, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ Fastly Service can be imported using their service ID, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ Fastly Service can be imported using their service ID, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ Fastly Service can be imported using their service ID, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ Fastly Service can be imported using their service ID, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -200,7 +171,6 @@ The Servicev1 resource accepts the following [input]({{< relref "/docs/intro/con
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="domains_csharp">
@@ -739,7 +709,6 @@ Defined below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="domains_go">
@@ -1278,7 +1247,6 @@ Defined below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="domains_nodejs">
@@ -1817,7 +1785,6 @@ Defined below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="domains_python">
@@ -2363,7 +2330,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="activeversion_csharp">
@@ -2398,7 +2364,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="activeversion_go">
@@ -2433,7 +2398,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="activeversion_nodejs">
@@ -2468,7 +2432,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="active_version_python">
@@ -2626,7 +2589,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_acls_csharp">
@@ -3185,7 +3147,6 @@ Defined below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_acls_go">
@@ -3744,7 +3705,6 @@ Defined below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_acls_nodejs">
@@ -4303,7 +4263,6 @@ Defined below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_acls_python">
@@ -4873,7 +4832,6 @@ Defined below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -4899,7 +4857,6 @@ Defined below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -4925,7 +4882,6 @@ Defined below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -4951,7 +4907,6 @@ Defined below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -4979,7 +4934,6 @@ Defined below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_csharp">
@@ -5239,7 +5193,6 @@ Default `200`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_go">
@@ -5499,7 +5452,6 @@ Default `200`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_nodejs">
@@ -5759,7 +5711,6 @@ Default `200`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_python">
@@ -6021,7 +5972,6 @@ Default `200`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dataset_csharp">
@@ -6127,7 +6077,6 @@ Default `200`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dataset_go">
@@ -6233,7 +6182,6 @@ Default `200`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dataset_nodejs">
@@ -6339,7 +6287,6 @@ Default `200`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dataset_python">
@@ -6447,7 +6394,6 @@ Default `200`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
@@ -6593,7 +6539,6 @@ Default `200`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accountname_go">
@@ -6739,7 +6684,6 @@ Default `200`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
@@ -6885,7 +6829,6 @@ Default `200`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="account_name_python">
@@ -7033,7 +6976,6 @@ Default `200`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -7091,7 +7033,6 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -7149,7 +7090,6 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -7207,7 +7147,6 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -7267,7 +7206,6 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -7313,7 +7251,6 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -7359,7 +7296,6 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -7405,7 +7341,6 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -7453,7 +7388,6 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -7492,7 +7426,6 @@ the items are managed outside of the provider.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -7531,7 +7464,6 @@ the items are managed outside of the provider.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -7570,7 +7502,6 @@ the items are managed outside of the provider.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -7611,7 +7542,6 @@ the items are managed outside of the provider.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backends_csharp">
@@ -7697,7 +7627,6 @@ the items are managed outside of the provider.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backends_go">
@@ -7783,7 +7712,6 @@ the items are managed outside of the provider.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backends_nodejs">
@@ -7869,7 +7797,6 @@ the items are managed outside of the provider.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backends_python">
@@ -7957,7 +7884,6 @@ the items are managed outside of the provider.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -7983,7 +7909,6 @@ the items are managed outside of the provider.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -8009,7 +7934,6 @@ the items are managed outside of the provider.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -8035,7 +7959,6 @@ the items are managed outside of the provider.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -8063,7 +7986,6 @@ the items are managed outside of the provider.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -8109,7 +8031,6 @@ the items are managed outside of the provider.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -8155,7 +8076,6 @@ the items are managed outside of the provider.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -8201,7 +8121,6 @@ the items are managed outside of the provider.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -8249,7 +8168,6 @@ the items are managed outside of the provider.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucketname_csharp">
@@ -8375,7 +8293,6 @@ the items are managed outside of the provider.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucketname_go">
@@ -8501,7 +8418,6 @@ the items are managed outside of the provider.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucketname_nodejs">
@@ -8627,7 +8543,6 @@ the items are managed outside of the provider.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucket_name_python">
@@ -8755,7 +8670,6 @@ the items are managed outside of the provider.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -8804,7 +8718,6 @@ gzip. Example: `["css", "js"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -8853,7 +8766,6 @@ gzip. Example: `["css", "js"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -8902,7 +8814,6 @@ gzip. Example: `["css", "js"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -8953,7 +8864,6 @@ gzip. Example: `["css", "js"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="action_csharp">
@@ -9082,7 +8992,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="action_go">
@@ -9211,7 +9120,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="action_nodejs">
@@ -9340,7 +9248,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="action_python">
@@ -9471,7 +9378,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="host_csharp">
@@ -9587,7 +9493,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="host_go">
@@ -9703,7 +9608,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="host_nodejs">
@@ -9819,7 +9723,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="host_python">
@@ -9937,7 +9840,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -10123,7 +10025,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -10309,7 +10210,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -10495,7 +10395,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -10683,7 +10582,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -10769,7 +10667,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -10855,7 +10752,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -10941,7 +10837,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -11029,7 +10924,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accesskey_csharp">
@@ -11185,7 +11079,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accesskey_go">
@@ -11341,7 +11234,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accesskey_nodejs">
@@ -11497,7 +11389,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="access_key_python">
@@ -11655,7 +11546,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -11731,7 +11621,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -11807,7 +11696,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -11883,7 +11771,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -11961,7 +11848,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accesskey_csharp">
@@ -12117,7 +12003,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accesskey_go">
@@ -12273,7 +12158,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accesskey_nodejs">
@@ -12429,7 +12313,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="access_key_python">
@@ -12587,7 +12470,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="index_csharp">
@@ -12753,7 +12635,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="index_go">
@@ -12919,7 +12800,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="index_nodejs">
@@ -13085,7 +12965,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="index_python">
@@ -13253,7 +13132,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_csharp">
@@ -13409,7 +13287,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_go">
@@ -13565,7 +13442,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_nodejs">
@@ -13721,7 +13597,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_python">
@@ -13879,7 +13754,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -13975,7 +13849,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -14071,7 +13944,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -14167,7 +14039,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -14265,7 +14136,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -14341,7 +14211,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -14417,7 +14286,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -14493,7 +14361,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -14571,7 +14438,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dataset_csharp">
@@ -14647,7 +14513,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dataset_go">
@@ -14723,7 +14588,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dataset_nodejs">
@@ -14799,7 +14663,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dataset_python">
@@ -14877,7 +14740,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="brokers_csharp">
@@ -15071,7 +14933,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="brokers_go">
@@ -15265,7 +15126,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="brokers_nodejs">
@@ -15459,7 +15319,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="brokers_python">
@@ -15655,7 +15514,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accesskey_csharp">
@@ -15751,7 +15609,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accesskey_go">
@@ -15847,7 +15704,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accesskey_nodejs">
@@ -15943,7 +15799,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="access_key_python">
@@ -16041,7 +15896,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -16107,7 +15961,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -16173,7 +16026,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -16239,7 +16091,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -16307,7 +16158,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -16383,7 +16233,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -16459,7 +16308,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -16535,7 +16383,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -16613,7 +16460,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -16679,7 +16525,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -16745,7 +16590,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -16811,7 +16655,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -16879,7 +16722,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accesskey_csharp">
@@ -17035,7 +16877,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accesskey_go">
@@ -17191,7 +17032,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="accesskey_nodejs">
@@ -17347,7 +17187,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="access_key_python">
@@ -17505,7 +17344,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -17581,7 +17419,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -17657,7 +17494,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -17733,7 +17569,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -17811,7 +17646,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_csharp">
@@ -17987,7 +17821,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_go">
@@ -18163,7 +17996,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_nodejs">
@@ -18339,7 +18171,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_python">
@@ -18517,7 +18348,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_csharp">
@@ -18583,7 +18413,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_go">
@@ -18649,7 +18478,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_nodejs">
@@ -18715,7 +18543,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_python">
@@ -18783,7 +18610,6 @@ content. (Does not apply to the `delete` action.)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -18917,7 +18743,6 @@ viewing origin fetch durations.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -19051,7 +18876,6 @@ viewing origin fetch durations.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -19185,7 +19009,6 @@ viewing origin fetch durations.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -19321,7 +19144,6 @@ viewing origin fetch durations.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -19398,7 +19220,6 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -19475,7 +19296,6 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -19552,7 +19372,6 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -19631,7 +19450,6 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucketname_csharp">
@@ -19823,7 +19641,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucketname_go">
@@ -20015,7 +19832,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucketname_nodejs">
@@ -20207,7 +20023,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucket_name_python">
@@ -20401,7 +20216,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_csharp">
@@ -20447,7 +20261,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_go">
@@ -20493,7 +20306,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_nodejs">
@@ -20539,7 +20351,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_python">
@@ -20587,7 +20398,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -20683,7 +20493,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -20779,7 +20588,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -20875,7 +20683,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -20973,7 +20780,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -21049,7 +20855,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -21125,7 +20930,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -21201,7 +21005,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -21279,7 +21082,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_csharp">
@@ -21425,7 +21227,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_go">
@@ -21571,7 +21372,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_nodejs">
@@ -21717,7 +21517,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_python">
@@ -21865,7 +21664,6 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_csharp">
@@ -21903,7 +21701,6 @@ marked as the main block. Default is `false`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_go">
@@ -21941,7 +21738,6 @@ marked as the main block. Default is `false`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_nodejs">
@@ -21979,7 +21775,6 @@ marked as the main block. Default is `false`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_python">
@@ -22019,7 +21814,6 @@ marked as the main block. Default is `false`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="responseobject_csharp">
@@ -22064,7 +21858,6 @@ marked as the main block. Default is `false`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="responseobject_go">
@@ -22109,7 +21902,6 @@ marked as the main block. Default is `false`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="responseobject_nodejs">
@@ -22154,7 +21946,6 @@ marked as the main block. Default is `false`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="response_object_python">

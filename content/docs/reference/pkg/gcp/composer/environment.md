@@ -35,11 +35,17 @@ To get more information about Environments, see:
   * Please review the [known issues](https://cloud.google.com/composer/docs/known-issues) for Composer if you are having problems.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Basic Usage
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -57,9 +63,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -81,9 +90,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -91,9 +103,12 @@ import pulumi_gcp as gcp
 test = gcp.composer.Environment("test", region="us-central1")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -103,10 +118,17 @@ const test = new gcp.composer.Environment("test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### With GKE and Compute Resource Dependencies
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -156,9 +178,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -225,9 +250,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -257,9 +285,12 @@ composer_worker = gcp.projects.IAMMember("composer-worker",
     member=test_account.email.apply(lambda email: f"serviceAccount:{email}"))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -294,10 +325,17 @@ const composer_worker = new gcp.projects.IAMMember("composer-worker", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### With Software (Airflow) Config
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -334,9 +372,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -372,9 +413,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -397,9 +441,12 @@ test = gcp.composer.Environment("test",
     region="us-central1")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -423,9 +470,16 @@ const test = new gcp.composer.Environment("test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Environment Resource {#create}
@@ -450,9 +504,7 @@ const test = new gcp.composer.Environment("test", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -460,9 +512,7 @@ const test = new gcp.composer.Environment("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -470,9 +520,7 @@ const test = new gcp.composer.Environment("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -480,10 +528,7 @@ const test = new gcp.composer.Environment("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -509,9 +554,7 @@ const test = new gcp.composer.Environment("test", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -519,9 +562,7 @@ const test = new gcp.composer.Environment("test", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -529,9 +570,7 @@ const test = new gcp.composer.Environment("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -539,9 +578,7 @@ const test = new gcp.composer.Environment("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -549,18 +586,13 @@ const test = new gcp.composer.Environment("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -568,9 +600,7 @@ const test = new gcp.composer.Environment("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -578,9 +608,7 @@ const test = new gcp.composer.Environment("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -588,10 +616,7 @@ const test = new gcp.composer.Environment("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -607,7 +632,6 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="config_csharp">
@@ -672,7 +696,6 @@ If it is not provided, the provider project is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="config_go">
@@ -737,7 +760,6 @@ If it is not provided, the provider project is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="config_nodejs">
@@ -802,7 +824,6 @@ If it is not provided, the provider project is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="config_python">
@@ -874,7 +895,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -889,7 +909,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -904,7 +923,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -919,7 +937,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -1057,7 +1074,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_config_csharp">
@@ -1122,7 +1138,6 @@ If it is not provided, the provider project is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_config_go">
@@ -1187,7 +1202,6 @@ If it is not provided, the provider project is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_config_nodejs">
@@ -1252,7 +1266,6 @@ If it is not provided, the provider project is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_config_python">
@@ -1328,7 +1341,6 @@ If it is not provided, the provider project is used.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="airflowuri_csharp">
@@ -1432,7 +1444,6 @@ will be used to run this environment.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="airflowuri_go">
@@ -1536,7 +1547,6 @@ will be used to run this environment.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="airflowuri_nodejs">
@@ -1640,7 +1650,6 @@ will be used to run this environment.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="airflow_uri_python">
@@ -1746,7 +1755,6 @@ will be used to run this environment.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="machinetype_csharp">
@@ -1765,7 +1773,6 @@ manually changed to a non-standard values.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="machinetype_go">
@@ -1784,7 +1791,6 @@ manually changed to a non-standard values.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="machinetype_nodejs">
@@ -1803,7 +1809,6 @@ manually changed to a non-standard values.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="machine_type_python">
@@ -1824,7 +1829,6 @@ manually changed to a non-standard values.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="zone_csharp">
@@ -1943,7 +1947,6 @@ Cannot be updated.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="zone_go">
@@ -2062,7 +2065,6 @@ Cannot be updated.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="zone_nodejs">
@@ -2181,7 +2183,6 @@ Cannot be updated.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="zone_python">
@@ -2302,7 +2303,6 @@ Cannot be updated.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="useipaliases_csharp">
@@ -2373,7 +2373,6 @@ This field is applicable only when `use_ip_aliases` is true.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="useipaliases_go">
@@ -2444,7 +2443,6 @@ This field is applicable only when `use_ip_aliases` is true.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="useipaliases_nodejs">
@@ -2515,7 +2513,6 @@ This field is applicable only when `use_ip_aliases` is true.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="use_ip_aliases_python">
@@ -2588,7 +2585,6 @@ This field is applicable only when `use_ip_aliases` is true.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudsqlipv4cidrblock_csharp">
@@ -2639,7 +2635,6 @@ If left blank, the default value of '172.16.0.0/28' is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudsqlipv4cidrblock_go">
@@ -2690,7 +2685,6 @@ If left blank, the default value of '172.16.0.0/28' is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudsqlipv4cidrblock_nodejs">
@@ -2741,7 +2735,6 @@ If left blank, the default value of '172.16.0.0/28' is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloud_sql_ipv4_cidr_block_python">
@@ -2794,7 +2787,6 @@ If left blank, the default value of '172.16.0.0/28' is used.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="airflowconfigoverrides_csharp">
@@ -2897,7 +2889,6 @@ Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be update
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="airflowconfigoverrides_go">
@@ -3000,7 +2991,6 @@ Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be update
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="airflowconfigoverrides_nodejs">
@@ -3103,7 +3093,6 @@ Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be update
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="airflow_config_overrides_python">
@@ -3208,7 +3197,6 @@ Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be update
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="machinetype_csharp">
@@ -3227,7 +3215,6 @@ manually changed to a non-standard values.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="machinetype_go">
@@ -3246,7 +3233,6 @@ manually changed to a non-standard values.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="machinetype_nodejs">
@@ -3265,7 +3251,6 @@ manually changed to a non-standard values.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="machine_type_python">
@@ -3286,7 +3271,6 @@ manually changed to a non-standard values.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedipranges_csharp">
@@ -3303,7 +3287,6 @@ A collection of allowed IP ranges with descriptions. Structure is documented bel
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedipranges_go">
@@ -3320,7 +3303,6 @@ A collection of allowed IP ranges with descriptions. Structure is documented bel
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedipranges_nodejs">
@@ -3337,7 +3319,6 @@ A collection of allowed IP ranges with descriptions. Structure is documented bel
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowed_ip_ranges_python">
@@ -3356,7 +3337,6 @@ A collection of allowed IP ranges with descriptions. Structure is documented bel
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
@@ -3385,7 +3365,6 @@ IP range prefixes should be properly truncated. For example,
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="value_go">
@@ -3414,7 +3393,6 @@ IP range prefixes should be properly truncated. For example,
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
@@ -3443,7 +3421,6 @@ IP range prefixes should be properly truncated. For example,
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="value_python">

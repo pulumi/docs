@@ -19,11 +19,17 @@ To get more information about InspectTemplate, see:
     * [Official Documentation](https://cloud.google.com/dlp/docs/creating-templates-inspect)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Dlp Inspect Template Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -202,9 +208,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -343,9 +352,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -459,9 +471,12 @@ basic = gcp.dataloss.PreventionInspectTemplate("basic",
     parent="projects/my-project-name")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -577,10 +592,17 @@ const basic = new gcp.dataloss.PreventionInspectTemplate("basic", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Dlp Inspect Template Custom Type
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -689,9 +711,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -779,9 +804,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -844,9 +872,12 @@ custom = gcp.dataloss.PreventionInspectTemplate("custom",
     parent="projects/my-project-name")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -911,9 +942,16 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a PreventionInspectTemplate Resource {#create}
@@ -938,9 +976,7 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -948,9 +984,7 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -958,9 +992,7 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -968,10 +1000,7 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -997,9 +1026,7 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -1007,9 +1034,7 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1017,9 +1042,7 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1027,9 +1050,7 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1037,18 +1058,13 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1056,9 +1072,7 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1066,9 +1080,7 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1076,10 +1088,7 @@ const custom = new gcp.dataloss.PreventionInspectTemplate("custom", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1095,7 +1104,6 @@ The PreventionInspectTemplate resource accepts the following [input]({{< relref 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="parent_csharp">
@@ -1146,7 +1154,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="parent_go">
@@ -1197,7 +1204,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="parent_nodejs">
@@ -1248,7 +1254,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="parent_python">
@@ -1306,7 +1311,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1332,7 +1336,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -1358,7 +1361,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1384,7 +1386,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -1533,7 +1534,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -1595,7 +1595,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -1657,7 +1656,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
@@ -1719,7 +1717,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
@@ -1792,7 +1789,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentoptions_csharp">
@@ -1887,7 +1883,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentoptions_go">
@@ -1982,7 +1977,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="contentoptions_nodejs">
@@ -2077,7 +2071,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="content_options_python">
@@ -2174,7 +2167,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="infotype_csharp">
@@ -2251,7 +2243,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="infotype_go">
@@ -2328,7 +2319,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="infotype_nodejs">
@@ -2405,7 +2395,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="info_type_python">
@@ -2484,7 +2473,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudstoragepath_csharp">
@@ -2512,7 +2500,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudstoragepath_go">
@@ -2540,7 +2527,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudstoragepath_nodejs">
@@ -2568,7 +2554,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloud_storage_path_python">
@@ -2598,7 +2583,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="path_csharp">
@@ -2614,7 +2598,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="path_go">
@@ -2630,7 +2613,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="path_nodejs">
@@ -2646,7 +2628,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="path_python">
@@ -2664,7 +2645,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="words_csharp">
@@ -2681,7 +2661,6 @@ phrase and every phrase must contain at least 2 characters that are letters or d
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="words_go">
@@ -2698,7 +2677,6 @@ phrase and every phrase must contain at least 2 characters that are letters or d
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="words_nodejs">
@@ -2715,7 +2693,6 @@ phrase and every phrase must contain at least 2 characters that are letters or d
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="words_python">
@@ -2734,7 +2711,6 @@ phrase and every phrase must contain at least 2 characters that are letters or d
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -2751,7 +2727,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -2768,7 +2743,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -2785,7 +2759,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -2804,7 +2777,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pattern_csharp">
@@ -2831,7 +2803,6 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pattern_go">
@@ -2858,7 +2829,6 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pattern_nodejs">
@@ -2885,7 +2855,6 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pattern_python">
@@ -2914,7 +2883,6 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -2931,7 +2899,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -2948,7 +2915,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -2965,7 +2931,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -2984,7 +2949,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -3001,7 +2965,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -3018,7 +2981,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -3035,7 +2997,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -3054,7 +3015,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxfindingsperitem_csharp">
@@ -3091,7 +3051,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxfindingsperitem_go">
@@ -3128,7 +3087,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxfindingsperitem_nodejs">
@@ -3165,7 +3123,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="max_findings_per_item_python">
@@ -3204,7 +3161,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="infotype_csharp">
@@ -3234,7 +3190,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="infotype_go">
@@ -3264,7 +3219,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="infotype_nodejs">
@@ -3294,7 +3248,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="info_type_python">
@@ -3326,7 +3279,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -3343,7 +3295,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -3360,7 +3311,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -3377,7 +3327,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -3396,7 +3345,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="infotypes_csharp">
@@ -3424,7 +3372,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="infotypes_go">
@@ -3452,7 +3399,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="infotypes_nodejs">
@@ -3480,7 +3426,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="info_types_python">
@@ -3510,7 +3455,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -3527,7 +3471,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -3544,7 +3487,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -3561,7 +3503,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -3580,7 +3521,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusionrule_csharp">
@@ -3608,7 +3548,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusionrule_go">
@@ -3636,7 +3575,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusionrule_nodejs">
@@ -3664,7 +3602,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusion_rule_python">
@@ -3694,7 +3631,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="matchingtype_csharp">
@@ -3744,7 +3680,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="matchingtype_go">
@@ -3794,7 +3729,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="matchingtype_nodejs">
@@ -3844,7 +3778,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="matching_type_python">
@@ -3896,7 +3829,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudstoragepath_csharp">
@@ -3924,7 +3856,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudstoragepath_go">
@@ -3952,7 +3883,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudstoragepath_nodejs">
@@ -3980,7 +3910,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloud_storage_path_python">
@@ -4010,7 +3939,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="path_csharp">
@@ -4026,7 +3954,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="path_go">
@@ -4042,7 +3969,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="path_nodejs">
@@ -4058,7 +3984,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="path_python">
@@ -4076,7 +4001,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="words_csharp">
@@ -4093,7 +4017,6 @@ phrase and every phrase must contain at least 2 characters that are letters or d
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="words_go">
@@ -4110,7 +4033,6 @@ phrase and every phrase must contain at least 2 characters that are letters or d
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="words_nodejs">
@@ -4127,7 +4049,6 @@ phrase and every phrase must contain at least 2 characters that are letters or d
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="words_python">
@@ -4146,7 +4067,6 @@ phrase and every phrase must contain at least 2 characters that are letters or d
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="infotypes_csharp">
@@ -4163,7 +4083,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="infotypes_go">
@@ -4180,7 +4099,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="infotypes_nodejs">
@@ -4197,7 +4115,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="info_types_python">
@@ -4216,7 +4133,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -4233,7 +4149,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -4250,7 +4165,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -4267,7 +4181,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -4286,7 +4199,6 @@ or `projects/project-id/storedInfoTypes/432452342`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pattern_csharp">
@@ -4313,7 +4225,6 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pattern_go">
@@ -4340,7 +4251,6 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pattern_nodejs">
@@ -4367,7 +4277,6 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pattern_python">
@@ -4396,7 +4305,6 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="hotwordregex_csharp">
@@ -4439,7 +4347,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="hotwordregex_go">
@@ -4482,7 +4389,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="hotwordregex_nodejs">
@@ -4525,7 +4431,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="hotword_regex_python">
@@ -4570,7 +4475,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pattern_csharp">
@@ -4597,7 +4501,6 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pattern_go">
@@ -4624,7 +4527,6 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pattern_nodejs">
@@ -4651,7 +4553,6 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pattern_python">
@@ -4680,7 +4581,6 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlikelihood_csharp">
@@ -4712,7 +4612,6 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlikelihood_go">
@@ -4744,7 +4643,6 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlikelihood_nodejs">
@@ -4776,7 +4674,6 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_likelihood_python">
@@ -4810,7 +4707,6 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowafter_csharp">
@@ -4836,7 +4732,6 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowafter_go">
@@ -4862,7 +4757,6 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowafter_nodejs">
@@ -4888,7 +4782,6 @@ will result in a final likelihood of LIKELY. Either this or fixed_likelihood can
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="window_after_python">

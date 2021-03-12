@@ -24,11 +24,17 @@ and
 determined which will require enabling the compute api.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Creating A Private Bucket In Standard Storage, In The EU Region. Bucket Configured As Static Website And CORS Configurations
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -76,9 +82,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -124,9 +133,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -153,9 +165,12 @@ static_site = gcp.storage.Bucket("static-site",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -184,10 +199,17 @@ const static_site = new gcp.storage.Bucket("static-site", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Life Cycle Settings For Storage Bucket Objects
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -220,9 +242,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -255,9 +280,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -275,9 +303,12 @@ auto_expire = gcp.storage.Bucket("auto-expire",
     location="US")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -297,9 +328,16 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Bucket Resource {#create}
@@ -324,9 +362,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -334,9 +370,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -344,9 +378,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -354,10 +386,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -383,9 +412,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -393,9 +420,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -403,9 +428,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -413,9 +436,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -423,18 +444,13 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -442,9 +458,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -452,9 +466,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -462,10 +474,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -481,7 +490,6 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="bucketpolicyonly_csharp">
@@ -659,7 +667,6 @@ is not provided, the provider project is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="bucketpolicyonly_go">
@@ -837,7 +844,6 @@ is not provided, the provider project is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="bucketpolicyonly_nodejs">
@@ -1015,7 +1021,6 @@ is not provided, the provider project is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="bucket_policy_only_python">
@@ -1200,7 +1205,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1235,7 +1239,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -1270,7 +1273,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1305,7 +1307,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -1463,7 +1464,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_bucketpolicyonly_csharp">
@@ -1661,7 +1661,6 @@ is not provided, the provider project is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_bucketpolicyonly_go">
@@ -1859,7 +1858,6 @@ is not provided, the provider project is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_bucketpolicyonly_nodejs">
@@ -2057,7 +2055,6 @@ is not provided, the provider project is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_bucket_policy_only_python">
@@ -2266,7 +2263,6 @@ is not provided, the provider project is used.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxageseconds_csharp">
@@ -2312,7 +2308,6 @@ is not provided, the provider project is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxageseconds_go">
@@ -2358,7 +2353,6 @@ is not provided, the provider project is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxageseconds_nodejs">
@@ -2404,7 +2398,6 @@ is not provided, the provider project is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_age_seconds_python">
@@ -2452,7 +2445,6 @@ is not provided, the provider project is used.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="defaultkmskeyname_csharp">
@@ -2467,7 +2459,6 @@ is not provided, the provider project is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="defaultkmskeyname_go">
@@ -2482,7 +2473,6 @@ is not provided, the provider project is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="defaultkmskeyname_nodejs">
@@ -2497,7 +2487,6 @@ is not provided, the provider project is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="default_kms_key_name_python">
@@ -2514,7 +2503,6 @@ is not provided, the provider project is used.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="action_csharp">
@@ -2540,7 +2528,6 @@ is not provided, the provider project is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="action_go">
@@ -2566,7 +2553,6 @@ is not provided, the provider project is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="action_nodejs">
@@ -2592,7 +2578,6 @@ is not provided, the provider project is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="action_python">
@@ -2620,7 +2605,6 @@ is not provided, the provider project is used.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
@@ -2646,7 +2630,6 @@ is not provided, the provider project is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
@@ -2672,7 +2655,6 @@ is not provided, the provider project is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
@@ -2698,7 +2680,6 @@ is not provided, the provider project is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
@@ -2726,7 +2707,6 @@ is not provided, the provider project is used.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="age_csharp">
@@ -2822,7 +2802,6 @@ is not provided, the provider project is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="age_go">
@@ -2918,7 +2897,6 @@ is not provided, the provider project is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="age_nodejs">
@@ -3014,7 +2992,6 @@ is not provided, the provider project is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="age_python">
@@ -3112,7 +3089,6 @@ is not provided, the provider project is used.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="logbucket_csharp">
@@ -3139,7 +3115,6 @@ by default GCS sets this to this bucket's name.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="logbucket_go">
@@ -3166,7 +3141,6 @@ by default GCS sets this to this bucket's name.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="logbucket_nodejs">
@@ -3193,7 +3167,6 @@ by default GCS sets this to this bucket's name.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="log_bucket_python">
@@ -3222,7 +3195,6 @@ by default GCS sets this to this bucket's name.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="retentionperiod_csharp">
@@ -3248,7 +3220,6 @@ by default GCS sets this to this bucket's name.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="retentionperiod_go">
@@ -3274,7 +3245,6 @@ by default GCS sets this to this bucket's name.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="retentionperiod_nodejs">
@@ -3300,7 +3270,6 @@ by default GCS sets this to this bucket's name.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="retention_period_python">
@@ -3328,7 +3297,6 @@ by default GCS sets this to this bucket's name.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
@@ -3344,7 +3312,6 @@ by default GCS sets this to this bucket's name.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_go">
@@ -3360,7 +3327,6 @@ by default GCS sets this to this bucket's name.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
@@ -3376,7 +3342,6 @@ by default GCS sets this to this bucket's name.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_python">
@@ -3394,7 +3359,6 @@ by default GCS sets this to this bucket's name.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mainpagesuffix_csharp">
@@ -3422,7 +3386,6 @@ resource is not found.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mainpagesuffix_go">
@@ -3450,7 +3413,6 @@ resource is not found.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mainpagesuffix_nodejs">
@@ -3478,7 +3440,6 @@ resource is not found.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="main_page_suffix_python">

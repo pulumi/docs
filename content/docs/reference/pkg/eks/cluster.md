@@ -37,9 +37,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -47,9 +45,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -57,9 +53,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -67,10 +61,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -96,9 +87,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -106,9 +95,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -116,9 +103,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -126,9 +111,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -136,18 +119,13 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -155,9 +133,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -165,9 +141,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -175,10 +149,7 @@ Cluster is a component that wraps the AWS and Kubernetes resources necessary to 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -194,7 +165,6 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clustersecuritygroup_csharp">
@@ -715,7 +685,6 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clustersecuritygroup_go">
@@ -1236,7 +1205,6 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="clustersecuritygroup_nodejs">
@@ -1757,7 +1725,6 @@ Note: The use of `subnetIds`, along with `publicSubnetIds` and/or `privateSubnet
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cluster_security_group_python">
@@ -2285,7 +2252,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="awsprovider_csharp">
@@ -2372,7 +2338,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="awsprovider_go">
@@ -2459,7 +2424,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="awsprovider_nodejs">
@@ -2546,7 +2510,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="aws_provider_python">
@@ -2645,7 +2608,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="amiid_csharp">
@@ -2921,7 +2883,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="amiid_go">
@@ -3197,7 +3158,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="amiid_nodejs">
@@ -3473,7 +3433,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ami_id_python">
@@ -3751,7 +3710,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cluster_csharp">
@@ -3928,7 +3886,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cluster_go">
@@ -4105,7 +4062,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cluster_nodejs">
@@ -4282,7 +4238,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cluster_python">
@@ -4461,7 +4416,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="provider_csharp">
@@ -4485,7 +4439,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="provider_go">
@@ -4509,7 +4462,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="provider_nodejs">
@@ -4533,7 +4485,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="provider_python">
@@ -4559,7 +4510,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="podexecutionrolearn_csharp">
@@ -4592,7 +4542,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="podexecutionrolearn_go">
@@ -4625,7 +4574,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="podexecutionrolearn_nodejs">
@@ -4658,7 +4606,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="pod_execution_role_arn_python">
@@ -4693,7 +4640,6 @@ See for more details: https://docs.aws.amazon.com/eks/latest/userguide/worker.ht
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="profilename_csharp">
@@ -4721,7 +4667,6 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="profilename_go">
@@ -4749,7 +4694,6 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="profilename_nodejs">
@@ -4777,7 +4721,6 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="profile_name_python">
@@ -4807,7 +4750,6 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="autoscalinggroupname_csharp">
@@ -4849,7 +4791,6 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="autoscalinggroupname_go">
@@ -4891,7 +4832,6 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="autoscalinggroupname_nodejs">
@@ -4933,7 +4873,6 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="auto_scaling_group_name_python">
@@ -4977,7 +4916,6 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="groups_csharp">
@@ -5010,7 +4948,6 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="groups_go">
@@ -5043,7 +4980,6 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="groups_nodejs">
@@ -5076,7 +5012,6 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="groups_python">
@@ -5111,7 +5046,6 @@ The role is passed to kubeconfig as an authentication exec argument.{{% /md %}}<
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
@@ -5220,7 +5154,6 @@ Please note that at most one storage class can be marked as default. If two or m
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_go">
@@ -5329,7 +5262,6 @@ Please note that at most one storage class can be marked as default. If two or m
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
@@ -5438,7 +5370,6 @@ Please note that at most one storage class can be marked as default. If two or m
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="type_python">
@@ -5549,7 +5480,6 @@ Please note that at most one storage class can be marked as default. If two or m
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="effect_csharp">
@@ -5573,7 +5503,6 @@ Please note that at most one storage class can be marked as default. If two or m
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="effect_go">
@@ -5597,7 +5526,6 @@ Please note that at most one storage class can be marked as default. If two or m
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="effect_nodejs">
@@ -5621,7 +5549,6 @@ Please note that at most one storage class can be marked as default. If two or m
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="effect_python">
@@ -5647,7 +5574,6 @@ Please note that at most one storage class can be marked as default. If two or m
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="groups_csharp">
@@ -5680,7 +5606,6 @@ Please note that at most one storage class can be marked as default. If two or m
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="groups_go">
@@ -5713,7 +5638,6 @@ Please note that at most one storage class can be marked as default. If two or m
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="groups_nodejs">
@@ -5746,7 +5670,6 @@ Please note that at most one storage class can be marked as default. If two or m
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="groups_python">
@@ -5781,7 +5704,6 @@ Please note that at most one storage class can be marked as default. If two or m
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="customnetworkconfig_csharp">
@@ -5910,7 +5832,6 @@ Defaults to 1.{{% /md %}}</dd>
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="customnetworkconfig_go">
@@ -6039,7 +5960,6 @@ Defaults to 1.{{% /md %}}</dd>
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="customnetworkconfig_nodejs">
@@ -6168,7 +6088,6 @@ Defaults to 1.{{% /md %}}</dd>
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_network_config_python">

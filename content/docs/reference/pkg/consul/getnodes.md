@@ -54,7 +54,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="queryoptions_csharp">
@@ -70,7 +69,6 @@ The following arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="queryoptions_go">
@@ -86,7 +84,6 @@ The following arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="queryoptions_nodejs">
@@ -102,7 +99,6 @@ The following arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_options_python">
@@ -127,7 +123,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="datacenter_csharp">
@@ -193,7 +188,6 @@ per-node attributes is detailed below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="datacenter_go">
@@ -259,7 +253,6 @@ per-node attributes is detailed below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="datacenter_nodejs">
@@ -325,7 +318,6 @@ per-node attributes is detailed below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="datacenter_python">
@@ -401,7 +393,6 @@ per-node attributes is detailed below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_csharp">
@@ -461,7 +452,6 @@ List of explicit LAN and WAN IP addresses for the agent.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_go">
@@ -521,7 +511,6 @@ List of explicit LAN and WAN IP addresses for the agent.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_nodejs">
@@ -581,7 +570,6 @@ List of explicit LAN and WAN IP addresses for the agent.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_python">
@@ -645,7 +633,6 @@ List of explicit LAN and WAN IP addresses for the agent.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowstale_csharp">
@@ -738,7 +725,6 @@ to return.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowstale_go">
@@ -831,7 +817,6 @@ to return.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowstale_nodejs">
@@ -924,7 +909,6 @@ to return.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_stale_python">

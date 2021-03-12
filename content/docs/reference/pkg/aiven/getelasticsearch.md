@@ -16,11 +16,17 @@ The Elasticsearch data source provides information about the existing Aiven Elas
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aiven = Pulumi.Aiven;
@@ -39,9 +45,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -64,9 +73,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aiven as aiven
@@ -75,9 +87,12 @@ es1 = aiven.get_elastic_search(project=data["aiven_project"]["pr1"]["project"],
     service_name="my-es1")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -89,9 +104,16 @@ const es1 = aiven.getElasticSearch({
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getElasticSearch {#using}
@@ -130,7 +152,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_csharp">
@@ -352,7 +373,6 @@ deletion is done.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_go">
@@ -574,7 +594,6 @@ deletion is done.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_nodejs">
@@ -796,7 +815,6 @@ deletion is done.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_python">
@@ -1027,7 +1045,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="components_csharp">
@@ -1253,7 +1270,6 @@ deletion is done.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="components_go">
@@ -1479,7 +1495,6 @@ deletion is done.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="components_nodejs">
@@ -1705,7 +1720,6 @@ deletion is done.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="components_python">
@@ -1941,7 +1955,6 @@ deletion is done.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="component_csharp">
@@ -2010,7 +2023,6 @@ deletion is done.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="component_go">
@@ -2079,7 +2091,6 @@ deletion is done.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="component_nodejs">
@@ -2148,7 +2159,6 @@ deletion is done.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="component_python">
@@ -2221,7 +2231,6 @@ deletion is done.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kibanauri_csharp">
@@ -2237,7 +2246,6 @@ deletion is done.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kibanauri_go">
@@ -2253,7 +2261,6 @@ deletion is done.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kibanauri_nodejs">
@@ -2269,7 +2276,6 @@ deletion is done.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="kibana_uri_python">
@@ -2289,7 +2295,6 @@ deletion is done.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="customdomain_csharp">
@@ -2453,7 +2458,6 @@ only when a new service is being created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="customdomain_go">
@@ -2617,7 +2621,6 @@ only when a new service is being created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="customdomain_nodejs">
@@ -2781,7 +2784,6 @@ only when a new service is being created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_domain_python">
@@ -2949,7 +2951,6 @@ only when a new service is being created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="actionautocreateindexenabled_csharp">
@@ -3241,7 +3242,6 @@ is automatically lowered if set to higher than maximum value.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="actionautocreateindexenabled_go">
@@ -3533,7 +3533,6 @@ is automatically lowered if set to higher than maximum value.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="actionautocreateindexenabled_nodejs">
@@ -3825,7 +3824,6 @@ is automatically lowered if set to higher than maximum value.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="action_auto_create_index_enabled_python">
@@ -4121,7 +4119,6 @@ is automatically lowered if set to higher than maximum value.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxindexcount_csharp">
@@ -4158,7 +4155,6 @@ dots and glob characters (* and ?)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxindexcount_go">
@@ -4195,7 +4191,6 @@ dots and glob characters (* and ?)
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxindexcount_nodejs">
@@ -4232,7 +4227,6 @@ dots and glob characters (* and ?)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_index_count_python">
@@ -4273,7 +4267,6 @@ dots and glob characters (* and ?)
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mappingnestedobjectslimit_csharp">
@@ -4311,7 +4304,6 @@ memory errors when a document contains too many nested objects. Default is 10000
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mappingnestedobjectslimit_go">
@@ -4349,7 +4341,6 @@ memory errors when a document contains too many nested objects. Default is 10000
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mappingnestedobjectslimit_nodejs">
@@ -4387,7 +4378,6 @@ memory errors when a document contains too many nested objects. Default is 10000
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mapping_nested_objects_limit_python">
@@ -4429,7 +4419,6 @@ memory errors when a document contains too many nested objects. Default is 10000
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearchrequesttimeout_csharp">
@@ -4468,7 +4457,6 @@ the Kibana. Note: the memory reserved by Kibana is not available for Elasticsear
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearchrequesttimeout_go">
@@ -4507,7 +4495,6 @@ the Kibana. Note: the memory reserved by Kibana is not available for Elasticsear
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearchrequesttimeout_nodejs">
@@ -4546,7 +4533,6 @@ the Kibana. Note: the memory reserved by Kibana is not available for Elasticsear
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_request_timeout_python">
@@ -4589,7 +4575,6 @@ the Kibana. Note: the memory reserved by Kibana is not available for Elasticsear
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_csharp">
@@ -4627,7 +4612,6 @@ internet for service nodes that are in a project VPC or another type of private 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_go">
@@ -4665,7 +4649,6 @@ internet for service nodes that are in a project VPC or another type of private 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_nodejs">
@@ -4703,7 +4686,6 @@ internet for service nodes that are in a project VPC or another type of private 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_python">
@@ -4745,7 +4727,6 @@ internet for service nodes that are in a project VPC or another type of private 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_csharp">
@@ -4772,7 +4753,6 @@ service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_go">
@@ -4799,7 +4779,6 @@ service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_nodejs">
@@ -4826,7 +4805,6 @@ service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_python">
@@ -4857,7 +4835,6 @@ service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_csharp">
@@ -4895,7 +4872,6 @@ internet for service nodes that are in a project VPC or another type of private 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_go">
@@ -4933,7 +4909,6 @@ internet for service nodes that are in a project VPC or another type of private 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_nodejs">
@@ -4971,7 +4946,6 @@ internet for service nodes that are in a project VPC or another type of private 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_python">
@@ -5013,7 +4987,6 @@ internet for service nodes that are in a project VPC or another type of private 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integrationtype_csharp">
@@ -5037,7 +5010,6 @@ internet for service nodes that are in a project VPC or another type of private 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integrationtype_go">
@@ -5061,7 +5033,6 @@ internet for service nodes that are in a project VPC or another type of private 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integrationtype_nodejs">
@@ -5085,7 +5056,6 @@ internet for service nodes that are in a project VPC or another type of private 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integration_type_python">

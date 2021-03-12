@@ -16,19 +16,31 @@ This data source can be useful for getting a list of volume IDs with (for exampl
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+
+
+{{< example csharp >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -43,9 +55,12 @@ example_volume = [aws.ebs.get_volume(filters=[aws.ebs.GetVolumeFilterArgs(
 pulumi.export("availabilityZoneToVolumeId", {s.id: s.availability_zone for s in example_volume})
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -65,9 +80,16 @@ const exampleVolume = exampleEbsVolumes.then(exampleEbsVolumes => exampleEbsVolu
 export const availabilityZoneToVolumeId = exampleVolume.reduce((__obj, s) => { ...__obj, [s.id]: s.availabilityZone });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getEbsVolumes {#using}
@@ -106,7 +128,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
@@ -133,7 +154,6 @@ a pair on the desired volumes.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_go">
@@ -160,7 +180,6 @@ a pair on the desired volumes.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
@@ -187,7 +206,6 @@ a pair on the desired volumes.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="filters_python">
@@ -223,7 +241,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -268,7 +285,6 @@ no volumes match the provided criteria.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -313,7 +329,6 @@ no volumes match the provided criteria.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -358,7 +373,6 @@ no volumes match the provided criteria.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -413,7 +427,6 @@ no volumes match the provided criteria.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -442,7 +455,6 @@ EBS Volume IDs will be selected if any one of the given values match.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -471,7 +483,6 @@ EBS Volume IDs will be selected if any one of the given values match.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -500,7 +511,6 @@ EBS Volume IDs will be selected if any one of the given values match.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">

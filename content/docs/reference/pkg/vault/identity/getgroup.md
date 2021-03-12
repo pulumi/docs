@@ -49,7 +49,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="aliasid_csharp">
@@ -107,7 +106,6 @@ This should be supplied in conjunction with `alias_name`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="aliasid_go">
@@ -165,7 +163,6 @@ This should be supplied in conjunction with `alias_name`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="aliasid_nodejs">
@@ -223,7 +220,6 @@ This should be supplied in conjunction with `alias_name`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="alias_id_python">
@@ -290,7 +286,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="aliascanonicalid_csharp">
@@ -532,7 +527,6 @@ Vault, serialized in JSON format.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="aliascanonicalid_go">
@@ -774,7 +768,6 @@ Vault, serialized in JSON format.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="aliascanonicalid_nodejs">
@@ -1016,7 +1009,6 @@ Vault, serialized in JSON format.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="alias_canonical_id_python">

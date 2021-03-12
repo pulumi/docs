@@ -51,9 +51,7 @@ CertificateAuthority can be imported using any of these accepted formats
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -61,9 +59,7 @@ CertificateAuthority can be imported using any of these accepted formats
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -71,9 +67,7 @@ CertificateAuthority can be imported using any of these accepted formats
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -81,10 +75,7 @@ CertificateAuthority can be imported using any of these accepted formats
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -110,9 +101,7 @@ CertificateAuthority can be imported using any of these accepted formats
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -120,9 +109,7 @@ CertificateAuthority can be imported using any of these accepted formats
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -130,9 +117,7 @@ CertificateAuthority can be imported using any of these accepted formats
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -140,9 +125,7 @@ CertificateAuthority can be imported using any of these accepted formats
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -150,18 +133,13 @@ CertificateAuthority can be imported using any of these accepted formats
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -169,9 +147,7 @@ CertificateAuthority can be imported using any of these accepted formats
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -179,9 +155,7 @@ CertificateAuthority can be imported using any of these accepted formats
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -189,10 +163,7 @@ CertificateAuthority can be imported using any of these accepted formats
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -208,7 +179,6 @@ The Authority resource accepts the following [input]({{< relref "/docs/intro/con
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="certificateauthorityid_csharp">
@@ -360,7 +330,6 @@ Possible values are `SELF_SIGNED` and `SUBORDINATE`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="certificateauthorityid_go">
@@ -512,7 +481,6 @@ Possible values are `SELF_SIGNED` and `SUBORDINATE`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="certificateauthorityid_nodejs">
@@ -664,7 +632,6 @@ Possible values are `SELF_SIGNED` and `SUBORDINATE`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="certificate_authority_id_python">
@@ -823,7 +790,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="accessurls_csharp">
@@ -902,7 +868,6 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="accessurls_go">
@@ -981,7 +946,6 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="accessurls_nodejs">
@@ -1060,7 +1024,6 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="access_urls_python">
@@ -1262,7 +1225,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_accessurls_csharp">
@@ -1478,7 +1440,6 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_accessurls_go">
@@ -1694,7 +1655,6 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_accessurls_nodejs">
@@ -1910,7 +1870,6 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_access_urls_python">
@@ -2137,7 +2096,6 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cacertificateaccessurl_csharp">
@@ -2161,7 +2119,6 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cacertificateaccessurl_go">
@@ -2185,7 +2142,6 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cacertificateaccessurl_nodejs">
@@ -2209,7 +2165,6 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ca_certificate_access_url_python">
@@ -2235,7 +2190,6 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="reusableconfig_csharp">
@@ -2265,7 +2219,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="reusableconfig_go">
@@ -2295,7 +2248,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="reusableconfig_nodejs">
@@ -2325,7 +2277,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="reusable_config_python">
@@ -2357,7 +2308,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="reusableconfig_csharp">
@@ -2376,7 +2326,6 @@ found by running `gcloud beta privateca reusable-configs list`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="reusableconfig_go">
@@ -2395,7 +2344,6 @@ found by running `gcloud beta privateca reusable-configs list`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="reusableconfig_nodejs">
@@ -2414,7 +2362,6 @@ found by running `gcloud beta privateca reusable-configs list`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="reusable_config_python">
@@ -2435,7 +2382,6 @@ found by running `gcloud beta privateca reusable-configs list`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="commonname_csharp">
@@ -2473,7 +2419,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="commonname_go">
@@ -2511,7 +2456,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="commonname_nodejs">
@@ -2549,7 +2493,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="common_name_python">
@@ -2589,7 +2532,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="organization_csharp">
@@ -2665,7 +2607,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="organization_go">
@@ -2741,7 +2682,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="organization_nodejs">
@@ -2817,7 +2757,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="organization_python">
@@ -2895,7 +2834,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dnsnames_csharp">
@@ -2941,7 +2879,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dnsnames_go">
@@ -2987,7 +2924,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dnsnames_nodejs">
@@ -3033,7 +2969,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dns_names_python">
@@ -3081,7 +3016,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="includecacerturl_csharp">
@@ -3110,7 +3044,6 @@ rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="includecacerturl_go">
@@ -3139,7 +3072,6 @@ rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="includecacerturl_nodejs">
@@ -3168,7 +3100,6 @@ rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="include_ca_cert_url_python">
@@ -3199,7 +3130,6 @@ rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="algorithm_csharp">
@@ -3228,7 +3158,6 @@ Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `R
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="algorithm_go">
@@ -3257,7 +3186,6 @@ Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `R
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="algorithm_nodejs">
@@ -3286,7 +3214,6 @@ Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `R
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="algorithm_python">

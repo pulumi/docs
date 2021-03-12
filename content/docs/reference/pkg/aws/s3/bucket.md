@@ -15,11 +15,17 @@ Provides a S3 bucket resource.
 > This functionality is for managing S3 in an AWS Partition. To manage [S3 on Outposts](https://docs.aws.amazon.com/AmazonS3/latest/dev/S3onOutposts.html), see the [`aws.s3control.Bucket`](https://www.terraform.io/docs/providers/aws/r/s3control_bucket.html) resource.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Private Bucket w/ Tags
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -42,9 +48,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -70,9 +79,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -85,9 +97,12 @@ bucket = aws.s3.Bucket("bucket",
     })
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -102,10 +117,17 @@ const bucket = new aws.s3.Bucket("b", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Static Website Hosting
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.IO;
 using Pulumi;
@@ -139,13 +161,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -168,9 +196,12 @@ bucket = aws.s3.Bucket("bucket",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -196,10 +227,17 @@ const bucket = new aws.s3.Bucket("bucket", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Using CORS
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -241,9 +279,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -283,9 +324,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -304,9 +348,12 @@ bucket = aws.s3.Bucket("bucket",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -327,10 +374,17 @@ const bucket = new aws.s3.Bucket("b", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Using versioning
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -352,9 +406,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -379,9 +436,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -393,9 +453,12 @@ bucket = aws.s3.Bucket("bucket",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -409,10 +472,17 @@ const bucket = new aws.s3.Bucket("b", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Enable Logging
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -442,9 +512,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -478,9 +551,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -494,9 +570,12 @@ bucket = aws.s3.Bucket("bucket",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -512,10 +591,17 @@ const bucket = new aws.s3.Bucket("bucket", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Using object lifecycle
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -607,9 +693,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -691,9 +780,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -756,9 +848,12 @@ versioning_bucket = aws.s3.Bucket("versioningBucket",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -824,10 +919,17 @@ const versioningBucket = new aws.s3.Bucket("versioning_bucket", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Using replication configuration
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -946,9 +1048,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -1029,9 +1134,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -1112,9 +1220,12 @@ replication_role_policy_attachment = aws.iam.RolePolicyAttachment("replicationRo
     policy_arn=replication_policy.arn)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1198,10 +1309,17 @@ const replicationRolePolicyAttachment = new aws.iam.RolePolicyAttachment("replic
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Enable Default Server Side Encryption
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -1234,9 +1352,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -1273,9 +1394,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -1293,9 +1417,12 @@ mybucket = aws.s3.Bucket("mybucket", server_side_encryption_configuration=aws.s3
 ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1315,10 +1442,17 @@ const mybucket = new aws.s3.Bucket("mybucket", {serverSideEncryptionConfiguratio
 }});
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Using ACL policy grants
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -1358,9 +1492,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -1402,9 +1539,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -1427,9 +1567,12 @@ bucket = aws.s3.Bucket("bucket", grants=[
 ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1453,9 +1596,16 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
 ]});
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Bucket Resource {#create}
@@ -1480,9 +1630,7 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1490,9 +1638,7 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1500,9 +1646,7 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1510,10 +1654,7 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1539,9 +1680,7 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -1549,9 +1688,7 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1559,9 +1696,7 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1569,9 +1704,7 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1579,18 +1712,13 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1598,9 +1726,7 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1608,9 +1734,7 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1618,10 +1742,7 @@ const bucket = new aws.s3.Bucket("bucket", {grants: [
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1637,7 +1758,6 @@ The Bucket resource accepts the following [input]({{< relref "/docs/intro/concep
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accelerationstatus_csharp">
@@ -1856,7 +1976,6 @@ developer guide for more information.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accelerationstatus_go">
@@ -2075,7 +2194,6 @@ developer guide for more information.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accelerationstatus_nodejs">
@@ -2294,7 +2412,6 @@ developer guide for more information.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="acceleration_status_python">
@@ -2520,7 +2637,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="bucketdomainname_csharp">
@@ -2565,7 +2681,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="bucketdomainname_go">
@@ -2610,7 +2725,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="bucketdomainname_nodejs">
@@ -2655,7 +2769,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="bucket_domain_name_python">
@@ -2823,7 +2936,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_accelerationstatus_csharp">
@@ -3072,7 +3184,6 @@ developer guide for more information.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_accelerationstatus_go">
@@ -3321,7 +3432,6 @@ developer guide for more information.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_accelerationstatus_nodejs">
@@ -3570,7 +3680,6 @@ developer guide for more information.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_acceleration_status_python">
@@ -3830,7 +3939,6 @@ developer guide for more information.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="allowedmethods_csharp">
@@ -3886,7 +3994,6 @@ developer guide for more information.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="allowedmethods_go">
@@ -3942,7 +4049,6 @@ developer guide for more information.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="allowedmethods_nodejs">
@@ -3998,7 +4104,6 @@ developer guide for more information.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="allowed_methods_python">
@@ -4056,7 +4161,6 @@ developer guide for more information.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="permissions_csharp">
@@ -4102,7 +4206,6 @@ developer guide for more information.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="permissions_go">
@@ -4148,7 +4251,6 @@ developer guide for more information.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="permissions_nodejs">
@@ -4194,7 +4296,6 @@ developer guide for more information.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="permissions_python">
@@ -4242,7 +4343,6 @@ developer guide for more information.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
@@ -4338,7 +4438,6 @@ developer guide for more information.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_go">
@@ -4434,7 +4533,6 @@ developer guide for more information.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
@@ -4530,7 +4628,6 @@ developer guide for more information.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_python">
@@ -4628,7 +4725,6 @@ developer guide for more information.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="date_csharp">
@@ -4664,7 +4760,6 @@ developer guide for more information.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="date_go">
@@ -4700,7 +4795,6 @@ developer guide for more information.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="date_nodejs">
@@ -4736,7 +4830,6 @@ developer guide for more information.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="date_python">
@@ -4774,7 +4867,6 @@ developer guide for more information.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="days_csharp">
@@ -4790,7 +4882,6 @@ developer guide for more information.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="days_go">
@@ -4806,7 +4897,6 @@ developer guide for more information.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="days_nodejs">
@@ -4822,7 +4912,6 @@ developer guide for more information.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="days_python">
@@ -4840,7 +4929,6 @@ developer guide for more information.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="storageclass_csharp">
@@ -4866,7 +4954,6 @@ developer guide for more information.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="storageclass_go">
@@ -4892,7 +4979,6 @@ developer guide for more information.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="storageclass_nodejs">
@@ -4918,7 +5004,6 @@ developer guide for more information.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="storage_class_python">
@@ -4946,7 +5031,6 @@ developer guide for more information.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="storageclass_csharp">
@@ -4982,7 +5066,6 @@ developer guide for more information.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="storageclass_go">
@@ -5018,7 +5101,6 @@ developer guide for more information.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="storageclass_nodejs">
@@ -5054,7 +5136,6 @@ developer guide for more information.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="storage_class_python">
@@ -5092,7 +5173,6 @@ developer guide for more information.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="targetbucket_csharp">
@@ -5118,7 +5198,6 @@ developer guide for more information.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="targetbucket_go">
@@ -5144,7 +5223,6 @@ developer guide for more information.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="targetbucket_nodejs">
@@ -5170,7 +5248,6 @@ developer guide for more information.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="target_bucket_python">
@@ -5198,7 +5275,6 @@ developer guide for more information.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="objectlockenabled_csharp">
@@ -5224,7 +5300,6 @@ developer guide for more information.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="objectlockenabled_go">
@@ -5250,7 +5325,6 @@ developer guide for more information.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="objectlockenabled_nodejs">
@@ -5276,7 +5350,6 @@ developer guide for more information.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="object_lock_enabled_python">
@@ -5304,7 +5377,6 @@ developer guide for more information.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="defaultretention_csharp">
@@ -5320,7 +5392,6 @@ developer guide for more information.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="defaultretention_go">
@@ -5336,7 +5407,6 @@ developer guide for more information.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="defaultretention_nodejs">
@@ -5352,7 +5422,6 @@ developer guide for more information.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="default_retention_python">
@@ -5370,7 +5439,6 @@ developer guide for more information.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="mode_csharp">
@@ -5406,7 +5474,6 @@ developer guide for more information.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="mode_go">
@@ -5442,7 +5509,6 @@ developer guide for more information.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="mode_nodejs">
@@ -5478,7 +5544,6 @@ developer guide for more information.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="mode_python">
@@ -5516,7 +5581,6 @@ developer guide for more information.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="role_csharp">
@@ -5542,7 +5606,6 @@ developer guide for more information.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="role_go">
@@ -5568,7 +5631,6 @@ developer guide for more information.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="role_nodejs">
@@ -5594,7 +5656,6 @@ developer guide for more information.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="role_python">
@@ -5622,7 +5683,6 @@ developer guide for more information.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="destination_csharp">
@@ -5698,7 +5758,6 @@ developer guide for more information.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="destination_go">
@@ -5774,7 +5833,6 @@ developer guide for more information.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="destination_nodejs">
@@ -5850,7 +5908,6 @@ developer guide for more information.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="destination_python">
@@ -5928,7 +5985,6 @@ developer guide for more information.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
@@ -5985,7 +6041,6 @@ developer guide for more information.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucket_go">
@@ -6042,7 +6097,6 @@ developer guide for more information.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
@@ -6099,7 +6153,6 @@ developer guide for more information.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucket_python">
@@ -6158,7 +6211,6 @@ developer guide for more information.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="owner_csharp">
@@ -6174,7 +6226,6 @@ developer guide for more information.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="owner_go">
@@ -6190,7 +6241,6 @@ developer guide for more information.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="owner_nodejs">
@@ -6206,7 +6256,6 @@ developer guide for more information.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="owner_python">
@@ -6224,7 +6273,6 @@ developer guide for more information.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_csharp">
@@ -6251,7 +6299,6 @@ The rule applies only to objects having all the tags in its tagset.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_go">
@@ -6278,7 +6325,6 @@ The rule applies only to objects having all the tags in its tagset.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_nodejs">
@@ -6305,7 +6351,6 @@ The rule applies only to objects having all the tags in its tagset.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="prefix_python">
@@ -6334,7 +6379,6 @@ The rule applies only to objects having all the tags in its tagset.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ssekmsencryptedobjects_csharp">
@@ -6351,7 +6395,6 @@ in `destination` must be specified as well.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ssekmsencryptedobjects_go">
@@ -6368,7 +6411,6 @@ in `destination` must be specified as well.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ssekmsencryptedobjects_nodejs">
@@ -6385,7 +6427,6 @@ in `destination` must be specified as well.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="sse_kms_encrypted_objects_python">
@@ -6404,7 +6445,6 @@ in `destination` must be specified as well.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
@@ -6420,7 +6460,6 @@ in `destination` must be specified as well.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_go">
@@ -6436,7 +6475,6 @@ in `destination` must be specified as well.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
@@ -6452,7 +6490,6 @@ in `destination` must be specified as well.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enabled_python">
@@ -6470,7 +6507,6 @@ in `destination` must be specified as well.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="rule_csharp">
@@ -6486,7 +6522,6 @@ in `destination` must be specified as well.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="rule_go">
@@ -6502,7 +6537,6 @@ in `destination` must be specified as well.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="rule_nodejs">
@@ -6518,7 +6552,6 @@ in `destination` must be specified as well.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="rule_python">
@@ -6536,7 +6569,6 @@ in `destination` must be specified as well.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="applyserversideencryptionbydefault_csharp">
@@ -6562,7 +6594,6 @@ in `destination` must be specified as well.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="applyserversideencryptionbydefault_go">
@@ -6588,7 +6619,6 @@ in `destination` must be specified as well.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="applyserversideencryptionbydefault_nodejs">
@@ -6614,7 +6644,6 @@ in `destination` must be specified as well.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="apply_server_side_encryption_by_default_python">
@@ -6642,7 +6671,6 @@ in `destination` must be specified as well.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ssealgorithm_csharp">
@@ -6668,7 +6696,6 @@ in `destination` must be specified as well.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ssealgorithm_go">
@@ -6694,7 +6721,6 @@ in `destination` must be specified as well.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ssealgorithm_nodejs">
@@ -6720,7 +6746,6 @@ in `destination` must be specified as well.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sse_algorithm_python">
@@ -6748,7 +6773,6 @@ in `destination` must be specified as well.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
@@ -6774,7 +6798,6 @@ in `destination` must be specified as well.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
@@ -6800,7 +6823,6 @@ in `destination` must be specified as well.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
@@ -6826,7 +6848,6 @@ in `destination` must be specified as well.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
@@ -6854,7 +6875,6 @@ in `destination` must be specified as well.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="errordocument_csharp">
@@ -6901,7 +6921,6 @@ describing redirect behavior and when redirects are applied.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="errordocument_go">
@@ -6948,7 +6967,6 @@ describing redirect behavior and when redirects are applied.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="errordocument_nodejs">
@@ -6995,7 +7013,6 @@ describing redirect behavior and when redirects are applied.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="error_document_python">

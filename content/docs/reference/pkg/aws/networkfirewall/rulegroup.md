@@ -13,11 +13,17 @@ meta_desc: "Documentation for the aws.networkfirewall.RuleGroup resource with ex
 Provides an AWS Network Firewall Rule Group Resource
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Stateful Inspection for denying access to a domain
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -59,9 +65,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -101,9 +110,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -126,9 +138,12 @@ example = aws.networkfirewall.RuleGroup("example",
     type="STATEFUL")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -153,10 +168,17 @@ const example = new aws.networkfirewall.RuleGroup("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Stateful Inspection for permitting packets from a source IP address
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -224,9 +246,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -293,9 +318,12 @@ func toPulumiStringArray(arr []string) pulumi.StringArray {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -334,9 +362,12 @@ example = aws.networkfirewall.RuleGroup("example",
     })
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -377,10 +408,17 @@ const example = new aws.networkfirewall.RuleGroup("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Stateful Inspection for blocking packets from going to an intended destination
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -433,9 +471,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -484,9 +525,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -518,9 +562,12 @@ example = aws.networkfirewall.RuleGroup("example",
     type="STATEFUL")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -554,10 +601,17 @@ const example = new aws.networkfirewall.RuleGroup("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Stateful Inspection from rules specifications defined in Suricata flat format
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.IO;
 using Pulumi;
@@ -583,13 +637,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -604,9 +664,12 @@ example = aws.networkfirewall.RuleGroup("example",
     })
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -624,10 +687,17 @@ const example = new aws.networkfirewall.RuleGroup("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Stateless Inspection with a Custom Action
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -748,9 +818,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -847,9 +920,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -913,9 +989,12 @@ example = aws.networkfirewall.RuleGroup("example",
     type="STATELESS")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -981,9 +1060,16 @@ const example = new aws.networkfirewall.RuleGroup("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a RuleGroup Resource {#create}
@@ -1008,9 +1094,7 @@ const example = new aws.networkfirewall.RuleGroup("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1018,9 +1102,7 @@ const example = new aws.networkfirewall.RuleGroup("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1028,9 +1110,7 @@ const example = new aws.networkfirewall.RuleGroup("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1038,10 +1118,7 @@ const example = new aws.networkfirewall.RuleGroup("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1067,9 +1144,7 @@ const example = new aws.networkfirewall.RuleGroup("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -1077,9 +1152,7 @@ const example = new aws.networkfirewall.RuleGroup("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1087,9 +1160,7 @@ const example = new aws.networkfirewall.RuleGroup("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1097,9 +1168,7 @@ const example = new aws.networkfirewall.RuleGroup("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1107,18 +1176,13 @@ const example = new aws.networkfirewall.RuleGroup("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1126,9 +1190,7 @@ const example = new aws.networkfirewall.RuleGroup("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1136,9 +1198,7 @@ const example = new aws.networkfirewall.RuleGroup("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1146,10 +1206,7 @@ const example = new aws.networkfirewall.RuleGroup("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1165,7 +1222,6 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="capacity_csharp">
@@ -1241,7 +1297,6 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="capacity_go">
@@ -1317,7 +1372,6 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="capacity_nodejs">
@@ -1393,7 +1447,6 @@ The RuleGroup resource accepts the following [input]({{< relref "/docs/intro/con
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="capacity_python">
@@ -1476,7 +1529,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_csharp">
@@ -1511,7 +1563,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_go">
@@ -1546,7 +1597,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_nodejs">
@@ -1581,7 +1631,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_python">
@@ -1739,7 +1788,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
@@ -1835,7 +1883,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
@@ -1931,7 +1978,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
@@ -2027,7 +2073,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
@@ -2134,7 +2179,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="rulessource_csharp">
@@ -2160,7 +2204,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="rulessource_go">
@@ -2186,7 +2229,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="rulessource_nodejs">
@@ -2212,7 +2254,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="rules_source_python">
@@ -2240,7 +2281,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipsets_csharp">
@@ -2266,7 +2306,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipsets_go">
@@ -2292,7 +2331,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ipsets_nodejs">
@@ -2318,7 +2356,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ip_sets_python">
@@ -2346,7 +2383,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ipset_csharp">
@@ -2372,7 +2408,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ipset_go">
@@ -2398,7 +2433,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ipset_nodejs">
@@ -2424,7 +2458,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ip_set_python">
@@ -2452,7 +2485,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="definitions_csharp">
@@ -2468,7 +2500,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="definitions_go">
@@ -2484,7 +2515,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="definitions_nodejs">
@@ -2500,7 +2530,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="definitions_python">
@@ -2518,7 +2547,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_csharp">
@@ -2544,7 +2572,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_go">
@@ -2570,7 +2597,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_nodejs">
@@ -2596,7 +2622,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_python">
@@ -2624,7 +2649,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="definitions_csharp">
@@ -2640,7 +2664,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="definitions_go">
@@ -2656,7 +2679,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="definitions_nodejs">
@@ -2672,7 +2694,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="definitions_python">
@@ -2690,7 +2711,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="rulessourcelist_csharp">
@@ -2736,7 +2756,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="rulessourcelist_go">
@@ -2782,7 +2801,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="rulessourcelist_nodejs">
@@ -2828,7 +2846,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="rules_source_list_python">
@@ -2876,7 +2893,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="generatedrulestype_csharp">
@@ -2912,7 +2928,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="generatedrulestype_go">
@@ -2948,7 +2963,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="generatedrulestype_nodejs">
@@ -2984,7 +2998,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="generated_rules_type_python">
@@ -3022,7 +3035,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="action_csharp">
@@ -3058,7 +3070,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="action_go">
@@ -3094,7 +3105,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="action_nodejs">
@@ -3130,7 +3140,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="action_python">
@@ -3168,7 +3177,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="destination_csharp">
@@ -3234,7 +3242,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="destination_go">
@@ -3300,7 +3307,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="destination_nodejs">
@@ -3366,7 +3372,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="destination_python">
@@ -3434,7 +3439,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="keyword_csharp">
@@ -3461,7 +3465,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="keyword_go">
@@ -3488,7 +3491,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="keyword_nodejs">
@@ -3515,7 +3517,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="keyword_python">
@@ -3544,7 +3545,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="statelessrules_csharp">
@@ -3570,7 +3570,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="statelessrules_go">
@@ -3596,7 +3595,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="statelessrules_nodejs">
@@ -3622,7 +3620,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="stateless_rules_python">
@@ -3650,7 +3647,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="actiondefinition_csharp">
@@ -3676,7 +3672,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="actiondefinition_go">
@@ -3702,7 +3697,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="actiondefinition_nodejs">
@@ -3728,7 +3722,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="action_definition_python">
@@ -3756,7 +3749,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="publishmetricaction_csharp">
@@ -3772,7 +3764,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="publishmetricaction_go">
@@ -3788,7 +3779,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="publishmetricaction_nodejs">
@@ -3804,7 +3794,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="publish_metric_action_python">
@@ -3822,7 +3811,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dimensions_csharp">
@@ -3838,7 +3826,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dimensions_go">
@@ -3854,7 +3841,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dimensions_nodejs">
@@ -3870,7 +3856,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dimensions_python">
@@ -3888,7 +3873,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
@@ -3904,7 +3888,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="value_go">
@@ -3920,7 +3903,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
@@ -3936,7 +3918,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="value_python">
@@ -3954,7 +3935,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="priority_csharp">
@@ -3980,7 +3960,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="priority_go">
@@ -4006,7 +3985,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="priority_nodejs">
@@ -4032,7 +4010,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="priority_python">
@@ -4060,7 +4037,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="actions_csharp">
@@ -4086,7 +4062,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="actions_go">
@@ -4112,7 +4087,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="actions_nodejs">
@@ -4138,7 +4112,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="actions_python">
@@ -4166,7 +4139,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationports_csharp">
@@ -4232,7 +4204,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationports_go">
@@ -4298,7 +4269,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationports_nodejs">
@@ -4364,7 +4334,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_ports_python">
@@ -4432,7 +4401,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="addressdefinition_csharp">
@@ -4448,7 +4416,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="addressdefinition_go">
@@ -4464,7 +4431,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="addressdefinition_nodejs">
@@ -4480,7 +4446,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_definition_python">
@@ -4498,7 +4463,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="fromport_csharp">
@@ -4524,7 +4488,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="fromport_go">
@@ -4550,7 +4513,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="fromport_nodejs">
@@ -4576,7 +4538,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="from_port_python">
@@ -4604,7 +4565,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="addressdefinition_csharp">
@@ -4620,7 +4580,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="addressdefinition_go">
@@ -4636,7 +4595,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="addressdefinition_nodejs">
@@ -4652,7 +4610,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="address_definition_python">
@@ -4670,7 +4627,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="fromport_csharp">
@@ -4696,7 +4652,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="fromport_go">
@@ -4722,7 +4677,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="fromport_nodejs">
@@ -4748,7 +4702,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="from_port_python">
@@ -4776,7 +4729,6 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="flags_csharp">
@@ -4804,7 +4756,6 @@ Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="flags_go">
@@ -4832,7 +4783,6 @@ Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="flags_nodejs">
@@ -4860,7 +4810,6 @@ Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="flags_python">

@@ -14,11 +14,17 @@ Provides an Amazon Lex Bot resource. For more information see
 [Amazon Lex: How It Works](https://docs.aws.amazon.com/lex/latest/dg/how-it-works.html)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -74,9 +80,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -128,9 +137,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -163,9 +175,12 @@ order_flowers_bot = aws.lex.Bot("orderFlowersBot",
     voice_id="Salli")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -200,9 +215,16 @@ const orderFlowersBot = new aws.lex.Bot("order_flowers_bot", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Bot Resource {#create}
@@ -227,9 +249,7 @@ const orderFlowersBot = new aws.lex.Bot("order_flowers_bot", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -237,9 +257,7 @@ const orderFlowersBot = new aws.lex.Bot("order_flowers_bot", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -247,9 +265,7 @@ const orderFlowersBot = new aws.lex.Bot("order_flowers_bot", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -257,10 +273,7 @@ const orderFlowersBot = new aws.lex.Bot("order_flowers_bot", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -286,9 +299,7 @@ const orderFlowersBot = new aws.lex.Bot("order_flowers_bot", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -296,9 +307,7 @@ const orderFlowersBot = new aws.lex.Bot("order_flowers_bot", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -306,9 +315,7 @@ const orderFlowersBot = new aws.lex.Bot("order_flowers_bot", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -316,9 +323,7 @@ const orderFlowersBot = new aws.lex.Bot("order_flowers_bot", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -326,18 +331,13 @@ const orderFlowersBot = new aws.lex.Bot("order_flowers_bot", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -345,9 +345,7 @@ const orderFlowersBot = new aws.lex.Bot("order_flowers_bot", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -355,9 +353,7 @@ const orderFlowersBot = new aws.lex.Bot("order_flowers_bot", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -365,10 +361,7 @@ const orderFlowersBot = new aws.lex.Bot("order_flowers_bot", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -384,7 +377,6 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="abortstatement_csharp">
@@ -530,7 +522,6 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="abortstatement_go">
@@ -676,7 +667,6 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="abortstatement_nodejs">
@@ -822,7 +812,6 @@ The Bot resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="abort_statement_python">
@@ -975,7 +964,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_csharp">
@@ -1063,7 +1051,6 @@ failure_reason response element.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_go">
@@ -1151,7 +1138,6 @@ failure_reason response element.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_nodejs">
@@ -1239,7 +1225,6 @@ failure_reason response element.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_python">
@@ -1450,7 +1435,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_abortstatement_csharp">
@@ -1669,7 +1653,6 @@ failure_reason response element.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_abortstatement_go">
@@ -1888,7 +1871,6 @@ failure_reason response element.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_abortstatement_nodejs">
@@ -2107,7 +2089,6 @@ failure_reason response element.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_abort_statement_python">
@@ -2337,7 +2318,6 @@ failure_reason response element.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="messages_csharp">
@@ -2367,7 +2347,6 @@ slot values into the response card. For more information, see
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="messages_go">
@@ -2397,7 +2376,6 @@ slot values into the response card. For more information, see
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="messages_nodejs">
@@ -2427,7 +2405,6 @@ slot values into the response card. For more information, see
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="messages_python">
@@ -2459,7 +2436,6 @@ slot values into the response card. For more information, see
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_csharp">
@@ -2496,7 +2472,6 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_go">
@@ -2533,7 +2508,6 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_nodejs">
@@ -2570,7 +2544,6 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_python">
@@ -2609,7 +2582,6 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxattempts_csharp">
@@ -2649,7 +2621,6 @@ slot values into the response card. For more information, see
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxattempts_go">
@@ -2689,7 +2660,6 @@ slot values into the response card. For more information, see
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxattempts_nodejs">
@@ -2729,7 +2699,6 @@ slot values into the response card. For more information, see
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="max_attempts_python">
@@ -2771,7 +2740,6 @@ slot values into the response card. For more information, see
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_csharp">
@@ -2808,7 +2776,6 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_go">
@@ -2845,7 +2812,6 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_nodejs">
@@ -2882,7 +2848,6 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_python">
@@ -2921,7 +2886,6 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="intentname_csharp">
@@ -2947,7 +2911,6 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="intentname_go">
@@ -2973,7 +2936,6 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="intentname_nodejs">
@@ -2999,7 +2961,6 @@ is assigned to a message, Amazon Lex returns one message from each group in the 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="intent_name_python">

@@ -233,7 +233,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="auditconfigs_csharp">
@@ -261,7 +260,6 @@ defining a binding to be included in the policy document. Multiple
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="auditconfigs_go">
@@ -289,7 +287,6 @@ defining a binding to be included in the policy document. Multiple
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="auditconfigs_nodejs">
@@ -317,7 +314,6 @@ defining a binding to be included in the policy document. Multiple
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="audit_configs_python">
@@ -354,7 +350,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -399,7 +394,6 @@ referencing from a resource that supports IAM.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -444,7 +438,6 @@ referencing from a resource that supports IAM.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -489,7 +482,6 @@ referencing from a resource that supports IAM.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -544,7 +536,6 @@ referencing from a resource that supports IAM.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="auditlogconfigs_csharp">
@@ -570,7 +561,6 @@ referencing from a resource that supports IAM.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="auditlogconfigs_go">
@@ -596,7 +586,6 @@ referencing from a resource that supports IAM.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="auditlogconfigs_nodejs">
@@ -622,7 +611,6 @@ referencing from a resource that supports IAM.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="audit_log_configs_python">
@@ -652,7 +640,6 @@ referencing from a resource that supports IAM.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="logtype_csharp">
@@ -678,7 +665,6 @@ referencing from a resource that supports IAM.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="logtype_go">
@@ -704,7 +690,6 @@ referencing from a resource that supports IAM.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="logtype_nodejs">
@@ -730,7 +715,6 @@ referencing from a resource that supports IAM.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="log_type_python">
@@ -760,7 +744,6 @@ referencing from a resource that supports IAM.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="members_csharp">
@@ -805,7 +788,6 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="members_go">
@@ -850,7 +832,6 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="members_nodejs">
@@ -895,7 +876,6 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="members_python">
@@ -944,7 +924,6 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="expression_csharp">
@@ -980,7 +959,6 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="expression_go">
@@ -1016,7 +994,6 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="expression_nodejs">
@@ -1052,7 +1029,6 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="expression_python">

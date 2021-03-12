@@ -14,11 +14,17 @@ Use this data source to get information about a Cloud SQL instance
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -36,9 +42,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -60,9 +69,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -70,9 +82,12 @@ import pulumi_gcp as gcp
 qa = gcp.sql.get_database_instance(name="test-sql-instance")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -83,9 +98,16 @@ const qa = pulumi.output(gcp.sql.getDatabaseInstance({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getDatabaseInstance {#using}
@@ -124,7 +146,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -150,7 +171,6 @@ The following arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -176,7 +196,6 @@ The following arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -202,7 +221,6 @@ The following arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -237,7 +255,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="clones_csharp">
@@ -449,7 +466,6 @@ configuration is detailed below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="clones_go">
@@ -661,7 +677,6 @@ configuration is detailed below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="clones_nodejs">
@@ -873,7 +888,6 @@ configuration is detailed below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="clones_python">
@@ -1095,7 +1109,6 @@ configuration is detailed below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pointintime_csharp">
@@ -1119,7 +1132,6 @@ configuration is detailed below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pointintime_go">
@@ -1143,7 +1155,6 @@ configuration is detailed below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pointintime_nodejs">
@@ -1167,7 +1178,6 @@ configuration is detailed below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="point_in_time_python">
@@ -1195,7 +1205,6 @@ configuration is detailed below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ipaddress_csharp">
@@ -1228,7 +1237,6 @@ configuration is detailed below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ipaddress_go">
@@ -1261,7 +1269,6 @@ configuration is detailed below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ipaddress_nodejs">
@@ -1294,7 +1301,6 @@ configuration is detailed below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ip_address_python">
@@ -1331,7 +1337,6 @@ configuration is detailed below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cacertificate_csharp">
@@ -1446,7 +1451,6 @@ configuration is detailed below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cacertificate_go">
@@ -1561,7 +1565,6 @@ configuration is detailed below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cacertificate_nodejs">
@@ -1676,7 +1679,6 @@ configuration is detailed below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ca_certificate_python">
@@ -1795,7 +1797,6 @@ configuration is detailed below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backuprunid_csharp">
@@ -1829,7 +1830,6 @@ configuration is detailed below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backuprunid_go">
@@ -1863,7 +1863,6 @@ configuration is detailed below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backuprunid_nodejs">
@@ -1897,7 +1896,6 @@ configuration is detailed below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backup_run_id_python">
@@ -1935,7 +1933,6 @@ configuration is detailed below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cert_csharp">
@@ -1988,7 +1985,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cert_go">
@@ -2041,7 +2037,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cert_nodejs">
@@ -2094,7 +2089,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cert_python">
@@ -2151,7 +2145,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="activationpolicy_csharp">
@@ -2337,7 +2330,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="activationpolicy_go">
@@ -2523,7 +2515,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="activationpolicy_nodejs">
@@ -2709,7 +2700,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="activation_policy_python">
@@ -2899,7 +2889,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="binarylogenabled_csharp">
@@ -2953,7 +2942,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="binarylogenabled_go">
@@ -3007,7 +2995,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="binarylogenabled_nodejs">
@@ -3061,7 +3048,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="binary_log_enabled_python">
@@ -3119,7 +3105,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -3145,7 +3130,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -3171,7 +3155,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -3197,7 +3180,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -3227,7 +3209,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="queryinsightsenabled_csharp">
@@ -3273,7 +3254,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="queryinsightsenabled_go">
@@ -3319,7 +3299,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="queryinsightsenabled_nodejs">
@@ -3365,7 +3344,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="query_insights_enabled_python">
@@ -3415,7 +3393,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="authorizednetworks_csharp">
@@ -3460,7 +3437,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="authorizednetworks_go">
@@ -3505,7 +3481,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="authorizednetworks_nodejs">
@@ -3550,7 +3525,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="authorized_networks_python">
@@ -3599,7 +3573,6 @@ First Generation instances are now deprecated, see [here](https://cloud.google.c
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="expirationtime_csharp">
@@ -3636,7 +3609,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="expirationtime_go">
@@ -3673,7 +3645,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="expirationtime_nodejs">
@@ -3710,7 +3681,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="expiration_time_python">
@@ -3751,7 +3721,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="followgaeapplication_csharp">
@@ -3777,7 +3746,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="followgaeapplication_go">
@@ -3803,7 +3771,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="followgaeapplication_nodejs">
@@ -3829,7 +3796,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="follow_gae_application_python">
@@ -3859,7 +3825,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="day_csharp">
@@ -3895,7 +3860,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="day_go">
@@ -3931,7 +3895,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="day_nodejs">
@@ -3967,7 +3930,6 @@ formatted date time string indicating when this whitelist expires.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="day_python">

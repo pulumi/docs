@@ -23,11 +23,17 @@ To get more information about RegionAutoscaler, see:
     * [Autoscaling Groups of Instances](https://cloud.google.com/compute/docs/autoscaler/)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Region Autoscaler Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -118,9 +124,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -211,9 +220,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -265,9 +277,12 @@ foobar_region_autoscaler = gcp.compute.RegionAutoscaler("foobarRegionAutoscaler"
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -325,9 +340,16 @@ const foobarRegionAutoscaler = new gcp.compute.RegionAutoscaler("foobarRegionAut
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a RegionAutoscaler Resource {#create}
@@ -352,9 +374,7 @@ const foobarRegionAutoscaler = new gcp.compute.RegionAutoscaler("foobarRegionAut
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -362,9 +382,7 @@ const foobarRegionAutoscaler = new gcp.compute.RegionAutoscaler("foobarRegionAut
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -372,9 +390,7 @@ const foobarRegionAutoscaler = new gcp.compute.RegionAutoscaler("foobarRegionAut
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -382,10 +398,7 @@ const foobarRegionAutoscaler = new gcp.compute.RegionAutoscaler("foobarRegionAut
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -411,9 +424,7 @@ const foobarRegionAutoscaler = new gcp.compute.RegionAutoscaler("foobarRegionAut
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -421,9 +432,7 @@ const foobarRegionAutoscaler = new gcp.compute.RegionAutoscaler("foobarRegionAut
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -431,9 +440,7 @@ const foobarRegionAutoscaler = new gcp.compute.RegionAutoscaler("foobarRegionAut
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -441,9 +448,7 @@ const foobarRegionAutoscaler = new gcp.compute.RegionAutoscaler("foobarRegionAut
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -451,18 +456,13 @@ const foobarRegionAutoscaler = new gcp.compute.RegionAutoscaler("foobarRegionAut
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -470,9 +470,7 @@ const foobarRegionAutoscaler = new gcp.compute.RegionAutoscaler("foobarRegionAut
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -480,9 +478,7 @@ const foobarRegionAutoscaler = new gcp.compute.RegionAutoscaler("foobarRegionAut
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -490,10 +486,7 @@ const foobarRegionAutoscaler = new gcp.compute.RegionAutoscaler("foobarRegionAut
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -509,7 +502,6 @@ The RegionAutoscaler resource accepts the following [input]({{< relref "/docs/in
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="autoscalingpolicy_csharp">
@@ -583,7 +575,6 @@ If it is not provided, the provider project is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="autoscalingpolicy_go">
@@ -657,7 +648,6 @@ If it is not provided, the provider project is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="autoscalingpolicy_nodejs">
@@ -731,7 +721,6 @@ If it is not provided, the provider project is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="autoscaling_policy_python">
@@ -812,7 +801,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="creationtimestamp_csharp">
@@ -847,7 +835,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="creationtimestamp_go">
@@ -882,7 +869,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="creationtimestamp_nodejs">
@@ -917,7 +903,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="creation_timestamp_python">
@@ -1075,7 +1060,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_autoscalingpolicy_csharp">
@@ -1169,7 +1153,6 @@ be a positive float value. If not defined, the default is 0.8.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_autoscalingpolicy_go">
@@ -1263,7 +1246,6 @@ be a positive float value. If not defined, the default is 0.8.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_autoscalingpolicy_nodejs">
@@ -1357,7 +1339,6 @@ be a positive float value. If not defined, the default is 0.8.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_autoscaling_policy_python">
@@ -1462,7 +1443,6 @@ be a positive float value. If not defined, the default is 0.8.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxreplicas_csharp">
@@ -1592,7 +1572,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxreplicas_go">
@@ -1722,7 +1701,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxreplicas_nodejs">
@@ -1852,7 +1830,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="max_replicas_python">
@@ -1984,7 +1961,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="target_csharp">
@@ -2002,7 +1978,6 @@ be a positive float value. If not defined, the default is 0.8.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="target_go">
@@ -2020,7 +1995,6 @@ be a positive float value. If not defined, the default is 0.8.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="target_nodejs">
@@ -2038,7 +2012,6 @@ be a positive float value. If not defined, the default is 0.8.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="target_python">
@@ -2058,7 +2031,6 @@ be a positive float value. If not defined, the default is 0.8.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="target_csharp">
@@ -2076,7 +2048,6 @@ be a positive float value. If not defined, the default is 0.8.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="target_go">
@@ -2094,7 +2065,6 @@ be a positive float value. If not defined, the default is 0.8.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="target_nodejs">
@@ -2112,7 +2082,6 @@ be a positive float value. If not defined, the default is 0.8.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="target_python">
@@ -2132,7 +2101,6 @@ be a positive float value. If not defined, the default is 0.8.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -2231,7 +2199,6 @@ Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -2330,7 +2297,6 @@ Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -2429,7 +2395,6 @@ Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -2530,7 +2495,6 @@ Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxscaleddownreplicas_csharp">
@@ -2558,7 +2522,6 @@ to include directives regarding slower scale down, as described above.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxscaleddownreplicas_go">
@@ -2586,7 +2549,6 @@ to include directives regarding slower scale down, as described above.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxscaleddownreplicas_nodejs">
@@ -2614,7 +2576,6 @@ to include directives regarding slower scale down, as described above.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_scaled_down_replicas_python">
@@ -2644,7 +2605,6 @@ to include directives regarding slower scale down, as described above.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_csharp">
@@ -2672,7 +2632,6 @@ For example, specify 80 for 80%.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_go">
@@ -2700,7 +2659,6 @@ For example, specify 80 for 80%.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_nodejs">
@@ -2728,7 +2686,6 @@ For example, specify 80 for 80%.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_python">
@@ -2758,7 +2715,6 @@ For example, specify 80 for 80%.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxscaledinreplicas_csharp">
@@ -2786,7 +2742,6 @@ to include directives regarding slower scale down, as described above.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxscaledinreplicas_go">
@@ -2814,7 +2769,6 @@ to include directives regarding slower scale down, as described above.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxscaledinreplicas_nodejs">
@@ -2842,7 +2796,6 @@ to include directives regarding slower scale down, as described above.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_scaled_in_replicas_python">
@@ -2872,7 +2825,6 @@ to include directives regarding slower scale down, as described above.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_csharp">
@@ -2900,7 +2852,6 @@ For example, specify 80 for 80%.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_go">
@@ -2928,7 +2879,6 @@ For example, specify 80 for 80%.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_nodejs">
@@ -2956,7 +2906,6 @@ For example, specify 80 for 80%.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_python">
@@ -2986,7 +2935,6 @@ For example, specify 80 for 80%.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="durationsec_csharp">
@@ -3062,7 +3010,6 @@ For example, specify 80 for 80%.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="durationsec_go">
@@ -3138,7 +3085,6 @@ For example, specify 80 for 80%.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="durationsec_nodejs">
@@ -3214,7 +3160,6 @@ For example, specify 80 for 80%.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="duration_sec_python">

@@ -15,23 +15,38 @@ resources.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
 
-{{% example typescript %}}
+
+{{< example csharp >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -59,9 +74,16 @@ const example = pulumi.output(aws.ec2.getAmi({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getAmi {#using}
@@ -100,7 +122,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="owners_csharp">
@@ -176,7 +197,6 @@ options to narrow down the list AWS returns.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="owners_go">
@@ -252,7 +272,6 @@ options to narrow down the list AWS returns.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="owners_nodejs">
@@ -328,7 +347,6 @@ options to narrow down the list AWS returns.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="owners_python">
@@ -413,7 +431,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="architecture_csharp">
@@ -767,7 +784,6 @@ is successfully registered and can be used to launch an instance.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="architecture_go">
@@ -1121,7 +1137,6 @@ is successfully registered and can be used to launch an instance.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="architecture_nodejs">
@@ -1475,7 +1490,6 @@ is successfully registered and can be used to launch an instance.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="architecture_python">
@@ -1839,7 +1853,6 @@ is successfully registered and can be used to launch an instance.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
@@ -1885,7 +1898,6 @@ is successfully registered and can be used to launch an instance.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_go">
@@ -1931,7 +1943,6 @@ is successfully registered and can be used to launch an instance.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
@@ -1977,7 +1988,6 @@ is successfully registered and can be used to launch an instance.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="device_name_python">
@@ -2027,7 +2037,6 @@ is successfully registered and can be used to launch an instance.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -2052,7 +2061,6 @@ is successfully registered and can be used to launch an instance.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -2077,7 +2085,6 @@ is successfully registered and can be used to launch an instance.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -2102,7 +2109,6 @@ is successfully registered and can be used to launch an instance.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -2131,7 +2137,6 @@ is successfully registered and can be used to launch an instance.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="productcodeid_csharp">
@@ -2155,7 +2160,6 @@ is successfully registered and can be used to launch an instance.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="productcodeid_go">
@@ -2179,7 +2183,6 @@ is successfully registered and can be used to launch an instance.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="productcodeid_nodejs">
@@ -2203,7 +2206,6 @@ is successfully registered and can be used to launch an instance.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="product_code_id_python">

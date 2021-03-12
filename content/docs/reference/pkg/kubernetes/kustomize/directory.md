@@ -14,11 +14,17 @@ Directory is a component representing a collection of resources described by a k
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Local Kustomize Directory
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.Threading.Tasks;
 using Pulumi;
@@ -36,9 +42,12 @@ class KustomizeStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -63,9 +72,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 from pulumi_kubernetes.kustomize import Directory
 
@@ -75,9 +87,12 @@ hello_world = Directory(
 )
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
@@ -87,10 +102,17 @@ const helloWorld = new k8s.kustomize.Directory("helloWorldLocal", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Kustomize Directory from a Git Repo
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.Threading.Tasks;
 using Pulumi;
@@ -108,9 +130,12 @@ class KustomizeStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -135,9 +160,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 from pulumi_kubernetes.kustomize import Directory
 
@@ -147,9 +175,12 @@ hello_world = Directory(
 )
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
@@ -159,10 +190,17 @@ const helloWorld = new k8s.kustomize.Directory("helloWorldRemote", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Kustomize Directory with Transformations
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.Collections.Generic;
 using System.Collections.Immutable;
@@ -231,9 +269,12 @@ class KustomizeStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -291,9 +332,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 from pulumi_kubernetes.helm.v3 import Chart, ChartOpts, FetchOpts
 
@@ -328,9 +372,12 @@ hello_world = Directory(
 )
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as k8s from "@pulumi/kubernetes";
@@ -365,9 +412,16 @@ const helloWorld = new k8s.kustomize.Directory("helloWorldRemote", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Directory Resource {#create}
@@ -392,9 +446,7 @@ const helloWorld = new k8s.kustomize.Directory("helloWorldRemote", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -402,9 +454,7 @@ const helloWorld = new k8s.kustomize.Directory("helloWorldRemote", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -412,9 +462,7 @@ const helloWorld = new k8s.kustomize.Directory("helloWorldRemote", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -422,10 +470,7 @@ const helloWorld = new k8s.kustomize.Directory("helloWorldRemote", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -451,9 +496,7 @@ const helloWorld = new k8s.kustomize.Directory("helloWorldRemote", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -461,9 +504,7 @@ const helloWorld = new k8s.kustomize.Directory("helloWorldRemote", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -471,9 +512,7 @@ const helloWorld = new k8s.kustomize.Directory("helloWorldRemote", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -481,9 +520,7 @@ const helloWorld = new k8s.kustomize.Directory("helloWorldRemote", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -491,18 +528,13 @@ const helloWorld = new k8s.kustomize.Directory("helloWorldRemote", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -510,9 +542,7 @@ const helloWorld = new k8s.kustomize.Directory("helloWorldRemote", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -520,9 +550,7 @@ const helloWorld = new k8s.kustomize.Directory("helloWorldRemote", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -530,10 +558,7 @@ const helloWorld = new k8s.kustomize.Directory("helloWorldRemote", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -549,7 +574,6 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="directory_csharp">
@@ -585,7 +609,6 @@ Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/hello
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="directory_go">
@@ -621,7 +644,6 @@ Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/hello
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="directory_nodejs">
@@ -657,7 +679,6 @@ Example: https://github.com/kubernetes-sigs/kustomize/tree/master/examples/hello
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="directory_python">
@@ -700,7 +721,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -715,7 +735,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -730,7 +749,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -745,7 +763,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">

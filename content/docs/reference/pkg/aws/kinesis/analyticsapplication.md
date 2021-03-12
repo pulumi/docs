@@ -18,11 +18,17 @@ For more details, see the [Amazon Kinesis Analytics Documentation](https://docs.
 > **Note:** To manage Amazon Kinesis Data Analytics for Apache Flink applications, use the [`aws.kinesisanalyticsv2.Application`](https://www.terraform.io/docs/providers/aws/r/kinesisanalyticsv2_application.html) resource.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -79,9 +85,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -137,9 +146,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -172,9 +184,12 @@ test_application = aws.kinesis.AnalyticsApplication("testApplication", inputs=aw
 ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -208,9 +223,16 @@ const testApplication = new aws.kinesis.AnalyticsApplication("testApplication", 
 }});
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AnalyticsApplication Resource {#create}
@@ -235,9 +257,7 @@ const testApplication = new aws.kinesis.AnalyticsApplication("testApplication", 
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -245,9 +265,7 @@ const testApplication = new aws.kinesis.AnalyticsApplication("testApplication", 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -255,9 +273,7 @@ const testApplication = new aws.kinesis.AnalyticsApplication("testApplication", 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -265,10 +281,7 @@ const testApplication = new aws.kinesis.AnalyticsApplication("testApplication", 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -294,9 +307,7 @@ const testApplication = new aws.kinesis.AnalyticsApplication("testApplication", 
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -304,9 +315,7 @@ const testApplication = new aws.kinesis.AnalyticsApplication("testApplication", 
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -314,9 +323,7 @@ const testApplication = new aws.kinesis.AnalyticsApplication("testApplication", 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -324,9 +331,7 @@ const testApplication = new aws.kinesis.AnalyticsApplication("testApplication", 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -334,18 +339,13 @@ const testApplication = new aws.kinesis.AnalyticsApplication("testApplication", 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -353,9 +353,7 @@ const testApplication = new aws.kinesis.AnalyticsApplication("testApplication", 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -363,9 +361,7 @@ const testApplication = new aws.kinesis.AnalyticsApplication("testApplication", 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -373,10 +369,7 @@ const testApplication = new aws.kinesis.AnalyticsApplication("testApplication", 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -392,7 +385,6 @@ The AnalyticsApplication resource accepts the following [input]({{< relref "/doc
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudwatchloggingoptions_csharp">
@@ -480,7 +472,6 @@ See Reference Data Sources below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudwatchloggingoptions_go">
@@ -568,7 +559,6 @@ See Reference Data Sources below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudwatchloggingoptions_nodejs">
@@ -656,7 +646,6 @@ See Reference Data Sources below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudwatch_logging_options_python">
@@ -751,7 +740,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_csharp">
@@ -816,7 +804,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_go">
@@ -881,7 +868,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_nodejs">
@@ -946,7 +932,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_python">
@@ -1134,7 +1119,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
@@ -1272,7 +1256,6 @@ See Reference Data Sources below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
@@ -1410,7 +1393,6 @@ See Reference Data Sources below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
@@ -1548,7 +1530,6 @@ See Reference Data Sources below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
@@ -1697,7 +1678,6 @@ See Reference Data Sources below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="logstreamarn_csharp">
@@ -1733,7 +1713,6 @@ See Reference Data Sources below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="logstreamarn_go">
@@ -1769,7 +1748,6 @@ See Reference Data Sources below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="logstreamarn_nodejs">
@@ -1805,7 +1783,6 @@ See Reference Data Sources below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="log_stream_arn_python">
@@ -1843,7 +1820,6 @@ See Reference Data Sources below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="nameprefix_csharp">
@@ -1941,7 +1917,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="nameprefix_go">
@@ -2039,7 +2014,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="nameprefix_nodejs">
@@ -2137,7 +2111,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_prefix_python">
@@ -2237,7 +2210,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcearn_csharp">
@@ -2263,7 +2235,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcearn_go">
@@ -2289,7 +2260,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcearn_nodejs">
@@ -2315,7 +2285,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resource_arn_python">
@@ -2343,7 +2312,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcearn_csharp">
@@ -2369,7 +2337,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcearn_go">
@@ -2395,7 +2362,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcearn_nodejs">
@@ -2421,7 +2387,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resource_arn_python">
@@ -2449,7 +2414,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="count_csharp">
@@ -2465,7 +2429,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="count_go">
@@ -2481,7 +2444,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="count_nodejs">
@@ -2497,7 +2459,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="count_python">
@@ -2515,7 +2476,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="lambda_csharp">
@@ -2531,7 +2491,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="lambda_go">
@@ -2547,7 +2506,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="lambda_nodejs">
@@ -2563,7 +2521,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="lambda__python">
@@ -2581,7 +2538,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcearn_csharp">
@@ -2607,7 +2563,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcearn_go">
@@ -2633,7 +2588,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcearn_nodejs">
@@ -2659,7 +2613,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resource_arn_python">
@@ -2687,7 +2640,6 @@ See Processing Configuration below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="recordcolumns_csharp">
@@ -2725,7 +2677,6 @@ See Record Format below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="recordcolumns_go">
@@ -2763,7 +2714,6 @@ See Record Format below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="recordcolumns_nodejs">
@@ -2801,7 +2751,6 @@ See Record Format below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="record_columns_python">
@@ -2841,7 +2790,6 @@ See Record Format below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -2877,7 +2825,6 @@ See Record Format below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -2913,7 +2860,6 @@ See Record Format below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -2949,7 +2895,6 @@ See Record Format below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -2987,7 +2932,6 @@ See Record Format below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mappingparameters_csharp">
@@ -3014,7 +2958,6 @@ See Mapping Parameters below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mappingparameters_go">
@@ -3041,7 +2984,6 @@ See Mapping Parameters below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mappingparameters_nodejs">
@@ -3068,7 +3010,6 @@ See Mapping Parameters below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mapping_parameters_python">
@@ -3097,7 +3038,6 @@ See Mapping Parameters below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="csv_csharp">
@@ -3125,7 +3065,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="csv_go">
@@ -3153,7 +3092,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="csv_nodejs">
@@ -3181,7 +3119,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="csv_python">
@@ -3211,7 +3148,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="recordcolumndelimiter_csharp">
@@ -3237,7 +3173,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="recordcolumndelimiter_go">
@@ -3263,7 +3198,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="recordcolumndelimiter_nodejs">
@@ -3289,7 +3223,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="record_column_delimiter_python">
@@ -3317,7 +3250,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="recordrowpath_csharp">
@@ -3333,7 +3265,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="recordrowpath_go">
@@ -3349,7 +3280,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="recordrowpath_nodejs">
@@ -3365,7 +3295,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="record_row_path_python">
@@ -3383,7 +3312,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="startingposition_csharp">
@@ -3398,7 +3326,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="startingposition_go">
@@ -3413,7 +3340,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="startingposition_nodejs">
@@ -3428,7 +3354,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="starting_position_python">
@@ -3445,7 +3370,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -3513,7 +3437,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -3581,7 +3504,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -3649,7 +3571,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -3719,7 +3640,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcearn_csharp">
@@ -3745,7 +3665,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcearn_go">
@@ -3771,7 +3690,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcearn_nodejs">
@@ -3797,7 +3715,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resource_arn_python">
@@ -3825,7 +3742,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcearn_csharp">
@@ -3851,7 +3767,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcearn_go">
@@ -3877,7 +3792,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcearn_nodejs">
@@ -3903,7 +3817,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resource_arn_python">
@@ -3931,7 +3844,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcearn_csharp">
@@ -3957,7 +3869,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcearn_go">
@@ -3983,7 +3894,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcearn_nodejs">
@@ -4009,7 +3919,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resource_arn_python">
@@ -4037,7 +3946,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="recordformattype_csharp">
@@ -4053,7 +3961,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="recordformattype_go">
@@ -4069,7 +3976,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="recordformattype_nodejs">
@@ -4085,7 +3991,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="record_format_type_python">
@@ -4103,7 +4008,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="s3_csharp">
@@ -4149,7 +4053,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="s3_go">
@@ -4195,7 +4098,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="s3_nodejs">
@@ -4241,7 +4143,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="s3_python">
@@ -4289,7 +4190,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucketarn_csharp">
@@ -4325,7 +4225,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucketarn_go">
@@ -4361,7 +4260,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucketarn_nodejs">
@@ -4397,7 +4295,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucket_arn_python">
@@ -4435,7 +4332,6 @@ See Kinesis Stream below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="recordcolumns_csharp">
@@ -4473,7 +4369,6 @@ See Record Format below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="recordcolumns_go">
@@ -4511,7 +4406,6 @@ See Record Format below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="recordcolumns_nodejs">
@@ -4549,7 +4443,6 @@ See Record Format below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="record_columns_python">
@@ -4589,7 +4482,6 @@ See Record Format below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -4625,7 +4517,6 @@ See Record Format below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -4661,7 +4552,6 @@ See Record Format below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -4697,7 +4587,6 @@ See Record Format below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -4735,7 +4624,6 @@ See Record Format below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mappingparameters_csharp">
@@ -4762,7 +4650,6 @@ See Mapping Parameters below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mappingparameters_go">
@@ -4789,7 +4676,6 @@ See Mapping Parameters below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mappingparameters_nodejs">
@@ -4816,7 +4702,6 @@ See Mapping Parameters below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mapping_parameters_python">
@@ -4845,7 +4730,6 @@ See Mapping Parameters below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="csv_csharp">
@@ -4873,7 +4757,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="csv_go">
@@ -4901,7 +4784,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="csv_nodejs">
@@ -4929,7 +4811,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="csv_python">
@@ -4959,7 +4840,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="recordcolumndelimiter_csharp">
@@ -4985,7 +4865,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="recordcolumndelimiter_go">
@@ -5011,7 +4890,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="recordcolumndelimiter_nodejs">
@@ -5037,7 +4915,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="record_column_delimiter_python">
@@ -5065,7 +4942,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="recordrowpath_csharp">
@@ -5081,7 +4957,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="recordrowpath_go">
@@ -5097,7 +4972,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="recordrowpath_nodejs">
@@ -5113,7 +4987,6 @@ See JSON Mapping Parameters below for more details.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="record_row_path_python">

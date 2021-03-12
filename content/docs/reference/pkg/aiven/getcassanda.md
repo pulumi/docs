@@ -16,11 +16,17 @@ The Cassandra data source provides information about the existing Aiven Cassandr
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aiven = Pulumi.Aiven;
@@ -39,9 +45,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -66,9 +75,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aiven as aiven
@@ -77,9 +89,12 @@ bar = aiven.get_cassanda(project=data["aiven_project"]["foo"]["project"],
     service_name="test-acc-sr-%s")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -91,9 +106,16 @@ const bar = aiven.getCassanda({
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getCassanda {#using}
@@ -132,7 +154,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_csharp">
@@ -354,7 +375,6 @@ deletion is done.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_go">
@@ -576,7 +596,6 @@ deletion is done.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_nodejs">
@@ -798,7 +817,6 @@ deletion is done.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="project_python">
@@ -1029,7 +1047,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="cassandra_csharp">
@@ -1255,7 +1272,6 @@ deletion is done.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="cassandra_go">
@@ -1481,7 +1497,6 @@ deletion is done.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="cassandra_nodejs">
@@ -1707,7 +1722,6 @@ deletion is done.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="cassandra_python">
@@ -1943,7 +1957,6 @@ deletion is done.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cassandra_csharp">
@@ -2020,7 +2033,6 @@ when a new service is being created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cassandra_go">
@@ -2097,7 +2109,6 @@ when a new service is being created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cassandra_nodejs">
@@ -2174,7 +2185,6 @@ when a new service is being created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cassandra_python">
@@ -2255,7 +2265,6 @@ when a new service is being created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="batchsizefailthresholdinkb_csharp">
@@ -2284,7 +2293,6 @@ the size of this thresholdas it can lead to node instability.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="batchsizefailthresholdinkb_go">
@@ -2313,7 +2321,6 @@ the size of this thresholdas it can lead to node instability.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="batchsizefailthresholdinkb_nodejs">
@@ -2342,7 +2349,6 @@ the size of this thresholdas it can lead to node instability.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="batch_size_fail_threshold_in_kb_python">
@@ -2375,7 +2381,6 @@ the size of this thresholdas it can lead to node instability.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="prometheus_csharp">
@@ -2392,7 +2397,6 @@ for service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="prometheus_go">
@@ -2409,7 +2413,6 @@ for service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="prometheus_nodejs">
@@ -2426,7 +2429,6 @@ for service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="prometheus_python">
@@ -2447,7 +2449,6 @@ for service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="prometheus_csharp">
@@ -2464,7 +2465,6 @@ for service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="prometheus_go">
@@ -2481,7 +2481,6 @@ for service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="prometheus_nodejs">
@@ -2498,7 +2497,6 @@ for service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="prometheus_python">
@@ -2519,7 +2517,6 @@ for service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="component_csharp">
@@ -2588,7 +2585,6 @@ for service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="component_go">
@@ -2657,7 +2653,6 @@ for service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="component_nodejs">
@@ -2726,7 +2721,6 @@ for service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="component_python">
@@ -2799,7 +2793,6 @@ for service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integrationtype_csharp">
@@ -2823,7 +2816,6 @@ for service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integrationtype_go">
@@ -2847,7 +2839,6 @@ for service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integrationtype_nodejs">
@@ -2871,7 +2862,6 @@ for service nodes that are in a project VPC or another type of private network.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="integration_type_python">

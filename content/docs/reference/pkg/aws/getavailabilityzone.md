@@ -61,7 +61,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allavailabilityzones_csharp">
@@ -117,7 +116,6 @@ The following arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allavailabilityzones_go">
@@ -173,7 +171,6 @@ The following arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="allavailabilityzones_nodejs">
@@ -229,7 +226,6 @@ The following arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="all_availability_zones_python">
@@ -294,7 +290,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="groupname_csharp">
@@ -437,7 +432,6 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="groupname_go">
@@ -580,7 +574,6 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="groupname_nodejs">
@@ -723,7 +716,6 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="group_name_python">
@@ -876,7 +868,6 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -902,7 +893,6 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -928,7 +918,6 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -954,7 +943,6 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">

@@ -49,7 +49,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pathprefix_csharp">
@@ -110,7 +109,6 @@ token that the agent provides by default.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pathprefix_go">
@@ -171,7 +169,6 @@ token that the agent provides by default.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="pathprefix_nodejs">
@@ -232,7 +229,6 @@ token that the agent provides by default.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="path_prefix_python">
@@ -302,7 +298,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="datacenter_csharp">
@@ -387,7 +382,6 @@ block is provided.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="datacenter_go">
@@ -472,7 +466,6 @@ block is provided.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="datacenter_nodejs">
@@ -557,7 +550,6 @@ block is provided.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="datacenter_python">
@@ -652,7 +644,6 @@ block is provided.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -693,7 +684,6 @@ if the key does not exist in Consul. Defaults to an empty string.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -734,7 +724,6 @@ if the key does not exist in Consul. Defaults to an empty string.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -775,7 +764,6 @@ if the key does not exist in Consul. Defaults to an empty string.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">

@@ -49,7 +49,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backend_csharp">
@@ -126,7 +125,6 @@ Azure Active Directory. Designating `true` activates testing.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backend_go">
@@ -203,7 +201,6 @@ Azure Active Directory. Designating `true` activates testing.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backend_nodejs">
@@ -280,7 +277,6 @@ Azure Active Directory. Designating `true` activates testing.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="backend_python">
@@ -366,7 +362,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="backend_csharp">
@@ -496,7 +491,6 @@ generated with this data may fail to apply.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="backend_go">
@@ -626,7 +620,6 @@ generated with this data may fail to apply.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="backend_nodejs">
@@ -756,7 +749,6 @@ generated with this data may fail to apply.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="backend_python">

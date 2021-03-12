@@ -24,11 +24,17 @@ To get more information about Entry, see:
     * [Official Documentation](https://cloud.google.com/data-catalog/docs)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Data Catalog Entry Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -53,9 +59,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -86,9 +95,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -101,9 +113,12 @@ basic_entry = gcp.datacatalog.Entry("basicEntry",
     user_specified_system="SomethingExternal")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -118,10 +133,17 @@ const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Data Catalog Entry Fileset
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -152,9 +174,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -189,9 +214,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -206,9 +234,12 @@ basic_entry = gcp.datacatalog.Entry("basicEntry",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -225,10 +256,17 @@ const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Data Catalog Entry Full
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -293,9 +331,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -332,9 +373,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -387,9 +431,12 @@ basic_entry = gcp.datacatalog.Entry("basicEntry",
 """)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -444,9 +491,16 @@ const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Entry Resource {#create}
@@ -471,9 +525,7 @@ const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -481,9 +533,7 @@ const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -491,9 +541,7 @@ const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -501,10 +549,7 @@ const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -530,9 +575,7 @@ const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -540,9 +583,7 @@ const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -550,9 +591,7 @@ const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -560,9 +599,7 @@ const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -570,18 +607,13 @@ const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -589,9 +621,7 @@ const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -599,9 +629,7 @@ const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -609,10 +637,7 @@ const basicEntry = new gcp.datacatalog.Entry("basicEntry", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -628,7 +653,6 @@ The Entry resource accepts the following [input]({{< relref "/docs/intro/concept
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="entrygroup_csharp">
@@ -752,7 +776,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="entrygroup_go">
@@ -876,7 +899,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="entrygroup_nodejs">
@@ -1000,7 +1022,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="entry_group_python">
@@ -1131,7 +1152,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="bigquerydateshardedspecs_csharp">
@@ -1189,7 +1209,6 @@ child resources may not actually be stored in the location in this name.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="bigquerydateshardedspecs_go">
@@ -1247,7 +1266,6 @@ child resources may not actually be stored in the location in this name.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="bigquerydateshardedspecs_nodejs">
@@ -1305,7 +1323,6 @@ child resources may not actually be stored in the location in this name.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="bigquery_date_sharded_specs_python">
@@ -1486,7 +1503,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigquerydateshardedspecs_csharp">
@@ -1653,7 +1669,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigquerydateshardedspecs_go">
@@ -1820,7 +1835,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigquerydateshardedspecs_nodejs">
@@ -1987,7 +2001,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bigquery_date_sharded_specs_python">
@@ -2165,7 +2178,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dataset_csharp">
@@ -2198,7 +2210,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dataset_go">
@@ -2231,7 +2242,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dataset_nodejs">
@@ -2264,7 +2274,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="dataset_python">
@@ -2299,7 +2308,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="tablesourcetype_csharp">
@@ -2332,7 +2340,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="tablesourcetype_go">
@@ -2365,7 +2372,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="tablesourcetype_nodejs">
@@ -2398,7 +2404,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="table_source_type_python">
@@ -2433,7 +2438,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupedentry_csharp">
@@ -2448,7 +2452,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupedentry_go">
@@ -2463,7 +2466,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupedentry_nodejs">
@@ -2478,7 +2480,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="grouped_entry_python">
@@ -2495,7 +2496,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="viewquery_csharp">
@@ -2510,7 +2510,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="viewquery_go">
@@ -2525,7 +2524,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="viewquery_nodejs">
@@ -2540,7 +2538,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="view_query_python">
@@ -2557,7 +2554,6 @@ numbers, and underscores; are case insensitive; must be at least 1 character and
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="filepatterns_csharp">
@@ -2595,7 +2591,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="filepatterns_go">
@@ -2633,7 +2628,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="filepatterns_nodejs">
@@ -2671,7 +2665,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="file_patterns_python">
@@ -2711,7 +2704,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="filepath_csharp">
@@ -2739,7 +2731,6 @@ The size of the file, in bytes.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="filepath_go">
@@ -2767,7 +2758,6 @@ The size of the file, in bytes.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="filepath_nodejs">
@@ -2795,7 +2785,6 @@ The size of the file, in bytes.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="file_path_python">

@@ -23,11 +23,17 @@ To get more information about regionInstanceGroupManagers, see:
 > **Note:** Use [gcp.compute.InstanceGroupManager](https://www.terraform.io/docs/providers/google/r/compute_instance_group_manager.html) to create a zonal instance group manager.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### With Top Level Instance Template (`Google` Provider)
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -88,13 +94,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -130,9 +142,12 @@ appserver = gcp.compute.RegionInstanceGroupManager("appserver",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -171,10 +186,17 @@ const appserver = new gcp.compute.RegionInstanceGroupManager("appserver", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### With Multiple Versions
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -209,9 +231,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -246,9 +271,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -270,9 +298,12 @@ appserver = gcp.compute.RegionInstanceGroupManager("appserver",
     ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -295,9 +326,16 @@ const appserver = new gcp.compute.RegionInstanceGroupManager("appserver", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a RegionInstanceGroupManager Resource {#create}
@@ -322,9 +360,7 @@ const appserver = new gcp.compute.RegionInstanceGroupManager("appserver", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -332,9 +368,7 @@ const appserver = new gcp.compute.RegionInstanceGroupManager("appserver", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -342,9 +376,7 @@ const appserver = new gcp.compute.RegionInstanceGroupManager("appserver", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -352,10 +384,7 @@ const appserver = new gcp.compute.RegionInstanceGroupManager("appserver", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -381,9 +410,7 @@ const appserver = new gcp.compute.RegionInstanceGroupManager("appserver", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -391,9 +418,7 @@ const appserver = new gcp.compute.RegionInstanceGroupManager("appserver", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -401,9 +426,7 @@ const appserver = new gcp.compute.RegionInstanceGroupManager("appserver", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -411,9 +434,7 @@ const appserver = new gcp.compute.RegionInstanceGroupManager("appserver", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -421,18 +442,13 @@ const appserver = new gcp.compute.RegionInstanceGroupManager("appserver", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -440,9 +456,7 @@ const appserver = new gcp.compute.RegionInstanceGroupManager("appserver", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -450,9 +464,7 @@ const appserver = new gcp.compute.RegionInstanceGroupManager("appserver", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -460,10 +472,7 @@ const appserver = new gcp.compute.RegionInstanceGroupManager("appserver", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -479,7 +488,6 @@ The RegionInstanceGroupManager resource accepts the following [input]({{< relref
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="baseinstancename_csharp">
@@ -651,7 +659,6 @@ continue trying until it times out.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="baseinstancename_go">
@@ -823,7 +830,6 @@ continue trying until it times out.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="baseinstancename_nodejs">
@@ -995,7 +1001,6 @@ continue trying until it times out.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="base_instance_name_python">
@@ -1174,7 +1179,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="fingerprint_csharp">
@@ -1219,7 +1223,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="fingerprint_go">
@@ -1264,7 +1267,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="fingerprint_nodejs">
@@ -1309,7 +1311,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="fingerprint_python">
@@ -1477,7 +1478,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_autohealingpolicies_csharp">
@@ -1679,7 +1679,6 @@ continue trying until it times out.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_autohealingpolicies_go">
@@ -1881,7 +1880,6 @@ continue trying until it times out.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_autohealingpolicies_nodejs">
@@ -2083,7 +2081,6 @@ continue trying until it times out.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_auto_healing_policies_python">
@@ -2296,7 +2293,6 @@ continue trying until it times out.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="healthcheck_csharp">
@@ -2323,7 +2319,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="healthcheck_go">
@@ -2350,7 +2345,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="healthcheck_nodejs">
@@ -2377,7 +2371,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="health_check_python">
@@ -2406,7 +2399,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -2433,7 +2425,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -2460,7 +2451,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -2487,7 +2477,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -2516,7 +2505,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
@@ -2542,7 +2530,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_go">
@@ -2568,7 +2555,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
@@ -2594,7 +2580,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="device_name_python">
@@ -2622,7 +2607,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="minimalaction_csharp">
@@ -2718,7 +2702,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="minimalaction_go">
@@ -2814,7 +2797,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="minimalaction_nodejs">
@@ -2910,7 +2892,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="minimal_action_python">
@@ -3008,7 +2989,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="instancetemplate_csharp">
@@ -3044,7 +3024,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="instancetemplate_go">
@@ -3080,7 +3059,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="instancetemplate_nodejs">
@@ -3116,7 +3094,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="instance_template_python">
@@ -3154,7 +3131,6 @@ it applies autohealing policies to new instances or recently recreated instances
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_csharp">
@@ -3182,7 +3158,6 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_go">
@@ -3210,7 +3185,6 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_nodejs">
@@ -3238,7 +3212,6 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_python">

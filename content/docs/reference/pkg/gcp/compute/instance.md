@@ -16,11 +16,17 @@ and
 [API](https://cloud.google.com/compute/docs/reference/latest/instances).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -87,9 +93,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -152,9 +161,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -191,9 +203,12 @@ default_instance = gcp.compute.Instance("defaultInstance",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -233,9 +248,16 @@ const defaultInstance = new gcp.compute.Instance("defaultInstance", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Instance Resource {#create}
@@ -260,9 +282,7 @@ const defaultInstance = new gcp.compute.Instance("defaultInstance", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -270,9 +290,7 @@ const defaultInstance = new gcp.compute.Instance("defaultInstance", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -280,9 +298,7 @@ const defaultInstance = new gcp.compute.Instance("defaultInstance", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -290,10 +306,7 @@ const defaultInstance = new gcp.compute.Instance("defaultInstance", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -319,9 +332,7 @@ const defaultInstance = new gcp.compute.Instance("defaultInstance", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -329,9 +340,7 @@ const defaultInstance = new gcp.compute.Instance("defaultInstance", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -339,9 +348,7 @@ const defaultInstance = new gcp.compute.Instance("defaultInstance", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -349,9 +356,7 @@ const defaultInstance = new gcp.compute.Instance("defaultInstance", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -359,18 +364,13 @@ const defaultInstance = new gcp.compute.Instance("defaultInstance", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -378,9 +378,7 @@ const defaultInstance = new gcp.compute.Instance("defaultInstance", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -388,9 +386,7 @@ const defaultInstance = new gcp.compute.Instance("defaultInstance", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -398,10 +394,7 @@ const defaultInstance = new gcp.compute.Instance("defaultInstance", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -417,7 +410,6 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bootdisk_csharp">
@@ -716,7 +708,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bootdisk_go">
@@ -1015,7 +1006,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bootdisk_nodejs">
@@ -1314,7 +1304,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="boot_disk_python">
@@ -1620,7 +1609,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="cpuplatform_csharp">
@@ -1705,7 +1693,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="cpuplatform_go">
@@ -1790,7 +1777,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="cpuplatform_nodejs">
@@ -1875,7 +1861,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="cpu_platform_python">
@@ -2083,7 +2068,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowstoppingforupdate_csharp">
@@ -2452,7 +2436,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowstoppingforupdate_go">
@@ -2821,7 +2804,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowstoppingforupdate_nodejs">
@@ -3190,7 +3172,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allow_stopping_for_update_python">
@@ -3570,7 +3551,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="source_csharp">
@@ -3644,7 +3624,6 @@ attach it to one or more instances in read-only mode.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="source_go">
@@ -3718,7 +3697,6 @@ attach it to one or more instances in read-only mode.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="source_nodejs">
@@ -3792,7 +3770,6 @@ attach it to one or more instances in read-only mode.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="source_python">
@@ -3868,7 +3845,6 @@ attach it to one or more instances in read-only mode.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autodelete_csharp">
@@ -3965,7 +3941,6 @@ attach it to one or more instances in read-only mode.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autodelete_go">
@@ -4062,7 +4037,6 @@ attach it to one or more instances in read-only mode.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autodelete_nodejs">
@@ -4159,7 +4133,6 @@ attach it to one or more instances in read-only mode.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="auto_delete_python">
@@ -4258,7 +4231,6 @@ attach it to one or more instances in read-only mode.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="image_csharp">
@@ -4313,7 +4285,6 @@ will inherit the size of its base image.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="image_go">
@@ -4368,7 +4339,6 @@ will inherit the size of its base image.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="image_nodejs">
@@ -4423,7 +4393,6 @@ will inherit the size of its base image.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="image_python">
@@ -4480,7 +4449,6 @@ will inherit the size of its base image.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enableconfidentialcompute_csharp">
@@ -4496,7 +4464,6 @@ will inherit the size of its base image.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enableconfidentialcompute_go">
@@ -4512,7 +4479,6 @@ will inherit the size of its base image.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enableconfidentialcompute_nodejs">
@@ -4528,7 +4494,6 @@ will inherit the size of its base image.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="enable_confidential_compute_python">
@@ -4546,7 +4511,6 @@ will inherit the size of its base image.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_csharp">
@@ -4572,7 +4536,6 @@ will inherit the size of its base image.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_go">
@@ -4598,7 +4561,6 @@ will inherit the size of its base image.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_nodejs">
@@ -4624,7 +4586,6 @@ will inherit the size of its base image.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_python">
@@ -4652,7 +4613,6 @@ will inherit the size of its base image.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accessconfigs_csharp">
@@ -4755,7 +4715,6 @@ field is not provided, the provider project is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accessconfigs_go">
@@ -4858,7 +4817,6 @@ field is not provided, the provider project is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accessconfigs_nodejs">
@@ -4961,7 +4919,6 @@ field is not provided, the provider project is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="access_configs_python">
@@ -5066,7 +5023,6 @@ field is not provided, the provider project is used.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="natip_csharp">
@@ -5108,7 +5064,6 @@ to become verified as a domain owner.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="natip_go">
@@ -5150,7 +5105,6 @@ to become verified as a domain owner.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="natip_nodejs">
@@ -5192,7 +5146,6 @@ to become verified as a domain owner.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="nat_ip_python">
@@ -5236,7 +5189,6 @@ to become verified as a domain owner.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ipcidrrange_csharp">
@@ -5267,7 +5219,6 @@ range. If left unspecified, the primary range of the subnetwork will be used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ipcidrrange_go">
@@ -5298,7 +5249,6 @@ range. If left unspecified, the primary range of the subnetwork will be used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ipcidrrange_nodejs">
@@ -5329,7 +5279,6 @@ range. If left unspecified, the primary range of the subnetwork will be used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="ip_cidr_range_python">
@@ -5362,7 +5311,6 @@ range. If left unspecified, the primary range of the subnetwork will be used.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="automaticrestart_csharp">
@@ -5427,7 +5375,6 @@ set to false.  Defaults to false.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="automaticrestart_go">
@@ -5492,7 +5439,6 @@ set to false.  Defaults to false.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="automaticrestart_nodejs">
@@ -5557,7 +5503,6 @@ set to false.  Defaults to false.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="automatic_restart_python">
@@ -5624,7 +5569,6 @@ set to false.  Defaults to false.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_csharp">
@@ -5661,7 +5605,6 @@ or `NOT_IN` for anti-affinities.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_go">
@@ -5698,7 +5641,6 @@ or `NOT_IN` for anti-affinities.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_nodejs">
@@ -5735,7 +5677,6 @@ or `NOT_IN` for anti-affinities.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="key_python">
@@ -5774,7 +5715,6 @@ or `NOT_IN` for anti-affinities.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="interface_csharp">
@@ -5790,7 +5730,6 @@ or `NOT_IN` for anti-affinities.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="interface_go">
@@ -5806,7 +5745,6 @@ or `NOT_IN` for anti-affinities.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="interface_nodejs">
@@ -5822,7 +5760,6 @@ or `NOT_IN` for anti-affinities.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="interface_python">
@@ -5840,7 +5777,6 @@ or `NOT_IN` for anti-affinities.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="scopes_csharp">
@@ -5871,7 +5807,6 @@ default Google Compute Engine service account is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="scopes_go">
@@ -5902,7 +5837,6 @@ default Google Compute Engine service account is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="scopes_nodejs">
@@ -5933,7 +5867,6 @@ default Google Compute Engine service account is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="scopes_python">
@@ -5966,7 +5899,6 @@ default Google Compute Engine service account is used.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableintegritymonitoring_csharp">
@@ -6005,7 +5937,6 @@ default Google Compute Engine service account is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableintegritymonitoring_go">
@@ -6044,7 +5975,6 @@ default Google Compute Engine service account is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableintegritymonitoring_nodejs">
@@ -6083,7 +6013,6 @@ default Google Compute Engine service account is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_integrity_monitoring_python">

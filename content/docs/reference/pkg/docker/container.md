@@ -13,11 +13,17 @@ meta_desc: "Documentation for the docker.Container resource with examples, input
 Manages the lifecycle of a Docker container.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Docker = Pulumi.Docker;
@@ -41,9 +47,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -71,9 +80,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_docker as docker
@@ -84,9 +96,12 @@ ubuntu_remote_image = docker.RemoteImage("ubuntuRemoteImage", name="ubuntu:preci
 ubuntu_container = docker.Container("ubuntuContainer", image=ubuntu_remote_image.latest)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -98,9 +113,16 @@ const ubuntuRemoteImage = new docker.RemoteImage("ubuntuRemoteImage", {name: "ub
 const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRemoteImage.latest});
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Container Resource {#create}
@@ -125,9 +147,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -135,9 +155,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -145,9 +163,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -155,10 +171,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -184,9 +197,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -194,9 +205,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -204,9 +213,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -214,9 +221,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -224,18 +229,13 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -243,9 +243,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -253,9 +251,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -263,10 +259,7 @@ const ubuntuContainer = new docker.Container("ubuntuContainer", {image: ubuntuRe
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -282,7 +275,6 @@ The Container resource accepts the following [input]({{< relref "/docs/intro/con
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="image_csharp">
@@ -862,7 +854,6 @@ by name.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="image_go">
@@ -1442,7 +1433,6 @@ by name.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="image_nodejs">
@@ -2022,7 +2012,6 @@ by name.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="image_python">
@@ -2609,7 +2598,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="bridge_csharp">
@@ -2697,7 +2685,6 @@ network. Key are the network names, values are the IP addresses.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="bridge_go">
@@ -2785,7 +2772,6 @@ network. Key are the network names, values are the IP addresses.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="bridge_nodejs">
@@ -2873,7 +2859,6 @@ network. Key are the network names, values are the IP addresses.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="bridge_python">
@@ -3084,7 +3069,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_attach_csharp">
@@ -3737,7 +3721,6 @@ by name.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_attach_go">
@@ -4390,7 +4373,6 @@ by name.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_attach_nodejs">
@@ -5043,7 +5025,6 @@ by name.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_attach_python">
@@ -5707,7 +5688,6 @@ by name.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="adds_csharp">
@@ -5733,7 +5713,6 @@ by name.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="adds_go">
@@ -5759,7 +5738,6 @@ by name.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="adds_nodejs">
@@ -5785,7 +5763,6 @@ by name.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="adds_python">
@@ -5813,7 +5790,6 @@ by name.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="hostpath_csharp">
@@ -5853,7 +5829,6 @@ Defaults to `rwm`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="hostpath_go">
@@ -5893,7 +5868,6 @@ Defaults to `rwm`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="hostpath_nodejs">
@@ -5933,7 +5907,6 @@ Defaults to `rwm`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="host_path_python">
@@ -5975,7 +5948,6 @@ Defaults to `rwm`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tests_csharp">
@@ -6032,7 +6004,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tests_go">
@@ -6089,7 +6060,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tests_nodejs">
@@ -6146,7 +6116,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tests_python">
@@ -6205,7 +6174,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="host_csharp">
@@ -6231,7 +6199,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="host_go">
@@ -6257,7 +6224,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="host_nodejs">
@@ -6283,7 +6249,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="host_python">
@@ -6311,7 +6276,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="label_csharp">
@@ -6337,7 +6301,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="label_go">
@@ -6363,7 +6326,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="label_nodejs">
@@ -6389,7 +6351,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="label_python">
@@ -6417,7 +6378,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="target_csharp">
@@ -6494,7 +6454,6 @@ Defaults to false.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="target_go">
@@ -6571,7 +6530,6 @@ Defaults to false.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="target_nodejs">
@@ -6648,7 +6606,6 @@ Defaults to false.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="target_python">
@@ -6727,7 +6684,6 @@ Defaults to false.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="propagation_csharp">
@@ -6743,7 +6699,6 @@ Defaults to false.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="propagation_go">
@@ -6759,7 +6714,6 @@ Defaults to false.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="propagation_nodejs">
@@ -6775,7 +6729,6 @@ Defaults to false.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="propagation_python">
@@ -6793,7 +6746,6 @@ Defaults to false.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
@@ -6819,7 +6771,6 @@ Defaults to false.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_go">
@@ -6845,7 +6796,6 @@ Defaults to false.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
@@ -6871,7 +6821,6 @@ Defaults to false.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_python">
@@ -6899,7 +6848,6 @@ Defaults to false.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="drivername_csharp">
@@ -6944,7 +6892,6 @@ Defaults to false.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="drivername_go">
@@ -6989,7 +6936,6 @@ Defaults to false.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="drivername_nodejs">
@@ -7034,7 +6980,6 @@ Defaults to false.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="driver_name_python">
@@ -7081,7 +7026,6 @@ Defaults to false.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="label_csharp">
@@ -7107,7 +7051,6 @@ Defaults to false.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="label_go">
@@ -7133,7 +7076,6 @@ Defaults to false.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="label_nodejs">
@@ -7159,7 +7101,6 @@ Defaults to false.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="label_python">
@@ -7187,7 +7128,6 @@ Defaults to false.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="gateway_csharp">
@@ -7261,7 +7201,6 @@ NetworkSettings.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="gateway_go">
@@ -7335,7 +7274,6 @@ NetworkSettings.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="gateway_nodejs">
@@ -7409,7 +7347,6 @@ NetworkSettings.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="gateway_python">
@@ -7485,7 +7422,6 @@ NetworkSettings.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -7531,7 +7467,6 @@ NetworkSettings.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -7577,7 +7512,6 @@ NetworkSettings.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -7623,7 +7557,6 @@ NetworkSettings.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -7671,7 +7604,6 @@ NetworkSettings.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="internal_csharp">
@@ -7718,7 +7650,6 @@ defaults to `tcp`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="internal_go">
@@ -7765,7 +7696,6 @@ defaults to `tcp`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="internal_nodejs">
@@ -7812,7 +7742,6 @@ defaults to `tcp`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="internal_python">
@@ -7861,7 +7790,6 @@ defaults to `tcp`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="hard_csharp">
@@ -7894,7 +7822,6 @@ defaults to `tcp`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="hard_go">
@@ -7927,7 +7854,6 @@ defaults to `tcp`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="hard_nodejs">
@@ -7960,7 +7886,6 @@ defaults to `tcp`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="hard_python">
@@ -7995,7 +7920,6 @@ defaults to `tcp`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="file_csharp">
@@ -8062,7 +7986,6 @@ Defaults to false.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="file_go">
@@ -8129,7 +8052,6 @@ Defaults to false.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="file_nodejs">
@@ -8196,7 +8118,6 @@ Defaults to false.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="file_python">
@@ -8265,7 +8186,6 @@ Defaults to false.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="containerpath_csharp">
@@ -8326,7 +8246,6 @@ should be mounted.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="containerpath_go">
@@ -8387,7 +8306,6 @@ should be mounted.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="containerpath_nodejs">
@@ -8448,7 +8366,6 @@ should be mounted.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="container_path_python">

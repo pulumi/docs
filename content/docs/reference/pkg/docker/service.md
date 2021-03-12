@@ -43,9 +43,7 @@ Docker service can be imported using the long id, e.g. for a service with the sh
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ Docker service can be imported using the long id, e.g. for a service with the sh
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ Docker service can be imported using the long id, e.g. for a service with the sh
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ Docker service can be imported using the long id, e.g. for a service with the sh
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ Docker service can be imported using the long id, e.g. for a service with the sh
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ Docker service can be imported using the long id, e.g. for a service with the sh
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ Docker service can be imported using the long id, e.g. for a service with the sh
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ Docker service can be imported using the long id, e.g. for a service with the sh
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ Docker service can be imported using the long id, e.g. for a service with the sh
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ Docker service can be imported using the long id, e.g. for a service with the sh
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ Docker service can be imported using the long id, e.g. for a service with the sh
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ Docker service can be imported using the long id, e.g. for a service with the sh
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -200,7 +171,6 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="taskspec_csharp">
@@ -296,7 +266,6 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="taskspec_go">
@@ -392,7 +361,6 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="taskspec_nodejs">
@@ -488,7 +456,6 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="task_spec_python">
@@ -591,7 +558,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -606,7 +572,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -621,7 +586,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -636,7 +600,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -774,7 +737,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_auth_csharp">
@@ -870,7 +832,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_auth_go">
@@ -966,7 +927,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_auth_nodejs">
@@ -1062,7 +1022,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_auth_python">
@@ -1169,7 +1128,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="serveraddress_csharp">
@@ -1205,7 +1163,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="serveraddress_go">
@@ -1241,7 +1198,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="serveraddress_nodejs">
@@ -1277,7 +1233,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="server_address_python">
@@ -1315,7 +1270,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="delay_csharp">
@@ -1342,7 +1296,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="delay_go">
@@ -1369,7 +1322,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="delay_nodejs">
@@ -1396,7 +1348,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="delay_python">
@@ -1425,7 +1376,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
@@ -1451,7 +1401,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_go">
@@ -1477,7 +1426,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
@@ -1503,7 +1451,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_python">
@@ -1531,7 +1478,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="targetport_csharp">
@@ -1587,7 +1533,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="targetport_go">
@@ -1643,7 +1588,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="targetport_nodejs">
@@ -1699,7 +1643,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="target_port_python">
@@ -1757,7 +1700,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="label_csharp">
@@ -1783,7 +1725,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="label_go">
@@ -1809,7 +1750,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="label_nodejs">
@@ -1835,7 +1775,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="label_python">
@@ -1863,7 +1802,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="global_csharp">
@@ -1889,7 +1827,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="global_go">
@@ -1915,7 +1852,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="global_nodejs">
@@ -1941,7 +1877,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="global__python">
@@ -1969,7 +1904,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="replicas_csharp">
@@ -1984,7 +1918,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="replicas_go">
@@ -1999,7 +1932,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="replicas_nodejs">
@@ -2014,7 +1946,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="replicas_python">
@@ -2031,7 +1962,6 @@ all tasks are up when a service is created, or to check if all tasks are success
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="delay_csharp">
@@ -2099,7 +2029,6 @@ casting and precision errors.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="delay_go">
@@ -2167,7 +2096,6 @@ casting and precision errors.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="delay_nodejs">
@@ -2235,7 +2163,6 @@ casting and precision errors.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="delay_python">
@@ -2305,7 +2232,6 @@ casting and precision errors.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="containerspec_csharp">
@@ -2391,7 +2317,6 @@ casting and precision errors.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="containerspec_go">
@@ -2477,7 +2402,6 @@ casting and precision errors.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="containerspec_nodejs">
@@ -2563,7 +2487,6 @@ casting and precision errors.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="container_spec_python">
@@ -2651,7 +2574,6 @@ casting and precision errors.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="image_csharp">
@@ -2856,7 +2778,6 @@ casting and precision errors.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="image_go">
@@ -3061,7 +2982,6 @@ casting and precision errors.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="image_nodejs">
@@ -3266,7 +3186,6 @@ casting and precision errors.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="image_python">
@@ -3473,7 +3392,6 @@ casting and precision errors.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="configid_csharp">
@@ -3539,7 +3457,6 @@ casting and precision errors.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="configid_go">
@@ -3605,7 +3522,6 @@ casting and precision errors.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="configid_nodejs">
@@ -3671,7 +3587,6 @@ casting and precision errors.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="config_id_python">
@@ -3739,7 +3654,6 @@ casting and precision errors.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="nameservers_csharp">
@@ -3775,7 +3689,6 @@ casting and precision errors.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="nameservers_go">
@@ -3811,7 +3724,6 @@ casting and precision errors.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="nameservers_nodejs">
@@ -3847,7 +3759,6 @@ casting and precision errors.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="nameservers_python">
@@ -3885,7 +3796,6 @@ casting and precision errors.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tests_csharp">
@@ -3942,7 +3852,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tests_go">
@@ -3999,7 +3908,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tests_nodejs">
@@ -4056,7 +3964,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tests_python">
@@ -4115,7 +4022,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="host_csharp">
@@ -4141,7 +4047,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="host_go">
@@ -4167,7 +4072,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="host_nodejs">
@@ -4193,7 +4097,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="host_python">
@@ -4221,7 +4124,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="label_csharp">
@@ -4247,7 +4149,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="label_go">
@@ -4273,7 +4174,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="label_nodejs">
@@ -4299,7 +4199,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="label_python">
@@ -4327,7 +4226,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="target_csharp">
@@ -4403,7 +4301,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="target_go">
@@ -4479,7 +4376,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="target_nodejs">
@@ -4555,7 +4451,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="target_python">
@@ -4633,7 +4528,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="propagation_csharp">
@@ -4649,7 +4543,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="propagation_go">
@@ -4665,7 +4558,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="propagation_nodejs">
@@ -4681,7 +4573,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="propagation_python">
@@ -4699,7 +4590,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
@@ -4725,7 +4615,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_go">
@@ -4751,7 +4640,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
@@ -4777,7 +4665,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="mode_python">
@@ -4805,7 +4692,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="drivername_csharp">
@@ -4849,7 +4735,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="drivername_go">
@@ -4893,7 +4778,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="drivername_nodejs">
@@ -4937,7 +4821,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="driver_name_python">
@@ -4983,7 +4866,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="label_csharp">
@@ -5009,7 +4891,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="label_go">
@@ -5035,7 +4916,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="label_nodejs">
@@ -5061,7 +4941,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="label_python">
@@ -5089,7 +4968,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="credentialspec_csharp">
@@ -5115,7 +4993,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="credentialspec_go">
@@ -5141,7 +5018,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="credentialspec_nodejs">
@@ -5167,7 +5043,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="credential_spec_python">
@@ -5195,7 +5070,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="file_csharp">
@@ -5221,7 +5095,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="file_go">
@@ -5247,7 +5120,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="file_nodejs">
@@ -5273,7 +5145,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="file_python">
@@ -5301,7 +5172,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="disable_csharp">
@@ -5357,7 +5227,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="disable_go">
@@ -5413,7 +5282,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="disable_nodejs">
@@ -5469,7 +5337,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="disable_python">
@@ -5527,7 +5394,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="filename_csharp">
@@ -5593,7 +5459,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="filename_go">
@@ -5659,7 +5524,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="filename_nodejs">
@@ -5725,7 +5589,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="file_name_python">
@@ -5793,7 +5656,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -5819,7 +5681,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -5845,7 +5706,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -5871,7 +5731,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -5899,7 +5758,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="constraints_csharp">
@@ -5945,7 +5803,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="constraints_go">
@@ -5991,7 +5848,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="constraints_nodejs">
@@ -6037,7 +5893,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="constraints_python">
@@ -6085,7 +5940,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="architecture_csharp">
@@ -6111,7 +5965,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="architecture_go">
@@ -6137,7 +5990,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="architecture_nodejs">
@@ -6163,7 +6015,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="architecture_python">
@@ -6191,7 +6042,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="limits_csharp">
@@ -6217,7 +6067,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="limits_go">
@@ -6243,7 +6092,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="limits_nodejs">
@@ -6269,7 +6117,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="limits_python">
@@ -6297,7 +6144,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="genericresources_csharp">
@@ -6333,7 +6179,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="genericresources_go">
@@ -6369,7 +6214,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="genericresources_nodejs">
@@ -6405,7 +6249,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="generic_resources_python">
@@ -6443,7 +6286,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="discreteresourcesspecs_csharp">
@@ -6469,7 +6311,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="discreteresourcesspecs_go">
@@ -6495,7 +6336,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="discreteresourcesspecs_nodejs">
@@ -6521,7 +6361,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="discrete_resources_specs_python">
@@ -6549,7 +6388,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="genericresources_csharp">
@@ -6585,7 +6423,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="genericresources_go">
@@ -6621,7 +6458,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="genericresources_nodejs">
@@ -6657,7 +6493,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="generic_resources_python">
@@ -6695,7 +6530,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="discreteresourcesspecs_csharp">
@@ -6721,7 +6555,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="discreteresourcesspecs_go">
@@ -6747,7 +6580,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="discreteresourcesspecs_nodejs">
@@ -6773,7 +6605,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="discrete_resources_specs_python">
@@ -6801,7 +6632,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="condition_csharp">
@@ -6847,7 +6677,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="condition_go">
@@ -6893,7 +6722,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="condition_nodejs">
@@ -6939,7 +6767,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="condition_python">
@@ -6987,7 +6814,6 @@ command to be `["CMD", "curl", "-f", "http://localhost/health"]`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="delay_csharp">
@@ -7054,7 +6880,6 @@ casting and precision errors.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="delay_go">
@@ -7121,7 +6946,6 @@ casting and precision errors.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="delay_nodejs">
@@ -7188,7 +7012,6 @@ casting and precision errors.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="delay_python">

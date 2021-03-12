@@ -15,11 +15,17 @@ the cluster control plane. For more information see [the official documentation]
 and [the API reference](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Using A Separately Managed Node Pool (Recommended)
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -60,9 +66,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -110,9 +119,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -136,9 +148,12 @@ primary_preemptible_nodes = gcp.container.NodePool("primaryPreemptibleNodes",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -166,22 +181,38 @@ const primaryPreemptibleNodes = new gcp.container.NodePool("primaryPreemptibleNo
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### 2 Node Pools, 1 Separately Managed &#43; The Default Node Pool
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
+{{< example csharp >}}
 
-{{% example typescript %}}
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -219,9 +250,16 @@ const np = new gcp.container.NodePool("np", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a NodePool Resource {#create}
@@ -246,9 +284,7 @@ const np = new gcp.container.NodePool("np", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -256,9 +292,7 @@ const np = new gcp.container.NodePool("np", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -266,9 +300,7 @@ const np = new gcp.container.NodePool("np", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -276,10 +308,7 @@ const np = new gcp.container.NodePool("np", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -305,9 +334,7 @@ const np = new gcp.container.NodePool("np", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -315,9 +342,7 @@ const np = new gcp.container.NodePool("np", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -325,9 +350,7 @@ const np = new gcp.container.NodePool("np", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -335,9 +358,7 @@ const np = new gcp.container.NodePool("np", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -345,18 +366,13 @@ const np = new gcp.container.NodePool("np", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -364,9 +380,7 @@ const np = new gcp.container.NodePool("np", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -374,9 +388,7 @@ const np = new gcp.container.NodePool("np", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -384,10 +396,7 @@ const np = new gcp.container.NodePool("np", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -403,7 +412,6 @@ The NodePool resource accepts the following [input]({{< relref "/docs/intro/conc
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cluster_csharp">
@@ -576,7 +584,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cluster_go">
@@ -749,7 +756,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cluster_nodejs">
@@ -922,7 +928,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cluster_python">
@@ -1102,7 +1107,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1127,7 +1131,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -1152,7 +1155,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1177,7 +1179,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -1325,7 +1326,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_autoscaling_csharp">
@@ -1508,7 +1508,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_autoscaling_go">
@@ -1691,7 +1690,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_autoscaling_nodejs">
@@ -1874,7 +1872,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_autoscaling_python">
@@ -2068,7 +2065,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxnodecount_csharp">
@@ -2095,7 +2091,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxnodecount_go">
@@ -2122,7 +2117,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxnodecount_nodejs">
@@ -2149,7 +2143,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="max_node_count_python">
@@ -2178,7 +2171,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autorepair_csharp">
@@ -2204,7 +2196,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autorepair_go">
@@ -2230,7 +2221,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="autorepair_nodejs">
@@ -2256,7 +2246,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="auto_repair_python">
@@ -2284,7 +2273,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdiskkmskey_csharp">
@@ -2470,7 +2458,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdiskkmskey_go">
@@ -2656,7 +2643,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootdiskkmskey_nodejs">
@@ -2842,7 +2828,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="boot_disk_kms_key_python">
@@ -3030,7 +3015,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_csharp">
@@ -3054,7 +3038,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_go">
@@ -3078,7 +3061,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_nodejs">
@@ -3102,7 +3084,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="count_python">
@@ -3128,7 +3109,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cpumanagerpolicy_csharp">
@@ -3161,7 +3141,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cpumanagerpolicy_go">
@@ -3194,7 +3173,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cpumanagerpolicy_nodejs">
@@ -3227,7 +3205,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cpu_manager_policy_python">
@@ -3262,7 +3239,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sysctls_csharp">
@@ -3277,7 +3253,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sysctls_go">
@@ -3292,7 +3267,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sysctls_nodejs">
@@ -3307,7 +3281,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sysctls_python">
@@ -3324,7 +3297,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sandboxtype_csharp">
@@ -3339,7 +3311,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sandboxtype_go">
@@ -3354,7 +3325,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sandboxtype_nodejs">
@@ -3369,7 +3339,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="sandbox_type_python">
@@ -3386,7 +3355,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableintegritymonitoring_csharp">
@@ -3410,7 +3378,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableintegritymonitoring_go">
@@ -3434,7 +3401,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableintegritymonitoring_nodejs">
@@ -3458,7 +3424,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_integrity_monitoring_python">
@@ -3484,7 +3449,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="effect_csharp">
@@ -3517,7 +3481,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="effect_go">
@@ -3550,7 +3513,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="effect_nodejs">
@@ -3583,7 +3545,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="effect_python">
@@ -3618,7 +3579,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="nodemetadata_csharp">
@@ -3633,7 +3593,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="nodemetadata_go">
@@ -3648,7 +3607,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="nodemetadata_nodejs">
@@ -3663,7 +3621,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="node_metadata_python">
@@ -3680,7 +3637,6 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxsurge_csharp">
@@ -3710,7 +3666,6 @@ parallel. Can be set to 0 or greater.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxsurge_go">
@@ -3740,7 +3695,6 @@ parallel. Can be set to 0 or greater.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="maxsurge_nodejs">
@@ -3770,7 +3724,6 @@ parallel. Can be set to 0 or greater.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="max_surge_python">

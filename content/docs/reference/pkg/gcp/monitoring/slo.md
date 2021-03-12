@@ -26,11 +26,17 @@ To get more information about Slo, see:
     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Monitoring Slo Appengine
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -63,9 +69,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -102,9 +111,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -123,9 +135,12 @@ appeng_slo = gcp.monitoring.Slo("appengSlo",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -148,10 +163,17 @@ const appengSlo = new gcp.monitoring.Slo("appengSlo", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Monitoring Slo Request Based
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -189,9 +211,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -232,9 +257,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -258,9 +286,12 @@ request_based_slo = gcp.monitoring.Slo("requestBasedSlo",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -287,9 +318,16 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Slo Resource {#create}
@@ -314,9 +352,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -324,9 +360,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -334,9 +368,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -344,10 +376,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -373,9 +402,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -383,9 +410,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -393,9 +418,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -403,9 +426,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -413,18 +434,13 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -432,9 +448,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -442,9 +456,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -452,10 +464,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -471,7 +480,6 @@ The Slo resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="goal_csharp">
@@ -603,7 +611,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="goal_go">
@@ -735,7 +742,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="goal_nodejs">
@@ -867,7 +873,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="goal_python">
@@ -1006,7 +1011,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1032,7 +1036,6 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -1058,7 +1061,6 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1084,7 +1086,6 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -1233,7 +1234,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_basicsli_csharp">
@@ -1376,7 +1376,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_basicsli_go">
@@ -1519,7 +1518,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_basicsli_nodejs">
@@ -1662,7 +1660,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_basic_sli_python">
@@ -1816,7 +1813,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="availability_csharp">
@@ -1889,7 +1885,6 @@ field will result in an error.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="availability_go">
@@ -1962,7 +1957,6 @@ field will result in an error.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="availability_nodejs">
@@ -2035,7 +2029,6 @@ field will result in an error.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="availability_python">
@@ -2110,7 +2103,6 @@ field will result in an error.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
@@ -2126,7 +2118,6 @@ field will result in an error.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
@@ -2142,7 +2133,6 @@ field will result in an error.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
@@ -2158,7 +2148,6 @@ field will result in an error.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
@@ -2176,7 +2165,6 @@ field will result in an error.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
@@ -2194,7 +2182,6 @@ this service that return in no more than threshold.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="threshold_go">
@@ -2212,7 +2199,6 @@ this service that return in no more than threshold.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
@@ -2230,7 +2216,6 @@ this service that return in no more than threshold.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="threshold_python">
@@ -2250,7 +2235,6 @@ this service that return in no more than threshold.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="distributioncut_csharp">
@@ -2286,7 +2270,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="distributioncut_go">
@@ -2322,7 +2305,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="distributioncut_nodejs">
@@ -2358,7 +2340,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="distribution_cut_python">
@@ -2396,7 +2377,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="distributionfilter_csharp">
@@ -2431,7 +2411,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="distributionfilter_go">
@@ -2466,7 +2445,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="distributionfilter_nodejs">
@@ -2501,7 +2479,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="distribution_filter_python">
@@ -2538,7 +2515,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_csharp">
@@ -2568,7 +2544,6 @@ will be set to "-infinity", defining an open range
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_go">
@@ -2598,7 +2573,6 @@ will be set to "-infinity", defining an open range
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_nodejs">
@@ -2628,7 +2602,6 @@ will be set to "-infinity", defining an open range
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_python">
@@ -2660,7 +2633,6 @@ will be set to "-infinity", defining an open range
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="badservicefilter_csharp">
@@ -2713,7 +2685,6 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="badservicefilter_go">
@@ -2766,7 +2737,6 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="badservicefilter_nodejs">
@@ -2819,7 +2789,6 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bad_service_filter_python">
@@ -2874,7 +2843,6 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="goodbadmetricfilter_csharp">
@@ -2954,7 +2922,6 @@ integer fraction of a day and at least 60s.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="goodbadmetricfilter_go">
@@ -3034,7 +3001,6 @@ integer fraction of a day and at least 60s.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="goodbadmetricfilter_nodejs">
@@ -3114,7 +3080,6 @@ integer fraction of a day and at least 60s.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="good_bad_metric_filter_python">
@@ -3196,7 +3161,6 @@ integer fraction of a day and at least 60s.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="basicsliperformance_csharp">
@@ -3236,7 +3200,6 @@ this service that return in no more than threshold.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="basicsliperformance_go">
@@ -3276,7 +3239,6 @@ this service that return in no more than threshold.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="basicsliperformance_nodejs">
@@ -3316,7 +3278,6 @@ this service that return in no more than threshold.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="basic_sli_performance_python">
@@ -3358,7 +3319,6 @@ this service that return in no more than threshold.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="latency_csharp">
@@ -3420,7 +3380,6 @@ field will result in an error.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="latency_go">
@@ -3482,7 +3441,6 @@ field will result in an error.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="latency_nodejs">
@@ -3544,7 +3502,6 @@ field will result in an error.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="latency_python">
@@ -3608,7 +3565,6 @@ field will result in an error.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
@@ -3626,7 +3582,6 @@ this service that return in no more than threshold.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="threshold_go">
@@ -3644,7 +3599,6 @@ this service that return in no more than threshold.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
@@ -3662,7 +3616,6 @@ this service that return in no more than threshold.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="threshold_python">
@@ -3682,7 +3635,6 @@ this service that return in no more than threshold.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="distributioncut_csharp">
@@ -3718,7 +3670,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="distributioncut_go">
@@ -3754,7 +3705,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="distributioncut_nodejs">
@@ -3790,7 +3740,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="distribution_cut_python">
@@ -3828,7 +3777,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="distributionfilter_csharp">
@@ -3863,7 +3811,6 @@ Structure is documented below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="distributionfilter_go">
@@ -3898,7 +3845,6 @@ Structure is documented below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="distributionfilter_nodejs">
@@ -3933,7 +3879,6 @@ Structure is documented below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="distribution_filter_python">
@@ -3970,7 +3915,6 @@ Structure is documented below.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_csharp">
@@ -4000,7 +3944,6 @@ will be set to "-infinity", defining an open range
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_go">
@@ -4030,7 +3973,6 @@ will be set to "-infinity", defining an open range
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_nodejs">
@@ -4060,7 +4002,6 @@ will be set to "-infinity", defining an open range
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_python">
@@ -4092,7 +4033,6 @@ will be set to "-infinity", defining an open range
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="badservicefilter_csharp">
@@ -4145,7 +4085,6 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="badservicefilter_go">
@@ -4198,7 +4137,6 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="badservicefilter_nodejs">
@@ -4251,7 +4189,6 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bad_service_filter_python">
@@ -4306,7 +4243,6 @@ must have MetricKind = DELTA or MetricKind = CUMULATIVE.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="range_csharp">
@@ -4344,7 +4280,6 @@ Summed value `X` should satisfy
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="range_go">
@@ -4382,7 +4317,6 @@ Summed value `X` should satisfy
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="range_nodejs">
@@ -4420,7 +4354,6 @@ Summed value `X` should satisfy
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="range_python">
@@ -4460,7 +4393,6 @@ Summed value `X` should satisfy
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_csharp">
@@ -4490,7 +4422,6 @@ will be set to "-infinity", defining an open range
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_go">
@@ -4520,7 +4451,6 @@ will be set to "-infinity", defining an open range
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_nodejs">
@@ -4550,7 +4480,6 @@ will be set to "-infinity", defining an open range
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_python">
@@ -4582,7 +4511,6 @@ will be set to "-infinity", defining an open range
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="range_csharp">
@@ -4620,7 +4548,6 @@ Summed value `X` should satisfy
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="range_go">
@@ -4658,7 +4585,6 @@ Summed value `X` should satisfy
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="range_nodejs">
@@ -4696,7 +4622,6 @@ Summed value `X` should satisfy
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="range_python">
@@ -4736,7 +4661,6 @@ Summed value `X` should satisfy
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_csharp">
@@ -4766,7 +4690,6 @@ will be set to "-infinity", defining an open range
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_go">
@@ -4796,7 +4719,6 @@ will be set to "-infinity", defining an open range
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_nodejs">
@@ -4826,7 +4748,6 @@ will be set to "-infinity", defining an open range
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_python">

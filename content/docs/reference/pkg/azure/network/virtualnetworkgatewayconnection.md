@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.network.VirtualNetworkGatewayConnection 
 Manages a connection in an existing Virtual Network Gateway.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Site-to-Site connection
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -97,9 +103,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -191,9 +200,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -238,9 +250,12 @@ onpremise_virtual_network_gateway_connection = azure.network.VirtualNetworkGatew
     shared_key="4-v3ry-53cr37-1p53c-5h4r3d-k3y")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -292,10 +307,17 @@ const onpremiseVirtualNetworkGatewayConnection = new azure.network.VirtualNetwor
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### VNet-to-VNet connection
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -417,9 +439,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -560,9 +585,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -631,9 +659,12 @@ europe_to_us = azure.network.VirtualNetworkGatewayConnection("europeToUs",
     shared_key="4-v3ry-53cr37-1p53c-5h4r3d-k3y")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -713,9 +744,16 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a VirtualNetworkGatewayConnection Resource {#create}
@@ -740,9 +778,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -750,9 +786,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -760,9 +794,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -770,10 +802,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -799,9 +828,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -809,9 +836,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -819,9 +844,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -829,9 +852,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -839,18 +860,13 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -858,9 +874,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -868,9 +882,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -878,10 +890,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -897,7 +906,6 @@ The VirtualNetworkGatewayConnection resource accepts the following [input]({{< r
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -1131,7 +1139,6 @@ selectors requires an `ipsec_policy` block. Defaults to `false`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -1365,7 +1372,6 @@ selectors requires an `ipsec_policy` block. Defaults to `false`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -1599,7 +1605,6 @@ selectors requires an `ipsec_policy` block. Defaults to `false`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -1840,7 +1845,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1855,7 +1859,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -1870,7 +1873,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1885,7 +1887,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -2023,7 +2024,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorizationkey_csharp">
@@ -2257,7 +2257,6 @@ resource to be created.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorizationkey_go">
@@ -2491,7 +2490,6 @@ resource to be created.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorizationkey_nodejs">
@@ -2725,7 +2723,6 @@ resource to be created.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authorization_key_python">
@@ -2970,7 +2967,6 @@ resource to be created.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dhgroup_csharp">
@@ -3066,7 +3062,6 @@ or `None`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dhgroup_go">
@@ -3162,7 +3157,6 @@ or `None`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dhgroup_nodejs">
@@ -3258,7 +3252,6 @@ or `None`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="dh_group_python">
@@ -3356,7 +3349,6 @@ or `None`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="localaddresscidrs_csharp">
@@ -3380,7 +3372,6 @@ or `None`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="localaddresscidrs_go">
@@ -3404,7 +3395,6 @@ or `None`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="localaddresscidrs_nodejs">
@@ -3428,7 +3418,6 @@ or `None`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="local_address_cidrs_python">

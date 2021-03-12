@@ -16,11 +16,17 @@ The Service Integration Endpoint resource allows the creation and management of 
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aiven = Pulumi.Aiven;
@@ -44,9 +50,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -73,9 +82,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aiven as aiven
@@ -89,9 +101,12 @@ myendpoint = aiven.ServiceIntegrationEndpoint("myendpoint",
     project=aiven_project["myproject"]["project"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -107,9 +122,16 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ServiceIntegrationEndpoint Resource {#create}
@@ -134,9 +156,7 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -144,9 +164,7 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -154,9 +172,7 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -164,10 +180,7 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -193,9 +206,7 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -203,9 +214,7 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -213,9 +222,7 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -223,9 +230,7 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -233,18 +238,13 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -252,9 +252,7 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -262,9 +260,7 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -272,10 +268,7 @@ const myendpoint = new aiven.ServiceIntegrationEndpoint("myendpoint", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -291,7 +284,6 @@ The ServiceIntegrationEndpoint resource accepts the following [input]({{< relref
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="endpointname_csharp">
@@ -439,7 +431,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="endpointname_go">
@@ -587,7 +578,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="endpointname_nodejs">
@@ -735,7 +725,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="endpoint_name_python">
@@ -890,7 +879,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="endpointconfig_csharp">
@@ -915,7 +903,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="endpointconfig_go">
@@ -940,7 +927,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="endpointconfig_nodejs">
@@ -965,7 +951,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="endpoint_config_python">
@@ -1113,7 +1098,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datadoguserconfig_csharp">
@@ -1271,7 +1255,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datadoguserconfig_go">
@@ -1429,7 +1412,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datadoguserconfig_nodejs">
@@ -1587,7 +1569,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datadog_user_config_python">
@@ -1756,7 +1737,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="datadogapikey_csharp">
@@ -1798,7 +1778,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="datadogapikey_go">
@@ -1840,7 +1819,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="datadogapikey_nodejs">
@@ -1882,7 +1860,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="datadog_api_key_python">
@@ -1926,7 +1903,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesskey_csharp">
@@ -1968,7 +1944,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesskey_go">
@@ -2010,7 +1985,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesskey_nodejs">
@@ -2052,7 +2026,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="access_key_python">
@@ -2096,7 +2069,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesskey_csharp">
@@ -2138,7 +2110,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesskey_go">
@@ -2180,7 +2151,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accesskey_nodejs">
@@ -2222,7 +2192,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="access_key_python">
@@ -2266,7 +2235,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ca_csharp">
@@ -2317,7 +2285,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ca_go">
@@ -2368,7 +2335,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ca_nodejs">
@@ -2419,7 +2385,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ca_python">
@@ -2472,7 +2437,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="logid_csharp">
@@ -2505,7 +2469,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="logid_go">
@@ -2538,7 +2501,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="logid_nodejs">
@@ -2571,7 +2533,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="log_id_python">
@@ -2606,7 +2567,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootstrapservers_csharp">
@@ -2693,7 +2653,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootstrapservers_go">
@@ -2780,7 +2739,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootstrapservers_nodejs">
@@ -2867,7 +2825,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="bootstrap_servers_python">
@@ -2956,7 +2913,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="authentication_csharp">
@@ -2998,7 +2954,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="authentication_go">
@@ -3040,7 +2995,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="authentication_nodejs">
@@ -3082,7 +3036,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="authentication_python">
@@ -3126,7 +3079,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="basicauthpassword_csharp">
@@ -3150,7 +3102,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="basicauthpassword_go">
@@ -3174,7 +3125,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="basicauthpassword_nodejs">
@@ -3198,7 +3148,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="basic_auth_password_python">
@@ -3224,7 +3173,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="basicauthpassword_csharp">
@@ -3248,7 +3196,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="basicauthpassword_go">
@@ -3272,7 +3219,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="basicauthpassword_nodejs">
@@ -3296,7 +3242,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="basic_auth_password_python">
@@ -3322,7 +3267,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ca_csharp">
@@ -3409,7 +3353,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ca_go">
@@ -3496,7 +3439,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ca_nodejs">
@@ -3583,7 +3525,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="ca_python">
@@ -3672,7 +3613,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledmetrics_csharp">
@@ -3705,7 +3645,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledmetrics_go">
@@ -3738,7 +3677,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabledmetrics_nodejs">
@@ -3771,7 +3709,6 @@ By the time of writing the only available option is `datadog`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_metrics_python">

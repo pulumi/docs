@@ -24,11 +24,17 @@ To get more information about BackendService, see:
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/backend-service)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Backend Service Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -55,9 +61,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -89,9 +98,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -103,9 +115,12 @@ default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck"
 default_backend_service = gcp.compute.BackendService("defaultBackendService", health_checks=[default_http_health_check.id])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -119,10 +134,17 @@ const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealt
 const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {healthChecks: [defaultHttpHealthCheck.id]});
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Backend Service Cache Simple
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -154,9 +176,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -192,9 +217,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -211,9 +239,12 @@ default_backend_service = gcp.compute.BackendService("defaultBackendService",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -233,10 +264,17 @@ const defaultBackendService = new gcp.compute.BackendService("defaultBackendServ
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Backend Service Cache
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -279,9 +317,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -322,9 +363,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -348,9 +392,12 @@ default_backend_service = gcp.compute.BackendService("defaultBackendService",
     opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -379,10 +426,17 @@ const defaultBackendService = new gcp.compute.BackendService("defaultBackendServ
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Backend Service Traffic Director Round Robin
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -418,9 +472,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -454,9 +511,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -472,9 +532,12 @@ default = gcp.compute.BackendService("default",
     opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -494,10 +557,17 @@ const _default = new gcp.compute.BackendService("default", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Backend Service Traffic Director Ring Hash
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -554,9 +624,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -606,9 +679,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -640,9 +716,12 @@ default = gcp.compute.BackendService("default",
     opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -678,10 +757,17 @@ const _default = new gcp.compute.BackendService("default", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Backend Service Network Endpoint
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -736,9 +822,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -792,9 +881,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -820,9 +912,12 @@ default = gcp.compute.BackendService("default",
     opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -855,9 +950,16 @@ const _default = new gcp.compute.BackendService("default", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a BackendService Resource {#create}
@@ -882,9 +984,7 @@ const _default = new gcp.compute.BackendService("default", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -892,9 +992,7 @@ const _default = new gcp.compute.BackendService("default", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -902,9 +1000,7 @@ const _default = new gcp.compute.BackendService("default", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -912,10 +1008,7 @@ const _default = new gcp.compute.BackendService("default", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -941,9 +1034,7 @@ const _default = new gcp.compute.BackendService("default", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -951,9 +1042,7 @@ const _default = new gcp.compute.BackendService("default", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -961,9 +1050,7 @@ const _default = new gcp.compute.BackendService("default", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -971,9 +1058,7 @@ const _default = new gcp.compute.BackendService("default", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -981,18 +1066,13 @@ const _default = new gcp.compute.BackendService("default", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1000,9 +1080,7 @@ const _default = new gcp.compute.BackendService("default", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1010,9 +1088,7 @@ const _default = new gcp.compute.BackendService("default", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1020,10 +1096,7 @@ const _default = new gcp.compute.BackendService("default", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1039,7 +1112,6 @@ The BackendService resource accepts the following [input]({{< relref "/docs/intr
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="affinitycookiettlsec_csharp">
@@ -1340,7 +1412,6 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="affinitycookiettlsec_go">
@@ -1641,7 +1712,6 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="affinitycookiettlsec_nodejs">
@@ -1942,7 +2012,6 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="affinity_cookie_ttl_sec_python">
@@ -2250,7 +2319,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="creationtimestamp_csharp">
@@ -2295,7 +2363,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="creationtimestamp_go">
@@ -2340,7 +2407,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="creationtimestamp_nodejs">
@@ -2385,7 +2451,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="creation_timestamp_python">
@@ -2553,7 +2618,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_affinitycookiettlsec_csharp">
@@ -2884,7 +2948,6 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_affinitycookiettlsec_go">
@@ -3215,7 +3278,6 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_affinitycookiettlsec_nodejs">
@@ -3546,7 +3608,6 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_affinity_cookie_ttl_sec_python">
@@ -3888,7 +3949,6 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="group_csharp">
@@ -4051,7 +4111,6 @@ range is [0.0, 1.0].
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="group_go">
@@ -4214,7 +4273,6 @@ range is [0.0, 1.0].
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="group_nodejs">
@@ -4377,7 +4435,6 @@ range is [0.0, 1.0].
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="group_python">
@@ -4542,7 +4599,6 @@ range is [0.0, 1.0].
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cachekeypolicy_csharp">
@@ -4640,7 +4696,6 @@ responses will not be altered.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cachekeypolicy_go">
@@ -4738,7 +4793,6 @@ responses will not be altered.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cachekeypolicy_nodejs">
@@ -4836,7 +4890,6 @@ responses will not be altered.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="cache_key_policy_python">
@@ -4936,7 +4989,6 @@ responses will not be altered.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="includehost_csharp">
@@ -5005,7 +5057,6 @@ delimiters.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="includehost_go">
@@ -5074,7 +5125,6 @@ delimiters.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="includehost_nodejs">
@@ -5143,7 +5193,6 @@ delimiters.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="include_host_python">
@@ -5214,7 +5263,6 @@ delimiters.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="code_csharp">
@@ -5238,7 +5286,6 @@ delimiters.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="code_go">
@@ -5262,7 +5309,6 @@ delimiters.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="code_nodejs">
@@ -5286,7 +5332,6 @@ delimiters.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="code_python">
@@ -5312,7 +5357,6 @@ delimiters.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="connecttimeout_csharp">
@@ -5385,7 +5429,6 @@ Defaults to 3.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="connecttimeout_go">
@@ -5458,7 +5501,6 @@ Defaults to 3.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="connecttimeout_nodejs">
@@ -5531,7 +5573,6 @@ Defaults to 3.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="connect_timeout_python">
@@ -5606,7 +5647,6 @@ Defaults to 3.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_csharp">
@@ -5635,7 +5675,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_go">
@@ -5664,7 +5703,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_nodejs">
@@ -5693,7 +5731,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_python">
@@ -5724,7 +5761,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="httpcookie_csharp">
@@ -5770,7 +5806,6 @@ Defaults to 1024.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="httpcookie_go">
@@ -5816,7 +5851,6 @@ Defaults to 1024.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="httpcookie_nodejs">
@@ -5862,7 +5896,6 @@ Defaults to 1024.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="http_cookie_python">
@@ -5910,7 +5943,6 @@ Defaults to 1024.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -5945,7 +5977,6 @@ Defaults to 1024.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -5980,7 +6011,6 @@ Defaults to 1024.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -6015,7 +6045,6 @@ Defaults to 1024.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -6052,7 +6081,6 @@ Defaults to 1024.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_csharp">
@@ -6081,7 +6109,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_go">
@@ -6110,7 +6137,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_nodejs">
@@ -6139,7 +6165,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_python">
@@ -6170,7 +6195,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="oauth2clientid_csharp">
@@ -6209,7 +6233,6 @@ OAuth2 Client Secret SHA-256 for IAP
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="oauth2clientid_go">
@@ -6248,7 +6271,6 @@ OAuth2 Client Secret SHA-256 for IAP
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="oauth2clientid_nodejs">
@@ -6287,7 +6309,6 @@ OAuth2 Client Secret SHA-256 for IAP
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="oauth2_client_id_python">
@@ -6328,7 +6349,6 @@ OAuth2 Client Secret SHA-256 for IAP
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_csharp">
@@ -6357,7 +6377,6 @@ The default value is 1.0.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_go">
@@ -6386,7 +6405,6 @@ The default value is 1.0.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_nodejs">
@@ -6415,7 +6433,6 @@ The default value is 1.0.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_python">
@@ -6446,7 +6463,6 @@ The default value is 1.0.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="baseejectiontime_csharp">
@@ -6590,7 +6606,6 @@ runtime value should be 1900. Defaults to 1900.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="baseejectiontime_go">
@@ -6734,7 +6749,6 @@ runtime value should be 1900. Defaults to 1900.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="baseejectiontime_nodejs">
@@ -6878,7 +6892,6 @@ runtime value should be 1900. Defaults to 1900.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="base_ejection_time_python">
@@ -7024,7 +7037,6 @@ runtime value should be 1900. Defaults to 1900.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_csharp">
@@ -7053,7 +7065,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_go">
@@ -7082,7 +7093,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_nodejs">
@@ -7111,7 +7121,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_python">
@@ -7142,7 +7151,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_csharp">
@@ -7171,7 +7179,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_go">
@@ -7200,7 +7207,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_nodejs">
@@ -7229,7 +7235,6 @@ less than one second are represented with a 0 `seconds` field and a positive
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="seconds_python">

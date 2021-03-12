@@ -15,11 +15,17 @@ The `consul.AclAuthMethod` data source returns the information related to a
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Consul = Pulumi.Consul;
@@ -40,9 +46,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -65,9 +74,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_consul as consul
@@ -76,9 +88,12 @@ test = consul.get_acl_auth_method(name="minikube")
 pulumi.export("consulAclAuthMethod", test.config)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -90,9 +105,16 @@ const test = consul.getAclAuthMethod({
 export const consulAclAuthMethod = test.then(test => test.config);
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getAclAuthMethod {#using}
@@ -131,7 +153,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -157,7 +178,6 @@ The following arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -183,7 +203,6 @@ The following arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -209,7 +228,6 @@ The following arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -244,7 +262,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="config_csharp">
@@ -364,7 +381,6 @@ be either 'local' or 'global'.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="config_go">
@@ -484,7 +500,6 @@ be either 'local' or 'global'.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="config_nodejs">
@@ -604,7 +619,6 @@ be either 'local' or 'global'.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="config_python">
@@ -734,7 +748,6 @@ be either 'local' or 'global'.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bindnamespace_csharp">
@@ -758,7 +771,6 @@ be either 'local' or 'global'.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bindnamespace_go">
@@ -782,7 +794,6 @@ be either 'local' or 'global'.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bindnamespace_nodejs">
@@ -806,7 +817,6 @@ be either 'local' or 'global'.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bind_namespace_python">

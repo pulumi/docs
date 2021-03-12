@@ -218,11 +218,17 @@ func main() {
 ```
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Synthetics API Test)
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Datadog = Pulumi.Datadog;
@@ -286,9 +292,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -347,9 +356,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_datadog as datadog
@@ -391,9 +403,12 @@ test_api = datadog.SyntheticsTest("testApi",
     type="api")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -437,10 +452,17 @@ const testApi = new datadog.SyntheticsTest("test_api", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Synthetics SSL Test)
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Datadog = Pulumi.Datadog;
@@ -491,9 +513,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -542,9 +567,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_datadog as datadog
@@ -576,9 +604,12 @@ test_ssl = datadog.SyntheticsTest("testSsl",
     type="api")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -612,10 +643,17 @@ const testSsl = new datadog.SyntheticsTest("test_ssl", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Synthetics TCP Test)
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Datadog = Pulumi.Datadog;
@@ -665,9 +703,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -715,9 +756,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_datadog as datadog
@@ -748,9 +792,12 @@ test_tcp = datadog.SyntheticsTest("testTcp",
     type="api")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -783,10 +830,17 @@ const testTcp = new datadog.SyntheticsTest("test_tcp", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Synthetics DNS Test)
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Datadog = Pulumi.Datadog;
@@ -836,9 +890,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -886,9 +943,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_datadog as datadog
@@ -919,9 +979,12 @@ test_dns = datadog.SyntheticsTest("testDns",
     type="api")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -954,10 +1017,17 @@ const testDns = new datadog.SyntheticsTest("test_dns", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Synthetics Browser Test)
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.Collections.Generic;
 using System.Text.Json;
@@ -1035,13 +1105,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import json
@@ -1092,9 +1168,12 @@ test_browser = datadog.SyntheticsTest("testBrowser",
     ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -1146,9 +1225,16 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SyntheticsTest Resource {#create}
@@ -1173,9 +1259,7 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1183,9 +1267,7 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1193,9 +1275,7 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1203,10 +1283,7 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1232,9 +1309,7 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -1242,9 +1317,7 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1252,9 +1325,7 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1262,9 +1333,7 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1272,18 +1341,13 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1291,9 +1355,7 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1301,9 +1363,7 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1311,10 +1371,7 @@ const testBrowser = new datadog.SyntheticsTest("testBrowser", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1330,7 +1387,6 @@ The SyntheticsTest resource accepts the following [input]({{< relref "/docs/intr
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="locations_csharp">
@@ -1540,7 +1596,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="locations_go">
@@ -1750,7 +1805,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="locations_nodejs">
@@ -1960,7 +2014,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="locations_python">
@@ -2177,7 +2230,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -2202,7 +2254,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -2227,7 +2278,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -2252,7 +2302,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -2400,7 +2449,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_assertions_csharp">
@@ -2620,7 +2668,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_assertions_go">
@@ -2840,7 +2887,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_assertions_nodejs">
@@ -3060,7 +3106,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_assertions_python">
@@ -3291,7 +3336,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -3342,7 +3386,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -3393,7 +3436,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -3444,7 +3486,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -3497,7 +3538,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -3539,7 +3579,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -3581,7 +3620,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -3623,7 +3661,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -3667,7 +3704,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tickevery_csharp">
@@ -3745,7 +3781,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tickevery_go">
@@ -3823,7 +3858,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tickevery_nodejs">
@@ -3901,7 +3935,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="tick_every_python">
@@ -3981,7 +4014,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="acceptselfsigned_csharp">
@@ -4059,7 +4091,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="acceptselfsigned_go">
@@ -4137,7 +4168,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="acceptselfsigned_nodejs">
@@ -4215,7 +4245,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="accept_self_signed_python">
@@ -4295,7 +4324,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="renotifyinterval_csharp">
@@ -4310,7 +4338,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="renotifyinterval_go">
@@ -4325,7 +4352,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="renotifyinterval_nodejs">
@@ -4340,7 +4366,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="renotify_interval_python">
@@ -4357,7 +4382,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="count_csharp">
@@ -4381,7 +4405,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="count_go">
@@ -4405,7 +4428,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="count_nodejs">
@@ -4429,7 +4451,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="count_python">
@@ -4455,7 +4476,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="body_csharp">
@@ -4524,7 +4544,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="body_go">
@@ -4593,7 +4612,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="body_nodejs">
@@ -4662,7 +4680,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="body_python">
@@ -4733,7 +4750,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="password_csharp">
@@ -4757,7 +4773,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="password_go">
@@ -4781,7 +4796,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="password_nodejs">
@@ -4805,7 +4819,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="password_python">
@@ -4831,7 +4844,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cert_csharp">
@@ -4855,7 +4867,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cert_go">
@@ -4879,7 +4890,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cert_nodejs">
@@ -4903,7 +4913,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cert_python">
@@ -4929,7 +4938,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_csharp">
@@ -4953,7 +4961,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_go">
@@ -4977,7 +4984,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_nodejs">
@@ -5001,7 +5007,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_python">
@@ -5027,7 +5032,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_csharp">
@@ -5051,7 +5055,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_go">
@@ -5075,7 +5078,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_nodejs">
@@ -5099,7 +5101,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="content_python">
@@ -5125,7 +5126,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -5176,7 +5176,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -5227,7 +5226,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -5278,7 +5276,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -5331,7 +5328,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -5382,7 +5378,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -5433,7 +5428,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -5484,7 +5478,6 @@ synthetics page of the UI. Default is an empty list (`[]`).
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">

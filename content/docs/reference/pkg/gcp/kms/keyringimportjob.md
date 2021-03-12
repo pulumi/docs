@@ -49,9 +49,7 @@ To get more information about KeyRingImportJob, see:
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -59,9 +57,7 @@ To get more information about KeyRingImportJob, see:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -69,9 +65,7 @@ To get more information about KeyRingImportJob, see:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -79,10 +73,7 @@ To get more information about KeyRingImportJob, see:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -108,9 +99,7 @@ To get more information about KeyRingImportJob, see:
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -118,9 +107,7 @@ To get more information about KeyRingImportJob, see:
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -128,9 +115,7 @@ To get more information about KeyRingImportJob, see:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -138,9 +123,7 @@ To get more information about KeyRingImportJob, see:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -148,18 +131,13 @@ To get more information about KeyRingImportJob, see:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -167,9 +145,7 @@ To get more information about KeyRingImportJob, see:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -177,9 +153,7 @@ To get more information about KeyRingImportJob, see:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -187,10 +161,7 @@ To get more information about KeyRingImportJob, see:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -206,7 +177,6 @@ The KeyRingImportJob resource accepts the following [input]({{< relref "/docs/in
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="importjobid_csharp">
@@ -256,7 +226,6 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="importjobid_go">
@@ -306,7 +275,6 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="importjobid_nodejs">
@@ -356,7 +324,6 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="import_job_id_python">
@@ -413,7 +380,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="attestations_csharp">
@@ -480,7 +446,6 @@ ImportMethod is one with a protection level of HSM.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="attestations_go">
@@ -547,7 +512,6 @@ ImportMethod is one with a protection level of HSM.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="attestations_nodejs">
@@ -614,7 +578,6 @@ ImportMethod is one with a protection level of HSM.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="attestations_python">
@@ -804,7 +767,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_attestations_csharp">
@@ -906,7 +868,6 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_attestations_go">
@@ -1008,7 +969,6 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_attestations_nodejs">
@@ -1110,7 +1070,6 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_attestations_python">
@@ -1223,7 +1182,6 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="content_csharp">
@@ -1247,7 +1205,6 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="content_go">
@@ -1271,7 +1228,6 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="content_nodejs">
@@ -1295,7 +1251,6 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="content_python">
@@ -1321,7 +1276,6 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="pem_csharp">
@@ -1336,7 +1290,6 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="pem_go">
@@ -1351,7 +1304,6 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="pem_nodejs">
@@ -1366,7 +1318,6 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="pem_python">

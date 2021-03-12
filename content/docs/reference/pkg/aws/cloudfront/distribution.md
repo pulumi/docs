@@ -23,11 +23,17 @@ blocked. If you need to delete a distribution that is enabled and you do not
 want to wait, you need to use the `retain_on_delete` flag.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -200,9 +206,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -354,9 +363,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -486,9 +498,12 @@ s3_distribution = aws.cloudfront.Distribution("s3Distribution",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -621,9 +636,16 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Distribution Resource {#create}
@@ -648,9 +670,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -658,9 +678,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -668,9 +686,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -678,10 +694,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -707,9 +720,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -717,9 +728,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -727,9 +736,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -737,9 +744,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -747,18 +752,13 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -766,9 +766,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -776,9 +774,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -786,10 +782,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -805,7 +798,6 @@ The Distribution resource accepts the following [input]({{< relref "/docs/intro/
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="defaultcachebehavior_csharp">
@@ -1028,7 +1020,6 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="defaultcachebehavior_go">
@@ -1251,7 +1242,6 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="defaultcachebehavior_nodejs">
@@ -1474,7 +1464,6 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="default_cache_behavior_python">
@@ -1704,7 +1693,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_csharp">
@@ -1818,7 +1806,6 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_go">
@@ -1932,7 +1919,6 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_nodejs">
@@ -2046,7 +2032,6 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="arn_python">
@@ -2283,7 +2268,6 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_aliases_csharp">
@@ -2605,7 +2589,6 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_aliases_go">
@@ -2927,7 +2910,6 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_aliases_nodejs">
@@ -3249,7 +3231,6 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_aliases_python">
@@ -3582,7 +3563,6 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="errorcode_csharp">
@@ -3633,7 +3613,6 @@ example, `/custom_404.html`).
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="errorcode_go">
@@ -3684,7 +3663,6 @@ example, `/custom_404.html`).
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="errorcode_nodejs">
@@ -3735,7 +3713,6 @@ example, `/custom_404.html`).
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="error_code_python">
@@ -3788,7 +3765,6 @@ example, `/custom_404.html`).
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="allowedmethods_csharp">
@@ -3979,7 +3955,6 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="allowedmethods_go">
@@ -4170,7 +4145,6 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="allowedmethods_nodejs">
@@ -4361,7 +4335,6 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="allowed_methods_python">
@@ -4554,7 +4527,6 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cookies_csharp">
@@ -4607,7 +4579,6 @@ value of `true` for `query_string`, all query string keys are cached.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cookies_go">
@@ -4660,7 +4631,6 @@ value of `true` for `query_string`, all query string keys are cached.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cookies_nodejs">
@@ -4713,7 +4683,6 @@ value of `true` for `query_string`, all query string keys are cached.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cookies_python">
@@ -4768,7 +4737,6 @@ value of `true` for `query_string`, all query string keys are cached.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="forward_csharp">
@@ -4799,7 +4767,6 @@ your origin.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="forward_go">
@@ -4830,7 +4797,6 @@ your origin.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="forward_nodejs">
@@ -4861,7 +4827,6 @@ your origin.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="forward_python">
@@ -4894,7 +4859,6 @@ your origin.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="eventtype_csharp">
@@ -4932,7 +4896,6 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="eventtype_go">
@@ -4970,7 +4933,6 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="eventtype_nodejs">
@@ -5008,7 +4970,6 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="event_type_python">
@@ -5048,7 +5009,6 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
@@ -5087,7 +5047,6 @@ to the access log filenames for this distribution, for example, `myprefix/`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucket_go">
@@ -5126,7 +5085,6 @@ to the access log filenames for this distribution, for example, `myprefix/`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
@@ -5165,7 +5123,6 @@ to the access log filenames for this distribution, for example, `myprefix/`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="bucket_python">
@@ -5206,7 +5163,6 @@ to the access log filenames for this distribution, for example, `myprefix/`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="allowedmethods_csharp">
@@ -5408,7 +5364,6 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="allowedmethods_go">
@@ -5610,7 +5565,6 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="allowedmethods_nodejs">
@@ -5812,7 +5766,6 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="allowed_methods_python">
@@ -6016,7 +5969,6 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cookies_csharp">
@@ -6069,7 +6021,6 @@ value of `true` for `query_string`, all query string keys are cached.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cookies_go">
@@ -6122,7 +6073,6 @@ value of `true` for `query_string`, all query string keys are cached.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cookies_nodejs">
@@ -6175,7 +6125,6 @@ value of `true` for `query_string`, all query string keys are cached.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="cookies_python">
@@ -6230,7 +6179,6 @@ value of `true` for `query_string`, all query string keys are cached.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="forward_csharp">
@@ -6261,7 +6209,6 @@ your origin.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="forward_go">
@@ -6292,7 +6239,6 @@ your origin.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="forward_nodejs">
@@ -6323,7 +6269,6 @@ your origin.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="forward_python">
@@ -6356,7 +6301,6 @@ your origin.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="eventtype_csharp">
@@ -6394,7 +6338,6 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="eventtype_go">
@@ -6432,7 +6375,6 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="eventtype_nodejs">
@@ -6470,7 +6412,6 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="event_type_python">
@@ -6510,7 +6451,6 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="domainname_csharp">
@@ -6585,7 +6525,6 @@ configuration information. If a custom origin is required, use
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="domainname_go">
@@ -6660,7 +6599,6 @@ configuration information. If a custom origin is required, use
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="domainname_nodejs">
@@ -6735,7 +6673,6 @@ configuration information. If a custom origin is required, use
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="domain_name_python">
@@ -6812,7 +6749,6 @@ configuration information. If a custom origin is required, use
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -6836,7 +6772,6 @@ configuration information. If a custom origin is required, use
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -6860,7 +6795,6 @@ configuration information. If a custom origin is required, use
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -6884,7 +6818,6 @@ configuration information. If a custom origin is required, use
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -6910,7 +6843,6 @@ configuration information. If a custom origin is required, use
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="httpport_csharp">
@@ -6979,7 +6911,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="httpport_go">
@@ -7048,7 +6979,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="httpport_nodejs">
@@ -7117,7 +7047,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="http_port_python">
@@ -7188,7 +7117,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="failovercriteria_csharp">
@@ -7224,7 +7152,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="failovercriteria_go">
@@ -7260,7 +7187,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="failovercriteria_nodejs">
@@ -7296,7 +7222,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="failover_criteria_python">
@@ -7334,7 +7259,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="statuscodes_csharp">
@@ -7350,7 +7274,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="statuscodes_go">
@@ -7366,7 +7289,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="statuscodes_nodejs">
@@ -7382,7 +7304,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="status_codes_python">
@@ -7400,7 +7321,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="originid_csharp">
@@ -7416,7 +7336,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="originid_go">
@@ -7432,7 +7351,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="originid_nodejs">
@@ -7448,7 +7366,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="origin_id_python">
@@ -7466,7 +7383,6 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="originaccessidentity_csharp">
@@ -7483,7 +7399,6 @@ identity][5] to associate with the origin.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="originaccessidentity_go">
@@ -7500,7 +7415,6 @@ identity][5] to associate with the origin.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="originaccessidentity_nodejs">
@@ -7517,7 +7431,6 @@ identity][5] to associate with the origin.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="origin_access_identity_python">
@@ -7536,7 +7449,6 @@ identity][5] to associate with the origin.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="georestriction_csharp">
@@ -7551,7 +7463,6 @@ identity][5] to associate with the origin.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="georestriction_go">
@@ -7566,7 +7477,6 @@ identity][5] to associate with the origin.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="georestriction_nodejs">
@@ -7581,7 +7491,6 @@ identity][5] to associate with the origin.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="geo_restriction_python">
@@ -7598,7 +7507,6 @@ identity][5] to associate with the origin.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="restrictiontype_csharp">
@@ -7628,7 +7536,6 @@ distribute your content (`blacklist`).
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="restrictiontype_go">
@@ -7658,7 +7565,6 @@ distribute your content (`blacklist`).
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="restrictiontype_nodejs">
@@ -7688,7 +7594,6 @@ distribute your content (`blacklist`).
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="restriction_type_python">
@@ -7720,7 +7625,6 @@ distribute your content (`blacklist`).
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
@@ -7747,7 +7651,6 @@ user requests for content.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
@@ -7774,7 +7677,6 @@ user requests for content.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
@@ -7801,7 +7703,6 @@ user requests for content.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
@@ -7830,7 +7731,6 @@ user requests for content.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="awsaccountnumber_csharp">
@@ -7856,7 +7756,6 @@ user requests for content.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="awsaccountnumber_go">
@@ -7882,7 +7781,6 @@ user requests for content.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="awsaccountnumber_nodejs">
@@ -7908,7 +7806,6 @@ user requests for content.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="aws_account_number_python">
@@ -7936,7 +7833,6 @@ user requests for content.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="acmcertificatearn_csharp">
@@ -8007,7 +7903,6 @@ must be specified.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="acmcertificatearn_go">
@@ -8078,7 +7973,6 @@ must be specified.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="acmcertificatearn_nodejs">
@@ -8149,7 +8043,6 @@ must be specified.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="acm_certificate_arn_python">

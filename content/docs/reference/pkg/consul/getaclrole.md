@@ -15,11 +15,17 @@ The `consul.AclRole` data source returns the information related to a
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Consul = Pulumi.Consul;
@@ -40,9 +46,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -65,9 +74,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_consul as consul
@@ -76,9 +88,12 @@ test = consul.get_acl_role(name="example-role")
 pulumi.export("consulAclRole", test.id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -90,9 +105,16 @@ const test = consul.getAclRole({
 export const consulAclRole = test.then(test => test.id);
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getAclRole {#using}
@@ -131,7 +153,6 @@ The following arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
@@ -189,7 +210,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
@@ -247,7 +267,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
@@ -305,7 +324,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
@@ -372,7 +390,6 @@ The following output properties are available:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -438,7 +455,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -504,7 +520,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -570,7 +585,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -646,7 +660,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="id_csharp">
@@ -671,7 +684,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="id_go">
@@ -696,7 +708,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="id_nodejs">
@@ -721,7 +732,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-required"
             title="Required">
         <span id="id_python">
@@ -750,7 +760,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="datacenters_csharp">
@@ -774,7 +783,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="datacenters_go">
@@ -798,7 +806,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="datacenters_nodejs">
@@ -822,7 +829,6 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span id="datacenters_python">
