@@ -151,7 +151,7 @@ attachLogPolicies("perfRpa", perfNodegroupIamRoleName);
 
 {{< chooser k8s-language "typescript,yaml" / >}}
 
-{{% choosable k8s-language yaml %}}
+{{< choosable k8s-language yaml >}}
 
 Using the YAML manifests in the [AWS samples][k8s-logs-samples], we can provision `fluentd-cloudwatch`
 to run as a [DaemonSet][k8s-ds] and send worker and app logs to [CloudWatch
@@ -213,9 +213,9 @@ $ kubectl delete ns amazon-cloudwatch
 [aws-cw-logs]: https://aws.amazon.com/cloudwatch/features/
 <!-- markdownlint-enable url -->
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable k8s-language typescript %}}
+{{< choosable k8s-language typescript >}}
 
 Using the [Helm chart][fluentd-helm], we can provision `fluentd-cloudwatch`
 in Pulumi to run as a [DaemonSet][k8s-ds] and send worker and app logs to [CloudWatch
@@ -286,7 +286,7 @@ $ pulumi stack output fluentdCloudWatchLogGroupName
 [fluentd-helm]: https://github.com/helm/charts/tree/master/incubator/fluentd-cloudwatch
 <!-- markdownlint-enable url -->
 
-{{% /choosable %}}
+{{< /choosable >}}
 
 > Note: CloudWatch is rate limited and often times the size of the
 data being sent can cause `ThrottlingException error="Rate exceeded"`. This can cause a delay in logs showing up in CloudWatch. Request a limit increase, or alter
