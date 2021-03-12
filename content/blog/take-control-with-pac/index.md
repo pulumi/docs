@@ -1,5 +1,5 @@
 ---
-title: "Take Control with Policy as Code"
+title: "Empower Your Team with Policy as Code"
 date: 2021-03-08T18:12:25-07:00
 meta_desc: "Policy as Code provides control, clarity, version control, automation, and the use of IDEs to manage your infrastructure."
 meta_image: control_with_pac.png
