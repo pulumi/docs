@@ -3,7 +3,7 @@ title: Deploy Kubernetes Cluster Services
 meta_desc: This page will provide an overview on how to deploy Kubernetes Cluster Services.
 no_on_this_page: true
 menu:
-  userguides:
+  userguides
     parent: crosswalk-kubernetes
     identifier: crosswalk-kubernetes-cluster-svcs
     weight: 7
@@ -243,7 +243,7 @@ const fluentdCloudwatch = new k8s.helm.v3.Chart(name,
         chart: "fluentd-cloudwatch",
         version: "0.11.0",
         fetchOpts: {
-            repo: "https://kubernetes-charts-incubator.storage.googleapis.com/",
+            repo: "https://charts.helm.sh/incubator",
         },
         values: {
             extraVars: [ "{ name: FLUENT_UID, value: '0' }" ],
