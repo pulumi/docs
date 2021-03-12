@@ -358,7 +358,7 @@ See the [official EKS docs](https://docs.aws.amazon.com/eks/latest/userguide/sto
 
 {{< chooser k8s-language "typescript,yaml" >}}
 
-{{% choosable k8s-language yaml %}}
+{{< choosable k8s-language yaml >}}
 
 Create the storage classes using `kubectl`.
 
@@ -413,9 +413,9 @@ EOF
 $ kubectl apply -f pvc.yaml
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable k8s-language typescript %}}
+{{< choosable k8s-language typescript >}}
 
 Create the storage classes using Pulumi.
 
@@ -428,7 +428,6 @@ const cluster = new eks.Cluster(`${projectName}`, {
         "gp2-encrypted": { type: "gp2", encrypted: true},
         "sc1": { type: "sc1"}
     },
-    ...
 }
 ```
 
@@ -459,7 +458,7 @@ cluster.core.storageClasses["gp2-encrypted"].apply(sc => {
 });
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
 {{< /chooser >}}
 
@@ -471,7 +470,7 @@ See the [official AKS docs](https://docs.microsoft.com/en-us/azure/aks/concepts-
 
 {{< chooser k8s-language "typescript,yaml" >}}
 
-{{% choosable k8s-language yaml %}}
+{{< choosable k8s-language yaml >}}
 
 After the cluster is provisioned and running, create a StorageClass to
 provision Azure disks.
@@ -519,9 +518,9 @@ EOF
 $ kubectl apply -f pvc.yaml
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable k8s-language typescript %}}
+{{< choosable k8s-language typescript >}}
 
 ```ts
 import * as k8s from "@pulumi/k8s";
@@ -559,7 +558,7 @@ const myPvc = new k8s.core.v1.PersistentVolumeClaim("mypvc", {
 );
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
 {{< /chooser >}}
 
@@ -571,7 +570,7 @@ See the [official GKE docs](https://cloud.google.com/kubernetes-engine/docs/conc
 
 {{< chooser k8s-language "typescript,yaml" >}}
 
-{{% choosable k8s-language yaml %}}
+{{< choosable k8s-language yaml >}}
 
 After the cluster is provisioned and running, create a StorageClass to
 provision GCP disks.
@@ -619,9 +618,9 @@ EOF
 $ kubectl apply -f pvc.yaml
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
-{{% choosable k8s-language typescript %}}
+{{< choosable k8s-language typescript >}}
 
 ```ts
 import * as k8s from "@pulumi/k8s";
@@ -659,7 +658,7 @@ const myPvc = new k8s.core.v1.PersistentVolumeClaim("mypvc", {
 );
 ```
 
-{{% /choosable %}}
+{{< /choosable >}}
 
 {{< /chooser >}}
 
