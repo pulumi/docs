@@ -117,7 +117,9 @@ infrastructure definitions and application code.
 
 3. Finally, add `@pulumi/cloud-aws` NPM package:
 
+    ```
     $ npm install --save @pulumi/cloud @pulumi/cloud-aws
+    ```
 
 ## Deploy the App
 
