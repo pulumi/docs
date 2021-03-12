@@ -113,7 +113,7 @@ class HelmStack : Stack
             Version = "1.24.4",
             FetchOptions = new ChartFetchArgs
             {
-                Repo = "https://kubernetes-charts.storage.googleapis.com/"
+                Repo = "https://charts.helm.sh/stable/"
             }
         });
 
@@ -138,7 +138,7 @@ func main() {
 			chart:   pulumi.string("nginx-ingress"),
 			version: pulumi.string("1.24.4"),
 			fetchargs: helm.fetchargs{
-				repo: pulumi.string("https://kubernetes-charts.storage.googleapis.com/"),
+				repo: pulumi.string("https://charts.helm.sh/stable/"),
 			},
 		})
 		if err != nil {
@@ -162,7 +162,7 @@ nginx_ingress = Chart(
         chart="nginx-ingress",
         version="1.24.4",
         fetch_opts=FetchOpts(
-            repo="https://kubernetes-charts.storage.googleapis.com/",
+            repo="https://charts.helm.sh/stable/",
         ),
     ),
 )
@@ -179,7 +179,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     chart: "nginx-ingress",
     version: "1.24.4",
     fetchOpts:{
-        repo: "https://kubernetes-charts.storage.googleapis.com/",
+        repo: "https://charts.helm.sh/stable/",
     },
 });
 ```
@@ -216,7 +216,7 @@ class HelmStack : Stack
             Version = "1.24.4",
             FetchOptions = new ChartFetchArgs
             {
-                Repo = "https://kubernetes-charts.storage.googleapis.com/"
+                Repo = "https://charts.helm.sh/stable/"
             },
             Values = values,
         });
@@ -242,7 +242,7 @@ func main() {
 			Chart:   pulumi.String("nginx-ingress"),
 			Version: pulumi.String("1.24.4"),
 			FetchArgs: helm.FetchArgs{
-				Repo: pulumi.String("https://kubernetes-charts.storage.googleapis.com/"),
+				Repo: pulumi.String("https://charts.helm.sh/stable/"),
 			},
 			Values: pulumi.Map{
 				"controller": pulumi.Map{
@@ -273,7 +273,7 @@ nginx_ingress = Chart(
         chart="nginx-ingress",
         version="1.24.4",
         fetch_opts=FetchOpts(
-            repo="https://kubernetes-charts.storage.googleapis.com/",
+            repo="https://charts.helm.sh/stable/",
         ),
         values={
             "controller": {
@@ -297,7 +297,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     chart: "nginx-ingress",
     version: "1.24.4",
     fetchOpts:{
-        repo: "https://kubernetes-charts.storage.googleapis.com/",
+        repo: "https://charts.helm.sh/stable/",
     },
     values: {
         controller: {
@@ -330,7 +330,7 @@ class HelmStack : Stack
             Namespace = "test-namespace",
             FetchOptions = new ChartFetchArgs
             {
-                Repo = "https://kubernetes-charts.storage.googleapis.com/"
+                Repo = "https://charts.helm.sh/stable/"
             },
         });
 
@@ -356,7 +356,7 @@ func main() {
 			Version:   pulumi.String("1.24.4"),
 			Namespace: pulumi.String("test-namespace"),
 			FetchArgs: helm.FetchArgs{
-				Repo: pulumi.String("https://kubernetes-charts.storage.googleapis.com/"),
+				Repo: pulumi.String("https://charts.helm.sh/stable/"),
 			},
 		})
 		if err != nil {
@@ -381,7 +381,7 @@ nginx_ingress = Chart(
         version="1.24.4",
         namespace="test-namespace",
         fetch_opts=FetchOpts(
-            repo="https://kubernetes-charts.storage.googleapis.com/",
+            repo="https://charts.helm.sh/stable/",
         ),
     ),
 )
@@ -399,7 +399,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     version: "1.24.4",
     namespace: "test-namespace",
     fetchOpts:{
-        repo: "https://kubernetes-charts.storage.googleapis.com/",
+        repo: "https://charts.helm.sh/stable/",
     },
 });
 ```
@@ -426,7 +426,7 @@ class HelmStack : Stack
             Version = "1.24.4",
             FetchOptions = new ChartFetchArgs
             {
-                Repo = "https://kubernetes-charts.storage.googleapis.com/"
+                Repo = "https://charts.helm.sh/stable/"
             },
             Transformations =
             {
@@ -501,7 +501,7 @@ func main() {
 			Chart:   pulumi.String("nginx-ingress"),
 			Version: pulumi.String("1.24.4"),
 			FetchArgs: helm.FetchArgs{
-				Repo: pulumi.String("https://kubernetes-charts.storage.googleapis.com/"),
+				Repo: pulumi.String("https://charts.helm.sh/stable/"),
 			},
 			Transformations: []yaml.Transformation{
 				// Make every service private to the cluster, i.e., turn all services into ClusterIP
@@ -581,7 +581,7 @@ nginx_ingress = Chart(
         chart="nginx-ingress",
         version="1.24.4",
         fetch_opts=FetchOpts(
-            repo="https://kubernetes-charts.storage.googleapis.com/",
+            repo="https://charts.helm.sh/stable/",
         ),
         transformations=[make_service_private, alias, omit_resource],
     ),
@@ -599,7 +599,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     chart: "nginx-ingress",
     version: "1.24.4",
     fetchOpts:{
-        repo: "https://kubernetes-charts.storage.googleapis.com/",
+        repo: "https://charts.helm.sh/stable/",
     },
     transformations: [
         // Make every service private to the cluster, i.e., turn all services into ClusterIP instead of LoadBalancer.
@@ -657,7 +657,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
 {{% choosable language nodejs %}}
 
 <dl class="resources-properties">
-  
+
     <dt
         class="property-required" title="Required">
         <span>name</span>
@@ -667,7 +667,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     <dd>
       The unique name of the resource.
     </dd>
-  
+
     <dt
         class="property-optional" title="Optional">
         <span>args</span>
@@ -677,7 +677,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     <dd>
       The arguments to resource properties.
     </dd>
-  
+
     <dt
         class="property-optional" title="Optional">
         <span>opts</span>
@@ -687,7 +687,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     <dd>
       Bag of options to control resource&#39;s behavior.
     </dd>
-  
+
 
 </dl>
 
@@ -716,7 +716,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
 {{% choosable language go %}}
 
 <dl class="resources-properties">
-  
+
     <dt
         class="property-optional" title="Optional">
         <span>ctx</span>
@@ -726,7 +726,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     <dd>
       Context object for the current deployment.
     </dd>
-  
+
     <dt
         class="property-required" title="Required">
         <span>name</span>
@@ -736,7 +736,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     <dd>
       The unique name of the resource.
     </dd>
-  
+
     <dt
         class="property-optional" title="Optional">
         <span>args</span>
@@ -746,7 +746,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     <dd>
       The arguments to resource properties.
     </dd>
-  
+
     <dt
         class="property-optional" title="Optional">
         <span>opts</span>
@@ -756,7 +756,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     <dd>
       Bag of options to control resource&#39;s behavior.
     </dd>
-  
+
 
 </dl>
 
@@ -765,7 +765,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
 {{% choosable language csharp %}}
 
 <dl class="resources-properties">
-  
+
     <dt
         class="property-required" title="Required">
         <span>name</span>
@@ -775,7 +775,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     <dd>
       The unique name of the resource.
     </dd>
-  
+
     <dt
         class="property-optional" title="Optional">
         <span>args</span>
@@ -785,7 +785,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     <dd>
       The arguments to resource properties.
     </dd>
-  
+
     <dt
         class="property-optional" title="Optional">
         <span>opts</span>
@@ -795,7 +795,7 @@ const nginxIngress = new k8s.helm.v3.Chart("nginx-ingress", {
     <dd>
       Bag of options to control resource&#39;s behavior.
     </dd>
-  
+
 
 </dl>
 
