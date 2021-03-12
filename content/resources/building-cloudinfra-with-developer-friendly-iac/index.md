@@ -1,6 +1,6 @@
 ---
 # Name of the webinar.
-title: "Cloud Engineering Muscle Memory: Building Cloudfra with developer friendly IaC"
+title: "Cloud Engineering Muscle Memory: Building CloudInfra with developer friendly IaC"
 meta_desc: "In this talk, we'll examine how developing IaC that uses application programming languages can level-up your team and perhaps your organization."
 
 # A featured webinar will display first in the list.
