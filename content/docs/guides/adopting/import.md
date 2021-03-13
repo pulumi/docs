@@ -62,7 +62,7 @@ application.
 
 {{< chooser language "typescript,python,csharp,go" >}}
 
-{{< choosable language typescript >}}
+{{% choosable language typescript %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -77,8 +77,8 @@ const demo = new aws.s3.Bucket("infra-logs", {
 });
 ```
 
-{{< /choosable >}}
-{{< choosable language python >}}
+{{% /choosable %}}
+{{% choosable language python %}}
 
 ```python
 import pulumi
@@ -91,8 +91,8 @@ demo = aws.s3.Bucket("infra-logs",
     opts=ResourceOptions(protect=True))
 ```
 
-{{< /choosable >}}
-{{< choosable language go >}}
+{{% /choosable %}}
+{{% choosable language go %}}
 
 ```go
 package main
@@ -117,8 +117,8 @@ func main() {
 }
 ```
 
-{{< /choosable >}}
-{{< choosable language csharp >}}
+{{% /choosable %}}
+{{% choosable language csharp %}}
 
 ```csharp
 using Pulumi;
@@ -142,7 +142,7 @@ class MyStack : Stack
 }
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 {{< /chooser >}}
 
 After successfully importing a resource and adding the generated code to your program, you can run `pulumi up` and all subsequent operations
