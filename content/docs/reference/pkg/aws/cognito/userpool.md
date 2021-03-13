@@ -13,11 +13,17 @@ meta_desc: "Documentation for the aws.cognito.UserPool resource with examples, i
 Provides a Cognito User Pool resource.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Basic configuration
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -34,9 +40,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -56,9 +65,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -66,9 +78,12 @@ import pulumi_aws as aws
 pool = aws.cognito.UserPool("pool")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -77,10 +92,17 @@ import * as aws from "@pulumi/aws";
 const pool = new aws.cognito.UserPool("pool", {});
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Enabling SMS and Software Token Multi-Factor Authentication
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -109,9 +131,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -141,9 +166,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -161,9 +189,12 @@ example = aws.cognito.UserPool("example",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -183,10 +214,17 @@ const example = new aws.cognito.UserPool("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Using Account Recovery Setting
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -219,9 +257,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -254,9 +295,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -275,9 +319,12 @@ test = aws.cognito.UserPool("test", account_recovery_setting=aws.cognito.UserPoo
 ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -299,9 +346,16 @@ const test = new aws.cognito.UserPool("test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a UserPool Resource {#create}
@@ -326,9 +380,7 @@ const test = new aws.cognito.UserPool("test", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -336,9 +388,7 @@ const test = new aws.cognito.UserPool("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -346,9 +396,7 @@ const test = new aws.cognito.UserPool("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -356,10 +404,7 @@ const test = new aws.cognito.UserPool("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -385,9 +430,7 @@ const test = new aws.cognito.UserPool("test", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -395,9 +438,7 @@ const test = new aws.cognito.UserPool("test", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -405,9 +446,7 @@ const test = new aws.cognito.UserPool("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -415,9 +454,7 @@ const test = new aws.cognito.UserPool("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -425,18 +462,13 @@ const test = new aws.cognito.UserPool("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -444,9 +476,7 @@ const test = new aws.cognito.UserPool("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -454,9 +484,7 @@ const test = new aws.cognito.UserPool("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -464,10 +492,7 @@ const test = new aws.cognito.UserPool("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -482,9 +507,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accountrecoverysetting_csharp">
 <a href="#accountrecoverysetting_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Recovery<wbr>Setting</a>
@@ -493,8 +516,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The account_recovery_setting configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admincreateuserconfig_csharp">
 <a href="#admincreateuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Create<wbr>User<wbr>Config</a>
@@ -503,8 +525,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for AdminCreateUser requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliasattributes_csharp">
 <a href="#aliasattributes_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Attributes</a>
@@ -513,8 +534,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with `username_attributes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoverifiedattributes_csharp">
 <a href="#autoverifiedattributes_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Verified<wbr>Attributes</a>
@@ -523,8 +543,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The attributes to be auto-verified. Possible values: email, phone_number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceconfiguration_csharp">
 <a href="#deviceconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Configuration</a>
@@ -533,8 +552,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the user pool's device tracking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailconfiguration_csharp">
 <a href="#emailconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Configuration</a>
@@ -543,8 +561,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Email Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailverificationmessage_csharp">
 <a href="#emailverificationmessage_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Verification<wbr>Message</a>
@@ -553,8 +570,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailverificationsubject_csharp">
 <a href="#emailverificationsubject_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Verification<wbr>Subject</a>
@@ -563,8 +579,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdaconfig_csharp">
 <a href="#lambdaconfig_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Config</a>
@@ -573,8 +588,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A container for the AWS Lambda triggers associated with the user pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mfaconfiguration_csharp">
 <a href="#mfaconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Configuration</a>
@@ -583,8 +597,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -593,8 +606,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordpolicy_csharp">
 <a href="#passwordpolicy_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Policy</a>
@@ -603,8 +615,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A container for information about the user pool password policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemas_csharp">
 <a href="#schemas_csharp" style="color: inherit; text-decoration: inherit;">Schemas</a>
@@ -613,8 +624,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolschema">List&lt;User<wbr>Pool<wbr>Schema<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A container with the schema attributes of a user pool. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Maximum of 50 attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smsauthenticationmessage_csharp">
 <a href="#smsauthenticationmessage_csharp" style="color: inherit; text-decoration: inherit;">Sms<wbr>Authentication<wbr>Message</a>
@@ -623,8 +633,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the SMS authentication message. The message must contain the `{####}` placeholder, which will be replaced with the code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smsconfiguration_csharp">
 <a href="#smsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Sms<wbr>Configuration</a>
@@ -633,8 +642,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection. To force resource recreation after this configuration has been applied, see the [`up` command and use --replace](https://www.pulumi.com/docs/reference/cli/pulumi_up/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smsverificationmessage_csharp">
 <a href="#smsverificationmessage_csharp" style="color: inherit; text-decoration: inherit;">Sms<wbr>Verification<wbr>Message</a>
@@ -643,8 +651,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="softwaretokenmfaconfiguration_csharp">
 <a href="#softwaretokenmfaconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Software<wbr>Token<wbr>Mfa<wbr>Configuration</a>
@@ -653,8 +660,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -663,8 +669,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the User Pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userpooladdons_csharp">
 <a href="#userpooladdons_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Add<wbr>Ons</a>
@@ -673,8 +678,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for user pool add-ons to enable user pool advanced security mode features.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernameattributes_csharp">
 <a href="#usernameattributes_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Attributes</a>
@@ -683,8 +687,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernameconfiguration_csharp">
 <a href="#usernameconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Configuration</a>
@@ -693,8 +696,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolusernameconfiguration">User<wbr>Pool<wbr>Username<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Username Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verificationmessagetemplate_csharp">
 <a href="#verificationmessagetemplate_csharp" style="color: inherit; text-decoration: inherit;">Verification<wbr>Message<wbr>Template</a>
@@ -703,14 +705,11 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The verification message templates configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accountrecoverysetting_go">
 <a href="#accountrecoverysetting_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Recovery<wbr>Setting</a>
@@ -719,8 +718,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}The account_recovery_setting configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admincreateuserconfig_go">
 <a href="#admincreateuserconfig_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Create<wbr>User<wbr>Config</a>
@@ -729,8 +727,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration for AdminCreateUser requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliasattributes_go">
 <a href="#aliasattributes_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Attributes</a>
@@ -739,8 +736,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with `username_attributes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoverifiedattributes_go">
 <a href="#autoverifiedattributes_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Verified<wbr>Attributes</a>
@@ -749,8 +745,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The attributes to be auto-verified. Possible values: email, phone_number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceconfiguration_go">
 <a href="#deviceconfiguration_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Configuration</a>
@@ -759,8 +754,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the user pool's device tracking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailconfiguration_go">
 <a href="#emailconfiguration_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Configuration</a>
@@ -769,8 +763,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The Email Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailverificationmessage_go">
 <a href="#emailverificationmessage_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Verification<wbr>Message</a>
@@ -779,8 +772,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailverificationsubject_go">
 <a href="#emailverificationsubject_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Verification<wbr>Subject</a>
@@ -789,8 +781,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdaconfig_go">
 <a href="#lambdaconfig_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Config</a>
@@ -799,8 +790,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A container for the AWS Lambda triggers associated with the user pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mfaconfiguration_go">
 <a href="#mfaconfiguration_go" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Configuration</a>
@@ -809,8 +799,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -819,8 +808,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordpolicy_go">
 <a href="#passwordpolicy_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Policy</a>
@@ -829,8 +817,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A container for information about the user pool password policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemas_go">
 <a href="#schemas_go" style="color: inherit; text-decoration: inherit;">Schemas</a>
@@ -839,8 +826,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolschema">[]User<wbr>Pool<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}A container with the schema attributes of a user pool. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Maximum of 50 attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smsauthenticationmessage_go">
 <a href="#smsauthenticationmessage_go" style="color: inherit; text-decoration: inherit;">Sms<wbr>Authentication<wbr>Message</a>
@@ -849,8 +835,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the SMS authentication message. The message must contain the `{####}` placeholder, which will be replaced with the code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smsconfiguration_go">
 <a href="#smsconfiguration_go" style="color: inherit; text-decoration: inherit;">Sms<wbr>Configuration</a>
@@ -859,8 +844,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection. To force resource recreation after this configuration has been applied, see the [`up` command and use --replace](https://www.pulumi.com/docs/reference/cli/pulumi_up/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smsverificationmessage_go">
 <a href="#smsverificationmessage_go" style="color: inherit; text-decoration: inherit;">Sms<wbr>Verification<wbr>Message</a>
@@ -869,8 +853,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="softwaretokenmfaconfiguration_go">
 <a href="#softwaretokenmfaconfiguration_go" style="color: inherit; text-decoration: inherit;">Software<wbr>Token<wbr>Mfa<wbr>Configuration</a>
@@ -879,8 +862,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -889,8 +871,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the User Pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userpooladdons_go">
 <a href="#userpooladdons_go" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Add<wbr>Ons</a>
@@ -899,8 +880,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for user pool add-ons to enable user pool advanced security mode features.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernameattributes_go">
 <a href="#usernameattributes_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Attributes</a>
@@ -909,8 +889,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernameconfiguration_go">
 <a href="#usernameconfiguration_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Configuration</a>
@@ -919,8 +898,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolusernameconfiguration">User<wbr>Pool<wbr>Username<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The Username Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verificationmessagetemplate_go">
 <a href="#verificationmessagetemplate_go" style="color: inherit; text-decoration: inherit;">Verification<wbr>Message<wbr>Template</a>
@@ -929,14 +907,11 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}The verification message templates configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accountrecoverysetting_nodejs">
 <a href="#accountrecoverysetting_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Recovery<wbr>Setting</a>
@@ -945,8 +920,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}The account_recovery_setting configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admincreateuserconfig_nodejs">
 <a href="#admincreateuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Create<wbr>User<wbr>Config</a>
@@ -955,8 +929,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration for AdminCreateUser requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliasattributes_nodejs">
 <a href="#aliasattributes_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Attributes</a>
@@ -965,8 +938,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with `username_attributes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoverifiedattributes_nodejs">
 <a href="#autoverifiedattributes_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Verified<wbr>Attributes</a>
@@ -975,8 +947,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The attributes to be auto-verified. Possible values: email, phone_number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceconfiguration_nodejs">
 <a href="#deviceconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Configuration</a>
@@ -985,8 +956,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the user pool's device tracking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailconfiguration_nodejs">
 <a href="#emailconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Configuration</a>
@@ -995,8 +965,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The Email Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailverificationmessage_nodejs">
 <a href="#emailverificationmessage_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Verification<wbr>Message</a>
@@ -1005,8 +974,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailverificationsubject_nodejs">
 <a href="#emailverificationsubject_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Verification<wbr>Subject</a>
@@ -1015,8 +983,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdaconfig_nodejs">
 <a href="#lambdaconfig_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Config</a>
@@ -1025,8 +992,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A container for the AWS Lambda triggers associated with the user pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mfaconfiguration_nodejs">
 <a href="#mfaconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">mfa<wbr>Configuration</a>
@@ -1035,8 +1001,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1045,8 +1010,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordpolicy_nodejs">
 <a href="#passwordpolicy_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Policy</a>
@@ -1055,8 +1019,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A container for information about the user pool password policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemas_nodejs">
 <a href="#schemas_nodejs" style="color: inherit; text-decoration: inherit;">schemas</a>
@@ -1065,8 +1028,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolschema">User<wbr>Pool<wbr>Schema[]</a></span>
     </dt>
     <dd>{{% md %}}A container with the schema attributes of a user pool. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Maximum of 50 attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smsauthenticationmessage_nodejs">
 <a href="#smsauthenticationmessage_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Authentication<wbr>Message</a>
@@ -1075,8 +1037,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the SMS authentication message. The message must contain the `{####}` placeholder, which will be replaced with the code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smsconfiguration_nodejs">
 <a href="#smsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Configuration</a>
@@ -1085,8 +1046,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection. To force resource recreation after this configuration has been applied, see the [`up` command and use --replace](https://www.pulumi.com/docs/reference/cli/pulumi_up/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smsverificationmessage_nodejs">
 <a href="#smsverificationmessage_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Verification<wbr>Message</a>
@@ -1095,8 +1055,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="softwaretokenmfaconfiguration_nodejs">
 <a href="#softwaretokenmfaconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">software<wbr>Token<wbr>Mfa<wbr>Configuration</a>
@@ -1105,8 +1064,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1115,8 +1073,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the User Pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userpooladdons_nodejs">
 <a href="#userpooladdons_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Add<wbr>Ons</a>
@@ -1125,8 +1082,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for user pool add-ons to enable user pool advanced security mode features.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernameattributes_nodejs">
 <a href="#usernameattributes_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Attributes</a>
@@ -1135,8 +1091,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernameconfiguration_nodejs">
 <a href="#usernameconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Configuration</a>
@@ -1145,8 +1100,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolusernameconfiguration">User<wbr>Pool<wbr>Username<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The Username Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verificationmessagetemplate_nodejs">
 <a href="#verificationmessagetemplate_nodejs" style="color: inherit; text-decoration: inherit;">verification<wbr>Message<wbr>Template</a>
@@ -1155,14 +1109,11 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}The verification message templates configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="account_recovery_setting_python">
 <a href="#account_recovery_setting_python" style="color: inherit; text-decoration: inherit;">account_<wbr>recovery_<wbr>setting</a>
@@ -1171,8 +1122,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The account_recovery_setting configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_create_user_config_python">
 <a href="#admin_create_user_config_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>create_<wbr>user_<wbr>config</a>
@@ -1181,8 +1131,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for AdminCreateUser requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alias_attributes_python">
 <a href="#alias_attributes_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>attributes</a>
@@ -1191,8 +1140,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with `username_attributes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_verified_attributes_python">
 <a href="#auto_verified_attributes_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>verified_<wbr>attributes</a>
@@ -1201,8 +1149,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The attributes to be auto-verified. Possible values: email, phone_number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_configuration_python">
 <a href="#device_configuration_python" style="color: inherit; text-decoration: inherit;">device_<wbr>configuration</a>
@@ -1211,8 +1158,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the user pool's device tracking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_configuration_python">
 <a href="#email_configuration_python" style="color: inherit; text-decoration: inherit;">email_<wbr>configuration</a>
@@ -1221,8 +1167,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Email Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_verification_message_python">
 <a href="#email_verification_message_python" style="color: inherit; text-decoration: inherit;">email_<wbr>verification_<wbr>message</a>
@@ -1231,8 +1176,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_verification_subject_python">
 <a href="#email_verification_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>verification_<wbr>subject</a>
@@ -1241,8 +1185,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambda_config_python">
 <a href="#lambda_config_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>config</a>
@@ -1251,8 +1194,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A container for the AWS Lambda triggers associated with the user pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mfa_configuration_python">
 <a href="#mfa_configuration_python" style="color: inherit; text-decoration: inherit;">mfa_<wbr>configuration</a>
@@ -1261,8 +1203,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1271,8 +1212,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_policy_python">
 <a href="#password_policy_python" style="color: inherit; text-decoration: inherit;">password_<wbr>policy</a>
@@ -1281,8 +1221,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A container for information about the user pool password policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schemas_python">
 <a href="#schemas_python" style="color: inherit; text-decoration: inherit;">schemas</a>
@@ -1291,8 +1230,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolschema">Sequence[User<wbr>Pool<wbr>Schema<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A container with the schema attributes of a user pool. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Maximum of 50 attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sms_authentication_message_python">
 <a href="#sms_authentication_message_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>authentication_<wbr>message</a>
@@ -1301,8 +1239,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string representing the SMS authentication message. The message must contain the `{####}` placeholder, which will be replaced with the code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sms_configuration_python">
 <a href="#sms_configuration_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>configuration</a>
@@ -1311,8 +1248,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection. To force resource recreation after this configuration has been applied, see the [`up` command and use --replace](https://www.pulumi.com/docs/reference/cli/pulumi_up/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sms_verification_message_python">
 <a href="#sms_verification_message_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>verification_<wbr>message</a>
@@ -1321,8 +1257,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="software_token_mfa_configuration_python">
 <a href="#software_token_mfa_configuration_python" style="color: inherit; text-decoration: inherit;">software_<wbr>token_<wbr>mfa_<wbr>configuration</a>
@@ -1331,8 +1266,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1341,8 +1275,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the User Pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_pool_add_ons_python">
 <a href="#user_pool_add_ons_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>add_<wbr>ons</a>
@@ -1351,8 +1284,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for user pool add-ons to enable user pool advanced security mode features.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_attributes_python">
 <a href="#username_attributes_python" style="color: inherit; text-decoration: inherit;">username_<wbr>attributes</a>
@@ -1361,8 +1293,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_configuration_python">
 <a href="#username_configuration_python" style="color: inherit; text-decoration: inherit;">username_<wbr>configuration</a>
@@ -1371,8 +1302,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolusernameconfiguration">User<wbr>Pool<wbr>Username<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Username Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verification_message_template_python">
 <a href="#verification_message_template_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>message_<wbr>template</a>
@@ -1381,8 +1311,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The verification message templates configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1393,9 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1404,8 +1331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the user pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationdate_csharp">
 <a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -1414,8 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the user pool was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1424,8 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1433,8 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifieddate_csharp">
 <a href="#lastmodifieddate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Date</a>
@@ -1443,14 +1366,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the user pool was last modified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1459,8 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the user pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationdate_go">
 <a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -1469,8 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the user pool was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1479,8 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1488,8 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifieddate_go">
 <a href="#lastmodifieddate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Date</a>
@@ -1498,14 +1414,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the user pool was last modified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1514,8 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the user pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationdate_nodejs">
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
@@ -1524,8 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the user pool was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1534,8 +1445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1543,8 +1453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifieddate_nodejs">
 <a href="#lastmodifieddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Date</a>
@@ -1553,14 +1462,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the user pool was last modified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1569,8 +1475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the user pool.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creation_date_python">
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
@@ -1579,8 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the user pool was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1589,8 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1598,8 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_date_python">
 <a href="#last_modified_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>date</a>
@@ -1608,8 +1510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the user pool was last modified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1736,9 +1637,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountrecoverysetting_csharp">
 <a href="#state_accountrecoverysetting_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Recovery<wbr>Setting</a>
@@ -1747,8 +1646,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The account_recovery_setting configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_admincreateuserconfig_csharp">
 <a href="#state_admincreateuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Create<wbr>User<wbr>Config</a>
@@ -1757,8 +1655,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for AdminCreateUser requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aliasattributes_csharp">
 <a href="#state_aliasattributes_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Attributes</a>
@@ -1767,8 +1664,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with `username_attributes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1777,8 +1673,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the user pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoverifiedattributes_csharp">
 <a href="#state_autoverifiedattributes_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Verified<wbr>Attributes</a>
@@ -1787,8 +1682,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The attributes to be auto-verified. Possible values: email, phone_number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationdate_csharp">
 <a href="#state_creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -1797,8 +1691,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the user pool was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deviceconfiguration_csharp">
 <a href="#state_deviceconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Configuration</a>
@@ -1807,8 +1700,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the user pool's device tracking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailconfiguration_csharp">
 <a href="#state_emailconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Configuration</a>
@@ -1817,8 +1709,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Email Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailverificationmessage_csharp">
 <a href="#state_emailverificationmessage_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Verification<wbr>Message</a>
@@ -1827,8 +1718,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailverificationsubject_csharp">
 <a href="#state_emailverificationsubject_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Verification<wbr>Subject</a>
@@ -1837,8 +1727,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_csharp">
 <a href="#state_endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1847,8 +1736,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lambdaconfig_csharp">
 <a href="#state_lambdaconfig_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Config</a>
@@ -1857,8 +1745,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A container for the AWS Lambda triggers associated with the user pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodifieddate_csharp">
 <a href="#state_lastmodifieddate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Date</a>
@@ -1867,8 +1754,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the user pool was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mfaconfiguration_csharp">
 <a href="#state_mfaconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Configuration</a>
@@ -1877,8 +1763,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1887,8 +1772,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordpolicy_csharp">
 <a href="#state_passwordpolicy_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Policy</a>
@@ -1897,8 +1781,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A container for information about the user pool password policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schemas_csharp">
 <a href="#state_schemas_csharp" style="color: inherit; text-decoration: inherit;">Schemas</a>
@@ -1907,8 +1790,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolschema">List&lt;User<wbr>Pool<wbr>Schema<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A container with the schema attributes of a user pool. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Maximum of 50 attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smsauthenticationmessage_csharp">
 <a href="#state_smsauthenticationmessage_csharp" style="color: inherit; text-decoration: inherit;">Sms<wbr>Authentication<wbr>Message</a>
@@ -1917,8 +1799,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the SMS authentication message. The message must contain the `{####}` placeholder, which will be replaced with the code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smsconfiguration_csharp">
 <a href="#state_smsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Sms<wbr>Configuration</a>
@@ -1927,8 +1808,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection. To force resource recreation after this configuration has been applied, see the [`up` command and use --replace](https://www.pulumi.com/docs/reference/cli/pulumi_up/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smsverificationmessage_csharp">
 <a href="#state_smsverificationmessage_csharp" style="color: inherit; text-decoration: inherit;">Sms<wbr>Verification<wbr>Message</a>
@@ -1937,8 +1817,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_softwaretokenmfaconfiguration_csharp">
 <a href="#state_softwaretokenmfaconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Software<wbr>Token<wbr>Mfa<wbr>Configuration</a>
@@ -1947,8 +1826,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1957,8 +1835,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the User Pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userpooladdons_csharp">
 <a href="#state_userpooladdons_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Add<wbr>Ons</a>
@@ -1967,8 +1844,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for user pool add-ons to enable user pool advanced security mode features.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernameattributes_csharp">
 <a href="#state_usernameattributes_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Attributes</a>
@@ -1977,8 +1853,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernameconfiguration_csharp">
 <a href="#state_usernameconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Username<wbr>Configuration</a>
@@ -1987,8 +1862,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolusernameconfiguration">User<wbr>Pool<wbr>Username<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Username Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verificationmessagetemplate_csharp">
 <a href="#state_verificationmessagetemplate_csharp" style="color: inherit; text-decoration: inherit;">Verification<wbr>Message<wbr>Template</a>
@@ -1997,14 +1871,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The verification message templates configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountrecoverysetting_go">
 <a href="#state_accountrecoverysetting_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Recovery<wbr>Setting</a>
@@ -2013,8 +1884,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}The account_recovery_setting configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_admincreateuserconfig_go">
 <a href="#state_admincreateuserconfig_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Create<wbr>User<wbr>Config</a>
@@ -2023,8 +1893,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration for AdminCreateUser requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aliasattributes_go">
 <a href="#state_aliasattributes_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Attributes</a>
@@ -2033,8 +1902,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with `username_attributes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -2043,8 +1911,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the user pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoverifiedattributes_go">
 <a href="#state_autoverifiedattributes_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Verified<wbr>Attributes</a>
@@ -2053,8 +1920,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The attributes to be auto-verified. Possible values: email, phone_number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationdate_go">
 <a href="#state_creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -2063,8 +1929,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the user pool was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deviceconfiguration_go">
 <a href="#state_deviceconfiguration_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Configuration</a>
@@ -2073,8 +1938,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the user pool's device tracking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailconfiguration_go">
 <a href="#state_emailconfiguration_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Configuration</a>
@@ -2083,8 +1947,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The Email Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailverificationmessage_go">
 <a href="#state_emailverificationmessage_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Verification<wbr>Message</a>
@@ -2093,8 +1956,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailverificationsubject_go">
 <a href="#state_emailverificationsubject_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Verification<wbr>Subject</a>
@@ -2103,8 +1965,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_go">
 <a href="#state_endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -2113,8 +1974,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lambdaconfig_go">
 <a href="#state_lambdaconfig_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Config</a>
@@ -2123,8 +1983,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A container for the AWS Lambda triggers associated with the user pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodifieddate_go">
 <a href="#state_lastmodifieddate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Date</a>
@@ -2133,8 +1992,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the user pool was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mfaconfiguration_go">
 <a href="#state_mfaconfiguration_go" style="color: inherit; text-decoration: inherit;">Mfa<wbr>Configuration</a>
@@ -2143,8 +2001,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2153,8 +2010,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordpolicy_go">
 <a href="#state_passwordpolicy_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Policy</a>
@@ -2163,8 +2019,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A container for information about the user pool password policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schemas_go">
 <a href="#state_schemas_go" style="color: inherit; text-decoration: inherit;">Schemas</a>
@@ -2173,8 +2028,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolschema">[]User<wbr>Pool<wbr>Schema</a></span>
     </dt>
     <dd>{{% md %}}A container with the schema attributes of a user pool. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Maximum of 50 attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smsauthenticationmessage_go">
 <a href="#state_smsauthenticationmessage_go" style="color: inherit; text-decoration: inherit;">Sms<wbr>Authentication<wbr>Message</a>
@@ -2183,8 +2037,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the SMS authentication message. The message must contain the `{####}` placeholder, which will be replaced with the code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smsconfiguration_go">
 <a href="#state_smsconfiguration_go" style="color: inherit; text-decoration: inherit;">Sms<wbr>Configuration</a>
@@ -2193,8 +2046,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection. To force resource recreation after this configuration has been applied, see the [`up` command and use --replace](https://www.pulumi.com/docs/reference/cli/pulumi_up/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smsverificationmessage_go">
 <a href="#state_smsverificationmessage_go" style="color: inherit; text-decoration: inherit;">Sms<wbr>Verification<wbr>Message</a>
@@ -2203,8 +2055,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_softwaretokenmfaconfiguration_go">
 <a href="#state_softwaretokenmfaconfiguration_go" style="color: inherit; text-decoration: inherit;">Software<wbr>Token<wbr>Mfa<wbr>Configuration</a>
@@ -2213,8 +2064,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2223,8 +2073,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the User Pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userpooladdons_go">
 <a href="#state_userpooladdons_go" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Add<wbr>Ons</a>
@@ -2233,8 +2082,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for user pool add-ons to enable user pool advanced security mode features.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernameattributes_go">
 <a href="#state_usernameattributes_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Attributes</a>
@@ -2243,8 +2091,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernameconfiguration_go">
 <a href="#state_usernameconfiguration_go" style="color: inherit; text-decoration: inherit;">Username<wbr>Configuration</a>
@@ -2253,8 +2100,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolusernameconfiguration">User<wbr>Pool<wbr>Username<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The Username Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verificationmessagetemplate_go">
 <a href="#state_verificationmessagetemplate_go" style="color: inherit; text-decoration: inherit;">Verification<wbr>Message<wbr>Template</a>
@@ -2263,14 +2109,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}The verification message templates configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountrecoverysetting_nodejs">
 <a href="#state_accountrecoverysetting_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Recovery<wbr>Setting</a>
@@ -2279,8 +2122,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}The account_recovery_setting configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_admincreateuserconfig_nodejs">
 <a href="#state_admincreateuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Create<wbr>User<wbr>Config</a>
@@ -2289,8 +2131,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration for AdminCreateUser requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aliasattributes_nodejs">
 <a href="#state_aliasattributes_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Attributes</a>
@@ -2299,8 +2140,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with `username_attributes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2309,8 +2149,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the user pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoverifiedattributes_nodejs">
 <a href="#state_autoverifiedattributes_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Verified<wbr>Attributes</a>
@@ -2319,8 +2158,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The attributes to be auto-verified. Possible values: email, phone_number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationdate_nodejs">
 <a href="#state_creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
@@ -2329,8 +2167,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the user pool was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deviceconfiguration_nodejs">
 <a href="#state_deviceconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Configuration</a>
@@ -2339,8 +2176,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the user pool's device tracking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailconfiguration_nodejs">
 <a href="#state_emailconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Configuration</a>
@@ -2349,8 +2185,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The Email Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailverificationmessage_nodejs">
 <a href="#state_emailverificationmessage_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Verification<wbr>Message</a>
@@ -2359,8 +2194,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailverificationsubject_nodejs">
 <a href="#state_emailverificationsubject_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Verification<wbr>Subject</a>
@@ -2369,8 +2203,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_nodejs">
 <a href="#state_endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -2379,8 +2212,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lambdaconfig_nodejs">
 <a href="#state_lambdaconfig_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Config</a>
@@ -2389,8 +2221,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A container for the AWS Lambda triggers associated with the user pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodifieddate_nodejs">
 <a href="#state_lastmodifieddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Date</a>
@@ -2399,8 +2230,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the user pool was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mfaconfiguration_nodejs">
 <a href="#state_mfaconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">mfa<wbr>Configuration</a>
@@ -2409,8 +2239,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2419,8 +2248,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordpolicy_nodejs">
 <a href="#state_passwordpolicy_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Policy</a>
@@ -2429,8 +2257,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A container for information about the user pool password policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schemas_nodejs">
 <a href="#state_schemas_nodejs" style="color: inherit; text-decoration: inherit;">schemas</a>
@@ -2439,8 +2266,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolschema">User<wbr>Pool<wbr>Schema[]</a></span>
     </dt>
     <dd>{{% md %}}A container with the schema attributes of a user pool. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Maximum of 50 attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smsauthenticationmessage_nodejs">
 <a href="#state_smsauthenticationmessage_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Authentication<wbr>Message</a>
@@ -2449,8 +2275,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the SMS authentication message. The message must contain the `{####}` placeholder, which will be replaced with the code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smsconfiguration_nodejs">
 <a href="#state_smsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Configuration</a>
@@ -2459,8 +2284,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection. To force resource recreation after this configuration has been applied, see the [`up` command and use --replace](https://www.pulumi.com/docs/reference/cli/pulumi_up/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smsverificationmessage_nodejs">
 <a href="#state_smsverificationmessage_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Verification<wbr>Message</a>
@@ -2469,8 +2293,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_softwaretokenmfaconfiguration_nodejs">
 <a href="#state_softwaretokenmfaconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">software<wbr>Token<wbr>Mfa<wbr>Configuration</a>
@@ -2479,8 +2302,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2489,8 +2311,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the User Pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userpooladdons_nodejs">
 <a href="#state_userpooladdons_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Add<wbr>Ons</a>
@@ -2499,8 +2320,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for user pool add-ons to enable user pool advanced security mode features.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernameattributes_nodejs">
 <a href="#state_usernameattributes_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Attributes</a>
@@ -2509,8 +2329,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernameconfiguration_nodejs">
 <a href="#state_usernameconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">username<wbr>Configuration</a>
@@ -2519,8 +2338,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolusernameconfiguration">User<wbr>Pool<wbr>Username<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The Username Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verificationmessagetemplate_nodejs">
 <a href="#state_verificationmessagetemplate_nodejs" style="color: inherit; text-decoration: inherit;">verification<wbr>Message<wbr>Template</a>
@@ -2529,14 +2347,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}The verification message templates configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_account_recovery_setting_python">
 <a href="#state_account_recovery_setting_python" style="color: inherit; text-decoration: inherit;">account_<wbr>recovery_<wbr>setting</a>
@@ -2545,8 +2360,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The account_recovery_setting configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_admin_create_user_config_python">
 <a href="#state_admin_create_user_config_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>create_<wbr>user_<wbr>config</a>
@@ -2555,8 +2369,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for AdminCreateUser requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alias_attributes_python">
 <a href="#state_alias_attributes_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>attributes</a>
@@ -2565,8 +2378,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Attributes supported as an alias for this user pool. Possible values: phone_number, email, or preferred_username. Conflicts with `username_attributes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2575,8 +2387,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the user pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_verified_attributes_python">
 <a href="#state_auto_verified_attributes_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>verified_<wbr>attributes</a>
@@ -2585,8 +2396,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The attributes to be auto-verified. Possible values: email, phone_number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creation_date_python">
 <a href="#state_creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
@@ -2595,8 +2405,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the user pool was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_device_configuration_python">
 <a href="#state_device_configuration_python" style="color: inherit; text-decoration: inherit;">device_<wbr>configuration</a>
@@ -2605,8 +2414,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for the user pool's device tracking.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_configuration_python">
 <a href="#state_email_configuration_python" style="color: inherit; text-decoration: inherit;">email_<wbr>configuration</a>
@@ -2615,8 +2423,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Email Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_verification_message_python">
 <a href="#state_email_verification_message_python" style="color: inherit; text-decoration: inherit;">email_<wbr>verification_<wbr>message</a>
@@ -2625,8 +2432,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_verification_subject_python">
 <a href="#state_email_verification_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>verification_<wbr>subject</a>
@@ -2635,8 +2441,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_python">
 <a href="#state_endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -2645,8 +2450,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lambda_config_python">
 <a href="#state_lambda_config_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>config</a>
@@ -2655,8 +2459,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A container for the AWS Lambda triggers associated with the user pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_modified_date_python">
 <a href="#state_last_modified_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>date</a>
@@ -2665,8 +2468,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the user pool was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mfa_configuration_python">
 <a href="#state_mfa_configuration_python" style="color: inherit; text-decoration: inherit;">mfa_<wbr>configuration</a>
@@ -2675,8 +2477,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2685,8 +2486,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_policy_python">
 <a href="#state_password_policy_python" style="color: inherit; text-decoration: inherit;">password_<wbr>policy</a>
@@ -2695,8 +2495,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A container for information about the user pool password policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schemas_python">
 <a href="#state_schemas_python" style="color: inherit; text-decoration: inherit;">schemas</a>
@@ -2705,8 +2504,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolschema">Sequence[User<wbr>Pool<wbr>Schema<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A container with the schema attributes of a user pool. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Maximum of 50 attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sms_authentication_message_python">
 <a href="#state_sms_authentication_message_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>authentication_<wbr>message</a>
@@ -2715,8 +2513,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string representing the SMS authentication message. The message must contain the `{####}` placeholder, which will be replaced with the code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sms_configuration_python">
 <a href="#state_sms_configuration_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>configuration</a>
@@ -2725,8 +2522,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection. To force resource recreation after this configuration has been applied, see the [`up` command and use --replace](https://www.pulumi.com/docs/reference/cli/pulumi_up/).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sms_verification_message_python">
 <a href="#state_sms_verification_message_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>verification_<wbr>message</a>
@@ -2735,8 +2531,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_software_token_mfa_configuration_python">
 <a href="#state_software_token_mfa_configuration_python" style="color: inherit; text-decoration: inherit;">software_<wbr>token_<wbr>mfa_<wbr>configuration</a>
@@ -2745,8 +2540,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolsoftwaretokenmfaconfiguration">User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2755,8 +2549,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the User Pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_pool_add_ons_python">
 <a href="#state_user_pool_add_ons_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>add_<wbr>ons</a>
@@ -2765,8 +2558,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for user pool add-ons to enable user pool advanced security mode features.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_attributes_python">
 <a href="#state_username_attributes_python" style="color: inherit; text-decoration: inherit;">username_<wbr>attributes</a>
@@ -2775,8 +2567,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_configuration_python">
 <a href="#state_username_configuration_python" style="color: inherit; text-decoration: inherit;">username_<wbr>configuration</a>
@@ -2785,8 +2576,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolusernameconfiguration">User<wbr>Pool<wbr>Username<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Username Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verification_message_template_python">
 <a href="#state_verification_message_template_python" style="color: inherit; text-decoration: inherit;">verification_<wbr>message_<wbr>template</a>
@@ -2795,8 +2585,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The verification message templates configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2811,9 +2600,7 @@ The following state arguments are supported:
 <h4 id="userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recoverymechanisms_csharp">
 <a href="#recoverymechanisms_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Mechanisms</a>
@@ -2822,14 +2609,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolaccountrecoverysettingrecoverymechanism">List&lt;User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Recovery<wbr>Mechanism<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of Account Recovery Options of the following structure:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recoverymechanisms_go">
 <a href="#recoverymechanisms_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Mechanisms</a>
@@ -2838,14 +2622,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolaccountrecoverysettingrecoverymechanism">[]User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Recovery<wbr>Mechanism</a></span>
     </dt>
     <dd>{{% md %}}The list of Account Recovery Options of the following structure:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recoverymechanisms_nodejs">
 <a href="#recoverymechanisms_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Mechanisms</a>
@@ -2854,14 +2635,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolaccountrecoverysettingrecoverymechanism">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Recovery<wbr>Mechanism[]</a></span>
     </dt>
     <dd>{{% md %}}The list of Account Recovery Options of the following structure:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recovery_mechanisms_python">
 <a href="#recovery_mechanisms_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>mechanisms</a>
@@ -2870,16 +2648,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolaccountrecoverysettingrecoverymechanism">Sequence[User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Recovery<wbr>Mechanism<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of Account Recovery Options of the following structure:
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userpoolaccountrecoverysettingrecoverymechanism">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Recovery<wbr>Mechanism</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2888,8 +2663,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -2898,14 +2672,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A positive integer specifying priority of a method with 1 being the highest priority.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2914,8 +2685,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -2924,14 +2694,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A positive integer specifying priority of a method with 1 being the highest priority.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2940,8 +2707,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -2950,14 +2716,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A positive integer specifying priority of a method with 1 being the highest priority.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2966,8 +2729,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -2976,16 +2738,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A positive integer specifying priority of a method with 1 being the highest priority.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowadmincreateuseronly_csharp">
 <a href="#allowadmincreateuseronly_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Admin<wbr>Create<wbr>User<wbr>Only</a>
@@ -2994,8 +2753,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="invitemessagetemplate_csharp">
 <a href="#invitemessagetemplate_csharp" style="color: inherit; text-decoration: inherit;">Invite<wbr>Message<wbr>Template</a>
@@ -3004,14 +2762,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpooladmincreateuserconfiginvitemessagetemplate">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The invite message template structure.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowadmincreateuseronly_go">
 <a href="#allowadmincreateuseronly_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Admin<wbr>Create<wbr>User<wbr>Only</a>
@@ -3020,8 +2775,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="invitemessagetemplate_go">
 <a href="#invitemessagetemplate_go" style="color: inherit; text-decoration: inherit;">Invite<wbr>Message<wbr>Template</a>
@@ -3030,14 +2784,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpooladmincreateuserconfiginvitemessagetemplate">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}The invite message template structure.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowadmincreateuseronly_nodejs">
 <a href="#allowadmincreateuseronly_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Admin<wbr>Create<wbr>User<wbr>Only</a>
@@ -3046,8 +2797,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="invitemessagetemplate_nodejs">
 <a href="#invitemessagetemplate_nodejs" style="color: inherit; text-decoration: inherit;">invite<wbr>Message<wbr>Template</a>
@@ -3056,14 +2806,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpooladmincreateuserconfiginvitemessagetemplate">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template</a></span>
     </dt>
     <dd>{{% md %}}The invite message template structure.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_admin_create_user_only_python">
 <a href="#allow_admin_create_user_only_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>admin_<wbr>create_<wbr>user_<wbr>only</a>
@@ -3072,8 +2819,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="invite_message_template_python">
 <a href="#invite_message_template_python" style="color: inherit; text-decoration: inherit;">invite_<wbr>message_<wbr>template</a>
@@ -3082,16 +2828,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpooladmincreateuserconfiginvitemessagetemplate">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The invite message template structure.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userpooladmincreateuserconfiginvitemessagetemplate">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emailmessage_csharp">
 <a href="#emailmessage_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Message</a>
@@ -3100,8 +2843,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailsubject_csharp">
 <a href="#emailsubject_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Subject</a>
@@ -3110,8 +2852,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template. Conflicts with `email_verification_subject` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smsmessage_csharp">
 <a href="#smsmessage_csharp" style="color: inherit; text-decoration: inherit;">Sms<wbr>Message</a>
@@ -3120,14 +2861,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emailmessage_go">
 <a href="#emailmessage_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Message</a>
@@ -3136,8 +2874,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailsubject_go">
 <a href="#emailsubject_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Subject</a>
@@ -3146,8 +2883,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template. Conflicts with `email_verification_subject` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smsmessage_go">
 <a href="#smsmessage_go" style="color: inherit; text-decoration: inherit;">Sms<wbr>Message</a>
@@ -3156,14 +2892,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emailmessage_nodejs">
 <a href="#emailmessage_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Message</a>
@@ -3172,8 +2905,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailsubject_nodejs">
 <a href="#emailsubject_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Subject</a>
@@ -3182,8 +2914,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template. Conflicts with `email_verification_subject` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smsmessage_nodejs">
 <a href="#smsmessage_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Message</a>
@@ -3192,14 +2923,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="email_message_python">
 <a href="#email_message_python" style="color: inherit; text-decoration: inherit;">email_<wbr>message</a>
@@ -3208,8 +2936,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_subject_python">
 <a href="#email_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>subject</a>
@@ -3218,8 +2945,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template. Conflicts with `email_verification_subject` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sms_message_python">
 <a href="#sms_message_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>message</a>
@@ -3228,16 +2954,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="challengerequiredonnewdevice_csharp">
 <a href="#challengerequiredonnewdevice_csharp" style="color: inherit; text-decoration: inherit;">Challenge<wbr>Required<wbr>On<wbr>New<wbr>Device</a>
@@ -3246,8 +2969,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether a challenge is required on a new device. Only applicable to a new device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceonlyrememberedonuserprompt_csharp">
 <a href="#deviceonlyrememberedonuserprompt_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Only<wbr>Remembered<wbr>On<wbr>User<wbr>Prompt</a>
@@ -3256,14 +2978,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, a device is only remembered on user prompt.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="challengerequiredonnewdevice_go">
 <a href="#challengerequiredonnewdevice_go" style="color: inherit; text-decoration: inherit;">Challenge<wbr>Required<wbr>On<wbr>New<wbr>Device</a>
@@ -3272,8 +2991,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether a challenge is required on a new device. Only applicable to a new device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceonlyrememberedonuserprompt_go">
 <a href="#deviceonlyrememberedonuserprompt_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Only<wbr>Remembered<wbr>On<wbr>User<wbr>Prompt</a>
@@ -3282,14 +3000,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, a device is only remembered on user prompt.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="challengerequiredonnewdevice_nodejs">
 <a href="#challengerequiredonnewdevice_nodejs" style="color: inherit; text-decoration: inherit;">challenge<wbr>Required<wbr>On<wbr>New<wbr>Device</a>
@@ -3298,8 +3013,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether a challenge is required on a new device. Only applicable to a new device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceonlyrememberedonuserprompt_nodejs">
 <a href="#deviceonlyrememberedonuserprompt_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Only<wbr>Remembered<wbr>On<wbr>User<wbr>Prompt</a>
@@ -3308,14 +3022,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, a device is only remembered on user prompt.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="challenge_required_on_new_device_python">
 <a href="#challenge_required_on_new_device_python" style="color: inherit; text-decoration: inherit;">challenge_<wbr>required_<wbr>on_<wbr>new_<wbr>device</a>
@@ -3324,8 +3035,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether a challenge is required on a new device. Only applicable to a new device.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_only_remembered_on_user_prompt_python">
 <a href="#device_only_remembered_on_user_prompt_python" style="color: inherit; text-decoration: inherit;">device_<wbr>only_<wbr>remembered_<wbr>on_<wbr>user_<wbr>prompt</a>
@@ -3334,16 +3044,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, a device is only remembered on user prompt.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emailsendingaccount_csharp">
 <a href="#emailsendingaccount_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Sending<wbr>Account</a>
@@ -3352,8 +3059,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email delivery method to use. `COGNITO_DEFAULT` for the default email functionality built into Cognito or `DEVELOPER` to use your Amazon SES configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fromemailaddress_csharp">
 <a href="#fromemailaddress_csharp" style="color: inherit; text-decoration: inherit;">From<wbr>Email<wbr>Address</a>
@@ -3362,8 +3068,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sender’s email address or sender’s display name with their email address (e.g. `john@example.com`, `John Smith <john@example.com>` or `\"John Smith Ph.D.\" <john@example.com>`). Escaped double quotes are required around display names that contain certain characters as specified in [RFC 5322](https://tools.ietf.org/html/rfc5322).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replytoemailaddress_csharp">
 <a href="#replytoemailaddress_csharp" style="color: inherit; text-decoration: inherit;">Reply<wbr>To<wbr>Email<wbr>Address</a>
@@ -3372,8 +3077,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The REPLY-TO email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcearn_csharp">
 <a href="#sourcearn_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Arn</a>
@@ -3382,14 +3086,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the SES verified email identity to to use. Required if `email_sending_account` is set to `DEVELOPER`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emailsendingaccount_go">
 <a href="#emailsendingaccount_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Sending<wbr>Account</a>
@@ -3398,8 +3099,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email delivery method to use. `COGNITO_DEFAULT` for the default email functionality built into Cognito or `DEVELOPER` to use your Amazon SES configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fromemailaddress_go">
 <a href="#fromemailaddress_go" style="color: inherit; text-decoration: inherit;">From<wbr>Email<wbr>Address</a>
@@ -3408,8 +3108,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sender’s email address or sender’s display name with their email address (e.g. `john@example.com`, `John Smith <john@example.com>` or `\"John Smith Ph.D.\" <john@example.com>`). Escaped double quotes are required around display names that contain certain characters as specified in [RFC 5322](https://tools.ietf.org/html/rfc5322).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replytoemailaddress_go">
 <a href="#replytoemailaddress_go" style="color: inherit; text-decoration: inherit;">Reply<wbr>To<wbr>Email<wbr>Address</a>
@@ -3418,8 +3117,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The REPLY-TO email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcearn_go">
 <a href="#sourcearn_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Arn</a>
@@ -3428,14 +3126,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the SES verified email identity to to use. Required if `email_sending_account` is set to `DEVELOPER`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emailsendingaccount_nodejs">
 <a href="#emailsendingaccount_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Sending<wbr>Account</a>
@@ -3444,8 +3139,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email delivery method to use. `COGNITO_DEFAULT` for the default email functionality built into Cognito or `DEVELOPER` to use your Amazon SES configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fromemailaddress_nodejs">
 <a href="#fromemailaddress_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Email<wbr>Address</a>
@@ -3454,8 +3148,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sender’s email address or sender’s display name with their email address (e.g. `john@example.com`, `John Smith <john@example.com>` or `\"John Smith Ph.D.\" <john@example.com>`). Escaped double quotes are required around display names that contain certain characters as specified in [RFC 5322](https://tools.ietf.org/html/rfc5322).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replytoemailaddress_nodejs">
 <a href="#replytoemailaddress_nodejs" style="color: inherit; text-decoration: inherit;">reply<wbr>To<wbr>Email<wbr>Address</a>
@@ -3464,8 +3157,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The REPLY-TO email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcearn_nodejs">
 <a href="#sourcearn_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Arn</a>
@@ -3474,14 +3166,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the SES verified email identity to to use. Required if `email_sending_account` is set to `DEVELOPER`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="email_sending_account_python">
 <a href="#email_sending_account_python" style="color: inherit; text-decoration: inherit;">email_<wbr>sending_<wbr>account</a>
@@ -3490,8 +3179,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email delivery method to use. `COGNITO_DEFAULT` for the default email functionality built into Cognito or `DEVELOPER` to use your Amazon SES configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="from_email_address_python">
 <a href="#from_email_address_python" style="color: inherit; text-decoration: inherit;">from_<wbr>email_<wbr>address</a>
@@ -3500,8 +3188,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sender’s email address or sender’s display name with their email address (e.g. `john@example.com`, `John Smith <john@example.com>` or `\"John Smith Ph.D.\" <john@example.com>`). Escaped double quotes are required around display names that contain certain characters as specified in [RFC 5322](https://tools.ietf.org/html/rfc5322).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reply_to_email_address_python">
 <a href="#reply_to_email_address_python" style="color: inherit; text-decoration: inherit;">reply_<wbr>to_<wbr>email_<wbr>address</a>
@@ -3510,8 +3197,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The REPLY-TO email address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_arn_python">
 <a href="#source_arn_python" style="color: inherit; text-decoration: inherit;">source_<wbr>arn</a>
@@ -3520,16 +3206,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the SES verified email identity to to use. Required if `email_sending_account` is set to `DEVELOPER`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createauthchallenge_csharp">
 <a href="#createauthchallenge_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Auth<wbr>Challenge</a>
@@ -3538,8 +3221,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the lambda creating an authentication challenge.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custommessage_csharp">
 <a href="#custommessage_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Message</a>
@@ -3548,8 +3230,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom Message AWS Lambda trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defineauthchallenge_csharp">
 <a href="#defineauthchallenge_csharp" style="color: inherit; text-decoration: inherit;">Define<wbr>Auth<wbr>Challenge</a>
@@ -3558,8 +3239,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the authentication challenge.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postauthentication_csharp">
 <a href="#postauthentication_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Authentication</a>
@@ -3568,8 +3248,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A post-authentication AWS Lambda trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postconfirmation_csharp">
 <a href="#postconfirmation_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Confirmation</a>
@@ -3578,8 +3257,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A post-confirmation AWS Lambda trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preauthentication_csharp">
 <a href="#preauthentication_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Authentication</a>
@@ -3588,8 +3266,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A pre-authentication AWS Lambda trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="presignup_csharp">
 <a href="#presignup_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Sign<wbr>Up</a>
@@ -3598,8 +3275,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A pre-registration AWS Lambda trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pretokengeneration_csharp">
 <a href="#pretokengeneration_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Token<wbr>Generation</a>
@@ -3608,8 +3284,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow to customize identity token claims before token generation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usermigration_csharp">
 <a href="#usermigration_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Migration</a>
@@ -3618,8 +3293,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user migration Lambda config type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifyauthchallengeresponse_csharp">
 <a href="#verifyauthchallengeresponse_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Auth<wbr>Challenge<wbr>Response</a>
@@ -3628,14 +3302,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Verifies the authentication challenge response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createauthchallenge_go">
 <a href="#createauthchallenge_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Auth<wbr>Challenge</a>
@@ -3644,8 +3315,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the lambda creating an authentication challenge.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custommessage_go">
 <a href="#custommessage_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Message</a>
@@ -3654,8 +3324,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom Message AWS Lambda trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defineauthchallenge_go">
 <a href="#defineauthchallenge_go" style="color: inherit; text-decoration: inherit;">Define<wbr>Auth<wbr>Challenge</a>
@@ -3664,8 +3333,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the authentication challenge.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postauthentication_go">
 <a href="#postauthentication_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Authentication</a>
@@ -3674,8 +3342,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A post-authentication AWS Lambda trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postconfirmation_go">
 <a href="#postconfirmation_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Confirmation</a>
@@ -3684,8 +3351,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A post-confirmation AWS Lambda trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preauthentication_go">
 <a href="#preauthentication_go" style="color: inherit; text-decoration: inherit;">Pre<wbr>Authentication</a>
@@ -3694,8 +3360,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A pre-authentication AWS Lambda trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="presignup_go">
 <a href="#presignup_go" style="color: inherit; text-decoration: inherit;">Pre<wbr>Sign<wbr>Up</a>
@@ -3704,8 +3369,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A pre-registration AWS Lambda trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pretokengeneration_go">
 <a href="#pretokengeneration_go" style="color: inherit; text-decoration: inherit;">Pre<wbr>Token<wbr>Generation</a>
@@ -3714,8 +3378,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow to customize identity token claims before token generation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usermigration_go">
 <a href="#usermigration_go" style="color: inherit; text-decoration: inherit;">User<wbr>Migration</a>
@@ -3724,8 +3387,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user migration Lambda config type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifyauthchallengeresponse_go">
 <a href="#verifyauthchallengeresponse_go" style="color: inherit; text-decoration: inherit;">Verify<wbr>Auth<wbr>Challenge<wbr>Response</a>
@@ -3734,14 +3396,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Verifies the authentication challenge response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createauthchallenge_nodejs">
 <a href="#createauthchallenge_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Auth<wbr>Challenge</a>
@@ -3750,8 +3409,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the lambda creating an authentication challenge.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custommessage_nodejs">
 <a href="#custommessage_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Message</a>
@@ -3760,8 +3418,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom Message AWS Lambda trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defineauthchallenge_nodejs">
 <a href="#defineauthchallenge_nodejs" style="color: inherit; text-decoration: inherit;">define<wbr>Auth<wbr>Challenge</a>
@@ -3770,8 +3427,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the authentication challenge.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postauthentication_nodejs">
 <a href="#postauthentication_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Authentication</a>
@@ -3780,8 +3436,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A post-authentication AWS Lambda trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postconfirmation_nodejs">
 <a href="#postconfirmation_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Confirmation</a>
@@ -3790,8 +3445,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A post-confirmation AWS Lambda trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preauthentication_nodejs">
 <a href="#preauthentication_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Authentication</a>
@@ -3800,8 +3454,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A pre-authentication AWS Lambda trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="presignup_nodejs">
 <a href="#presignup_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Sign<wbr>Up</a>
@@ -3810,8 +3463,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A pre-registration AWS Lambda trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pretokengeneration_nodejs">
 <a href="#pretokengeneration_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Token<wbr>Generation</a>
@@ -3820,8 +3472,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow to customize identity token claims before token generation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usermigration_nodejs">
 <a href="#usermigration_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Migration</a>
@@ -3830,8 +3481,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user migration Lambda config type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifyauthchallengeresponse_nodejs">
 <a href="#verifyauthchallengeresponse_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Auth<wbr>Challenge<wbr>Response</a>
@@ -3840,14 +3490,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Verifies the authentication challenge response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="create_auth_challenge_python">
 <a href="#create_auth_challenge_python" style="color: inherit; text-decoration: inherit;">create_<wbr>auth_<wbr>challenge</a>
@@ -3856,8 +3503,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the lambda creating an authentication challenge.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_message_python">
 <a href="#custom_message_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>message</a>
@@ -3866,8 +3512,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A custom Message AWS Lambda trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="define_auth_challenge_python">
 <a href="#define_auth_challenge_python" style="color: inherit; text-decoration: inherit;">define_<wbr>auth_<wbr>challenge</a>
@@ -3876,8 +3521,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the authentication challenge.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="post_authentication_python">
 <a href="#post_authentication_python" style="color: inherit; text-decoration: inherit;">post_<wbr>authentication</a>
@@ -3886,8 +3530,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A post-authentication AWS Lambda trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="post_confirmation_python">
 <a href="#post_confirmation_python" style="color: inherit; text-decoration: inherit;">post_<wbr>confirmation</a>
@@ -3896,8 +3539,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A post-confirmation AWS Lambda trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pre_authentication_python">
 <a href="#pre_authentication_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>authentication</a>
@@ -3906,8 +3548,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A pre-authentication AWS Lambda trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pre_sign_up_python">
 <a href="#pre_sign_up_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>sign_<wbr>up</a>
@@ -3916,8 +3557,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A pre-registration AWS Lambda trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pre_token_generation_python">
 <a href="#pre_token_generation_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>token_<wbr>generation</a>
@@ -3926,8 +3566,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allow to customize identity token claims before token generation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_migration_python">
 <a href="#user_migration_python" style="color: inherit; text-decoration: inherit;">user_<wbr>migration</a>
@@ -3936,8 +3575,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user migration Lambda config type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verify_auth_challenge_response_python">
 <a href="#verify_auth_challenge_response_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>auth_<wbr>challenge_<wbr>response</a>
@@ -3946,16 +3584,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Verifies the authentication challenge response.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minimumlength_csharp">
 <a href="#minimumlength_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Length</a>
@@ -3964,8 +3599,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum length of the password policy that you have set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirelowercase_csharp">
 <a href="#requirelowercase_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Lowercase</a>
@@ -3974,8 +3608,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one lowercase letter in their password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirenumbers_csharp">
 <a href="#requirenumbers_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Numbers</a>
@@ -3984,8 +3617,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one number in their password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiresymbols_csharp">
 <a href="#requiresymbols_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Symbols</a>
@@ -3994,8 +3626,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one symbol in their password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireuppercase_csharp">
 <a href="#requireuppercase_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Uppercase</a>
@@ -4004,8 +3635,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one uppercase letter in their password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="temporarypasswordvaliditydays_csharp">
 <a href="#temporarypasswordvaliditydays_csharp" style="color: inherit; text-decoration: inherit;">Temporary<wbr>Password<wbr>Validity<wbr>Days</a>
@@ -4014,14 +3644,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}In the password policy you have set, refers to the number of days a temporary password is valid. If the user does not sign-in during this time, their password will need to be reset by an administrator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minimumlength_go">
 <a href="#minimumlength_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Length</a>
@@ -4030,8 +3657,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum length of the password policy that you have set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirelowercase_go">
 <a href="#requirelowercase_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Lowercase</a>
@@ -4040,8 +3666,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one lowercase letter in their password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirenumbers_go">
 <a href="#requirenumbers_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Numbers</a>
@@ -4050,8 +3675,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one number in their password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiresymbols_go">
 <a href="#requiresymbols_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Symbols</a>
@@ -4060,8 +3684,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one symbol in their password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireuppercase_go">
 <a href="#requireuppercase_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Uppercase</a>
@@ -4070,8 +3693,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one uppercase letter in their password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="temporarypasswordvaliditydays_go">
 <a href="#temporarypasswordvaliditydays_go" style="color: inherit; text-decoration: inherit;">Temporary<wbr>Password<wbr>Validity<wbr>Days</a>
@@ -4080,14 +3702,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}In the password policy you have set, refers to the number of days a temporary password is valid. If the user does not sign-in during this time, their password will need to be reset by an administrator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minimumlength_nodejs">
 <a href="#minimumlength_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Length</a>
@@ -4096,8 +3715,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum length of the password policy that you have set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirelowercase_nodejs">
 <a href="#requirelowercase_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Lowercase</a>
@@ -4106,8 +3724,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one lowercase letter in their password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirenumbers_nodejs">
 <a href="#requirenumbers_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Numbers</a>
@@ -4116,8 +3733,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one number in their password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiresymbols_nodejs">
 <a href="#requiresymbols_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Symbols</a>
@@ -4126,8 +3742,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one symbol in their password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireuppercase_nodejs">
 <a href="#requireuppercase_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Uppercase</a>
@@ -4136,8 +3751,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one uppercase letter in their password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="temporarypasswordvaliditydays_nodejs">
 <a href="#temporarypasswordvaliditydays_nodejs" style="color: inherit; text-decoration: inherit;">temporary<wbr>Password<wbr>Validity<wbr>Days</a>
@@ -4146,14 +3760,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}In the password policy you have set, refers to the number of days a temporary password is valid. If the user does not sign-in during this time, their password will need to be reset by an administrator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="minimum_length_python">
 <a href="#minimum_length_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>length</a>
@@ -4162,8 +3773,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum length of the password policy that you have set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_lowercase_python">
 <a href="#require_lowercase_python" style="color: inherit; text-decoration: inherit;">require_<wbr>lowercase</a>
@@ -4172,8 +3782,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one lowercase letter in their password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_numbers_python">
 <a href="#require_numbers_python" style="color: inherit; text-decoration: inherit;">require_<wbr>numbers</a>
@@ -4182,8 +3791,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one number in their password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_symbols_python">
 <a href="#require_symbols_python" style="color: inherit; text-decoration: inherit;">require_<wbr>symbols</a>
@@ -4192,8 +3800,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one symbol in their password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_uppercase_python">
 <a href="#require_uppercase_python" style="color: inherit; text-decoration: inherit;">require_<wbr>uppercase</a>
@@ -4202,8 +3809,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether you have required users to use at least one uppercase letter in their password.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="temporary_password_validity_days_python">
 <a href="#temporary_password_validity_days_python" style="color: inherit; text-decoration: inherit;">temporary_<wbr>password_<wbr>validity_<wbr>days</a>
@@ -4212,16 +3818,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}In the password policy you have set, refers to the number of days a temporary password is valid. If the user does not sign-in during this time, their password will need to be reset by an administrator.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userpoolschema">User<wbr>Pool<wbr>Schema</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attributedatatype_csharp">
 <a href="#attributedatatype_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Data<wbr>Type</a>
@@ -4230,8 +3833,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The attribute data type. Must be one of `Boolean`, `Number`, `String`, `DateTime`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4240,8 +3842,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developeronlyattribute_csharp">
 <a href="#developeronlyattribute_csharp" style="color: inherit; text-decoration: inherit;">Developer<wbr>Only<wbr>Attribute</a>
@@ -4250,8 +3851,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the attribute type is developer only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mutable_csharp">
 <a href="#mutable_csharp" style="color: inherit; text-decoration: inherit;">Mutable</a>
@@ -4260,8 +3860,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the attribute can be changed once it has been created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberattributeconstraints_csharp">
 <a href="#numberattributeconstraints_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Attribute<wbr>Constraints</a>
@@ -4270,8 +3869,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolschemanumberattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the constraints for an attribute of the number type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_csharp">
 <a href="#required_csharp" style="color: inherit; text-decoration: inherit;">Required</a>
@@ -4280,8 +3878,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a user pool attribute is required. If the attribute is required and the user does not provide a value, registration or sign-in will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringattributeconstraints_csharp">
 <a href="#stringattributeconstraints_csharp" style="color: inherit; text-decoration: inherit;">String<wbr>Attribute<wbr>Constraints</a>
@@ -4290,14 +3887,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolschemastringattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}-Specifies the constraints for an attribute of the string type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attributedatatype_go">
 <a href="#attributedatatype_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Data<wbr>Type</a>
@@ -4306,8 +3900,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The attribute data type. Must be one of `Boolean`, `Number`, `String`, `DateTime`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4316,8 +3909,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developeronlyattribute_go">
 <a href="#developeronlyattribute_go" style="color: inherit; text-decoration: inherit;">Developer<wbr>Only<wbr>Attribute</a>
@@ -4326,8 +3918,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the attribute type is developer only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mutable_go">
 <a href="#mutable_go" style="color: inherit; text-decoration: inherit;">Mutable</a>
@@ -4336,8 +3927,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the attribute can be changed once it has been created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberattributeconstraints_go">
 <a href="#numberattributeconstraints_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Attribute<wbr>Constraints</a>
@@ -4346,8 +3936,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolschemanumberattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints</a></span>
     </dt>
     <dd>{{% md %}}Specifies the constraints for an attribute of the number type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_go">
 <a href="#required_go" style="color: inherit; text-decoration: inherit;">Required</a>
@@ -4356,8 +3945,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a user pool attribute is required. If the attribute is required and the user does not provide a value, registration or sign-in will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringattributeconstraints_go">
 <a href="#stringattributeconstraints_go" style="color: inherit; text-decoration: inherit;">String<wbr>Attribute<wbr>Constraints</a>
@@ -4366,14 +3954,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolschemastringattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints</a></span>
     </dt>
     <dd>{{% md %}}-Specifies the constraints for an attribute of the string type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attributedatatype_nodejs">
 <a href="#attributedatatype_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Data<wbr>Type</a>
@@ -4382,8 +3967,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The attribute data type. Must be one of `Boolean`, `Number`, `String`, `DateTime`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4392,8 +3976,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developeronlyattribute_nodejs">
 <a href="#developeronlyattribute_nodejs" style="color: inherit; text-decoration: inherit;">developer<wbr>Only<wbr>Attribute</a>
@@ -4402,8 +3985,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the attribute type is developer only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mutable_nodejs">
 <a href="#mutable_nodejs" style="color: inherit; text-decoration: inherit;">mutable</a>
@@ -4412,8 +3994,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the attribute can be changed once it has been created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberattributeconstraints_nodejs">
 <a href="#numberattributeconstraints_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Attribute<wbr>Constraints</a>
@@ -4422,8 +4003,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolschemanumberattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints</a></span>
     </dt>
     <dd>{{% md %}}Specifies the constraints for an attribute of the number type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_nodejs">
 <a href="#required_nodejs" style="color: inherit; text-decoration: inherit;">required</a>
@@ -4432,8 +4012,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether a user pool attribute is required. If the attribute is required and the user does not provide a value, registration or sign-in will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stringattributeconstraints_nodejs">
 <a href="#stringattributeconstraints_nodejs" style="color: inherit; text-decoration: inherit;">string<wbr>Attribute<wbr>Constraints</a>
@@ -4442,14 +4021,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolschemastringattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints</a></span>
     </dt>
     <dd>{{% md %}}-Specifies the constraints for an attribute of the string type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="attribute_data_type_python">
 <a href="#attribute_data_type_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>data_<wbr>type</a>
@@ -4458,8 +4034,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The attribute data type. Must be one of `Boolean`, `Number`, `String`, `DateTime`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4468,8 +4043,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="developer_only_attribute_python">
 <a href="#developer_only_attribute_python" style="color: inherit; text-decoration: inherit;">developer_<wbr>only_<wbr>attribute</a>
@@ -4478,8 +4052,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the attribute type is developer only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mutable_python">
 <a href="#mutable_python" style="color: inherit; text-decoration: inherit;">mutable</a>
@@ -4488,8 +4061,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the attribute can be changed once it has been created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_attribute_constraints_python">
 <a href="#number_attribute_constraints_python" style="color: inherit; text-decoration: inherit;">number_<wbr>attribute_<wbr>constraints</a>
@@ -4498,8 +4070,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolschemanumberattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the constraints for an attribute of the number type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_python">
 <a href="#required_python" style="color: inherit; text-decoration: inherit;">required</a>
@@ -4508,8 +4079,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether a user pool attribute is required. If the attribute is required and the user does not provide a value, registration or sign-in will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="string_attribute_constraints_python">
 <a href="#string_attribute_constraints_python" style="color: inherit; text-decoration: inherit;">string_<wbr>attribute_<wbr>constraints</a>
@@ -4518,16 +4088,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#userpoolschemastringattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}-Specifies the constraints for an attribute of the string type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userpoolschemanumberattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxvalue_csharp">
 <a href="#maxvalue_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Value</a>
@@ -4536,8 +4103,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum value of an attribute that is of the number data type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minvalue_csharp">
 <a href="#minvalue_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Value</a>
@@ -4546,14 +4112,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum value of an attribute that is of the number data type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxvalue_go">
 <a href="#maxvalue_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Value</a>
@@ -4562,8 +4125,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum value of an attribute that is of the number data type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minvalue_go">
 <a href="#minvalue_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Value</a>
@@ -4572,14 +4134,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum value of an attribute that is of the number data type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxvalue_nodejs">
 <a href="#maxvalue_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Value</a>
@@ -4588,8 +4147,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum value of an attribute that is of the number data type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minvalue_nodejs">
 <a href="#minvalue_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Value</a>
@@ -4598,14 +4156,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum value of an attribute that is of the number data type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_value_python">
 <a href="#max_value_python" style="color: inherit; text-decoration: inherit;">max_<wbr>value</a>
@@ -4614,8 +4169,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum value of an attribute that is of the number data type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_value_python">
 <a href="#min_value_python" style="color: inherit; text-decoration: inherit;">min_<wbr>value</a>
@@ -4624,16 +4178,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum value of an attribute that is of the number data type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userpoolschemastringattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxlength_csharp">
 <a href="#maxlength_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Length</a>
@@ -4642,8 +4193,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum length of an attribute value of the string type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minlength_csharp">
 <a href="#minlength_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Length</a>
@@ -4652,14 +4202,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum length of an attribute value of the string type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxlength_go">
 <a href="#maxlength_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Length</a>
@@ -4668,8 +4215,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum length of an attribute value of the string type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minlength_go">
 <a href="#minlength_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Length</a>
@@ -4678,14 +4224,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum length of an attribute value of the string type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxlength_nodejs">
 <a href="#maxlength_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Length</a>
@@ -4694,8 +4237,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum length of an attribute value of the string type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minlength_nodejs">
 <a href="#minlength_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Length</a>
@@ -4704,14 +4246,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum length of an attribute value of the string type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_length_python">
 <a href="#max_length_python" style="color: inherit; text-decoration: inherit;">max_<wbr>length</a>
@@ -4720,8 +4259,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum length of an attribute value of the string type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_length_python">
 <a href="#min_length_python" style="color: inherit; text-decoration: inherit;">min_<wbr>length</a>
@@ -4730,16 +4268,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum length of an attribute value of the string type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="externalid_csharp">
 <a href="#externalid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
@@ -4748,8 +4283,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external ID used in IAM role trust relationships. For more information about using external IDs, see [How to Use an External ID When Granting Access to Your AWS Resources to a Third Party](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snscallerarn_csharp">
 <a href="#snscallerarn_csharp" style="color: inherit; text-decoration: inherit;">Sns<wbr>Caller<wbr>Arn</a>
@@ -4758,14 +4292,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Amazon SNS caller. This is usually the IAM role that you've given Cognito permission to assume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="externalid_go">
 <a href="#externalid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
@@ -4774,8 +4305,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external ID used in IAM role trust relationships. For more information about using external IDs, see [How to Use an External ID When Granting Access to Your AWS Resources to a Third Party](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snscallerarn_go">
 <a href="#snscallerarn_go" style="color: inherit; text-decoration: inherit;">Sns<wbr>Caller<wbr>Arn</a>
@@ -4784,14 +4314,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Amazon SNS caller. This is usually the IAM role that you've given Cognito permission to assume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="externalid_nodejs">
 <a href="#externalid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
@@ -4800,8 +4327,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external ID used in IAM role trust relationships. For more information about using external IDs, see [How to Use an External ID When Granting Access to Your AWS Resources to a Third Party](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="snscallerarn_nodejs">
 <a href="#snscallerarn_nodejs" style="color: inherit; text-decoration: inherit;">sns<wbr>Caller<wbr>Arn</a>
@@ -4810,14 +4336,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Amazon SNS caller. This is usually the IAM role that you've given Cognito permission to assume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="external_id_python">
 <a href="#external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
@@ -4826,8 +4349,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The external ID used in IAM role trust relationships. For more information about using external IDs, see [How to Use an External ID When Granting Access to Your AWS Resources to a Third Party](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sns_caller_arn_python">
 <a href="#sns_caller_arn_python" style="color: inherit; text-decoration: inherit;">sns_<wbr>caller_<wbr>arn</a>
@@ -4836,16 +4358,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Amazon SNS caller. This is usually the IAM role that you've given Cognito permission to assume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userpoolsoftwaretokenmfaconfiguration">User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -4854,14 +4373,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether to enable software token Multi-Factor (MFA) tokens, such as Time-based One-Time Password (TOTP). To disable software token MFA when `sms_configuration` is not present, the `mfa_configuration` argument must be set to `OFF` and the `software_token_mfa_configuration` configuration block must be fully removed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -4870,14 +4386,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether to enable software token Multi-Factor (MFA) tokens, such as Time-based One-Time Password (TOTP). To disable software token MFA when `sms_configuration` is not present, the `mfa_configuration` argument must be set to `OFF` and the `software_token_mfa_configuration` configuration block must be fully removed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -4886,14 +4399,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean whether to enable software token Multi-Factor (MFA) tokens, such as Time-based One-Time Password (TOTP). To disable software token MFA when `sms_configuration` is not present, the `mfa_configuration` argument must be set to `OFF` and the `software_token_mfa_configuration` configuration block must be fully removed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -4902,16 +4412,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether to enable software token Multi-Factor (MFA) tokens, such as Time-based One-Time Password (TOTP). To disable software token MFA when `sms_configuration` is not present, the `mfa_configuration` argument must be set to `OFF` and the `software_token_mfa_configuration` configuration block must be fully removed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="advancedsecuritymode_csharp">
 <a href="#advancedsecuritymode_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Security<wbr>Mode</a>
@@ -4920,14 +4427,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode for advanced security, must be one of `OFF`, `AUDIT` or `ENFORCED`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="advancedsecuritymode_go">
 <a href="#advancedsecuritymode_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Security<wbr>Mode</a>
@@ -4936,14 +4440,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode for advanced security, must be one of `OFF`, `AUDIT` or `ENFORCED`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="advancedsecuritymode_nodejs">
 <a href="#advancedsecuritymode_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Security<wbr>Mode</a>
@@ -4952,14 +4453,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode for advanced security, must be one of `OFF`, `AUDIT` or `ENFORCED`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="advanced_security_mode_python">
 <a href="#advanced_security_mode_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>security_<wbr>mode</a>
@@ -4968,16 +4466,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mode for advanced security, must be one of `OFF`, `AUDIT` or `ENFORCED`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userpoolusernameconfiguration">User<wbr>Pool<wbr>Username<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="casesensitive_csharp">
 <a href="#casesensitive_csharp" style="color: inherit; text-decoration: inherit;">Case<wbr>Sensitive</a>
@@ -4986,14 +4481,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="casesensitive_go">
 <a href="#casesensitive_go" style="color: inherit; text-decoration: inherit;">Case<wbr>Sensitive</a>
@@ -5002,14 +4494,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="casesensitive_nodejs">
 <a href="#casesensitive_nodejs" style="color: inherit; text-decoration: inherit;">case<wbr>Sensitive</a>
@@ -5018,14 +4507,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="case_sensitive_python">
 <a href="#case_sensitive_python" style="color: inherit; text-decoration: inherit;">case_<wbr>sensitive</a>
@@ -5034,16 +4520,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultemailoption_csharp">
 <a href="#defaultemailoption_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Email<wbr>Option</a>
@@ -5052,8 +4535,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default email option. Must be either `CONFIRM_WITH_CODE` or `CONFIRM_WITH_LINK`. Defaults to `CONFIRM_WITH_CODE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailmessage_csharp">
 <a href="#emailmessage_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Message</a>
@@ -5062,8 +4544,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailmessagebylink_csharp">
 <a href="#emailmessagebylink_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Message<wbr>By<wbr>Link</a>
@@ -5072,8 +4553,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email message template for sending a confirmation link to the user, it must contain the `{##Click Here##}` placeholder.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailsubject_csharp">
 <a href="#emailsubject_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Subject</a>
@@ -5082,8 +4562,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template. Conflicts with `email_verification_subject` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailsubjectbylink_csharp">
 <a href="#emailsubjectbylink_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Subject<wbr>By<wbr>Link</a>
@@ -5092,8 +4571,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template for sending a confirmation link to the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smsmessage_csharp">
 <a href="#smsmessage_csharp" style="color: inherit; text-decoration: inherit;">Sms<wbr>Message</a>
@@ -5102,14 +4580,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultemailoption_go">
 <a href="#defaultemailoption_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Email<wbr>Option</a>
@@ -5118,8 +4593,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default email option. Must be either `CONFIRM_WITH_CODE` or `CONFIRM_WITH_LINK`. Defaults to `CONFIRM_WITH_CODE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailmessage_go">
 <a href="#emailmessage_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Message</a>
@@ -5128,8 +4602,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailmessagebylink_go">
 <a href="#emailmessagebylink_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Message<wbr>By<wbr>Link</a>
@@ -5138,8 +4611,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email message template for sending a confirmation link to the user, it must contain the `{##Click Here##}` placeholder.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailsubject_go">
 <a href="#emailsubject_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Subject</a>
@@ -5148,8 +4620,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template. Conflicts with `email_verification_subject` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailsubjectbylink_go">
 <a href="#emailsubjectbylink_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Subject<wbr>By<wbr>Link</a>
@@ -5158,8 +4629,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template for sending a confirmation link to the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smsmessage_go">
 <a href="#smsmessage_go" style="color: inherit; text-decoration: inherit;">Sms<wbr>Message</a>
@@ -5168,14 +4638,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="defaultemailoption_nodejs">
 <a href="#defaultemailoption_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Email<wbr>Option</a>
@@ -5184,8 +4651,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default email option. Must be either `CONFIRM_WITH_CODE` or `CONFIRM_WITH_LINK`. Defaults to `CONFIRM_WITH_CODE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailmessage_nodejs">
 <a href="#emailmessage_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Message</a>
@@ -5194,8 +4660,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailmessagebylink_nodejs">
 <a href="#emailmessagebylink_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Message<wbr>By<wbr>Link</a>
@@ -5204,8 +4669,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email message template for sending a confirmation link to the user, it must contain the `{##Click Here##}` placeholder.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailsubject_nodejs">
 <a href="#emailsubject_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Subject</a>
@@ -5214,8 +4678,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template. Conflicts with `email_verification_subject` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailsubjectbylink_nodejs">
 <a href="#emailsubjectbylink_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Subject<wbr>By<wbr>Link</a>
@@ -5224,8 +4687,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template for sending a confirmation link to the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smsmessage_nodejs">
 <a href="#smsmessage_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Message</a>
@@ -5234,14 +4696,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="default_email_option_python">
 <a href="#default_email_option_python" style="color: inherit; text-decoration: inherit;">default_<wbr>email_<wbr>option</a>
@@ -5250,8 +4709,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default email option. Must be either `CONFIRM_WITH_CODE` or `CONFIRM_WITH_LINK`. Defaults to `CONFIRM_WITH_CODE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_message_python">
 <a href="#email_message_python" style="color: inherit; text-decoration: inherit;">email_<wbr>message</a>
@@ -5260,8 +4718,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_message_by_link_python">
 <a href="#email_message_by_link_python" style="color: inherit; text-decoration: inherit;">email_<wbr>message_<wbr>by_<wbr>link</a>
@@ -5270,8 +4727,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email message template for sending a confirmation link to the user, it must contain the `{##Click Here##}` placeholder.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_subject_python">
 <a href="#email_subject_python" style="color: inherit; text-decoration: inherit;">email_<wbr>subject</a>
@@ -5280,8 +4736,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template. Conflicts with `email_verification_subject` argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_subject_by_link_python">
 <a href="#email_subject_by_link_python" style="color: inherit; text-decoration: inherit;">email_<wbr>subject_<wbr>by_<wbr>link</a>
@@ -5290,8 +4745,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subject line for the email message template for sending a confirmation link to the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sms_message_python">
 <a href="#sms_message_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>message</a>
@@ -5300,8 +4754,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -5322,6 +4775,6 @@ Cognito User Pools can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

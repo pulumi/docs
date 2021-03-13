@@ -43,9 +43,7 @@ API Gateway domain names can be imported using their `name`, e.g.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ API Gateway domain names can be imported using their `name`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ API Gateway domain names can be imported using their `name`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ API Gateway domain names can be imported using their `name`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ API Gateway domain names can be imported using their `name`, e.g.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ API Gateway domain names can be imported using their `name`, e.g.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ API Gateway domain names can be imported using their `name`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ API Gateway domain names can be imported using their `name`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ API Gateway domain names can be imported using their `name`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ API Gateway domain names can be imported using their `name`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ API Gateway domain names can be imported using their `name`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ API Gateway domain names can be imported using their `name`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -199,9 +170,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -210,8 +179,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name to register
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatearn_csharp">
 <a href="#certificatearn_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
@@ -220,8 +188,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatebody_csharp">
 <a href="#certificatebody_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Body</a>
@@ -232,8 +199,7 @@ The DomainName resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}The certificate issued for the domain name
 being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
 `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatechain_csharp">
 <a href="#certificatechain_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
@@ -245,8 +211,7 @@ being registered, in PEM format. Only valid for `EDGE` endpoint configuration ty
 certificate, along with any intermediate CA certificates required to
 create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`,
 `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatename_csharp">
 <a href="#certificatename_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Name</a>
@@ -257,8 +222,7 @@ create an unbroken chain to a certificate trusted by the intended API clients. O
     <dd>{{% md %}}The unique name to use when registering this
 certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
 `regional_certificate_name`. Required if `certificate_arn` is not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificateprivatekey_csharp">
 <a href="#certificateprivatekey_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Private<wbr>Key</a>
@@ -268,8 +232,7 @@ certificate as an IAM server certificate. Conflicts with `certificate_arn`, `reg
     </dt>
     <dd>{{% md %}}The private key associated with the
 domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointconfiguration_csharp">
 <a href="#endpointconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configuration</a>
@@ -278,8 +241,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type"><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block defining API endpoint information including type. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mutualtlsauthentication_csharp">
 <a href="#mutualtlsauthentication_csharp" style="color: inherit; text-decoration: inherit;">Mutual<wbr>Tls<wbr>Authentication</a>
@@ -288,8 +250,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regionalcertificatearn_csharp">
 <a href="#regionalcertificatearn_csharp" style="color: inherit; text-decoration: inherit;">Regional<wbr>Certificate<wbr>Arn</a>
@@ -298,8 +259,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regionalcertificatename_csharp">
 <a href="#regionalcertificatename_csharp" style="color: inherit; text-decoration: inherit;">Regional<wbr>Certificate<wbr>Name</a>
@@ -309,8 +269,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
     </dt>
     <dd>{{% md %}}The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
 `certificate_private_key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitypolicy_csharp">
 <a href="#securitypolicy_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy</a>
@@ -319,8 +278,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -329,14 +287,11 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainname_go">
 <a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -345,8 +300,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name to register
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatearn_go">
 <a href="#certificatearn_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
@@ -355,8 +309,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatebody_go">
 <a href="#certificatebody_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Body</a>
@@ -367,8 +320,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
     <dd>{{% md %}}The certificate issued for the domain name
 being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
 `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatechain_go">
 <a href="#certificatechain_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
@@ -380,8 +332,7 @@ being registered, in PEM format. Only valid for `EDGE` endpoint configuration ty
 certificate, along with any intermediate CA certificates required to
 create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`,
 `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatename_go">
 <a href="#certificatename_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Name</a>
@@ -392,8 +343,7 @@ create an unbroken chain to a certificate trusted by the intended API clients. O
     <dd>{{% md %}}The unique name to use when registering this
 certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
 `regional_certificate_name`. Required if `certificate_arn` is not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificateprivatekey_go">
 <a href="#certificateprivatekey_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Private<wbr>Key</a>
@@ -403,8 +353,7 @@ certificate as an IAM server certificate. Conflicts with `certificate_arn`, `reg
     </dt>
     <dd>{{% md %}}The private key associated with the
 domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointconfiguration_go">
 <a href="#endpointconfiguration_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configuration</a>
@@ -413,8 +362,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type"><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block defining API endpoint information including type. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mutualtlsauthentication_go">
 <a href="#mutualtlsauthentication_go" style="color: inherit; text-decoration: inherit;">Mutual<wbr>Tls<wbr>Authentication</a>
@@ -423,8 +371,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regionalcertificatearn_go">
 <a href="#regionalcertificatearn_go" style="color: inherit; text-decoration: inherit;">Regional<wbr>Certificate<wbr>Arn</a>
@@ -433,8 +380,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regionalcertificatename_go">
 <a href="#regionalcertificatename_go" style="color: inherit; text-decoration: inherit;">Regional<wbr>Certificate<wbr>Name</a>
@@ -444,8 +390,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
     </dt>
     <dd>{{% md %}}The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
 `certificate_private_key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitypolicy_go">
 <a href="#securitypolicy_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy</a>
@@ -454,8 +399,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -464,14 +408,11 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainname_nodejs">
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
@@ -480,8 +421,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name to register
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatearn_nodejs">
 <a href="#certificatearn_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Arn</a>
@@ -490,8 +430,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatebody_nodejs">
 <a href="#certificatebody_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Body</a>
@@ -502,8 +441,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
     <dd>{{% md %}}The certificate issued for the domain name
 being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
 `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatechain_nodejs">
 <a href="#certificatechain_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Chain</a>
@@ -515,8 +453,7 @@ being registered, in PEM format. Only valid for `EDGE` endpoint configuration ty
 certificate, along with any intermediate CA certificates required to
 create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`,
 `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatename_nodejs">
 <a href="#certificatename_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Name</a>
@@ -527,8 +464,7 @@ create an unbroken chain to a certificate trusted by the intended API clients. O
     <dd>{{% md %}}The unique name to use when registering this
 certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
 `regional_certificate_name`. Required if `certificate_arn` is not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificateprivatekey_nodejs">
 <a href="#certificateprivatekey_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Private<wbr>Key</a>
@@ -538,8 +474,7 @@ certificate as an IAM server certificate. Conflicts with `certificate_arn`, `reg
     </dt>
     <dd>{{% md %}}The private key associated with the
 domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointconfiguration_nodejs">
 <a href="#endpointconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Configuration</a>
@@ -548,8 +483,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type"><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block defining API endpoint information including type. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mutualtlsauthentication_nodejs">
 <a href="#mutualtlsauthentication_nodejs" style="color: inherit; text-decoration: inherit;">mutual<wbr>Tls<wbr>Authentication</a>
@@ -558,8 +492,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regionalcertificatearn_nodejs">
 <a href="#regionalcertificatearn_nodejs" style="color: inherit; text-decoration: inherit;">regional<wbr>Certificate<wbr>Arn</a>
@@ -568,8 +501,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regionalcertificatename_nodejs">
 <a href="#regionalcertificatename_nodejs" style="color: inherit; text-decoration: inherit;">regional<wbr>Certificate<wbr>Name</a>
@@ -579,8 +511,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
     </dt>
     <dd>{{% md %}}The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
 `certificate_private_key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitypolicy_nodejs">
 <a href="#securitypolicy_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy</a>
@@ -589,8 +520,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -599,14 +529,11 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_name_python">
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
@@ -615,8 +542,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name to register
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_arn_python">
 <a href="#certificate_arn_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>arn</a>
@@ -625,8 +551,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_body_python">
 <a href="#certificate_body_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>body</a>
@@ -637,8 +562,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
     <dd>{{% md %}}The certificate issued for the domain name
 being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
 `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_chain_python">
 <a href="#certificate_chain_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>chain</a>
@@ -650,8 +574,7 @@ being registered, in PEM format. Only valid for `EDGE` endpoint configuration ty
 certificate, along with any intermediate CA certificates required to
 create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`,
 `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_name_python">
 <a href="#certificate_name_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>name</a>
@@ -662,8 +585,7 @@ create an unbroken chain to a certificate trusted by the intended API clients. O
     <dd>{{% md %}}The unique name to use when registering this
 certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
 `regional_certificate_name`. Required if `certificate_arn` is not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_private_key_python">
 <a href="#certificate_private_key_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>private_<wbr>key</a>
@@ -673,8 +595,7 @@ certificate as an IAM server certificate. Conflicts with `certificate_arn`, `reg
     </dt>
     <dd>{{% md %}}The private key associated with the
 domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_configuration_python">
 <a href="#endpoint_configuration_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>configuration</a>
@@ -683,8 +604,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type"><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block defining API endpoint information including type. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mutual_tls_authentication_python">
 <a href="#mutual_tls_authentication_python" style="color: inherit; text-decoration: inherit;">mutual_<wbr>tls_<wbr>authentication</a>
@@ -693,8 +613,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regional_certificate_arn_python">
 <a href="#regional_certificate_arn_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>certificate_<wbr>arn</a>
@@ -703,8 +622,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regional_certificate_name_python">
 <a href="#regional_certificate_name_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>certificate_<wbr>name</a>
@@ -714,8 +632,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
     </dt>
     <dd>{{% md %}}The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
 `certificate_private_key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_policy_python">
 <a href="#security_policy_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy</a>
@@ -724,8 +641,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -734,8 +650,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -746,9 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -757,8 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificateuploaddate_csharp">
 <a href="#certificateuploaddate_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Upload<wbr>Date</a>
@@ -767,8 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The upload date associated with the domain certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudfrontdomainname_csharp">
 <a href="#cloudfrontdomainname_csharp" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Domain<wbr>Name</a>
@@ -778,8 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The hostname created by Cloudfront to represent
 the distribution that implements this domain name mapping.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudfrontzoneid_csharp">
 <a href="#cloudfrontzoneid_csharp" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Zone<wbr>Id</a>
@@ -789,8 +699,7 @@ the distribution that implements this domain name mapping.
     </dt>
     <dd>{{% md %}}For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
 that can be used to create a Route53 alias record for the distribution.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -798,8 +707,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="regionaldomainname_csharp">
 <a href="#regionaldomainname_csharp" style="color: inherit; text-decoration: inherit;">Regional<wbr>Domain<wbr>Name</a>
@@ -808,8 +716,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname for the custom domain's regional endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="regionalzoneid_csharp">
 <a href="#regionalzoneid_csharp" style="color: inherit; text-decoration: inherit;">Regional<wbr>Zone<wbr>Id</a>
@@ -818,14 +725,11 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -834,8 +738,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificateuploaddate_go">
 <a href="#certificateuploaddate_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Upload<wbr>Date</a>
@@ -844,8 +747,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The upload date associated with the domain certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudfrontdomainname_go">
 <a href="#cloudfrontdomainname_go" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Domain<wbr>Name</a>
@@ -855,8 +757,7 @@ that can be used to create a Route53 alias record for the distribution.
     </dt>
     <dd>{{% md %}}The hostname created by Cloudfront to represent
 the distribution that implements this domain name mapping.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudfrontzoneid_go">
 <a href="#cloudfrontzoneid_go" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Zone<wbr>Id</a>
@@ -866,8 +767,7 @@ the distribution that implements this domain name mapping.
     </dt>
     <dd>{{% md %}}For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
 that can be used to create a Route53 alias record for the distribution.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -875,8 +775,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="regionaldomainname_go">
 <a href="#regionaldomainname_go" style="color: inherit; text-decoration: inherit;">Regional<wbr>Domain<wbr>Name</a>
@@ -885,8 +784,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname for the custom domain's regional endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="regionalzoneid_go">
 <a href="#regionalzoneid_go" style="color: inherit; text-decoration: inherit;">Regional<wbr>Zone<wbr>Id</a>
@@ -895,14 +793,11 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -911,8 +806,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificateuploaddate_nodejs">
 <a href="#certificateuploaddate_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Upload<wbr>Date</a>
@@ -921,8 +815,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The upload date associated with the domain certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudfrontdomainname_nodejs">
 <a href="#cloudfrontdomainname_nodejs" style="color: inherit; text-decoration: inherit;">cloudfront<wbr>Domain<wbr>Name</a>
@@ -932,8 +825,7 @@ that can be used to create a Route53 alias record for the distribution.
     </dt>
     <dd>{{% md %}}The hostname created by Cloudfront to represent
 the distribution that implements this domain name mapping.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudfrontzoneid_nodejs">
 <a href="#cloudfrontzoneid_nodejs" style="color: inherit; text-decoration: inherit;">cloudfront<wbr>Zone<wbr>Id</a>
@@ -943,8 +835,7 @@ the distribution that implements this domain name mapping.
     </dt>
     <dd>{{% md %}}For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
 that can be used to create a Route53 alias record for the distribution.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -952,8 +843,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="regionaldomainname_nodejs">
 <a href="#regionaldomainname_nodejs" style="color: inherit; text-decoration: inherit;">regional<wbr>Domain<wbr>Name</a>
@@ -962,8 +852,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname for the custom domain's regional endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="regionalzoneid_nodejs">
 <a href="#regionalzoneid_nodejs" style="color: inherit; text-decoration: inherit;">regional<wbr>Zone<wbr>Id</a>
@@ -972,14 +861,11 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -988,8 +874,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certificate_upload_date_python">
 <a href="#certificate_upload_date_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>upload_<wbr>date</a>
@@ -998,8 +883,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The upload date associated with the domain certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudfront_domain_name_python">
 <a href="#cloudfront_domain_name_python" style="color: inherit; text-decoration: inherit;">cloudfront_<wbr>domain_<wbr>name</a>
@@ -1009,8 +893,7 @@ that can be used to create a Route53 alias record for the distribution.
     </dt>
     <dd>{{% md %}}The hostname created by Cloudfront to represent
 the distribution that implements this domain name mapping.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudfront_zone_id_python">
 <a href="#cloudfront_zone_id_python" style="color: inherit; text-decoration: inherit;">cloudfront_<wbr>zone_<wbr>id</a>
@@ -1020,8 +903,7 @@ the distribution that implements this domain name mapping.
     </dt>
     <dd>{{% md %}}For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
 that can be used to create a Route53 alias record for the distribution.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1029,8 +911,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="regional_domain_name_python">
 <a href="#regional_domain_name_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>domain_<wbr>name</a>
@@ -1039,8 +920,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname for the custom domain's regional endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="regional_zone_id_python">
 <a href="#regional_zone_id_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>zone_<wbr>id</a>
@@ -1049,8 +929,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1177,9 +1056,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1188,8 +1065,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatearn_csharp">
 <a href="#state_certificatearn_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
@@ -1198,8 +1074,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatebody_csharp">
 <a href="#state_certificatebody_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Body</a>
@@ -1210,8 +1085,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The certificate issued for the domain name
 being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
 `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatechain_csharp">
 <a href="#state_certificatechain_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
@@ -1223,8 +1097,7 @@ being registered, in PEM format. Only valid for `EDGE` endpoint configuration ty
 certificate, along with any intermediate CA certificates required to
 create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`,
 `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatename_csharp">
 <a href="#state_certificatename_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Name</a>
@@ -1235,8 +1108,7 @@ create an unbroken chain to a certificate trusted by the intended API clients. O
     <dd>{{% md %}}The unique name to use when registering this
 certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
 `regional_certificate_name`. Required if `certificate_arn` is not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificateprivatekey_csharp">
 <a href="#state_certificateprivatekey_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Private<wbr>Key</a>
@@ -1246,8 +1118,7 @@ certificate as an IAM server certificate. Conflicts with `certificate_arn`, `reg
     </dt>
     <dd>{{% md %}}The private key associated with the
 domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificateuploaddate_csharp">
 <a href="#state_certificateuploaddate_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Upload<wbr>Date</a>
@@ -1256,8 +1127,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The upload date associated with the domain certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudfrontdomainname_csharp">
 <a href="#state_cloudfrontdomainname_csharp" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Domain<wbr>Name</a>
@@ -1267,8 +1137,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
     </dt>
     <dd>{{% md %}}The hostname created by Cloudfront to represent
 the distribution that implements this domain name mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudfrontzoneid_csharp">
 <a href="#state_cloudfrontzoneid_csharp" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Zone<wbr>Id</a>
@@ -1278,8 +1147,7 @@ the distribution that implements this domain name mapping.
     </dt>
     <dd>{{% md %}}For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
 that can be used to create a Route53 alias record for the distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_csharp">
 <a href="#state_domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1288,8 +1156,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name to register
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointconfiguration_csharp">
 <a href="#state_endpointconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configuration</a>
@@ -1298,8 +1165,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type"><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block defining API endpoint information including type. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mutualtlsauthentication_csharp">
 <a href="#state_mutualtlsauthentication_csharp" style="color: inherit; text-decoration: inherit;">Mutual<wbr>Tls<wbr>Authentication</a>
@@ -1308,8 +1174,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regionalcertificatearn_csharp">
 <a href="#state_regionalcertificatearn_csharp" style="color: inherit; text-decoration: inherit;">Regional<wbr>Certificate<wbr>Arn</a>
@@ -1318,8 +1183,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regionalcertificatename_csharp">
 <a href="#state_regionalcertificatename_csharp" style="color: inherit; text-decoration: inherit;">Regional<wbr>Certificate<wbr>Name</a>
@@ -1329,8 +1193,7 @@ that can be used to create a Route53 alias record for the distribution.
     </dt>
     <dd>{{% md %}}The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
 `certificate_private_key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regionaldomainname_csharp">
 <a href="#state_regionaldomainname_csharp" style="color: inherit; text-decoration: inherit;">Regional<wbr>Domain<wbr>Name</a>
@@ -1339,8 +1202,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname for the custom domain's regional endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regionalzoneid_csharp">
 <a href="#state_regionalzoneid_csharp" style="color: inherit; text-decoration: inherit;">Regional<wbr>Zone<wbr>Id</a>
@@ -1349,8 +1211,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitypolicy_csharp">
 <a href="#state_securitypolicy_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy</a>
@@ -1359,8 +1220,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1369,14 +1229,11 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1385,8 +1242,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatearn_go">
 <a href="#state_certificatearn_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Arn</a>
@@ -1395,8 +1251,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatebody_go">
 <a href="#state_certificatebody_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Body</a>
@@ -1407,8 +1262,7 @@ that can be used to create a Route53 alias record for the distribution.
     <dd>{{% md %}}The certificate issued for the domain name
 being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
 `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatechain_go">
 <a href="#state_certificatechain_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Chain</a>
@@ -1420,8 +1274,7 @@ being registered, in PEM format. Only valid for `EDGE` endpoint configuration ty
 certificate, along with any intermediate CA certificates required to
 create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`,
 `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatename_go">
 <a href="#state_certificatename_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Name</a>
@@ -1432,8 +1285,7 @@ create an unbroken chain to a certificate trusted by the intended API clients. O
     <dd>{{% md %}}The unique name to use when registering this
 certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
 `regional_certificate_name`. Required if `certificate_arn` is not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificateprivatekey_go">
 <a href="#state_certificateprivatekey_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Private<wbr>Key</a>
@@ -1443,8 +1295,7 @@ certificate as an IAM server certificate. Conflicts with `certificate_arn`, `reg
     </dt>
     <dd>{{% md %}}The private key associated with the
 domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificateuploaddate_go">
 <a href="#state_certificateuploaddate_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Upload<wbr>Date</a>
@@ -1453,8 +1304,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The upload date associated with the domain certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudfrontdomainname_go">
 <a href="#state_cloudfrontdomainname_go" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Domain<wbr>Name</a>
@@ -1464,8 +1314,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
     </dt>
     <dd>{{% md %}}The hostname created by Cloudfront to represent
 the distribution that implements this domain name mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudfrontzoneid_go">
 <a href="#state_cloudfrontzoneid_go" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Zone<wbr>Id</a>
@@ -1475,8 +1324,7 @@ the distribution that implements this domain name mapping.
     </dt>
     <dd>{{% md %}}For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
 that can be used to create a Route53 alias record for the distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainname_go">
 <a href="#state_domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -1485,8 +1333,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name to register
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointconfiguration_go">
 <a href="#state_endpointconfiguration_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Configuration</a>
@@ -1495,8 +1342,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type"><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block defining API endpoint information including type. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mutualtlsauthentication_go">
 <a href="#state_mutualtlsauthentication_go" style="color: inherit; text-decoration: inherit;">Mutual<wbr>Tls<wbr>Authentication</a>
@@ -1505,8 +1351,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regionalcertificatearn_go">
 <a href="#state_regionalcertificatearn_go" style="color: inherit; text-decoration: inherit;">Regional<wbr>Certificate<wbr>Arn</a>
@@ -1515,8 +1360,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regionalcertificatename_go">
 <a href="#state_regionalcertificatename_go" style="color: inherit; text-decoration: inherit;">Regional<wbr>Certificate<wbr>Name</a>
@@ -1526,8 +1370,7 @@ that can be used to create a Route53 alias record for the distribution.
     </dt>
     <dd>{{% md %}}The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
 `certificate_private_key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regionaldomainname_go">
 <a href="#state_regionaldomainname_go" style="color: inherit; text-decoration: inherit;">Regional<wbr>Domain<wbr>Name</a>
@@ -1536,8 +1379,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname for the custom domain's regional endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regionalzoneid_go">
 <a href="#state_regionalzoneid_go" style="color: inherit; text-decoration: inherit;">Regional<wbr>Zone<wbr>Id</a>
@@ -1546,8 +1388,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitypolicy_go">
 <a href="#state_securitypolicy_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy</a>
@@ -1556,8 +1397,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1566,14 +1406,11 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1582,8 +1419,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatearn_nodejs">
 <a href="#state_certificatearn_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Arn</a>
@@ -1592,8 +1428,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatebody_nodejs">
 <a href="#state_certificatebody_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Body</a>
@@ -1604,8 +1439,7 @@ that can be used to create a Route53 alias record for the distribution.
     <dd>{{% md %}}The certificate issued for the domain name
 being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
 `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatechain_nodejs">
 <a href="#state_certificatechain_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Chain</a>
@@ -1617,8 +1451,7 @@ being registered, in PEM format. Only valid for `EDGE` endpoint configuration ty
 certificate, along with any intermediate CA certificates required to
 create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`,
 `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatename_nodejs">
 <a href="#state_certificatename_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Name</a>
@@ -1629,8 +1462,7 @@ create an unbroken chain to a certificate trusted by the intended API clients. O
     <dd>{{% md %}}The unique name to use when registering this
 certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
 `regional_certificate_name`. Required if `certificate_arn` is not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificateprivatekey_nodejs">
 <a href="#state_certificateprivatekey_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Private<wbr>Key</a>
@@ -1640,8 +1472,7 @@ certificate as an IAM server certificate. Conflicts with `certificate_arn`, `reg
     </dt>
     <dd>{{% md %}}The private key associated with the
 domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificateuploaddate_nodejs">
 <a href="#state_certificateuploaddate_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Upload<wbr>Date</a>
@@ -1650,8 +1481,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The upload date associated with the domain certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudfrontdomainname_nodejs">
 <a href="#state_cloudfrontdomainname_nodejs" style="color: inherit; text-decoration: inherit;">cloudfront<wbr>Domain<wbr>Name</a>
@@ -1661,8 +1491,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
     </dt>
     <dd>{{% md %}}The hostname created by Cloudfront to represent
 the distribution that implements this domain name mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudfrontzoneid_nodejs">
 <a href="#state_cloudfrontzoneid_nodejs" style="color: inherit; text-decoration: inherit;">cloudfront<wbr>Zone<wbr>Id</a>
@@ -1672,8 +1501,7 @@ the distribution that implements this domain name mapping.
     </dt>
     <dd>{{% md %}}For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
 that can be used to create a Route53 alias record for the distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainname_nodejs">
 <a href="#state_domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
@@ -1682,8 +1510,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name to register
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointconfiguration_nodejs">
 <a href="#state_endpointconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Configuration</a>
@@ -1692,8 +1519,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type"><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block defining API endpoint information including type. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mutualtlsauthentication_nodejs">
 <a href="#state_mutualtlsauthentication_nodejs" style="color: inherit; text-decoration: inherit;">mutual<wbr>Tls<wbr>Authentication</a>
@@ -1702,8 +1528,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regionalcertificatearn_nodejs">
 <a href="#state_regionalcertificatearn_nodejs" style="color: inherit; text-decoration: inherit;">regional<wbr>Certificate<wbr>Arn</a>
@@ -1712,8 +1537,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regionalcertificatename_nodejs">
 <a href="#state_regionalcertificatename_nodejs" style="color: inherit; text-decoration: inherit;">regional<wbr>Certificate<wbr>Name</a>
@@ -1723,8 +1547,7 @@ that can be used to create a Route53 alias record for the distribution.
     </dt>
     <dd>{{% md %}}The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
 `certificate_private_key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regionaldomainname_nodejs">
 <a href="#state_regionaldomainname_nodejs" style="color: inherit; text-decoration: inherit;">regional<wbr>Domain<wbr>Name</a>
@@ -1733,8 +1556,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname for the custom domain's regional endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regionalzoneid_nodejs">
 <a href="#state_regionalzoneid_nodejs" style="color: inherit; text-decoration: inherit;">regional<wbr>Zone<wbr>Id</a>
@@ -1743,8 +1565,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitypolicy_nodejs">
 <a href="#state_securitypolicy_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy</a>
@@ -1753,8 +1574,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1763,14 +1583,11 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1779,8 +1596,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_arn_python">
 <a href="#state_certificate_arn_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>arn</a>
@@ -1789,8 +1605,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_body_python">
 <a href="#state_certificate_body_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>body</a>
@@ -1801,8 +1616,7 @@ that can be used to create a Route53 alias record for the distribution.
     <dd>{{% md %}}The certificate issued for the domain name
 being registered, in PEM format. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
 `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_chain_python">
 <a href="#state_certificate_chain_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>chain</a>
@@ -1814,8 +1628,7 @@ being registered, in PEM format. Only valid for `EDGE` endpoint configuration ty
 certificate, along with any intermediate CA certificates required to
 create an unbroken chain to a certificate trusted by the intended API clients. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`,
 `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_name_python">
 <a href="#state_certificate_name_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>name</a>
@@ -1826,8 +1639,7 @@ create an unbroken chain to a certificate trusted by the intended API clients. O
     <dd>{{% md %}}The unique name to use when registering this
 certificate as an IAM server certificate. Conflicts with `certificate_arn`, `regional_certificate_arn`, and
 `regional_certificate_name`. Required if `certificate_arn` is not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_private_key_python">
 <a href="#state_certificate_private_key_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>private_<wbr>key</a>
@@ -1837,8 +1649,7 @@ certificate as an IAM server certificate. Conflicts with `certificate_arn`, `reg
     </dt>
     <dd>{{% md %}}The private key associated with the
 domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_upload_date_python">
 <a href="#state_certificate_upload_date_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>upload_<wbr>date</a>
@@ -1847,8 +1658,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The upload date associated with the domain certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudfront_domain_name_python">
 <a href="#state_cloudfront_domain_name_python" style="color: inherit; text-decoration: inherit;">cloudfront_<wbr>domain_<wbr>name</a>
@@ -1858,8 +1668,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
     </dt>
     <dd>{{% md %}}The hostname created by Cloudfront to represent
 the distribution that implements this domain name mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloudfront_zone_id_python">
 <a href="#state_cloudfront_zone_id_python" style="color: inherit; text-decoration: inherit;">cloudfront_<wbr>zone_<wbr>id</a>
@@ -1869,8 +1678,7 @@ the distribution that implements this domain name mapping.
     </dt>
     <dd>{{% md %}}For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
 that can be used to create a Route53 alias record for the distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_name_python">
 <a href="#state_domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
@@ -1879,8 +1687,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully-qualified domain name to register
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_configuration_python">
 <a href="#state_endpoint_configuration_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>configuration</a>
@@ -1889,8 +1696,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type"><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block defining API endpoint information including type. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mutual_tls_authentication_python">
 <a href="#state_mutual_tls_authentication_python" style="color: inherit; text-decoration: inherit;">mutual_<wbr>tls_<wbr>authentication</a>
@@ -1899,8 +1705,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The mutual TLS authentication configuration for the domain name. Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regional_certificate_arn_python">
 <a href="#state_regional_certificate_arn_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>certificate_<wbr>arn</a>
@@ -1909,8 +1714,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regional_certificate_name_python">
 <a href="#state_regional_certificate_name_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>certificate_<wbr>name</a>
@@ -1920,8 +1724,7 @@ that can be used to create a Route53 alias record for the distribution.
     </dt>
     <dd>{{% md %}}The user-friendly name of the certificate that will be used by regional endpoint for this domain name. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and
 `certificate_private_key`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regional_domain_name_python">
 <a href="#state_regional_domain_name_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>domain_<wbr>name</a>
@@ -1930,8 +1733,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname for the custom domain's regional endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regional_zone_id_python">
 <a href="#state_regional_zone_id_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>zone_<wbr>id</a>
@@ -1940,8 +1742,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_policy_python">
 <a href="#state_security_policy_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy</a>
@@ -1950,8 +1751,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1960,8 +1760,7 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1976,9 +1775,7 @@ that can be used to create a Route53 alias record for the distribution.
 <h4 id="domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="types_csharp">
 <a href="#types_csharp" style="color: inherit; text-decoration: inherit;">Types</a>
@@ -1987,14 +1784,11 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of endpoint types. This resource currently only supports managing a single value. Valid values: `EDGE` or `REGIONAL`. If unspecified, defaults to `EDGE`. Must be declared as `REGIONAL` in non-Commercial partitions. Refer to the [documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/create-regional-api.html) for more information on the difference between edge-optimized and regional APIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="types_go">
 <a href="#types_go" style="color: inherit; text-decoration: inherit;">Types</a>
@@ -2003,14 +1797,11 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of endpoint types. This resource currently only supports managing a single value. Valid values: `EDGE` or `REGIONAL`. If unspecified, defaults to `EDGE`. Must be declared as `REGIONAL` in non-Commercial partitions. Refer to the [documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/create-regional-api.html) for more information on the difference between edge-optimized and regional APIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="types_nodejs">
 <a href="#types_nodejs" style="color: inherit; text-decoration: inherit;">types</a>
@@ -2019,14 +1810,11 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of endpoint types. This resource currently only supports managing a single value. Valid values: `EDGE` or `REGIONAL`. If unspecified, defaults to `EDGE`. Must be declared as `REGIONAL` in non-Commercial partitions. Refer to the [documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/create-regional-api.html) for more information on the difference between edge-optimized and regional APIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="types_python">
 <a href="#types_python" style="color: inherit; text-decoration: inherit;">types</a>
@@ -2035,16 +1823,13 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A list of endpoint types. This resource currently only supports managing a single value. Valid values: `EDGE` or `REGIONAL`. If unspecified, defaults to `EDGE`. Must be declared as `REGIONAL` in non-Commercial partitions. Refer to the [documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/create-regional-api.html) for more information on the difference between edge-optimized and regional APIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="truststoreuri_csharp">
 <a href="#truststoreuri_csharp" style="color: inherit; text-decoration: inherit;">Truststore<wbr>Uri</a>
@@ -2054,8 +1839,7 @@ that can be used to create a Route53 alias record for the distribution.
     </dt>
     <dd>{{% md %}}An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`.
 The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="truststoreversion_csharp">
 <a href="#truststoreversion_csharp" style="color: inherit; text-decoration: inherit;">Truststore<wbr>Version</a>
@@ -2064,14 +1848,11 @@ The truststore can contain certificates from public or private certificate autho
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="truststoreuri_go">
 <a href="#truststoreuri_go" style="color: inherit; text-decoration: inherit;">Truststore<wbr>Uri</a>
@@ -2081,8 +1862,7 @@ The truststore can contain certificates from public or private certificate autho
     </dt>
     <dd>{{% md %}}An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`.
 The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="truststoreversion_go">
 <a href="#truststoreversion_go" style="color: inherit; text-decoration: inherit;">Truststore<wbr>Version</a>
@@ -2091,14 +1871,11 @@ The truststore can contain certificates from public or private certificate autho
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="truststoreuri_nodejs">
 <a href="#truststoreuri_nodejs" style="color: inherit; text-decoration: inherit;">truststore<wbr>Uri</a>
@@ -2108,8 +1885,7 @@ The truststore can contain certificates from public or private certificate autho
     </dt>
     <dd>{{% md %}}An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`.
 The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="truststoreversion_nodejs">
 <a href="#truststoreversion_nodejs" style="color: inherit; text-decoration: inherit;">truststore<wbr>Version</a>
@@ -2118,14 +1894,11 @@ The truststore can contain certificates from public or private certificate autho
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="truststore_uri_python">
 <a href="#truststore_uri_python" style="color: inherit; text-decoration: inherit;">truststore_<wbr>uri</a>
@@ -2135,8 +1908,7 @@ The truststore can contain certificates from public or private certificate autho
     </dt>
     <dd>{{% md %}}An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`.
 The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="truststore_version_python">
 <a href="#truststore_version_python" style="color: inherit; text-decoration: inherit;">truststore_<wbr>version</a>
@@ -2145,8 +1917,7 @@ The truststore can contain certificates from public or private certificate autho
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2157,6 +1928,6 @@ The truststore can contain certificates from public or private certificate autho
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

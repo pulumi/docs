@@ -14,11 +14,17 @@ Provides a VPC/Subnet/ENI Flow Log to capture IP traffic for a specific network
 interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucket.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### CloudWatch Logging
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -80,9 +86,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -128,9 +137,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -176,9 +188,12 @@ example_role_policy = aws.iam.RolePolicy("exampleRolePolicy",
 """)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -227,10 +242,17 @@ const exampleRolePolicy = new aws.iam.RolePolicy("exampleRolePolicy", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### S3 Logging
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -254,9 +276,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -286,9 +311,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -301,9 +329,12 @@ example_flow_log = aws.ec2.FlowLog("exampleFlowLog",
     vpc_id=aws_vpc["example"]["id"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -318,9 +349,16 @@ const exampleFlowLog = new aws.ec2.FlowLog("exampleFlowLog", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a FlowLog Resource {#create}
@@ -345,9 +383,7 @@ const exampleFlowLog = new aws.ec2.FlowLog("exampleFlowLog", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -355,9 +391,7 @@ const exampleFlowLog = new aws.ec2.FlowLog("exampleFlowLog", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -365,9 +399,7 @@ const exampleFlowLog = new aws.ec2.FlowLog("exampleFlowLog", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -375,10 +407,7 @@ const exampleFlowLog = new aws.ec2.FlowLog("exampleFlowLog", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -404,9 +433,7 @@ const exampleFlowLog = new aws.ec2.FlowLog("exampleFlowLog", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -414,9 +441,7 @@ const exampleFlowLog = new aws.ec2.FlowLog("exampleFlowLog", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -424,9 +449,7 @@ const exampleFlowLog = new aws.ec2.FlowLog("exampleFlowLog", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -434,9 +457,7 @@ const exampleFlowLog = new aws.ec2.FlowLog("exampleFlowLog", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -444,18 +465,13 @@ const exampleFlowLog = new aws.ec2.FlowLog("exampleFlowLog", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -463,9 +479,7 @@ const exampleFlowLog = new aws.ec2.FlowLog("exampleFlowLog", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -473,9 +487,7 @@ const exampleFlowLog = new aws.ec2.FlowLog("exampleFlowLog", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -483,10 +495,7 @@ const exampleFlowLog = new aws.ec2.FlowLog("exampleFlowLog", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -501,9 +510,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="traffictype_csharp">
 <a href="#traffictype_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Type</a>
@@ -512,8 +519,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of traffic to capture. Valid values: `ACCEPT`,`REJECT`, `ALL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eniid_csharp">
 <a href="#eniid_csharp" style="color: inherit; text-decoration: inherit;">Eni<wbr>Id</a>
@@ -522,8 +528,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elastic Network Interface ID to attach to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamrolearn_csharp">
 <a href="#iamrolearn_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
@@ -532,8 +537,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the IAM role that's used to post flow logs to a CloudWatch Logs log group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logdestination_csharp">
 <a href="#logdestination_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Destination</a>
@@ -542,8 +546,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the logging destination.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logdestinationtype_csharp">
 <a href="#logdestinationtype_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Destination<wbr>Type</a>
@@ -552,8 +555,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the logging destination. Valid values: `cloud-watch-logs`, `s3`. Default: `cloud-watch-logs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logformat_csharp">
 <a href="#logformat_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Format</a>
@@ -562,8 +564,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fields to include in the flow log record, in the order in which they should appear.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="loggroupname_csharp">
 <a href="#loggroupname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
@@ -572,8 +573,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `log_destination` instead. The name of the CloudWatch log group.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;log_destination&#39; argument instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;log_destination&#39; argument instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="maxaggregationinterval_csharp">
 <a href="#maxaggregationinterval_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Aggregation<wbr>Interval</a>
@@ -585,8 +585,7 @@ The FlowLog resource accepts the following [input]({{< relref "/docs/intro/conce
 during which a flow of packets is captured and aggregated into a flow
 log record. Valid Values: `60` seconds (1 minute) or `600` seconds (10
 minutes). Default: `600`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -595,8 +594,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -605,8 +603,7 @@ minutes). Default: `600`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -615,14 +612,11 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VPC ID to attach to
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="traffictype_go">
 <a href="#traffictype_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Type</a>
@@ -631,8 +625,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of traffic to capture. Valid values: `ACCEPT`,`REJECT`, `ALL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eniid_go">
 <a href="#eniid_go" style="color: inherit; text-decoration: inherit;">Eni<wbr>Id</a>
@@ -641,8 +634,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elastic Network Interface ID to attach to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamrolearn_go">
 <a href="#iamrolearn_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
@@ -651,8 +643,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the IAM role that's used to post flow logs to a CloudWatch Logs log group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logdestination_go">
 <a href="#logdestination_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Destination</a>
@@ -661,8 +652,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the logging destination.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logdestinationtype_go">
 <a href="#logdestinationtype_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Destination<wbr>Type</a>
@@ -671,8 +661,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the logging destination. Valid values: `cloud-watch-logs`, `s3`. Default: `cloud-watch-logs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logformat_go">
 <a href="#logformat_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Format</a>
@@ -681,8 +670,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fields to include in the flow log record, in the order in which they should appear.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="loggroupname_go">
 <a href="#loggroupname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
@@ -691,8 +679,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `log_destination` instead. The name of the CloudWatch log group.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;log_destination&#39; argument instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;log_destination&#39; argument instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="maxaggregationinterval_go">
 <a href="#maxaggregationinterval_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Aggregation<wbr>Interval</a>
@@ -704,8 +691,7 @@ minutes). Default: `600`.
 during which a flow of packets is captured and aggregated into a flow
 log record. Valid Values: `60` seconds (1 minute) or `600` seconds (10
 minutes). Default: `600`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -714,8 +700,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -724,8 +709,7 @@ minutes). Default: `600`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -734,14 +718,11 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VPC ID to attach to
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="traffictype_nodejs">
 <a href="#traffictype_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Type</a>
@@ -750,8 +731,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of traffic to capture. Valid values: `ACCEPT`,`REJECT`, `ALL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eniid_nodejs">
 <a href="#eniid_nodejs" style="color: inherit; text-decoration: inherit;">eni<wbr>Id</a>
@@ -760,8 +740,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elastic Network Interface ID to attach to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamrolearn_nodejs">
 <a href="#iamrolearn_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Role<wbr>Arn</a>
@@ -770,8 +749,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the IAM role that's used to post flow logs to a CloudWatch Logs log group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logdestination_nodejs">
 <a href="#logdestination_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Destination</a>
@@ -780,8 +758,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the logging destination.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logdestinationtype_nodejs">
 <a href="#logdestinationtype_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Destination<wbr>Type</a>
@@ -790,8 +767,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the logging destination. Valid values: `cloud-watch-logs`, `s3`. Default: `cloud-watch-logs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logformat_nodejs">
 <a href="#logformat_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Format</a>
@@ -800,8 +776,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fields to include in the flow log record, in the order in which they should appear.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="loggroupname_nodejs">
 <a href="#loggroupname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Name</a>
@@ -810,8 +785,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `log_destination` instead. The name of the CloudWatch log group.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;log_destination&#39; argument instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;log_destination&#39; argument instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="maxaggregationinterval_nodejs">
 <a href="#maxaggregationinterval_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Aggregation<wbr>Interval</a>
@@ -823,8 +797,7 @@ minutes). Default: `600`.
 during which a flow of packets is captured and aggregated into a flow
 log record. Valid Values: `60` seconds (1 minute) or `600` seconds (10
 minutes). Default: `600`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -833,8 +806,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -843,8 +815,7 @@ minutes). Default: `600`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -853,14 +824,11 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VPC ID to attach to
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="traffic_type_python">
 <a href="#traffic_type_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>type</a>
@@ -869,8 +837,7 @@ minutes). Default: `600`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of traffic to capture. Valid values: `ACCEPT`,`REJECT`, `ALL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eni_id_python">
 <a href="#eni_id_python" style="color: inherit; text-decoration: inherit;">eni_<wbr>id</a>
@@ -879,8 +846,7 @@ minutes). Default: `600`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Elastic Network Interface ID to attach to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_role_arn_python">
 <a href="#iam_role_arn_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>role_<wbr>arn</a>
@@ -889,8 +855,7 @@ minutes). Default: `600`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for the IAM role that's used to post flow logs to a CloudWatch Logs log group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_destination_python">
 <a href="#log_destination_python" style="color: inherit; text-decoration: inherit;">log_<wbr>destination</a>
@@ -899,8 +864,7 @@ minutes). Default: `600`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the logging destination.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_destination_type_python">
 <a href="#log_destination_type_python" style="color: inherit; text-decoration: inherit;">log_<wbr>destination_<wbr>type</a>
@@ -909,8 +873,7 @@ minutes). Default: `600`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the logging destination. Valid values: `cloud-watch-logs`, `s3`. Default: `cloud-watch-logs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_format_python">
 <a href="#log_format_python" style="color: inherit; text-decoration: inherit;">log_<wbr>format</a>
@@ -919,8 +882,7 @@ minutes). Default: `600`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fields to include in the flow log record, in the order in which they should appear.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="log_group_name_python">
 <a href="#log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
@@ -929,8 +891,7 @@ minutes). Default: `600`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `log_destination` instead. The name of the CloudWatch log group.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;log_destination&#39; argument instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;log_destination&#39; argument instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="max_aggregation_interval_python">
 <a href="#max_aggregation_interval_python" style="color: inherit; text-decoration: inherit;">max_<wbr>aggregation_<wbr>interval</a>
@@ -942,8 +903,7 @@ minutes). Default: `600`.
 during which a flow of packets is captured and aggregated into a flow
 log record. Valid Values: `60` seconds (1 minute) or `600` seconds (10
 minutes). Default: `600`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -952,8 +912,7 @@ minutes). Default: `600`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -962,8 +921,7 @@ minutes). Default: `600`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -972,8 +930,7 @@ minutes). Default: `600`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}VPC ID to attach to
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -984,9 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -995,8 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Flow Log.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1004,14 +958,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1020,8 +971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Flow Log.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1029,14 +979,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1045,8 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Flow Log.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1054,14 +1000,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1070,8 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Flow Log.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1079,8 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1207,9 +1148,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1218,8 +1157,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Flow Log.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eniid_csharp">
 <a href="#state_eniid_csharp" style="color: inherit; text-decoration: inherit;">Eni<wbr>Id</a>
@@ -1228,8 +1166,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elastic Network Interface ID to attach to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamrolearn_csharp">
 <a href="#state_iamrolearn_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
@@ -1238,8 +1175,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the IAM role that's used to post flow logs to a CloudWatch Logs log group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logdestination_csharp">
 <a href="#state_logdestination_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Destination</a>
@@ -1248,8 +1184,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the logging destination.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logdestinationtype_csharp">
 <a href="#state_logdestinationtype_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Destination<wbr>Type</a>
@@ -1258,8 +1193,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the logging destination. Valid values: `cloud-watch-logs`, `s3`. Default: `cloud-watch-logs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logformat_csharp">
 <a href="#state_logformat_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Format</a>
@@ -1268,8 +1202,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fields to include in the flow log record, in the order in which they should appear.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_loggroupname_csharp">
 <a href="#state_loggroupname_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
@@ -1278,8 +1211,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `log_destination` instead. The name of the CloudWatch log group.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;log_destination&#39; argument instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;log_destination&#39; argument instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxaggregationinterval_csharp">
 <a href="#state_maxaggregationinterval_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Aggregation<wbr>Interval</a>
@@ -1291,8 +1223,7 @@ The following state arguments are supported:
 during which a flow of packets is captured and aggregated into a flow
 log record. Valid Values: `60` seconds (1 minute) or `600` seconds (10
 minutes). Default: `600`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_csharp">
 <a href="#state_subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1301,8 +1232,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1311,8 +1241,7 @@ minutes). Default: `600`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_traffictype_csharp">
 <a href="#state_traffictype_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Type</a>
@@ -1321,8 +1250,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of traffic to capture. Valid values: `ACCEPT`,`REJECT`, `ALL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_csharp">
 <a href="#state_vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1331,14 +1259,11 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VPC ID to attach to
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1347,8 +1272,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Flow Log.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eniid_go">
 <a href="#state_eniid_go" style="color: inherit; text-decoration: inherit;">Eni<wbr>Id</a>
@@ -1357,8 +1281,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elastic Network Interface ID to attach to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamrolearn_go">
 <a href="#state_iamrolearn_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Role<wbr>Arn</a>
@@ -1367,8 +1290,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the IAM role that's used to post flow logs to a CloudWatch Logs log group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logdestination_go">
 <a href="#state_logdestination_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Destination</a>
@@ -1377,8 +1299,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the logging destination.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logdestinationtype_go">
 <a href="#state_logdestinationtype_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Destination<wbr>Type</a>
@@ -1387,8 +1308,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the logging destination. Valid values: `cloud-watch-logs`, `s3`. Default: `cloud-watch-logs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logformat_go">
 <a href="#state_logformat_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Format</a>
@@ -1397,8 +1317,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fields to include in the flow log record, in the order in which they should appear.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_loggroupname_go">
 <a href="#state_loggroupname_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Group<wbr>Name</a>
@@ -1407,8 +1326,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `log_destination` instead. The name of the CloudWatch log group.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;log_destination&#39; argument instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;log_destination&#39; argument instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxaggregationinterval_go">
 <a href="#state_maxaggregationinterval_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Aggregation<wbr>Interval</a>
@@ -1420,8 +1338,7 @@ minutes). Default: `600`.
 during which a flow of packets is captured and aggregated into a flow
 log record. Valid Values: `60` seconds (1 minute) or `600` seconds (10
 minutes). Default: `600`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_go">
 <a href="#state_subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1430,8 +1347,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1440,8 +1356,7 @@ minutes). Default: `600`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_traffictype_go">
 <a href="#state_traffictype_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Type</a>
@@ -1450,8 +1365,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of traffic to capture. Valid values: `ACCEPT`,`REJECT`, `ALL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_go">
 <a href="#state_vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1460,14 +1374,11 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VPC ID to attach to
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1476,8 +1387,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Flow Log.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eniid_nodejs">
 <a href="#state_eniid_nodejs" style="color: inherit; text-decoration: inherit;">eni<wbr>Id</a>
@@ -1486,8 +1396,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elastic Network Interface ID to attach to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iamrolearn_nodejs">
 <a href="#state_iamrolearn_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Role<wbr>Arn</a>
@@ -1496,8 +1405,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the IAM role that's used to post flow logs to a CloudWatch Logs log group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logdestination_nodejs">
 <a href="#state_logdestination_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Destination</a>
@@ -1506,8 +1414,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the logging destination.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logdestinationtype_nodejs">
 <a href="#state_logdestinationtype_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Destination<wbr>Type</a>
@@ -1516,8 +1423,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the logging destination. Valid values: `cloud-watch-logs`, `s3`. Default: `cloud-watch-logs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logformat_nodejs">
 <a href="#state_logformat_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Format</a>
@@ -1526,8 +1432,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fields to include in the flow log record, in the order in which they should appear.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_loggroupname_nodejs">
 <a href="#state_loggroupname_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group<wbr>Name</a>
@@ -1536,8 +1441,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `log_destination` instead. The name of the CloudWatch log group.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;log_destination&#39; argument instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;log_destination&#39; argument instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxaggregationinterval_nodejs">
 <a href="#state_maxaggregationinterval_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Aggregation<wbr>Interval</a>
@@ -1549,8 +1453,7 @@ minutes). Default: `600`.
 during which a flow of packets is captured and aggregated into a flow
 log record. Valid Values: `60` seconds (1 minute) or `600` seconds (10
 minutes). Default: `600`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_nodejs">
 <a href="#state_subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -1559,8 +1462,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1569,8 +1471,7 @@ minutes). Default: `600`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_traffictype_nodejs">
 <a href="#state_traffictype_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Type</a>
@@ -1579,8 +1480,7 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of traffic to capture. Valid values: `ACCEPT`,`REJECT`, `ALL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_nodejs">
 <a href="#state_vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -1589,14 +1489,11 @@ minutes). Default: `600`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VPC ID to attach to
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1605,8 +1502,7 @@ minutes). Default: `600`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Flow Log.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eni_id_python">
 <a href="#state_eni_id_python" style="color: inherit; text-decoration: inherit;">eni_<wbr>id</a>
@@ -1615,8 +1511,7 @@ minutes). Default: `600`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Elastic Network Interface ID to attach to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iam_role_arn_python">
 <a href="#state_iam_role_arn_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>role_<wbr>arn</a>
@@ -1625,8 +1520,7 @@ minutes). Default: `600`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for the IAM role that's used to post flow logs to a CloudWatch Logs log group
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_destination_python">
 <a href="#state_log_destination_python" style="color: inherit; text-decoration: inherit;">log_<wbr>destination</a>
@@ -1635,8 +1529,7 @@ minutes). Default: `600`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the logging destination.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_destination_type_python">
 <a href="#state_log_destination_type_python" style="color: inherit; text-decoration: inherit;">log_<wbr>destination_<wbr>type</a>
@@ -1645,8 +1538,7 @@ minutes). Default: `600`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the logging destination. Valid values: `cloud-watch-logs`, `s3`. Default: `cloud-watch-logs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_format_python">
 <a href="#state_log_format_python" style="color: inherit; text-decoration: inherit;">log_<wbr>format</a>
@@ -1655,8 +1547,7 @@ minutes). Default: `600`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fields to include in the flow log record, in the order in which they should appear.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_log_group_name_python">
 <a href="#state_log_group_name_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group_<wbr>name</a>
@@ -1665,8 +1556,7 @@ minutes). Default: `600`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}*Deprecated:* Use `log_destination` instead. The name of the CloudWatch log group.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;log_destination&#39; argument instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;log_destination&#39; argument instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_aggregation_interval_python">
 <a href="#state_max_aggregation_interval_python" style="color: inherit; text-decoration: inherit;">max_<wbr>aggregation_<wbr>interval</a>
@@ -1678,8 +1568,7 @@ minutes). Default: `600`.
 during which a flow of packets is captured and aggregated into a flow
 log record. Valid Values: `60` seconds (1 minute) or `600` seconds (10
 minutes). Default: `600`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_id_python">
 <a href="#state_subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -1688,8 +1577,7 @@ minutes). Default: `600`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1698,8 +1586,7 @@ minutes). Default: `600`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_traffic_type_python">
 <a href="#state_traffic_type_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>type</a>
@@ -1708,8 +1595,7 @@ minutes). Default: `600`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of traffic to capture. Valid values: `ACCEPT`,`REJECT`, `ALL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_id_python">
 <a href="#state_vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -1718,8 +1604,7 @@ minutes). Default: `600`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}VPC ID to attach to
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1745,6 +1630,6 @@ Flow Logs can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

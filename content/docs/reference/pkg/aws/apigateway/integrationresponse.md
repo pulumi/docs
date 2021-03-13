@@ -16,11 +16,17 @@ Provides an HTTP Method Integration Response for an API Gateway Resource.
 you might need to add an explicit `depends_on` for clean runs.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -81,9 +87,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -154,9 +163,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -196,9 +208,12 @@ my_demo_integration_response = aws.apigateway.IntegrationResponse("myDemoIntegra
     })
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -244,9 +259,16 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("myDemo
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a IntegrationResponse Resource {#create}
@@ -271,9 +293,7 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("myDemo
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -281,9 +301,7 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("myDemo
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -291,9 +309,7 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("myDemo
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -301,10 +317,7 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("myDemo
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -330,9 +343,7 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("myDemo
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -340,9 +351,7 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("myDemo
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -350,9 +359,7 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("myDemo
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -360,9 +367,7 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("myDemo
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -370,18 +375,13 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("myDemo
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -389,9 +389,7 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("myDemo
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -399,9 +397,7 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("myDemo
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -409,10 +405,7 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("myDemo
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -427,9 +420,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httpmethod_csharp">
 <a href="#httpmethod_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -438,8 +429,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -448,8 +438,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restapi_csharp">
 <a href="#restapi_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
@@ -458,8 +447,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statuscode_csharp">
 <a href="#statuscode_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
@@ -468,8 +456,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenthandling_csharp">
 <a href="#contenthandling_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling</a>
@@ -478,8 +465,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseparameters_csharp">
 <a href="#responseparameters_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
@@ -489,8 +475,7 @@ The IntegrationResponse resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}A map of response parameters that can be read from the backend response.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsetemplates_csharp">
 <a href="#responsetemplates_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Templates</a>
@@ -499,8 +484,7 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = "
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map specifying the templates used to transform the integration response body
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectionpattern_csharp">
 <a href="#selectionpattern_csharp" style="color: inherit; text-decoration: inherit;">Selection<wbr>Pattern</a>
@@ -512,14 +496,11 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = "
 an integration response based on the response from the backend. Omit configuring this to make the integration the default one.
 If the backend is an `AWS` Lambda function, the AWS Lambda function error header is matched.
 For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httpmethod_go">
 <a href="#httpmethod_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -528,8 +509,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -538,8 +518,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restapi_go">
 <a href="#restapi_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
@@ -548,8 +527,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statuscode_go">
 <a href="#statuscode_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
@@ -558,8 +536,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenthandling_go">
 <a href="#contenthandling_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling</a>
@@ -568,8 +545,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseparameters_go">
 <a href="#responseparameters_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
@@ -579,8 +555,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
     </dt>
     <dd>{{% md %}}A map of response parameters that can be read from the backend response.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsetemplates_go">
 <a href="#responsetemplates_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Templates</a>
@@ -589,8 +564,7 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = "
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map specifying the templates used to transform the integration response body
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectionpattern_go">
 <a href="#selectionpattern_go" style="color: inherit; text-decoration: inherit;">Selection<wbr>Pattern</a>
@@ -602,14 +576,11 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = "
 an integration response based on the response from the backend. Omit configuring this to make the integration the default one.
 If the backend is an `AWS` Lambda function, the AWS Lambda function error header is matched.
 For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httpmethod_nodejs">
 <a href="#httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
@@ -618,8 +589,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -628,8 +598,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restapi_nodejs">
 <a href="#restapi_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Api</a>
@@ -638,8 +607,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">string | Rest<wbr>Api</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="statuscode_nodejs">
 <a href="#statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
@@ -648,8 +616,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenthandling_nodejs">
 <a href="#contenthandling_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Handling</a>
@@ -658,8 +625,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseparameters_nodejs">
 <a href="#responseparameters_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Parameters</a>
@@ -669,8 +635,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
     </dt>
     <dd>{{% md %}}A map of response parameters that can be read from the backend response.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsetemplates_nodejs">
 <a href="#responsetemplates_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Templates</a>
@@ -679,8 +644,7 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = "
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map specifying the templates used to transform the integration response body
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectionpattern_nodejs">
 <a href="#selectionpattern_nodejs" style="color: inherit; text-decoration: inherit;">selection<wbr>Pattern</a>
@@ -692,14 +656,11 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = "
 an integration response based on the response from the backend. Omit configuring this to make the integration the default one.
 If the backend is an `AWS` Lambda function, the AWS Lambda function error header is matched.
 For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="http_method_python">
 <a href="#http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
@@ -708,8 +669,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -718,8 +678,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rest_api_python">
 <a href="#rest_api_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api</a>
@@ -728,8 +687,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_code_python">
 <a href="#status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
@@ -738,8 +696,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_handling_python">
 <a href="#content_handling_python" style="color: inherit; text-decoration: inherit;">content_<wbr>handling</a>
@@ -748,8 +705,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_parameters_python">
 <a href="#response_parameters_python" style="color: inherit; text-decoration: inherit;">response_<wbr>parameters</a>
@@ -759,8 +715,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
     </dt>
     <dd>{{% md %}}A map of response parameters that can be read from the backend response.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_templates_python">
 <a href="#response_templates_python" style="color: inherit; text-decoration: inherit;">response_<wbr>templates</a>
@@ -769,8 +724,7 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = "
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map specifying the templates used to transform the integration response body
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selection_pattern_python">
 <a href="#selection_pattern_python" style="color: inherit; text-decoration: inherit;">selection_<wbr>pattern</a>
@@ -782,8 +736,7 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = "
 an integration response based on the response from the backend. Omit configuring this to make the integration the default one.
 If the backend is an `AWS` Lambda function, the AWS Lambda function error header is matched.
 For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -794,9 +747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -804,14 +755,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -819,14 +767,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -834,14 +779,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -849,8 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -977,9 +918,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_contenthandling_csharp">
 <a href="#state_contenthandling_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling</a>
@@ -988,8 +927,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpmethod_csharp">
 <a href="#state_httpmethod_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -998,8 +936,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourceid_csharp">
 <a href="#state_resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1008,8 +945,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responseparameters_csharp">
 <a href="#state_responseparameters_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
@@ -1019,8 +955,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A map of response parameters that can be read from the backend response.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsetemplates_csharp">
 <a href="#state_responsetemplates_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Templates</a>
@@ -1029,8 +964,7 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = "
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map specifying the templates used to transform the integration response body
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restapi_csharp">
 <a href="#state_restapi_csharp" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
@@ -1039,8 +973,7 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = "
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selectionpattern_csharp">
 <a href="#state_selectionpattern_csharp" style="color: inherit; text-decoration: inherit;">Selection<wbr>Pattern</a>
@@ -1052,8 +985,7 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = "
 an integration response based on the response from the backend. Omit configuring this to make the integration the default one.
 If the backend is an `AWS` Lambda function, the AWS Lambda function error header is matched.
 For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuscode_csharp">
 <a href="#state_statuscode_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
@@ -1062,14 +994,11 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_contenthandling_go">
 <a href="#state_contenthandling_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Handling</a>
@@ -1078,8 +1007,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpmethod_go">
 <a href="#state_httpmethod_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -1088,8 +1016,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourceid_go">
 <a href="#state_resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1098,8 +1025,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responseparameters_go">
 <a href="#state_responseparameters_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Parameters</a>
@@ -1109,8 +1035,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
     </dt>
     <dd>{{% md %}}A map of response parameters that can be read from the backend response.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsetemplates_go">
 <a href="#state_responsetemplates_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Templates</a>
@@ -1119,8 +1044,7 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = "
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map specifying the templates used to transform the integration response body
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restapi_go">
 <a href="#state_restapi_go" style="color: inherit; text-decoration: inherit;">Rest<wbr>Api</a>
@@ -1129,8 +1053,7 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = "
         <span class="property-type">string | string</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selectionpattern_go">
 <a href="#state_selectionpattern_go" style="color: inherit; text-decoration: inherit;">Selection<wbr>Pattern</a>
@@ -1142,8 +1065,7 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = "
 an integration response based on the response from the backend. Omit configuring this to make the integration the default one.
 If the backend is an `AWS` Lambda function, the AWS Lambda function error header is matched.
 For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuscode_go">
 <a href="#state_statuscode_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Code</a>
@@ -1152,14 +1074,11 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_contenthandling_nodejs">
 <a href="#state_contenthandling_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Handling</a>
@@ -1168,8 +1087,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpmethod_nodejs">
 <a href="#state_httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
@@ -1178,8 +1096,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourceid_nodejs">
 <a href="#state_resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -1188,8 +1105,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responseparameters_nodejs">
 <a href="#state_responseparameters_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Parameters</a>
@@ -1199,8 +1115,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
     </dt>
     <dd>{{% md %}}A map of response parameters that can be read from the backend response.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsetemplates_nodejs">
 <a href="#state_responsetemplates_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Templates</a>
@@ -1209,8 +1124,7 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = "
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map specifying the templates used to transform the integration response body
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restapi_nodejs">
 <a href="#state_restapi_nodejs" style="color: inherit; text-decoration: inherit;">rest<wbr>Api</a>
@@ -1219,8 +1133,7 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = "
         <span class="property-type">string | Rest<wbr>Api</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selectionpattern_nodejs">
 <a href="#state_selectionpattern_nodejs" style="color: inherit; text-decoration: inherit;">selection<wbr>Pattern</a>
@@ -1232,8 +1145,7 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = "
 an integration response based on the response from the backend. Omit configuring this to make the integration the default one.
 If the backend is an `AWS` Lambda function, the AWS Lambda function error header is matched.
 For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuscode_nodejs">
 <a href="#state_statuscode_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Code</a>
@@ -1242,14 +1154,11 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_content_handling_python">
 <a href="#state_content_handling_python" style="color: inherit; text-decoration: inherit;">content_<wbr>handling</a>
@@ -1258,8 +1167,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle request payload content type conversions. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`. If this property is not defined, the response payload will be passed through from the integration response to the method response without modification.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_http_method_python">
 <a href="#state_http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
@@ -1268,8 +1176,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_id_python">
 <a href="#state_resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -1278,8 +1185,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API resource ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_response_parameters_python">
 <a href="#state_response_parameters_python" style="color: inherit; text-decoration: inherit;">response_<wbr>parameters</a>
@@ -1289,8 +1195,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
     </dt>
     <dd>{{% md %}}A map of response parameters that can be read from the backend response.
 For example: `response_parameters = { "method.response.header.X-Some-Header" = "integration.response.header.X-Some-Other-Header" }`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_response_templates_python">
 <a href="#state_response_templates_python" style="color: inherit; text-decoration: inherit;">response_<wbr>templates</a>
@@ -1299,8 +1204,7 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = "
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map specifying the templates used to transform the integration response body
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rest_api_python">
 <a href="#state_rest_api_python" style="color: inherit; text-decoration: inherit;">rest_<wbr>api</a>
@@ -1309,8 +1213,7 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = "
         <span class="property-type">str | str</span>
     </dt>
     <dd>{{% md %}}The ID of the associated REST API
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selection_pattern_python">
 <a href="#state_selection_pattern_python" style="color: inherit; text-decoration: inherit;">selection_<wbr>pattern</a>
@@ -1322,8 +1225,7 @@ For example: `response_parameters = { "method.response.header.X-Some-Header" = "
 an integration response based on the response from the backend. Omit configuring this to make the integration the default one.
 If the backend is an `AWS` Lambda function, the AWS Lambda function error header is matched.
 For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_code_python">
 <a href="#state_status_code_python" style="color: inherit; text-decoration: inherit;">status_<wbr>code</a>
@@ -1332,8 +1234,7 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HTTP status code
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1359,6 +1260,6 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -13,11 +13,17 @@ meta_desc: "Documentation for the aws.efs.FileSystem resource with examples, inp
 Provides an Elastic File System (EFS) File System resource.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### EFS File System w/ tags
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -38,9 +44,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -64,9 +73,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -76,9 +88,12 @@ foo = aws.efs.FileSystem("foo", tags={
 })
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -91,10 +106,17 @@ const foo = new aws.efs.FileSystem("foo", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Using lifecycle policy
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -115,9 +137,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -141,9 +166,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -153,9 +181,12 @@ foo_with_lifecyle_policy = aws.efs.FileSystem("fooWithLifecylePolicy", lifecycle
 ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -168,9 +199,16 @@ const fooWithLifecylePolicy = new aws.efs.FileSystem("foo_with_lifecyle_policy",
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a FileSystem Resource {#create}
@@ -195,9 +233,7 @@ const fooWithLifecylePolicy = new aws.efs.FileSystem("foo_with_lifecyle_policy",
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -205,9 +241,7 @@ const fooWithLifecylePolicy = new aws.efs.FileSystem("foo_with_lifecyle_policy",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -215,9 +249,7 @@ const fooWithLifecylePolicy = new aws.efs.FileSystem("foo_with_lifecyle_policy",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -225,10 +257,7 @@ const fooWithLifecylePolicy = new aws.efs.FileSystem("foo_with_lifecyle_policy",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -254,9 +283,7 @@ const fooWithLifecylePolicy = new aws.efs.FileSystem("foo_with_lifecyle_policy",
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -264,9 +291,7 @@ const fooWithLifecylePolicy = new aws.efs.FileSystem("foo_with_lifecyle_policy",
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -274,9 +299,7 @@ const fooWithLifecylePolicy = new aws.efs.FileSystem("foo_with_lifecyle_policy",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -284,9 +307,7 @@ const fooWithLifecylePolicy = new aws.efs.FileSystem("foo_with_lifecyle_policy",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -294,18 +315,13 @@ const fooWithLifecylePolicy = new aws.efs.FileSystem("foo_with_lifecyle_policy",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -313,9 +329,7 @@ const fooWithLifecylePolicy = new aws.efs.FileSystem("foo_with_lifecyle_policy",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -323,9 +337,7 @@ const fooWithLifecylePolicy = new aws.efs.FileSystem("foo_with_lifecyle_policy",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -333,10 +345,7 @@ const fooWithLifecylePolicy = new aws.efs.FileSystem("foo_with_lifecyle_policy",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -351,9 +360,7 @@ The FileSystem resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="creationtoken_csharp">
 <a href="#creationtoken_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Token</a>
@@ -365,8 +372,7 @@ The FileSystem resource accepts the following [input]({{< relref "/docs/intro/co
 used as reference when creating the Elastic File System to ensure idempotent file
 system creation. By default generated by this provider. See [Elastic File System]
 (http://docs.aws.amazon.com/efs/latest/ug/) user guide for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_csharp">
 <a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -375,8 +381,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the disk will be encrypted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -385,8 +390,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecyclepolicy_csharp">
 <a href="#lifecyclepolicy_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Policy</a>
@@ -395,8 +399,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type"><a href="#filesystemlifecyclepolicy">File<wbr>System<wbr>Lifecycle<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="performancemode_csharp">
 <a href="#performancemode_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Mode</a>
@@ -405,8 +408,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` (Default: `"generalPurpose"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisionedthroughputinmibps_csharp">
 <a href="#provisionedthroughputinmibps_csharp" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Throughput<wbr>In<wbr>Mibps</a>
@@ -415,8 +417,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with `throughput_mode` set to `provisioned`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -425,8 +426,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughputmode_csharp">
 <a href="#throughputmode_csharp" style="color: inherit; text-decoration: inherit;">Throughput<wbr>Mode</a>
@@ -435,14 +435,11 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Throughput mode for the file system. Defaults to `bursting`. Valid values: `bursting`, `provisioned`. When using `provisioned`, also set `provisioned_throughput_in_mibps`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="creationtoken_go">
 <a href="#creationtoken_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Token</a>
@@ -454,8 +451,7 @@ system creation. By default generated by this provider. See [Elastic File System
 used as reference when creating the Elastic File System to ensure idempotent file
 system creation. By default generated by this provider. See [Elastic File System]
 (http://docs.aws.amazon.com/efs/latest/ug/) user guide for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_go">
 <a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -464,8 +460,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the disk will be encrypted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -474,8 +469,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecyclepolicy_go">
 <a href="#lifecyclepolicy_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Policy</a>
@@ -484,8 +478,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type"><a href="#filesystemlifecyclepolicy">File<wbr>System<wbr>Lifecycle<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="performancemode_go">
 <a href="#performancemode_go" style="color: inherit; text-decoration: inherit;">Performance<wbr>Mode</a>
@@ -494,8 +487,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` (Default: `"generalPurpose"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisionedthroughputinmibps_go">
 <a href="#provisionedthroughputinmibps_go" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Throughput<wbr>In<wbr>Mibps</a>
@@ -504,8 +496,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with `throughput_mode` set to `provisioned`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -514,8 +505,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughputmode_go">
 <a href="#throughputmode_go" style="color: inherit; text-decoration: inherit;">Throughput<wbr>Mode</a>
@@ -524,14 +514,11 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Throughput mode for the file system. Defaults to `bursting`. Valid values: `bursting`, `provisioned`. When using `provisioned`, also set `provisioned_throughput_in_mibps`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="creationtoken_nodejs">
 <a href="#creationtoken_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Token</a>
@@ -543,8 +530,7 @@ system creation. By default generated by this provider. See [Elastic File System
 used as reference when creating the Elastic File System to ensure idempotent file
 system creation. By default generated by this provider. See [Elastic File System]
 (http://docs.aws.amazon.com/efs/latest/ug/) user guide for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_nodejs">
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -553,8 +539,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the disk will be encrypted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -563,8 +548,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecyclepolicy_nodejs">
 <a href="#lifecyclepolicy_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Policy</a>
@@ -573,8 +557,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type"><a href="#filesystemlifecyclepolicy">File<wbr>System<wbr>Lifecycle<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="performancemode_nodejs">
 <a href="#performancemode_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Mode</a>
@@ -583,8 +566,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` (Default: `"generalPurpose"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisionedthroughputinmibps_nodejs">
 <a href="#provisionedthroughputinmibps_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Throughput<wbr>In<wbr>Mibps</a>
@@ -593,8 +575,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with `throughput_mode` set to `provisioned`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -603,8 +584,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughputmode_nodejs">
 <a href="#throughputmode_nodejs" style="color: inherit; text-decoration: inherit;">throughput<wbr>Mode</a>
@@ -613,14 +593,11 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Throughput mode for the file system. Defaults to `bursting`. Valid values: `bursting`, `provisioned`. When using `provisioned`, also set `provisioned_throughput_in_mibps`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="creation_token_python">
 <a href="#creation_token_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>token</a>
@@ -632,8 +609,7 @@ system creation. By default generated by this provider. See [Elastic File System
 used as reference when creating the Elastic File System to ensure idempotent file
 system creation. By default generated by this provider. See [Elastic File System]
 (http://docs.aws.amazon.com/efs/latest/ug/) user guide for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypted_python">
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -642,8 +618,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the disk will be encrypted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -652,8 +627,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifecycle_policy_python">
 <a href="#lifecycle_policy_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>policy</a>
@@ -662,8 +636,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type"><a href="#filesystemlifecyclepolicy">File<wbr>System<wbr>Lifecycle<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="performance_mode_python">
 <a href="#performance_mode_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>mode</a>
@@ -672,8 +645,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` (Default: `"generalPurpose"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioned_throughput_in_mibps_python">
 <a href="#provisioned_throughput_in_mibps_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>throughput_<wbr>in_<wbr>mibps</a>
@@ -682,8 +654,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with `throughput_mode` set to `provisioned`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -692,8 +663,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_mode_python">
 <a href="#throughput_mode_python" style="color: inherit; text-decoration: inherit;">throughput_<wbr>mode</a>
@@ -702,8 +672,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Throughput mode for the file system. Defaults to `bursting`. Valid values: `bursting`, `provisioned`. When using `provisioned`, also set `provisioned_throughput_in_mibps`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -714,9 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -725,8 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name of the file system.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsname_csharp">
 <a href="#dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -735,8 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name for the filesystem per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -744,14 +709,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -760,8 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name of the file system.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsname_go">
 <a href="#dnsname_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -770,8 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name for the filesystem per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -779,14 +739,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -795,8 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name of the file system.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsname_nodejs">
 <a href="#dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
@@ -805,8 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name for the filesystem per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -814,14 +769,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -830,8 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name of the file system.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dns_name_python">
 <a href="#dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
@@ -840,8 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS name for the filesystem per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -849,8 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -977,9 +926,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -988,8 +935,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name of the file system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtoken_csharp">
 <a href="#state_creationtoken_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Token</a>
@@ -1001,8 +947,7 @@ The following state arguments are supported:
 used as reference when creating the Elastic File System to ensure idempotent file
 system creation. By default generated by this provider. See [Elastic File System]
 (http://docs.aws.amazon.com/efs/latest/ug/) user guide for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsname_csharp">
 <a href="#state_dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -1011,8 +956,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name for the filesystem per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encrypted_csharp">
 <a href="#state_encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -1021,8 +965,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the disk will be encrypted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyid_csharp">
 <a href="#state_kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -1031,8 +974,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifecyclepolicy_csharp">
 <a href="#state_lifecyclepolicy_csharp" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Policy</a>
@@ -1041,8 +983,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type"><a href="#filesystemlifecyclepolicy">File<wbr>System<wbr>Lifecycle<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_performancemode_csharp">
 <a href="#state_performancemode_csharp" style="color: inherit; text-decoration: inherit;">Performance<wbr>Mode</a>
@@ -1051,8 +992,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` (Default: `"generalPurpose"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provisionedthroughputinmibps_csharp">
 <a href="#state_provisionedthroughputinmibps_csharp" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Throughput<wbr>In<wbr>Mibps</a>
@@ -1061,8 +1001,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with `throughput_mode` set to `provisioned`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1071,8 +1010,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throughputmode_csharp">
 <a href="#state_throughputmode_csharp" style="color: inherit; text-decoration: inherit;">Throughput<wbr>Mode</a>
@@ -1081,14 +1019,11 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Throughput mode for the file system. Defaults to `bursting`. Valid values: `bursting`, `provisioned`. When using `provisioned`, also set `provisioned_throughput_in_mibps`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1097,8 +1032,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name of the file system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtoken_go">
 <a href="#state_creationtoken_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Token</a>
@@ -1110,8 +1044,7 @@ system creation. By default generated by this provider. See [Elastic File System
 used as reference when creating the Elastic File System to ensure idempotent file
 system creation. By default generated by this provider. See [Elastic File System]
 (http://docs.aws.amazon.com/efs/latest/ug/) user guide for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsname_go">
 <a href="#state_dnsname_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -1120,8 +1053,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name for the filesystem per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encrypted_go">
 <a href="#state_encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
@@ -1130,8 +1062,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the disk will be encrypted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyid_go">
 <a href="#state_kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -1140,8 +1071,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifecyclepolicy_go">
 <a href="#state_lifecyclepolicy_go" style="color: inherit; text-decoration: inherit;">Lifecycle<wbr>Policy</a>
@@ -1150,8 +1080,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type"><a href="#filesystemlifecyclepolicy">File<wbr>System<wbr>Lifecycle<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_performancemode_go">
 <a href="#state_performancemode_go" style="color: inherit; text-decoration: inherit;">Performance<wbr>Mode</a>
@@ -1160,8 +1089,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` (Default: `"generalPurpose"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provisionedthroughputinmibps_go">
 <a href="#state_provisionedthroughputinmibps_go" style="color: inherit; text-decoration: inherit;">Provisioned<wbr>Throughput<wbr>In<wbr>Mibps</a>
@@ -1170,8 +1098,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with `throughput_mode` set to `provisioned`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1180,8 +1107,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throughputmode_go">
 <a href="#state_throughputmode_go" style="color: inherit; text-decoration: inherit;">Throughput<wbr>Mode</a>
@@ -1190,14 +1116,11 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Throughput mode for the file system. Defaults to `bursting`. Valid values: `bursting`, `provisioned`. When using `provisioned`, also set `provisioned_throughput_in_mibps`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1206,8 +1129,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name of the file system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtoken_nodejs">
 <a href="#state_creationtoken_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Token</a>
@@ -1219,8 +1141,7 @@ system creation. By default generated by this provider. See [Elastic File System
 used as reference when creating the Elastic File System to ensure idempotent file
 system creation. By default generated by this provider. See [Elastic File System]
 (http://docs.aws.amazon.com/efs/latest/ug/) user guide for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsname_nodejs">
 <a href="#state_dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
@@ -1229,8 +1150,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name for the filesystem per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encrypted_nodejs">
 <a href="#state_encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -1239,8 +1159,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the disk will be encrypted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskeyid_nodejs">
 <a href="#state_kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -1249,8 +1168,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifecyclepolicy_nodejs">
 <a href="#state_lifecyclepolicy_nodejs" style="color: inherit; text-decoration: inherit;">lifecycle<wbr>Policy</a>
@@ -1259,8 +1177,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type"><a href="#filesystemlifecyclepolicy">File<wbr>System<wbr>Lifecycle<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_performancemode_nodejs">
 <a href="#state_performancemode_nodejs" style="color: inherit; text-decoration: inherit;">performance<wbr>Mode</a>
@@ -1269,8 +1186,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` (Default: `"generalPurpose"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provisionedthroughputinmibps_nodejs">
 <a href="#state_provisionedthroughputinmibps_nodejs" style="color: inherit; text-decoration: inherit;">provisioned<wbr>Throughput<wbr>In<wbr>Mibps</a>
@@ -1279,8 +1195,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with `throughput_mode` set to `provisioned`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1289,8 +1204,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throughputmode_nodejs">
 <a href="#state_throughputmode_nodejs" style="color: inherit; text-decoration: inherit;">throughput<wbr>Mode</a>
@@ -1299,14 +1213,11 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Throughput mode for the file system. Defaults to `bursting`. Valid values: `bursting`, `provisioned`. When using `provisioned`, also set `provisioned_throughput_in_mibps`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1315,8 +1226,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name of the file system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creation_token_python">
 <a href="#state_creation_token_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>token</a>
@@ -1328,8 +1238,7 @@ system creation. By default generated by this provider. See [Elastic File System
 used as reference when creating the Elastic File System to ensure idempotent file
 system creation. By default generated by this provider. See [Elastic File System]
 (http://docs.aws.amazon.com/efs/latest/ug/) user guide for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_name_python">
 <a href="#state_dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
@@ -1338,8 +1247,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS name for the filesystem per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encrypted_python">
 <a href="#state_encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
@@ -1348,8 +1256,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the disk will be encrypted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kms_key_id_python">
 <a href="#state_kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -1358,8 +1265,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifecycle_policy_python">
 <a href="#state_lifecycle_policy_python" style="color: inherit; text-decoration: inherit;">lifecycle_<wbr>policy</a>
@@ -1368,8 +1274,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type"><a href="#filesystemlifecyclepolicy">File<wbr>System<wbr>Lifecycle<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A file system [lifecycle policy](https://docs.aws.amazon.com/efs/latest/ug/API_LifecyclePolicy.html) object (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_performance_mode_python">
 <a href="#state_performance_mode_python" style="color: inherit; text-decoration: inherit;">performance_<wbr>mode</a>
@@ -1378,8 +1283,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The file system performance mode. Can be either `"generalPurpose"` or `"maxIO"` (Default: `"generalPurpose"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provisioned_throughput_in_mibps_python">
 <a href="#state_provisioned_throughput_in_mibps_python" style="color: inherit; text-decoration: inherit;">provisioned_<wbr>throughput_<wbr>in_<wbr>mibps</a>
@@ -1388,8 +1292,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with `throughput_mode` set to `provisioned`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1398,8 +1301,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the file system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throughput_mode_python">
 <a href="#state_throughput_mode_python" style="color: inherit; text-decoration: inherit;">throughput_<wbr>mode</a>
@@ -1408,8 +1310,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Throughput mode for the file system. Defaults to `bursting`. Valid values: `bursting`, `provisioned`. When using `provisioned`, also set `provisioned_throughput_in_mibps`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1424,9 +1325,7 @@ system creation. By default generated by this provider. See [Elastic File System
 <h4 id="filesystemlifecyclepolicy">File<wbr>System<wbr>Lifecycle<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="transitiontoia_csharp">
 <a href="#transitiontoia_csharp" style="color: inherit; text-decoration: inherit;">Transition<wbr>To<wbr>Ia</a>
@@ -1435,14 +1334,11 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates how long it takes to transition files to the IA storage class. Valid values: `AFTER_7_DAYS`, `AFTER_14_DAYS`, `AFTER_30_DAYS`, `AFTER_60_DAYS`, or `AFTER_90_DAYS`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="transitiontoia_go">
 <a href="#transitiontoia_go" style="color: inherit; text-decoration: inherit;">Transition<wbr>To<wbr>Ia</a>
@@ -1451,14 +1347,11 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates how long it takes to transition files to the IA storage class. Valid values: `AFTER_7_DAYS`, `AFTER_14_DAYS`, `AFTER_30_DAYS`, `AFTER_60_DAYS`, or `AFTER_90_DAYS`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="transitiontoia_nodejs">
 <a href="#transitiontoia_nodejs" style="color: inherit; text-decoration: inherit;">transition<wbr>To<wbr>Ia</a>
@@ -1467,14 +1360,11 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates how long it takes to transition files to the IA storage class. Valid values: `AFTER_7_DAYS`, `AFTER_14_DAYS`, `AFTER_30_DAYS`, `AFTER_60_DAYS`, or `AFTER_90_DAYS`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="transition_to_ia_python">
 <a href="#transition_to_ia_python" style="color: inherit; text-decoration: inherit;">transition_<wbr>to_<wbr>ia</a>
@@ -1483,8 +1373,7 @@ system creation. By default generated by this provider. See [Elastic File System
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates how long it takes to transition files to the IA storage class. Valid values: `AFTER_7_DAYS`, `AFTER_14_DAYS`, `AFTER_30_DAYS`, `AFTER_60_DAYS`, or `AFTER_90_DAYS`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1505,6 +1394,6 @@ The EFS file systems can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

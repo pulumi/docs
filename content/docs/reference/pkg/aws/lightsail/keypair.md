@@ -69,11 +69,17 @@ func main() {
 ```
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Creating A New Key Pair
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -91,9 +97,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -113,9 +122,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -124,9 +136,12 @@ import pulumi_aws as aws
 lg_key_pair = aws.lightsail.KeyPair("lgKeyPair")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -136,9 +151,16 @@ import * as aws from "@pulumi/aws";
 const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {});
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a KeyPair Resource {#create}
@@ -163,9 +185,7 @@ const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {});
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -173,9 +193,7 @@ const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {});
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -183,9 +201,7 @@ const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {});
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -193,10 +209,7 @@ const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {});
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -222,9 +235,7 @@ const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {});
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -232,9 +243,7 @@ const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {});
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -242,9 +251,7 @@ const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {});
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -252,9 +259,7 @@ const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {});
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -262,18 +267,13 @@ const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {});
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -281,9 +281,7 @@ const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {});
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -291,9 +289,7 @@ const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {});
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -301,10 +297,7 @@ const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {});
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -319,9 +312,7 @@ The KeyPair resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -331,8 +322,7 @@ The KeyPair resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The name of the Lightsail Key Pair. If omitted, a unique
 name will be generated by this provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_csharp">
 <a href="#nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -340,8 +330,7 @@ name will be generated by this provider
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgpkey_csharp">
 <a href="#pgpkey_csharp" style="color: inherit; text-decoration: inherit;">Pgp<wbr>Key</a>
@@ -351,8 +340,7 @@ name will be generated by this provider
     </dt>
     <dd>{{% md %}}An optional PGP key to encrypt the resulting private
 key material. Only used when creating a new key pair
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_csharp">
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -362,14 +350,11 @@ key material. Only used when creating a new key pair
     </dt>
     <dd>{{% md %}}The public key material. This public key will be
 imported into Lightsail
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -379,8 +364,7 @@ imported into Lightsail
     </dt>
     <dd>{{% md %}}The name of the Lightsail Key Pair. If omitted, a unique
 name will be generated by this provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_go">
 <a href="#nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -388,8 +372,7 @@ name will be generated by this provider
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgpkey_go">
 <a href="#pgpkey_go" style="color: inherit; text-decoration: inherit;">Pgp<wbr>Key</a>
@@ -399,8 +382,7 @@ name will be generated by this provider
     </dt>
     <dd>{{% md %}}An optional PGP key to encrypt the resulting private
 key material. Only used when creating a new key pair
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_go">
 <a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -410,14 +392,11 @@ key material. Only used when creating a new key pair
     </dt>
     <dd>{{% md %}}The public key material. This public key will be
 imported into Lightsail
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -427,8 +406,7 @@ imported into Lightsail
     </dt>
     <dd>{{% md %}}The name of the Lightsail Key Pair. If omitted, a unique
 name will be generated by this provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nameprefix_nodejs">
 <a href="#nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
@@ -436,8 +414,7 @@ name will be generated by this provider
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgpkey_nodejs">
 <a href="#pgpkey_nodejs" style="color: inherit; text-decoration: inherit;">pgp<wbr>Key</a>
@@ -447,8 +424,7 @@ name will be generated by this provider
     </dt>
     <dd>{{% md %}}An optional PGP key to encrypt the resulting private
 key material. Only used when creating a new key pair
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_nodejs">
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -458,14 +434,11 @@ key material. Only used when creating a new key pair
     </dt>
     <dd>{{% md %}}The public key material. This public key will be
 imported into Lightsail
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -475,8 +448,7 @@ imported into Lightsail
     </dt>
     <dd>{{% md %}}The name of the Lightsail Key Pair. If omitted, a unique
 name will be generated by this provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_prefix_python">
 <a href="#name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
@@ -484,8 +456,7 @@ name will be generated by this provider
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pgp_key_python">
 <a href="#pgp_key_python" style="color: inherit; text-decoration: inherit;">pgp_<wbr>key</a>
@@ -495,8 +466,7 @@ name will be generated by this provider
     </dt>
     <dd>{{% md %}}An optional PGP key to encrypt the resulting private
 key material. Only used when creating a new key pair
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_key_python">
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -506,8 +476,7 @@ key material. Only used when creating a new key pair
     </dt>
     <dd>{{% md %}}The public key material. This public key will be
 imported into Lightsail
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -518,9 +487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -529,8 +496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lightsail key pair
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptedfingerprint_csharp">
 <a href="#encryptedfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Fingerprint</a>
@@ -540,8 +506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The MD5 public key fingerprint for the encrypted
 private key
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptedprivatekey_csharp">
 <a href="#encryptedprivatekey_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Private<wbr>Key</a>
@@ -552,8 +517,7 @@ private key
     <dd>{{% md %}}the private key material, base 64 encoded and
 encrypted with the given `pgp_key`. This is only populated when creating a new
 key and `pgp_key` is supplied
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fingerprint_csharp">
 <a href="#fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -562,8 +526,7 @@ key and `pgp_key` is supplied
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MD5 public key fingerprint as specified in section 4 of RFC 4716.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -571,8 +534,7 @@ key and `pgp_key` is supplied
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatekey_csharp">
 <a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -582,14 +544,11 @@ key and `pgp_key` is supplied
     </dt>
     <dd>{{% md %}}the private key, base64 encoded. This is only populated
 when creating a new key, and when no `pgp_key` is provided
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -598,8 +557,7 @@ when creating a new key, and when no `pgp_key` is provided
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lightsail key pair
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptedfingerprint_go">
 <a href="#encryptedfingerprint_go" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Fingerprint</a>
@@ -609,8 +567,7 @@ when creating a new key, and when no `pgp_key` is provided
     </dt>
     <dd>{{% md %}}The MD5 public key fingerprint for the encrypted
 private key
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptedprivatekey_go">
 <a href="#encryptedprivatekey_go" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Private<wbr>Key</a>
@@ -621,8 +578,7 @@ private key
     <dd>{{% md %}}the private key material, base 64 encoded and
 encrypted with the given `pgp_key`. This is only populated when creating a new
 key and `pgp_key` is supplied
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fingerprint_go">
 <a href="#fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -631,8 +587,7 @@ key and `pgp_key` is supplied
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MD5 public key fingerprint as specified in section 4 of RFC 4716.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -640,8 +595,7 @@ key and `pgp_key` is supplied
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatekey_go">
 <a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -651,14 +605,11 @@ key and `pgp_key` is supplied
     </dt>
     <dd>{{% md %}}the private key, base64 encoded. This is only populated
 when creating a new key, and when no `pgp_key` is provided
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -667,8 +618,7 @@ when creating a new key, and when no `pgp_key` is provided
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lightsail key pair
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptedfingerprint_nodejs">
 <a href="#encryptedfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Fingerprint</a>
@@ -678,8 +628,7 @@ when creating a new key, and when no `pgp_key` is provided
     </dt>
     <dd>{{% md %}}The MD5 public key fingerprint for the encrypted
 private key
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptedprivatekey_nodejs">
 <a href="#encryptedprivatekey_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Private<wbr>Key</a>
@@ -690,8 +639,7 @@ private key
     <dd>{{% md %}}the private key material, base 64 encoded and
 encrypted with the given `pgp_key`. This is only populated when creating a new
 key and `pgp_key` is supplied
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fingerprint_nodejs">
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -700,8 +648,7 @@ key and `pgp_key` is supplied
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MD5 public key fingerprint as specified in section 4 of RFC 4716.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -709,8 +656,7 @@ key and `pgp_key` is supplied
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatekey_nodejs">
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -720,14 +666,11 @@ key and `pgp_key` is supplied
     </dt>
     <dd>{{% md %}}the private key, base64 encoded. This is only populated
 when creating a new key, and when no `pgp_key` is provided
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -736,8 +679,7 @@ when creating a new key, and when no `pgp_key` is provided
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lightsail key pair
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encrypted_fingerprint_python">
 <a href="#encrypted_fingerprint_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>fingerprint</a>
@@ -747,8 +689,7 @@ when creating a new key, and when no `pgp_key` is provided
     </dt>
     <dd>{{% md %}}The MD5 public key fingerprint for the encrypted
 private key
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encrypted_private_key_python">
 <a href="#encrypted_private_key_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>private_<wbr>key</a>
@@ -759,8 +700,7 @@ private key
     <dd>{{% md %}}the private key material, base 64 encoded and
 encrypted with the given `pgp_key`. This is only populated when creating a new
 key and `pgp_key` is supplied
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fingerprint_python">
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -769,8 +709,7 @@ key and `pgp_key` is supplied
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The MD5 public key fingerprint as specified in section 4 of RFC 4716.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -778,8 +717,7 @@ key and `pgp_key` is supplied
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_key_python">
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -789,8 +727,7 @@ key and `pgp_key` is supplied
     </dt>
     <dd>{{% md %}}the private key, base64 encoded. This is only populated
 when creating a new key, and when no `pgp_key` is provided
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -917,9 +854,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -928,8 +863,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lightsail key pair
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptedfingerprint_csharp">
 <a href="#state_encryptedfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Fingerprint</a>
@@ -939,8 +873,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The MD5 public key fingerprint for the encrypted
 private key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptedprivatekey_csharp">
 <a href="#state_encryptedprivatekey_csharp" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Private<wbr>Key</a>
@@ -951,8 +884,7 @@ private key
     <dd>{{% md %}}the private key material, base 64 encoded and
 encrypted with the given `pgp_key`. This is only populated when creating a new
 key and `pgp_key` is supplied
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_csharp">
 <a href="#state_fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -961,8 +893,7 @@ key and `pgp_key` is supplied
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MD5 public key fingerprint as specified in section 4 of RFC 4716.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -972,8 +903,7 @@ key and `pgp_key` is supplied
     </dt>
     <dd>{{% md %}}The name of the Lightsail Key Pair. If omitted, a unique
 name will be generated by this provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_csharp">
 <a href="#state_nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -981,8 +911,7 @@ name will be generated by this provider
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pgpkey_csharp">
 <a href="#state_pgpkey_csharp" style="color: inherit; text-decoration: inherit;">Pgp<wbr>Key</a>
@@ -992,8 +921,7 @@ name will be generated by this provider
     </dt>
     <dd>{{% md %}}An optional PGP key to encrypt the resulting private
 key material. Only used when creating a new key pair
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekey_csharp">
 <a href="#state_privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -1003,8 +931,7 @@ key material. Only used when creating a new key pair
     </dt>
     <dd>{{% md %}}the private key, base64 encoded. This is only populated
 when creating a new key, and when no `pgp_key` is provided
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickey_csharp">
 <a href="#state_publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -1014,14 +941,11 @@ when creating a new key, and when no `pgp_key` is provided
     </dt>
     <dd>{{% md %}}The public key material. This public key will be
 imported into Lightsail
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1030,8 +954,7 @@ imported into Lightsail
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lightsail key pair
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptedfingerprint_go">
 <a href="#state_encryptedfingerprint_go" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Fingerprint</a>
@@ -1041,8 +964,7 @@ imported into Lightsail
     </dt>
     <dd>{{% md %}}The MD5 public key fingerprint for the encrypted
 private key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptedprivatekey_go">
 <a href="#state_encryptedprivatekey_go" style="color: inherit; text-decoration: inherit;">Encrypted<wbr>Private<wbr>Key</a>
@@ -1053,8 +975,7 @@ private key
     <dd>{{% md %}}the private key material, base 64 encoded and
 encrypted with the given `pgp_key`. This is only populated when creating a new
 key and `pgp_key` is supplied
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_go">
 <a href="#state_fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -1063,8 +984,7 @@ key and `pgp_key` is supplied
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MD5 public key fingerprint as specified in section 4 of RFC 4716.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1074,8 +994,7 @@ key and `pgp_key` is supplied
     </dt>
     <dd>{{% md %}}The name of the Lightsail Key Pair. If omitted, a unique
 name will be generated by this provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_go">
 <a href="#state_nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
@@ -1083,8 +1002,7 @@ name will be generated by this provider
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pgpkey_go">
 <a href="#state_pgpkey_go" style="color: inherit; text-decoration: inherit;">Pgp<wbr>Key</a>
@@ -1094,8 +1012,7 @@ name will be generated by this provider
     </dt>
     <dd>{{% md %}}An optional PGP key to encrypt the resulting private
 key material. Only used when creating a new key pair
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekey_go">
 <a href="#state_privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -1105,8 +1022,7 @@ key material. Only used when creating a new key pair
     </dt>
     <dd>{{% md %}}the private key, base64 encoded. This is only populated
 when creating a new key, and when no `pgp_key` is provided
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickey_go">
 <a href="#state_publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -1116,14 +1032,11 @@ when creating a new key, and when no `pgp_key` is provided
     </dt>
     <dd>{{% md %}}The public key material. This public key will be
 imported into Lightsail
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1132,8 +1045,7 @@ imported into Lightsail
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lightsail key pair
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptedfingerprint_nodejs">
 <a href="#state_encryptedfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Fingerprint</a>
@@ -1143,8 +1055,7 @@ imported into Lightsail
     </dt>
     <dd>{{% md %}}The MD5 public key fingerprint for the encrypted
 private key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptedprivatekey_nodejs">
 <a href="#state_encryptedprivatekey_nodejs" style="color: inherit; text-decoration: inherit;">encrypted<wbr>Private<wbr>Key</a>
@@ -1155,8 +1066,7 @@ private key
     <dd>{{% md %}}the private key material, base 64 encoded and
 encrypted with the given `pgp_key`. This is only populated when creating a new
 key and `pgp_key` is supplied
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_nodejs">
 <a href="#state_fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -1165,8 +1075,7 @@ key and `pgp_key` is supplied
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MD5 public key fingerprint as specified in section 4 of RFC 4716.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1176,8 +1085,7 @@ key and `pgp_key` is supplied
     </dt>
     <dd>{{% md %}}The name of the Lightsail Key Pair. If omitted, a unique
 name will be generated by this provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nameprefix_nodejs">
 <a href="#state_nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
@@ -1185,8 +1093,7 @@ name will be generated by this provider
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pgpkey_nodejs">
 <a href="#state_pgpkey_nodejs" style="color: inherit; text-decoration: inherit;">pgp<wbr>Key</a>
@@ -1196,8 +1103,7 @@ name will be generated by this provider
     </dt>
     <dd>{{% md %}}An optional PGP key to encrypt the resulting private
 key material. Only used when creating a new key pair
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekey_nodejs">
 <a href="#state_privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -1207,8 +1113,7 @@ key material. Only used when creating a new key pair
     </dt>
     <dd>{{% md %}}the private key, base64 encoded. This is only populated
 when creating a new key, and when no `pgp_key` is provided
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publickey_nodejs">
 <a href="#state_publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -1218,14 +1123,11 @@ when creating a new key, and when no `pgp_key` is provided
     </dt>
     <dd>{{% md %}}The public key material. This public key will be
 imported into Lightsail
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1234,8 +1136,7 @@ imported into Lightsail
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Lightsail key pair
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encrypted_fingerprint_python">
 <a href="#state_encrypted_fingerprint_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>fingerprint</a>
@@ -1245,8 +1146,7 @@ imported into Lightsail
     </dt>
     <dd>{{% md %}}The MD5 public key fingerprint for the encrypted
 private key
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encrypted_private_key_python">
 <a href="#state_encrypted_private_key_python" style="color: inherit; text-decoration: inherit;">encrypted_<wbr>private_<wbr>key</a>
@@ -1257,8 +1157,7 @@ private key
     <dd>{{% md %}}the private key material, base 64 encoded and
 encrypted with the given `pgp_key`. This is only populated when creating a new
 key and `pgp_key` is supplied
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_python">
 <a href="#state_fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -1267,8 +1166,7 @@ key and `pgp_key` is supplied
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The MD5 public key fingerprint as specified in section 4 of RFC 4716.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1278,8 +1176,7 @@ key and `pgp_key` is supplied
     </dt>
     <dd>{{% md %}}The name of the Lightsail Key Pair. If omitted, a unique
 name will be generated by this provider
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_prefix_python">
 <a href="#state_name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
@@ -1287,8 +1184,7 @@ name will be generated by this provider
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pgp_key_python">
 <a href="#state_pgp_key_python" style="color: inherit; text-decoration: inherit;">pgp_<wbr>key</a>
@@ -1298,8 +1194,7 @@ name will be generated by this provider
     </dt>
     <dd>{{% md %}}An optional PGP key to encrypt the resulting private
 key material. Only used when creating a new key pair
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_key_python">
 <a href="#state_private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -1309,8 +1204,7 @@ key material. Only used when creating a new key pair
     </dt>
     <dd>{{% md %}}the private key, base64 encoded. This is only populated
 when creating a new key, and when no `pgp_key` is provided
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_key_python">
 <a href="#state_public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -1320,8 +1214,7 @@ when creating a new key, and when no `pgp_key` is provided
     </dt>
     <dd>{{% md %}}The public key material. This public key will be
 imported into Lightsail
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1371,6 +1264,6 @@ class MyStack : Stack
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

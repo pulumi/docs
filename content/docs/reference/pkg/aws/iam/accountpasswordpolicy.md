@@ -17,11 +17,17 @@ See more about [Account Password Policy](http://docs.aws.amazon.com/IAM/latest/U
 in the official AWS docs.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -44,9 +50,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -73,9 +82,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -89,9 +101,12 @@ strict = aws.iam.AccountPasswordPolicy("strict",
     require_uppercase_characters=True)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -107,9 +122,16 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AccountPasswordPolicy Resource {#create}
@@ -134,9 +156,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -144,9 +164,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -154,9 +172,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -164,10 +180,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -193,9 +206,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -203,9 +214,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -213,9 +222,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -223,9 +230,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -233,18 +238,13 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -252,9 +252,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -262,9 +260,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -272,10 +268,7 @@ const strict = new aws.iam.AccountPasswordPolicy("strict", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -290,9 +283,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowuserstochangepassword_csharp">
 <a href="#allowuserstochangepassword_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Users<wbr>To<wbr>Change<wbr>Password</a>
@@ -301,8 +292,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow users to change their own password
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hardexpiry_csharp">
 <a href="#hardexpiry_csharp" style="color: inherit; text-decoration: inherit;">Hard<wbr>Expiry</a>
@@ -311,8 +301,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpasswordage_csharp">
 <a href="#maxpasswordage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Password<wbr>Age</a>
@@ -321,8 +310,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days that an user password is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumpasswordlength_csharp">
 <a href="#minimumpasswordlength_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Password<wbr>Length</a>
@@ -331,8 +319,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum length to require for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordreuseprevention_csharp">
 <a href="#passwordreuseprevention_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Reuse<wbr>Prevention</a>
@@ -341,8 +328,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of previous passwords that users are prevented from reusing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirelowercasecharacters_csharp">
 <a href="#requirelowercasecharacters_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Lowercase<wbr>Characters</a>
@@ -351,8 +337,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require lowercase characters for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirenumbers_csharp">
 <a href="#requirenumbers_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Numbers</a>
@@ -361,8 +346,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require numbers for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiresymbols_csharp">
 <a href="#requiresymbols_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Symbols</a>
@@ -371,8 +355,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require symbols for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireuppercasecharacters_csharp">
 <a href="#requireuppercasecharacters_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Uppercase<wbr>Characters</a>
@@ -381,14 +364,11 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require uppercase characters for user passwords.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowuserstochangepassword_go">
 <a href="#allowuserstochangepassword_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Users<wbr>To<wbr>Change<wbr>Password</a>
@@ -397,8 +377,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow users to change their own password
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hardexpiry_go">
 <a href="#hardexpiry_go" style="color: inherit; text-decoration: inherit;">Hard<wbr>Expiry</a>
@@ -407,8 +386,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpasswordage_go">
 <a href="#maxpasswordage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Password<wbr>Age</a>
@@ -417,8 +395,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days that an user password is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumpasswordlength_go">
 <a href="#minimumpasswordlength_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Password<wbr>Length</a>
@@ -427,8 +404,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum length to require for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordreuseprevention_go">
 <a href="#passwordreuseprevention_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Reuse<wbr>Prevention</a>
@@ -437,8 +413,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of previous passwords that users are prevented from reusing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirelowercasecharacters_go">
 <a href="#requirelowercasecharacters_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Lowercase<wbr>Characters</a>
@@ -447,8 +422,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require lowercase characters for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirenumbers_go">
 <a href="#requirenumbers_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Numbers</a>
@@ -457,8 +431,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require numbers for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiresymbols_go">
 <a href="#requiresymbols_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Symbols</a>
@@ -467,8 +440,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require symbols for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireuppercasecharacters_go">
 <a href="#requireuppercasecharacters_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Uppercase<wbr>Characters</a>
@@ -477,14 +449,11 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require uppercase characters for user passwords.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowuserstochangepassword_nodejs">
 <a href="#allowuserstochangepassword_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Users<wbr>To<wbr>Change<wbr>Password</a>
@@ -493,8 +462,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to allow users to change their own password
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hardexpiry_nodejs">
 <a href="#hardexpiry_nodejs" style="color: inherit; text-decoration: inherit;">hard<wbr>Expiry</a>
@@ -503,8 +471,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpasswordage_nodejs">
 <a href="#maxpasswordage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Password<wbr>Age</a>
@@ -513,8 +480,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days that an user password is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumpasswordlength_nodejs">
 <a href="#minimumpasswordlength_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Password<wbr>Length</a>
@@ -523,8 +489,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum length to require for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordreuseprevention_nodejs">
 <a href="#passwordreuseprevention_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Reuse<wbr>Prevention</a>
@@ -533,8 +498,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of previous passwords that users are prevented from reusing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirelowercasecharacters_nodejs">
 <a href="#requirelowercasecharacters_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Lowercase<wbr>Characters</a>
@@ -543,8 +507,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to require lowercase characters for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirenumbers_nodejs">
 <a href="#requirenumbers_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Numbers</a>
@@ -553,8 +516,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to require numbers for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiresymbols_nodejs">
 <a href="#requiresymbols_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Symbols</a>
@@ -563,8 +525,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to require symbols for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireuppercasecharacters_nodejs">
 <a href="#requireuppercasecharacters_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Uppercase<wbr>Characters</a>
@@ -573,14 +534,11 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to require uppercase characters for user passwords.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_users_to_change_password_python">
 <a href="#allow_users_to_change_password_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>users_<wbr>to_<wbr>change_<wbr>password</a>
@@ -589,8 +547,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow users to change their own password
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hard_expiry_python">
 <a href="#hard_expiry_python" style="color: inherit; text-decoration: inherit;">hard_<wbr>expiry</a>
@@ -599,8 +556,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_password_age_python">
 <a href="#max_password_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>password_<wbr>age</a>
@@ -609,8 +565,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days that an user password is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_password_length_python">
 <a href="#minimum_password_length_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>password_<wbr>length</a>
@@ -619,8 +574,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum length to require for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_reuse_prevention_python">
 <a href="#password_reuse_prevention_python" style="color: inherit; text-decoration: inherit;">password_<wbr>reuse_<wbr>prevention</a>
@@ -629,8 +583,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of previous passwords that users are prevented from reusing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_lowercase_characters_python">
 <a href="#require_lowercase_characters_python" style="color: inherit; text-decoration: inherit;">require_<wbr>lowercase_<wbr>characters</a>
@@ -639,8 +592,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require lowercase characters for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_numbers_python">
 <a href="#require_numbers_python" style="color: inherit; text-decoration: inherit;">require_<wbr>numbers</a>
@@ -649,8 +601,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require numbers for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_symbols_python">
 <a href="#require_symbols_python" style="color: inherit; text-decoration: inherit;">require_<wbr>symbols</a>
@@ -659,8 +610,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require symbols for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_uppercase_characters_python">
 <a href="#require_uppercase_characters_python" style="color: inherit; text-decoration: inherit;">require_<wbr>uppercase_<wbr>characters</a>
@@ -669,8 +619,7 @@ The AccountPasswordPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require uppercase characters for user passwords.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -681,9 +630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="expirepasswords_csharp">
 <a href="#expirepasswords_csharp" style="color: inherit; text-decoration: inherit;">Expire<wbr>Passwords</a>
@@ -692,8 +639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -701,14 +647,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="expirepasswords_go">
 <a href="#expirepasswords_go" style="color: inherit; text-decoration: inherit;">Expire<wbr>Passwords</a>
@@ -717,8 +660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -726,14 +668,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="expirepasswords_nodejs">
 <a href="#expirepasswords_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Passwords</a>
@@ -742,8 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -751,14 +689,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="expire_passwords_python">
 <a href="#expire_passwords_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>passwords</a>
@@ -767,8 +702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -776,8 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -904,9 +837,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowuserstochangepassword_csharp">
 <a href="#state_allowuserstochangepassword_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Users<wbr>To<wbr>Change<wbr>Password</a>
@@ -915,8 +846,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow users to change their own password
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirepasswords_csharp">
 <a href="#state_expirepasswords_csharp" style="color: inherit; text-decoration: inherit;">Expire<wbr>Passwords</a>
@@ -925,8 +855,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hardexpiry_csharp">
 <a href="#state_hardexpiry_csharp" style="color: inherit; text-decoration: inherit;">Hard<wbr>Expiry</a>
@@ -935,8 +864,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxpasswordage_csharp">
 <a href="#state_maxpasswordage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Password<wbr>Age</a>
@@ -945,8 +873,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days that an user password is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimumpasswordlength_csharp">
 <a href="#state_minimumpasswordlength_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Password<wbr>Length</a>
@@ -955,8 +882,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum length to require for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordreuseprevention_csharp">
 <a href="#state_passwordreuseprevention_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Reuse<wbr>Prevention</a>
@@ -965,8 +891,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of previous passwords that users are prevented from reusing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requirelowercasecharacters_csharp">
 <a href="#state_requirelowercasecharacters_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Lowercase<wbr>Characters</a>
@@ -975,8 +900,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require lowercase characters for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requirenumbers_csharp">
 <a href="#state_requirenumbers_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Numbers</a>
@@ -985,8 +909,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require numbers for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requiresymbols_csharp">
 <a href="#state_requiresymbols_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Symbols</a>
@@ -995,8 +918,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require symbols for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requireuppercasecharacters_csharp">
 <a href="#state_requireuppercasecharacters_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Uppercase<wbr>Characters</a>
@@ -1005,14 +927,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require uppercase characters for user passwords.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowuserstochangepassword_go">
 <a href="#state_allowuserstochangepassword_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Users<wbr>To<wbr>Change<wbr>Password</a>
@@ -1021,8 +940,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow users to change their own password
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirepasswords_go">
 <a href="#state_expirepasswords_go" style="color: inherit; text-decoration: inherit;">Expire<wbr>Passwords</a>
@@ -1031,8 +949,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hardexpiry_go">
 <a href="#state_hardexpiry_go" style="color: inherit; text-decoration: inherit;">Hard<wbr>Expiry</a>
@@ -1041,8 +958,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxpasswordage_go">
 <a href="#state_maxpasswordage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Password<wbr>Age</a>
@@ -1051,8 +967,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days that an user password is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimumpasswordlength_go">
 <a href="#state_minimumpasswordlength_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Password<wbr>Length</a>
@@ -1061,8 +976,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum length to require for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordreuseprevention_go">
 <a href="#state_passwordreuseprevention_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Reuse<wbr>Prevention</a>
@@ -1071,8 +985,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of previous passwords that users are prevented from reusing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requirelowercasecharacters_go">
 <a href="#state_requirelowercasecharacters_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Lowercase<wbr>Characters</a>
@@ -1081,8 +994,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require lowercase characters for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requirenumbers_go">
 <a href="#state_requirenumbers_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Numbers</a>
@@ -1091,8 +1003,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require numbers for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requiresymbols_go">
 <a href="#state_requiresymbols_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Symbols</a>
@@ -1101,8 +1012,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require symbols for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requireuppercasecharacters_go">
 <a href="#state_requireuppercasecharacters_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Uppercase<wbr>Characters</a>
@@ -1111,14 +1021,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require uppercase characters for user passwords.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowuserstochangepassword_nodejs">
 <a href="#state_allowuserstochangepassword_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Users<wbr>To<wbr>Change<wbr>Password</a>
@@ -1127,8 +1034,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to allow users to change their own password
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirepasswords_nodejs">
 <a href="#state_expirepasswords_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Passwords</a>
@@ -1137,8 +1043,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hardexpiry_nodejs">
 <a href="#state_hardexpiry_nodejs" style="color: inherit; text-decoration: inherit;">hard<wbr>Expiry</a>
@@ -1147,8 +1052,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxpasswordage_nodejs">
 <a href="#state_maxpasswordage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Password<wbr>Age</a>
@@ -1157,8 +1061,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of days that an user password is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimumpasswordlength_nodejs">
 <a href="#state_minimumpasswordlength_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Password<wbr>Length</a>
@@ -1167,8 +1070,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum length to require for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordreuseprevention_nodejs">
 <a href="#state_passwordreuseprevention_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Reuse<wbr>Prevention</a>
@@ -1177,8 +1079,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of previous passwords that users are prevented from reusing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requirelowercasecharacters_nodejs">
 <a href="#state_requirelowercasecharacters_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Lowercase<wbr>Characters</a>
@@ -1187,8 +1088,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to require lowercase characters for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requirenumbers_nodejs">
 <a href="#state_requirenumbers_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Numbers</a>
@@ -1197,8 +1097,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to require numbers for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requiresymbols_nodejs">
 <a href="#state_requiresymbols_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Symbols</a>
@@ -1207,8 +1106,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to require symbols for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requireuppercasecharacters_nodejs">
 <a href="#state_requireuppercasecharacters_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Uppercase<wbr>Characters</a>
@@ -1217,14 +1115,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to require uppercase characters for user passwords.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allow_users_to_change_password_python">
 <a href="#state_allow_users_to_change_password_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>users_<wbr>to_<wbr>change_<wbr>password</a>
@@ -1233,8 +1128,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow users to change their own password
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expire_passwords_python">
 <a href="#state_expire_passwords_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>passwords</a>
@@ -1243,8 +1137,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether passwords in the account expire. Returns `true` if `max_password_age` contains a value greater than `0`. Returns `false` if it is `0` or _not present_.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hard_expiry_python">
 <a href="#state_hard_expiry_python" style="color: inherit; text-decoration: inherit;">hard_<wbr>expiry</a>
@@ -1253,8 +1146,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether users are prevented from setting a new password after their password has expired (i.e. require administrator reset)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_password_age_python">
 <a href="#state_max_password_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>password_<wbr>age</a>
@@ -1263,8 +1155,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of days that an user password is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimum_password_length_python">
 <a href="#state_minimum_password_length_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>password_<wbr>length</a>
@@ -1273,8 +1164,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum length to require for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_reuse_prevention_python">
 <a href="#state_password_reuse_prevention_python" style="color: inherit; text-decoration: inherit;">password_<wbr>reuse_<wbr>prevention</a>
@@ -1283,8 +1173,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of previous passwords that users are prevented from reusing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_require_lowercase_characters_python">
 <a href="#state_require_lowercase_characters_python" style="color: inherit; text-decoration: inherit;">require_<wbr>lowercase_<wbr>characters</a>
@@ -1293,8 +1182,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require lowercase characters for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_require_numbers_python">
 <a href="#state_require_numbers_python" style="color: inherit; text-decoration: inherit;">require_<wbr>numbers</a>
@@ -1303,8 +1191,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require numbers for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_require_symbols_python">
 <a href="#state_require_symbols_python" style="color: inherit; text-decoration: inherit;">require_<wbr>symbols</a>
@@ -1313,8 +1200,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require symbols for user passwords.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_require_uppercase_characters_python">
 <a href="#state_require_uppercase_characters_python" style="color: inherit; text-decoration: inherit;">require_<wbr>uppercase_<wbr>characters</a>
@@ -1323,8 +1209,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to require uppercase characters for user passwords.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1350,6 +1235,6 @@ IAM Account Password Policy can be imported using the word `iam-account-password
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

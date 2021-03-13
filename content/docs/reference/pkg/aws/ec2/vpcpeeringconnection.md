@@ -30,11 +30,17 @@ The accepter can manage its side of the connection using the `aws.ec2.VpcPeering
 or accept the connection manually using the AWS Management Console, AWS CLI, through SDKs, etc.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -54,9 +60,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -80,9 +89,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -93,9 +105,12 @@ foo = aws.ec2.VpcPeeringConnection("foo",
     vpc_id=aws_vpc["foo"]["id"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -108,9 +123,16 @@ const foo = new aws.ec2.VpcPeeringConnection("foo", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a VpcPeeringConnection Resource {#create}
@@ -135,9 +157,7 @@ const foo = new aws.ec2.VpcPeeringConnection("foo", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -145,9 +165,7 @@ const foo = new aws.ec2.VpcPeeringConnection("foo", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -155,9 +173,7 @@ const foo = new aws.ec2.VpcPeeringConnection("foo", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -165,10 +181,7 @@ const foo = new aws.ec2.VpcPeeringConnection("foo", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -194,9 +207,7 @@ const foo = new aws.ec2.VpcPeeringConnection("foo", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -204,9 +215,7 @@ const foo = new aws.ec2.VpcPeeringConnection("foo", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -214,9 +223,7 @@ const foo = new aws.ec2.VpcPeeringConnection("foo", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -224,9 +231,7 @@ const foo = new aws.ec2.VpcPeeringConnection("foo", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -234,18 +239,13 @@ const foo = new aws.ec2.VpcPeeringConnection("foo", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -253,9 +253,7 @@ const foo = new aws.ec2.VpcPeeringConnection("foo", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -263,9 +261,7 @@ const foo = new aws.ec2.VpcPeeringConnection("foo", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -273,10 +269,7 @@ const foo = new aws.ec2.VpcPeeringConnection("foo", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -291,9 +284,7 @@ The VpcPeeringConnection resource accepts the following [input]({{< relref "/doc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="peervpcid_csharp">
 <a href="#peervpcid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Vpc<wbr>Id</a>
@@ -302,8 +293,7 @@ The VpcPeeringConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC with which you are creating the VPC Peering Connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_csharp">
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -312,8 +302,7 @@ The VpcPeeringConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accepter_csharp">
 <a href="#accepter_csharp" style="color: inherit; text-decoration: inherit;">Accepter</a>
@@ -324,8 +313,7 @@ The VpcPeeringConnection resource accepts the following [input]({{< relref "/doc
     <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoaccept_csharp">
 <a href="#autoaccept_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Accept</a>
@@ -334,8 +322,7 @@ the peering connection (a maximum of one).
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Accept the peering (both VPCs need to be in the same AWS account).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerownerid_csharp">
 <a href="#peerownerid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Owner<wbr>Id</a>
@@ -345,8 +332,7 @@ the peering connection (a maximum of one).
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the peer VPC.
 Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerregion_csharp">
 <a href="#peerregion_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
@@ -356,8 +342,7 @@ Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/prov
     </dt>
     <dd>{{% md %}}The region of the accepter VPC of the [VPC Peering Connection]. `auto_accept` must be `false`,
 and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requester_csharp">
 <a href="#requester_csharp" style="color: inherit; text-decoration: inherit;">Requester</a>
@@ -368,8 +353,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
     <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -378,14 +362,11 @@ the peering connection (a maximum of one).
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="peervpcid_go">
 <a href="#peervpcid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Vpc<wbr>Id</a>
@@ -394,8 +375,7 @@ the peering connection (a maximum of one).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC with which you are creating the VPC Peering Connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_go">
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -404,8 +384,7 @@ the peering connection (a maximum of one).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accepter_go">
 <a href="#accepter_go" style="color: inherit; text-decoration: inherit;">Accepter</a>
@@ -416,8 +395,7 @@ the peering connection (a maximum of one).
     <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoaccept_go">
 <a href="#autoaccept_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Accept</a>
@@ -426,8 +404,7 @@ the peering connection (a maximum of one).
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Accept the peering (both VPCs need to be in the same AWS account).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerownerid_go">
 <a href="#peerownerid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Owner<wbr>Id</a>
@@ -437,8 +414,7 @@ the peering connection (a maximum of one).
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the peer VPC.
 Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerregion_go">
 <a href="#peerregion_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
@@ -448,8 +424,7 @@ Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/prov
     </dt>
     <dd>{{% md %}}The region of the accepter VPC of the [VPC Peering Connection]. `auto_accept` must be `false`,
 and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requester_go">
 <a href="#requester_go" style="color: inherit; text-decoration: inherit;">Requester</a>
@@ -460,8 +435,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
     <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -470,14 +444,11 @@ the peering connection (a maximum of one).
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="peervpcid_nodejs">
 <a href="#peervpcid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Vpc<wbr>Id</a>
@@ -486,8 +457,7 @@ the peering connection (a maximum of one).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC with which you are creating the VPC Peering Connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpcid_nodejs">
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -496,8 +466,7 @@ the peering connection (a maximum of one).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accepter_nodejs">
 <a href="#accepter_nodejs" style="color: inherit; text-decoration: inherit;">accepter</a>
@@ -508,8 +477,7 @@ the peering connection (a maximum of one).
     <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoaccept_nodejs">
 <a href="#autoaccept_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Accept</a>
@@ -518,8 +486,7 @@ the peering connection (a maximum of one).
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Accept the peering (both VPCs need to be in the same AWS account).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerownerid_nodejs">
 <a href="#peerownerid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Owner<wbr>Id</a>
@@ -529,8 +496,7 @@ the peering connection (a maximum of one).
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the peer VPC.
 Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peerregion_nodejs">
 <a href="#peerregion_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Region</a>
@@ -540,8 +506,7 @@ Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/prov
     </dt>
     <dd>{{% md %}}The region of the accepter VPC of the [VPC Peering Connection]. `auto_accept` must be `false`,
 and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requester_nodejs">
 <a href="#requester_nodejs" style="color: inherit; text-decoration: inherit;">requester</a>
@@ -552,8 +517,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
     <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -562,14 +526,11 @@ the peering connection (a maximum of one).
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="peer_vpc_id_python">
 <a href="#peer_vpc_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>vpc_<wbr>id</a>
@@ -578,8 +539,7 @@ the peering connection (a maximum of one).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC with which you are creating the VPC Peering Connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpc_id_python">
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -588,8 +548,7 @@ the peering connection (a maximum of one).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accepter_python">
 <a href="#accepter_python" style="color: inherit; text-decoration: inherit;">accepter</a>
@@ -600,8 +559,7 @@ the peering connection (a maximum of one).
     <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_accept_python">
 <a href="#auto_accept_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>accept</a>
@@ -610,8 +568,7 @@ the peering connection (a maximum of one).
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Accept the peering (both VPCs need to be in the same AWS account).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peer_owner_id_python">
 <a href="#peer_owner_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>owner_<wbr>id</a>
@@ -621,8 +578,7 @@ the peering connection (a maximum of one).
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the peer VPC.
 Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peer_region_python">
 <a href="#peer_region_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>region</a>
@@ -632,8 +588,7 @@ Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/prov
     </dt>
     <dd>{{% md %}}The region of the accepter VPC of the [VPC Peering Connection]. `auto_accept` must be `false`,
 and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requester_python">
 <a href="#requester_python" style="color: inherit; text-decoration: inherit;">requester</a>
@@ -644,8 +599,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
     <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -654,8 +608,7 @@ the peering connection (a maximum of one).
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -666,9 +619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="acceptstatus_csharp">
 <a href="#acceptstatus_csharp" style="color: inherit; text-decoration: inherit;">Accept<wbr>Status</a>
@@ -677,8 +628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the VPC Peering Connection request.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -686,14 +636,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="acceptstatus_go">
 <a href="#acceptstatus_go" style="color: inherit; text-decoration: inherit;">Accept<wbr>Status</a>
@@ -702,8 +649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the VPC Peering Connection request.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -711,14 +657,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="acceptstatus_nodejs">
 <a href="#acceptstatus_nodejs" style="color: inherit; text-decoration: inherit;">accept<wbr>Status</a>
@@ -727,8 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the VPC Peering Connection request.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -736,14 +678,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accept_status_python">
 <a href="#accept_status_python" style="color: inherit; text-decoration: inherit;">accept_<wbr>status</a>
@@ -752,8 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the VPC Peering Connection request.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -761,8 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -889,9 +826,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceptstatus_csharp">
 <a href="#state_acceptstatus_csharp" style="color: inherit; text-decoration: inherit;">Accept<wbr>Status</a>
@@ -900,8 +835,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the VPC Peering Connection request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accepter_csharp">
 <a href="#state_accepter_csharp" style="color: inherit; text-decoration: inherit;">Accepter</a>
@@ -912,8 +846,7 @@ The following state arguments are supported:
     <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoaccept_csharp">
 <a href="#state_autoaccept_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Accept</a>
@@ -922,8 +855,7 @@ the peering connection (a maximum of one).
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Accept the peering (both VPCs need to be in the same AWS account).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerownerid_csharp">
 <a href="#state_peerownerid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Owner<wbr>Id</a>
@@ -933,8 +865,7 @@ the peering connection (a maximum of one).
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the peer VPC.
 Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerregion_csharp">
 <a href="#state_peerregion_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
@@ -944,8 +875,7 @@ Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/prov
     </dt>
     <dd>{{% md %}}The region of the accepter VPC of the [VPC Peering Connection]. `auto_accept` must be `false`,
 and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peervpcid_csharp">
 <a href="#state_peervpcid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Vpc<wbr>Id</a>
@@ -954,8 +884,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC with which you are creating the VPC Peering Connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requester_csharp">
 <a href="#state_requester_csharp" style="color: inherit; text-decoration: inherit;">Requester</a>
@@ -966,8 +895,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
     <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -976,8 +904,7 @@ the peering connection (a maximum of one).
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_csharp">
 <a href="#state_vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -986,14 +913,11 @@ the peering connection (a maximum of one).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceptstatus_go">
 <a href="#state_acceptstatus_go" style="color: inherit; text-decoration: inherit;">Accept<wbr>Status</a>
@@ -1002,8 +926,7 @@ the peering connection (a maximum of one).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the VPC Peering Connection request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accepter_go">
 <a href="#state_accepter_go" style="color: inherit; text-decoration: inherit;">Accepter</a>
@@ -1014,8 +937,7 @@ the peering connection (a maximum of one).
     <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoaccept_go">
 <a href="#state_autoaccept_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Accept</a>
@@ -1024,8 +946,7 @@ the peering connection (a maximum of one).
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Accept the peering (both VPCs need to be in the same AWS account).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerownerid_go">
 <a href="#state_peerownerid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Owner<wbr>Id</a>
@@ -1035,8 +956,7 @@ the peering connection (a maximum of one).
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the peer VPC.
 Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerregion_go">
 <a href="#state_peerregion_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Region</a>
@@ -1046,8 +966,7 @@ Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/prov
     </dt>
     <dd>{{% md %}}The region of the accepter VPC of the [VPC Peering Connection]. `auto_accept` must be `false`,
 and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peervpcid_go">
 <a href="#state_peervpcid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Vpc<wbr>Id</a>
@@ -1056,8 +975,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC with which you are creating the VPC Peering Connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requester_go">
 <a href="#state_requester_go" style="color: inherit; text-decoration: inherit;">Requester</a>
@@ -1068,8 +986,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
     <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1078,8 +995,7 @@ the peering connection (a maximum of one).
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_go">
 <a href="#state_vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
@@ -1088,14 +1004,11 @@ the peering connection (a maximum of one).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceptstatus_nodejs">
 <a href="#state_acceptstatus_nodejs" style="color: inherit; text-decoration: inherit;">accept<wbr>Status</a>
@@ -1104,8 +1017,7 @@ the peering connection (a maximum of one).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the VPC Peering Connection request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accepter_nodejs">
 <a href="#state_accepter_nodejs" style="color: inherit; text-decoration: inherit;">accepter</a>
@@ -1116,8 +1028,7 @@ the peering connection (a maximum of one).
     <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoaccept_nodejs">
 <a href="#state_autoaccept_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Accept</a>
@@ -1126,8 +1037,7 @@ the peering connection (a maximum of one).
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Accept the peering (both VPCs need to be in the same AWS account).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerownerid_nodejs">
 <a href="#state_peerownerid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Owner<wbr>Id</a>
@@ -1137,8 +1047,7 @@ the peering connection (a maximum of one).
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the peer VPC.
 Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerregion_nodejs">
 <a href="#state_peerregion_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Region</a>
@@ -1148,8 +1057,7 @@ Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/prov
     </dt>
     <dd>{{% md %}}The region of the accepter VPC of the [VPC Peering Connection]. `auto_accept` must be `false`,
 and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peervpcid_nodejs">
 <a href="#state_peervpcid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Vpc<wbr>Id</a>
@@ -1158,8 +1066,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC with which you are creating the VPC Peering Connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requester_nodejs">
 <a href="#state_requester_nodejs" style="color: inherit; text-decoration: inherit;">requester</a>
@@ -1170,8 +1077,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
     <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1180,8 +1086,7 @@ the peering connection (a maximum of one).
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpcid_nodejs">
 <a href="#state_vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
@@ -1190,14 +1095,11 @@ the peering connection (a maximum of one).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accept_status_python">
 <a href="#state_accept_status_python" style="color: inherit; text-decoration: inherit;">accept_<wbr>status</a>
@@ -1206,8 +1108,7 @@ the peering connection (a maximum of one).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the VPC Peering Connection request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accepter_python">
 <a href="#state_accepter_python" style="color: inherit; text-decoration: inherit;">accepter</a>
@@ -1218,8 +1119,7 @@ the peering connection (a maximum of one).
     <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that accepts
 the peering connection (a maximum of one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_accept_python">
 <a href="#state_auto_accept_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>accept</a>
@@ -1228,8 +1128,7 @@ the peering connection (a maximum of one).
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Accept the peering (both VPCs need to be in the same AWS account).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peer_owner_id_python">
 <a href="#state_peer_owner_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>owner_<wbr>id</a>
@@ -1239,8 +1138,7 @@ the peering connection (a maximum of one).
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the peer VPC.
 Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peer_region_python">
 <a href="#state_peer_region_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>region</a>
@@ -1250,8 +1148,7 @@ Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/prov
     </dt>
     <dd>{{% md %}}The region of the accepter VPC of the [VPC Peering Connection]. `auto_accept` must be `false`,
 and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peer_vpc_id_python">
 <a href="#state_peer_vpc_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>vpc_<wbr>id</a>
@@ -1260,8 +1157,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC with which you are creating the VPC Peering Connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requester_python">
 <a href="#state_requester_python" style="color: inherit; text-decoration: inherit;">requester</a>
@@ -1272,8 +1168,7 @@ and use the `aws.ec2.VpcPeeringConnectionAccepter` to manage the accepter side.
     <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
 (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options to be set for the VPC that requests
 the peering connection (a maximum of one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1282,8 +1177,7 @@ the peering connection (a maximum of one).
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpc_id_python">
 <a href="#state_vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
@@ -1292,8 +1186,7 @@ the peering connection (a maximum of one).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1308,9 +1201,7 @@ the peering connection (a maximum of one).
 <h4 id="vpcpeeringconnectionaccepter">Vpc<wbr>Peering<wbr>Connection<wbr>Accepter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowclassiclinktoremotevpc_csharp">
 <a href="#allowclassiclinktoremotevpc_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</a>
@@ -1321,8 +1212,7 @@ the peering connection (a maximum of one).
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
 to the remote VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowremotevpcdnsresolution_csharp">
 <a href="#allowremotevpcdnsresolution_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</a>
@@ -1334,8 +1224,7 @@ to the remote VPC.
 private IP addresses when queried from instances in the peer VPC. This is
 [not supported](https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html) for
 inter-region VPC peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowvpctoremoteclassiclink_csharp">
 <a href="#allowvpctoremoteclassiclink_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</a>
@@ -1346,14 +1235,11 @@ inter-region VPC peering.
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
 connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowclassiclinktoremotevpc_go">
 <a href="#allowclassiclinktoremotevpc_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</a>
@@ -1364,8 +1250,7 @@ connection.
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
 to the remote VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowremotevpcdnsresolution_go">
 <a href="#allowremotevpcdnsresolution_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</a>
@@ -1377,8 +1262,7 @@ to the remote VPC.
 private IP addresses when queried from instances in the peer VPC. This is
 [not supported](https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html) for
 inter-region VPC peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowvpctoremoteclassiclink_go">
 <a href="#allowvpctoremoteclassiclink_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</a>
@@ -1389,14 +1273,11 @@ inter-region VPC peering.
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
 connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowclassiclinktoremotevpc_nodejs">
 <a href="#allowclassiclinktoremotevpc_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</a>
@@ -1407,8 +1288,7 @@ connection.
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
 to the remote VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowremotevpcdnsresolution_nodejs">
 <a href="#allowremotevpcdnsresolution_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</a>
@@ -1420,8 +1300,7 @@ to the remote VPC.
 private IP addresses when queried from instances in the peer VPC. This is
 [not supported](https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html) for
 inter-region VPC peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowvpctoremoteclassiclink_nodejs">
 <a href="#allowvpctoremoteclassiclink_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</a>
@@ -1432,14 +1311,11 @@ inter-region VPC peering.
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
 connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_classic_link_to_remote_vpc_python">
 <a href="#allow_classic_link_to_remote_vpc_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>classic_<wbr>link_<wbr>to_<wbr>remote_<wbr>vpc</a>
@@ -1450,8 +1326,7 @@ connection.
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
 to the remote VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_remote_vpc_dns_resolution_python">
 <a href="#allow_remote_vpc_dns_resolution_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>remote_<wbr>vpc_<wbr>dns_<wbr>resolution</a>
@@ -1463,8 +1338,7 @@ to the remote VPC.
 private IP addresses when queried from instances in the peer VPC. This is
 [not supported](https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html) for
 inter-region VPC peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_vpc_to_remote_classic_link_python">
 <a href="#allow_vpc_to_remote_classic_link_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>vpc_<wbr>to_<wbr>remote_<wbr>classic_<wbr>link</a>
@@ -1475,16 +1349,13 @@ inter-region VPC peering.
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
 connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vpcpeeringconnectionrequester">Vpc<wbr>Peering<wbr>Connection<wbr>Requester</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowclassiclinktoremotevpc_csharp">
 <a href="#allowclassiclinktoremotevpc_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</a>
@@ -1495,8 +1366,7 @@ connection.
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
 to the remote VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowremotevpcdnsresolution_csharp">
 <a href="#allowremotevpcdnsresolution_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</a>
@@ -1508,8 +1378,7 @@ to the remote VPC.
 private IP addresses when queried from instances in the peer VPC. This is
 [not supported](https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html) for
 inter-region VPC peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowvpctoremoteclassiclink_csharp">
 <a href="#allowvpctoremoteclassiclink_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</a>
@@ -1520,14 +1389,11 @@ inter-region VPC peering.
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
 connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowclassiclinktoremotevpc_go">
 <a href="#allowclassiclinktoremotevpc_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</a>
@@ -1538,8 +1404,7 @@ connection.
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
 to the remote VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowremotevpcdnsresolution_go">
 <a href="#allowremotevpcdnsresolution_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</a>
@@ -1551,8 +1416,7 @@ to the remote VPC.
 private IP addresses when queried from instances in the peer VPC. This is
 [not supported](https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html) for
 inter-region VPC peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowvpctoremoteclassiclink_go">
 <a href="#allowvpctoremoteclassiclink_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</a>
@@ -1563,14 +1427,11 @@ inter-region VPC peering.
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
 connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowclassiclinktoremotevpc_nodejs">
 <a href="#allowclassiclinktoremotevpc_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</a>
@@ -1581,8 +1442,7 @@ connection.
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
 to the remote VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowremotevpcdnsresolution_nodejs">
 <a href="#allowremotevpcdnsresolution_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</a>
@@ -1594,8 +1454,7 @@ to the remote VPC.
 private IP addresses when queried from instances in the peer VPC. This is
 [not supported](https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html) for
 inter-region VPC peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowvpctoremoteclassiclink_nodejs">
 <a href="#allowvpctoremoteclassiclink_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</a>
@@ -1606,14 +1465,11 @@ inter-region VPC peering.
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
 connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_classic_link_to_remote_vpc_python">
 <a href="#allow_classic_link_to_remote_vpc_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>classic_<wbr>link_<wbr>to_<wbr>remote_<wbr>vpc</a>
@@ -1624,8 +1480,7 @@ connection.
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
 to the remote VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_remote_vpc_dns_resolution_python">
 <a href="#allow_remote_vpc_dns_resolution_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>remote_<wbr>vpc_<wbr>dns_<wbr>resolution</a>
@@ -1637,8 +1492,7 @@ to the remote VPC.
 private IP addresses when queried from instances in the peer VPC. This is
 [not supported](https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html) for
 inter-region VPC peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_vpc_to_remote_classic_link_python">
 <a href="#allow_vpc_to_remote_classic_link_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>vpc_<wbr>to_<wbr>remote_<wbr>classic_<wbr>link</a>
@@ -1649,8 +1503,7 @@ inter-region VPC peering.
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
 connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1673,6 +1526,6 @@ VPC Peering resources can be imported using the `vpc peering id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

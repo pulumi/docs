@@ -16,11 +16,17 @@ Provides a DynamoDB table item resource
   You should perform **regular backups** of all data in the table, see [AWS docs for more](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/BackupRestore.html).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -61,9 +67,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -103,9 +112,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -131,9 +143,12 @@ example_table_item = aws.dynamodb.TableItem("exampleTableItem",
 """)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -162,9 +177,16 @@ const exampleTableItem = new aws.dynamodb.TableItem("exampleTableItem", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a TableItem Resource {#create}
@@ -189,9 +211,7 @@ const exampleTableItem = new aws.dynamodb.TableItem("exampleTableItem", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -199,9 +219,7 @@ const exampleTableItem = new aws.dynamodb.TableItem("exampleTableItem", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -209,9 +227,7 @@ const exampleTableItem = new aws.dynamodb.TableItem("exampleTableItem", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -219,10 +235,7 @@ const exampleTableItem = new aws.dynamodb.TableItem("exampleTableItem", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -248,9 +261,7 @@ const exampleTableItem = new aws.dynamodb.TableItem("exampleTableItem", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -258,9 +269,7 @@ const exampleTableItem = new aws.dynamodb.TableItem("exampleTableItem", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -268,9 +277,7 @@ const exampleTableItem = new aws.dynamodb.TableItem("exampleTableItem", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -278,9 +285,7 @@ const exampleTableItem = new aws.dynamodb.TableItem("exampleTableItem", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -288,18 +293,13 @@ const exampleTableItem = new aws.dynamodb.TableItem("exampleTableItem", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -307,9 +307,7 @@ const exampleTableItem = new aws.dynamodb.TableItem("exampleTableItem", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -317,9 +315,7 @@ const exampleTableItem = new aws.dynamodb.TableItem("exampleTableItem", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -327,10 +323,7 @@ const exampleTableItem = new aws.dynamodb.TableItem("exampleTableItem", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -345,9 +338,7 @@ The TableItem resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hashkey_csharp">
 <a href="#hashkey_csharp" style="color: inherit; text-decoration: inherit;">Hash<wbr>Key</a>
@@ -356,8 +347,7 @@ The TableItem resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hash key to use for lookups and identification of the item
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="item_csharp">
 <a href="#item_csharp" style="color: inherit; text-decoration: inherit;">Item</a>
@@ -367,8 +357,7 @@ The TableItem resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}JSON representation of a map of attribute name/value pairs, one for each attribute.
 Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tablename_csharp">
 <a href="#tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -377,8 +366,7 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table to contain the item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rangekey_csharp">
 <a href="#rangekey_csharp" style="color: inherit; text-decoration: inherit;">Range<wbr>Key</a>
@@ -387,14 +375,11 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hashkey_go">
 <a href="#hashkey_go" style="color: inherit; text-decoration: inherit;">Hash<wbr>Key</a>
@@ -403,8 +388,7 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hash key to use for lookups and identification of the item
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="item_go">
 <a href="#item_go" style="color: inherit; text-decoration: inherit;">Item</a>
@@ -414,8 +398,7 @@ Only the primary key attributes are required; you can optionally provide other a
     </dt>
     <dd>{{% md %}}JSON representation of a map of attribute name/value pairs, one for each attribute.
 Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tablename_go">
 <a href="#tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -424,8 +407,7 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table to contain the item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rangekey_go">
 <a href="#rangekey_go" style="color: inherit; text-decoration: inherit;">Range<wbr>Key</a>
@@ -434,14 +416,11 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hashkey_nodejs">
 <a href="#hashkey_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Key</a>
@@ -450,8 +429,7 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hash key to use for lookups and identification of the item
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="item_nodejs">
 <a href="#item_nodejs" style="color: inherit; text-decoration: inherit;">item</a>
@@ -461,8 +439,7 @@ Only the primary key attributes are required; you can optionally provide other a
     </dt>
     <dd>{{% md %}}JSON representation of a map of attribute name/value pairs, one for each attribute.
 Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tablename_nodejs">
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
@@ -471,8 +448,7 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table to contain the item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rangekey_nodejs">
 <a href="#rangekey_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Key</a>
@@ -481,14 +457,11 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hash_key_python">
 <a href="#hash_key_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>key</a>
@@ -497,8 +470,7 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hash key to use for lookups and identification of the item
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="item_python">
 <a href="#item_python" style="color: inherit; text-decoration: inherit;">item</a>
@@ -508,8 +480,7 @@ Only the primary key attributes are required; you can optionally provide other a
     </dt>
     <dd>{{% md %}}JSON representation of a map of attribute name/value pairs, one for each attribute.
 Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="table_name_python">
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
@@ -518,8 +489,7 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the table to contain the item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="range_key_python">
 <a href="#range_key_python" style="color: inherit; text-decoration: inherit;">range_<wbr>key</a>
@@ -528,8 +498,7 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -540,9 +509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -550,14 +517,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -565,14 +529,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -580,14 +541,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -595,8 +553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -723,9 +680,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_hashkey_csharp">
 <a href="#state_hashkey_csharp" style="color: inherit; text-decoration: inherit;">Hash<wbr>Key</a>
@@ -734,8 +689,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hash key to use for lookups and identification of the item
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_item_csharp">
 <a href="#state_item_csharp" style="color: inherit; text-decoration: inherit;">Item</a>
@@ -745,8 +699,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}JSON representation of a map of attribute name/value pairs, one for each attribute.
 Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rangekey_csharp">
 <a href="#state_rangekey_csharp" style="color: inherit; text-decoration: inherit;">Range<wbr>Key</a>
@@ -755,8 +708,7 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tablename_csharp">
 <a href="#state_tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -765,14 +717,11 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table to contain the item.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_hashkey_go">
 <a href="#state_hashkey_go" style="color: inherit; text-decoration: inherit;">Hash<wbr>Key</a>
@@ -781,8 +730,7 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hash key to use for lookups and identification of the item
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_item_go">
 <a href="#state_item_go" style="color: inherit; text-decoration: inherit;">Item</a>
@@ -792,8 +740,7 @@ Only the primary key attributes are required; you can optionally provide other a
     </dt>
     <dd>{{% md %}}JSON representation of a map of attribute name/value pairs, one for each attribute.
 Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rangekey_go">
 <a href="#state_rangekey_go" style="color: inherit; text-decoration: inherit;">Range<wbr>Key</a>
@@ -802,8 +749,7 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tablename_go">
 <a href="#state_tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -812,14 +758,11 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table to contain the item.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_hashkey_nodejs">
 <a href="#state_hashkey_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Key</a>
@@ -828,8 +771,7 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hash key to use for lookups and identification of the item
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_item_nodejs">
 <a href="#state_item_nodejs" style="color: inherit; text-decoration: inherit;">item</a>
@@ -839,8 +781,7 @@ Only the primary key attributes are required; you can optionally provide other a
     </dt>
     <dd>{{% md %}}JSON representation of a map of attribute name/value pairs, one for each attribute.
 Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rangekey_nodejs">
 <a href="#state_rangekey_nodejs" style="color: inherit; text-decoration: inherit;">range<wbr>Key</a>
@@ -849,8 +790,7 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tablename_nodejs">
 <a href="#state_tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
@@ -859,14 +799,11 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table to contain the item.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_hash_key_python">
 <a href="#state_hash_key_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>key</a>
@@ -875,8 +812,7 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hash key to use for lookups and identification of the item
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_item_python">
 <a href="#state_item_python" style="color: inherit; text-decoration: inherit;">item</a>
@@ -886,8 +822,7 @@ Only the primary key attributes are required; you can optionally provide other a
     </dt>
     <dd>{{% md %}}JSON representation of a map of attribute name/value pairs, one for each attribute.
 Only the primary key attributes are required; you can optionally provide other attribute name-value pairs for the item.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_range_key_python">
 <a href="#state_range_key_python" style="color: inherit; text-decoration: inherit;">range_<wbr>key</a>
@@ -896,8 +831,7 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_table_name_python">
 <a href="#state_table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
@@ -906,8 +840,7 @@ Only the primary key attributes are required; you can optionally provide other a
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the table to contain the item.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -929,6 +862,6 @@ DynamoDB table items cannot be imported.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -27,11 +27,17 @@ brief downtime as the broker reboots.
 > **Note:** All arguments including the username and password will be stored in the raw state as plain-text.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -69,9 +75,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -109,9 +118,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -132,9 +144,12 @@ example = aws.mq.Broker("example",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -157,9 +172,16 @@ const example = new aws.mq.Broker("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Broker Resource {#create}
@@ -184,9 +206,7 @@ const example = new aws.mq.Broker("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -194,9 +214,7 @@ const example = new aws.mq.Broker("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -204,9 +222,7 @@ const example = new aws.mq.Broker("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -214,10 +230,7 @@ const example = new aws.mq.Broker("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -243,9 +256,7 @@ const example = new aws.mq.Broker("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -253,9 +264,7 @@ const example = new aws.mq.Broker("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -263,9 +272,7 @@ const example = new aws.mq.Broker("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -273,9 +280,7 @@ const example = new aws.mq.Broker("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -283,18 +288,13 @@ const example = new aws.mq.Broker("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -302,9 +302,7 @@ const example = new aws.mq.Broker("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -312,9 +310,7 @@ const example = new aws.mq.Broker("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -322,10 +318,7 @@ const example = new aws.mq.Broker("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -340,9 +333,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="brokername_csharp">
 <a href="#brokername_csharp" style="color: inherit; text-decoration: inherit;">Broker<wbr>Name</a>
@@ -351,8 +342,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the broker.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enginetype_csharp">
 <a href="#enginetype_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Type</a>
@@ -361,8 +351,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of broker engine. Currently, Amazon MQ supports only `ActiveMQ`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engineversion_csharp">
 <a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -371,8 +360,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostinstancetype_csharp">
 <a href="#hostinstancetype_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Instance<wbr>Type</a>
@@ -381,8 +369,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroups_csharp">
 <a href="#securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -391,8 +378,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of security group IDs assigned to the broker.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="users_csharp">
 <a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -401,8 +387,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#brokeruser">List&lt;Broker<wbr>User<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applyimmediately_csharp">
 <a href="#applyimmediately_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -412,8 +397,7 @@ The Broker resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}Specifies whether any broker modifications
 are applied immediately, or during the next maintenance window. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autominorversionupgrade_csharp">
 <a href="#autominorversionupgrade_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -422,8 +406,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_csharp">
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -432,8 +415,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the broker. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentmode_csharp">
 <a href="#deploymentmode_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
@@ -442,8 +424,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionoptions_csharp">
 <a href="#encryptionoptions_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Options</a>
@@ -452,8 +433,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logs_csharp">
 <a href="#logs_csharp" style="color: inherit; text-decoration: inherit;">Logs</a>
@@ -462,8 +442,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Logging configuration of the broker. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowstarttime_csharp">
 <a href="#maintenancewindowstarttime_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Start<wbr>Time</a>
@@ -472,8 +451,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Maintenance window start time. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publiclyaccessible_csharp">
 <a href="#publiclyaccessible_csharp" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
@@ -482,8 +460,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetids_csharp">
 <a href="#subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -492,8 +469,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -502,14 +478,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="brokername_go">
 <a href="#brokername_go" style="color: inherit; text-decoration: inherit;">Broker<wbr>Name</a>
@@ -518,8 +491,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the broker.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enginetype_go">
 <a href="#enginetype_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Type</a>
@@ -528,8 +500,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of broker engine. Currently, Amazon MQ supports only `ActiveMQ`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engineversion_go">
 <a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -538,8 +509,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostinstancetype_go">
 <a href="#hostinstancetype_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Instance<wbr>Type</a>
@@ -548,8 +518,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroups_go">
 <a href="#securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -558,8 +527,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of security group IDs assigned to the broker.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="users_go">
 <a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -568,8 +536,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokeruser">[]Broker<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applyimmediately_go">
 <a href="#applyimmediately_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -579,8 +546,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
     </dt>
     <dd>{{% md %}}Specifies whether any broker modifications
 are applied immediately, or during the next maintenance window. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autominorversionupgrade_go">
 <a href="#autominorversionupgrade_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -589,8 +555,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_go">
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -599,8 +564,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the broker. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentmode_go">
 <a href="#deploymentmode_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
@@ -609,8 +573,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionoptions_go">
 <a href="#encryptionoptions_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Options</a>
@@ -619,8 +582,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logs_go">
 <a href="#logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
@@ -629,8 +591,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Logging configuration of the broker. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowstarttime_go">
 <a href="#maintenancewindowstarttime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Start<wbr>Time</a>
@@ -639,8 +600,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></span>
     </dt>
     <dd>{{% md %}}Maintenance window start time. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publiclyaccessible_go">
 <a href="#publiclyaccessible_go" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
@@ -649,8 +609,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetids_go">
 <a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -659,8 +618,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -669,14 +627,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="brokername_nodejs">
 <a href="#brokername_nodejs" style="color: inherit; text-decoration: inherit;">broker<wbr>Name</a>
@@ -685,8 +640,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the broker.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enginetype_nodejs">
 <a href="#enginetype_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Type</a>
@@ -695,8 +649,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of broker engine. Currently, Amazon MQ supports only `ActiveMQ`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engineversion_nodejs">
 <a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
@@ -705,8 +658,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostinstancetype_nodejs">
 <a href="#hostinstancetype_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Instance<wbr>Type</a>
@@ -715,8 +667,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroups_nodejs">
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
@@ -725,8 +676,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of security group IDs assigned to the broker.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="users_nodejs">
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
@@ -735,8 +685,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokeruser">Broker<wbr>User[]</a></span>
     </dt>
     <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applyimmediately_nodejs">
 <a href="#applyimmediately_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Immediately</a>
@@ -746,8 +695,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
     </dt>
     <dd>{{% md %}}Specifies whether any broker modifications
 are applied immediately, or during the next maintenance window. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autominorversionupgrade_nodejs">
 <a href="#autominorversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -756,8 +704,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_nodejs">
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -766,8 +713,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the broker. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deploymentmode_nodejs">
 <a href="#deploymentmode_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Mode</a>
@@ -776,8 +722,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionoptions_nodejs">
 <a href="#encryptionoptions_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Options</a>
@@ -786,8 +731,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logs_nodejs">
 <a href="#logs_nodejs" style="color: inherit; text-decoration: inherit;">logs</a>
@@ -796,8 +740,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Logging configuration of the broker. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowstarttime_nodejs">
 <a href="#maintenancewindowstarttime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Start<wbr>Time</a>
@@ -806,8 +749,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></span>
     </dt>
     <dd>{{% md %}}Maintenance window start time. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publiclyaccessible_nodejs">
 <a href="#publiclyaccessible_nodejs" style="color: inherit; text-decoration: inherit;">publicly<wbr>Accessible</a>
@@ -816,8 +758,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetids_nodejs">
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
@@ -826,8 +767,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -836,14 +776,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="broker_name_python">
 <a href="#broker_name_python" style="color: inherit; text-decoration: inherit;">broker_<wbr>name</a>
@@ -852,8 +789,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the broker.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engine_type_python">
 <a href="#engine_type_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>type</a>
@@ -862,8 +798,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of broker engine. Currently, Amazon MQ supports only `ActiveMQ`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engine_version_python">
 <a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
@@ -872,8 +807,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_instance_type_python">
 <a href="#host_instance_type_python" style="color: inherit; text-decoration: inherit;">host_<wbr>instance_<wbr>type</a>
@@ -882,8 +816,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="security_groups_python">
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
@@ -892,8 +825,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of security group IDs assigned to the broker.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="users_python">
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
@@ -902,8 +834,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokeruser">Sequence[Broker<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apply_immediately_python">
 <a href="#apply_immediately_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>immediately</a>
@@ -913,8 +844,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
     </dt>
     <dd>{{% md %}}Specifies whether any broker modifications
 are applied immediately, or during the next maintenance window. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_minor_version_upgrade_python">
 <a href="#auto_minor_version_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>minor_<wbr>version_<wbr>upgrade</a>
@@ -923,8 +853,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_python">
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -933,8 +862,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the broker. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deployment_mode_python">
 <a href="#deployment_mode_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>mode</a>
@@ -943,8 +871,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_options_python">
 <a href="#encryption_options_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>options</a>
@@ -953,8 +880,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logs_python">
 <a href="#logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
@@ -963,8 +889,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Logging configuration of the broker. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_start_time_python">
 <a href="#maintenance_window_start_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>start_<wbr>time</a>
@@ -973,8 +898,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Maintenance window start time. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicly_accessible_python">
 <a href="#publicly_accessible_python" style="color: inherit; text-decoration: inherit;">publicly_<wbr>accessible</a>
@@ -983,8 +907,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_ids_python">
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
@@ -993,8 +916,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1003,8 +925,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1015,9 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1026,8 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the broker.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1035,8 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instances_csharp">
 <a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
@@ -1053,14 +970,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 * `stomp+ssl://broker-id.mq.us-west-2.amazonaws.com:61614`
 * `mqtt+ssl://broker-id.mq.us-west-2.amazonaws.com:8883`
 * `wss://broker-id.mq.us-west-2.amazonaws.com:61619`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1069,8 +983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the broker.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1078,8 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instances_go">
 <a href="#instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
@@ -1096,14 +1008,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 * `stomp+ssl://broker-id.mq.us-west-2.amazonaws.com:61614`
 * `mqtt+ssl://broker-id.mq.us-west-2.amazonaws.com:8883`
 * `wss://broker-id.mq.us-west-2.amazonaws.com:61619`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1112,8 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the broker.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1121,8 +1029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instances_nodejs">
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
@@ -1139,14 +1046,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 * `stomp+ssl://broker-id.mq.us-west-2.amazonaws.com:61614`
 * `mqtt+ssl://broker-id.mq.us-west-2.amazonaws.com:8883`
 * `wss://broker-id.mq.us-west-2.amazonaws.com:61619`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1155,8 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the broker.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1164,8 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instances_python">
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
@@ -1182,8 +1084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 * `stomp+ssl://broker-id.mq.us-west-2.amazonaws.com:61614`
 * `mqtt+ssl://broker-id.mq.us-west-2.amazonaws.com:8883`
 * `wss://broker-id.mq.us-west-2.amazonaws.com:61619`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1310,9 +1211,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applyimmediately_csharp">
 <a href="#state_applyimmediately_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -1322,8 +1221,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies whether any broker modifications
 are applied immediately, or during the next maintenance window. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1332,8 +1230,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the broker.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autominorversionupgrade_csharp">
 <a href="#state_autominorversionupgrade_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -1342,8 +1239,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_brokername_csharp">
 <a href="#state_brokername_csharp" style="color: inherit; text-decoration: inherit;">Broker<wbr>Name</a>
@@ -1352,8 +1248,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the broker.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configuration_csharp">
 <a href="#state_configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -1362,8 +1257,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the broker. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentmode_csharp">
 <a href="#state_deploymentmode_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
@@ -1372,8 +1266,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptionoptions_csharp">
 <a href="#state_encryptionoptions_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Options</a>
@@ -1382,8 +1275,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enginetype_csharp">
 <a href="#state_enginetype_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Type</a>
@@ -1392,8 +1284,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of broker engine. Currently, Amazon MQ supports only `ActiveMQ`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_csharp">
 <a href="#state_engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -1402,8 +1293,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostinstancetype_csharp">
 <a href="#state_hostinstancetype_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Instance<wbr>Type</a>
@@ -1412,8 +1302,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instances_csharp">
 <a href="#state_instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
@@ -1430,8 +1319,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
 * `stomp+ssl://broker-id.mq.us-west-2.amazonaws.com:61614`
 * `mqtt+ssl://broker-id.mq.us-west-2.amazonaws.com:8883`
 * `wss://broker-id.mq.us-west-2.amazonaws.com:61619`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logs_csharp">
 <a href="#state_logs_csharp" style="color: inherit; text-decoration: inherit;">Logs</a>
@@ -1440,8 +1328,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Logging configuration of the broker. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowstarttime_csharp">
 <a href="#state_maintenancewindowstarttime_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Start<wbr>Time</a>
@@ -1450,8 +1337,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Maintenance window start time. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publiclyaccessible_csharp">
 <a href="#state_publiclyaccessible_csharp" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
@@ -1460,8 +1346,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroups_csharp">
 <a href="#state_securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -1470,8 +1355,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of security group IDs assigned to the broker.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetids_csharp">
 <a href="#state_subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -1480,8 +1364,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1490,8 +1373,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_csharp">
 <a href="#state_users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -1500,14 +1382,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokeruser">List&lt;Broker<wbr>User<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applyimmediately_go">
 <a href="#state_applyimmediately_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>Immediately</a>
@@ -1517,8 +1396,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
     </dt>
     <dd>{{% md %}}Specifies whether any broker modifications
 are applied immediately, or during the next maintenance window. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1527,8 +1405,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the broker.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autominorversionupgrade_go">
 <a href="#state_autominorversionupgrade_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -1537,8 +1414,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_brokername_go">
 <a href="#state_brokername_go" style="color: inherit; text-decoration: inherit;">Broker<wbr>Name</a>
@@ -1547,8 +1423,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the broker.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configuration_go">
 <a href="#state_configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -1557,8 +1432,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the broker. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentmode_go">
 <a href="#state_deploymentmode_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Mode</a>
@@ -1567,8 +1441,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptionoptions_go">
 <a href="#state_encryptionoptions_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Options</a>
@@ -1577,8 +1450,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enginetype_go">
 <a href="#state_enginetype_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Type</a>
@@ -1587,8 +1459,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of broker engine. Currently, Amazon MQ supports only `ActiveMQ`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_go">
 <a href="#state_engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -1597,8 +1468,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostinstancetype_go">
 <a href="#state_hostinstancetype_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Instance<wbr>Type</a>
@@ -1607,8 +1477,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instances_go">
 <a href="#state_instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
@@ -1625,8 +1494,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
 * `stomp+ssl://broker-id.mq.us-west-2.amazonaws.com:61614`
 * `mqtt+ssl://broker-id.mq.us-west-2.amazonaws.com:8883`
 * `wss://broker-id.mq.us-west-2.amazonaws.com:61619`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logs_go">
 <a href="#state_logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
@@ -1635,8 +1503,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Logging configuration of the broker. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowstarttime_go">
 <a href="#state_maintenancewindowstarttime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Start<wbr>Time</a>
@@ -1645,8 +1512,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></span>
     </dt>
     <dd>{{% md %}}Maintenance window start time. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publiclyaccessible_go">
 <a href="#state_publiclyaccessible_go" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
@@ -1655,8 +1521,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroups_go">
 <a href="#state_securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -1665,8 +1530,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of security group IDs assigned to the broker.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetids_go">
 <a href="#state_subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
@@ -1675,8 +1539,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1685,8 +1548,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_go">
 <a href="#state_users_go" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -1695,14 +1557,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokeruser">[]Broker<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applyimmediately_nodejs">
 <a href="#state_applyimmediately_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>Immediately</a>
@@ -1712,8 +1571,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
     </dt>
     <dd>{{% md %}}Specifies whether any broker modifications
 are applied immediately, or during the next maintenance window. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1722,8 +1580,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the broker.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autominorversionupgrade_nodejs">
 <a href="#state_autominorversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
@@ -1732,8 +1589,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_brokername_nodejs">
 <a href="#state_brokername_nodejs" style="color: inherit; text-decoration: inherit;">broker<wbr>Name</a>
@@ -1742,8 +1598,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the broker.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configuration_nodejs">
 <a href="#state_configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -1752,8 +1607,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the broker. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentmode_nodejs">
 <a href="#state_deploymentmode_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Mode</a>
@@ -1762,8 +1616,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptionoptions_nodejs">
 <a href="#state_encryptionoptions_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Options</a>
@@ -1772,8 +1625,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enginetype_nodejs">
 <a href="#state_enginetype_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Type</a>
@@ -1782,8 +1634,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of broker engine. Currently, Amazon MQ supports only `ActiveMQ`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_nodejs">
 <a href="#state_engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
@@ -1792,8 +1643,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostinstancetype_nodejs">
 <a href="#state_hostinstancetype_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Instance<wbr>Type</a>
@@ -1802,8 +1652,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instances_nodejs">
 <a href="#state_instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
@@ -1820,8 +1669,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
 * `stomp+ssl://broker-id.mq.us-west-2.amazonaws.com:61614`
 * `mqtt+ssl://broker-id.mq.us-west-2.amazonaws.com:8883`
 * `wss://broker-id.mq.us-west-2.amazonaws.com:61619`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logs_nodejs">
 <a href="#state_logs_nodejs" style="color: inherit; text-decoration: inherit;">logs</a>
@@ -1830,8 +1678,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Logging configuration of the broker. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancewindowstarttime_nodejs">
 <a href="#state_maintenancewindowstarttime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Start<wbr>Time</a>
@@ -1840,8 +1687,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></span>
     </dt>
     <dd>{{% md %}}Maintenance window start time. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publiclyaccessible_nodejs">
 <a href="#state_publiclyaccessible_nodejs" style="color: inherit; text-decoration: inherit;">publicly<wbr>Accessible</a>
@@ -1850,8 +1696,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroups_nodejs">
 <a href="#state_securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
@@ -1860,8 +1705,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of security group IDs assigned to the broker.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetids_nodejs">
 <a href="#state_subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
@@ -1870,8 +1714,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1880,8 +1723,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_nodejs">
 <a href="#state_users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
@@ -1890,14 +1732,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokeruser">Broker<wbr>User[]</a></span>
     </dt>
     <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apply_immediately_python">
 <a href="#state_apply_immediately_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>immediately</a>
@@ -1907,8 +1746,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
     </dt>
     <dd>{{% md %}}Specifies whether any broker modifications
 are applied immediately, or during the next maintenance window. Default is `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1917,8 +1755,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the broker.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_minor_version_upgrade_python">
 <a href="#state_auto_minor_version_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>minor_<wbr>version_<wbr>upgrade</a>
@@ -1927,8 +1764,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_broker_name_python">
 <a href="#state_broker_name_python" style="color: inherit; text-decoration: inherit;">broker_<wbr>name</a>
@@ -1937,8 +1773,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the broker.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configuration_python">
 <a href="#state_configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -1947,8 +1782,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the broker. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployment_mode_python">
 <a href="#state_deployment_mode_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>mode</a>
@@ -1957,8 +1791,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryption_options_python">
 <a href="#state_encryption_options_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>options</a>
@@ -1967,8 +1800,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_type_python">
 <a href="#state_engine_type_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>type</a>
@@ -1977,8 +1809,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of broker engine. Currently, Amazon MQ supports only `ActiveMQ`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_version_python">
 <a href="#state_engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
@@ -1987,8 +1818,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_instance_type_python">
 <a href="#state_host_instance_type_python" style="color: inherit; text-decoration: inherit;">host_<wbr>instance_<wbr>type</a>
@@ -1997,8 +1827,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instances_python">
 <a href="#state_instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
@@ -2015,8 +1844,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
 * `stomp+ssl://broker-id.mq.us-west-2.amazonaws.com:61614`
 * `mqtt+ssl://broker-id.mq.us-west-2.amazonaws.com:8883`
 * `wss://broker-id.mq.us-west-2.amazonaws.com:61619`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logs_python">
 <a href="#state_logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
@@ -2025,8 +1853,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Logging configuration of the broker. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenance_window_start_time_python">
 <a href="#state_maintenance_window_start_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>start_<wbr>time</a>
@@ -2035,8 +1862,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Maintenance window start time. See below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publicly_accessible_python">
 <a href="#state_publicly_accessible_python" style="color: inherit; text-decoration: inherit;">publicly_<wbr>accessible</a>
@@ -2045,8 +1871,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_groups_python">
 <a href="#state_security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
@@ -2055,8 +1880,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of security group IDs assigned to the broker.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_ids_python">
 <a href="#state_subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
@@ -2065,8 +1889,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2075,8 +1898,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_python">
 <a href="#state_users_python" style="color: inherit; text-decoration: inherit;">users</a>
@@ -2085,8 +1907,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type"><a href="#brokeruser">Sequence[Broker<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2101,9 +1922,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
 <h4 id="brokerconfiguration">Broker<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2112,8 +1931,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Configuration ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revision_csharp">
 <a href="#revision_csharp" style="color: inherit; text-decoration: inherit;">Revision</a>
@@ -2122,14 +1940,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Revision of the Configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2138,8 +1953,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Configuration ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revision_go">
 <a href="#revision_go" style="color: inherit; text-decoration: inherit;">Revision</a>
@@ -2148,14 +1962,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Revision of the Configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2164,8 +1975,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Configuration ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revision_nodejs">
 <a href="#revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
@@ -2174,14 +1984,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Revision of the Configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2190,8 +1997,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Configuration ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revision_python">
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
@@ -2200,16 +2006,13 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Revision of the Configuration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_csharp">
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -2218,8 +2021,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Key Management Service (KMS) Customer Master Key (CMK) to use for encryption at rest. Requires setting `use_aws_owned_key` to `false`. To perform drift detection when AWS managed CMKs or customer managed CMKs are in use, this value must be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useawsownedkey_csharp">
 <a href="#useawsownedkey_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Aws<wbr>Owned<wbr>Key</a>
@@ -2228,14 +2030,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean to enable an AWS owned Key Management Service (KMS) Customer Master Key (CMK) that is not in your account. Defaults to `true`. Setting to `false` without configuring `kms_key_id` will create an AWS managed Customer Master Key (CMK) aliased to `aws/mq` in your account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_go">
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
@@ -2244,8 +2043,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Key Management Service (KMS) Customer Master Key (CMK) to use for encryption at rest. Requires setting `use_aws_owned_key` to `false`. To perform drift detection when AWS managed CMKs or customer managed CMKs are in use, this value must be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useawsownedkey_go">
 <a href="#useawsownedkey_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Aws<wbr>Owned<wbr>Key</a>
@@ -2254,14 +2052,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean to enable an AWS owned Key Management Service (KMS) Customer Master Key (CMK) that is not in your account. Defaults to `true`. Setting to `false` without configuring `kms_key_id` will create an AWS managed Customer Master Key (CMK) aliased to `aws/mq` in your account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyid_nodejs">
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
@@ -2270,8 +2065,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Key Management Service (KMS) Customer Master Key (CMK) to use for encryption at rest. Requires setting `use_aws_owned_key` to `false`. To perform drift detection when AWS managed CMKs or customer managed CMKs are in use, this value must be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useawsownedkey_nodejs">
 <a href="#useawsownedkey_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Aws<wbr>Owned<wbr>Key</a>
@@ -2280,14 +2074,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean to enable an AWS owned Key Management Service (KMS) Customer Master Key (CMK) that is not in your account. Defaults to `true`. Setting to `false` without configuring `kms_key_id` will create an AWS managed Customer Master Key (CMK) aliased to `aws/mq` in your account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kms_key_id_python">
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
@@ -2296,8 +2087,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Key Management Service (KMS) Customer Master Key (CMK) to use for encryption at rest. Requires setting `use_aws_owned_key` to `false`. To perform drift detection when AWS managed CMKs or customer managed CMKs are in use, this value must be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_aws_owned_key_python">
 <a href="#use_aws_owned_key_python" style="color: inherit; text-decoration: inherit;">use_<wbr>aws_<wbr>owned_<wbr>key</a>
@@ -2306,16 +2096,13 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean to enable an AWS owned Key Management Service (KMS) Customer Master Key (CMK) that is not in your account. Defaults to `true`. Setting to `false` without configuring `kms_key_id` will create an AWS managed Customer Master Key (CMK) aliased to `aws/mq` in your account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="brokerinstance">Broker<wbr>Instance</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="consoleurl_csharp">
 <a href="#consoleurl_csharp" style="color: inherit; text-decoration: inherit;">Console<wbr>Url</a>
@@ -2323,8 +2110,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoints_csharp">
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -2332,8 +2118,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2341,14 +2126,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="consoleurl_go">
 <a href="#consoleurl_go" style="color: inherit; text-decoration: inherit;">Console<wbr>Url</a>
@@ -2356,8 +2138,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoints_go">
 <a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -2365,8 +2146,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2374,14 +2154,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="consoleurl_nodejs">
 <a href="#consoleurl_nodejs" style="color: inherit; text-decoration: inherit;">console<wbr>Url</a>
@@ -2389,8 +2166,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoints_nodejs">
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -2398,8 +2174,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -2407,14 +2182,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="console_url_python">
 <a href="#console_url_python" style="color: inherit; text-decoration: inherit;">console_<wbr>url</a>
@@ -2422,8 +2194,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoints_python">
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -2431,8 +2202,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -2440,16 +2210,13 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="brokerlogs">Broker<wbr>Logs</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audit_csharp">
 <a href="#audit_csharp" style="color: inherit; text-decoration: inherit;">Audit</a>
@@ -2458,8 +2225,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables audit logging. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="general_csharp">
 <a href="#general_csharp" style="color: inherit; text-decoration: inherit;">General</a>
@@ -2468,14 +2234,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables general logging via CloudWatch. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audit_go">
 <a href="#audit_go" style="color: inherit; text-decoration: inherit;">Audit</a>
@@ -2484,8 +2247,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables audit logging. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="general_go">
 <a href="#general_go" style="color: inherit; text-decoration: inherit;">General</a>
@@ -2494,14 +2256,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables general logging via CloudWatch. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audit_nodejs">
 <a href="#audit_nodejs" style="color: inherit; text-decoration: inherit;">audit</a>
@@ -2510,8 +2269,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables audit logging. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="general_nodejs">
 <a href="#general_nodejs" style="color: inherit; text-decoration: inherit;">general</a>
@@ -2520,14 +2278,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables general logging via CloudWatch. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audit_python">
 <a href="#audit_python" style="color: inherit; text-decoration: inherit;">audit</a>
@@ -2536,8 +2291,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables audit logging. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="general_python">
 <a href="#general_python" style="color: inherit; text-decoration: inherit;">general</a>
@@ -2546,16 +2300,13 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables general logging via CloudWatch. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweek_csharp">
 <a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
@@ -2564,8 +2315,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The day of the week. e.g. `MONDAY`, `TUESDAY`, or `WEDNESDAY`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeofday_csharp">
 <a href="#timeofday_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Of<wbr>Day</a>
@@ -2574,8 +2324,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time, in 24-hour format. e.g. `02:00`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -2584,14 +2333,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time zone, UTC by default, in either the Country/City format, or the UTC offset format. e.g. `CET`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweek_go">
 <a href="#dayofweek_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
@@ -2600,8 +2346,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The day of the week. e.g. `MONDAY`, `TUESDAY`, or `WEDNESDAY`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeofday_go">
 <a href="#timeofday_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Of<wbr>Day</a>
@@ -2610,8 +2355,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time, in 24-hour format. e.g. `02:00`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -2620,14 +2364,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time zone, UTC by default, in either the Country/City format, or the UTC offset format. e.g. `CET`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweek_nodejs">
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
@@ -2636,8 +2377,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The day of the week. e.g. `MONDAY`, `TUESDAY`, or `WEDNESDAY`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeofday_nodejs">
 <a href="#timeofday_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Of<wbr>Day</a>
@@ -2646,8 +2386,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time, in 24-hour format. e.g. `02:00`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
@@ -2656,14 +2395,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time zone, UTC by default, in either the Country/City format, or the UTC offset format. e.g. `CET`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_of_week_python">
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
@@ -2672,8 +2408,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The day of the week. e.g. `MONDAY`, `TUESDAY`, or `WEDNESDAY`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_of_day_python">
 <a href="#time_of_day_python" style="color: inherit; text-decoration: inherit;">time_<wbr>of_<wbr>day</a>
@@ -2682,8 +2417,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time, in 24-hour format. e.g. `02:00`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
@@ -2692,16 +2426,13 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time zone, UTC by default, in either the Country/City format, or the UTC offset format. e.g. `CET`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="brokeruser">Broker<wbr>User</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2710,8 +2441,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -2720,8 +2450,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consoleaccess_csharp">
 <a href="#consoleaccess_csharp" style="color: inherit; text-decoration: inherit;">Console<wbr>Access</a>
@@ -2730,8 +2459,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable access to the [ActiveMQ Web Console](http://activemq.apache.org/web-console.html) for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_csharp">
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -2740,14 +2468,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of groups (20 maximum) to which the ActiveMQ user belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2756,8 +2481,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -2766,8 +2490,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consoleaccess_go">
 <a href="#consoleaccess_go" style="color: inherit; text-decoration: inherit;">Console<wbr>Access</a>
@@ -2776,8 +2499,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable access to the [ActiveMQ Web Console](http://activemq.apache.org/web-console.html) for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_go">
 <a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -2786,14 +2508,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of groups (20 maximum) to which the ActiveMQ user belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2802,8 +2521,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -2812,8 +2530,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consoleaccess_nodejs">
 <a href="#consoleaccess_nodejs" style="color: inherit; text-decoration: inherit;">console<wbr>Access</a>
@@ -2822,8 +2539,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable access to the [ActiveMQ Web Console](http://activemq.apache.org/web-console.html) for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_nodejs">
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -2832,14 +2548,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of groups (20 maximum) to which the ActiveMQ user belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2848,8 +2561,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -2858,8 +2570,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="console_access_python">
 <a href="#console_access_python" style="color: inherit; text-decoration: inherit;">console_<wbr>access</a>
@@ -2868,8 +2579,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable access to the [ActiveMQ Web Console](http://activemq.apache.org/web-console.html) for the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_python">
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -2878,8 +2588,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of groups (20 maximum) to which the ActiveMQ user belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2900,6 +2609,6 @@ MQ Brokers can be imported using their broker id, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

@@ -13,11 +13,17 @@ meta_desc: "Documentation for the aws.s3.BucketPublicAccessBlock resource with e
 Manages S3 bucket-level Public Access Block configuration. For more information about these settings, see the [AWS S3 Block Public Access documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -40,9 +46,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -70,9 +79,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -84,9 +96,12 @@ example_bucket_public_access_block = aws.s3.BucketPublicAccessBlock("exampleBuck
     block_public_policy=True)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -100,9 +115,16 @@ const exampleBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("examp
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a BucketPublicAccessBlock Resource {#create}
@@ -127,9 +149,7 @@ const exampleBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("examp
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -137,9 +157,7 @@ const exampleBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("examp
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -147,9 +165,7 @@ const exampleBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("examp
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -157,10 +173,7 @@ const exampleBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("examp
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -186,9 +199,7 @@ const exampleBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("examp
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -196,9 +207,7 @@ const exampleBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("examp
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -206,9 +215,7 @@ const exampleBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("examp
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -216,9 +223,7 @@ const exampleBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("examp
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -226,18 +231,13 @@ const exampleBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("examp
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -245,9 +245,7 @@ const exampleBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("examp
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -255,9 +253,7 @@ const exampleBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("examp
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -265,10 +261,7 @@ const exampleBucketPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("examp
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -283,9 +276,7 @@ The BucketPublicAccessBlock resource accepts the following [input]({{< relref "/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -294,8 +285,7 @@ The BucketPublicAccessBlock resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket to which this Public Access Block configuration should be applied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockpublicacls_csharp">
 <a href="#blockpublicacls_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Public<wbr>Acls</a>
@@ -306,8 +296,7 @@ The BucketPublicAccessBlock resource accepts the following [input]({{< relref "/
     <dd>{{% md %}}Whether Amazon S3 should block public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect existing policies or ACLs. When set to `true` causes the following behavior:
 * PUT Bucket acl and PUT Object acl calls will fail if the specified ACL allows public access.
 * PUT Object calls will fail if the request includes an object ACL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockpublicpolicy_csharp">
 <a href="#blockpublicpolicy_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Public<wbr>Policy</a>
@@ -317,8 +306,7 @@ The BucketPublicAccessBlock resource accepts the following [input]({{< relref "/
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should block public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the existing bucket policy. When set to `true` causes Amazon S3 to:
 * Reject calls to PUT Bucket policy if the specified bucket policy allows public access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorepublicacls_csharp">
 <a href="#ignorepublicacls_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Public<wbr>Acls</a>
@@ -328,8 +316,7 @@ The BucketPublicAccessBlock resource accepts the following [input]({{< relref "/
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should ignore public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
 * Ignore public ACLs on this bucket and any objects that it contains.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictpublicbuckets_csharp">
 <a href="#restrictpublicbuckets_csharp" style="color: inherit; text-decoration: inherit;">Restrict<wbr>Public<wbr>Buckets</a>
@@ -339,14 +326,11 @@ The BucketPublicAccessBlock resource accepts the following [input]({{< relref "/
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should restrict public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the previously stored bucket policy, except that public and cross-account access within the public bucket policy, including non-public delegation to specific accounts, is blocked. When set to `true`:
 * Only the bucket owner and AWS Services can access this buckets if it has a public policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -355,8 +339,7 @@ The BucketPublicAccessBlock resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket to which this Public Access Block configuration should be applied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockpublicacls_go">
 <a href="#blockpublicacls_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Public<wbr>Acls</a>
@@ -367,8 +350,7 @@ The BucketPublicAccessBlock resource accepts the following [input]({{< relref "/
     <dd>{{% md %}}Whether Amazon S3 should block public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect existing policies or ACLs. When set to `true` causes the following behavior:
 * PUT Bucket acl and PUT Object acl calls will fail if the specified ACL allows public access.
 * PUT Object calls will fail if the request includes an object ACL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockpublicpolicy_go">
 <a href="#blockpublicpolicy_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Public<wbr>Policy</a>
@@ -378,8 +360,7 @@ The BucketPublicAccessBlock resource accepts the following [input]({{< relref "/
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should block public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the existing bucket policy. When set to `true` causes Amazon S3 to:
 * Reject calls to PUT Bucket policy if the specified bucket policy allows public access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorepublicacls_go">
 <a href="#ignorepublicacls_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Public<wbr>Acls</a>
@@ -389,8 +370,7 @@ The BucketPublicAccessBlock resource accepts the following [input]({{< relref "/
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should ignore public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
 * Ignore public ACLs on this bucket and any objects that it contains.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictpublicbuckets_go">
 <a href="#restrictpublicbuckets_go" style="color: inherit; text-decoration: inherit;">Restrict<wbr>Public<wbr>Buckets</a>
@@ -400,14 +380,11 @@ The BucketPublicAccessBlock resource accepts the following [input]({{< relref "/
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should restrict public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the previously stored bucket policy, except that public and cross-account access within the public bucket policy, including non-public delegation to specific accounts, is blocked. When set to `true`:
 * Only the bucket owner and AWS Services can access this buckets if it has a public policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -416,8 +393,7 @@ The BucketPublicAccessBlock resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket to which this Public Access Block configuration should be applied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockpublicacls_nodejs">
 <a href="#blockpublicacls_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Public<wbr>Acls</a>
@@ -428,8 +404,7 @@ The BucketPublicAccessBlock resource accepts the following [input]({{< relref "/
     <dd>{{% md %}}Whether Amazon S3 should block public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect existing policies or ACLs. When set to `true` causes the following behavior:
 * PUT Bucket acl and PUT Object acl calls will fail if the specified ACL allows public access.
 * PUT Object calls will fail if the request includes an object ACL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blockpublicpolicy_nodejs">
 <a href="#blockpublicpolicy_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Public<wbr>Policy</a>
@@ -439,8 +414,7 @@ The BucketPublicAccessBlock resource accepts the following [input]({{< relref "/
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should block public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the existing bucket policy. When set to `true` causes Amazon S3 to:
 * Reject calls to PUT Bucket policy if the specified bucket policy allows public access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignorepublicacls_nodejs">
 <a href="#ignorepublicacls_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Public<wbr>Acls</a>
@@ -450,8 +424,7 @@ The BucketPublicAccessBlock resource accepts the following [input]({{< relref "/
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should ignore public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
 * Ignore public ACLs on this bucket and any objects that it contains.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictpublicbuckets_nodejs">
 <a href="#restrictpublicbuckets_nodejs" style="color: inherit; text-decoration: inherit;">restrict<wbr>Public<wbr>Buckets</a>
@@ -461,14 +434,11 @@ The BucketPublicAccessBlock resource accepts the following [input]({{< relref "/
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should restrict public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the previously stored bucket policy, except that public and cross-account access within the public bucket policy, including non-public delegation to specific accounts, is blocked. When set to `true`:
 * Only the bucket owner and AWS Services can access this buckets if it has a public policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -477,8 +447,7 @@ The BucketPublicAccessBlock resource accepts the following [input]({{< relref "/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}S3 Bucket to which this Public Access Block configuration should be applied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="block_public_acls_python">
 <a href="#block_public_acls_python" style="color: inherit; text-decoration: inherit;">block_<wbr>public_<wbr>acls</a>
@@ -489,8 +458,7 @@ The BucketPublicAccessBlock resource accepts the following [input]({{< relref "/
     <dd>{{% md %}}Whether Amazon S3 should block public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect existing policies or ACLs. When set to `true` causes the following behavior:
 * PUT Bucket acl and PUT Object acl calls will fail if the specified ACL allows public access.
 * PUT Object calls will fail if the request includes an object ACL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="block_public_policy_python">
 <a href="#block_public_policy_python" style="color: inherit; text-decoration: inherit;">block_<wbr>public_<wbr>policy</a>
@@ -500,8 +468,7 @@ The BucketPublicAccessBlock resource accepts the following [input]({{< relref "/
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should block public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the existing bucket policy. When set to `true` causes Amazon S3 to:
 * Reject calls to PUT Bucket policy if the specified bucket policy allows public access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_public_acls_python">
 <a href="#ignore_public_acls_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>public_<wbr>acls</a>
@@ -511,8 +478,7 @@ The BucketPublicAccessBlock resource accepts the following [input]({{< relref "/
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should ignore public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
 * Ignore public ACLs on this bucket and any objects that it contains.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrict_public_buckets_python">
 <a href="#restrict_public_buckets_python" style="color: inherit; text-decoration: inherit;">restrict_<wbr>public_<wbr>buckets</a>
@@ -522,8 +488,7 @@ The BucketPublicAccessBlock resource accepts the following [input]({{< relref "/
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should restrict public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the previously stored bucket policy, except that public and cross-account access within the public bucket policy, including non-public delegation to specific accounts, is blocked. When set to `true`:
 * Only the bucket owner and AWS Services can access this buckets if it has a public policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -534,9 +499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -544,14 +507,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -559,14 +519,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -574,14 +531,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -589,8 +543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -717,9 +670,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blockpublicacls_csharp">
 <a href="#state_blockpublicacls_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Public<wbr>Acls</a>
@@ -730,8 +681,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether Amazon S3 should block public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect existing policies or ACLs. When set to `true` causes the following behavior:
 * PUT Bucket acl and PUT Object acl calls will fail if the specified ACL allows public access.
 * PUT Object calls will fail if the request includes an object ACL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blockpublicpolicy_csharp">
 <a href="#state_blockpublicpolicy_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Public<wbr>Policy</a>
@@ -741,8 +691,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should block public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the existing bucket policy. When set to `true` causes Amazon S3 to:
 * Reject calls to PUT Bucket policy if the specified bucket policy allows public access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_csharp">
 <a href="#state_bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -751,8 +700,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket to which this Public Access Block configuration should be applied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignorepublicacls_csharp">
 <a href="#state_ignorepublicacls_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Public<wbr>Acls</a>
@@ -762,8 +710,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should ignore public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
 * Ignore public ACLs on this bucket and any objects that it contains.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrictpublicbuckets_csharp">
 <a href="#state_restrictpublicbuckets_csharp" style="color: inherit; text-decoration: inherit;">Restrict<wbr>Public<wbr>Buckets</a>
@@ -773,14 +720,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should restrict public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the previously stored bucket policy, except that public and cross-account access within the public bucket policy, including non-public delegation to specific accounts, is blocked. When set to `true`:
 * Only the bucket owner and AWS Services can access this buckets if it has a public policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blockpublicacls_go">
 <a href="#state_blockpublicacls_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Public<wbr>Acls</a>
@@ -791,8 +735,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether Amazon S3 should block public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect existing policies or ACLs. When set to `true` causes the following behavior:
 * PUT Bucket acl and PUT Object acl calls will fail if the specified ACL allows public access.
 * PUT Object calls will fail if the request includes an object ACL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blockpublicpolicy_go">
 <a href="#state_blockpublicpolicy_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Public<wbr>Policy</a>
@@ -802,8 +745,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should block public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the existing bucket policy. When set to `true` causes Amazon S3 to:
 * Reject calls to PUT Bucket policy if the specified bucket policy allows public access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_go">
 <a href="#state_bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -812,8 +754,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket to which this Public Access Block configuration should be applied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignorepublicacls_go">
 <a href="#state_ignorepublicacls_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Public<wbr>Acls</a>
@@ -823,8 +764,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should ignore public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
 * Ignore public ACLs on this bucket and any objects that it contains.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrictpublicbuckets_go">
 <a href="#state_restrictpublicbuckets_go" style="color: inherit; text-decoration: inherit;">Restrict<wbr>Public<wbr>Buckets</a>
@@ -834,14 +774,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should restrict public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the previously stored bucket policy, except that public and cross-account access within the public bucket policy, including non-public delegation to specific accounts, is blocked. When set to `true`:
 * Only the bucket owner and AWS Services can access this buckets if it has a public policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blockpublicacls_nodejs">
 <a href="#state_blockpublicacls_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Public<wbr>Acls</a>
@@ -852,8 +789,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether Amazon S3 should block public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect existing policies or ACLs. When set to `true` causes the following behavior:
 * PUT Bucket acl and PUT Object acl calls will fail if the specified ACL allows public access.
 * PUT Object calls will fail if the request includes an object ACL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blockpublicpolicy_nodejs">
 <a href="#state_blockpublicpolicy_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Public<wbr>Policy</a>
@@ -863,8 +799,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should block public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the existing bucket policy. When set to `true` causes Amazon S3 to:
 * Reject calls to PUT Bucket policy if the specified bucket policy allows public access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_nodejs">
 <a href="#state_bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -873,8 +808,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 Bucket to which this Public Access Block configuration should be applied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignorepublicacls_nodejs">
 <a href="#state_ignorepublicacls_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Public<wbr>Acls</a>
@@ -884,8 +818,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should ignore public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
 * Ignore public ACLs on this bucket and any objects that it contains.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrictpublicbuckets_nodejs">
 <a href="#state_restrictpublicbuckets_nodejs" style="color: inherit; text-decoration: inherit;">restrict<wbr>Public<wbr>Buckets</a>
@@ -895,14 +828,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should restrict public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the previously stored bucket policy, except that public and cross-account access within the public bucket policy, including non-public delegation to specific accounts, is blocked. When set to `true`:
 * Only the bucket owner and AWS Services can access this buckets if it has a public policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_block_public_acls_python">
 <a href="#state_block_public_acls_python" style="color: inherit; text-decoration: inherit;">block_<wbr>public_<wbr>acls</a>
@@ -913,8 +843,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Whether Amazon S3 should block public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect existing policies or ACLs. When set to `true` causes the following behavior:
 * PUT Bucket acl and PUT Object acl calls will fail if the specified ACL allows public access.
 * PUT Object calls will fail if the request includes an object ACL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_block_public_policy_python">
 <a href="#state_block_public_policy_python" style="color: inherit; text-decoration: inherit;">block_<wbr>public_<wbr>policy</a>
@@ -924,8 +853,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should block public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the existing bucket policy. When set to `true` causes Amazon S3 to:
 * Reject calls to PUT Bucket policy if the specified bucket policy allows public access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_python">
 <a href="#state_bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -934,8 +862,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}S3 Bucket to which this Public Access Block configuration should be applied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignore_public_acls_python">
 <a href="#state_ignore_public_acls_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>public_<wbr>acls</a>
@@ -945,8 +872,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should ignore public ACLs for this bucket. Defaults to `false`. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to `true` causes Amazon S3 to:
 * Ignore public ACLs on this bucket and any objects that it contains.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrict_public_buckets_python">
 <a href="#state_restrict_public_buckets_python" style="color: inherit; text-decoration: inherit;">restrict_<wbr>public_<wbr>buckets</a>
@@ -956,8 +882,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Whether Amazon S3 should restrict public bucket policies for this bucket. Defaults to `false`. Enabling this setting does not affect the previously stored bucket policy, except that public and cross-account access within the public bucket policy, including non-public delegation to specific accounts, is blocked. When set to `true`:
 * Only the bucket owner and AWS Services can access this buckets if it has a public policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -983,6 +908,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

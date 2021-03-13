@@ -13,11 +13,17 @@ meta_desc: "Documentation for the aws.signer.SigningJob resource with examples, 
 Creates a Signer Signing Job.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -57,9 +63,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -101,9 +110,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -127,9 +139,12 @@ build_signing_job = aws.signer.SigningJob("buildSigningJob",
     ignore_signing_job_failure=True)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -155,9 +170,16 @@ const buildSigningJob = new aws.signer.SigningJob("buildSigningJob", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SigningJob Resource {#create}
@@ -182,9 +204,7 @@ const buildSigningJob = new aws.signer.SigningJob("buildSigningJob", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -192,9 +212,7 @@ const buildSigningJob = new aws.signer.SigningJob("buildSigningJob", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -202,9 +220,7 @@ const buildSigningJob = new aws.signer.SigningJob("buildSigningJob", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -212,10 +228,7 @@ const buildSigningJob = new aws.signer.SigningJob("buildSigningJob", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -241,9 +254,7 @@ const buildSigningJob = new aws.signer.SigningJob("buildSigningJob", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -251,9 +262,7 @@ const buildSigningJob = new aws.signer.SigningJob("buildSigningJob", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -261,9 +270,7 @@ const buildSigningJob = new aws.signer.SigningJob("buildSigningJob", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -271,9 +278,7 @@ const buildSigningJob = new aws.signer.SigningJob("buildSigningJob", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -281,18 +286,13 @@ const buildSigningJob = new aws.signer.SigningJob("buildSigningJob", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -300,9 +300,7 @@ const buildSigningJob = new aws.signer.SigningJob("buildSigningJob", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -310,9 +308,7 @@ const buildSigningJob = new aws.signer.SigningJob("buildSigningJob", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -320,10 +316,7 @@ const buildSigningJob = new aws.signer.SigningJob("buildSigningJob", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -338,9 +331,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -349,8 +340,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#signingjobdestination">Signing<wbr>Job<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket in which to save your signed object. See Destination below for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profilename_csharp">
 <a href="#profilename_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -359,8 +349,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the profile to initiate the signing operation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -369,8 +358,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#signingjobsource">Signing<wbr>Job<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket that contains the object to sign. See Source below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoresigningjobfailure_csharp">
 <a href="#ignoresigningjobfailure_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Signing<wbr>Job<wbr>Failure</a>
@@ -379,14 +367,11 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -395,8 +380,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#signingjobdestination">Signing<wbr>Job<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket in which to save your signed object. See Destination below for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profilename_go">
 <a href="#profilename_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -405,8 +389,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the profile to initiate the signing operation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -415,8 +398,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#signingjobsource">Signing<wbr>Job<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket that contains the object to sign. See Source below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoresigningjobfailure_go">
 <a href="#ignoresigningjobfailure_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Signing<wbr>Job<wbr>Failure</a>
@@ -425,14 +407,11 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -441,8 +420,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#signingjobdestination">Signing<wbr>Job<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket in which to save your signed object. See Destination below for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profilename_nodejs">
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
@@ -451,8 +429,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the profile to initiate the signing operation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -461,8 +438,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#signingjobsource">Signing<wbr>Job<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket that contains the object to sign. See Source below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoresigningjobfailure_nodejs">
 <a href="#ignoresigningjobfailure_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Signing<wbr>Job<wbr>Failure</a>
@@ -471,14 +447,11 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -487,8 +460,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#signingjobdestination">Signing<wbr>Job<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket in which to save your signed object. See Destination below for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profile_name_python">
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
@@ -497,8 +469,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the profile to initiate the signing operation.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -507,8 +478,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type"><a href="#signingjobsource">Signing<wbr>Job<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket that contains the object to sign. See Source below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_signing_job_failure_python">
 <a href="#ignore_signing_job_failure_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>signing_<wbr>job_<wbr>failure</a>
@@ -517,8 +487,7 @@ The SigningJob resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -529,9 +498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="completedat_csharp">
 <a href="#completedat_csharp" style="color: inherit; text-decoration: inherit;">Completed<wbr>At</a>
@@ -540,8 +507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was completed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -550,8 +516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -559,8 +524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="jobid_csharp">
 <a href="#jobid_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
@@ -569,8 +533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the signing job on output.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="jobinvoker_csharp">
 <a href="#jobinvoker_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Invoker</a>
@@ -579,8 +542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM entity that initiated the signing job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="jobowner_csharp">
 <a href="#jobowner_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Owner</a>
@@ -589,8 +551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the job owner.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platformdisplayname_csharp">
 <a href="#platformdisplayname_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Display<wbr>Name</a>
@@ -599,8 +560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the signing platform associated with the signing job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platformid_csharp">
 <a href="#platformid_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Id</a>
@@ -609,8 +569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform to which your signed code image will be distributed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="profileversion_csharp">
 <a href="#profileversion_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Version</a>
@@ -619,8 +578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the signing profile used to initiate the signing job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requestedby_csharp">
 <a href="#requestedby_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>By</a>
@@ -629,8 +587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM principal that requested the signing job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revocationrecords_csharp">
 <a href="#revocationrecords_csharp" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Records</a>
@@ -639,8 +596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#signingjobrevocationrecord">List&lt;Signing<wbr>Job<wbr>Revocation<wbr>Record&gt;</a></span>
     </dt>
     <dd>{{% md %}}A revocation record if the signature generated by the signing job has been revoked. Contains a timestamp and the ID of the IAM entity that revoked the signature.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="signatureexpiresat_csharp">
 <a href="#signatureexpiresat_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Expires<wbr>At</a>
@@ -649,8 +605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the signature of a signing job expires.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="signedobjects_csharp">
 <a href="#signedobjects_csharp" style="color: inherit; text-decoration: inherit;">Signed<wbr>Objects</a>
@@ -659,8 +614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#signingjobsignedobject">List&lt;Signing<wbr>Job<wbr>Signed<wbr>Object&gt;</a></span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket where the signed code image is saved by code signing.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -669,8 +623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the signing job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statusreason_csharp">
 <a href="#statusreason_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Reason</a>
@@ -679,14 +632,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value that contains the status reason.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="completedat_go">
 <a href="#completedat_go" style="color: inherit; text-decoration: inherit;">Completed<wbr>At</a>
@@ -695,8 +645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was completed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -705,8 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -714,8 +662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="jobid_go">
 <a href="#jobid_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
@@ -724,8 +671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the signing job on output.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="jobinvoker_go">
 <a href="#jobinvoker_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Invoker</a>
@@ -734,8 +680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM entity that initiated the signing job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="jobowner_go">
 <a href="#jobowner_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Owner</a>
@@ -744,8 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the job owner.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platformdisplayname_go">
 <a href="#platformdisplayname_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Display<wbr>Name</a>
@@ -754,8 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the signing platform associated with the signing job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platformid_go">
 <a href="#platformid_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Id</a>
@@ -764,8 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform to which your signed code image will be distributed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="profileversion_go">
 <a href="#profileversion_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Version</a>
@@ -774,8 +716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the signing profile used to initiate the signing job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requestedby_go">
 <a href="#requestedby_go" style="color: inherit; text-decoration: inherit;">Requested<wbr>By</a>
@@ -784,8 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM principal that requested the signing job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revocationrecords_go">
 <a href="#revocationrecords_go" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Records</a>
@@ -794,8 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#signingjobrevocationrecord">[]Signing<wbr>Job<wbr>Revocation<wbr>Record</a></span>
     </dt>
     <dd>{{% md %}}A revocation record if the signature generated by the signing job has been revoked. Contains a timestamp and the ID of the IAM entity that revoked the signature.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="signatureexpiresat_go">
 <a href="#signatureexpiresat_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Expires<wbr>At</a>
@@ -804,8 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the signature of a signing job expires.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="signedobjects_go">
 <a href="#signedobjects_go" style="color: inherit; text-decoration: inherit;">Signed<wbr>Objects</a>
@@ -814,8 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#signingjobsignedobject">[]Signing<wbr>Job<wbr>Signed<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket where the signed code image is saved by code signing.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -824,8 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the signing job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statusreason_go">
 <a href="#statusreason_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Reason</a>
@@ -834,14 +770,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value that contains the status reason.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="completedat_nodejs">
 <a href="#completedat_nodejs" style="color: inherit; text-decoration: inherit;">completed<wbr>At</a>
@@ -850,8 +783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was completed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -860,8 +792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -869,8 +800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="jobid_nodejs">
 <a href="#jobid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Id</a>
@@ -879,8 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the signing job on output.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="jobinvoker_nodejs">
 <a href="#jobinvoker_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Invoker</a>
@@ -889,8 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM entity that initiated the signing job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="jobowner_nodejs">
 <a href="#jobowner_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Owner</a>
@@ -899,8 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the job owner.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platformdisplayname_nodejs">
 <a href="#platformdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Display<wbr>Name</a>
@@ -909,8 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the signing platform associated with the signing job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platformid_nodejs">
 <a href="#platformid_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Id</a>
@@ -919,8 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform to which your signed code image will be distributed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="profileversion_nodejs">
 <a href="#profileversion_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Version</a>
@@ -929,8 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the signing profile used to initiate the signing job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requestedby_nodejs">
 <a href="#requestedby_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>By</a>
@@ -939,8 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM principal that requested the signing job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revocationrecords_nodejs">
 <a href="#revocationrecords_nodejs" style="color: inherit; text-decoration: inherit;">revocation<wbr>Records</a>
@@ -949,8 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#signingjobrevocationrecord">Signing<wbr>Job<wbr>Revocation<wbr>Record[]</a></span>
     </dt>
     <dd>{{% md %}}A revocation record if the signature generated by the signing job has been revoked. Contains a timestamp and the ID of the IAM entity that revoked the signature.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="signatureexpiresat_nodejs">
 <a href="#signatureexpiresat_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Expires<wbr>At</a>
@@ -959,8 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the signature of a signing job expires.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="signedobjects_nodejs">
 <a href="#signedobjects_nodejs" style="color: inherit; text-decoration: inherit;">signed<wbr>Objects</a>
@@ -969,8 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#signingjobsignedobject">Signing<wbr>Job<wbr>Signed<wbr>Object[]</a></span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket where the signed code image is saved by code signing.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -979,8 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the signing job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statusreason_nodejs">
 <a href="#statusreason_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Reason</a>
@@ -989,14 +908,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value that contains the status reason.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="completed_at_python">
 <a href="#completed_at_python" style="color: inherit; text-decoration: inherit;">completed_<wbr>at</a>
@@ -1005,8 +921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was completed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1015,8 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1024,8 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="job_id_python">
 <a href="#job_id_python" style="color: inherit; text-decoration: inherit;">job_<wbr>id</a>
@@ -1034,8 +947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the signing job on output.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="job_invoker_python">
 <a href="#job_invoker_python" style="color: inherit; text-decoration: inherit;">job_<wbr>invoker</a>
@@ -1044,8 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM entity that initiated the signing job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="job_owner_python">
 <a href="#job_owner_python" style="color: inherit; text-decoration: inherit;">job_<wbr>owner</a>
@@ -1054,8 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the job owner.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platform_display_name_python">
 <a href="#platform_display_name_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>display_<wbr>name</a>
@@ -1064,8 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the signing platform associated with the signing job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platform_id_python">
 <a href="#platform_id_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>id</a>
@@ -1074,8 +983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The platform to which your signed code image will be distributed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="profile_version_python">
 <a href="#profile_version_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>version</a>
@@ -1084,8 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the signing profile used to initiate the signing job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requested_by_python">
 <a href="#requested_by_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>by</a>
@@ -1094,8 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM principal that requested the signing job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revocation_records_python">
 <a href="#revocation_records_python" style="color: inherit; text-decoration: inherit;">revocation_<wbr>records</a>
@@ -1104,8 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#signingjobrevocationrecord">Sequence[Signing<wbr>Job<wbr>Revocation<wbr>Record]</a></span>
     </dt>
     <dd>{{% md %}}A revocation record if the signature generated by the signing job has been revoked. Contains a timestamp and the ID of the IAM entity that revoked the signature.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="signature_expires_at_python">
 <a href="#signature_expires_at_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>expires_<wbr>at</a>
@@ -1114,8 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the signature of a signing job expires.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="signed_objects_python">
 <a href="#signed_objects_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>objects</a>
@@ -1124,8 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#signingjobsignedobject">Sequence[Signing<wbr>Job<wbr>Signed<wbr>Object]</a></span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket where the signed code image is saved by code signing.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1134,8 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the signing job.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_reason_python">
 <a href="#status_reason_python" style="color: inherit; text-decoration: inherit;">status_<wbr>reason</a>
@@ -1144,8 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String value that contains the status reason.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1272,9 +1173,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_completedat_csharp">
 <a href="#state_completedat_csharp" style="color: inherit; text-decoration: inherit;">Completed<wbr>At</a>
@@ -1283,8 +1182,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_csharp">
 <a href="#state_createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1293,8 +1191,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_csharp">
 <a href="#state_destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1303,8 +1200,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobdestination">Signing<wbr>Job<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket in which to save your signed object. See Destination below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoresigningjobfailure_csharp">
 <a href="#state_ignoresigningjobfailure_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Signing<wbr>Job<wbr>Failure</a>
@@ -1313,8 +1209,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobid_csharp">
 <a href="#state_jobid_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
@@ -1323,8 +1218,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the signing job on output.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobinvoker_csharp">
 <a href="#state_jobinvoker_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Invoker</a>
@@ -1333,8 +1227,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM entity that initiated the signing job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobowner_csharp">
 <a href="#state_jobowner_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Owner</a>
@@ -1343,8 +1236,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the job owner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformdisplayname_csharp">
 <a href="#state_platformdisplayname_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Display<wbr>Name</a>
@@ -1353,8 +1245,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the signing platform associated with the signing job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformid_csharp">
 <a href="#state_platformid_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Id</a>
@@ -1363,8 +1254,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform to which your signed code image will be distributed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profilename_csharp">
 <a href="#state_profilename_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -1373,8 +1263,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the profile to initiate the signing operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profileversion_csharp">
 <a href="#state_profileversion_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Version</a>
@@ -1383,8 +1272,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the signing profile used to initiate the signing job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestedby_csharp">
 <a href="#state_requestedby_csharp" style="color: inherit; text-decoration: inherit;">Requested<wbr>By</a>
@@ -1393,8 +1281,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM principal that requested the signing job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revocationrecords_csharp">
 <a href="#state_revocationrecords_csharp" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Records</a>
@@ -1403,8 +1290,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobrevocationrecord">List&lt;Signing<wbr>Job<wbr>Revocation<wbr>Record<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A revocation record if the signature generated by the signing job has been revoked. Contains a timestamp and the ID of the IAM entity that revoked the signature.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signatureexpiresat_csharp">
 <a href="#state_signatureexpiresat_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Expires<wbr>At</a>
@@ -1413,8 +1299,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the signature of a signing job expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signedobjects_csharp">
 <a href="#state_signedobjects_csharp" style="color: inherit; text-decoration: inherit;">Signed<wbr>Objects</a>
@@ -1423,8 +1308,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobsignedobject">List&lt;Signing<wbr>Job<wbr>Signed<wbr>Object<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket where the signed code image is saved by code signing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_csharp">
 <a href="#state_source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -1433,8 +1317,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobsource">Signing<wbr>Job<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket that contains the object to sign. See Source below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1443,8 +1326,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the signing job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statusreason_csharp">
 <a href="#state_statusreason_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Reason</a>
@@ -1453,14 +1335,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value that contains the status reason.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_completedat_go">
 <a href="#state_completedat_go" style="color: inherit; text-decoration: inherit;">Completed<wbr>At</a>
@@ -1469,8 +1348,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_go">
 <a href="#state_createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1479,8 +1357,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_go">
 <a href="#state_destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1489,8 +1366,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobdestination">Signing<wbr>Job<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket in which to save your signed object. See Destination below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoresigningjobfailure_go">
 <a href="#state_ignoresigningjobfailure_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Signing<wbr>Job<wbr>Failure</a>
@@ -1499,8 +1375,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobid_go">
 <a href="#state_jobid_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
@@ -1509,8 +1384,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the signing job on output.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobinvoker_go">
 <a href="#state_jobinvoker_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Invoker</a>
@@ -1519,8 +1393,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM entity that initiated the signing job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobowner_go">
 <a href="#state_jobowner_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Owner</a>
@@ -1529,8 +1402,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the job owner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformdisplayname_go">
 <a href="#state_platformdisplayname_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Display<wbr>Name</a>
@@ -1539,8 +1411,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the signing platform associated with the signing job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformid_go">
 <a href="#state_platformid_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Id</a>
@@ -1549,8 +1420,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform to which your signed code image will be distributed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profilename_go">
 <a href="#state_profilename_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -1559,8 +1429,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the profile to initiate the signing operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profileversion_go">
 <a href="#state_profileversion_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Version</a>
@@ -1569,8 +1438,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the signing profile used to initiate the signing job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestedby_go">
 <a href="#state_requestedby_go" style="color: inherit; text-decoration: inherit;">Requested<wbr>By</a>
@@ -1579,8 +1447,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM principal that requested the signing job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revocationrecords_go">
 <a href="#state_revocationrecords_go" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Records</a>
@@ -1589,8 +1456,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobrevocationrecord">[]Signing<wbr>Job<wbr>Revocation<wbr>Record</a></span>
     </dt>
     <dd>{{% md %}}A revocation record if the signature generated by the signing job has been revoked. Contains a timestamp and the ID of the IAM entity that revoked the signature.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signatureexpiresat_go">
 <a href="#state_signatureexpiresat_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Expires<wbr>At</a>
@@ -1599,8 +1465,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the signature of a signing job expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signedobjects_go">
 <a href="#state_signedobjects_go" style="color: inherit; text-decoration: inherit;">Signed<wbr>Objects</a>
@@ -1609,8 +1474,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobsignedobject">[]Signing<wbr>Job<wbr>Signed<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket where the signed code image is saved by code signing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_go">
 <a href="#state_source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -1619,8 +1483,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobsource">Signing<wbr>Job<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket that contains the object to sign. See Source below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1629,8 +1492,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the signing job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statusreason_go">
 <a href="#state_statusreason_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Reason</a>
@@ -1639,14 +1501,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value that contains the status reason.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_completedat_nodejs">
 <a href="#state_completedat_nodejs" style="color: inherit; text-decoration: inherit;">completed<wbr>At</a>
@@ -1655,8 +1514,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_nodejs">
 <a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1665,8 +1523,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_nodejs">
 <a href="#state_destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1675,8 +1532,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobdestination">Signing<wbr>Job<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket in which to save your signed object. See Destination below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignoresigningjobfailure_nodejs">
 <a href="#state_ignoresigningjobfailure_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Signing<wbr>Job<wbr>Failure</a>
@@ -1685,8 +1541,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobid_nodejs">
 <a href="#state_jobid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Id</a>
@@ -1695,8 +1550,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the signing job on output.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobinvoker_nodejs">
 <a href="#state_jobinvoker_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Invoker</a>
@@ -1705,8 +1559,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM entity that initiated the signing job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jobowner_nodejs">
 <a href="#state_jobowner_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Owner</a>
@@ -1715,8 +1568,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the job owner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformdisplayname_nodejs">
 <a href="#state_platformdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Display<wbr>Name</a>
@@ -1725,8 +1577,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the signing platform associated with the signing job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformid_nodejs">
 <a href="#state_platformid_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Id</a>
@@ -1735,8 +1586,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform to which your signed code image will be distributed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profilename_nodejs">
 <a href="#state_profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
@@ -1745,8 +1595,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the profile to initiate the signing operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profileversion_nodejs">
 <a href="#state_profileversion_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Version</a>
@@ -1755,8 +1604,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the signing profile used to initiate the signing job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestedby_nodejs">
 <a href="#state_requestedby_nodejs" style="color: inherit; text-decoration: inherit;">requested<wbr>By</a>
@@ -1765,8 +1613,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM principal that requested the signing job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revocationrecords_nodejs">
 <a href="#state_revocationrecords_nodejs" style="color: inherit; text-decoration: inherit;">revocation<wbr>Records</a>
@@ -1775,8 +1622,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobrevocationrecord">Signing<wbr>Job<wbr>Revocation<wbr>Record[]</a></span>
     </dt>
     <dd>{{% md %}}A revocation record if the signature generated by the signing job has been revoked. Contains a timestamp and the ID of the IAM entity that revoked the signature.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signatureexpiresat_nodejs">
 <a href="#state_signatureexpiresat_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Expires<wbr>At</a>
@@ -1785,8 +1631,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the signature of a signing job expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signedobjects_nodejs">
 <a href="#state_signedobjects_nodejs" style="color: inherit; text-decoration: inherit;">signed<wbr>Objects</a>
@@ -1795,8 +1640,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobsignedobject">Signing<wbr>Job<wbr>Signed<wbr>Object[]</a></span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket where the signed code image is saved by code signing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_nodejs">
 <a href="#state_source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1805,8 +1649,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobsource">Signing<wbr>Job<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket that contains the object to sign. See Source below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1815,8 +1658,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the signing job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statusreason_nodejs">
 <a href="#state_statusreason_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Reason</a>
@@ -1825,14 +1667,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String value that contains the status reason.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_completed_at_python">
 <a href="#state_completed_at_python" style="color: inherit; text-decoration: inherit;">completed_<wbr>at</a>
@@ -1841,8 +1680,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was completed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_at_python">
 <a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1851,8 +1689,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_python">
 <a href="#state_destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1861,8 +1698,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobdestination">Signing<wbr>Job<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket in which to save your signed object. See Destination below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ignore_signing_job_failure_python">
 <a href="#state_ignore_signing_job_failure_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>signing_<wbr>job_<wbr>failure</a>
@@ -1871,8 +1707,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_job_id_python">
 <a href="#state_job_id_python" style="color: inherit; text-decoration: inherit;">job_<wbr>id</a>
@@ -1881,8 +1716,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the signing job on output.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_job_invoker_python">
 <a href="#state_job_invoker_python" style="color: inherit; text-decoration: inherit;">job_<wbr>invoker</a>
@@ -1891,8 +1725,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM entity that initiated the signing job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_job_owner_python">
 <a href="#state_job_owner_python" style="color: inherit; text-decoration: inherit;">job_<wbr>owner</a>
@@ -1901,8 +1734,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the job owner.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_display_name_python">
 <a href="#state_platform_display_name_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>display_<wbr>name</a>
@@ -1911,8 +1743,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the signing platform associated with the signing job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_id_python">
 <a href="#state_platform_id_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>id</a>
@@ -1921,8 +1752,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The platform to which your signed code image will be distributed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profile_name_python">
 <a href="#state_profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
@@ -1931,8 +1761,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the profile to initiate the signing operation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profile_version_python">
 <a href="#state_profile_version_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>version</a>
@@ -1941,8 +1770,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the signing profile used to initiate the signing job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requested_by_python">
 <a href="#state_requested_by_python" style="color: inherit; text-decoration: inherit;">requested_<wbr>by</a>
@@ -1951,8 +1779,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM principal that requested the signing job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revocation_records_python">
 <a href="#state_revocation_records_python" style="color: inherit; text-decoration: inherit;">revocation_<wbr>records</a>
@@ -1961,8 +1788,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobrevocationrecord">Sequence[Signing<wbr>Job<wbr>Revocation<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A revocation record if the signature generated by the signing job has been revoked. Contains a timestamp and the ID of the IAM entity that revoked the signature.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signature_expires_at_python">
 <a href="#state_signature_expires_at_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>expires_<wbr>at</a>
@@ -1971,8 +1797,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the signature of a signing job expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signed_objects_python">
 <a href="#state_signed_objects_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>objects</a>
@@ -1981,8 +1806,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobsignedobject">Sequence[Signing<wbr>Job<wbr>Signed<wbr>Object<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket where the signed code image is saved by code signing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_python">
 <a href="#state_source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1991,8 +1815,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobsource">Signing<wbr>Job<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The S3 bucket that contains the object to sign. See Source below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2001,8 +1824,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the signing job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_reason_python">
 <a href="#state_status_reason_python" style="color: inherit; text-decoration: inherit;">status_<wbr>reason</a>
@@ -2011,8 +1833,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String value that contains the status reason.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2027,9 +1848,7 @@ The following state arguments are supported:
 <h4 id="signingjobdestination">Signing<wbr>Job<wbr>Destination</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="s3_csharp">
 <a href="#s3_csharp" style="color: inherit; text-decoration: inherit;">S3</a>
@@ -2038,14 +1857,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobdestinations3">Signing<wbr>Job<wbr>Destination<wbr>S3Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the S3 Destination object: See S3 Destination below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="s3_go">
 <a href="#s3_go" style="color: inherit; text-decoration: inherit;">S3</a>
@@ -2054,14 +1870,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobdestinations3">Signing<wbr>Job<wbr>Destination<wbr>S3</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the S3 Destination object: See S3 Destination below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="s3_nodejs">
 <a href="#s3_nodejs" style="color: inherit; text-decoration: inherit;">s3</a>
@@ -2070,14 +1883,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobdestinations3">Signing<wbr>Job<wbr>Destination<wbr>S3</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the S3 Destination object: See S3 Destination below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="s3_python">
 <a href="#s3_python" style="color: inherit; text-decoration: inherit;">s3</a>
@@ -2086,16 +1896,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobdestinations3">Signing<wbr>Job<wbr>Destination<wbr>S3Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the S3 Destination object: See S3 Destination below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="signingjobdestinations3">Signing<wbr>Job<wbr>Destination<wbr>S3</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -2104,8 +1911,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -2114,14 +1920,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Amazon S3 object key prefix that you can use to limit signed objects keys to begin with the specified prefix.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -2130,8 +1933,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -2140,14 +1942,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Amazon S3 object key prefix that you can use to limit signed objects keys to begin with the specified prefix.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -2156,8 +1955,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -2166,14 +1964,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Amazon S3 object key prefix that you can use to limit signed objects keys to begin with the specified prefix.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -2182,8 +1977,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -2192,16 +1986,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An Amazon S3 object key prefix that you can use to limit signed objects keys to begin with the specified prefix.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="signingjobrevocationrecord">Signing<wbr>Job<wbr>Revocation<wbr>Record</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="reason_csharp">
 <a href="#reason_csharp" style="color: inherit; text-decoration: inherit;">Reason</a>
@@ -2209,8 +2000,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revokedat_csharp">
 <a href="#revokedat_csharp" style="color: inherit; text-decoration: inherit;">Revoked<wbr>At</a>
@@ -2218,8 +2008,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revokedby_csharp">
 <a href="#revokedby_csharp" style="color: inherit; text-decoration: inherit;">Revoked<wbr>By</a>
@@ -2227,14 +2016,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="reason_go">
 <a href="#reason_go" style="color: inherit; text-decoration: inherit;">Reason</a>
@@ -2242,8 +2028,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revokedat_go">
 <a href="#revokedat_go" style="color: inherit; text-decoration: inherit;">Revoked<wbr>At</a>
@@ -2251,8 +2036,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revokedby_go">
 <a href="#revokedby_go" style="color: inherit; text-decoration: inherit;">Revoked<wbr>By</a>
@@ -2260,14 +2044,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="reason_nodejs">
 <a href="#reason_nodejs" style="color: inherit; text-decoration: inherit;">reason</a>
@@ -2275,8 +2056,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revokedat_nodejs">
 <a href="#revokedat_nodejs" style="color: inherit; text-decoration: inherit;">revoked<wbr>At</a>
@@ -2284,8 +2064,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revokedby_nodejs">
 <a href="#revokedby_nodejs" style="color: inherit; text-decoration: inherit;">revoked<wbr>By</a>
@@ -2293,14 +2072,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="reason_python">
 <a href="#reason_python" style="color: inherit; text-decoration: inherit;">reason</a>
@@ -2308,8 +2084,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revoked_at_python">
 <a href="#revoked_at_python" style="color: inherit; text-decoration: inherit;">revoked_<wbr>at</a>
@@ -2317,8 +2092,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revoked_by_python">
 <a href="#revoked_by_python" style="color: inherit; text-decoration: inherit;">revoked_<wbr>by</a>
@@ -2326,16 +2100,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="signingjobsignedobject">Signing<wbr>Job<wbr>Signed<wbr>Object</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="s3s_csharp">
 <a href="#s3s_csharp" style="color: inherit; text-decoration: inherit;">S3s</a>
@@ -2344,14 +2115,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobsignedobjects3">List&lt;Signing<wbr>Job<wbr>Signed<wbr>Object<wbr>S3Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the S3 Destination object: See S3 Destination below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="s3s_go">
 <a href="#s3s_go" style="color: inherit; text-decoration: inherit;">S3s</a>
@@ -2360,14 +2128,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobsignedobjects3">[]Signing<wbr>Job<wbr>Signed<wbr>Object<wbr>S3</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the S3 Destination object: See S3 Destination below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="s3s_nodejs">
 <a href="#s3s_nodejs" style="color: inherit; text-decoration: inherit;">s3s</a>
@@ -2376,14 +2141,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobsignedobjects3">Signing<wbr>Job<wbr>Signed<wbr>Object<wbr>S3[]</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the S3 Destination object: See S3 Destination below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="s3s_python">
 <a href="#s3s_python" style="color: inherit; text-decoration: inherit;">s3s</a>
@@ -2392,16 +2154,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobsignedobjects3">Sequence[Signing<wbr>Job<wbr>Signed<wbr>Object<wbr>S3Args]</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the S3 Destination object: See S3 Destination below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="signingjobsignedobjects3">Signing<wbr>Job<wbr>Signed<wbr>Object<wbr>S3</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -2410,8 +2169,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2420,14 +2178,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key name of the bucket object that contains your unsigned code.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -2436,8 +2191,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2446,14 +2200,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key name of the bucket object that contains your unsigned code.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -2462,8 +2213,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2472,14 +2222,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key name of the bucket object that contains your unsigned code.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -2488,8 +2235,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2498,16 +2244,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key name of the bucket object that contains your unsigned code.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="signingjobsource">Signing<wbr>Job<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="s3_csharp">
 <a href="#s3_csharp" style="color: inherit; text-decoration: inherit;">S3</a>
@@ -2516,14 +2259,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobsources3">Signing<wbr>Job<wbr>Source<wbr>S3Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the S3 Destination object: See S3 Destination below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="s3_go">
 <a href="#s3_go" style="color: inherit; text-decoration: inherit;">S3</a>
@@ -2532,14 +2272,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobsources3">Signing<wbr>Job<wbr>Source<wbr>S3</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the S3 Destination object: See S3 Destination below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="s3_nodejs">
 <a href="#s3_nodejs" style="color: inherit; text-decoration: inherit;">s3</a>
@@ -2548,14 +2285,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobsources3">Signing<wbr>Job<wbr>Source<wbr>S3</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the S3 Destination object: See S3 Destination below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="s3_python">
 <a href="#s3_python" style="color: inherit; text-decoration: inherit;">s3</a>
@@ -2564,16 +2298,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#signingjobsources3">Signing<wbr>Job<wbr>Source<wbr>S3Args</a></span>
     </dt>
     <dd>{{% md %}}A configuration block describing the S3 Destination object: See S3 Destination below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="signingjobsources3">Signing<wbr>Job<wbr>Source<wbr>S3</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -2582,8 +2313,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2592,8 +2322,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key name of the bucket object that contains your unsigned code.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -2602,14 +2331,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of your source image in your version enabled S3 bucket.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -2618,8 +2344,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2628,8 +2353,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key name of the bucket object that contains your unsigned code.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -2638,14 +2362,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of your source image in your version enabled S3 bucket.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -2654,8 +2375,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2664,8 +2384,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key name of the bucket object that contains your unsigned code.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2674,14 +2393,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of your source image in your version enabled S3 bucket.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -2690,8 +2406,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2700,8 +2415,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Key name of the bucket object that contains your unsigned code.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2710,8 +2424,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of your source image in your version enabled S3 bucket.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2732,6 +2445,6 @@ Signer signing jobs can be imported using the `job_id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 
